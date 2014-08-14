@@ -1,0 +1,48 @@
+.atoms .atoms-sub-organisms, .atoms .atoms-sub-molecules, .atoms .atoms-sub-utilities{
+	display:none;
+}
+.molecules .atoms-sub-organisms, .molecules .atoms-sub-atoms, .molecules .atoms-sub-utilities{
+	display:none;
+}
+.organisms .atoms-sub-molecules, .organisms .atoms-sub-atoms, .organisms .atoms-sub-utilities{
+	display:none;
+}
+.utilities .atoms-sub-molecules, .utilities .atoms-sub-atoms, .utilities .atoms-sub-organisms{
+	display:none;
+}
+
+
+.atoms-side{
+	float:left;
+	width:16.666666666%;
+	height:100%;
+	background:#5C81F6;
+	color:#fff;
+	position: fixed;
+}
+.atoms-nav{
+	list-style:none;
+	padding:0;
+}
+.atoms-nav > li > a{
+	border-top: 1px solid #86A2FA;
+	display:block;
+	padding:20px 20px;
+	text-transform:uppercase;
+	color:#fff;
+}
+.atoms-sub-menu{
+	list-style:none;
+	padding-left:0;
+	padding-bottom:24px;
+	a{
+		padding-left:48px;
+		display:block;
+		color:#fff;
+	}
+}
+
+.border-top{
+	border-top: 1px solid rgb(66, 66, 66);
+}
+

@@ -1,0 +1,15 @@
+.wrap{
+	max-width:1000px;
+	margin-right:auto;
+	margin-left:auto;
+	@extend %clearfix;
+}
+.wrap.full{
+	max-width:1000px;
+}
+@media (max-width: 1100px){ 
+.wrap{
+	max-width:98%;
+}
+}
+

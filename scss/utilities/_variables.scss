@@ -1,0 +1,27 @@
+$brown: #884e16;
+$brown-light: #C0A97D;
+$red: red;
+$yellow: #e8ac00;
+
+
+
+
+@mixin padTB() {
+  padding:$base*2 0;
+}
+/*@include padTB();*/
+@mixin padLR() {
+  padding-left:$base;
+	padding-right:$base;
+}
+/*@include padLR();*/
+
+
+
+
+
+
+
+
+
+

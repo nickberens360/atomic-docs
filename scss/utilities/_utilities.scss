@@ -1,0 +1,33 @@
+/* 
+UTILITIES
+This directory of partials is also important because we'll need to define global classes, mixins and styles that can be used anywhere and at any time.
+The code in our reset, clearfix and base-spacing partials have a global impact, changing almost every page, template, element and module. By scoping our code in this way, we can easily find these partials later and hide them when our focus is needed elsewhere.
+*/
+@import "base-spacing";
+@import "base-type";
+@import "clearfix";
+@import "grid";
+@import "variables";
+@import "wrap";
+/*
+.block{
+	display:block !important;
+}
+.padTB-container{
+	padding:$base*2 0;
+}
+.row {
+ margin-left: 0; 
+ margin-right: 0; 
+}
+html {
+    overflow-y: scroll;
+}
+.col-pl-none{
+	padding-left:0;
+}
+.mb-base{
+	margin-bottom:$base;
+}
+*/
+@import "block-grid";

@@ -1,4 +1,4 @@
-atomic-docs
-===========
+jump-off
+========
 
-Front end code documentation generator.
+Jump off for website projects

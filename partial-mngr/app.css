@@ -1,0 +1,64 @@
+
+/*html, body, .grid-row, .nb-4, .well{
+    height: 100%;
+}*/
+
+
+
+
+
+
+[class*='nb-'] {
+	position:relative;
+ 	 float: left;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+	margin-bottom:0;
+	padding-right:20px;
+}
+[class*='nb-']:last-of-type {
+	padding-right:0;
+}
+.nb-1{
+	width: 08.333333333%;
+}
+.nb-2{
+	width: 16.6666666667%;
+}
+.nb-3{
+	width: 25%;
+}
+.nb-4{
+	width: 33.3333333333%;
+}
+.nb-5{
+	width: 41.6666666667%;
+}
+.nb-6{
+	width: 50%;
+}
+.nb-7{
+	width: 58.3333333333%;
+}
+.nb-8{
+	width: 66.6666666667%;
+}
+.nb-9{
+	width: 75%;
+}
+.nb-10{
+	width: 83.3333333333%;
+}
+.nb-11{
+	width: 91.6666666667%;
+}
+.nb-12{
+	width: 100%;
+}
+.grid-row:after{
+	content: "";
+  display: table;
+  clear: both;
+}
+
