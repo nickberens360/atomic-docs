@@ -131,7 +131,8 @@
 					</ul>
 			</li>
 			
-			<!--<li class="atom-side_head"><a href="#">Pages</a></li>-->
+			<li class="atom-side_head"><a href="#">Misc</a></li>
+			<li><a href="partial-mngr" target="_blank">Partial MNGR</a></li>
 		</ul>
 	</nav>
 </aside>
