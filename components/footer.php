@@ -4,17 +4,6 @@
 <script src="js/prism.js"></script>
 <script src="components/js/min/atoms.min.js"></script>
 
-<script>
-var $side = $('.atoms-side');
-var $main = $('.atoms-main');
-var sideWidth = $side.width();
-$main.css('padding-left', sideWidth + 20);
-$( window ).resize(function() {
-	var $side = $('.atoms-side');
-	var $main = $('.atoms-main');
-	var sideWidth = $side.width();
-  $main.css('padding-left', sideWidth + 20);
-});
-</script>
+
     </body>
 </html>

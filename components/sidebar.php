@@ -1,16 +1,10 @@
 <?php include ("partial-mngr/config.php");?>
-<style>
-.atom-side_head{
-	background: rgb(61, 61, 61);
-}
-.atoms-nav .atom-side_head a{
-	color:#fff;
-	text-transform: uppercase;
-}
-</style>
+<span class="atoms-side_show">Show</span>
 <aside class="atoms-side">
+<span class="atoms-side_hide">Hide Sidebar</span>
 	<nav>
 		<ul class="atoms-nav">
+			<li class="atom-side_head"><a href="#">Components</a></li>
 			<li><a href="utilities.php">Utilities</a>
 				<ul class="atoms-sub-menu atoms-sub-utilities">
 				<?php
@@ -131,7 +125,8 @@
 					</ul>
 			</li>
 			
-			<!--<li class="atom-side_head"><a href="#">Pages</a></li>-->
+			<li class="atom-side_head"><a href="#">Misc</a></li>
+			<li><a href="partial-mngr/index.php" target="_blank">Component MNGR</a></li>
 		</ul>
 	</nav>
 </aside>

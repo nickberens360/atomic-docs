@@ -151,44 +151,63 @@ pre[class*="language-"] {
   float: left;
   width: 100%;
   padding: 20px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
-/* line 15, ../scss/_atoms-main.scss */
+/* line 16, ../scss/_atoms-main.scss */
 .atoms-h1 {
   border-bottom: 1px solid #ccc;
 }
 
-/* line 19, ../scss/_atoms-main.scss */
+/* line 20, ../scss/_atoms-main.scss */
 .atoms-code-example {
   position: relative;
 }
 
-/* line 25, ../scss/_atoms-main.scss */
+/* line 26, ../scss/_atoms-main.scss */
 .atoms-group {
   margin-bottom: 50px;
 }
 
 /* line 1, ../scss/_atoms-nav.scss */
-.atoms .atoms-sub-organisms, .atoms .atoms-sub-molecules, .atoms .atoms-sub-utilities {
+.atom-side_head {
+  background: #3d3d3d;
   display: none;
 }
 
-/* line 4, ../scss/_atoms-nav.scss */
-.molecules .atoms-sub-organisms, .molecules .atoms-sub-atoms, .molecules .atoms-sub-utilities {
-  display: none;
-}
-
-/* line 7, ../scss/_atoms-nav.scss */
-.organisms .atoms-sub-molecules, .organisms .atoms-sub-atoms, .organisms .atoms-sub-utilities {
-  display: none;
+/* line 5, ../scss/_atoms-nav.scss */
+.atoms-nav .atom-side_head a {
+  color: #fff;
+  text-transform: uppercase;
 }
 
 /* line 10, ../scss/_atoms-nav.scss */
-.utilities .atoms-sub-molecules, .utilities .atoms-sub-atoms, .utilities .atoms-sub-organisms {
+.atoms-sub-menu {
   display: none;
 }
 
 /* line 15, ../scss/_atoms-nav.scss */
+.atoms .atoms-sub-organisms, .atoms .atoms-sub-molecules, .atoms .atoms-sub-utilities {
+  display: none;
+}
+
+/* line 18, ../scss/_atoms-nav.scss */
+.molecules .atoms-sub-organisms, .molecules .atoms-sub-atoms, .molecules .atoms-sub-utilities {
+  display: none;
+}
+
+/* line 21, ../scss/_atoms-nav.scss */
+.organisms .atoms-sub-molecules, .organisms .atoms-sub-atoms, .organisms .atoms-sub-utilities {
+  display: none;
+}
+
+/* line 24, ../scss/_atoms-nav.scss */
+.utilities .atoms-sub-molecules, .utilities .atoms-sub-atoms, .utilities .atoms-sub-organisms {
+  display: none;
+}
+
+/* line 29, ../scss/_atoms-nav.scss */
 .atoms-side {
   float: left;
   width: 16.666666666%;
@@ -196,15 +215,19 @@ pre[class*="language-"] {
   background: #5C81F6;
   color: #fff;
   position: fixed;
+  left: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  z-index: 5000;
 }
 
-/* line 23, ../scss/_atoms-nav.scss */
+/* line 40, ../scss/_atoms-nav.scss */
 .atoms-nav {
   list-style: none;
   padding: 0;
 }
 
-/* line 27, ../scss/_atoms-nav.scss */
+/* line 44, ../scss/_atoms-nav.scss */
 .atoms-nav > li > a {
   border-top: 1px solid #86A2FA;
   display: block;
@@ -213,20 +236,41 @@ pre[class*="language-"] {
   color: #fff;
 }
 
-/* line 34, ../scss/_atoms-nav.scss */
+/* line 51, ../scss/_atoms-nav.scss */
 .atoms-sub-menu {
   list-style: none;
   padding-left: 0;
   padding-bottom: 24px;
 }
-/* line 38, ../scss/_atoms-nav.scss */
+/* line 55, ../scss/_atoms-nav.scss */
 .atoms-sub-menu a {
   padding-left: 48px;
   display: block;
   color: #fff;
 }
 
-/* line 45, ../scss/_atoms-nav.scss */
+/* line 62, ../scss/_atoms-nav.scss */
 .border-top {
   border-top: 1px solid #424242;
+}
+
+/****************************/
+/* line 67, ../scss/_atoms-nav.scss */
+.atoms-side_hide {
+  cursor: pointer;
+  display: block;
+  background: #E36E70;
+  padding: 12px;
+}
+
+/* line 73, ../scss/_atoms-nav.scss */
+.atoms-side_show {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  background: #E36E70;
+  cursor: pointer;
+  position: fixed;
+  z-index: 5000;
+  padding: 12px;
+  color: #fff;
 }

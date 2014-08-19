@@ -1,3 +1,17 @@
+.atom-side_head{
+	background: rgb(61, 61, 61);
+	display:none;
+}
+.atoms-nav .atom-side_head a{
+	color:#fff;
+	text-transform: uppercase;
+}
+
+.atoms-sub-menu{
+	display:none;
+}
+
+
 .atoms .atoms-sub-organisms, .atoms .atoms-sub-molecules, .atoms .atoms-sub-utilities{
 	display:none;
 }
@@ -19,6 +33,9 @@
 	background:#5C81F6;
 	color:#fff;
 	position: fixed;
+	left:0;
+	transition: all .5s;
+	z-index:5000;
 }
 .atoms-nav{
 	list-style:none;
@@ -44,5 +61,22 @@
 
 .border-top{
 	border-top: 1px solid rgb(66, 66, 66);
+}
+
+/****************************/
+.atoms-side_hide{
+	cursor:pointer;
+	display:block;
+	background:#E36E70;
+	padding:12px;
+}
+.atoms-side_show{
+	transition: all .5s;
+	background:#E36E70;
+	cursor:pointer;
+	position:fixed;
+	z-index:5000;
+	padding:12px;
+	color:#fff;
 }
 
