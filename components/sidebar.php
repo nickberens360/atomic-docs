@@ -126,11 +126,7 @@
 			</li>
 			
 			<li class="atom-side_head"><a href="#">Misc</a></li>
-<<<<<<< HEAD
 			<li><a href="partial-mngr/index.php" target="_blank">Component MNGR</a></li>
-=======
-			<li><a href="partial-mngr" target="_blank">Partial MNGR</a></li>
->>>>>>> 927869fcbfbb870e6198d47214c9b149407bb85a
 		</ul>
 	</nav>
 </aside>
