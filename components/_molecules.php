@@ -1,0 +1,1 @@
+<span id="test"></span><div class="component"><?php include ("components/molecules/test.php"); ?></div>
