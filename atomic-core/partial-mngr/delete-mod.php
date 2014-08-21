@@ -12,8 +12,6 @@ $myImport ="@import " . '"' . $myFile . '";' ;
 //Create file name string
 $myFile = "_" . $myFile . ".scss";
 //Create file path string
-//$filePath = "../../scss/$partialDir/_$partialDir.scss";
-
 $filePath = "$rootPath/$partialDir/_$partialDir.scss";
 
 
@@ -27,8 +25,6 @@ $contents = file_put_contents($filePath, $contents);
 
 
 
-
-//$dir = "../../scss/$partialDir/";
 
 $dir = "$rootPath/$partialDir/";
 
