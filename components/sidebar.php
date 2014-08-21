@@ -1,7 +1,16 @@
 <?php include ("partial-mngr/config.php");?>
+	
+	
+
 <span class="atoms-side_show">Show</span>
 <aside class="atoms-side">
-<span class="atoms-side_hide">Hide Sidebar</span>
+<div class="control-panel">
+</div>	
+<div class="atoms-side_options">
+	<span class="atoms-side_hide">Hide Sidebar</span>
+	<span class="atoms-panel_show">Generator</span>
+</div>
+
 	<nav>
 		<ul class="atoms-nav">
 			<li class="atom-side_head"><a href="#">Components</a></li>

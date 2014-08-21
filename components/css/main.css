@@ -141,6 +141,99 @@ pre[class*="language-"] {
   cursor: help;
 }
 
+/* line 1, ../scss/_grid.scss */
+[class*='nb-'] {
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 8, ../scss/_grid.scss */
+[class*='nb-']:last-of-type {
+  margin-right: 0;
+}
+
+/* line 11, ../scss/_grid.scss */
+.nb-1 {
+  width: 08.333333333%;
+  float: left;
+}
+
+/* line 15, ../scss/_grid.scss */
+.nb-2 {
+  width: 16.6666666667%;
+  float: left;
+}
+
+/* line 19, ../scss/_grid.scss */
+.nb-3 {
+  width: 25%;
+  float: left;
+}
+
+/* line 23, ../scss/_grid.scss */
+.nb-4 {
+  width: 33.3333333333%;
+  float: left;
+}
+
+/* line 27, ../scss/_grid.scss */
+.nb-5 {
+  width: 41.6666666667%;
+  float: left;
+}
+
+/* line 31, ../scss/_grid.scss */
+.nb-6, .atoms-side_options .atoms-side_hide, .atoms-side_options .atoms-panel_show {
+  width: 50%;
+  float: left;
+}
+
+/* line 35, ../scss/_grid.scss */
+.nb-7 {
+  width: 58.3333333333%;
+  float: left;
+}
+
+/* line 39, ../scss/_grid.scss */
+.nb-8 {
+  width: 66.6666666667%;
+  float: left;
+}
+
+/* line 43, ../scss/_grid.scss */
+.nb-9 {
+  width: 75%;
+  float: left;
+}
+
+/* line 47, ../scss/_grid.scss */
+.nb-10 {
+  width: 83.3333333333%;
+  float: left;
+}
+
+/* line 51, ../scss/_grid.scss */
+.nb-11 {
+  width: 91.6666666667%;
+  float: left;
+}
+
+/* line 55, ../scss/_grid.scss */
+.nb-12 {
+  width: 100%;
+  float: left;
+}
+
+/* line 59, ../scss/_grid.scss */
+.grid-row:after, .atoms-side_options:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*@include col($six);*/
 /* line 1, ../scss/_atoms-main.scss */
 .atoms-container {
   height: 100%;
@@ -212,7 +305,7 @@ pre[class*="language-"] {
   float: left;
   width: 16.666666666%;
   height: 100%;
-  background: #5C81F6;
+  background: #211E1E;
   color: #fff;
   position: fixed;
   left: 0;
@@ -229,33 +322,32 @@ pre[class*="language-"] {
 
 /* line 44, ../scss/_atoms-nav.scss */
 .atoms-nav > li > a {
-  border-top: 1px solid #86A2FA;
   display: block;
-  padding: 20px 20px;
+  padding: 10px 20px;
   text-transform: uppercase;
   color: #fff;
 }
 
-/* line 51, ../scss/_atoms-nav.scss */
+/* line 50, ../scss/_atoms-nav.scss */
 .atoms-sub-menu {
   list-style: none;
   padding-left: 0;
   padding-bottom: 24px;
 }
-/* line 55, ../scss/_atoms-nav.scss */
+/* line 54, ../scss/_atoms-nav.scss */
 .atoms-sub-menu a {
   padding-left: 48px;
   display: block;
   color: #fff;
 }
 
-/* line 62, ../scss/_atoms-nav.scss */
+/* line 61, ../scss/_atoms-nav.scss */
 .border-top {
   border-top: 1px solid #424242;
 }
 
 /****************************/
-/* line 67, ../scss/_atoms-nav.scss */
+/* line 77, ../scss/_atoms-nav.scss */
 .atoms-side_hide {
   cursor: pointer;
   display: block;
@@ -263,7 +355,15 @@ pre[class*="language-"] {
   padding: 12px;
 }
 
-/* line 73, ../scss/_atoms-nav.scss */
+/* line 83, ../scss/_atoms-nav.scss */
+.atoms-panel_show {
+  cursor: pointer;
+  display: block;
+  background: #35B2F8;
+  padding: 12px;
+}
+
+/* line 89, ../scss/_atoms-nav.scss */
 .atoms-side_show {
   -webkit-transition: all .5s;
   transition: all .5s;

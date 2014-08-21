@@ -30,7 +30,7 @@
 	float:left;
 	width:16.666666666%;
 	height:100%;
-	background:#5C81F6;
+	background:#211E1E;
 	color:#fff;
 	position: fixed;
 	left:0;
@@ -42,9 +42,8 @@
 	padding:0;
 }
 .atoms-nav > li > a{
-	border-top: 1px solid #86A2FA;
 	display:block;
-	padding:20px 20px;
+	padding:10px 20px;
 	text-transform:uppercase;
 	color:#fff;
 }
@@ -64,10 +63,27 @@
 }
 
 /****************************/
+.atoms-side_options{
+	@extend .grid-row;
+	.atoms-side_hide{
+		@extend .nb-6;
+	}
+	.atoms-panel_show{
+		@extend .nb-6;
+	}
+}
+
+
 .atoms-side_hide{
 	cursor:pointer;
 	display:block;
 	background:#E36E70;
+	padding:12px;
+}
+.atoms-panel_show{
+	cursor:pointer;
+	display:block;
+	background:#35B2F8;
 	padding:12px;
 }
 .atoms-side_show{
@@ -79,4 +95,6 @@
 	padding:12px;
 	color:#fff;
 }
+
+
 
