@@ -12,7 +12,12 @@ $myImport ="@import " . '"' . $myFile . '";' ;
 //Create file name string
 $myFile = "_" . $myFile . ".scss";
 //Create file path string
-$filePath = "../scss/$partialDir/_$partialDir.scss";
+//$filePath = "../../scss/$partialDir/_$partialDir.scss";
+
+$filePath = "$rootPath/$partialDir/_$partialDir.scss";
+
+
+
 //Place contents of file into variable
 $contents = file_get_contents($filePath);
 //Remove desired @import string
@@ -23,7 +28,10 @@ $contents = file_put_contents($filePath, $contents);
 
 
 
-$dir = "../scss/$partialDir/";
+//$dir = "../../scss/$partialDir/";
+
+$dir = "$rootPath/$partialDir/";
+
 
 unlink($dir.$myFile);
 
@@ -46,7 +54,7 @@ $myImport = '<span id="'.$myFile.'"></span><div class="component"><?php include 
 //Create file name string
 $myFile = $myFile . ".php";
 //Create file path string
-$filePath = "../components/_$partialDir.php";
+$filePath = "$compRootPath/_$partialDir.php";
 //Place contents of file into variable
 $contents = file_get_contents($filePath);
 
@@ -60,7 +68,7 @@ $contents = file_put_contents($filePath, $contents);
 
 
 
-$dir = "../components/$partialDir/";
+$dir = "$compRootPath/$partialDir/";
 
 unlink($dir.$myFile);
 

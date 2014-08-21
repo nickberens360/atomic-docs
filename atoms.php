@@ -1,9 +1,9 @@
-<?php include ("components/head.php");?>
+<?php include ("atomic-core/head.php");?>
 <body class="atoms">
 
 
 <div class="grid-row atoms-container">
-	<?php include ("components/sidebar.php");?>
+	<?php include ("atomic-core/sidebar.php");?>
 	
 	
 	<div class="atoms-main">
@@ -17,4 +17,4 @@
 	</div>
 </div>
 
-<?php include ("components/footer.php");?>
+<?php include ("atomic-core/footer.php");?>

@@ -1,6 +1,5 @@
 <?php include ("partial-mngr/config.php");?>
-	
-	
+
 
 <span class="atoms-side_show">Show</span>
 <aside class="atoms-side">
@@ -135,7 +134,7 @@
 			</li>
 			
 			<li class="atom-side_head"><a href="#">Misc</a></li>
-			<li><a href="partial-mngr/index.php" target="_blank">Component MNGR</a></li>
+			<li><a href="atomic-core/partial-mngr/index.php" target="_blank">Component MNGR</a></li>
 		</ul>
 	</nav>
 </aside>

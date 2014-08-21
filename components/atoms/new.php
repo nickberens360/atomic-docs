@@ -1,1 +1,0 @@
-<p class="new">New</p>

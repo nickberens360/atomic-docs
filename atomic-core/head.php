@@ -10,7 +10,7 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="components/css/main.css">
+		<link rel="stylesheet" type="text/css" href="atomic-core/css/main.css">
 		<script src="modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 		
 		<link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic' rel='stylesheet' type='text/css'>

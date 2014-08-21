@@ -1,21 +1,20 @@
-<?php include ("components/head.php");?>
+<?php include ("atomic-core/head.php");?>
 <body class="organisms">
 
 
 <div class="grid-row atoms-container">
-	<?php include ("components/sidebar.php");?>
+	<?php include ("atomic-core/sidebar.php");?>
+	
+	
 	<div class="atoms-main">
-		
-		<h1 id="Organisms" class="atoms-h1">Organisms</h1>
-		
+		<h1 id="atoms" class="atoms-h1">Organisms</h1>
+
 
 			<?php include ("components/_organisms.php");?>
 
 		
 
-		
 	</div>
 </div>
 
-
-<?php include ("components/footer.php");?>
+<?php include ("atomic-core/footer.php");?>
