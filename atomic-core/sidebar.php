@@ -3,12 +3,10 @@
 
 <span class="atoms-side_show">Show</span>
 <aside class="atoms-side">
-<div class="control-panel">
-</div>	
-<div class="atoms-side_options">
+
+
 	<span class="atoms-side_hide">Hide Sidebar</span>
-	<span class="atoms-panel_show">Generator</span>
-</div>
+
 
 	<nav>
 		<ul class="atoms-nav">
