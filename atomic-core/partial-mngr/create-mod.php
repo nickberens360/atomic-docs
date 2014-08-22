@@ -13,8 +13,7 @@
 	fclose($ourFileHandle);
 	
 	
-	
-	
+
 	
 	//WRITES TO THE MODULES SCSS FILE
 	$importName = "@import " . '"' . $fileName . '";' ;
