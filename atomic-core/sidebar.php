@@ -3,6 +3,7 @@
 
 <span class="atoms-side_show">Show</span>
 <aside class="atoms-side">
+
 	<span class="atoms-side_hide">Hide Sidebar</span>
 
 
