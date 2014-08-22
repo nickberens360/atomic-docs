@@ -230,26 +230,6 @@ pre[class*="language-"] {
   text-transform: uppercase;
 }
 
-.atoms-sub-menu {
-  display: none;
-}
-
-.atoms .atoms-sub-organisms, .atoms .atoms-sub-molecules, .atoms .atoms-sub-utilities {
-  display: none;
-}
-
-.molecules .atoms-sub-organisms, .molecules .atoms-sub-atoms, .molecules .atoms-sub-utilities {
-  display: none;
-}
-
-.organisms .atoms-sub-molecules, .organisms .atoms-sub-atoms, .organisms .atoms-sub-utilities {
-  display: none;
-}
-
-.utilities .atoms-sub-molecules, .utilities .atoms-sub-atoms, .utilities .atoms-sub-organisms {
-  display: none;
-}
-
 .atoms-side {
   float: left;
   width: 16.666666666%;
@@ -275,7 +255,7 @@ pre[class*="language-"] {
 }
 
 .atoms-sub-menu {
-  list-style: none;
+  /*list-style:none;*/
   padding-left: 0;
   padding-bottom: 24px;
 }

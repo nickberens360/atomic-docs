@@ -3,12 +3,8 @@
 
 <span class="atoms-side_show">Show</span>
 <aside class="atoms-side">
-<div class="control-panel">
-</div>	
-<div class="atoms-side_options">
 	<span class="atoms-side_hide">Hide Sidebar</span>
-	<span class="atoms-panel_show">Generator</span>
-</div>
+
 
 	<nav>
 		<ul class="atoms-nav">
@@ -45,8 +41,6 @@
 				
 			<li><a href="atoms.php">Atoms</a>
 				<ul class="atoms-sub-menu atoms-sub-atoms">
-<<<<<<< Updated upstream
-=======
 					<li>
 						<form class="atomic-sub-form form-inline " action="atomic-core/partial-mngr/class.php" method="post">
 							<input type="text" class="form-control" id="inputDefault" name="modName">
@@ -61,7 +55,6 @@
 							<button type="Submit" class="btn btn-danger">Delete</button>
 						</form><?php */?>
 					</li>
->>>>>>> Stashed changes
 				<?php
 						$orig = "$compRoot/$partialDirOne";
 						
