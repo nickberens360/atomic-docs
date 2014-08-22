@@ -13,3 +13,12 @@
 }
 }
 
+
+/*@mixin wrap($width) {
+	max-width:$width;
+	margin-right:auto;
+	margin-left:auto;
+	@extend %clearfix;
+}*/
+/*@include wrap($width);*/
+

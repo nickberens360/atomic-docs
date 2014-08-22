@@ -45,6 +45,23 @@
 				
 			<li><a href="atoms.php">Atoms</a>
 				<ul class="atoms-sub-menu atoms-sub-atoms">
+<<<<<<< Updated upstream
+=======
+					<li>
+						<form class="atomic-sub-form form-inline " action="atomic-core/partial-mngr/class.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="modName">
+							<button type="Submit" class="btn btn-primary">Create</button>
+							<input type="hidden" name="partialDir" value="<?php echo $partialDirOne;?>"/>
+							<input type="hidden" name="path" value="<?php echo $partDirOnePath;?>"/>
+							<input type="hidden" name="compPath" value="<?php echo $compDirOnePath;?>"/>
+						</form>
+						<?php /*?><form class="atomic-sub-form form-inline" action="atomic-core/partial-mngr/delete-mod.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="partialName">
+							<input type="hidden" name="partialDir" value="<?php echo $partialDirOne;?>"/>
+							<button type="Submit" class="btn btn-danger">Delete</button>
+						</form><?php */?>
+					</li>
+>>>>>>> Stashed changes
 				<?php
 						$orig = "$compRoot/$partialDirOne";
 						
