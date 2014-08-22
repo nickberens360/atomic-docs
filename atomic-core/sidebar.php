@@ -1,20 +1,21 @@
-
 <?php include ("partial-mngr/config.php");?>
+
 
 <span class="atoms-side_show">Show</span>
 <aside class="atoms-side">
 <div class="control-panel">
 </div>	
-<div class="atoms-side_options">
+
 	<span class="atoms-side_hide">Hide Sidebar</span>
-	<span class="atoms-panel_show">Generator</span>
-</div>
+
 
 	<nav>
 		<ul class="atoms-nav">
 			<li class="atom-side_head"><a href="#">Components</a></li>
-			<li><a href="utilities.php">Utilities</a>
+			<li>
+				<a href="utilities.php">Utilities</a>
 				<ul class="atoms-sub-menu atoms-sub-utilities">
+				
 				<?php
 						$orig = "$compRoot/$partialDirFour";
 						
@@ -43,8 +44,23 @@
 					</ul>
 			</li>
 				
+		
 			<li><a href="atoms.php">Atoms</a>
 				<ul class="atoms-sub-menu atoms-sub-atoms">
+					<li>
+						<form class="atomic-sub-form form-inline " action="atomic-core/partial-mngr/create-mod.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="modName">
+							<button type="Submit" class="btn btn-primary">Create</button>
+							<input type="hidden" name="partialDir" value="<?php echo $partialDirOne;?>"/>
+							<input type="hidden" name="path" value="<?php echo $partDirOnePath;?>"/>
+							<input type="hidden" name="compPath" value="<?php echo $compDirOnePath;?>"/>
+						</form>
+						<form class="atomic-sub-form form-inline" action="atomic-core/partial-mngr/delete-mod.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="partialName">
+							<input type="hidden" name="partialDir" value="<?php echo $partialDirOne;?>"/>
+							<button type="Submit" class="btn btn-danger">Delete</button>
+						</form>
+					</li>
 				<?php
 						$orig = "$compRoot/$partialDirOne";
 						

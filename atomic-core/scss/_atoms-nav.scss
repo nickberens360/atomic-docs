@@ -7,12 +7,12 @@
 	text-transform: uppercase;
 }
 
-.atoms-sub-menu{
+/*.atoms-sub-menu{
 	display:none;
-}
+}*/
 
 
-.atoms .atoms-sub-organisms, .atoms .atoms-sub-molecules, .atoms .atoms-sub-utilities{
+/*.atoms .atoms-sub-organisms, .atoms .atoms-sub-molecules, .atoms .atoms-sub-utilities{
 	display:none;
 }
 .molecules .atoms-sub-organisms, .molecules .atoms-sub-atoms, .molecules .atoms-sub-utilities{
@@ -24,7 +24,7 @@
 .utilities .atoms-sub-molecules, .utilities .atoms-sub-atoms, .utilities .atoms-sub-organisms{
 	display:none;
 }
-
+*/
 
 .atoms-side{
 	float:left;
@@ -48,13 +48,15 @@
 	color:#fff;
 }
 .atoms-sub-menu{
-	list-style:none;
+	/*display:none;*/
 	padding-left:0;
-	padding-bottom:24px;
+	li{
+		list-style:square;
+	}
 	a{
-		padding-left:48px;
-		display:block;
-		color:#fff;
+		padding-left: 20px;
+display: block;
+color: #5FC5FF;
 	}
 }
 

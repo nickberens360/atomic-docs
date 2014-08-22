@@ -119,6 +119,117 @@ pre[class*="language-"] {
   cursor: help;
 }
 
+.atoms-container {
+  height: 100%;
+}
+
+.atoms-main {
+  float: left;
+  width: 100%;
+  padding: 20px;
+  transition: all .5s;
+}
+
+.atoms-code-example {
+  position: relative;
+}
+
+.atoms-group {
+  margin-bottom: 50px;
+}
+
+.atom-side_head {
+  background: #3d3d3d;
+  display: none;
+}
+
+.atoms-nav .atom-side_head a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/*.atoms-sub-menu{
+	display:none;
+}*/
+/*.atoms .atoms-sub-organisms, .atoms .atoms-sub-molecules, .atoms .atoms-sub-utilities{
+	display:none;
+}
+.molecules .atoms-sub-organisms, .molecules .atoms-sub-atoms, .molecules .atoms-sub-utilities{
+	display:none;
+}
+.organisms .atoms-sub-molecules, .organisms .atoms-sub-atoms, .organisms .atoms-sub-utilities{
+	display:none;
+}
+.utilities .atoms-sub-molecules, .utilities .atoms-sub-atoms, .utilities .atoms-sub-organisms{
+	display:none;
+}
+*/
+.atoms-side {
+  float: left;
+  width: 16.666666666%;
+  height: 100%;
+  background: #211E1E;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  transition: all .5s;
+  z-index: 5000;
+}
+
+.atoms-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.atoms-nav > li > a {
+  display: block;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.atoms-sub-menu {
+  /*display:none;*/
+  padding-left: 0;
+}
+.atoms-sub-menu li {
+  list-style: square;
+}
+.atoms-sub-menu a {
+  padding-left: 20px;
+  display: block;
+  color: #5FC5FF;
+}
+
+.border-top {
+  border-top: 1px solid #424242;
+}
+
+/****************************/
+.atoms-side_hide {
+  cursor: pointer;
+  display: block;
+  background: #E36E70;
+  padding: 12px;
+}
+
+.atoms-panel_show {
+  cursor: pointer;
+  display: block;
+  background: #35B2F8;
+  padding: 12px;
+}
+
+.atoms-side_show {
+  transition: all .5s;
+  background: #E36E70;
+  cursor: pointer;
+  position: fixed;
+  z-index: 5000;
+  padding: 12px;
+  color: #fff;
+}
+
 [class*='nb-'] {
   position: relative;
   -moz-box-sizing: border-box;
@@ -197,119 +308,22 @@ pre[class*="language-"] {
 }
 
 /*@include col($six);*/
-.atoms-container {
-  height: 100%;
-}
-
-.atoms-main {
-  float: left;
-  width: 100%;
-  padding: 20px;
-  transition: all .5s;
-}
-
-.atoms-h1 {
+.atomic-h1 {
   border-bottom: 1px solid #ccc;
 }
 
-.atoms-code-example {
-  position: relative;
+/* CSS Document */
+.atomic-sub-form {
+  padding-left: 20px;
+}
+.atomic-sub-form .form-control {
+  border-radius: 0;
+  border: none;
+}
+.atomic-sub-form .btn {
+  border-radius: 0;
+  padding: 7px 12px;
+  border: none;
 }
 
-.atoms-group {
-  margin-bottom: 50px;
-}
-
-.atom-side_head {
-  background: #3d3d3d;
-  display: none;
-}
-
-.atoms-nav .atom-side_head a {
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.atoms-sub-menu {
-  display: none;
-}
-
-.atoms .atoms-sub-organisms, .atoms .atoms-sub-molecules, .atoms .atoms-sub-utilities {
-  display: none;
-}
-
-.molecules .atoms-sub-organisms, .molecules .atoms-sub-atoms, .molecules .atoms-sub-utilities {
-  display: none;
-}
-
-.organisms .atoms-sub-molecules, .organisms .atoms-sub-atoms, .organisms .atoms-sub-utilities {
-  display: none;
-}
-
-.utilities .atoms-sub-molecules, .utilities .atoms-sub-atoms, .utilities .atoms-sub-organisms {
-  display: none;
-}
-
-.atoms-side {
-  float: left;
-  width: 16.666666666%;
-  height: 100%;
-  background: #211E1E;
-  color: #fff;
-  position: fixed;
-  left: 0;
-  transition: all .5s;
-  z-index: 5000;
-}
-
-.atoms-nav {
-  list-style: none;
-  padding: 0;
-}
-
-.atoms-nav > li > a {
-  display: block;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.atoms-sub-menu {
-  list-style: none;
-  padding-left: 0;
-  padding-bottom: 24px;
-}
-.atoms-sub-menu a {
-  padding-left: 48px;
-  display: block;
-  color: #fff;
-}
-
-.border-top {
-  border-top: 1px solid #424242;
-}
-
-/****************************/
-.atoms-side_hide {
-  cursor: pointer;
-  display: block;
-  background: #E36E70;
-  padding: 12px;
-}
-
-.atoms-panel_show {
-  cursor: pointer;
-  display: block;
-  background: #35B2F8;
-  padding: 12px;
-}
-
-.atoms-side_show {
-  transition: all .5s;
-  background: #E36E70;
-  cursor: pointer;
-  position: fixed;
-  z-index: 5000;
-  padding: 12px;
-  color: #fff;
-}
+/* CSS Document */

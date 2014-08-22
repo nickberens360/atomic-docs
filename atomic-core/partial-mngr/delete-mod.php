@@ -69,6 +69,7 @@ $dir = "$compRootPath/$partialDir/";
 unlink($dir.$myFile);
 
 
-header("location:index.php");
+header("location:../../$partialDir.php");
+//header("location:index.php");
 
 ?>
