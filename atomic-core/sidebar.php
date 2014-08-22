@@ -1,5 +1,5 @@
-<?php include ("partial-mngr/config.php");?>
 
+<?php include ("partial-mngr/config.php");?>
 
 <span class="atoms-side_show">Show</span>
 <aside class="atoms-side">
