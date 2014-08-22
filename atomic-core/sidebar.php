@@ -3,9 +3,6 @@
 
 <span class="atoms-side_show">Show</span>
 <aside class="atoms-side">
-<div class="control-panel">
-</div>	
-
 	<span class="atoms-side_hide">Hide Sidebar</span>
 
 
@@ -48,6 +45,7 @@
 			<li><a href="atoms.php">Atoms</a>
 				<ul class="atoms-sub-menu atoms-sub-atoms">
 					<li>
+
 						<form class="atomic-sub-form form-inline " action="atomic-core/partial-mngr/create-mod.php" method="post">
 							<input type="text" class="form-control" id="inputDefault" name="modName">
 							<button type="Submit" class="btn btn-primary">Create</button>
@@ -55,11 +53,14 @@
 							<input type="hidden" name="path" value="<?php echo $partDirOnePath;?>"/>
 							<input type="hidden" name="compPath" value="<?php echo $compDirOnePath;?>"/>
 						</form>
+
+
 						<form class="atomic-sub-form form-inline" action="atomic-core/partial-mngr/delete-mod.php" method="post">
 							<input type="text" class="form-control" id="inputDefault" name="partialName">
 							<input type="hidden" name="partialDir" value="<?php echo $partialDirOne;?>"/>
 							<button type="Submit" class="btn btn-danger">Delete</button>
 						</form>
+
 					</li>
 				<?php
 						$orig = "$compRoot/$partialDirOne";
