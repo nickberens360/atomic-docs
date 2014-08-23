@@ -7,7 +7,7 @@
 	
 	
 	<div class="atoms-main">
-		<h1 id="atoms" class="atoms-h1">Atoms</h1>
+		<h1 id="atoms" class="atomic-h1">Atoms</h1>
 
 
 			<?php include ("components/_atoms.php");?>

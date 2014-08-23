@@ -1,0 +1,38 @@
+.atomic-link-grp{
+	position:relative;
+
+}
+.atomic-link-main{
+	
+}
+.atomic-link-show{
+	height:20px;
+	width:20px;
+	border-radius:50%;
+	color:#00aff0;
+	position:absolute;
+	left:10px;
+	top: 6px;
+	z-index:50;
+	cursor:pointer;
+	text-align:center;
+	font-weight:bold;
+	font-size:20px;
+}
+/*.atomic-link-show{
+	height:20px;
+	width:20px;
+	border-radius:50%;
+	background:#00aff0;
+	position:absolute;
+	left:10px;
+	top:10px;
+	z-index:50;
+	cursor:pointer;
+}*/
+
+/*
+<span class="atomic-link-grp">
+	<span class="atomic-link-show">x</span>
+	<a class="atomic-link-main" href="atoms.php">Atoms</a>
+</span>*/

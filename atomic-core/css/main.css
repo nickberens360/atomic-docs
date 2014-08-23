@@ -141,99 +141,6 @@ pre[class*="language-"] {
   cursor: help;
 }
 
-/* line 1, ../scss/_grid.scss */
-[class*='nb-'] {
-  position: relative;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 8, ../scss/_grid.scss */
-[class*='nb-']:last-of-type {
-  margin-right: 0;
-}
-
-/* line 11, ../scss/_grid.scss */
-.nb-1 {
-  width: 08.333333333%;
-  float: left;
-}
-
-/* line 15, ../scss/_grid.scss */
-.nb-2 {
-  width: 16.6666666667%;
-  float: left;
-}
-
-/* line 19, ../scss/_grid.scss */
-.nb-3 {
-  width: 25%;
-  float: left;
-}
-
-/* line 23, ../scss/_grid.scss */
-.nb-4 {
-  width: 33.3333333333%;
-  float: left;
-}
-
-/* line 27, ../scss/_grid.scss */
-.nb-5 {
-  width: 41.6666666667%;
-  float: left;
-}
-
-/* line 31, ../scss/_grid.scss */
-.nb-6, .atoms-side_options .atoms-side_hide, .atoms-side_options .atoms-panel_show {
-  width: 50%;
-  float: left;
-}
-
-/* line 35, ../scss/_grid.scss */
-.nb-7 {
-  width: 58.3333333333%;
-  float: left;
-}
-
-/* line 39, ../scss/_grid.scss */
-.nb-8 {
-  width: 66.6666666667%;
-  float: left;
-}
-
-/* line 43, ../scss/_grid.scss */
-.nb-9 {
-  width: 75%;
-  float: left;
-}
-
-/* line 47, ../scss/_grid.scss */
-.nb-10 {
-  width: 83.3333333333%;
-  float: left;
-}
-
-/* line 51, ../scss/_grid.scss */
-.nb-11 {
-  width: 91.6666666667%;
-  float: left;
-}
-
-/* line 55, ../scss/_grid.scss */
-.nb-12 {
-  width: 100%;
-  float: left;
-}
-
-/* line 59, ../scss/_grid.scss */
-.grid-row:after, .atoms-side_options:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/*@include col($six);*/
 /* line 1, ../scss/_atoms-main.scss */
 .atoms-container {
   height: 100%;
@@ -246,11 +153,6 @@ pre[class*="language-"] {
   padding: 20px;
   -webkit-transition: all .5s;
   transition: all .5s;
-}
-
-/* line 16, ../scss/_atoms-main.scss */
-.atoms-h1 {
-  border-bottom: 1px solid #ccc;
 }
 
 /* line 20, ../scss/_atoms-main.scss */
@@ -275,37 +177,12 @@ pre[class*="language-"] {
   text-transform: uppercase;
 }
 
-/* line 10, ../scss/_atoms-nav.scss */
-.atoms-sub-menu {
-  display: none;
-}
-
-/* line 15, ../scss/_atoms-nav.scss */
-.atoms .atoms-sub-organisms, .atoms .atoms-sub-molecules, .atoms .atoms-sub-utilities {
-  display: none;
-}
-
-/* line 18, ../scss/_atoms-nav.scss */
-.molecules .atoms-sub-organisms, .molecules .atoms-sub-atoms, .molecules .atoms-sub-utilities {
-  display: none;
-}
-
-/* line 21, ../scss/_atoms-nav.scss */
-.organisms .atoms-sub-molecules, .organisms .atoms-sub-atoms, .organisms .atoms-sub-utilities {
-  display: none;
-}
-
-/* line 24, ../scss/_atoms-nav.scss */
-.utilities .atoms-sub-molecules, .utilities .atoms-sub-atoms, .utilities .atoms-sub-organisms {
-  display: none;
-}
-
-/* line 29, ../scss/_atoms-nav.scss */
+/* line 12, ../scss/_atoms-nav.scss */
 .atoms-side {
   float: left;
   width: 16.666666666%;
   height: 100%;
-  background: #211E1E;
+  background: #343843;
   color: #fff;
   position: fixed;
   left: 0;
@@ -314,63 +191,247 @@ pre[class*="language-"] {
   z-index: 5000;
 }
 
-/* line 40, ../scss/_atoms-nav.scss */
+/* line 23, ../scss/_atoms-nav.scss */
 .atoms-nav {
   list-style: none;
   padding: 0;
 }
 
-/* line 44, ../scss/_atoms-nav.scss */
-.atoms-nav > li > a {
+/* line 27, ../scss/_atoms-nav.scss */
+.atomic-link-main {
   display: block;
-  padding: 10px 20px;
+  padding: 10px 38px;
   text-transform: uppercase;
-  color: #fff;
+  color: #a6adb3;
 }
 
-/* line 50, ../scss/_atoms-nav.scss */
+/* line 33, ../scss/_atoms-nav.scss */
+.atomic-link-main:hover {
+  color: #a6adb3;
+  text-decoration: none;
+}
+
+/* line 37, ../scss/_atoms-nav.scss */
 .atoms-sub-menu {
-  list-style: none;
   padding-left: 0;
-  padding-bottom: 24px;
 }
-/* line 54, ../scss/_atoms-nav.scss */
+/* line 39, ../scss/_atoms-nav.scss */
+.atoms-sub-menu li {
+  list-style: square;
+}
+/* line 42, ../scss/_atoms-nav.scss */
 .atoms-sub-menu a {
-  padding-left: 48px;
+  padding-left: 20px;
   display: block;
-  color: #fff;
+  color: #5FC5FF;
 }
 
-/* line 61, ../scss/_atoms-nav.scss */
+/* line 49, ../scss/_atoms-nav.scss */
 .border-top {
   border-top: 1px solid #424242;
 }
 
 /****************************/
-/* line 77, ../scss/_atoms-nav.scss */
+/* line 65, ../scss/_atoms-nav.scss */
 .atoms-side_hide {
   cursor: pointer;
   display: block;
-  background: #E36E70;
-  padding: 12px;
+  background: #00aff0;
+  padding: 8px 20px;
 }
 
-/* line 83, ../scss/_atoms-nav.scss */
+/* line 71, ../scss/_atoms-nav.scss */
 .atoms-panel_show {
   cursor: pointer;
   display: block;
   background: #35B2F8;
-  padding: 12px;
+  padding: 8px 20px;
 }
 
-/* line 89, ../scss/_atoms-nav.scss */
+/* line 77, ../scss/_atoms-nav.scss */
 .atoms-side_show {
   -webkit-transition: all .5s;
   transition: all .5s;
-  background: #E36E70;
+  background: #00aff0;
   cursor: pointer;
   position: fixed;
   z-index: 5000;
-  padding: 12px;
+  padding: 8px 20px;
   color: #fff;
 }
+
+/* line 1, ../scss/utilities/_grid.scss */
+[class*='nb-'] {
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 8, ../scss/utilities/_grid.scss */
+[class*='nb-']:last-of-type {
+  margin-right: 0;
+}
+
+/* line 11, ../scss/utilities/_grid.scss */
+.nb-1 {
+  width: 08.333333333%;
+  float: left;
+}
+
+/* line 15, ../scss/utilities/_grid.scss */
+.nb-2 {
+  width: 16.6666666667%;
+  float: left;
+}
+
+/* line 19, ../scss/utilities/_grid.scss */
+.nb-3 {
+  width: 25%;
+  float: left;
+}
+
+/* line 23, ../scss/utilities/_grid.scss */
+.nb-4 {
+  width: 33.3333333333%;
+  float: left;
+}
+
+/* line 27, ../scss/utilities/_grid.scss */
+.nb-5 {
+  width: 41.6666666667%;
+  float: left;
+}
+
+/* line 31, ../scss/utilities/_grid.scss */
+.nb-6, .atoms-side_options .atoms-side_hide, .atoms-side_options .atoms-panel_show {
+  width: 50%;
+  float: left;
+}
+
+/* line 35, ../scss/utilities/_grid.scss */
+.nb-7 {
+  width: 58.3333333333%;
+  float: left;
+}
+
+/* line 39, ../scss/utilities/_grid.scss */
+.nb-8 {
+  width: 66.6666666667%;
+  float: left;
+}
+
+/* line 43, ../scss/utilities/_grid.scss */
+.nb-9 {
+  width: 75%;
+  float: left;
+}
+
+/* line 47, ../scss/utilities/_grid.scss */
+.nb-10 {
+  width: 83.3333333333%;
+  float: left;
+}
+
+/* line 51, ../scss/utilities/_grid.scss */
+.nb-11 {
+  width: 91.6666666667%;
+  float: left;
+}
+
+/* line 55, ../scss/utilities/_grid.scss */
+.nb-12 {
+  width: 100%;
+  float: left;
+}
+
+/* line 59, ../scss/utilities/_grid.scss */
+.grid-row:after, .atoms-side_options:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*@include col($six);*/
+/* line 1, ../scss/atoms/_atomic-h1.scss */
+.atomic-h1 {
+  border-bottom: 1px solid #ccc;
+}
+
+/* CSS Document */
+/* line 4, ../scss/molecules/_atomic-sub-form.scss */
+.atomic-sub-form {
+  padding: 0 20px;
+}
+/* line 6, ../scss/molecules/_atomic-sub-form.scss */
+.atomic-sub-form .form-control {
+  border-radius: 0;
+  border: none;
+  background: #3A4050;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-bottom: 10px;
+}
+/* line 13, ../scss/molecules/_atomic-sub-form.scss */
+.atomic-sub-form .btn {
+  border-radius: 0;
+  padding: 7px 12px;
+  border: none;
+}
+/* line 18, ../scss/molecules/_atomic-sub-form.scss */
+.atomic-sub-form ::-webkit-input-placeholder {
+  color: #555;
+  font-style: italic;
+}
+
+/* line 1, ../scss/molecules/_atomic-sub-menu.scss */
+.atoms-sub-menu {
+  display: none;
+}
+/* line 3, ../scss/molecules/_atomic-sub-menu.scss */
+.atoms-sub-menu li {
+  list-style: none;
+}
+/* line 6, ../scss/molecules/_atomic-sub-menu.scss */
+.atoms-sub-menu a {
+  padding-left: 30px;
+}
+
+/* line 1, ../scss/molecules/_atomic-link-group.scss */
+.atomic-link-grp {
+  position: relative;
+}
+
+/* line 8, ../scss/molecules/_atomic-link-group.scss */
+.atomic-link-show {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: #00aff0;
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  z-index: 50;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/*.atomic-link-show{
+	height:20px;
+	width:20px;
+	border-radius:50%;
+	background:#00aff0;
+	position:absolute;
+	left:10px;
+	top:10px;
+	z-index:50;
+	cursor:pointer;
+}*/
+/*
+<span class="atomic-link-grp">
+	<span class="atomic-link-show">x</span>
+	<a class="atomic-link-main" href="atoms.php">Atoms</a>
+</span>*/
+/* CSS Document */

@@ -65,7 +65,8 @@
 
 
 
-	header("location:index.php");
+	header("location:../../$partialDir.php");
+	/*header("location:index.php");*/
 ?>	
 
 
