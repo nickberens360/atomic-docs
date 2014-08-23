@@ -24,11 +24,15 @@
 	list-style:none;
 	padding:0;
 }
-.atoms-nav > li > a{
+.atomic-link-main{
 	display:block;
-	padding:10px 20px;
+	padding:10px 38px;
 	text-transform:uppercase;
 	color:#a6adb3;
+}
+.atomic-link-main:hover{
+	color:#a6adb3;
+	text-decoration:none;
 }
 .atoms-sub-menu{
 	padding-left:0;

@@ -1,13 +1,23 @@
+.atomic-subform-group{
+
+}
 .atomic-sub-form{
-	padding-left:20px;
+	padding:0 20px;
 	.form-control{
 		border-radius:0;
 		border:none;
+		background:#3A4050;
+		box-shadow:none;
+		margin-bottom:10px;
 	}
 	.btn{
 		border-radius:0;
 		padding: 7px 12px;
 		border:none;
+	}
+	::-webkit-input-placeholder {
+		 color: #555;
+		 font-style:italic;
 	}
 }
 

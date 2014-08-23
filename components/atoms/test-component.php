@@ -1,0 +1,1 @@
+<div class="test-component">Test Component</div>
