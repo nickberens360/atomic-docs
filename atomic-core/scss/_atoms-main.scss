@@ -5,8 +5,9 @@
 
 
 .atoms-main{
-	float:left;
-	width:100%;
+	
+	@include col($ten);
+	float:right;
 	padding:20px;
 	transition:all .5s;
 }

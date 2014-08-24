@@ -1,3 +1,15 @@
+.atoms-side{
+	float:left;
+	@include col($two);
+	height:100%;
+	background: #343843;
+	color:#fff;
+	position: fixed;
+	left:0;
+	transition: all .5s;
+	z-index:5000;
+}
+
 .atom-side_head{
 	background: rgb(61, 61, 61);
 	display:none;
@@ -9,17 +21,7 @@
 
 
 
-.atoms-side{
-	float:left;
-	width:16.666666666%;
-	height:100%;
-	background: #343843;
-	color:#fff;
-	position: fixed;
-	left:0;
-	transition: all .5s;
-	z-index:5000;
-}
+
 .atoms-nav{
 	list-style:none;
 	padding:0;
@@ -39,12 +41,12 @@
 .atoms-sub-menu{
 	padding-left:0;
 	li{
-		list-style:square;
+		list-style:none;
 	}
 	a{
-		padding-left: 20px;
-display: block;
-color: #5FC5FF;
+		padding-left: 33px;
+		display: block;
+		color: #5FC5FF;
 	}
 }
 
