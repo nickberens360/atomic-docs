@@ -46,7 +46,7 @@
 
 	//WRITES TO THE COMPONET PHP FILE
 		
-	$importName =  '<span id="'.$fileName.'"></span><div class="component"><?php include ("components/'.$partialDir.'/'.$fileName.'.php"); ?></div>';
+	$importName =  '<span id="'.$fileName.'"></span><div class="component"><?php include ("../components/'.$partialDir.'/'.$fileName.'.php"); ?></div>';
 								 
 								  
 										
@@ -65,7 +65,7 @@
 
 
 
-	header("location:../../$partialDir.php");
+	header("location:../$partialDir.php");
 	/*header("location:index.php");*/
 ?>	
 

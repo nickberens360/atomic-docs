@@ -41,7 +41,7 @@ unlink($dir.$myFile);
 $myFile = $_POST["partialName"];
 $partialDir = $_POST["partialDir"];
 //Create @import string
-$myImport = '<span id="'.$myFile.'"></span><div class="component"><?php include ("components/'.$partialDir.'/'.$myFile.'.php"); ?></div>';
+$myImport = '<span id="'.$myFile.'"></span><div class="component"><?php include ("../components/'.$partialDir.'/'.$myFile.'.php"); ?></div>';
 
 							
 							
@@ -69,7 +69,7 @@ $dir = "$compRootPath/$partialDir/";
 unlink($dir.$myFile);
 
 
-header("location:../../$partialDir.php");
+header("location:../$partialDir.php");
 //header("location:index.php");
 
 ?>

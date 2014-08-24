@@ -17,7 +17,7 @@
 			<li>
 				<div class="atomic-link-grp">
 					<span class="atomic-link-show atomic-link-show-utilities">+</span>
-					<a class="atomic-link-main" href="utilities.php">Utilities</a>
+					<a class="atomic-link-main" href="atomic-core/utilities.php">Utilities</a>
 				</div>
 				<ul class="atoms-sub-menu atoms-sub-utilities">
 				<li class="atomic-subform-group">
@@ -35,7 +35,7 @@
 
 					</li>
 				<?php
-						$orig = "$compRoot/$partialDirFour";
+						$orig = "../$compRoot/$partialDirFour";
 						
 						if ($dir = opendir($orig)) {
 				
@@ -66,7 +66,7 @@
 			<li>
 				<div class="atomic-link-grp">
 					<span class="atomic-link-show atomic-link-show-atoms">+</span>
-					<a class="atomic-link-main" href="atoms.php">Atoms</a>
+					<a class="atomic-link-main" href="atomic-core/atoms.php">Atoms</a>
 				</div>
 				<ul class="atoms-sub-menu">
 					<li class="atomic-subform-group">
@@ -86,7 +86,7 @@
 
 					</li>
 				<?php
-						$orig = "$compRoot/$partialDirOne";
+						$orig = "../$compRoot/$partialDirOne";
 						
 						if ($dir = opendir($orig)) {
 				
@@ -116,7 +116,7 @@
 			<li>
 				<div class="atomic-link-grp">
 					<span class="atomic-link-show atomic-link-show-molecules">+</span>
-					<a class="atomic-link-main" href="molecules.php">Molecules</a>
+					<a class="atomic-link-main" href="atomic-core/molecules.php">Molecules</a>
 				</div>
 				<ul class="atoms-sub-menu atoms-sub-molecules">
 				<li class="atomic-subform-group">
@@ -134,7 +134,7 @@
 
 					</li>
 					<?php
-							$orig = "$compRoot/$partialDirTwo";
+							$orig = "../$compRoot/$partialDirTwo";
 							
 							if ($dir = opendir($orig)) {
 					
@@ -164,7 +164,7 @@
 			<li>
 				<div class="atomic-link-grp">
 					<span class="atomic-link-show atomic-link-show-organisms">+</span>
-					<a class="atomic-link-main" href="organisms.php">Organisms</a>
+					<a class="atomic-link-main" href="atomic-core/organisms.php">Organisms</a>
 				</div>
 				<ul class="atoms-sub-menu atoms-sub-molecules">
 				<li class="atomic-subform-group">
@@ -182,7 +182,7 @@
 
 					</li>
 					<?php
-							$orig = "$compRoot/$partialDirThree";
+							$orig = "../$compRoot/$partialDirThree";
 							
 							if ($dir = opendir($orig)) {
 					
