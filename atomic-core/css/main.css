@@ -242,7 +242,7 @@ pre[class*="language-"] {
 /* CSS Document */
 /* line 4, ../scss/molecules/_atomic-sub-form.scss */
 .atomic-sub-form {
-  padding: 0 20px;
+  padding: 0 37px;
 }
 /* line 6, ../scss/molecules/_atomic-sub-form.scss */
 .atomic-sub-form .form-control {
@@ -413,7 +413,7 @@ pre[class*="language-"] {
 }
 /* line 44, ../scss/_atoms-nav.scss */
 .atoms-sub-menu a {
-  padding-left: 38px;
+  padding-left: 50px;
   display: block;
   color: #5FC5FF;
 }
@@ -434,9 +434,10 @@ pre[class*="language-"] {
   display: block;
   background: #00aff0;
   padding: 8px 20px;
+  padding-left: 38px;
 }
 
-/* line 77, ../scss/_atoms-nav.scss */
+/* line 78, ../scss/_atoms-nav.scss */
 .atoms-side_show {
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -452,9 +453,15 @@ pre[class*="language-"] {
   top: 5px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 5px 2px;
   box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 5px 2px;
+  opacity: .4;
 }
 
-/* line 91, ../scss/_atoms-nav.scss */
+/* line 93, ../scss/_atoms-nav.scss */
+.atoms-side_show:hover {
+  opacity: 1;
+}
+
+/* line 96, ../scss/_atoms-nav.scss */
 .toggle-line {
   border: 1px solid #fff;
   display: block;
