@@ -47,4 +47,9 @@
 	text-align:center;
 	font-weight:bold;
 	font-size:20px;
+	transition: all .25s;
+}
+.rotate{
+	transform: rotate(-45deg);
+	transform-origin: 50%;
 }

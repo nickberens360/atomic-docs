@@ -13,7 +13,7 @@ function noSidebar(){
 	var $main = $('.atoms-main');
 	var $showBtn = $('.atoms-side_show');
 	
-	$showBtn.css('left', '5px');
+	$showBtn.css('left', '10px');
 	$side.css('left', '-500px');
 	$main.css('padding-left', '20px').css('width', '100%');
 }

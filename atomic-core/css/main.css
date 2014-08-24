@@ -325,6 +325,18 @@ pre[class*="language-"] {
   text-align: center;
   font-weight: bold;
   font-size: 20px;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+/* line 52, ../scss/molecules/_atomic-link-group.scss */
+.rotate {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
 }
 
 /* CSS Document */
@@ -450,7 +462,7 @@ pre[class*="language-"] {
   width: 30px;
   border-radius: 50%;
   padding-top: 10px;
-  top: 5px;
+  top: 7px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 5px 2px;
   box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 5px 2px;
   opacity: .4;
