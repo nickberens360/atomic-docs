@@ -12,7 +12,7 @@
 			<li class="atom-side_head"><a href="#">Components</a></li>
 			<li>
 				<div class="atomic-link-grp">
-					<span class="atomic-link-show">+</span>
+					<span class="atomic-link-show atomic-link-show-utilities">+</span>
 					<a class="atomic-link-main" href="utilities.php">Utilities</a>
 				</div>
 				<ul class="atoms-sub-menu atoms-sub-utilities">
@@ -61,7 +61,7 @@
 		
 			<li>
 				<div class="atomic-link-grp">
-					<span class="atomic-link-show">+</span>
+					<span class="atomic-link-show atomic-link-show-atoms">+</span>
 					<a class="atomic-link-main" href="atoms.php">Atoms</a>
 				</div>
 				<ul class="atoms-sub-menu">
@@ -111,7 +111,7 @@
 				
 			<li>
 				<div class="atomic-link-grp">
-					<span class="atomic-link-show">+</span>
+					<span class="atomic-link-show atomic-link-show-molecules">+</span>
 					<a class="atomic-link-main" href="molecules.php">Molecules</a>
 				</div>
 				<ul class="atoms-sub-menu atoms-sub-molecules">
@@ -159,7 +159,7 @@
 					
 			<li>
 				<div class="atomic-link-grp">
-					<span class="atomic-link-show">+</span>
+					<span class="atomic-link-show atomic-link-show-organisms">+</span>
 					<a class="atomic-link-main" href="organisms.php">Organisms</a>
 				</div>
 				<ul class="atoms-sub-menu atoms-sub-molecules">

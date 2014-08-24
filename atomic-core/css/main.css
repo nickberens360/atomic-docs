@@ -278,12 +278,40 @@ pre[class*="language-"] {
   padding-left: 30px;
 }
 
-/* line 1, ../scss/molecules/_atomic-link-group.scss */
+/* line 2, ../scss/molecules/_atomic-link-group.scss */
+.atoms .atomic-link-show-organisms,
+.atoms .atomic-link-show-molecules,
+.atoms .atomic-link-show-utilities {
+  display: none;
+}
+
+/* line 9, ../scss/molecules/_atomic-link-group.scss */
+.molecules .atomic-link-show-organisms,
+.molecules .atomic-link-show-atoms,
+.molecules .atomic-link-show-utilities {
+  display: none;
+}
+
+/* line 16, ../scss/molecules/_atomic-link-group.scss */
+.organisms .atomic-link-show-molecules,
+.organisms .atomic-link-show-atoms,
+.organisms .atomic-link-show-utilities {
+  display: none;
+}
+
+/* line 23, ../scss/molecules/_atomic-link-group.scss */
+.utilities .atomic-link-show-molecules,
+.utilities .atomic-link-show-atoms,
+.utilities .atomic-link-show-organisms {
+  display: none;
+}
+
+/* line 30, ../scss/molecules/_atomic-link-group.scss */
 .atomic-link-grp {
   position: relative;
 }
 
-/* line 8, ../scss/molecules/_atomic-link-group.scss */
+/* line 37, ../scss/molecules/_atomic-link-group.scss */
 .atomic-link-show {
   height: 20px;
   width: 20px;
@@ -299,22 +327,6 @@ pre[class*="language-"] {
   font-size: 20px;
 }
 
-/*.atomic-link-show{
-	height:20px;
-	width:20px;
-	border-radius:50%;
-	background:#00aff0;
-	position:absolute;
-	left:10px;
-	top:10px;
-	z-index:50;
-	cursor:pointer;
-}*/
-/*
-<span class="atomic-link-grp">
-	<span class="atomic-link-show">x</span>
-	<a class="atomic-link-main" href="atoms.php">Atoms</a>
-</span>*/
 /* CSS Document */
 /* line 1, ../scss/_atoms-main.scss */
 .atoms-container {
@@ -368,13 +380,14 @@ pre[class*="language-"] {
   text-transform: uppercase;
 }
 
-/* line 25, ../scss/_atoms-nav.scss */
+/* line 22, ../scss/_atoms-nav.scss */
 .atoms-nav {
   list-style: none;
   padding: 0;
+  padding-top: 13px;
 }
 
-/* line 29, ../scss/_atoms-nav.scss */
+/* line 27, ../scss/_atoms-nav.scss */
 .atomic-link-main {
   display: block;
   padding: 10px 38px;
@@ -384,34 +397,34 @@ pre[class*="language-"] {
   color: #a6adb3;
 }
 
-/* line 37, ../scss/_atoms-nav.scss */
+/* line 35, ../scss/_atoms-nav.scss */
 .atomic-link-main:hover {
   color: #a6adb3;
   text-decoration: none;
 }
 
-/* line 41, ../scss/_atoms-nav.scss */
+/* line 39, ../scss/_atoms-nav.scss */
 .atoms-sub-menu {
   padding-left: 0;
 }
-/* line 43, ../scss/_atoms-nav.scss */
+/* line 41, ../scss/_atoms-nav.scss */
 .atoms-sub-menu li {
   list-style: none;
 }
-/* line 46, ../scss/_atoms-nav.scss */
+/* line 44, ../scss/_atoms-nav.scss */
 .atoms-sub-menu a {
   padding-left: 33px;
   display: block;
   color: #5FC5FF;
 }
 
-/* line 53, ../scss/_atoms-nav.scss */
+/* line 51, ../scss/_atoms-nav.scss */
 .border-top {
   border-top: 1px solid #424242;
 }
 
 /****************************/
-/* line 69, ../scss/_atoms-nav.scss */
+/* line 67, ../scss/_atoms-nav.scss */
 .atoms-side_hide {
   cursor: pointer;
   display: block;
@@ -419,7 +432,7 @@ pre[class*="language-"] {
   padding: 8px 20px;
 }
 
-/* line 75, ../scss/_atoms-nav.scss */
+/* line 73, ../scss/_atoms-nav.scss */
 .atoms-panel_show {
   cursor: pointer;
   display: block;
@@ -427,7 +440,7 @@ pre[class*="language-"] {
   padding: 8px 20px;
 }
 
-/* line 81, ../scss/_atoms-nav.scss */
+/* line 79, ../scss/_atoms-nav.scss */
 .atoms-side_show {
   -webkit-transition: all .5s;
   transition: all .5s;

@@ -1,3 +1,32 @@
+.atoms {
+	.atomic-link-show-organisms,
+	.atomic-link-show-molecules,
+	.atomic-link-show-utilities{
+		display:none;
+	}
+}
+.molecules {
+	.atomic-link-show-organisms,
+	.atomic-link-show-atoms,
+	.atomic-link-show-utilities{
+		display:none;
+	}
+}
+.organisms {
+	.atomic-link-show-molecules,
+	.atomic-link-show-atoms,
+	.atomic-link-show-utilities{
+		display:none;
+	}
+}
+.utilities {
+	.atomic-link-show-molecules,
+	.atomic-link-show-atoms,
+	.atomic-link-show-organisms{
+		display:none;
+	}
+}
+
 .atomic-link-grp{
 	position:relative;
 
@@ -19,20 +48,3 @@
 	font-weight:bold;
 	font-size:20px;
 }
-/*.atomic-link-show{
-	height:20px;
-	width:20px;
-	border-radius:50%;
-	background:#00aff0;
-	position:absolute;
-	left:10px;
-	top:10px;
-	z-index:50;
-	cursor:pointer;
-}*/
-
-/*
-<span class="atomic-link-grp">
-	<span class="atomic-link-show">x</span>
-	<a class="atomic-link-main" href="atoms.php">Atoms</a>
-</span>*/
