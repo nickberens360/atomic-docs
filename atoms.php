@@ -10,7 +10,7 @@
 		<h1 id="atoms" class="atomic-h1">Atoms</h1>
 
 
-			<?php include ("components/_atoms.php");?>
+			<?php include ("atomic-core/_atoms.php");?>
 
 		
 

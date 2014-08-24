@@ -50,7 +50,7 @@ $myImport = '<span id="'.$myFile.'"></span><div class="component"><?php include 
 //Create file name string
 $myFile = $myFile . ".php";
 //Create file path string
-$filePath = "$compRootPath/_$partialDir.php";
+$filePath = "../_$partialDir.php";
 //Place contents of file into variable
 $contents = file_get_contents($filePath);
 
