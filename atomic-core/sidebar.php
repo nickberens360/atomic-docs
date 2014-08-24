@@ -1,7 +1,11 @@
 <?php include ("partial-mngr/config.php");?>
 
 
-<span class="atoms-side_show">Show</span>
+<div class="atoms-side_show">
+	<span class="toggle-line"></span>
+	<span class="toggle-line"></span>
+	<span class="toggle-line"></span>
+</div>
 <aside class="atoms-side">
 
 	<span class="atoms-side_hide">Hide Sidebar</span>

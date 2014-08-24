@@ -42,9 +42,12 @@
 		list-style:none;
 	}
 	a{
-		padding-left: 33px;
+		padding-left: 38px;
 		display: block;
 		color: #5FC5FF;
+	}
+	a:hover{
+		text-decoration:none;
 	}
 }
 
@@ -70,20 +73,29 @@
 	background:#00aff0;
 	padding:8px 20px;
 }
-.atoms-panel_show{
-	cursor:pointer;
-	display:block;
-	background:#35B2F8;
-	padding:8px 20px;
-}
+
 .atoms-side_show{
 	transition: all .5s;
 	background:#00aff0;
 	cursor:pointer;
 	position:fixed;
 	z-index:5000;
-	padding:8px 20px;
 	color:#fff;
+	height:30px;
+	width:30px;
+	border-radius:50%;
+	padding-top: 10px;
+	top:5px;
+	box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 5px 2px;
+}
+.toggle-line{
+	border: 1px solid #fff;
+	display: block;
+	width: 13px;
+	margin: auto;
+	margin-bottom: 2px;
+	position:relative;
+	left:-1px;
 }
 
 
