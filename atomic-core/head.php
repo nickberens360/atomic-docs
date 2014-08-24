@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-		<base href="http://127.0.0.1/atomic-docs/" >
+		<base href="../" >
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title></title>
@@ -17,16 +17,6 @@
 		<link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic' rel='stylesheet' type='text/css'>
 		
 	
-<style>
-html, body{
-	height:100%;
-}
-.white{
-	color:white;
-}
-.blue-bg{
-	background:#00469e;
-}
-</style>		
+	
 		
 </head>
