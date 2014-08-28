@@ -252,14 +252,15 @@ pre[class*="language-"] {
   -webkit-box-shadow: none;
   box-shadow: none;
   margin-bottom: 10px;
+  color: #B9B9B9;
 }
-/* line 13, ../scss/molecules/_atomic-sub-form.scss */
+/* line 14, ../scss/molecules/_atomic-sub-form.scss */
 .atomic-sub-form .btn {
   border-radius: 0;
   padding: 7px 12px;
   border: none;
 }
-/* line 18, ../scss/molecules/_atomic-sub-form.scss */
+/* line 19, ../scss/molecules/_atomic-sub-form.scss */
 .atomic-sub-form ::-webkit-input-placeholder {
   color: #555;
   font-style: italic;

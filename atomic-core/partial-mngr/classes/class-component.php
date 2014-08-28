@@ -3,65 +3,66 @@ class component
 {
 	
 	private $nameScss;
-	private $dirNameScss;
 	private $dirPathScss;
 	
 	private $nameComp;
-	private $dirNameComp;
 	private $dirPathComp;
+	
+	private $dirName;
+	
+	
 	
 	public function setNameScss($nameScss)
 	{
-			$this->nameScss = $nameScss;
+			$this->nameScss = $nameScss.'.scss';
 	}
 	public function getNameScss()
 	{
 			return $this->nameScss;
 	}
 	
-	public function setDirNameScss($dirNameScss)
-	{
-			$this->dirNameScss = $dirNameScss;
-	}
-	public function getDirNameScss()
-	{
-			return $this->dirNameScss;
-	}
 	
 	public function setDirPathScss($dirPathScss)
 	{
-			$this->dirPathScss = $dirPathScss;
+			$this->dirPathScss = '../../scss/'.$dirPathScss;
 	}
 	public function getDirPathScss()
 	{
 			return $this->dirPathScss;
 	}
 	
+	
+	
 	public function setNameComp($nameComp)
 	{
-			$this->nameComp = $nameComp;
+			$this->nameComp = $nameComp.'.php';
 	}
 	public function getNameComp()
 	{
 			return $this->nameComp;
 	}
 	
-	public function setDirNameComp($dirNameComp)
-	{
-			$this->dirNameComp = $dirNameComp;
-	}
-	public function getDirNameComp()
-	{
-			return $this->dirNameComp;
-	}
 	
 	public function setDirPathComp($dirPathComp)
 	{
-			$this->dirPathComp = $dirPathComp;
+			$this->dirPathComp = '../../components/'.$dirPathComp;
 	}
 	public function getDirPathComp()
 	{
 			return $this->dirPathComp;
+	}
+	
+	
+	
+	
+	
+	public function setDirName($dirName)
+	{
+			$this->dirName = $dirName;
+	}
+	public function getDirName()
+	{
+			return $this->dirName;
 	}
 	
 }
