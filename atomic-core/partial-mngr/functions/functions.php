@@ -9,15 +9,21 @@ function createScssFile($scssPath, $scssFile)
 
 function importScssFile($scssPath, $scssFile, $scssParentFile)
 {
+	//remove file extension for @import string
 	$scssFile = pathinfo($scssFile);
 	$scssFile = $scssFile['filename'];
-	$importString = "\n@import " . '"' . $scssFile . '";' ;
+	
+	//create @import string
+	$importString = "@import " . '"' . $scssFile . '";' ;
+	$importString = "\n$importString\n";
+	
+	//open parent scss file and write @import string to it
 	$fileHandle = fopen($scssPath.'/'.'_'.$scssParentFile.'.scss', 'a') or die("can't open file");
 	fwrite($fileHandle, $importString);
-	fclose($fileHandle);
+  fclose($fileHandle);   
 	
-	//file_put_contents($fileHandle, implode(PHP_EOL, file($fileHandle, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	//remove any extra line breaks from file
+	file_put_contents($scssPath.'/'.'_'.$scssParentFile.'.scss', implode(PHP_EOL, file($scssPath.'/'.'_'.$scssParentFile.'.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
 }
-
 
 ?>

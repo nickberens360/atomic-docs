@@ -38,13 +38,4 @@ createScssFile($component->getDirPathScss(), $component->getNameScss());
 importScssFile($component->getDirPathScss(), $component->getNameScss(), $component->getDirName());
 
 
-
-
-
-
-
-
-
-
-
 ?>

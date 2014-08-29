@@ -8170,13 +8170,6 @@ html {
 }
 
 /* 
-ATOMS
-Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.
-Atoms can also include more abstract elements like color palettes, fonts and even more invisible aspects of an interface like animations.
-Like atoms in nature they're fairly abstract and often not terribly useful on their own. However, they're good as a reference in the context of a pattern library as you can see all your global styles laid out at a glance.
-*/
-/*@import "headings";*/
-/* 
 MOLECULES
 Things start getting more interesting and tangible when we start combining atoms together. Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound. These molecules take on their own properties and serve as the backbone of our design systems.
 For example, a form label, input or button aren't too useful by themselves, but combine them together as a form and now they can actually do something together.
