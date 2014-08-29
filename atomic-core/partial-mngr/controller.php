@@ -18,24 +18,30 @@ $component-> setDirPathScss($compDir);
 $component-> setDirPathComp($compDir);
 
 
-echo($component->getNameScss());
-echo("<br/>");
-echo($component->getNameComp());
-echo("<br/>");
-echo($component->getDirName());
-echo("<br/>");
-echo($component->getDirPathScss());
-echo("<br/>");
-echo($component->getDirPathComp());
-echo("<br/>");
-echo($component->getDirPathScss().'/'.$component->getNameScss());
+//echo($component->getNameScss());
+//echo("<br/>");
+//echo($component->getNameComp());
+//echo("<br/>");
+//echo($component->getDirName());
+//echo("<br/>");
+//echo($component->getDirPathScss());
+//echo("<br/>");
+//echo($component->getDirPathComp());
+//echo("<br/>");
+//echo($component->getDirPathScss().'/'.$component->getNameScss());
 
 
 //Create the scss file and add the css class to that page
 createScssFile($component->getDirPathScss(), $component->getNameScss());
 
 //Create the @import string and add it to the parent scss file
-importScssFile($component->getDirPathScss(), $component->getNameScss());
+importScssFile($component->getDirPathScss(), $component->getNameScss(), $component->getDirName());
+
+
+
+
+
+
 
 
 
