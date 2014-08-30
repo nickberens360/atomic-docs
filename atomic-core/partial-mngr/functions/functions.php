@@ -1,36 +1,69 @@
 <?php
 
-function createScssFile($scssPath, $scssFile)
+//helper functions
+function scssPath($catName)
 {
-  $fileHandle = fopen($scssPath.'/'.'_'.$scssFile, 'x+') or die("can't open file");
-	fwrite($fileHandle, ".".$scssFile."{\n\n}");
+	$path = '../../scss/'.$catName;
+	return $path;
+}
+function scssFullFile($fileName)
+{
+	$fullFile = '_'.$fileName.'.scss';
+	return $fullFile;
+}
+
+function compPath($catName)
+{
+	$path = '../../components/'.$catName;
+	return $path;
+}
+function compFullFile($fileName)
+{
+	$fullFile = $fileName.'.php';
+	return $fullFile;
+}
+
+
+
+function createScssFile($catName, $fileName)
+{
+	$path = scssPath($catName);
+	$fullFile = scssFullFile($fileName);
+	
+  $fileHandle = fopen($path.'/'.$fullFile, 'x+') or die("can't open file");
+	fwrite($fileHandle, ".".$fileName."{\n\n}");
 	fclose($fileHandle);
 }
 
-function importScssFile($scssPath, $scssFile, $scssParentFile)
+
+function importScssFile($catName, $fileName)
 {
-	//remove file extension for @import string
-	$scssFile = pathinfo($scssFile);
-	$scssFile = $scssFile['filename'];
 	
 	//create @import string
-	$importString = "@import " . '"' . $scssFile . '";' ;
+	$importString = "@import " . '"' . $fileName . '";' ;
 	$importString = "\n$importString\n";
 	
 	//open parent scss file and write @import string to it
-	$fileHandle = fopen($scssPath.'/'.'_'.$scssParentFile.'.scss', 'a') or die("can't open file");
+	$path = scssPath($catName);
+	$fileHandle = fopen($path.'/'.'_'.$catName.'.scss', 'a') or die("can't open file");
 	fwrite($fileHandle, $importString);
   fclose($fileHandle);   
 	
 	//remove any extra line breaks from file
-	file_put_contents($scssPath.'/'.'_'.$scssParentFile.'.scss', implode(PHP_EOL, file($scssPath.'/'.'_'.$scssParentFile.'.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
+	file_put_contents($path.'/'.'_'.$catName.'.scss', implode(PHP_EOL, file($path.'/'.'_'.$catName.'.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
 }
 
-function createCompFile($compPath, $compFile)
+
+//creates component file
+function createCompFile($catName, $fileName)
 {
-  $fileHandle = fopen($compPath.'/'.$compFile, 'x+') or die("can't open file");
+	$path = compPath($catName);
+	$fullFile = compFullFile($fileName);
+	
+  $fileHandle = fopen($path.'/'.$fullFile, 'x+') or die("can't open file");
 	fclose($fileHandle);
 }
+
 
 
 
