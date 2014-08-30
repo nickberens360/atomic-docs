@@ -26,4 +26,14 @@ function importScssFile($scssPath, $scssFile, $scssParentFile)
 	file_put_contents($scssPath.'/'.'_'.$scssParentFile.'.scss', implode(PHP_EOL, file($scssPath.'/'.'_'.$scssParentFile.'.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
 }
 
+function createCompFile($compPath, $compFile)
+{
+  $fileHandle = fopen($compPath.'/'.$compFile, 'x+') or die("can't open file");
+	fclose($fileHandle);
+}
+
+
+
+
+
 ?>

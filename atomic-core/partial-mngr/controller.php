@@ -37,5 +37,9 @@ createScssFile($component->getDirPathScss(), $component->getNameScss());
 //Create the @import string and add it to the parent scss file
 importScssFile($component->getDirPathScss(), $component->getNameScss(), $component->getDirName());
 
+//Create the comp file 
+createCompFile($component->getDirPathComp(), $component->getNameComp());
+
+
 
 ?>
