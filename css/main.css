@@ -6767,7 +6767,6 @@ ORGANISMS
 Molecules give us some building blocks to work with, and we can now combine them together to form organisms. Organisms are groups of molecules joined together to form a relatively complex, distinct section of an interface.
 Organisms can consist of similar and/or different molecule types. For example, a masthead organism might consist of diverse components like a logo, primary navigation, search form, and list of social media channels. But a "product grid" organism might consist of the same molecule (possibly containing a product image, product title and price) repeated over and over again.
 */
-/*@import "masthead";*/
 /* 
 TEMPLATES
 At the template stage, we break our chemistry analogy to get into language that makes more sense to our clients and our final output. Templates consist mostly of groups of organisms stitched together to form pages. It's here where we start to see the design coming together and start seeing things like layout in action.
