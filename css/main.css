@@ -6712,27 +6712,6 @@ body {
 	@extend %clearfix;
 }*/
 /*@include wrap($width);*/
-/*
-.block{
-	display:block !important;
-}
-.padTB-container{
-	padding:$base*2 0;
-}
-.row {
- margin-left: 0; 
- margin-right: 0; 
-}
-html {
-    overflow-y: scroll;
-}
-.col-pl-none{
-	padding-left:0;
-}
-.mb-base{
-	margin-bottom:$base;
-}
-*/
 .block-grid-example-item {
   width: 24.25%;
   background: white;
@@ -6783,7 +6762,6 @@ Things start getting more interesting and tangible when we start combining atoms
 For example, a form label, input or button aren't too useful by themselves, but combine them together as a form and now they can actually do something together.
 Building up to molecules from atoms encourages a "do one thing and do it well" mentality. While molecules can be complex, as a rule of thumb they are relatively simple combinations of atoms built for reuse.
 */
-/*@import "nav";*/
 /* 
 ORGANISMS
 Molecules give us some building blocks to work with, and we can now combine them together to form organisms. Organisms are groups of molecules joined together to form a relatively complex, distinct section of an interface.
