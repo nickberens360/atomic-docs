@@ -64,23 +64,18 @@ function createCompFile($catName, $fileName)
 }
 
 
-
-
+//creates include string and writes to component parent file
 function createIncludeString($catName, $fileName)
 {
 	$fullFile = compFullFile($fileName);
-	$importString = '<span id="'.$fileName.'"></span><div class="component"><?php include(../components/'.$catName.'/'.$fullFile.'");?></div>';
-	
+	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fullFile.'");?></div>';
+	$includeString = "\n$includeString\n";
 	
 	$fileHandle = fopen('../_'.$catName.'.php', 'a') or die("can't open file");
+	fwrite($fileHandle, $includeString);
 	
+	file_put_contents('../_'.$catName.'.php', implode(PHP_EOL, file('../_'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
-	echo($fileHandle);
 }
-
-
-
-
-
 
 ?>
