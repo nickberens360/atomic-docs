@@ -53,7 +53,6 @@ function importScssFile($catName, $fileName)
 	file_put_contents($path.'/'.'_'.$catName.'.scss', implode(PHP_EOL, file($path.'/'.'_'.$catName.'.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
 }
 
-
 //creates component file
 function createCompFile($catName, $fileName)
 {
@@ -62,6 +61,21 @@ function createCompFile($catName, $fileName)
 	
   $fileHandle = fopen($path.'/'.$fullFile, 'x+') or die("can't open file");
 	fclose($fileHandle);
+}
+
+
+
+
+function createIncludeString($catName, $fileName)
+{
+	$fullFile = compFullFile($fileName);
+	$importString = '<span id="'.$fileName.'"></span><div class="component"><?php include(../components/'.$catName.'/'.$fullFile.'");?></div>';
+	
+	
+	$fileHandle = fopen('../_'.$catName.'.php', 'a') or die("can't open file");
+	
+	
+	echo($fileHandle);
 }
 
 

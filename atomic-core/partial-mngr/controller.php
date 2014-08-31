@@ -17,19 +17,16 @@ $component-> setCatName($catName);
 
 
 
-//echo($component->getFileName());
-//echo('<br/>');
-//echo($component->getCatName());
-
-
 
 //createScssFile($component->getCatName(), $component->getFileName());
-
-
+//
+//
 //importScssFile($component->getCatName(), $component->getFileName());
+//
+//
+//createCompFile($component->getCatName(), $component->getFileName());
 
-
-createCompFile($component->getCatName(), $component->getFileName());
+createIncludeString($component->getCatName(), $component->getFileName());
 
 
 
