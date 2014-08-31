@@ -15,11 +15,12 @@ $component = new component();
 $component-> setFileName($fileName);
 $component-> setCatName($catName);
 
-createScssFile($component->getCatName(), $component->getFileName());
-importScssFile($component->getCatName(), $component->getFileName());
+deleteScssImportString($component->getCatName(), $component->getFileName());
+deleteScssFile($component->getCatName(), $component->getFileName());
 
-createCompFile($component->getCatName(), $component->getFileName());
-createIncludeString($component->getCatName(), $component->getFileName());
+deleteCompIncludetString($component->getCatName(), $component->getFileName());
+deleteCompFile($component->getCatName(), $component->getFileName());
+
 
 
 header("location:../$catName.php");

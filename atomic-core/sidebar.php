@@ -76,9 +76,9 @@
 							<input type="hidden" name="compDir" value="<?php echo $dirOne;?>"/>
 
 						</form>
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete-mod.php" method="post">
-							<input type="text" class="form-control" id="inputDefault" name="partialName" placeholder="Delete Component">
-							<input type="hidden" name="partialDir" value="<?php echo $partialDirOne;?>"/>
+						<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
+							<input type="hidden" name="compDir" value="<?php echo $dirOne;?>"/>
 							<!--<button type="Submit" class="btn btn-danger">Delete</button>-->
 						</form>
 

@@ -25,6 +25,9 @@ function compFullFile($fileName)
 
 
 
+
+
+
 function createScssFile($catName, $fileName)
 {
 	$path = scssPath($catName);
@@ -76,6 +79,56 @@ function createIncludeString($catName, $fileName)
 	
 	file_put_contents('../_'.$catName.'.php', implode(PHP_EOL, file('../_'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
+}
+
+
+
+
+function deleteScssImportString($catName, $fileName)
+{
+	$path = scssPath($catName);
+	$fullFile = scssFullFile($fileName);
+	//create @import string
+	$importString = "@import " . '"' . $fileName . '";' ;
+	//Place contents of file into variable
+	$contents = file_get_contents($path.'/_'.$catName.'.scss');
+	$contents = str_replace($importString, "", $contents);
+	$contents = file_put_contents($path.'/_'.$catName.'.scss', $contents);
+}
+
+
+function deleteScssFile($catName, $fileName)
+{
+	$path = scssPath($catName);
+	$fullFile = scssFullFile($fileName);
+	$fullFile = '/'.$fullFile;
+	unlink($path.$fullFile);
+}
+
+
+
+
+function deleteCompIncludetString($catName, $fileName)
+{
+	$path = compPath($catName);
+	$fullFile = compFullFile($fileName);
+	
+	//create @import string
+	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fullFile.'");?></div>';
+	//Place contents of file into variable
+	$contents = file_get_contents('../_'.$catName.'.php');
+	
+	$contents = str_replace($includeString, "", $contents);
+	$contents = file_put_contents('../_'.$catName.'.php', $contents);
+}
+
+
+function deleteCompFile($catName, $fileName)
+{
+	$path = compPath($catName);
+	$fullFile = compFullFile($fileName);
+	$fullFile = '/'.$fullFile;
+	unlink($path.$fullFile);
 }
 
 ?>
