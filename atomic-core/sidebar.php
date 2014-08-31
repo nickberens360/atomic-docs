@@ -21,30 +21,29 @@
 				</div>
 				<ul class="atoms-sub-menu atoms-sub-utilities">
 				<li class="atomic-subform-group">
-					
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/create-mod.php" method="post">
-							<input type="text" class="form-control" id="inputDefault" name="modName" placeholder="Create Component">
-							<input type="hidden" name="partialDir" value="<?php echo $partialDirFour;?>"/>
-							<input type="hidden" name="path" value="<?php echo $partDirFourPath;?>"/>
-							<input type="hidden" name="compPath" value="<?php echo $compDirFourPath;?>"/>
+
+						<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
+							<input type="hidden" name="compDir" value="<?php echo $dirOne;?>"/>
+
 						</form>
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete-mod.php" method="post">
-							<input type="text" class="form-control" id="inputDefault" name="partialName" placeholder="Delete Component">
-							<input type="hidden" name="partialDir" value="<?php echo $partialDirFour;?>"/>
+						<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
+							<input type="hidden" name="compDir" value="<?php echo $dirOne;?>"/>
 						</form>
 
 					</li>
 				<?php
-						$orig = "../$compRoot/$partialDirFour";
-						
+						$orig = "../components/$dirOne";
+
 						if ($dir = opendir($orig)) {
-				
-				
+
+
 								while ($file = readdir($dir)) {
 								$ok = "true";
 								$filename = $file;
 								$filename = basename($filename, ".php");
-								
+
 								if ($file == "."){
 								$ok = "false";
 								}
@@ -55,14 +54,14 @@
 									echo "<li><a href= '#$filename'>$filename</a></li>";
 								}
 								}
-				
+
 								closedir($dir);
 						}
 					?>
 					</ul>
 			</li>
-				
-		
+
+
 			<li>
 				<div class="atomic-link-grp">
 					<span class="atomic-link-show atomic-link-show-atoms">+</span>
@@ -70,32 +69,29 @@
 				</div>
 				<ul class="atoms-sub-menu">
 					<li class="atomic-subform-group">
-					
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/create-mod.php" method="post">
-							<input type="text" class="form-control" id="inputDefault" name="modName" placeholder="Create Component">
-							<!--<button type="Submit" class="btn btn-primary">Create</button>-->
-							<input type="hidden" name="partialDir" value="<?php echo $partialDirOne;?>"/>
-							<input type="hidden" name="path" value="<?php echo $partDirOnePath;?>"/>
-							<input type="hidden" name="compPath" value="<?php echo $compDirOnePath;?>"/>
+
+						<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
+							<input type="hidden" name="compDir" value="<?php echo $dirTwo;?>"/>
+
 						</form>
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete-mod.php" method="post">
-							<input type="text" class="form-control" id="inputDefault" name="partialName" placeholder="Delete Component">
-							<input type="hidden" name="partialDir" value="<?php echo $partialDirOne;?>"/>
-							<!--<button type="Submit" class="btn btn-danger">Delete</button>-->
+						<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
+							<input type="hidden" name="compDir" value="<?php echo $dirTwo;?>"/>
 						</form>
 
 					</li>
 				<?php
-						$orig = "../$compRoot/$partialDirOne";
-						
+						$orig = "../components/$dirTwo";
+
 						if ($dir = opendir($orig)) {
-				
-				
+
+
 								while ($file = readdir($dir)) {
 								$ok = "true";
 								$filename = $file;
 								$filename = basename($filename, ".php");
-								
+
 								if ($file == "."){
 								$ok = "false";
 								}
@@ -106,13 +102,13 @@
 									echo "<li><a href= '#$filename'>$filename</a></li>";
 								}
 								}
-				
+
 								closedir($dir);
 						}
 					?>
 					</ul>
 			</li>
-				
+
 			<li>
 				<div class="atomic-link-grp">
 					<span class="atomic-link-show atomic-link-show-molecules">+</span>
@@ -120,30 +116,29 @@
 				</div>
 				<ul class="atoms-sub-menu atoms-sub-molecules">
 				<li class="atomic-subform-group">
-					
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/create-mod.php" method="post">
-							<input type="text" class="form-control" id="inputDefault" name="modName" placeholder="Create Component">
-							<input type="hidden" name="partialDir" value="<?php echo $partialDirTwo;?>"/>
-							<input type="hidden" name="path" value="<?php echo $partDirTwoPath;?>"/>
-							<input type="hidden" name="compPath" value="<?php echo $compDirTwoPath;?>"/>
+
+						<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
+							<input type="hidden" name="compDir" value="<?php echo $dirThree;?>"/>
+
 						</form>
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete-mod.php" method="post">
-							<input type="text" class="form-control" id="inputDefault" name="partialName" placeholder="Delete Component">
-							<input type="hidden" name="partialDir" value="<?php echo $partialDirTwo;?>"/>
+						<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
+							<input type="hidden" name="compDir" value="<?php echo $dirThree;?>"/>
 						</form>
 
 					</li>
 					<?php
-							$orig = "../$compRoot/$partialDirTwo";
-							
+							$orig = "../components/$dirThree";
+
 							if ($dir = opendir($orig)) {
-					
-					
+
+
 									while ($file = readdir($dir)) {
 									$ok = "true";
 									$filename = $file;
 									$filename = basename($filename, ".php");
-									
+
 									if ($file == "."){
 									$ok = "false";
 									}
@@ -154,13 +149,13 @@
 										echo "<li><a href= '#$filename'>$filename</a></li>";
 									}
 									}
-					
+
 									closedir($dir);
 							}
 						?>
 					</ul>
 			</li>
-					
+
 			<li>
 				<div class="atomic-link-grp">
 					<span class="atomic-link-show atomic-link-show-organisms">+</span>
@@ -168,30 +163,29 @@
 				</div>
 				<ul class="atoms-sub-menu atoms-sub-molecules">
 				<li class="atomic-subform-group">
-					
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/create-mod.php" method="post">
-							<input type="text" class="form-control" id="inputDefault" name="modName" placeholder="Create Component">
-							<input type="hidden" name="partialDir" value="<?php echo $partialDirThree;?>"/>
-							<input type="hidden" name="path" value="<?php echo $partDirThreePath;?>"/>
-							<input type="hidden" name="compPath" value="<?php echo $compDirThreePath;?>"/>
+
+						<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
+							<input type="hidden" name="compDir" value="<?php echo $dirFour;?>"/>
+
 						</form>
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete-mod.php" method="post">
-							<input type="text" class="form-control" id="inputDefault" name="partialName" placeholder="Delete Component">
-							<input type="hidden" name="partialDir" value="<?php echo $partialDirThree;?>"/>
+						<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
+							<input type="hidden" name="compDir" value="<?php echo $dirFour;?>"/>
 						</form>
 
 					</li>
 					<?php
-							$orig = "../$compRoot/$partialDirThree";
-							
+							$orig = "../components/$dirFour";
+
 							if ($dir = opendir($orig)) {
-					
-					
+
+
 									while ($file = readdir($dir)) {
 									$ok = "true";
 									$filename = $file;
 									$filename = basename($filename, ".php");
-									
+
 									if ($file == "."){
 									$ok = "false";
 									}
@@ -202,15 +196,12 @@
 										echo "<li><a href= '#$filename'>$filename</a></li>";
 									}
 									}
-					
+
 									closedir($dir);
 							}
 						?>
 					</ul>
 			</li>
-			
-			<!--<li class="atom-side_head"><a href="#">Misc</a></li>
-			<li><a class="atomic-link-main"  href="atomic-core/partial-mngr/index.php" target="_blank">Component MNGR</a></li>-->
 		</ul>
 	</nav>
 </aside>

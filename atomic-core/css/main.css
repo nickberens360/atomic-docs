@@ -211,6 +211,7 @@ pre[class*="language-"] {
   background: #3A4050;
   box-shadow: none;
   margin-bottom: 10px;
+  color: #B9B9B9;
 }
 .atomic-sub-form .btn {
   border-radius: 0;
