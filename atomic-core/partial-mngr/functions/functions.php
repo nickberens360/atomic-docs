@@ -74,10 +74,10 @@ function createIncludeString($catName, $fileName)
 	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fullFile.'");?></div>';
 	$includeString = "\n$includeString\n";
 	
-	$fileHandle = fopen('../_'.$catName.'.php', 'a') or die("can't open file");
+	$fileHandle = fopen('../includes/_'.$catName.'.php', 'a') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	file_put_contents('../_'.$catName.'.php', implode(PHP_EOL, file('../_'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	file_put_contents('../includes/_'.$catName.'.php', implode(PHP_EOL, file('../includes/_'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
 }
 
@@ -116,10 +116,10 @@ function deleteCompIncludetString($catName, $fileName)
 	//create @import string
 	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fullFile.'");?></div>';
 	//Place contents of file into variable
-	$contents = file_get_contents('../_'.$catName.'.php');
+	$contents = file_get_contents('../includes/_'.$catName.'.php');
 	
 	$contents = str_replace($includeString, "", $contents);
-	$contents = file_put_contents('../_'.$catName.'.php', $contents);
+	$contents = file_put_contents('../includes/_'.$catName.'.php', $contents);
 }
 
 
@@ -130,5 +130,81 @@ function deleteCompFile($catName, $fileName)
 	$fullFile = '/'.$fullFile;
 	unlink($path.$fullFile);
 }
+
+
+
+
+
+
+
+
+
+function createScssCatDirAndFile($catName)
+{
+	mkdir("../../scss/$catName");
+	$fileHandle = fopen("../../scss/$catName/_$catName.scss", 'x+') or die("can't open file");
+}
+
+
+
+
+
+
+function createSidebarIncludeAndFile($catName)
+{
+	
+	$includeString = 
+		'<li>
+				<div class="atomic-link-grp">
+					<span class="atomic-link-show atomic-link-show-organisms">+</span>
+					<a class="atomic-link-main" href="atomic-core/'.$catName.'.php">'.$catName.'</a>
+				</div>
+				<ul class="atoms-sub-menu atoms-sub-'.$catName.'">
+				<li class="atomic-subform-group">
+						<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
+							<input type="hidden" name="compDir" value="'.$catName.'"/>
+						</form>
+						<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete.php" method="post">
+							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
+							<input type="hidden" name="compDir" value="'.$catName.'"/>
+						</form>
+				</li>
+				'
+								
+				
+			;
+
+	$includeString = "\n$includeString\n";
+	
+	$fileHandle = fopen('../includes/_sidebar.php', 'a') or die("can't open file");
+	fwrite($fileHandle, $includeString);
+	
+	file_put_contents('../includes/_sidebar.php', implode(PHP_EOL, file('../includes/_sidebar.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>

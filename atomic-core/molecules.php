@@ -10,7 +10,7 @@
 		<h1 id="atoms" class="atomic-h1">Molecules</h1>
 
 
-			<?php include ("_molecules.php");?>
+			<?php include ("includes/_molecules.php");?>
 
 		
 
