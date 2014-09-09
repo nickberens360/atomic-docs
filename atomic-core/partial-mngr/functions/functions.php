@@ -170,10 +170,29 @@ function createSidebarIncludeAndFile($catName)
 							<input type="hidden" name="compDir" value="'.$catName.'"/>
 						</form>
 				</li>
-				'
-								
-				
-			;
+				<?php
+					$orig = "../components/'.$catName.'";
+					if ($dir = opendir($orig)) {
+					while ($file = readdir($dir)) {
+					$ok = "true";	
+					$filename = $file;
+					$filename = basename($filename, ".php");
+					if ($file == "."){
+					$ok = "false";
+					}
+					else if ($file == ".."){
+					$ok = "false";	
+					}
+					if ($ok == "true"){
+					echo "<li><a href=\'#$filename\'>$filename</a></li>";
+					}
+					}
+					closedir($dir);
+					}
+				?>
+				</ul>
+		</li>'		
+		;
 
 	$includeString = "\n$includeString\n";
 	
