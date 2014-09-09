@@ -16,7 +16,14 @@ $category-> setCategory($inputName);
 
 //createScssCatDirAndFile($category-> getCategory());
 
-createSidebarIncludeAndFile($category-> getCategory());
+//createCompCatDir($category-> getCategory());
+
+createPageTemplate($category-> getCategory());
+
+
+//createSidebarIncludeAndFile($category-> getCategory());
+
+
 
 
 
