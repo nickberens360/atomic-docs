@@ -14,18 +14,23 @@ $category = new category();
 $category-> setCategory($inputName);
 
 
-//createScssCatDirAndFile($category-> getCategory());
 
-//createCompCatDir($category-> getCategory());
+createPageIncludeFile($category-> getCategory());
+
+createScssCatDirAndFile($category-> getCategory());
+
+createCompCatDir($category-> getCategory());
 
 createPageTemplate($category-> getCategory());
 
 
-//createSidebarIncludeAndFile($category-> getCategory());
+createSidebarIncludeAndFile($category-> getCategory());
 
 
 
 
 
-//header("location:../$inputName.php");
+
+
+header("location:../$inputName.php");
 ?>

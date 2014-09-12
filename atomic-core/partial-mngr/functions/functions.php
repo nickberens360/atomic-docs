@@ -135,8 +135,10 @@ function deleteCompFile($catName, $fileName)
 
 
 
-
-
+function createPageIncludeFile($catName)
+{
+	fopen("../includes/_$catName.php", 'x+') or die("can't open file");
+}
 
 
 function createScssCatDirAndFile($catName)
@@ -169,7 +171,7 @@ function createPageTemplate($catName)
 			
 			
 			<div class="atoms-main">
-					<h1 id="atoms" class="atomic-h1">'.$catName.'</h1>
+					<h1 id="'.$catName.'" class="atomic-h1">'.$catName.'</h1>
 	
 	
 							<?php include ("includes/_'.$catName.'.php");?>
