@@ -19,12 +19,16 @@ createPageIncludeFile($category-> getCategory());
 
 createScssCatDirAndFile($category-> getCategory());
 
+createStringForMainScssFile($category-> getCategory());
+
 createCompCatDir($category-> getCategory());
 
 createPageTemplate($category-> getCategory());
 
 
 createSidebarIncludeAndFile($category-> getCategory());
+
+
 
 
 

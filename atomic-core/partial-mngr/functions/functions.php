@@ -148,6 +148,36 @@ function createScssCatDirAndFile($catName)
 }
 
 
+
+
+
+
+
+function createStringForMainScssFile($catName)
+{
+		$includeString ='@import "'.$catName.'/'.$catName.'";'; 
+	
+		
+
+	
+	
+	$includeString = "\n$includeString\n";
+	
+	$fileHandle = fopen('../../scss/main.scss', 'a') or die("can't open file");
+	fwrite($fileHandle, $includeString);
+	
+	file_put_contents('../../scss/main.scss', implode(PHP_EOL, file('../../scss/main.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+}
+
+
+
+
+
+
+
+
+
+
 function createCompCatDir($catName)
 {
 	mkdir("../../components/$catName");
@@ -252,6 +282,7 @@ function createSidebarIncludeAndFile($catName)
 	file_put_contents('../includes/_sidebar.php', implode(PHP_EOL, file('../includes/_sidebar.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
 }
+
 
 
 

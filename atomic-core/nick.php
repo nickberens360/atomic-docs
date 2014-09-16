@@ -1,5 +1,5 @@
 <?php include ("head.php");?>
-	<body class="new">
+	<body class="nick">
 	
 	
 	<div class="grid-row atoms-container">
@@ -7,10 +7,10 @@
 			
 			
 			<div class="atoms-main">
-					<h1 id="new" class="atomic-h1">new</h1>
+					<h1 id="nick" class="atomic-h1">nick</h1>
 	
 	
-							<?php include ("includes/_new.php");?>
+							<?php include ("includes/_nick.php");?>
 	
 	
 			</div>
