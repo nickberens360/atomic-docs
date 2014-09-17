@@ -8,7 +8,7 @@ function deleteCatPageFile($catName)
 	unlink('../'.$catName.'.php');
 }
 
-function deleteCatIncludeFile($catName)
+function deleteCatSidebarIncludeFile($catName)
 {
 	unlink('../includes/_'.$catName.'.php');
 }
@@ -21,16 +21,13 @@ function deleteCompDir($catName) {
      $objects = scandir($catName); 
      foreach ($objects as $object) { 
        if ($object != "." && $object != "..") { 
-         if (filetype($catName."/".$object) == "dir") rrmdir($catName."/".$object); else unlink($catName."/".$object); 
+         if (filetype($catName."/".$object) == "dir") deleteCompDir($catName."/".$object); else unlink($catName."/".$object); 
        } 
      } 
      reset($objects); 
      rmdir($catName); 
    } 
 } 
-
-
-
 
 
 function deleteSidebarIncludeString($catName)
@@ -77,14 +74,47 @@ $includeString =
 </li>'		
 ;
 
-	
-	
 	//Place contents of file into variable
 	$contents = file_get_contents('../includes/_sidebar.php');
 	
 	$contents = str_replace($includeString, "", $contents);
 	$contents = file_put_contents('../includes/_sidebar.php', $contents);
 }
+
+
+
+function deleteScssImportString($catName)
+{
+	
+	$importString ='@import "'.$catName.'/'.$catName.'";';
+		
+	//Place contents of file into variable
+	$contents = file_get_contents('../../scss/main.scss');
+	
+	$contents = str_replace($importString, "", $contents);
+	$contents = file_put_contents('../../scss/main.scss', $contents);
+}
+
+
+
+function deleteScssDir($catName) { 
+		
+		$catName = '../../scss/'.$catName;
+	
+   if (is_dir($catName)) { 
+     $objects = scandir($catName); 
+     foreach ($objects as $object) { 
+       if ($object != "." && $object != "..") { 
+         if (filetype($catName."/".$object) == "dir") deleteScssDir($catName."/".$object); else unlink($catName."/".$object); 
+       } 
+     } 
+     reset($objects); 
+     rmdir($catName); 
+   } 
+} 
+
+
+
 
 
 

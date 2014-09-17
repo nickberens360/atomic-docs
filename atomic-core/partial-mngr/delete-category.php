@@ -17,13 +17,20 @@ $category-> setCategory($inputName);
 
 
 
-//deleteSidebarIncludeString($category-> getCategory());
+deleteSidebarIncludeString($category-> getCategory());
 
-//deleteCatPageFile($category-> getCategory());
+deleteCatPageFile($category-> getCategory());
 
-//deleteCatIncludeFile($category-> getCategory());
+deleteCatSidebarIncludeFile($category-> getCategory());
 
 deleteCompDir($category-> getCategory());
+
+
+
+deleteScssImportString($category-> getCategory());
+
+
+deleteScssDir($category-> getCategory());
 
 
 
