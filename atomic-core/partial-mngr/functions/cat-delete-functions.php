@@ -13,7 +13,21 @@ function deleteCatIncludeFile($catName)
 	unlink('../includes/_'.$catName.'.php');
 }
 
-
+function deleteCompDir($catName) { 
+		
+		$catName = '../../components/'.$catName;
+	
+   if (is_dir($catName)) { 
+     $objects = scandir($catName); 
+     foreach ($objects as $object) { 
+       if ($object != "." && $object != "..") { 
+         if (filetype($catName."/".$object) == "dir") rrmdir($catName."/".$object); else unlink($catName."/".$object); 
+       } 
+     } 
+     reset($objects); 
+     rmdir($catName); 
+   } 
+} 
 
 
 

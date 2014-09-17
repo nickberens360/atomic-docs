@@ -21,9 +21,9 @@ $category-> setCategory($inputName);
 
 //deleteCatPageFile($category-> getCategory());
 
-deleteCatIncludeFile($category-> getCategory());
+//deleteCatIncludeFile($category-> getCategory());
 
-
+deleteCompDir($category-> getCategory());
 
 
 
