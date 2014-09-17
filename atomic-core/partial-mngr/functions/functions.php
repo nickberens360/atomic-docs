@@ -155,11 +155,7 @@ function createScssCatDirAndFile($catName)
 
 function createStringForMainScssFile($catName)
 {
-		$includeString ='@import "'.$catName.'/'.$catName.'";'; 
-	
-		
-
-	
+	$includeString ='@import "'.$catName.'/'.$catName.'";'; 
 	
 	$includeString = "\n$includeString\n";
 	
@@ -183,13 +179,9 @@ function createCompCatDir($catName)
 	mkdir("../../components/$catName");
 }
 
-
-
-
 function createPageTemplate($catName)
 {
 
-	
 	$includeString = 
 	'
 <?php include ("head.php");?>
@@ -223,11 +215,6 @@ function createPageTemplate($catName)
 	
 	
 }
-
-
-
-
-
 
 
 function createSidebarIncludeAndFile($catName)
@@ -282,11 +269,5 @@ function createSidebarIncludeAndFile($catName)
 	file_put_contents('../includes/_sidebar.php', implode(PHP_EOL, file('../includes/_sidebar.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
 }
-
-
-
-
-
-
 
 ?>

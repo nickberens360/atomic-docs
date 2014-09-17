@@ -20,6 +20,11 @@
 					<input type="text" class="form-control" id="inputDefault" name="inputName" placeholder="Create Category">
 				</form>
 			</li>
+			<li>
+				<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete-category.php" method="post">
+					<input type="text" class="form-control" id="inputDefault" name="inputName" placeholder="Delete Category">
+				</form>
+			</li>
 		</ul>
 	</nav>
 </aside>
