@@ -282,6 +282,25 @@ pre[class*="language-"] {
   transform-origin: 50%;
 }
 
+.cat-form-btn {
+  display: block;
+  padding: 10px 38px;
+  padding-left: 0;
+  margin-left: 38px;
+  text-transform: lowercase;
+  color: #5B6873;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.cat-form-btn.show-hide_cls {
+  display: none;
+}
+
+.cat-form {
+  display: none;
+}
+
 /* CSS Document */
 .atoms-container {
   height: 100%;
