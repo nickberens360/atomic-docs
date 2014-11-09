@@ -70,7 +70,8 @@
 				<ul class="atoms-sub-menu">
 					<li class="atomic-subform-group">
 
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+						<!-- <form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post"> -->
+						<form class="atomic-sub-form " method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
 							<input type="hidden" name="compDir" value="<?php echo $dirTwo;?>"/>
 

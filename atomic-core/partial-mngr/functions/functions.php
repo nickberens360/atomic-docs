@@ -30,13 +30,24 @@ function compFullFile($fileName)
 
 function createScssFile($catName, $fileName)
 {
-	$path = scssPath($catName);
-	$fullFile = scssFullFile($fileName);
+	echo "test";
+	// $path = scssPath($catName);
+	// $fullFile = scssFullFile($fileName);
 	
-  $fileHandle = fopen($path.'/'.$fullFile, 'x+') or die("can't open file");
-	fwrite($fileHandle, ".".$fileName."{\n\n}");
-	fclose($fileHandle);
+    // $fileHandle = fopen($path.'/'.$fullFile, 'x+') or die("can't open file");
+	// fwrite($fileHandle, ".".$fileName."{\n\n}");
+	// fclose($fileHandle);
 }
+
+
+
+
+
+
+
+
+
+
 
 
 function importScssFile($catName, $fileName)

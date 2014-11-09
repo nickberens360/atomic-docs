@@ -16,11 +16,11 @@ $component-> setFileName($fileName);
 $component-> setCatName($catName);
 
 createScssFile($component->getCatName(), $component->getFileName());
-importScssFile($component->getCatName(), $component->getFileName());
+//importScssFile($component->getCatName(), $component->getFileName());
 
-createCompFile($component->getCatName(), $component->getFileName());
-createIncludeString($component->getCatName(), $component->getFileName());
+//createCompFile($component->getCatName(), $component->getFileName());
+//createIncludeString($component->getCatName(), $component->getFileName());
 
 
-header("location:../$catName.php");
+//header("location:../$catName.php");
 ?>
