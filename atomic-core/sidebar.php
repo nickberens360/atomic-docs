@@ -1,13 +1,10 @@
-<?php 
-	$nameErr = "";
-	include ("partial-mngr/config.php");
+<?php 	
+	require ("partial-mngr/config.php");
+	require 'partial-mngr/create.php';
 ?>
-<?php 
-if(isset($_POST['compName'])) 
-{ 
-  require 'partial-mngr/create.php'; 
-}
-?>
+
+
+
 
 
 
