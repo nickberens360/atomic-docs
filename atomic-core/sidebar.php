@@ -1,4 +1,14 @@
-<?php include ("partial-mngr/config.php");?>
+<?php 
+	$nameErr = "";
+	include ("partial-mngr/config.php");
+?>
+<?php 
+if(isset($_POST['compName'])) 
+{ 
+  require 'partial-mngr/create.php'; 
+}
+?>
+
 
 
 <div class="atoms-side_show">
@@ -72,6 +82,14 @@
 
 						<!-- <form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post"> -->
 						<form class="atomic-sub-form " method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
+
+							<span class="error"><?php echo $nameErr;?></span>
+
+
+
+
+
 							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
 							<input type="hidden" name="compDir" value="<?php echo $dirTwo;?>"/>
 

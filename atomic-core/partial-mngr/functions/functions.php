@@ -30,7 +30,9 @@ function compFullFile($fileName)
 
 function createScssFile($catName, $fileName)
 {
-	echo "test";
+	echo $fileName;
+
+	
 	// $path = scssPath($catName);
 	// $fullFile = scssFullFile($fileName);
 	

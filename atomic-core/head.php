@@ -14,12 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="atomic-core/css/main.css">
 		<script src="modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 		
-<?php 
-if(isset($_POST['compName'])) 
-{ 
-  require 'partial-mngr/create.php'; 
-}
-?>
+
 
 		 
 
