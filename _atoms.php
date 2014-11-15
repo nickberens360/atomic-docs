@@ -1,0 +1,2 @@
+<span id="test"></span><div class="component"><?php include("../components/atoms/test.php");?></div>
+<span id="nest"></span><div class="component"><?php include("../components/atoms/nest.php");?></div>

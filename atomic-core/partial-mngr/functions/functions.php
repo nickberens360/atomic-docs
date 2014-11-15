@@ -3,7 +3,7 @@
 //helper functions
 function scssPath($catName)
 {
-	$path = '../../scss/'.$catName;
+	$path = '../scss/'.$catName;
 	return $path;
 }
 function scssFullFile($fileName)
@@ -14,7 +14,7 @@ function scssFullFile($fileName)
 
 function compPath($catName)
 {
-	$path = '../../components/'.$catName;
+	$path = '../components/'.$catName;
 	return $path;
 }
 function compFullFile($fileName)
@@ -30,15 +30,13 @@ function compFullFile($fileName)
 
 function createScssFile($catName, $fileName)
 {
-	echo $fileName;
 
+	$path = scssPath($catName);
+	$fullFile = scssFullFile($fileName);
 	
-	// $path = scssPath($catName);
-	// $fullFile = scssFullFile($fileName);
-	
-    // $fileHandle = fopen($path.'/'.$fullFile, 'x+') or die("can't open file");
-	// fwrite($fileHandle, ".".$fileName."{\n\n}");
-	// fclose($fileHandle);
+    $fileHandle = fopen($path.'/'.$fullFile, 'x+') or die("can't open file");
+	fwrite($fileHandle, ".".$fileName."{\n\n}");
+	fclose($fileHandle);
 }
 
 
@@ -69,6 +67,16 @@ function importScssFile($catName, $fileName)
 	file_put_contents($path.'/'.'_'.$catName.'.scss', implode(PHP_EOL, file($path.'/'.'_'.$catName.'.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
 }
 
+
+
+
+
+
+
+
+
+
+
 //creates component file
 function createCompFile($catName, $fileName)
 {
@@ -80,6 +88,11 @@ function createCompFile($catName, $fileName)
 }
 
 
+
+
+
+
+
 //creates include string and writes to component parent file
 function createIncludeString($catName, $fileName)
 {
@@ -87,12 +100,21 @@ function createIncludeString($catName, $fileName)
 	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fullFile.'");?></div>';
 	$includeString = "\n$includeString\n";
 	
-	$fileHandle = fopen('../_'.$catName.'.php', 'a') or die("can't open file");
+	$fileHandle = fopen('_'.$catName.'.php', 'a') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	file_put_contents('../_'.$catName.'.php', implode(PHP_EOL, file('../_'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	file_put_contents('_'.$catName.'.php', implode(PHP_EOL, file('_'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
 }
+
+
+
+
+
+
+
+
+
 
 
 

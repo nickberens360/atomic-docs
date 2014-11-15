@@ -29,7 +29,8 @@
 				<ul class="atoms-sub-menu atoms-sub-utilities">
 				<li class="atomic-subform-group">
 
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+						<form class="atomic-sub-form " method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+							<span class="error"><?php echo $nameErr;?></span>
 							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
 							<input type="hidden" name="compDir" value="<?php echo $dirOne;?>"/>
 
@@ -79,14 +80,7 @@
 
 						<!-- <form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post"> -->
 						<form class="atomic-sub-form " method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
-
 							<span class="error"><?php echo $nameErr;?></span>
-
-
-
-
-
 							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
 							<input type="hidden" name="compDir" value="<?php echo $dirTwo;?>"/>
 
@@ -133,7 +127,8 @@
 				<ul class="atoms-sub-menu atoms-sub-molecules">
 				<li class="atomic-subform-group">
 
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+						<form class="atomic-sub-form " method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+							<span class="error"><?php echo $nameErr;?></span>
 							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
 							<input type="hidden" name="compDir" value="<?php echo $dirThree;?>"/>
 
@@ -180,7 +175,8 @@
 				<ul class="atoms-sub-menu atoms-sub-molecules">
 				<li class="atomic-subform-group">
 
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+						<form class="atomic-sub-form " method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+							<span class="error"><?php echo $nameErr;?></span>
 							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
 							<input type="hidden" name="compDir" value="<?php echo $dirFour;?>"/>
 
