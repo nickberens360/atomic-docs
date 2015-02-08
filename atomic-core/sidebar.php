@@ -1,6 +1,8 @@
 <?php 	
 	require ("partial-mngr/config.php");
+	//include ("partial-mngr/classes/class-comp.php");
 	require 'partial-mngr/create.php';
+	require 'partial-mngr/delete.php';
 ?>
 
 
@@ -35,7 +37,8 @@
 							<input type="hidden" name="compDir" value="<?php echo $dirOne;?>"/>
 
 						</form>
-						<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete.php" method="post">
+						<form class="atomic-sub-form " method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+							<span class="error"><?php echo $nameErr;?></span>
 							<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
 							<input type="hidden" name="compDir" value="<?php echo $dirOne;?>"/>
 						</form>
