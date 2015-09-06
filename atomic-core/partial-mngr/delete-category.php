@@ -45,6 +45,7 @@ deleteScssDir($category-> getCategory());
 
 
 
+
 //createScssCatDirAndFile($category-> getCategory());
 //
 //createStringForMainScssFile($category-> getCategory());
@@ -64,5 +65,5 @@ deleteScssDir($category-> getCategory());
 
 
 
-//header("location:../$inputName.php");
+//header("location:../atoms.php");
 ?>

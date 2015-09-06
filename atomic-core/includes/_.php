@@ -1,0 +1,1 @@
+<span id="atoms"></span><div class="component"><?php include("../components//atoms.php");?></div>
