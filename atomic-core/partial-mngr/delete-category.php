@@ -37,5 +37,5 @@ deleteScssDir($category-> getCategory());
 ?>
 
 <script>
-window.location.href = '../atoms.php';
+window.location.href = '../index.php';
 </script>
