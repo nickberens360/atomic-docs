@@ -6681,7 +6681,7 @@ body {
   float: left;
 }
 
-.grid-row:after, .block-grid-example:after {
+.grid-row:after {
   content: "";
   display: table;
   clear: both;
@@ -6712,58 +6712,6 @@ body {
 	@extend %clearfix;
 }*/
 /*@include wrap($width);*/
-.block-grid-example-item {
-  width: 24.25%;
-  background: white;
-  padding: 10px;
-  float: left;
-}
-.block-grid-example-item:nth-child(n) {
-  margin-bottom: 1%;
-  margin-right: 1%;
-}
-.block-grid-example-item:nth-child(4n) {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-@media (max-width: 1200px) {
-  .block-grid-example-item {
-    width: 32.66667%;
-  }
-  .block-grid-example-item:nth-child(n) {
-    margin-bottom: 1%;
-    margin-right: 1%;
-  }
-  .block-grid-example-item:nth-child(3n) {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-}
-@media (max-width: 900px) {
-  .block-grid-example-item {
-    width: 49.5%;
-  }
-  .block-grid-example-item:nth-child(n) {
-    margin-bottom: 1%;
-    margin-right: 1%;
-  }
-  .block-grid-example-item:nth-child(2n) {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-}
-.block-grid-example-item img {
-  max-width: 100%;
-}
-
-.show-hide_content {
-  display: none;
-}
-
-.show-hide_cls {
-  display: none;
-}
-
 /* 
 MOLECULES
 Things start getting more interesting and tangible when we start combining atoms together. Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound. These molecules take on their own properties and serve as the backbone of our design systems.

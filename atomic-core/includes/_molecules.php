@@ -1,1 +1,0 @@
-<span id="onemore"></span><div class="component"><?php include("../components/molecules/onemore.php");?></div>
