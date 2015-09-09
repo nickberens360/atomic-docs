@@ -1,8 +1,10 @@
 <?php
-include ("classes/class-category.php");
-include ("functions/functions.php");
+/*include ("classes/class-category.php");
+include ("functions/functions.php");*/
 
 
+
+if (!empty($_POST['createDir'])){
 
 //Set user input variable
 $inputName = $_POST["inputName"];
@@ -30,11 +32,8 @@ createSidebarIncludeAndFile($category-> getCategory());
 
 
 
+}
 
 
 
-
-
-
-header("location:../$inputName.php");
 ?>

@@ -5,17 +5,17 @@
 
 function deleteCatPageFile($catName)
 {
-	unlink('../'.$catName.'.php');
+	unlink($catName.'.php');
 }
 
 function deleteCatSidebarIncludeFile($catName)
 {
-	unlink('../includes/_'.$catName.'.php');
+	unlink('includes/_'.$catName.'.php');
 }
 
 function deleteCompDir($catName) { 
 		
-		$catName = '../../components/'.$catName;
+   $catName = '../components/'.$catName;
 	
    if (is_dir($catName)) { 
      $objects = scandir($catName); 
@@ -41,13 +41,15 @@ $includeString =
 		</div>
 		<ul class="atoms-sub-menu atoms-sub-'.$catName.'">
 		<li class="atomic-subform-group">
-				<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+				<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 					<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
 					<input type="hidden" name="compDir" value="'.$catName.'"/>
+					<input type="hidden" name="create" value="create"/>
 				</form>
-				<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete.php" method="post">
+				<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 					<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
 					<input type="hidden" name="compDir" value="'.$catName.'"/>
+					<input type="hidden" name="delete" value="delete"/>
 				</form>
 		</li>
 		<?php
@@ -75,31 +77,31 @@ $includeString =
 ;
 
 	//Place contents of file into variable
-	$contents = file_get_contents('../includes/_sidebar.php');
+	$contents = file_get_contents('includes/_sidebar.php');
 	
 	$contents = str_replace($includeString, "", $contents);
-	$contents = file_put_contents('../includes/_sidebar.php', $contents);
+	$contents = file_put_contents('includes/_sidebar.php', $contents);
 }
 
 
 
-function deleteScssImportString($catName)
+function deleteCatScssImportString($catName)
 {
 	
 	$importString ='@import "'.$catName.'/'.$catName.'";';
 		
 	//Place contents of file into variable
-	$contents = file_get_contents('../../scss/main.scss');
+	$contents = file_get_contents('../scss/main.scss');
 	
 	$contents = str_replace($importString, "", $contents);
-	$contents = file_put_contents('../../scss/main.scss', $contents);
+	$contents = file_put_contents('../scss/main.scss', $contents);
 }
 
 
 
 function deleteScssDir($catName) { 
 		
-		$catName = '../../scss/'.$catName;
+		$catName = '../scss/'.$catName;
 	
    if (is_dir($catName)) { 
      $objects = scandir($catName); 

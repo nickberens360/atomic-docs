@@ -139,14 +139,14 @@ function deleteCompFile($catName, $fileName)
 
 function createPageIncludeFile($catName)
 {
-	fopen("../includes/_$catName.php", 'x+') or die("can't open file");
+	fopen("includes/_$catName.php", 'x+') or die("can't open file");
 }
 
 
 function createScssCatDirAndFile($catName)
 {
-	mkdir("../../scss/$catName");
-	$fileHandle = fopen("../../scss/$catName/_$catName.scss", 'x+') or die("can't open file");
+	mkdir("../scss/$catName");
+	$fileHandle = fopen("../scss/$catName/_$catName.scss", 'x+') or die("can't open file");
 }
 
 
@@ -161,10 +161,10 @@ function createStringForMainScssFile($catName)
 	
 	$includeString = "\n$includeString\n";
 	
-	$fileHandle = fopen('../../scss/main.scss', 'a') or die("can't open file");
+	$fileHandle = fopen('../scss/main.scss', 'a') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	file_put_contents('../../scss/main.scss', implode(PHP_EOL, file('../../scss/main.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	file_put_contents('../scss/main.scss', implode(PHP_EOL, file('../scss/main.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 }
 
 
@@ -178,7 +178,7 @@ function createStringForMainScssFile($catName)
 
 function createCompCatDir($catName)
 {
-	mkdir("../../components/$catName");
+	mkdir("../components/$catName");
 }
 
 function createPageTemplate($catName)
@@ -210,10 +210,10 @@ function createPageTemplate($catName)
 	
 	$includeString = "\n$includeString\n";
 	
-	$fileHandle = fopen('../'.$catName.'.php', 'x+') or die("can't open file");
+	$fileHandle = fopen($catName.'.php', 'x+') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	file_put_contents('../'.$catName.'.php', implode(PHP_EOL, file('../'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	file_put_contents($catName.'.php', implode(PHP_EOL, file($catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
 	
 }
@@ -230,13 +230,15 @@ function createSidebarIncludeAndFile($catName)
 		</div>
 		<ul class="atoms-sub-menu atoms-sub-'.$catName.'">
 		<li class="atomic-subform-group">
-				<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+				<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 					<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
 					<input type="hidden" name="compDir" value="'.$catName.'"/>
+					<input type="hidden" name="create" value="create"/>
 				</form>
-				<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete.php" method="post">
+				<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 					<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
 					<input type="hidden" name="compDir" value="'.$catName.'"/>
+					<input type="hidden" name="delete" value="delete"/>
 				</form>
 		</li>
 		<?php
@@ -265,11 +267,17 @@ function createSidebarIncludeAndFile($catName)
 
 	$includeString = "\n$includeString\n";
 	
-	$fileHandle = fopen('../includes/_sidebar.php', 'a') or die("can't open file");
+	$fileHandle = fopen('includes/_sidebar.php', 'a') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	file_put_contents('../includes/_sidebar.php', implode(PHP_EOL, file('../includes/_sidebar.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	file_put_contents('includes/_sidebar.php', implode(PHP_EOL, file('includes/_sidebar.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
 }
+
+
+
+
+
+
 
 ?>

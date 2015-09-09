@@ -1,6 +1,7 @@
 <?php
-include ("classes/class-category.php");
-include ("functions/cat-delete-functions.php");
+
+
+if (!empty($_POST['deleteDir'])){
 
 //Set user input variable
 $inputName = $_POST["inputName"];
@@ -24,18 +25,14 @@ deleteCompDir($category-> getCategory());
 
 
 
-deleteScssImportString($category-> getCategory());
+deleteCatScssImportString($category-> getCategory());
 
 
 deleteScssDir($category-> getCategory());
 
 
+}
 
 
-
-//header("location:../atoms.php");
 ?>
 
-<script>
-window.location.href = '../index.php';
-</script>
