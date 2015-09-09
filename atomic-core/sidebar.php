@@ -1,4 +1,10 @@
-<?php include ("partial-mngr/config.php");?>
+<?php 	
+	require ("partial-mngr/config.php");
+	include ("partial-mngr/classes/class-comp.php");
+	require 'partial-mngr/functions/functions.php';
+	require 'partial-mngr/create.php';
+	require 'partial-mngr/delete.php';
+?>
 
 
 <div class="atoms-side_show">
@@ -34,3 +40,4 @@
 	</nav>
 	
 </aside>
+

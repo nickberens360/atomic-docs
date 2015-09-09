@@ -5,13 +5,15 @@
 	</div>
 	<ul class="atoms-sub-menu atoms-sub-utilities">
 	<li class="atomic-subform-group">
-			<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+			<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 				<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
 				<input type="hidden" name="compDir" value="<?php echo $dirOne;?>"/>
+				<input type="hidden" name="create" value="create"/>
 			</form>
-			<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete.php" method="post">
+			<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 				<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
 				<input type="hidden" name="compDir" value="<?php echo $dirOne;?>"/>
+				<input type="hidden" name="delete" value="delete"/>
 			</form>
 		</li>
 	<?php
@@ -43,13 +45,15 @@
 	</div>
 	<ul class="atoms-sub-menu">
 		<li class="atomic-subform-group">
-			<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+			<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 				<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
 				<input type="hidden" name="compDir" value="<?php echo $dirTwo;?>"/>
+				<input type="hidden" name="create" value="create"/>
 			</form>
-			<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete.php" method="post">
+			<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 				<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
 				<input type="hidden" name="compDir" value="<?php echo $dirTwo;?>"/>
+				<input type="hidden" name="delete" value="delete"/>
 			</form>
 		</li>
 	<?php
@@ -81,13 +85,15 @@
 	</div>
 	<ul class="atoms-sub-menu atoms-sub-molecules">
 	<li class="atomic-subform-group">
-			<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+			<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 				<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
 				<input type="hidden" name="compDir" value="<?php echo $dirThree;?>"/>
+				<input type="hidden" name="create" value="create"/>
 			</form>
-			<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete.php" method="post">
+			<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 				<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
 				<input type="hidden" name="compDir" value="<?php echo $dirThree;?>"/>
+				<input type="hidden" name="delete" value="delete"/>
 			</form>
 		</li>
 		<?php
@@ -119,13 +125,15 @@
 	</div>
 	<ul class="atoms-sub-menu atoms-sub-molecules">
 	<li class="atomic-subform-group">
-			<form class="atomic-sub-form " action="atomic-core/partial-mngr/create.php" method="post">
+			<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 				<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
 				<input type="hidden" name="compDir" value="<?php echo $dirFour;?>"/>
+				<input type="hidden" name="create" value="create"/>
 			</form>
-			<form class="atomic-sub-form " action="atomic-core/partial-mngr/delete.php" method="post">
+			<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 				<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
 				<input type="hidden" name="compDir" value="<?php echo $dirFour;?>"/>
+				<input type="hidden" name="delete" value="delete"/>
 			</form>
 		</li>
 		<?php

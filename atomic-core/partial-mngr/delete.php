@@ -1,8 +1,9 @@
 <?php
-include ("classes/class-comp.php");
-include ("functions/functions.php");
 
 
+
+
+if (!empty($_POST['delete'])){
 
 //Set user input variable
 $fileName = $_POST["compName"];
@@ -23,5 +24,8 @@ deleteCompFile($component->getCatName(), $component->getFileName());
 
 
 
-header("location:../$catName.php");
+//header("location:../$catName.php");
+
+}
+
 ?>

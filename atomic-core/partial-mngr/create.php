@@ -1,8 +1,8 @@
 <?php
-include ("classes/class-comp.php");
-include ("functions/functions.php");
 
 
+
+if (!empty($_POST['create'])){
 
 //Set user input variable
 $fileName = $_POST["compName"];
@@ -21,6 +21,8 @@ importScssFile($component->getCatName(), $component->getFileName());
 createCompFile($component->getCatName(), $component->getFileName());
 createIncludeString($component->getCatName(), $component->getFileName());
 
+}
 
-header("location:../$catName.php");
+//header("location:../$catName.php");
 ?>
+

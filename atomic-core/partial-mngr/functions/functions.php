@@ -3,7 +3,7 @@
 //helper functions
 function scssPath($catName)
 {
-	$path = '../../scss/'.$catName;
+	$path = '../scss/'.$catName;
 	return $path;
 }
 function scssFullFile($fileName)
@@ -14,7 +14,7 @@ function scssFullFile($fileName)
 
 function compPath($catName)
 {
-	$path = '../../components/'.$catName;
+	$path = '../components/'.$catName;
 	return $path;
 }
 function compFullFile($fileName)
@@ -33,7 +33,7 @@ function createScssFile($catName, $fileName)
 	$path = scssPath($catName);
 	$fullFile = scssFullFile($fileName);
 	
-  $fileHandle = fopen($path.'/'.$fullFile, 'x+') or die("can't open file");
+    $fileHandle = fopen($path.'/'.$fullFile, 'x+') or die("can't open file");
 	fwrite($fileHandle, ".".$fileName."{\n\n}");
 	fclose($fileHandle);
 }
@@ -62,7 +62,7 @@ function createCompFile($catName, $fileName)
 	$path = compPath($catName);
 	$fullFile = compFullFile($fileName);
 	
-  $fileHandle = fopen($path.'/'.$fullFile, 'x+') or die("can't open file");
+    $fileHandle = fopen($path.'/'.$fullFile, 'x+') or die("can't open file");
 	fclose($fileHandle);
 }
 
@@ -74,10 +74,10 @@ function createIncludeString($catName, $fileName)
 	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fullFile.'");?></div>';
 	$includeString = "\n$includeString\n";
 	
-	$fileHandle = fopen('../includes/_'.$catName.'.php', 'a') or die("can't open file");
+	$fileHandle = fopen('includes/_'.$catName.'.php', 'a') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	file_put_contents('../includes/_'.$catName.'.php', implode(PHP_EOL, file('../includes/_'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	file_put_contents('includes/_'.$catName.'.php', implode(PHP_EOL, file('includes/_'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
 }
 
@@ -116,10 +116,10 @@ function deleteCompIncludetString($catName, $fileName)
 	//create @import string
 	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fullFile.'");?></div>';
 	//Place contents of file into variable
-	$contents = file_get_contents('../includes/_'.$catName.'.php');
+	$contents = file_get_contents('includes/_'.$catName.'.php');
 	
 	$contents = str_replace($includeString, "", $contents);
-	$contents = file_put_contents('../includes/_'.$catName.'.php', $contents);
+	$contents = file_put_contents('includes/_'.$catName.'.php', $contents);
 }
 
 
@@ -130,6 +130,8 @@ function deleteCompFile($catName, $fileName)
 	$fullFile = '/'.$fullFile;
 	unlink($path.$fullFile);
 }
+
+
 
 
 
