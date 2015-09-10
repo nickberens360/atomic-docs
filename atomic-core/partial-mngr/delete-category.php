@@ -30,8 +30,10 @@ deleteCatScssImportString($category-> getCategory());
 
 deleteScssDir($category-> getCategory());
 
+header("location:index.php");
 
 }
+
 
 
 ?>
