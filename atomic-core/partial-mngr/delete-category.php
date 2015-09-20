@@ -6,29 +6,23 @@ if (!empty($_POST['deleteDir'])){
 //Set user input variable
 $inputName = $_POST["inputName"];
 
-//initialize object
-$category = new category();
-
-//populate objects with post values
-$category-> setCategory($inputName);
 
 
 
+deleteSidebarIncludeString($inputName );
 
-deleteSidebarIncludeString($category-> getCategory());
+deleteCatPageFile($inputName );
 
-deleteCatPageFile($category-> getCategory());
+deleteCatSidebarIncludeFile($inputName );
 
-deleteCatSidebarIncludeFile($category-> getCategory());
-
-deleteCompDir($category-> getCategory());
-
+deleteCompDir($inputName );
 
 
-deleteCatScssImportString($category-> getCategory());
+
+deleteCatScssImportString($inputName );
 
 
-deleteScssDir($category-> getCategory());
+deleteScssDir($inputName );
 
 header("location:index.php");
 

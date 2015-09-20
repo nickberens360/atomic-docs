@@ -1,6 +1,5 @@
 <?php 	
 	require ("partial-mngr/config.php");
-	include ("partial-mngr/classes/class-comp.php");
 	include ("partial-mngr/classes/class-category.php");
 	require 'partial-mngr/functions/functions.php';
 	require 'partial-mngr/functions/cat-delete-functions.php';

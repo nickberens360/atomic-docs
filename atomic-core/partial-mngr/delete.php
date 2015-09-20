@@ -9,18 +9,13 @@ if (!empty($_POST['delete'])){
 $fileName = $_POST["compName"];
 $catName = $_POST["compDir"];
 
-//initialize object
-$component = new component();
 
-//populate objects with post values
-$component-> setFileName($fileName);
-$component-> setCatName($catName);
 
-deleteScssImportString($component->getCatName(), $component->getFileName());
-deleteScssFile($component->getCatName(), $component->getFileName());
+deleteScssImportString($catName, $fileName );
+deleteScssFile($catName, $fileName );
 
-deleteCompIncludetString($component->getCatName(), $component->getFileName());
-deleteCompFile($component->getCatName(), $component->getFileName());
+deleteCompIncludetString($catName, $fileName );
+deleteCompFile($catName, $fileName );
 
 
 

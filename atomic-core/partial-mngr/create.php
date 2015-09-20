@@ -8,18 +8,13 @@ if (!empty($_POST['create'])){
 $fileName = $_POST["compName"];
 $catName = $_POST["compDir"];
 
-//initialize object
-$component = new component();
 
-//populate objects with post values
-$component-> setFileName($fileName);
-$component-> setCatName($catName);
 
-createScssFile($component->getCatName(), $component->getFileName());
-importScssFile($component->getCatName(), $component->getFileName());
+createScssFile($catName, $fileName );
+importScssFile($catName, $fileName );
 
-createCompFile($component->getCatName(), $component->getFileName());
-createIncludeString($component->getCatName(), $component->getFileName());
+createCompFile($catName, $fileName );
+createIncludeString($catName, $fileName );
 
 }
 

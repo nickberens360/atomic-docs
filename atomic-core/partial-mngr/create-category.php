@@ -9,26 +9,20 @@ if (!empty($_POST['createDir'])){
 //Set user input variable
 $inputName = $_POST["inputName"];
 
-//initialize object
-$category = new category();
-
-//populate objects with post values
-$category-> setCategory($inputName);
 
 
+createPageIncludeFile($inputName );
 
-createPageIncludeFile($category-> getCategory());
+createScssCatDirAndFile($inputName );
 
-createScssCatDirAndFile($category-> getCategory());
+createStringForMainScssFile($inputName );
 
-createStringForMainScssFile($category-> getCategory());
+createCompCatDir($inputName );
 
-createCompCatDir($category-> getCategory());
-
-createPageTemplate($category-> getCategory());
+createPageTemplate($inputName );
 
 
-createSidebarIncludeAndFile($category-> getCategory());
+createSidebarIncludeAndFile($inputName );
 
 header("location:$inputName.php");
 
