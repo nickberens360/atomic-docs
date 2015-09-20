@@ -25,11 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$component-> setFileName($fileName);
 		$component-> setCatName($catName);
 
-		createScssFile($component->getCatName(), $component->getFileName());
+		/*createScssFile($component->getCatName(), $component->getFileName());
 		importScssFile($component->getCatName(), $component->getFileName());
 
 		createCompFile($component->getCatName(), $component->getFileName());
-		createIncludeString($component->getCatName(), $component->getFileName());
+		createIncludeString($component->getCatName(), $component->getFileName());*/
 	  }
 
 
