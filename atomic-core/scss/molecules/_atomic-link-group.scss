@@ -1,32 +1,3 @@
-.atoms {
-	.atomic-link-show-organisms,
-	.atomic-link-show-molecules,
-	.atomic-link-show-utilities{
-		display:none;
-	}
-}
-.molecules {
-	.atomic-link-show-organisms,
-	.atomic-link-show-atoms,
-	.atomic-link-show-utilities{
-		display:none;
-	}
-}
-.organisms {
-	.atomic-link-show-molecules,
-	.atomic-link-show-atoms,
-	.atomic-link-show-utilities{
-		display:none;
-	}
-}
-.utilities {
-	.atomic-link-show-molecules,
-	.atomic-link-show-atoms,
-	.atomic-link-show-organisms{
-		display:none;
-	}
-}
-
 .atomic-link-grp{
 	position:relative;
 
@@ -34,7 +5,15 @@
 .atomic-link-main{
 	
 }
+
+.active{
+  .atomic-link-show{
+	display: inline;
+  }	
+}
+
 .atomic-link-show{
+	display: none;
 	/*height:20px;
 	width:20px;*/
 	border-radius:50%;

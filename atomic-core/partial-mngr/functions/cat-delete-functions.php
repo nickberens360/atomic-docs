@@ -34,7 +34,7 @@ function deleteSidebarIncludeString($catName)
 {
 	
 $includeString = 
-'<li>
+'<li class=" <?php if ($current_page == "'.$catName.'.php"){ echo "active "; }?>">
 		<div class="atomic-link-grp">
 			<span class="atomic-link-show atomic-link-show-'.$catName.'">+</span>
 			<a class="atomic-link-main" href="atomic-core/'.$catName.'.php">'.$catName.'</a>

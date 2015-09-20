@@ -9,6 +9,9 @@
 	require 'partial-mngr/create-category.php';
 	require 'partial-mngr/delete-category.php';
 ?>
+<?php
+  $current_page = basename($_SERVER['PHP_SELF']);
+?>
 
 
 <div class="atoms-side_show">
@@ -26,8 +29,8 @@
 			<li class="atom-side_head"><a href="#">Components</a></li>
 			<?php include ("includes/_sidebar.php");?>
 			<li class="show-hide">
-				<span class="cat-form-btn show-hide_btn">+ Create New Category</span>
-				<span class="cat-form-btn show-hide_cls">- Delete New Category</span>
+				<span class="cat-form-btn show-hide_btn">+ Manage Categories</span>
+				<span class="cat-form-btn show-hide_cls">- Manage Categories</span>
 				<div class="cat-form show-hide_content">
 					<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 						<input type="text" class="form-control" id="inputDefault" name="inputName" placeholder="Create Category" required>

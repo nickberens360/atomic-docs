@@ -30,7 +30,7 @@ createPageTemplate($category-> getCategory());
 
 createSidebarIncludeAndFile($category-> getCategory());
 
-
+header("location:$inputName.php");
 
 }
 
