@@ -30,12 +30,12 @@
 				<span class="cat-form-btn show-hide_cls">- Delete New Category</span>
 				<div class="cat-form show-hide_content">
 					<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-						<input type="text" class="form-control" id="inputDefault" name="inputName" placeholder="Create Category">
+						<input type="text" class="form-control" id="inputDefault" name="inputName" placeholder="Create Category" required>
 						<input type="hidden" name="createDir" value="createDir"/>
 					</form>
 			
 					<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-						<input type="text" class="form-control" id="inputDefault" name="inputName" placeholder="Delete Category">
+						<input type="text" class="form-control" id="inputDefault" name="inputName" placeholder="Delete Category" required>
 						<input type="hidden" name="deleteDir" value="deleteDir"/>
 					</form>
 				</div>

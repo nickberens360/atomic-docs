@@ -231,12 +231,12 @@ function createSidebarIncludeAndFile($catName)
 		<ul class="atoms-sub-menu atoms-sub-'.$catName.'">
 		<li class="atomic-subform-group">
 				<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-					<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component">
+					<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Create Component" required>
 					<input type="hidden" name="compDir" value="'.$catName.'"/>
 					<input type="hidden" name="create" value="create"/>
 				</form>
 				<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-					<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component">
+					<input type="text" class="form-control" id="inputDefault" name="compName" placeholder="Delete Component" required>
 					<input type="hidden" name="compDir" value="'.$catName.'"/>
 					<input type="hidden" name="delete" value="delete"/>
 				</form>
