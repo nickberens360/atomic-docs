@@ -1,39 +1,12 @@
 <?php
 
-//helper functions
-function scssPath($catName)
-{
-	$path = '../scss/'.$catName;
-	return $path;
-}
-function scssFullFile($fileName)
-{
-	$fullFile = '_'.$fileName.'.scss';
-	return $fullFile;
-}
-
-function compPath($catName)
-{
-	$path = '../components/'.$catName;
-	return $path;
-}
-function compFullFile($fileName)
-{
-	$fullFile = $fileName.'.php';
-	return $fullFile;
-}
-
-
-
 
 
 
 function createScssFile($catName, $fileName)
 {
-	$path = scssPath($catName);
-	$fullFile = scssFullFile($fileName);
 	
-    $fileHandle = fopen($path.'/'.$fullFile, 'x+') or die("can't open file");
+    $fileHandle = fopen('../scss/'.$catName.'/'.'_'.$fileName.'.scss', 'x+') or die("can't open file");
 	fwrite($fileHandle, ".".$fileName."{\n\n}");
 	fclose($fileHandle);
 }
@@ -47,31 +20,33 @@ function importScssFile($catName, $fileName)
 	$importString = "\n$importString\n";
 	
 	//open parent scss file and write @import string to it
-	$path = scssPath($catName);
-	$fileHandle = fopen($path.'/'.'_'.$catName.'.scss', 'a') or die("can't open file");
+	$fileHandle = fopen('../scss/'.$catName.'/'.'_'.$catName.'.scss', 'a') or die("can't open file");
 	fwrite($fileHandle, $importString);
-  fclose($fileHandle);   
+    fclose($fileHandle);   
 	
 	//remove any extra line breaks from file
-	file_put_contents($path.'/'.'_'.$catName.'.scss', implode(PHP_EOL, file($path.'/'.'_'.$catName.'.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
+	file_put_contents('../scss/'.$catName.'/'.'_'.$catName.'.scss', implode(PHP_EOL, file('../scss/'.$catName.'/'.'_'.$catName.'.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
 }
+
+
 
 //creates component file
 function createCompFile($catName, $fileName)
 {
-	$path = compPath($catName);
-	$fullFile = compFullFile($fileName);
+
 	
-    $fileHandle = fopen($path.'/'.$fullFile, 'x+') or die("can't open file");
+    $fileHandle = fopen('../components/'.$catName.'/'.$fileName.'.php', 'x+') or die("can't open file");
 	fclose($fileHandle);
 }
+
 
 
 //creates include string and writes to component parent file
 function createIncludeString($catName, $fileName)
 {
-	$fullFile = compFullFile($fileName);
-	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fullFile.'");?></div>';
+
+
+	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.php'.'");?></div>';
 	$includeString = "\n$includeString\n";
 	
 	$fileHandle = fopen('includes/_'.$catName.'.php', 'a') or die("can't open file");
@@ -86,23 +61,19 @@ function createIncludeString($catName, $fileName)
 
 function deleteScssImportString($catName, $fileName)
 {
-	$path = scssPath($catName);
-	$fullFile = scssFullFile($fileName);
-	//create @import string
+
 	$importString = "@import " . '"' . $fileName . '";' ;
 	//Place contents of file into variable
-	$contents = file_get_contents($path.'/_'.$catName.'.scss');
+	$contents = file_get_contents('../scss/'.$catName.'/_'.$catName.'.scss');
 	$contents = str_replace($importString, "", $contents);
-	$contents = file_put_contents($path.'/_'.$catName.'.scss', $contents);
+	$contents = file_put_contents('../scss/'.$catName.'/_'.$catName.'.scss', $contents);
 }
 
 
 function deleteScssFile($catName, $fileName)
 {
-	$path = scssPath($catName);
-	$fullFile = scssFullFile($fileName);
-	$fullFile = '/'.$fullFile;
-	unlink($path.$fullFile);
+            
+	unlink('../scss/'.$catName.'/_'.$fileName.'.scss');
 }
 
 
@@ -110,11 +81,9 @@ function deleteScssFile($catName, $fileName)
 
 function deleteCompIncludetString($catName, $fileName)
 {
-	$path = compPath($catName);
-	$fullFile = compFullFile($fileName);
 	
 	//create @import string
-	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fullFile.'");?></div>';
+	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.php");?></div>';
 	//Place contents of file into variable
 	$contents = file_get_contents('includes/_'.$catName.'.php');
 	
@@ -125,10 +94,7 @@ function deleteCompIncludetString($catName, $fileName)
 
 function deleteCompFile($catName, $fileName)
 {
-	$path = compPath($catName);
-	$fullFile = compFullFile($fileName);
-	$fullFile = '/'.$fullFile;
-	unlink($path.$fullFile);
+	unlink('../components/'.$catName.'/'.$fileName.'.php');
 }
 
 

@@ -15,17 +15,16 @@ function deleteCatSidebarIncludeFile($catName)
 
 function deleteCompDir($catName) { 
 		
-   $catName = '../components/'.$catName;
 	
    if (is_dir($catName)) { 
      $objects = scandir($catName); 
      foreach ($objects as $object) { 
        if ($object != "." && $object != "..") { 
-         if (filetype($catName."/".$object) == "dir") deleteCompDir($catName."/".$object); else unlink($catName."/".$object); 
+         if (filetype($catName."/".$object) == "dir") deleteCompDir('../components/'.'../components/'.$catName."/".$object); else unlink('../components/'.$catName."/".$object); 
        } 
      } 
      reset($objects); 
-     rmdir($catName); 
+     rmdir('../components/'.$catName); 
    } 
 } 
 
@@ -101,17 +100,16 @@ function deleteCatScssImportString($catName)
 
 function deleteScssDir($catName) { 
 		
-		$catName = '../scss/'.$catName;
 	
-   if (is_dir($catName)) { 
-     $objects = scandir($catName); 
+   if (is_dir('../scss/'.$catName)) { 
+     $objects = scandir('../scss/'.$catName); 
      foreach ($objects as $object) { 
        if ($object != "." && $object != "..") { 
-         if (filetype($catName."/".$object) == "dir") deleteScssDir($catName."/".$object); else unlink($catName."/".$object); 
+         if (filetype($catName."/".$object) == "dir") deleteScssDir('../scss/'.$catName."/".$object); else unlink('../scss/'.$catName."/".$object); 
        } 
      } 
      reset($objects); 
-     rmdir($catName); 
+     rmdir('../scss/'.$catName); 
    } 
 } 
 
