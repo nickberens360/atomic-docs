@@ -1,16 +1,19 @@
 <?php 	
 	require ("partial-mngr/config.php");
-	include ("partial-mngr/classes/class-category.php");
+	
 	require 'partial-mngr/functions/functions.php';
-	require 'partial-mngr/functions/cat-delete-functions.php';
+
 	require 'partial-mngr/create.php';
 	require 'partial-mngr/delete.php';
 	require 'partial-mngr/create-category.php';
 	require 'partial-mngr/delete-category.php';
+
+	$current_page = basename($_SERVER['PHP_SELF']);
+
 ?>
-<?php
-  $current_page = basename($_SERVER['PHP_SELF']);
-?>
+
+  
+
 
 
 <div class="atoms-side_show">
