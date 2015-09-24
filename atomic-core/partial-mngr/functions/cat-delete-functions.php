@@ -15,16 +15,17 @@ function deleteCatSidebarIncludeFile($catName)
 
 function deleteCompDir($catName) { 
 		
+   $catName = '../components/'.$catName;
 	
    if (is_dir($catName)) { 
      $objects = scandir($catName); 
      foreach ($objects as $object) { 
        if ($object != "." && $object != "..") { 
-         if (filetype($catName."/".$object) == "dir") deleteCompDir('../components/'.'../components/'.$catName."/".$object); else unlink('../components/'.$catName."/".$object); 
+         if (filetype($catName."/".$object) == "dir") deleteCompDir($catName."/".$object); else unlink($catName."/".$object); 
        } 
      } 
      reset($objects); 
-     rmdir('../components/'.$catName); 
+     rmdir($catName); 
    } 
 } 
 
