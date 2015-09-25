@@ -1,8 +1,4 @@
 <?php
-/*include ("classes/class-category.php");
-include ("functions/functions.php");*/
-
-
 
 if (!empty($_POST['createDir'])){
 
