@@ -7,7 +7,7 @@ include ("functions/functions.php");*/
 if (!empty($_POST['createDir'])){
 
 //Set user input variable
-$inputName = $_POST["inputName"];
+$inputName = test_input($_POST["inputName"]);
 
 
 

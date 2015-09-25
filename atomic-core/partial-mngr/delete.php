@@ -6,8 +6,8 @@
 if (!empty($_POST['delete'])){
 
 //Set user input variable
-$fileName = $_POST["compName"];
-$catName = $_POST["compDir"];
+$fileName = test_input($_POST["compName"]);
+$catName = test_input($_POST["compDir"]);
 
 
 

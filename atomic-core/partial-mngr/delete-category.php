@@ -4,9 +4,8 @@
 if (!empty($_POST['deleteDir'])){
 
 //Set user input variable
-$inputName = $_POST["inputName"];
 
-
+$inputName = test_input($_POST["inputName"]);
 
 
 deleteSidebarIncludeString($inputName );
