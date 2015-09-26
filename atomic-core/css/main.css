@@ -330,7 +330,7 @@ pre[class*="language-"] {
   padding-left: 0;
   margin-left: 38px;
   text-transform: lowercase;
-  color: #5B6873;
+  color: #fff;
   font-style: italic;
   cursor: pointer;
 }
@@ -343,6 +343,19 @@ pre[class*="language-"] {
 /* line 14, molecules/_cat-form.scss */
 .cat-form {
   display: none;
+}
+
+/* line 17, molecules/_cat-form.scss */
+.cat-form-group {
+  background: #00aff0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+/* line 23, molecules/_cat-form.scss */
+.cat-form-group .atomic-sub-form .form-control {
+  background: #fff;
 }
 
 /* CSS Document */

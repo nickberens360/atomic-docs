@@ -30,7 +30,7 @@
 		<ul class="atoms-nav">
 			<li class="atom-side_head"><a href="#">Components</a></li>
 			<?php include ("includes/_sidebar.php");?>
-			<li class="show-hide">
+			<li class="show-hide cat-form-group">
 				<span class="cat-form-btn show-hide_btn">+ Manage Categories</span>
 				<span class="cat-form-btn show-hide_cls">- Manage Categories</span>
 				<div class="cat-form show-hide_content">
