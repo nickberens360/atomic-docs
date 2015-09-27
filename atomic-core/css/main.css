@@ -263,7 +263,7 @@ pre[class*="language-"] {
 /* line 19, molecules/_atomic-sub-form.scss */
 .atomic-sub-form ::-webkit-input-placeholder {
   color: #555;
-  font-style: italic;
+  font-style: 12px;
 }
 
 /* line 1, molecules/_atomic-sub-menu.scss */
@@ -329,33 +329,42 @@ pre[class*="language-"] {
   padding: 10px 38px;
   padding-left: 0;
   margin-left: 38px;
-  text-transform: lowercase;
   color: #fff;
-  font-style: italic;
-  cursor: pointer;
 }
 
-/* line 11, molecules/_cat-form.scss */
-.cat-form-btn.show-hide_cls {
-  display: none;
+/* .cat-form-btn.show-hide_cls{
+	display:none;
 }
-
-/* line 14, molecules/_cat-form.scss */
-.cat-form {
-  display: none;
-}
-
-/* line 17, molecules/_cat-form.scss */
+.cat-form{
+	display:none;
+} */
+/* line 15, molecules/_cat-form.scss */
 .cat-form-group {
-  background: #00aff0;
+  background: #484E5F;
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
+  padding: 15px 0;
 }
-/* line 23, molecules/_cat-form.scss */
+/* line 22, molecules/_cat-form.scss */
 .cat-form-group .atomic-sub-form .form-control {
   background: #fff;
+}
+/* line 25, molecules/_cat-form.scss */
+.cat-form-group ::-webkit-input-placeholder {
+  color: #B9B9B9;
+}
+/* line 28, molecules/_cat-form.scss */
+.cat-form-group .form-control {
+  color: #B9B9B9;
+}
+/* line 31, molecules/_cat-form.scss */
+.cat-form-group .fa {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
 }
 
 /* CSS Document */

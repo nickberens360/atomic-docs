@@ -3,10 +3,12 @@
 
 
 //PARTIAL DIRECTORY NAME E.G: MODULES, PARTIALS, LAYOUTS, ETC..
-$dirOne = "utilities";
+/*$dirOne = "utilities";
 $dirTwo = "atoms";	
 $dirThree = "molecules";	
-$dirFour = "organisms";
+$dirFour = "organisms";*/
+
+
 
 
 

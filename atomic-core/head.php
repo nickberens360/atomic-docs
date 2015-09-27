@@ -13,6 +13,12 @@
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="atomic-core/css/main.css">
 		<script src="modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+		
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
 		
 		<link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic' rel='stylesheet' type='text/css'>
 		

@@ -1,5 +1,5 @@
 <?php 	
-	require ("partial-mngr/config.php");
+	//require ("partial-mngr/config.php");
 	
 	require 'partial-mngr/functions/functions.php';
 
@@ -30,10 +30,10 @@
 		<ul class="atoms-nav">
 			<li class="atom-side_head"><a href="#">Components</a></li>
 			<?php include ("includes/_sidebar.php");?>
-			<li class="show-hide cat-form-group">
-				<span class="cat-form-btn show-hide_btn">+ Manage Categories</span>
-				<span class="cat-form-btn show-hide_cls">- Manage Categories</span>
-				<div class="cat-form show-hide_content">
+			<li class="show-hide cat-form-group ">
+			<i class="fa fa-minus-square-o fa-lg"></i>
+				<span class="cat-form-btn js-showTrigger">Manage Categories</span>
+				<div class="cat-form js-showContent">
 					<form class="atomic-sub-form " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 						<input type="text" class="form-control" id="inputDefault" name="inputName" placeholder="Create Category" required>
 						<input type="hidden" name="createDir" value="createDir"/>

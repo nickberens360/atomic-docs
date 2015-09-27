@@ -7,7 +7,7 @@
 	
 	
 	<div class="atoms-main">
-		<h1 id="atoms" class="atomic-h1">Index</h1>
+		<h1 id="atoms" class="atomic-h1"> Index</h1>
 
 
 

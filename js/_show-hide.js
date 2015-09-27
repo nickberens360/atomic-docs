@@ -1,4 +1,4 @@
-$showBtn = $('.show-hide_btn');
+/*$showBtn = $('.show-hide_btn');
 $clsBtn = $('.show-hide_cls');
 $showContent = $('.show-hide_content');
 
@@ -15,4 +15,21 @@ $clsBtn.click(function() {
   $(this).parent().find($showContent).slideUp();
 	$(this).css('display','none');
 	$(this).parent().find($showBtn).css('display','block');
+});*/
+
+
+$('.fa').click(function() {	
+	$(this).toggleClass('fa-minus-square-o fa-plus-square-o');
+		//$(this).css('color','red');
+
+	$('.js-showContent').slideToggle();
 });
+
+
+
+
+
+
+
+
+

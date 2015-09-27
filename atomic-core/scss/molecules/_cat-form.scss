@@ -3,24 +3,41 @@
 	padding: 10px 38px;
 	padding-left: 0;
 	margin-left: 38px;
-	text-transform: lowercase;
 	color: #fff;
-	font-style:italic;
-	cursor:pointer;
+	
 }
-.cat-form-btn.show-hide_cls{
+/* .cat-form-btn.show-hide_cls{
 	display:none;
 }
 .cat-form{
 	display:none;
-}
+} */
 .cat-form-group{
-	background: #00aff0;
+	background: #484E5F;
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	left: 0;
+	padding: 15px 0;
 	.atomic-sub-form .form-control {
 	    background: #fff;
 	}
+	::-webkit-input-placeholder {
+		 color: #B9B9B9;
+	}
+	.form-control{
+		color: #B9B9B9;
+	}
+	.fa{
+		position: absolute;
+		right: 10px;
+		top:10px;
+		cursor:pointer;
+		//color: #00aff0;
+	}
+}
+
+
+.js-showContent{
+	//display:none;
 }
