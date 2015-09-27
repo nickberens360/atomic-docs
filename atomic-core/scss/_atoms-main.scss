@@ -17,7 +17,12 @@
 
 
 
-
+code, kbd, pre, samp {
+    font-size: 14px;
+}
+pre[class*="language-"] {
+    padding: 2em;
+}
 
 
 .atoms-code-example{

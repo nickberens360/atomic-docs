@@ -848,12 +848,22 @@ pre[class*="language-"] {
   width: 100%;
 }
 
+/* line 20, _atoms-main.scss */
+code, kbd, pre, samp {
+  font-size: 14px;
+}
+
 /* line 23, _atoms-main.scss */
+pre[class*="language-"] {
+  padding: 2em;
+}
+
+/* line 28, _atoms-main.scss */
 .atoms-code-example {
   position: relative;
 }
 
-/* line 29, _atoms-main.scss */
+/* line 34, _atoms-main.scss */
 .atoms-group {
   margin-bottom: 50px;
 }
