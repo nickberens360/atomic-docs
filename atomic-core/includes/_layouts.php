@@ -1,1 +1,0 @@
-<span id="new"></span><div class="component"><?php include("../components/layouts/new.php");?></div>

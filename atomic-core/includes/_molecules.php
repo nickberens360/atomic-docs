@@ -1,0 +1,1 @@
+<span id="calloutBox"></span><div class="component"><?php include("../components/molecules/calloutBox.php");?></div>
