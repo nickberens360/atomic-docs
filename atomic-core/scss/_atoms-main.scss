@@ -6,10 +6,12 @@
 
 .atoms-main{
 	
-	@include col($ten);
-	float:right;
+	//@include col($ten);
+	//float:right;
 	padding:20px;
 	transition:all .5s;
+	padding-left:282px;
+	width:100%;
 }
 
 

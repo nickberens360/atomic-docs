@@ -5,7 +5,9 @@ function sidebar(){
 	
 	$showBtn.css('left', '-100px');
 	$side.css('left', '0');
-	$main.css('width', '83.3333333333%');
+	sideBarWidth = $( ".atoms-side_hide" ).outerWidth();
+	
+    $('.atoms-main').css('padding-left',sideBarWidth+20);
 }
 
 function noSidebar(){
@@ -25,6 +27,18 @@ $( ".atoms-side_hide" ).click(function() {
 $( ".atoms-side_show" ).click(function() {
 	sidebar()
 });
+
+
+
+sideBarWidth = $( ".atoms-side_hide" ).outerWidth();
+	
+$('.atoms-main').css('padding-left',sideBarWidth+20);
+
+
+
+
+
+
 
 
 

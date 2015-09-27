@@ -1,6 +1,6 @@
 .atoms-side{
 	float:left;
-	@include col($two);
+	//@include col($two);
 	height:100%;
 	background: #343843;
 	color:#fff;
@@ -8,6 +8,10 @@
 	left:0;
 	transition: all .5s;
 	z-index:5000;
+	width:262px;
+	a{
+		text-decoration: none;
+	}
 }
 
 .atom-side_head{
