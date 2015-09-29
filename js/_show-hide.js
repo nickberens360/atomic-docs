@@ -18,12 +18,7 @@ $clsBtn.click(function() {
 });*/
 
 
-$('.fa').click(function() {	
-	$(this).toggleClass('fa-minus-square-o fa-plus-square-o');
-		//$(this).css('color','red');
 
-	$('.js-showContent').slideToggle();
-});
 
 
 

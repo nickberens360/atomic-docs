@@ -757,14 +757,10 @@ pre[class*="language-"] {
 
 /* line 15, molecules/_atomic-link-group.scss */
 .atomic-link-show {
-  display: none;
-  /*height:20px;
-  width:20px;*/
-  border-radius: 50%;
   color: #00aff0;
   position: absolute;
-  left: 10px;
-  top: 6px;
+  left: 13px;
+  top: 10px;
   z-index: 50;
   cursor: pointer;
   text-align: center;
@@ -774,7 +770,7 @@ pre[class*="language-"] {
   transition: all .25s;
 }
 
-/* line 31, molecules/_atomic-link-group.scss */
+/* line 32, molecules/_atomic-link-group.scss */
 .rotate {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);

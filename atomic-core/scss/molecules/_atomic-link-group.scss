@@ -13,14 +13,11 @@
 }
 
 .atomic-link-show{
-	display: none;
-	/*height:20px;
-	width:20px;*/
-	border-radius:50%;
+	//display: none;
 	color:#00aff0;
 	position:absolute;
-	left:10px;
-	top: 6px;
+	left: 13px;
+    top: 10px;
 	z-index:50;
 	cursor:pointer;
 	text-align:center;
@@ -28,6 +25,10 @@
 	font-size:20px;
 	transition: all .25s;
 }
+
+
+
+
 .rotate{
 	transform: rotate(-45deg);
 	transform-origin: 50%;
