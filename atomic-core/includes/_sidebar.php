@@ -1,6 +1,6 @@
 <li class=" <?php if ($current_page == "molecules.php"){ echo "active "; }?>">
 		<div class="atomic-link-grp">
-			<span class="atomic-link-show atomic-link-show-molecules">+</span>
+			<i class="atomic-link-show  fa fa-folder-o"></i>
 			<a class="atomic-link-main" href="atomic-core/molecules.php">molecules</a>
 		</div>
 		<ul class="atoms-sub-menu atoms-sub-molecules">
