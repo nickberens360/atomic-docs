@@ -4,7 +4,7 @@
 	padding-left: 0;
 	margin-left: 38px;
 	color: #fff;
-	
+	font-size: 13px;
 }
 /* .cat-form-btn.show-hide_cls{
 	display:none;
@@ -19,8 +19,9 @@
 	right: 0;
 	left: 0;
 	padding: 15px 0;
+	z-index: 100;
 	.atomic-sub-form .form-control {
-	    background: #fff;
+	    background: #3F434E;
 	}
 	::-webkit-input-placeholder {
 		 color: #B9B9B9;
@@ -38,6 +39,8 @@
 }
 
 
+
+
 .js-showContent{
-	//display:none;
+	display:none;
 }

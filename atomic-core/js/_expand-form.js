@@ -4,11 +4,27 @@ $( ".atomic-link-grp .atomic-link-show" ).click(function() {
 });
 
 
+sideHeight = $('.atoms-side').outerHeight();
+
+formHeight = $('.cat-form-group').outerHeight();
+
+oflowHeight = sideHeight - formHeight;
+
+console.log(oflowHeight);
+
+$('.atoms-overflow').css('height',oflowHeight);
+
+
 $('.cat-form-group .fa').click(function() {	
 	$(this).toggleClass('fa-minus-square-o fa-plus-square-o');
 		//$(this).css('color','red');
 
 	$('.js-showContent').slideToggle();
+
+     /*formHeight = $('.cat-form-group').outerHeight();
+
+     $('.atoms-overflow').css('height',oflowHeight+formHeight)*/
+
 });
 
 
@@ -24,4 +40,16 @@ $(document).ready(function() {
         $this.attr('href', pathname + link);
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
 

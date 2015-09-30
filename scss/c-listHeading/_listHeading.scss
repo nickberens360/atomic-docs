@@ -1,0 +1,26 @@
+.listHeading{
+  .h2{
+  	color:green;
+  	margin-bottom: 0;
+  }
+  ul{
+  	padding-left:20px;
+  }
+}
+
+//varients
+//////////////////////////////
+
+.listHeading.listHeading-alt1{
+  .h2{
+  	color:Blue;
+  	margin-bottom: 0;
+  }
+}
+
+.listHeading.listHeading-alt2{
+  .h2{
+  	color:Red;
+  	margin-bottom: 0;
+  }
+}
