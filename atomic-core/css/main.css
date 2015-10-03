@@ -812,7 +812,7 @@ pre[class*="language-"] {
 }
 /* line 26, molecules/_cat-form.scss */
 .cat-form-group ::-webkit-input-placeholder {
-  color: #B9B9B9;
+  color: #626673;
 }
 /* line 29, molecules/_cat-form.scss */
 .cat-form-group .form-control {
@@ -832,9 +832,24 @@ pre[class*="language-"] {
 }
 
 /* line 1, organisms/_introBlock.scss */
-.introBlock {
+.docBlock {
   max-width: 500px;
   margin: auto;
+}
+
+/* line 6, organisms/_introBlock.scss */
+.docBlock-ul li {
+  margin-bottom: 20px;
+}
+
+/* line 10, organisms/_introBlock.scss */
+.docBlock-img {
+  display: block;
+  max-width: 250px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.38);
 }
 
 /* line 1, _atoms-main.scss */

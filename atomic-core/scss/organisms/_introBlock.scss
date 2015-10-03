@@ -1,4 +1,16 @@
-.introBlock{
+.docBlock{
 	max-width:500px;
 	margin:auto;
+}
+.docBlock-ul{
+	li{
+		margin-bottom: 20px;
+	}
+}
+.docBlock-img{
+	display: block;
+	max-width:250px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.38);
 }

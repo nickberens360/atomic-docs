@@ -7,12 +7,22 @@
 	
 	
 	<div class="atoms-main">
-		<div class="introBlock">
-			<h1 class="introBlock-heading">Welcome!</h1>
+		<div class="docBlock">
+			<h1 class="docBlock-heading">Welcome!</h1>
 			<p>Place the atomic-docs folder in the directory of your local dev enviornment.<p> 
-			<p>To get started create a new category in the lower left corner. For example, Base, Organisms, Layout or whatever.</p>
-			<p>Click on the category link you just created. From there created a new component.</p>
-			<p>Now have a look at your folder structure. You will notice a folder named "components". Inside components will be a folder with the name of the category you created, and within that will be all the html component files you create that fall under that category.</p>
+			
+			<ol class="docBlock-ul">
+				<li>Set up your CSS preprocessor of choice.</li>
+				<li>In the lower left hand corner, open the "Manage Categories" form. I'll call this one "modules".
+					<img class="docBlock-img" src="atomic-core/img/doc1.png" />
+				</li>
+				<li>Click on the newly created modules link in the sidebar to go to the modules page. In the form below the modules let's create a new component called "calloutBox".
+					<img class="docBlock-img" src="atomic-core/img/doc2.png" />
+				</li>
+				<li>So let's create the HTML for the calloutBox component. In the the project directory you'll notice a folder named "compontents". Open that and you'll find the folder modules. This is the directory that all of the HTML component files you create under the modules category. I'll open the file "calloutBox.php" and and put my HTML code there.
+                    <img class="docBlock-img" src="atomic-core/img/doc3.png" />
+				</li>
+			</ol>
 		</div>
 
 	</div>

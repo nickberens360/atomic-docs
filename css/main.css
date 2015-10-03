@@ -10,25 +10,3 @@
 .calloutBox__heading {
   font-size: 18px;
 }
-
-/* line 2, c-listHeading/_listHeading.scss */
-.listHeading .h2 {
-  color: green;
-  margin-bottom: 0;
-}
-/* line 6, c-listHeading/_listHeading.scss */
-.listHeading ul {
-  padding-left: 20px;
-}
-
-/* line 15, c-listHeading/_listHeading.scss */
-.listHeading.listHeading-alt1 .h2 {
-  color: Blue;
-  margin-bottom: 0;
-}
-
-/* line 22, c-listHeading/_listHeading.scss */
-.listHeading.listHeading-alt2 .h2 {
-  color: Red;
-  margin-bottom: 0;
-}
