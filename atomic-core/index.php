@@ -28,7 +28,7 @@
 				<li>Now back to our project in the browser. Click on the molecules link in the sidebar and you'll see our newly created component.
                     <img class="docBlock-img docBlock-img__big" src="atomic-core/img/doc5.png" />
 				</li>
-				<li>And that's about it!</li>
+				<li>And that's it!</li>
 			</ol>
 		</div>
 
