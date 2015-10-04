@@ -799,26 +799,27 @@ pre[class*="language-"] {
 /* line 15, molecules/_cat-form.scss */
 .cat-form-group {
   background: #484E5F;
-  position: absolute;
+  position: fixed;
+  width: 262px;
   bottom: 0;
   right: 0;
   left: 0;
   padding: 15px 0;
   z-index: 100;
 }
-/* line 23, molecules/_cat-form.scss */
+/* line 24, molecules/_cat-form.scss */
 .cat-form-group .atomic-sub-form .form-control {
   background: #3F434E;
 }
-/* line 26, molecules/_cat-form.scss */
+/* line 27, molecules/_cat-form.scss */
 .cat-form-group ::-webkit-input-placeholder {
   color: #626673;
 }
-/* line 29, molecules/_cat-form.scss */
+/* line 30, molecules/_cat-form.scss */
 .cat-form-group .form-control {
   color: #B9B9B9;
 }
-/* line 32, molecules/_cat-form.scss */
+/* line 33, molecules/_cat-form.scss */
 .cat-form-group .fa {
   position: absolute;
   right: 10px;
@@ -826,7 +827,7 @@ pre[class*="language-"] {
   cursor: pointer;
 }
 
-/* line 44, molecules/_cat-form.scss */
+/* line 45, molecules/_cat-form.scss */
 .js-showContent {
   display: none;
 }
