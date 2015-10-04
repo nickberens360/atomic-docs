@@ -837,14 +837,18 @@ pre[class*="language-"] {
   max-width: 500px;
   margin: auto;
 }
+/* line 4, organisms/_introBlock.scss */
+.docBlock a {
+  color: #4bc6ef;
+}
 
-/* line 6, organisms/_introBlock.scss */
+/* line 9, organisms/_introBlock.scss */
 .docBlock-ul li {
   margin-bottom: 20px;
   line-height: 1.5;
 }
 
-/* line 11, organisms/_introBlock.scss */
+/* line 14, organisms/_introBlock.scss */
 .docBlock-img {
   display: block;
   max-width: 250px;
@@ -854,7 +858,7 @@ pre[class*="language-"] {
   box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.38);
 }
 
-/* line 18, organisms/_introBlock.scss */
+/* line 21, organisms/_introBlock.scss */
 .docBlock-img__big {
   max-width: 100%;
 }

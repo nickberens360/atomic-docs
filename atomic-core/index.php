@@ -9,11 +9,11 @@
 	<div class="atoms-main">
 		<div class="docBlock">
 			<h1 class="docBlock-heading">Welcome!</h1>
-			<p>Requirements: A local PHP enviornment (I know, very 2010). And an SCSS preprocessor.<p> 
+			<p>Requirements: A local PHP enviornment (I know very 2010, but I work at a PHP shop). And a CSS preprocessor.<p> 
 			
 			<ol class="docBlock-ul">
 				<li>Set up your CSS preprocessor of choice. As expected we will be processing from our SCSS directory to the CSS directory.</li>
-				<li>In the lower left hand corner, open the "Manage Categories" form. In the create category field we will create a new component category. In a nod to Brad Frost, I'll call this one "molecules".
+				<li>In the lower left hand corner, open the "Manage Categories" form. In the create category field we will create a new component category. In a nod to <a href="http://atomicdesign.bradfrost.com/"> Brad Frost</a>, I'll call this one "molecules".
 					<img class="docBlock-img" src="atomic-core/img/doc1.png" />
 				</li>
 				<li>Click on the newly created molecules link in the sidebar to go to the molecules page. In the form below the molecules link let's create a new component called "calloutBox".
