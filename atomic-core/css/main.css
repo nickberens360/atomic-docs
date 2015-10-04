@@ -806,20 +806,22 @@ pre[class*="language-"] {
   left: 0;
   padding: 15px 0;
   z-index: 100;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
-/* line 24, molecules/_cat-form.scss */
+/* line 25, molecules/_cat-form.scss */
 .cat-form-group .atomic-sub-form .form-control {
   background: #3F434E;
 }
-/* line 27, molecules/_cat-form.scss */
+/* line 28, molecules/_cat-form.scss */
 .cat-form-group ::-webkit-input-placeholder {
   color: #626673;
 }
-/* line 30, molecules/_cat-form.scss */
+/* line 31, molecules/_cat-form.scss */
 .cat-form-group .form-control {
   color: #B9B9B9;
 }
-/* line 33, molecules/_cat-form.scss */
+/* line 34, molecules/_cat-form.scss */
 .cat-form-group .fa {
   position: absolute;
   right: 10px;
@@ -827,7 +829,12 @@ pre[class*="language-"] {
   cursor: pointer;
 }
 
-/* line 45, molecules/_cat-form.scss */
+/* line 43, molecules/_cat-form.scss */
+.cat-form {
+  margin-top: 10px;
+}
+
+/* line 48, molecules/_cat-form.scss */
 .js-showContent {
   display: none;
 }
@@ -985,11 +992,12 @@ pre[class*="language-"] {
   cursor: pointer;
   display: block;
   background: #00aff0;
-  padding: 8px 20px;
+  padding: 12px 20px;
   padding-left: 38px;
+  font-size: 14px;
 }
 
-/* line 88, _atoms-nav.scss */
+/* line 89, _atoms-nav.scss */
 .atoms-side_show {
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -1008,12 +1016,12 @@ pre[class*="language-"] {
   opacity: .4;
 }
 
-/* line 103, _atoms-nav.scss */
+/* line 104, _atoms-nav.scss */
 .atoms-side_show:hover {
   opacity: 1;
 }
 
-/* line 106, _atoms-nav.scss */
+/* line 107, _atoms-nav.scss */
 .toggle-line {
   border: 1px solid #fff;
   display: block;

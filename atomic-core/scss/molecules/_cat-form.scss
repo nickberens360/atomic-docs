@@ -21,6 +21,7 @@
 	left: 0;
 	padding: 15px 0;
 	z-index: 100;
+	transition:all .5s;
 	.atomic-sub-form .form-control {
 	    background: #3F434E;
 	}
@@ -39,7 +40,9 @@
 	}
 }
 
-
+.cat-form{
+	margin-top: 10px;
+}
 
 
 .js-showContent{
