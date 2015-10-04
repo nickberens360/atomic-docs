@@ -9,20 +9,20 @@
 	<div class="atoms-main">
 		<div class="docBlock">
 			<h1 class="docBlock-heading">Welcome!</h1>
-			<p>Place the atomic-docs folder in the directory of your local dev enviornment.<p> 
+			<p>Requirements: A local PHP enviornment (I know, very 2010). And an SCSS preprocessor.<p> 
 			
 			<ol class="docBlock-ul">
-				<li>Set up your CSS preprocessor of choice.</li>
-				<li>In the lower left hand corner, open the "Manage Categories" form. I'll call this one "molecules".
+				<li>Set up your CSS preprocessor of choice. As expected we will be processing from our SCSS directory to the CSS directory.</li>
+				<li>In the lower left hand corner, open the "Manage Categories" form. In the create category field we will create a new component category. In a nod to Brad Frost, I'll call this one "molecules".
 					<img class="docBlock-img" src="atomic-core/img/doc1.png" />
 				</li>
-				<li>Click on the newly created molecules link in the sidebar to go to the molecules page. In the form below the molecules let's create a new component called "calloutBox".
+				<li>Click on the newly created molecules link in the sidebar to go to the molecules page. In the form below the molecules link let's create a new component called "calloutBox".
 					<img class="docBlock-img" src="atomic-core/img/doc2.png" />
 				</li>
-				<li>So I'll create the HTML for the calloutBox component next. In the the project directory you'll notice a folder named "compontents". Open that and you'll find the folder molecules. This is the directory that all of the HTML component files you create under the molecules category. I'll open the file "calloutBox.php" and and put my HTML code there.
+				<li>So I'll create the HTML for the calloutBox component next. In the the project directory you'll notice a folder named "compontents". Open that and you'll find the folder molecules. This is the directory that all of the HTML component files you create under the molecules category will be located. Let's open the file "calloutBox.php" and and put some HTML code there.
                     <img class="docBlock-img" src="atomic-core/img/doc3.png" />
 				</li>
-				<li>Back in our projects directory open up the SCSS folder. You will see the folder molecules and within molecules is the file the newly created _calloutBox.scss. This is where we'll put our styles for the calloutBox component.
+				<li>Back in our projects directory open up the SCSS folder. You will see the folder molecules and within molecules is the the newly created _calloutBox.scss file. This of course is where we'll put our styles for the calloutBox component. As a side note, atomic-docs handles wiring up all of the scss "@import" strings. Even if I'm not creating a style guide this feature is sooo time saving.
                    <img class="docBlock-img" src="atomic-core/img/doc4.png" />
 				</li>
 				<li>Now back to our project in the browser. Click on the molecules link in the sidebar and you'll see our newly created component.
