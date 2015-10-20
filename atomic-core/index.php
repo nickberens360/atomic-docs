@@ -9,7 +9,8 @@
 	<div class="atoms-main">
 		<div class="docBlock">
 			<h1 class="docBlock-heading">Welcome!</h1>
-			<p>Requirements: A local PHP enviornment (I know very 2010, but I work at a PHP shop). And a CSS preprocessor.<p> 
+			<p>Atomic Docs is made for <a href="https://www.previousnext.com.au/blog/style-guide-driven-development-new-web-development">styleguide driven development</a>.</p>
+			<p>Requirements: A local PHP enviornment. And a CSS preprocessor.<p> 
 			
 			<ol class="docBlock-ul">
 				<li>Set up your CSS preprocessor of choice. As expected we will be processing from our SCSS directory to the CSS directory.</li>

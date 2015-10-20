@@ -18,5 +18,5 @@
 
 
 <div class="indexBlock">
-	<h1 class="indexBlock__heading">Start <a href="atomic-core/index.php">here</a></p>
+	<h1 class="indexBlock__heading">Set up in your php local environment and start <a href="atomic-core/index.php">here</a></p>
 </div>
