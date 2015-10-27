@@ -3,6 +3,8 @@
 <script src="js/min/site.min.js"></script>
 <script src="atomic-core/js/min/compiled.min.js"></script>
 
+<?php include ("../_shared-foot.php");?>
+
 
     </body>
 </html>
