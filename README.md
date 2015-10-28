@@ -1,4 +1,8 @@
- <link href="atomic-core/css/main.css" rel="stylesheet" type="text/css">
+<style>
+.dockBlock-heading{
+	color:red;
+}
+</style>
 <div class="docBlock">
 	<h1 class="docBlock-heading">Welcome!</h1>
 	<p>Atomic Docs is made for <a href="https://www.previousnext.com.au/blog/style-guide-driven-development-new-web-development">styleguide driven development</a>.</p>
