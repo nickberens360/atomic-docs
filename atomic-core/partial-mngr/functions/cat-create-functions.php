@@ -66,7 +66,7 @@ function createSidebarIncludeAndFile($catName)
 {
 	
 	$includeString = 
-'<li class=" <?php if ($current_page == "'.$catName.'.php"){ echo "active "; }?>">
+'<li class="ad_dirGroup <?php if ($current_page == "'.$catName.'.php"){ echo "active "; }?>">
 		<div class="atomic-link-grp">
 			<i class="atomic-link-show  fa fa-folder-o"></i>
 			<a class="atomic-link-main" href="atomic-core/'.$catName.'.php">'.$catName.'</a>
