@@ -49,7 +49,7 @@ $('.active .ad_dir__dirNameGroup__icon').removeClass('fa-folder-o').addClass('fa
 
 $(document).ready(function() {
     var pathname = window.location.href.split('#')[0];
-    $('.atoms-sub-menu a[href^="#"]').each(function() {
+    $('.ad_fileSection a[href^="#"]').each(function() {
         var $this = $(this),
             link = $this.attr('href');
         $this.attr('href', pathname + link);
