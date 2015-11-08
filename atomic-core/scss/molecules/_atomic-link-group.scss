@@ -1,18 +1,18 @@
-.atomic-link-grp{
+.ad_dir__dirNameGroup{
 	position:relative;
 
 }
-.atomic-link-main{
+.ad_dir__dirNameGroup__name{
 	
 }
 
 .active{
-  .atomic-link-show{
+  .ad_dir__dirNameGroup__icon{
 	display: inline;
   }	
 }
 
-.atomic-link-show{
+.ad_dir__dirNameGroup__icon{
 	//display: none;
 	color:#00aff0;
 	position:absolute;

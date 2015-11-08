@@ -1,8 +1,8 @@
  
-<li class="ad_dirGroup <?php if ($current_page == "new.php"){ echo "active "; }?>">
-		<div class="atomic-link-grp">
-			<i class="atomic-link-show  fa fa-folder-o"></i>
-			<a class="atomic-link-main" href="atomic-core/new.php">new</a>
+<li class="ad_dir <?php if ($current_page == "new.php"){ echo "active "; }?>">
+		<div class="ad_dir__dirNameGroup">
+			<i class="ad_dir__dirNameGroup__icon  fa fa-folder-o"></i>
+			<a class="ad_dir__dirNameGroup__name" href="atomic-core/new.php">new</a>
 		</div>
 		<ul class="atoms-sub-menu atoms-sub-new">
 		<li class="atomic-subform-group">

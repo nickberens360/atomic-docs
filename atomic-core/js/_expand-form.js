@@ -36,7 +36,7 @@ $('.cat-form-group .fa').click(function() {
 
 
 
-$( ".atomic-link-grp .atomic-link-show" ).click(function() {
+$( ".ad_dir__dirNameGroup .ad_dir__dirNameGroup__icon" ).click(function() {
   $(this).parent().next().slideToggle();
     $(this).toggleClass('fa-folder-o fa-folder-open-o ');
 });
@@ -44,7 +44,7 @@ $( ".atomic-link-grp .atomic-link-show" ).click(function() {
 
 
 
-$('.active .atomic-link-show').removeClass('fa-folder-o').addClass('fa-folder-open-o');
+$('.active .ad_dir__dirNameGroup__icon').removeClass('fa-folder-o').addClass('fa-folder-open-o');
 
 
 $(document).ready(function() {
