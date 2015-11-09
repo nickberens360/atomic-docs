@@ -13,9 +13,6 @@
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="atomic-core/css/main.css">
 		<script src="modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
 		<?php include ("../_shared-head.php");?>
-		
 </head>

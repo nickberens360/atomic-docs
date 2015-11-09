@@ -19,12 +19,6 @@ createPageTemplate($inputName );
 
 
 createSidebarIncludeAndFile($inputName );
-
 header("location:$inputName.php");
-
 }
-
-
-
-
 ?>
