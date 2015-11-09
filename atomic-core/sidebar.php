@@ -36,6 +36,7 @@
 
 </div>
            <div class="show-hide cat-form-group ">
+           	  <div class="actionTrigger">open</div>
 			  <i class="fa fa-plus-square-o fa-lg"></i>
 				<span class="cat-form-btn js-showTrigger">Manage Categories</span>
 				<div class="cat-form js-showContent">
