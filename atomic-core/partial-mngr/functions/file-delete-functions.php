@@ -14,8 +14,7 @@ function deleteScssImportString($catName, $fileName)
 
 
 function deleteScssFile($catName, $fileName)
-{
-            
+{        
 	unlink('../scss/'.$catName.'/_'.$fileName.'.scss');
 }
 
@@ -40,5 +39,9 @@ function deleteCompFile($catName, $fileName)
 }
 
 
+function deleteAjaxCompFile($fileName)
+{
+	unlink('includes/_ajaxComp-'.$fileName.'.php');
+}
 
 ?>

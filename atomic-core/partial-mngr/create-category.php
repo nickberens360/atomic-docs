@@ -19,6 +19,12 @@ createPageTemplate($inputName );
 
 
 createSidebarIncludeAndFile($inputName );
+
+createAjaxIncludeAndFile($inputName);
+
+
+//createAjaxFile($inputName);
+
 header("location:$inputName.php");
 }
 ?>

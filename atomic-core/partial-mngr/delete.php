@@ -17,7 +17,7 @@ deleteScssFile($catName, $fileName );
 deleteCompIncludetString($catName, $fileName );
 deleteCompFile($catName, $fileName );
 
-
+deleteAjaxCompFile($fileName);
 
 //header("location:../$catName.php");
 

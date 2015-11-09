@@ -17,6 +17,9 @@ importScssFile($catName, $fileName );
 createCompFile($catName, $fileName );
 createIncludeString($catName, $fileName );
 
+createAjaxIncludeAndCompFile($catName, $fileName);
+
+
 }
 
 //header("location:../$catName.php");

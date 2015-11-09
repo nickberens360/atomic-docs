@@ -45,15 +45,6 @@
 			  <i class="fa fa-plus-square-o fa-lg"></i>
 				<span class="cat-form-btn js-showTrigger">Manage Categories</span>
 				<div class="cat-form js-showContent">
-					<?php /*?><form class="ad_fileForm " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-						<input type="text" class="form-control" name="inputName" placeholder="Create Category" required>
-						<input type="hidden" name="createDir" value="createDir"/>
-					</form>
-			
-					<form class="ad_fileForm " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" onsubmit="return confirm('Deleting a category deletes all files within it as well. Are you sure about this?');">
-						<input type="text" class="form-control" name="inputName" placeholder="Delete Category" required>
-						<input type="hidden" name="deleteDir" value="deleteDir"/>
-					</form><?php */?>
 				</div>
 			</div>
 </aside>

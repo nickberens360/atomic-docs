@@ -37,8 +37,6 @@
 </div>
 <div class="ad_js-actionDrawer ad_actionDrawer">
   <div class="ad_js-actionClose">Close</div>
-  <div id="js_actionDrawer__content">
-    
-  </div>
+  <div id="js_actionDrawer__content"></div>
 </div>
 <?php include ("footer.php");?>

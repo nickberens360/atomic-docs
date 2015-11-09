@@ -42,11 +42,15 @@ function createPageTemplate($catName)
 	
 	
 							<?php include ("includes/_'.$catName.'.php");?>
+              
 	
 	
 			</div>
 	</div>
-	
+	<div class="ad_js-actionDrawer ad_actionDrawer">
+    <div class="ad_js-actionClose">Close</div>
+    <div id="js_actionDrawer__content"></div>
+  </div>
 	<?php include ("footer.php");?>
 '
 	;
@@ -70,20 +74,9 @@ function createSidebarIncludeAndFile($catName)
 		<div class="ad_dir__dirNameGroup">
 			<i class="ad_dir__dirNameGroup__icon  fa fa-folder-o"></i>
 			<a class="ad_dir__dirNameGroup__name" href="atomic-core/'.$catName.'.php">'.$catName.'</a>
+      <a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/includes/_ajax-'.$catName.'.php">Add File</a>
 		</div>
 		<ul class="ad_fileSection">
-			<li class="ad_fileFormGroup">
-					<form class="ad_fileForm " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-						<input type="text" class="form-control" name="compName" placeholder="Create Component" required>
-						<input type="hidden" name="compDir" value="'.$catName.'"/>
-						<input type="hidden" name="create" value="create"/>
-					</form>
-					<form class="ad_fileForm " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-						<input type="text" class="form-control" name="compName" placeholder="Delete Component" required>
-						<input type="hidden" name="compDir" value="'.$catName.'"/>
-						<input type="hidden" name="delete" value="delete"/>
-					</form>
-			</li>
 			<?php
 				$orig = "../components/'.$catName.'";
 				if ($dir = opendir($orig)) {
@@ -98,7 +91,7 @@ function createSidebarIncludeAndFile($catName)
 				$ok = "false";	
 				}
 				if ($ok == "true"){
-				echo "<li><a href=\'#$filename\'>$filename</a></li>";
+				echo "<li><a href=\'#$filename\'>$filename</a><a class=\'ad_js-actionOpen ad_actionBtn\' href=\'atomic-core/includes/_ajaxComp-$filename.php\'>edit</a></li>";
 				}
 				}
 				closedir($dir);
@@ -116,6 +109,34 @@ function createSidebarIncludeAndFile($catName)
 	file_put_contents('includes/_sidebar.php', implode(PHP_EOL, file('includes/_sidebar.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
 }
+
+
+
+
+function createAjaxIncludeAndFile($catName)
+{
+	
+	$includeString = 
+'<li class="ad_fileFormGroup">
+    <form class="ad_fileForm " action="/atomic-docs/atomic-core/'.$catName.'.php" method="post">
+      <input type="text" class="form-control" name="compName" placeholder="Create Component" required>
+      <input type="hidden" name="compDir" value="'.$catName.'"/>
+      <input type="hidden" name="create" value="create"/>
+    </form>
+</li>'		
+;
+
+	$includeString = "\n$includeString\n";
+	
+	$fileHandle = fopen('includes/_ajax-'.$catName.'.php', 'x+') or die("can't open file");
+	fwrite($fileHandle, $includeString);
+	
+	file_put_contents('includes/_ajax-'.$catName.'.php', implode(PHP_EOL, file('includes/_ajax-'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	
+}
+
+
+
 
 
 ?>
