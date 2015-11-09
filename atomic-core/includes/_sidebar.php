@@ -1,23 +1,23 @@
-<li class="ad_dir <?php if ($current_page == "test.php"){ echo "active "; }?>">
+<li class="ad_dir <?php if ($current_page == "new.php"){ echo "active "; }?>">
 		<div class="ad_dir__dirNameGroup">
 			<i class="ad_dir__dirNameGroup__icon  fa fa-folder-o"></i>
-			<a class="ad_dir__dirNameGroup__name" href="atomic-core/test.php">test</a>
+			<a class="ad_dir__dirNameGroup__name" href="atomic-core/new.php">new</a>
 		</div>
-		<ul class="ad_fileSection atoms-sub-test">
+		<ul class="ad_fileSection">
 			<li class="ad_fileFormGroup">
 					<form class="ad_fileForm " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 						<input type="text" class="form-control" name="compName" placeholder="Create Component" required>
-						<input type="hidden" name="compDir" value="test"/>
+						<input type="hidden" name="compDir" value="new"/>
 						<input type="hidden" name="create" value="create"/>
 					</form>
 					<form class="ad_fileForm " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 						<input type="text" class="form-control" name="compName" placeholder="Delete Component" required>
-						<input type="hidden" name="compDir" value="test"/>
+						<input type="hidden" name="compDir" value="new"/>
 						<input type="hidden" name="delete" value="delete"/>
 					</form>
 			</li>
 			<?php
-				$orig = "../components/test";
+				$orig = "../components/new";
 				if ($dir = opendir($orig)) {
 				while ($file = readdir($dir)) {
 				$ok = "true";	

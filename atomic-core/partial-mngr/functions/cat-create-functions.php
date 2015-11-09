@@ -71,7 +71,7 @@ function createSidebarIncludeAndFile($catName)
 			<i class="ad_dir__dirNameGroup__icon  fa fa-folder-o"></i>
 			<a class="ad_dir__dirNameGroup__name" href="atomic-core/'.$catName.'.php">'.$catName.'</a>
 		</div>
-		<ul class="ad_fileSection atoms-sub-'.$catName.'">
+		<ul class="ad_fileSection">
 			<li class="ad_fileFormGroup">
 					<form class="ad_fileForm " action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 						<input type="text" class="form-control" name="compName" placeholder="Create Component" required>
