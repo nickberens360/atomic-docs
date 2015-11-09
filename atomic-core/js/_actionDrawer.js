@@ -38,3 +38,29 @@ $(".ad_js-actionClose").on('click', function(event) {
   event.preventDefault();
   $.Velocity.RunSequence(actionClose);
 });
+
+
+
+
+
+$('.ad_actionBtn').click(function(e){
+    e.preventDefault();	
+		$('#js_actionDrawer__content').load($(this).prop("href")); 
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
