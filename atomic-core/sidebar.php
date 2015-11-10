@@ -38,7 +38,7 @@
            <div class="show-hide cat-form-group ">
            
            
-           	  <a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/includes/_catActions.php">open</a>
+           	  <a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/_catActions.php">open</a>
               
               
               

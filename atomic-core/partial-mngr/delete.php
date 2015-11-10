@@ -17,7 +17,7 @@ deleteScssFile($catName, $fileName );
 deleteCompIncludetString($catName, $fileName );
 deleteCompFile($catName, $fileName );
 
-deleteAjaxCompFile($fileName);
+deleteAjaxCompFile($catName, $fileName);
 
 header("location: http://127.0.0.1/atomic-docs/atomic-core/$catName.php");
 

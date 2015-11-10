@@ -39,9 +39,10 @@ function deleteCompFile($catName, $fileName)
 }
 
 
-function deleteAjaxCompFile($fileName)
+
+function deleteAjaxCompFile($catName, $fileName)
 {
-	unlink('includes/_ajaxComp-'.$fileName.'.php');
+	unlink('actions/'.$catName.'/_ajaxComp-'.$fileName.'.php');
 }
 
 ?>

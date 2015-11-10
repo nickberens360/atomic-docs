@@ -74,7 +74,7 @@ function createSidebarIncludeAndFile($catName)
 		<div class="ad_dir__dirNameGroup">
 			<i class="ad_dir__dirNameGroup__icon  fa fa-folder-o"></i>
 			<a class="ad_dir__dirNameGroup__name" href="atomic-core/'.$catName.'.php">'.$catName.'</a>
-      <a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/includes/_ajax-'.$catName.'.php">Add File</a>
+      <a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/'.$catName.'/_ajax-'.$catName.'.php">Add File</a>
 		</div>
 		<ul class="ad_fileSection">
 			<?php
@@ -91,7 +91,7 @@ function createSidebarIncludeAndFile($catName)
 				$ok = "false";	
 				}
 				if ($ok == "true"){
-				echo "<li><a href=\'#$filename\'>$filename</a><a class=\'ad_js-actionOpen ad_actionBtn\' href=\'atomic-core/includes/_ajaxComp-$filename.php\'>edit</a></li>";
+				echo "<li><a href=\'#$filename\'>$filename</a><a class=\'ad_js-actionOpen ad_actionBtn\' href=\'atomic-core/actions/'.$catName.'/_ajaxComp-$filename.php\'>edit</a></li>";
 				}
 				}
 				closedir($dir);
@@ -113,6 +113,8 @@ function createSidebarIncludeAndFile($catName)
 
 
 
+
+
 function createAjaxIncludeAndFile($catName)
 {
 	
@@ -127,11 +129,14 @@ function createAjaxIncludeAndFile($catName)
 ;
 
 	$includeString = "\n$includeString\n";
+  
+  
+  mkdir("actions/$catName");
 	
-	$fileHandle = fopen('includes/_ajax-'.$catName.'.php', 'x+') or die("can't open file");
+	$fileHandle = fopen('actions/'.$catName.'/_ajax-'.$catName.'.php', 'x+') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	file_put_contents('includes/_ajax-'.$catName.'.php', implode(PHP_EOL, file('includes/_ajax-'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	file_put_contents('actions/'.$catName.'/_ajax-'.$catName.'.php', implode(PHP_EOL, file('actions/'.$catName.'/_ajax-'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
 }
 

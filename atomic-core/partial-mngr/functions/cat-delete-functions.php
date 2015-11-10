@@ -38,7 +38,7 @@ $includeString =
 		<div class="ad_dir__dirNameGroup">
 			<i class="ad_dir__dirNameGroup__icon  fa fa-folder-o"></i>
 			<a class="ad_dir__dirNameGroup__name" href="atomic-core/'.$catName.'.php">'.$catName.'</a>
-      <a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/includes/_ajax-'.$catName.'.php">Add File</a>
+      <a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/'.$catName.'/_ajax-'.$catName.'.php">Add File</a>
 		</div>
 		<ul class="ad_fileSection">
 			<?php
@@ -55,7 +55,7 @@ $includeString =
 				$ok = "false";	
 				}
 				if ($ok == "true"){
-				echo "<li><a href=\'#$filename\'>$filename</a><a class=\'ad_js-actionOpen ad_actionBtn\' href=\'atomic-core/includes/_ajaxComp-$filename.php\'>edit</a></li>";
+				echo "<li><a href=\'#$filename\'>$filename</a><a class=\'ad_js-actionOpen ad_actionBtn\' href=\'atomic-core/actions/'.$catName.'/_ajaxComp-$filename.php\'>edit</a></li>";
 				}
 				}
 				closedir($dir);
@@ -104,10 +104,31 @@ function deleteScssDir($catName) {
 } 
 
 
-function deleteAjaxFile($inputName)
-{
-	unlink('includes/_ajax-'.$inputName.'.php');
-}
+
+
+function deleteAjaxDir($catName) { 
+		
+   $catName = 'actions/'.$catName;
+	
+   if (is_dir($catName)) { 
+     $objects = scandir($catName); 
+     foreach ($objects as $object) { 
+       if ($object != "." && $object != "..") { 
+         if (filetype($catName."/".$object) == "dir") deleteCompDir($catName."/".$object); else unlink($catName."/".$object); 
+       } 
+     } 
+     reset($objects); 
+     rmdir($catName); 
+   } 
+} 
+
+
+
+//function deleteAjaxFile($inputName)
+//{
+//	unlink('actions/_ajax-'.$inputName.'.php');
+//  
+//}
 
 
 

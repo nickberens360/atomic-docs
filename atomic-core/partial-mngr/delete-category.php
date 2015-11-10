@@ -23,7 +23,10 @@ deleteCatScssImportString($inputName );
 
 deleteScssDir($inputName );
 
-deleteAjaxFile($inputName);
+
+deleteAjaxDir($inputName);
+
+//deleteAjaxFile($inputName);
 
 header("location:index.php");
 
