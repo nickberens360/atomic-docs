@@ -38,7 +38,7 @@ $includeString =
 		<div class="ad_dir__dirNameGroup">
 			<i class="ad_dir__dirNameGroup__icon  fa fa-folder-o"></i>
 			<a class="ad_dir__dirNameGroup__name" href="atomic-core/'.$catName.'.php">'.$catName.'</a>
-      <a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/'.$catName.'/_ajax-'.$catName.'.php">Add File</a>
+      <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/'.$catName.'/_ajax-'.$catName.'.php"><span class="fa fa-plus"></span> Add File</a>
 		</div>
 		<ul class="ad_fileSection">
 			<?php

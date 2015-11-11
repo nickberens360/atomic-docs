@@ -38,12 +38,12 @@
            <div class="show-hide cat-form-group ">
            
            
-           	  <a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/_catActions.php">open</a>
+           	  <!-- <a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/_catActions.php">open</a> -->
               
               
               
-			  <i class="fa fa-plus-square-o fa-lg"></i>
-				<span class="cat-form-btn js-showTrigger">Manage Categories</span>
+			  <!-- <i class="fa fa-plus-square-o fa-lg"></i> -->
+				<a class="cat-form-btn ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/_catActions.php">Manage Categories</a>
 				<div class="cat-form js-showContent">
 				</div>
 			</div>
