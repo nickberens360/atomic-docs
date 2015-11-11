@@ -18,7 +18,7 @@ function importScssFile($catName, $fileName)
 	//open parent scss file and write @import string to it
 	$fileHandle = fopen('../scss/'.$catName.'/'.'_'.$catName.'.scss', 'a') or die("can't open file");
 	fwrite($fileHandle, $importString);
-    fclose($fileHandle);   
+  fclose($fileHandle);   
 	
 	//remove any extra line breaks from file
 	file_put_contents('../scss/'.$catName.'/'.'_'.$catName.'.scss', implode(PHP_EOL, file('../scss/'.$catName.'/'.'_'.$catName.'.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
@@ -29,10 +29,15 @@ function importScssFile($catName, $fileName)
 //creates component file
 function createCompFile($catName, $fileName)
 {
-
+  
+  $commentString = '<!--components/'.$catName.'/'.$fileName.'.php-->' ;
+	$commentString = "\n$commentString\n";
 	
   $fileHandle = fopen('../components/'.$catName.'/'.$fileName.'.php', 'x+') or die("can't open file");
-	fclose($fileHandle);
+	fwrite($fileHandle, $commentString);
+  fclose($fileHandle);
+  
+  file_put_contents('../components/'.$catName.'/'.$fileName.'.php', implode(PHP_EOL, file('../components/'.$catName.'/'.$fileName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 }
 
 
