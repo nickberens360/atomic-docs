@@ -29,7 +29,7 @@
 	<nav>
 		<ul class="atoms-nav">
 			<?php include ("includes/_sidebar.php");?>
-      <li class="catAdd"><a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/_catActions.php"><span class="fa fa-plus"></span> Manage Categories</a></li>
+      <li class="catAdd"><a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/_catActions.php"><span class="fa fa-plus"></span> Add / Delete Category</a></li>
 		</ul>
 		 
 	</nav>

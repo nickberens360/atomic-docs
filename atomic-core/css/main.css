@@ -876,25 +876,24 @@ pre[class*="language-"] {
   transition: all .5s;
   padding-left: 282px;
   width: 100%;
-  background: #FCFEFA;
 }
 
-/* line 21, ../scss/organisms/_atomic-main.scss */
+/* line 20, ../scss/organisms/_atomic-main.scss */
 code, kbd, pre, samp {
   font-size: 14px;
 }
 
-/* line 24, ../scss/organisms/_atomic-main.scss */
+/* line 23, ../scss/organisms/_atomic-main.scss */
 pre[class*="language-"] {
   padding: 2em;
 }
 
-/* line 29, ../scss/organisms/_atomic-main.scss */
+/* line 28, ../scss/organisms/_atomic-main.scss */
 .atoms-code-example {
   position: relative;
 }
 
-/* line 35, ../scss/organisms/_atomic-main.scss */
+/* line 34, ../scss/organisms/_atomic-main.scss */
 .atoms-group {
   margin-bottom: 50px;
 }
@@ -1083,4 +1082,9 @@ pre[class*="language-"] {
 .ad_actionDrawer__close {
   position: absolute;
   cursor: pointer;
+}
+
+/* line 2, ../scss/_cleanup.scss */
+body {
+  background: #FCFEFA;
 }
