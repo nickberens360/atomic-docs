@@ -1084,7 +1084,13 @@ pre[class*="language-"] {
   cursor: pointer;
 }
 
-/* line 2, ../scss/_cleanup.scss */
+/* line 1, ../scss/_cleanup.scss */
 body {
   background: #FCFEFA;
+}
+
+/* line 4, ../scss/_cleanup.scss */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #E2F3F5;
 }

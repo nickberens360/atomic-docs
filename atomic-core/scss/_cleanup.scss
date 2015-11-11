@@ -1,4 +1,7 @@
-
 body{
   background:#FCFEFA; 
+}
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #E2F3F5;
 }
