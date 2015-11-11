@@ -1,5 +1,5 @@
 <?php include ("head.php");?>
-	<body class="new">
+	<body class="more">
 	
 	
 	<div class="grid-row atoms-container">
@@ -7,17 +7,17 @@
 			
 			
 			<div class="atoms-main">
-					<h1 id="new" class="atomic-h1">new</h1>
+					<h1 id="more" class="atomic-h1">more</h1>
 	
 	
-							<?php include ("includes/_new.php");?>
+							<?php include ("includes/_more.php");?>
               
 	
 	
 			</div>
 	</div>
 	<div class="ad_js-actionDrawer ad_actionDrawer">
-    <div class="ad_js-actionClose  ad_actionDrawer__close">Close</div>
+    <div class="ad_js-actionClose ad_actionDrawer__close">Close</div>
     <div id="js_actionDrawer__content" class="actionDrawer__content"></div>
   </div>
 	<?php include ("footer.php");?>

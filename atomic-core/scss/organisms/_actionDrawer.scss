@@ -4,8 +4,24 @@
   right:-100%;
   bottom:0;
   width:100%;
-  background:#474747;
+  background:#E3E4E3;
   z-index:1000; 
+  padding:50px;
+  height:100%;
+}
+.actionDrawer__content{
+  max-width:500px;
+  margin:auto;
+  position: relative;
+  top: 30%;
+  transform: translateY(-30%);
+  h1{
+   color:#7A7A7A; 
+  }
 }
 
+.ad_actionDrawer__close{
+  position:absolute; 
+  cursor:pointer;
+}
 

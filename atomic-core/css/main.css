@@ -697,15 +697,11 @@ pre[class*="language-"] {
   color: #7A7A7A;
 }
 
-/* line 1, ../scss/molecules/_ad_fileForm.scss */
-.ad_fileForm {
-  padding: 0 37px;
-}
-/* line 3, ../scss/molecules/_ad_fileForm.scss */
+/* line 2, ../scss/molecules/_ad_fileForm.scss */
 .ad_fileForm .form-control {
   border-radius: 0;
   border: none;
-  background: #3A4050;
+  background: #fff;
   -webkit-box-shadow: none;
   box-shadow: none;
   margin-bottom: 10px;
@@ -715,13 +711,13 @@ pre[class*="language-"] {
   font-size: 14px;
   text-indent: 10px;
 }
-/* line 15, ../scss/molecules/_ad_fileForm.scss */
+/* line 14, ../scss/molecules/_ad_fileForm.scss */
 .ad_fileForm .btn {
   border-radius: 0;
   padding: 7px 12px;
   border: none;
 }
-/* line 20, ../scss/molecules/_ad_fileForm.scss */
+/* line 19, ../scss/molecules/_ad_fileForm.scss */
 .ad_fileForm ::-webkit-input-placeholder {
   color: #555;
   font-style: 12px;
@@ -782,8 +778,8 @@ pre[class*="language-"] {
   padding: 10px 38px;
   padding-left: 0;
   margin-left: 38px;
-  color: #797979;
-  font-size: 13px;
+  color: #fff;
+  font-size: 14px;
 }
 
 /* .cat-form-btn.show-hide_cls{
@@ -794,7 +790,7 @@ pre[class*="language-"] {
 } */
 /* line 15, ../scss/molecules/_cat-form.scss */
 .cat-form-group {
-  background: #D2D4D1;
+  background: #00aff0;
   position: fixed;
   width: 262px;
   bottom: 0;
@@ -915,26 +911,32 @@ pre[class*="language-"] {
   transition: all .5s;
   z-index: 5000;
   width: 262px;
+  border-right: 1px solid #E3E3E3;
 }
-/* line 11, ../scss/organisms/_atomic-nav.scss */
+/* line 12, ../scss/organisms/_atomic-nav.scss */
 .atoms-side a {
   text-decoration: none;
 }
 
-/* line 16, ../scss/organisms/_atomic-nav.scss */
+/* line 17, ../scss/organisms/_atomic-nav.scss */
 .atoms-overflow {
   overflow: auto;
   height: 100%;
 }
 
-/* line 26, ../scss/organisms/_atomic-nav.scss */
+/* line 23, ../scss/organisms/_atomic-nav.scss */
+.ad_dir {
+  border-bottom: 1px solid #E3E3E3;
+}
+
+/* line 29, ../scss/organisms/_atomic-nav.scss */
 .atoms-nav {
   list-style: none;
   padding: 0;
-  padding-top: 13px;
+  margin-top: 1px;
 }
 
-/* line 31, ../scss/organisms/_atomic-nav.scss */
+/* line 34, ../scss/organisms/_atomic-nav.scss */
 .ad_dir__dirNameGroup__name {
   display: block;
   padding: 10px 38px;
@@ -943,58 +945,58 @@ pre[class*="language-"] {
   color: #7a7a7a;
 }
 
-/* line 39, ../scss/organisms/_atomic-nav.scss */
+/* line 42, ../scss/organisms/_atomic-nav.scss */
 .ad_dir__dirNameGroup__name:hover {
-  color: #a6adb3;
   text-decoration: none;
 }
 
-/* line 44, ../scss/organisms/_atomic-nav.scss */
+/* line 46, ../scss/organisms/_atomic-nav.scss */
 .ad_addFile {
   color: #9DA0A0;
   padding-left: 39px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: block;
   font-size: 12px;
   font-style: italic;
 }
 
-/* line 53, ../scss/organisms/_atomic-nav.scss */
+/* line 55, ../scss/organisms/_atomic-nav.scss */
 .ad_fileSection__file {
   padding-left: 39px;
 }
-/* line 55, ../scss/organisms/_atomic-nav.scss */
+/* line 57, ../scss/organisms/_atomic-nav.scss */
 .ad_fileSection__file .fa {
   margin-right: 5px;
   position: relative;
   top: 1px;
 }
-/* line 60, ../scss/organisms/_atomic-nav.scss */
+/* line 62, ../scss/organisms/_atomic-nav.scss */
 .ad_fileSection__file a {
   color: #7a7a7a;
   font-size: 14px;
 }
 
-/* line 66, ../scss/organisms/_atomic-nav.scss */
+/* line 68, ../scss/organisms/_atomic-nav.scss */
 .ad_fileSection {
   padding-left: 0;
+  margin-bottom: 15px;
 }
-/* line 69, ../scss/organisms/_atomic-nav.scss */
+/* line 71, ../scss/organisms/_atomic-nav.scss */
 .ad_fileSection li {
   list-style: none;
 }
-/* line 73, ../scss/organisms/_atomic-nav.scss */
+/* line 75, ../scss/organisms/_atomic-nav.scss */
 .ad_fileSection a:hover {
   text-decoration: none;
 }
 
-/* line 78, ../scss/organisms/_atomic-nav.scss */
+/* line 80, ../scss/organisms/_atomic-nav.scss */
 .border-top {
   border-top: 1px solid #424242;
 }
 
 /****************************/
-/* line 94, ../scss/organisms/_atomic-nav.scss */
+/* line 96, ../scss/organisms/_atomic-nav.scss */
 .atoms-side_hide {
   cursor: pointer;
   display: block;
@@ -1004,7 +1006,7 @@ pre[class*="language-"] {
   font-size: 14px;
 }
 
-/* line 103, ../scss/organisms/_atomic-nav.scss */
+/* line 105, ../scss/organisms/_atomic-nav.scss */
 .atoms-side_show {
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -1023,12 +1025,12 @@ pre[class*="language-"] {
   opacity: .4;
 }
 
-/* line 118, ../scss/organisms/_atomic-nav.scss */
+/* line 120, ../scss/organisms/_atomic-nav.scss */
 .atoms-side_show:hover {
   opacity: 1;
 }
 
-/* line 121, ../scss/organisms/_atomic-nav.scss */
+/* line 123, ../scss/organisms/_atomic-nav.scss */
 .toggle-line {
   border: 1px solid #fff;
   display: block;
@@ -1039,6 +1041,16 @@ pre[class*="language-"] {
   left: -1px;
 }
 
+/* line 135, ../scss/organisms/_atomic-nav.scss */
+.catAdd a {
+  padding: 10px 38px;
+  display: block;
+  color: #9DA0A0;
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+}
+
 /* line 1, ../scss/organisms/_actionDrawer.scss */
 .ad_actionDrawer {
   position: fixed;
@@ -1046,6 +1058,29 @@ pre[class*="language-"] {
   right: -100%;
   bottom: 0;
   width: 100%;
-  background: #474747;
+  background: #E3E4E3;
   z-index: 1000;
+  padding: 50px;
+  height: 100%;
+}
+
+/* line 12, ../scss/organisms/_actionDrawer.scss */
+.actionDrawer__content {
+  max-width: 500px;
+  margin: auto;
+  position: relative;
+  top: 30%;
+  -webkit-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  transform: translateY(-30%);
+}
+/* line 18, ../scss/organisms/_actionDrawer.scss */
+.actionDrawer__content h1 {
+  color: #7A7A7A;
+}
+
+/* line 23, ../scss/organisms/_actionDrawer.scss */
+.ad_actionDrawer__close {
+  position: absolute;
+  cursor: pointer;
 }

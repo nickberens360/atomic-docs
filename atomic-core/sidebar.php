@@ -29,24 +29,17 @@
 	<nav>
 		<ul class="atoms-nav">
 			<?php include ("includes/_sidebar.php");?>
+      <li class="catAdd"><a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/_catActions.php"><span class="fa fa-plus"></span> Manage Categories</a></li>
 		</ul>
 		 
 	</nav>
 
 
 </div>
-           <div class="show-hide cat-form-group ">
-           
-           
-           	  <!-- <a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/_catActions.php">open</a> -->
-              
-              
-              
-			  <!-- <i class="fa fa-plus-square-o fa-lg"></i> -->
-				<a class="cat-form-btn ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/_catActions.php">Manage Categories</a>
-				<div class="cat-form js-showContent">
-				</div>
-			</div>
+
+            <div class="cat-form js-showContent"></div>
+            
+          
 </aside>
 
 
