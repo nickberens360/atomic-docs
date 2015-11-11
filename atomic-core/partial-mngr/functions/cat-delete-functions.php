@@ -38,9 +38,11 @@ $includeString =
 		<div class="ad_dir__dirNameGroup">
 			<i class="ad_dir__dirNameGroup__icon  fa fa-folder-o"></i>
 			<a class="ad_dir__dirNameGroup__name" href="atomic-core/'.$catName.'.php">'.$catName.'</a>
-      <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/'.$catName.'/_ajax-'.$catName.'.php"><span class="fa fa-plus"></span> Add File</a>
 		</div>
 		<ul class="ad_fileSection">
+      <li class="ad_addFileItem">
+        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/'.$catName.'/_ajax-'.$catName.'.php"><span class="fa fa-plus"></span> Add File</a>
+      </li>
 			<?php
 				$orig = "../components/'.$catName.'";
 				if ($dir = opendir($orig)) {
@@ -55,7 +57,7 @@ $includeString =
 				$ok = "false";	
 				}
 				if ($ok == "true"){
-				echo "<li><a href=\'#$filename\'>$filename</a><a class=\'ad_js-actionOpen ad_actionBtn\' href=\'atomic-core/actions/'.$catName.'/_ajaxComp-$filename.php\'>edit</a></li>";
+				echo "<li class=\'ad_fileSection__file\'><a class=\'ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o\' href=\'atomic-core/actions/'.$catName.'/_ajaxComp-$filename.php\'></a><a href=\'#$filename\'>$filename</a></li>";
 				}
 				}
 				closedir($dir);

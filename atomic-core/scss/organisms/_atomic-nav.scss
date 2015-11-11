@@ -19,14 +19,7 @@
 }
 
 
-.ad_addFile{
-	color: #9DA0A0;
-    padding-left: 39px;
-    margin-bottom: 20px;
-    display: block;
-    font-size: 12px;
-    font-style: italic;
-}
+
 
 
 
@@ -47,16 +40,36 @@
 	color:#a6adb3;
 	text-decoration:none;
 }
+
+.ad_addFile{
+  color: #9DA0A0;
+  padding-left: 39px;
+  margin-bottom: 20px;
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.ad_fileSection__file{
+  padding-left: 39px;
+  .fa{
+    margin-right:5px; 
+    position:relative;
+    top:1px;
+  }
+  a{
+		color: #7a7a7a;
+		font-size:14px;
+	}
+}
+
 .ad_fileSection{
 	padding-left:0;
+  
 	li{
 		list-style:none;
 	}
-	a{
-		padding-left: 39px;
-		color: #5FC5FF;
-		font-size:14px;
-	}
+	
 	a:hover{
 		text-decoration:none;
 	}
