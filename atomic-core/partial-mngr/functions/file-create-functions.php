@@ -57,15 +57,29 @@ function createIncludeString($catName, $fileName)
 	
 }
 
+
+
+
+
+
+
+
+
+
 //creates ajax form file
 function createAjaxIncludeAndCompFile($catName, $fileName)
 {
 	
 	$includeString = 
 '<div class="ad_fileFormGroup">
-	<h1 class="ad_fileForm__title">Edit File</h1>
     <form class="ad_fileForm " action="/atomic-docs/atomic-core/index.php" method="post">
-      <input type="text" class="form-control" name="compName" placeholder="Delete Component" required>
+      <div class="formInputGroup">
+        <div class="inputBtnGroup">
+          <label class="ad_label">Type <span class="ad_label__file">'.$fileName.'</span> to delete the component files</label>
+          <button class="ad_btn ad_btn-neg" type="submit" >Delete</button>
+          <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="compName" required></div>
+        </div>  
+      </div>
       <input type="hidden" name="compDir" value="'.$catName.'"/>
       <input type="hidden" name="delete" value="delete"/>
     </form>

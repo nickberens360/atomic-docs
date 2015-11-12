@@ -41,7 +41,7 @@ $includeString =
 		</div>
 		<ul class="ad_fileSection">
       <li class="ad_addFileItem">
-        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/'.$catName.'/_ajax-'.$catName.'.php"><span class="fa fa-plus"></span> Add File</a>
+        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/'.$catName.'/_ajax-'.$catName.'.php"><span class="fa fa-plus"></span> Add Component</a>
       </li>
 			<?php
 				$orig = "../components/'.$catName.'";

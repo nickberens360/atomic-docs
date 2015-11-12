@@ -79,7 +79,7 @@ function createSidebarIncludeAndFile($catName)
 		</div>
 		<ul class="ad_fileSection">
       <li class="ad_addFileItem">
-        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/'.$catName.'/_ajax-'.$catName.'.php"><span class="fa fa-plus"></span> Add File</a>
+        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/'.$catName.'/_ajax-'.$catName.'.php"><span class="fa fa-plus"></span> Add Component</a>
       </li>
 			<?php
 				$orig = "../components/'.$catName.'";
@@ -117,16 +117,17 @@ function createSidebarIncludeAndFile($catName)
 
 
 
-
-
 function createAjaxIncludeAndFile($catName)
 {
 	
 	$includeString = 
 '<div class="ad_fileFormGroup">
-	<h1 class="ad_fileForm__title">Add File</h1>
     <form class="ad_fileForm " action="/atomic-docs/atomic-core/'.$catName.'.php" method="post">
-      <input type="text" class="form-control" name="compName" placeholder="Create Component" required>
+      <div class="inputBtnGroup">
+        <label class="ad_label">What\'s your component\'s name?</label>
+        <button class="ad_btn ad_btn-pos" type="submit" >Add</button>
+        <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="compName" required></div>
+      </div>
       <input type="hidden" name="compDir" value="'.$catName.'"/>
       <input type="hidden" name="create" value="create"/>
     </form>
