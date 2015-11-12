@@ -47,7 +47,7 @@ function createIncludeString($catName, $fileName)
 {
 
 
-	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.php'.'");?></div>';
+	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.php'.'");?></div>';
 	$includeString = "\n$includeString\n";
 	
 	$fileHandle = fopen('includes/_'.$catName.'.php', 'a') or die("can't open file");
@@ -62,13 +62,14 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
 {
 	
 	$includeString = 
-'<li class="ad_fileFormGroup">
+'<div class="ad_fileFormGroup">
+	<h1 class="ad_fileForm__title">Edit File</h1>
     <form class="ad_fileForm " action="/atomic-docs/atomic-core/index.php" method="post">
       <input type="text" class="form-control" name="compName" placeholder="Delete Component" required>
       <input type="hidden" name="compDir" value="'.$catName.'"/>
       <input type="hidden" name="delete" value="delete"/>
     </form>
-</li>'		
+</div>'		
 ;
 
 	$includeString = "\n$includeString\n";

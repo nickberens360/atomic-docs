@@ -48,8 +48,10 @@ function createPageTemplate($catName)
 			</div>
 	</div>
 	<div class="ad_js-actionDrawer ad_actionDrawer">
-    <div class="ad_js-actionClose  ad_actionDrawer__close">Close</div>
-    <div id="js_actionDrawer__content" class="actionDrawer__content"></div>
+	<div class="ad_actionDrawer__wrap">
+	    <div class="ad_js-actionClose  ad_actionDrawer__close"><i class="fa fa-times fa-3x"></i></div>
+	    <div id="js_actionDrawer__content" class="actionDrawer__content"></div>
+	<div/>
   </div>
 	<?php include ("footer.php");?>
 '
@@ -121,13 +123,14 @@ function createAjaxIncludeAndFile($catName)
 {
 	
 	$includeString = 
-'<li class="ad_fileFormGroup">
+'<div class="ad_fileFormGroup">
+	<h1 class="ad_fileForm__title">Add File</h1>
     <form class="ad_fileForm " action="/atomic-docs/atomic-core/'.$catName.'.php" method="post">
       <input type="text" class="form-control" name="compName" placeholder="Create Component" required>
       <input type="hidden" name="compDir" value="'.$catName.'"/>
       <input type="hidden" name="create" value="create"/>
     </form>
-</li>'		
+</div>'		
 ;
 
 	$includeString = "\n$includeString\n";
