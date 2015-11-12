@@ -28,9 +28,37 @@
 .ad_actionDrawer__close{
   //position:absolute; 
   cursor:pointer;
-  color: #F94B4B;
+  /* color: #F94B4B; */
+  color: #B5B4B4;
   position: absolute;
   right: 0;
   top: -53px;
 }
+
+.ad_label{
+  display: block;
+  margin-bottom: 6px;
+  color:#7A7A7A; 
+}
+.formInputGroup{
+  margin-bottom:12px;
+}
+
+.inputBtnGroup{
+  @extend .grid-row;
+  .ad_btn{
+    float: right;
+  }
+  .form-control{
+    
+
+  }
+}
+.fcWrap{
+  overflow: hidden;
+}
+
+
+
+
 
