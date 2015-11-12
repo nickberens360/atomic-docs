@@ -9,7 +9,7 @@
   <input type="hidden" name="createDir" value="createDir"/>
 </form>
 
-<form class="ad_fileForm " action="/atomic-docs/atomic-core/index.php" method="post" onsubmit="return confirm('Deleting a category deletes all files within it as well. Are you sure about this?');">
+<form id="formDeleteCat" class="ad_fileForm " action="/atomic-docs/atomic-core/index.php" method="post" onsubmit="return confirm('Deleting a category deletes all files within it as well. Are you sure about this?');">
   <div class="formInputGroup">
     <div class="inputBtnGroup">
       <label class="ad_label">Delete a category</label>

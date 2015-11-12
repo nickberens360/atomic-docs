@@ -16,16 +16,11 @@ $( window ).resize(function() {
 
 var actionOpen = [
   { elements: $(".ad_js-actionDrawer"), properties: { right:"auto"}, options: { duration: 300} },
-  /*{ elements: $("#js-side"), properties: { translateX: [0, "-100%"]}, options: { duration: 300 } },
-  { elements: $("#js-main"), properties: { paddingLeft: "250px"}, options: { duration: 300, sequenceQueue: false } },*/
   
 ];
 
 var actionClose = [
-  { elements: $(".ad_js-actionDrawer"), properties: { right:"-100%"}, options: { duration: 300} },
-  /*{ elements: $("#js-side"), properties: { translateX: [0, "-100%"]}, options: { duration: 300 } },
-  { elements: $("#js-main"), properties: { paddingLeft: "250px"}, options: { duration: 300, sequenceQueue: false } },*/
-  
+  { elements: $(".ad_js-actionDrawer"), properties: { right:"-100%"}, options: { duration: 300} }, 
 ];
 
 
@@ -40,13 +35,52 @@ $(".ad_js-actionClose").on('click', function(event) {
 });
 
 
-
-
-
-$('.ad_actionBtn').click(function(e){
+/*ajax calls*/
+/*$('.ad_actionBtn').click(function(e){
     e.preventDefault();	
 		$('#js_actionDrawer__content').load($(this).prop("href")); 
+ 
+});*/
+
+
+
+/*$('.ad_actionBtn').click(function(event) {
+   event.preventDefault();
+ 
+   $.ajax(this.href, {
+      success: function(data) {      
+         $('#js_actionDrawer__content').html($(data));
+      },
+      error: function() {
+         alert('did not worked!');
+      }
+   });
+});*/
+
+
+$('.ad_actionBtn').click(function(event) {
+   event.preventDefault();
+ 
+   $.ajax(this.href, {
+      success: function(data) {      
+         $('#js_actionDrawer__content').html($(data));
+      },
+      error: function() {
+         alert('did not worked!');
+      }
+   });
 });
+    
+
+
+
+
+
+
+
+
+
+
 
 
 
