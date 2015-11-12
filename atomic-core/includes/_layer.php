@@ -1,0 +1,1 @@
+<span id="new" class="compTitle">new</span><div class="component"><?php include("../components/layer/new.php");?></div>
