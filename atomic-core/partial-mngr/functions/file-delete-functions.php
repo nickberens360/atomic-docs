@@ -24,7 +24,7 @@ function deleteCompIncludetString($catName, $fileName)
 {
 	
 	//create @import string
-	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.php");?></div>';
+	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.php");?></div>';
 	//Place contents of file into variable
 	$contents = file_get_contents('includes/_'.$catName.'.php');
 	

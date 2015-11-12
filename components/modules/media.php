@@ -1,7 +1,7 @@
-<!--components/layout/section.php-->
+<!--components/modules/media.php-->
 
 <section class="section">
-	<div class="section__inner">
+	<div class="section-inner">
 		<div class="section-content">
 			Section content
 		</div>

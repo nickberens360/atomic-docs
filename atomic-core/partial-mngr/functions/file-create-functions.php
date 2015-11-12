@@ -47,7 +47,7 @@ function createIncludeString($catName, $fileName)
 {
 
 
-	$includeString = '<span id="'.$fileName.'"></span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.php'.'");?></div>';
+	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.php'.'");?></div>';
 	$includeString = "\n$includeString\n";
 	
 	$fileHandle = fopen('includes/_'.$catName.'.php', 'a') or die("can't open file");
