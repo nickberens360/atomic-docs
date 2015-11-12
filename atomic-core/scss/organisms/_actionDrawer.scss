@@ -9,7 +9,8 @@
   padding:50px;
   height:100%;
 }
-.actionDrawer__content{
+
+.ad_actionDrawer__wrap{
   max-width:500px;
   margin:auto;
   position: relative;
@@ -20,8 +21,16 @@
   }
 }
 
+.actionDrawer__content{
+  
+}
+
 .ad_actionDrawer__close{
-  position:absolute; 
+  //position:absolute; 
   cursor:pointer;
+  color: #F94B4B;
+  position: absolute;
+  right: 0;
+  top: -53px;
 }
 

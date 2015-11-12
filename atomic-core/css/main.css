@@ -705,9 +705,8 @@ pre[class*="language-"] {
   -webkit-box-shadow: none;
   box-shadow: none;
   margin-bottom: 10px;
-  color: #B9B9B9;
   width: 100%;
-  height: 30px;
+  height: 50px;
   font-size: 14px;
   text-indent: 10px;
 }
@@ -719,7 +718,7 @@ pre[class*="language-"] {
 }
 /* line 19, molecules/_ad_fileForm.scss */
 .ad_fileForm ::-webkit-input-placeholder {
-  color: #555;
+  color: #B9B9B9;
   font-style: 12px;
 }
 
@@ -1063,8 +1062,8 @@ pre[class*="language-"] {
   height: 100%;
 }
 
-/* line 12, organisms/_actionDrawer.scss */
-.actionDrawer__content {
+/* line 13, organisms/_actionDrawer.scss */
+.ad_actionDrawer__wrap {
   max-width: 500px;
   margin: auto;
   position: relative;
@@ -1073,15 +1072,18 @@ pre[class*="language-"] {
   -ms-transform: translateY(-30%);
   transform: translateY(-30%);
 }
-/* line 18, organisms/_actionDrawer.scss */
-.actionDrawer__content h1 {
+/* line 19, organisms/_actionDrawer.scss */
+.ad_actionDrawer__wrap h1 {
   color: #7A7A7A;
 }
 
-/* line 23, organisms/_actionDrawer.scss */
+/* line 28, organisms/_actionDrawer.scss */
 .ad_actionDrawer__close {
-  position: absolute;
   cursor: pointer;
+  color: #F94B4B;
+  position: absolute;
+  right: 0;
+  top: -53px;
 }
 
 /* line 1, _cleanup.scss */
