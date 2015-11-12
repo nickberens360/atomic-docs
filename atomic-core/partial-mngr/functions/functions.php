@@ -3,6 +3,7 @@
 	require 'cat-create-functions.php';
 	require 'file-create-functions.php';
 	require 'file-delete-functions.php';
+  require 'file-rename-functions.php';
 	require 'validation.php';
 
 ?>
