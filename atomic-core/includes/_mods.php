@@ -1,0 +1,1 @@
+<span id="test" class="compTitle">test</span><div class="component"><?php include("../components/mods/test.php");?></div>
