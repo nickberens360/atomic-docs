@@ -11,6 +11,10 @@
       <input type="hidden" name="rename" value="rename"/>
       <input type="hidden" name="oldName" value="grid2"/>
     </form>
+
+    
+
+
     <form class="ad_fileForm " action="/atomic-docs/atomic-core/index.php" method="post">
       <div class="formInputGroup">
         <div class="inputBtnGroup">
@@ -22,4 +26,18 @@
       <input type="hidden" name="compDir" value="layout"/>
       <input type="hidden" name="delete" value="delete"/>
     </form>
+
+    
+
+
+          
+
+
+
+
+
+
 </div>
+
+
+

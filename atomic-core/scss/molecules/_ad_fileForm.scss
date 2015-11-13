@@ -10,6 +10,11 @@
 		height: 50px;
 	    font-size: 14px;
 	    text-indent: 10px;
+	    box-shadow: 0;	    &:focus{
+	    	outline:none;
+	    	border:none;
+	    	
+	    }
 	}
 	.btn{
 		border-radius:0;

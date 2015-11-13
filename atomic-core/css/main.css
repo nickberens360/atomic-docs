@@ -697,6 +697,36 @@ pre[class*="language-"] {
   color: #7A7A7A;
 }
 
+/* line 2, atoms/_form-elements.scss */
+.formGroup-check label {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+/* line 8, atoms/_form-elements.scss */
+.formInput-check {
+  display: none;
+}
+
+/* line 11, atoms/_form-elements.scss */
+.formInput-check + label span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+  top: -2px;
+}
+
+/* line 23, atoms/_form-elements.scss */
+.formInput-check:checked + label span {
+  background: #222222;
+}
+
 /* line 2, molecules/_ad_fileForm.scss */
 .ad_fileForm .form-control {
   border-radius: 0;
@@ -709,14 +739,21 @@ pre[class*="language-"] {
   height: 50px;
   font-size: 14px;
   text-indent: 10px;
+  -webkit-box-shadow: 0;
+  box-shadow: 0;
 }
-/* line 14, molecules/_ad_fileForm.scss */
+/* line 13, molecules/_ad_fileForm.scss */
+.ad_fileForm .form-control:focus {
+  outline: none;
+  border: none;
+}
+/* line 19, molecules/_ad_fileForm.scss */
 .ad_fileForm .btn {
   border-radius: 0;
   padding: 7px 12px;
   border: none;
 }
-/* line 19, molecules/_ad_fileForm.scss */
+/* line 24, molecules/_ad_fileForm.scss */
 .ad_fileForm ::-webkit-input-placeholder {
   color: #B9B9B9;
   font-style: 12px;
@@ -1137,15 +1174,16 @@ pre[class*="language-"] {
 /* line 1, _cleanup.scss */
 body {
   background: #FCFEFA;
+  color: #7A7A7A;
 }
 
-/* line 4, _cleanup.scss */
+/* line 5, _cleanup.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #E2F3F5;
 }
 
-/* line 8, _cleanup.scss */
+/* line 9, _cleanup.scss */
 .compTitle {
   text-transform: capitalize;
   display: block;
