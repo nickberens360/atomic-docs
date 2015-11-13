@@ -8,7 +8,7 @@ function createScssFile($catName, $fileName)
 }
 
 
-function importScssFile($catName, $fileName)
+function writeScssImportFile($catName, $fileName)
 {
 	
 	//create @import string
@@ -113,6 +113,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
         </div>
       </div>
       <input type="hidden" name="compDir" value="'.$catName.'"/>
+      <input type="hidden" name="fileName" value="'.$fileName.'"/>
       <input type="hidden" name="moveFile" value="moveFile"/>
     </form>
 

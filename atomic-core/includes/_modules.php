@@ -1,1 +1,0 @@
-<span id="new" class="compTitle">new</span><div class="component"><?php include("../components/modules/new.php");?></div>

@@ -4,6 +4,7 @@
 	require 'file-create-functions.php';
 	require 'file-delete-functions.php';
   require 'file-rename-functions.php';
+  require 'file-move-functions.php';
 	require 'validation.php';
 
 ?>

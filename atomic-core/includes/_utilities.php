@@ -1,2 +1,0 @@
-<span id="test" class="compTitle">test</span><div class="component"><?php include("../components/utilities/test.php");?></div>
-<span id="d-classes" class="compTitle">d-classes</span><div class="component"><?php include("../components/utilities/d-classes.php");?></div>

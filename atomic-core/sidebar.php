@@ -8,8 +8,7 @@
 	require 'partial-mngr/create-category.php';
 	require 'partial-mngr/delete-category.php';
   require 'partial-mngr/file-rename.php';
-  
- 
+ require 'partial-mngr/file-move.php';
 
 	$current_page = basename($_SERVER['PHP_SELF']);
 

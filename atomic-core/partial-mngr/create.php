@@ -12,9 +12,11 @@ $catName = test_input($_POST["compDir"]);
 
 
 createScssFile($catName, $fileName );
-importScssFile($catName, $fileName );
+
+writeScssImportFile($catName, $fileName );
 
 createCompFile($catName, $fileName );
+
 createIncludeString($catName, $fileName );
 
 createAjaxIncludeAndCompFile($catName, $fileName);
