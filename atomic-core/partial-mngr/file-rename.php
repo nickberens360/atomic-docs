@@ -15,17 +15,24 @@ $oldName = test_input($_POST["oldName"]);
 
 
 
-getScssFileContents($catName, $fileName, $oldName );
+    getScssFileContents($catName, $fileName, $oldName );
 
 
-//importScssFile($catName, $fileName );
-//
-//createCompFile($catName, $fileName );
-//createIncludeString($catName, $fileName );
-//
-//createAjaxIncludeAndCompFile($catName, $fileName);
+	deleteScssImportString($catName, $oldName );
 
-header("location: http://127.0.0.1/atomic-docs/atomic-core/$catName.php");
+	importScssFile($catName, $fileName );
+
+	getCompFileContents($catName, $fileName, $oldName);
+
+	deleteCompIncludetString($catName, $oldName );
+
+	createIncludeString($catName, $fileName );
+
+    deleteAjaxCompFile($catName, $oldName);
+
+    createAjaxIncludeAndCompFile($catName, $fileName);
+
+    header("location: http://127.0.0.1/atomic-docs/atomic-core/$catName.php");
 }
 
 

@@ -19,6 +19,8 @@ deleteCompFile($catName, $fileName );
 
 deleteAjaxCompFile($catName, $fileName);
 
+
+
 header("location: http://127.0.0.1/atomic-docs/atomic-core/$catName.php");
 
 }

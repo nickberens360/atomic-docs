@@ -1,5 +1,5 @@
 <?php include ("head.php");?>
-	<body class="layer">
+	<body class="layout">
 	
 	
 	<div class="grid-row atoms-container">
@@ -7,10 +7,10 @@
 			
 			
 			<div class="atoms-main">
-					<h1 id="layer" class="atomic-h1">layer</h1>
+					<h1 id="layout" class="atomic-h1">layout</h1>
 	
 	
-							<?php include ("includes/_layer.php");?>
+							<?php include ("includes/_layout.php");?>
               
 	
 	

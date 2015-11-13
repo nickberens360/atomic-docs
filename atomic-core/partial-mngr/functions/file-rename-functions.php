@@ -1,18 +1,19 @@
 <?php
-  function getScssFileContents($catName, $fileName, $oldName)
-  {
-    
-    //$homepage = file_get_contents('../scss/'.$catName.'/_'.$oldName.'.scss');
-    //echo $homepage;
-    
-    //echo $fileName;
-    
-    rename("..scss/'.$catName.'/_'.$oldName.'","..scss/'.$catName.'/_'.$fileName.'");
-    
 
-    
-    echo "test";
 
-      
-  }
+function getScssFileContents($catName, $fileName, $oldName)
+{	
+    rename ("../scss/$catName/_$oldName.scss", "../scss/$catName/_$fileName.scss");
+}
+
+function getCompFileContents($catName, $fileName, $oldName)
+{	
+    rename ("../components/$catName/$oldName.php", "../components/$catName/$fileName.php");
+}
+
+
+
+	
+
+
 ?>
