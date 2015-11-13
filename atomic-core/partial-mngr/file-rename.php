@@ -12,7 +12,7 @@ $oldName = test_input($_POST["oldName"]);
 
 
 
-
+     //changeCommentString($catName, $fileName, $oldName);
 
     
     renameScssFile($catName, $fileName, $oldName );
