@@ -30,7 +30,7 @@ function writeScssImportFile($catName, $fileName)
 function createCompFile($catName, $fileName)
 {
   
-  $commentString = '<!--components/'.$catName.'/'.$fileName.'.php-->' ;
+  $commentString = '<!--components/'.$catName.'/'.$fileName.'.php-->';
 	$commentString = "\n$commentString\n";
 	
   $fileHandle = fopen('../components/'.$catName.'/'.$fileName.'.php', 'x+') or die("can't open file");
