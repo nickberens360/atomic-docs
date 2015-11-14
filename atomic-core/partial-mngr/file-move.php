@@ -11,6 +11,8 @@ $catName = test_input($_POST["compDir"]);
 $newDir = test_input($_POST["newDir"]);
 
 
+  moveChangeCommentString($catName, $fileName, $newDir);
+
   moveScssFile($catName, $fileName, $newDir);
   
   deleteScssImportString($catName, $fileName );
