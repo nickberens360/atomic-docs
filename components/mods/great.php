@@ -1,2 +1,0 @@
-
-<!--components/mods/great.php-->

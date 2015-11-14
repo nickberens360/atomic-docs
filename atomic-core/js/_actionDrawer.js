@@ -66,7 +66,7 @@ $('.ad_actionBtn').click(function(event) {
          $('#js_actionDrawer__content').html($(data));
       },
       error: function() {
-         alert('did not worked!');
+         //alert('did not worked!');
       }
    });
 });

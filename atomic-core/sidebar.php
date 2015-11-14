@@ -1,5 +1,4 @@
 <?php 	
-	//require ("partial-mngr/config.php");
 	
 	require 'partial-mngr/functions/functions.php';
 
@@ -7,8 +6,8 @@
 	require 'partial-mngr/delete.php';
 	require 'partial-mngr/create-category.php';
 	require 'partial-mngr/delete-category.php';
-  require 'partial-mngr/file-rename.php';
- require 'partial-mngr/file-move.php';
+    require 'partial-mngr/file-rename.php';
+    require 'partial-mngr/file-move.php';
 
 	$current_page = basename($_SERVER['PHP_SELF']);
 

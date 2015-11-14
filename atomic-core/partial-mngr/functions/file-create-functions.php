@@ -92,6 +92,9 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
                     $path = "../../../components";
 
                     $dir = new DirectoryIterator($path);
+
+                  
+
                     foreach ($dir as $fileinfo) {
                         if ($fileinfo->isDir() && !$fileinfo->isDot()) {
                             

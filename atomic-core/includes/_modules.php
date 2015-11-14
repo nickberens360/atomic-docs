@@ -1,0 +1,1 @@
+<span id="file" class="compTitle">file</span><div class="component"><?php include("../components/modules/file.php");?></div>
