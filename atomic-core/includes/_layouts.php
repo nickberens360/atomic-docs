@@ -1,2 +1,2 @@
 
-<span id="move-it" class="compTitle">move-it</span><div class="component"><?php include("../components/layouts/move-it.php");?></div>
+<span id="test" class="compTitle">test</span><div class="component"><?php include("../components/layouts/test.php");?></div>

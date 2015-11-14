@@ -1,1 +1,0 @@
-<!--components/mods/move.php-->
