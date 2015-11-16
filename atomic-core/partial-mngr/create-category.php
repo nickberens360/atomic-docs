@@ -1,30 +1,64 @@
 <?php
 
-if (!empty($_POST['createDir'])){
-
-//Set user input variable
-$inputName = test_input($_POST["inputName"]);
+require '/functions/functions.php';
 
 
+$errors         = array();      // array to hold validation errors
+$data           = array();      // array to pass back data
 
-createPageIncludeFile($inputName );
+// validate the variables ======================================================
+    // if any of these variables don't exist, add an error to our $errors array
 
-createScssCatDirAndFile($inputName );
+    if (empty($_POST['dirName']))
+        $errors['name'] = 'Name is required.';
 
-createStringForMainScssFile($inputName );
+// return a response ===========================================================
 
-createCompCatDir($inputName );
+    // if there are any errors in our errors array, return a success boolean of false
+    if ( ! empty($errors)) {
 
-createPageTemplate($inputName );
+        // if there are items in our errors array, return those errors
+        $data['success'] = false;
+        $data['errors']  = $errors;
+    } else {
 
+        // if there are no errors process our form, then return a message
+        
+        
+        // DO ALL YOUR FORM PROCESSING HERE
+  
+        
+        $dirName = test_input($_POST["dirName"]);
+        
+        
+        
+        createScssCatDirAndFile($dirName );
 
-createSidebarIncludeAndFile($inputName );
+        createStringForMainScssFile($dirName );
 
-createAjaxIncludeAndFile($inputName);
+        createPageIncludeFile($dirName );
+        
+        createCompCatDir($dirName );
+        
+        createPageTemplate($dirName );
+        
+        createSidebarIncludeAndFile($dirName );
+               
+        createAjaxIncludeAndFile($dirName);
+        
+        
+        
+        
+        
 
+        // show a message of success and provide a true success variable
+        $data['success'] = true;
+        $data['message'] = 'Success!';
+    }
 
-//createAjaxFile($inputName);
+    // return all our data to an AJAX call
+    echo json_encode($data);
+    
 
-header("location:$inputName.php");
-}
 ?>
+

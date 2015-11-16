@@ -1,13 +1,16 @@
-<form class="ad_fileForm " action="/atomic-docs/atomic-core/index.php" method="post">
+<form id="form-create-category" class="ad_fileForm " action="/atomic-docs/atomic-core/partial-mngr/create-category.php" method="post">
   <div class="formInputGroup">
 	  <label class="ad_label">Add a category</label>
 	  <div class="inputBtnGroup">
-      <button class="ad_btn ad_btn-pos" type="submit" >Add</button>
-        <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="inputName" required></div>
+      <button class="ad_btn ad_btn-pos" type="submit">Add</button>
+        <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="dirName"></div>
 	  </div>
   </div>
   <input type="hidden" name="createDir" value="createDir"/>
 </form>
+
+
+
 
 <form id="formDeleteCat" class="ad_fileForm " action="/atomic-docs/atomic-core/index.php" method="post" onsubmit="return confirm('Deleting a category deletes all files within it as well. Are you sure about this?');">
   <div class="formInputGroup">
