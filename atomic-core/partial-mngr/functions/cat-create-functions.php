@@ -39,7 +39,7 @@ function createStringForMainScssFile($dirName)
 function createCompCatDir($dirName)
 {
     
-	mkdir("/Applications/XAMPP/xamppfiles/htdocs/atomic-docs/components/$dirName");
+	mkdir("../../components/$dirName");
 }
 
 
@@ -147,7 +147,7 @@ function createAjaxIncludeAndFile($dirName)
 	
 	$includeString = 
 '<div class="ad_fileFormGroup">
-    <form class="ad_fileForm " action="/atomic-docs/atomic-core/'.$dirName.'.php" method="post">
+    <form id="form-create-file" class="ad_fileForm " action="/atomic-docs/atomic-core/'.$dirName.'.php" method="post">
       <div class="inputBtnGroup">
         <label class="ad_label">What\'s your component\'s name?</label>
         <button class="ad_btn ad_btn-pos" type="submit" >Add</button>

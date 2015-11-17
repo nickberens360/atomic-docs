@@ -11,12 +11,18 @@ $data           = array();      // array to pass back data
     
     $dirName = test_input($_POST["dirName"]);
     
+    
+    
     $filename = '../../components/'.$dirName.'';
     
-    if (file_exists($filename))
-        $errors['name'] = 'Category already exists.';
-    
-
+    if (file_exists($filename) && $dirName != ""){
+        $errors['exists'] = 'Category already exists.';
+    }
+    elseif ($_POST['dirName'] == ""){
+        $errors['name'] = 'Name is required.';
+    }
+        
+        
     //if (empty($_POST['dirName']))
 //        $errors['name'] = 'Name is required.';
 
@@ -36,25 +42,23 @@ $data           = array();      // array to pass back data
         // DO ALL YOUR FORM PROCESSING HERE
   
         
-        $dirName = test_input($_POST["dirName"]);
+        //$dirName = test_input($_POST["dirName"]);
 
 
    
-        //createCompCatDir($dirName );
+        createCompCatDir($dirName );
         
-        /*createScssCatDirAndFile($dirName );
+        createScssCatDirAndFile($dirName );
 
         createStringForMainScssFile($dirName );
 
         createPageIncludeFile($dirName );
-        
-        
-        
+           
         createPageTemplate($dirName );
         
         createSidebarIncludeAndFile($dirName );
                
-        createAjaxIncludeAndFile($dirName);*/
+        createAjaxIncludeAndFile($dirName);
         
         
         

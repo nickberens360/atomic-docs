@@ -42,7 +42,7 @@ $('body').on('click', '.ad_js-actionOpen', function(events){
 });
 
 $('body').on('click', '.ad_js-errorBox__close', function(events){
-   $('.ad_errorBox').remove();
+   $('.ad_errorBox').fadeOut(200);
 });
 
 
@@ -84,11 +84,17 @@ $('.ad_actionBtn').click(function(event) {
                   }*/
                   
                   
-                  if (data.errors.name) {
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>');
-                    
-                    
+                  if (data.errors.exists) {
+                    $('.ad_errorBox__message').html("");
+                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
                   }
+                  
+                  
+                  if (data.errors.name) {
+                    $('.ad_errorBox__message').html("");
+                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                  }
+                  
                   
                   
                   
