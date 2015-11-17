@@ -37,6 +37,14 @@ $(".ad_js-actionClose").on('click', function(event) {
 });
 
 
+$('body').on('click', '.ad_js-actionOpen', function(events){
+   $('.ad_errorBox').remove();
+});
+
+$('body').on('click', '.ad_js-errorBox__close', function(events){
+   $('.ad_errorBox').remove();
+});
+
 
 
 
@@ -49,8 +57,7 @@ $('.ad_actionBtn').click(function(event) {
          
          $('#form-create-category').submit(function(event) {
             reDirect = $('input[name=dirName]').val();
-            $('.form-group').removeClass('has-error'); // remove the error class
-            $('.help-block').remove(); // remove the error text
+             // remove the error text
             // get the form data
             // there are many ways to get this data using jQuery (you can use the class or id also)
             var formData = {
@@ -71,10 +78,20 @@ $('.ad_actionBtn').click(function(event) {
                 // here we will handle errors and validation messages
                 if ( ! data.success) {
                   // handle errors for name ---------------
+                  /*if (data.errors.name) {
+                    $('#form-create-category .inputBtnGroup').addClass('has-error'); 
+                    $('#form-create-category .inputBtnGroup').append('<div class="help-block">' + data.errors.name + '</div>'); 
+                  }*/
+                  
+                  
                   if (data.errors.name) {
-                    $('#form-create-category .inputBtnGroup').addClass('has-error'); // add the error class to show red input
-                    $('#form-create-category .inputBtnGroup').append('<div class="help-block">' + data.errors.name + '</div>'); // add the actual error message under our input
+                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>');
+                    
+                    
                   }
+                  
+                  
+                  
                 } else {
                   //redirect here
                    window.location = '/atomic-docs/atomic-core/'+reDirect+'.php';

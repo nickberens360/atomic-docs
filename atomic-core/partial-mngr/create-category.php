@@ -8,9 +8,17 @@ $data           = array();      // array to pass back data
 
 // validate the variables ======================================================
     // if any of these variables don't exist, add an error to our $errors array
+    
+    $dirName = test_input($_POST["dirName"]);
+    
+    $filename = '../../components/'.$dirName.'';
+    
+    if (file_exists($filename))
+        $errors['name'] = 'Category already exists.';
+    
 
-    if (empty($_POST['dirName']))
-        $errors['name'] = 'Name is required.';
+    //if (empty($_POST['dirName']))
+//        $errors['name'] = 'Name is required.';
 
 // return a response ===========================================================
 
@@ -32,7 +40,7 @@ $data           = array();      // array to pass back data
 
 
    
-        createCompCatDir($dirName );
+        //createCompCatDir($dirName );
         
         /*createScssCatDirAndFile($dirName );
 

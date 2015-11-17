@@ -80,4 +80,20 @@
 }
 
 
+.ad_errorBox{
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  text-align:center;
+  background:#CD5151; 
+  color:#fff;
+  font-weight:bold;
+  .fa{
+    cursor:pointer; 
+  }
+}
+.ad_errorBox__message{
+  margin: 11px; 
+}
 

@@ -1,3 +1,5 @@
+
+
 <form id="form-create-category" class="ad_fileForm " action="/atomic-docs/atomic-core/partial-mngr/create-category.php" method="post">
   <div class="formInputGroup">
 	  <label class="ad_label">Add a category</label>
