@@ -1,6 +1,9 @@
 <?php
 
 
+
+
+
 function createPageIncludeFile($dirName)
 {
 	fopen("../includes/_$dirName.php", 'x+') or die("can't open file");
@@ -35,8 +38,12 @@ function createStringForMainScssFile($dirName)
 
 function createCompCatDir($dirName)
 {
-	mkdir("../../components/$dirName");
+    
+	mkdir("/Applications/XAMPP/xamppfiles/htdocs/atomic-docs/components/$dirName");
 }
+
+
+
 
 
 

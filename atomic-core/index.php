@@ -5,8 +5,12 @@
 <div class="grid-row atoms-container">
 	<?php include ("sidebar.php");?>
 	
+
 	
 	<div class="atoms-main">
+
+	
+	<?php echo ROOT_PATH; ?>
 		<!--<div class="docBlock">
 			<h1 class="docBlock-heading">Welcome!</h1>
 			<p>Atomic Docs is made for <a href="https://www.previousnext.com.au/blog/style-guide-driven-development-new-web-development">styleguide driven development</a>.</p>

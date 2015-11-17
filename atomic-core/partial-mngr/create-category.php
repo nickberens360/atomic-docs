@@ -1,6 +1,6 @@
 <?php
-
-require '/functions/functions.php';
+require '../../config.php';
+require 'functions/functions.php';
 
 
 $errors         = array();      // array to hold validation errors
@@ -29,22 +29,24 @@ $data           = array();      // array to pass back data
   
         
         $dirName = test_input($_POST["dirName"]);
+
+
+   
+        createCompCatDir($dirName );
         
-        
-        
-        createScssCatDirAndFile($dirName );
+        /*createScssCatDirAndFile($dirName );
 
         createStringForMainScssFile($dirName );
 
         createPageIncludeFile($dirName );
         
-        createCompCatDir($dirName );
+        
         
         createPageTemplate($dirName );
         
         createSidebarIncludeAndFile($dirName );
                
-        createAjaxIncludeAndFile($dirName);
+        createAjaxIncludeAndFile($dirName);*/
         
         
         

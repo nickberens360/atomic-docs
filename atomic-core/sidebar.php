@@ -1,6 +1,5 @@
 <?php 	
 	
-	//require 'partial-mngr/functions/functions.php';
 //
 //  require 'partial-mngr/create.php';
 //  require 'partial-mngr/delete.php';
@@ -10,6 +9,7 @@
 //  require 'partial-mngr/file-move.php';
 
 	$current_page = basename($_SERVER['PHP_SELF']);
+
 
 ?>
 
