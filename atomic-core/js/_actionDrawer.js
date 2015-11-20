@@ -69,24 +69,24 @@ $('.ad_actionBtn').click(function(event) {
 
 
 
-$(document).ready(function() { 
+      
             // bind 'myForm' and provide a simple callback function 
 
             $("#create-form").validate({
               rules: {
-                // simple rule, converted to {required:true}
-                inputName: "required",
-                // compound rule
+                //inputName: "required",
+                remote: "/atomic-docs/atomic-core/partial-mngr/create-category.php"
+              },
+              messages: {
+                //inputName: "Yo, error!",
+                remote: "Already exists"
               },
               submitHandler: function(form) {
                 $(form).ajaxSubmit();
               }
             });
 
-            /*$('#create-form').ajaxForm(function() { 
-                
-            }); */
-        }); 
+
        
 
 
