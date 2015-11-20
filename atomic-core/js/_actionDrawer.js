@@ -68,13 +68,26 @@ $('.ad_actionBtn').click(function(event) {
 
 
 
-          // wait for the DOM to be loaded 
-        $(document).ready(function() { 
+
+$(document).ready(function() { 
             // bind 'myForm' and provide a simple callback function 
-            $('#create_form').ajaxForm(function() { 
-                alert("Thank you for your comment!"); 
-            }); 
-        });
+
+            $("#create-form").validate({
+              rules: {
+                // simple rule, converted to {required:true}
+                inputName: "required",
+                // compound rule
+              },
+              submitHandler: function(form) {
+                $(form).ajaxSubmit();
+              }
+            });
+
+            /*$('#create-form').ajaxForm(function() { 
+                
+            }); */
+        }); 
+       
 
 
       },

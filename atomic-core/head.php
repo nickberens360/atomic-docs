@@ -14,7 +14,8 @@
 		<link rel="stylesheet" type="text/css" href="atomic-core/css/main.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		
-
+		
+		
 		
 		<?php include ("../_shared-head.php");?>
 </head>

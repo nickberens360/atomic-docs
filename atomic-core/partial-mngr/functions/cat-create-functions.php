@@ -21,7 +21,7 @@ function createStringForMainScssFile($catName)
 }
 function createCompCatDir($catName)
 {
-	mkdir("../components/$catName");
+	mkdir("../../components/$catName");
 }
 
 function createPageTemplate($catName)

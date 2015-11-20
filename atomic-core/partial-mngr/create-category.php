@@ -1,10 +1,10 @@
 <?php
 
 
-/*require 'functions/functions.php';
+require 'functions/functions.php';
 
 
-$inputName = test_input($_POST["inputName"]);*/
+$inputName = test_input($_POST["inputName"]);
 
 
 
@@ -12,11 +12,11 @@ $inputName = test_input($_POST["inputName"]);*/
 
 createScssCatDirAndFile($inputName );
 
-createStringForMainScssFile($inputName );
+createStringForMainScssFile($inputName );*/
 
 createCompCatDir($inputName );
 
-createPageTemplate($inputName );
+/*createPageTemplate($inputName );
 
 
 createSidebarIncludeAndFile($inputName );
@@ -31,3 +31,5 @@ createAjaxIncludeAndFile($inputName);*/
 //header("location:../$inputName.php");
 
 ?>
+
+
