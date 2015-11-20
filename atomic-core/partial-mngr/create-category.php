@@ -41,14 +41,11 @@ $data           = array();      // array to pass back data
         
         // DO ALL YOUR FORM PROCESSING HERE
   
-        
-        //$dirName = test_input($_POST["dirName"]);
-
 
    
         createCompCatDir($dirName );
         
-        createScssCatDirAndFile($dirName );
+        /*createScssCatDirAndFile($dirName );
 
         createStringForMainScssFile($dirName );
 
@@ -58,7 +55,7 @@ $data           = array();      // array to pass back data
         
         createSidebarIncludeAndFile($dirName );
                
-        createAjaxIncludeAndFile($dirName);
+        createAjaxIncludeAndFile($dirName);*/
         
         
         

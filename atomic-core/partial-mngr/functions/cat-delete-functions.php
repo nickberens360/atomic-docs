@@ -15,7 +15,7 @@ function deleteCatSidebarIncludeFile($catName)
 
 function deleteCompDir($catName) { 
 		
-   $catName = '../components/'.$catName;
+   $catName = '../../components/'.$catName;
 	
    if (is_dir($catName)) { 
      $objects = scandir($catName); 
