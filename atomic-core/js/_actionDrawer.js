@@ -70,12 +70,12 @@ $('.ad_actionBtn').click(function(event) {
           
           
           $('#form-create-category').submit(function(event) {
-            reDirect = $('input[name=createDirName]').val();
+            reDirect = $('input[name=dirName]').val();
              // remove the error text
             // get the form data
             // there are many ways to get this data using jQuery (you can use the class or id also)
             var formData = {
-              'dirName' 				: $('input[name=createDirName]').val()
+              'dirName' 				: $('input[name=dirName]').val()
             };
             // process the form
             $.ajax({
@@ -110,6 +110,7 @@ $('.ad_actionBtn').click(function(event) {
                   
                   
                 } else {
+                  
                   //redirect here
                    window.location = '/atomic-docs/atomic-core/'+reDirect+'.php';
                   // usually after form submission, you'll want to redirect

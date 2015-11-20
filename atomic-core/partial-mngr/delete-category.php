@@ -23,9 +23,6 @@ $data           = array();      // array to pass back data
         $errors['name'] = 'Input is required.';
     }
         
-        
-    //if (empty($_POST['dirName']))
-//        $errors['name'] = 'Name is required.';
 
 // return a response ===========================================================
 
@@ -37,7 +34,6 @@ $data           = array();      // array to pass back data
         $data['errors']  = $errors;
     } else {
 
-        // if there are no errors process our form, then return a message
         
         
         // DO ALL YOUR FORM PROCESSING HERE

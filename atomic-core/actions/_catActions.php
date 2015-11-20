@@ -3,7 +3,7 @@
 	  <label class="ad_label">Add a category</label>
 	  <div class="inputBtnGroup">
       <button class="ad_btn ad_btn-pos" type="submit">Add</button>
-        <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="createDirName"></div>
+        <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="dirName"></div>
 	  </div>
   </div>
   <input type="hidden" name="createDir" value="createDir"/>
