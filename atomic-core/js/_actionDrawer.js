@@ -57,8 +57,8 @@ $('.ad_actionBtn').click(function(event) {
          
          
          
-         
-         
+
+
          
          
          
@@ -338,7 +338,10 @@ $('.ad_actionBtn').click(function(event) {
 
 
 
+            //check what is the current category and remove from select
+          dirVal = $('#form-file-move input[name=compDir]').val();
 
+          $("#newDir option[value="+dirVal+"]").remove();
 
 
           $('#form-file-move').submit(function(event) {
