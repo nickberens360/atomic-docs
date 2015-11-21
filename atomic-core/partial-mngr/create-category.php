@@ -45,7 +45,7 @@ $data           = array();      // array to pass back data
    
         createCompCatDir($dirName );
         
-        /*createScssCatDirAndFile($dirName );
+        createScssCatDirAndFile($dirName );
 
         createStringForMainScssFile($dirName );
 
@@ -55,7 +55,7 @@ $data           = array();      // array to pass back data
         
         createSidebarIncludeAndFile($dirName );
                
-        createAjaxIncludeAndFile($dirName);*/
+        createAjaxIncludeAndFile($dirName);
         
         
         

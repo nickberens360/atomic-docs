@@ -40,7 +40,23 @@ $data           = array();      // array to pass back data
   
 
    
-       deleteCompDir($dirName );
+       deleteSidebarIncludeString($dirName);
+
+        deleteCatPageFile($dirName);
+
+        deleteCatSidebarIncludeFile($dirName);
+
+        deleteCompDir($dirName);
+
+
+
+        deleteCatScssImportString($dirName);
+
+
+        deleteScssDir($dirName);
+
+
+        deleteAjaxDir($dirName);
         
         
         
