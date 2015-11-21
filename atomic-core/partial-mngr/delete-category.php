@@ -18,7 +18,6 @@ $data           = array();      // array to pass back data
     if (!file_exists($filename) && $dirName != ""){
         $errors['exists'] = 'Category does not exists.';
     }
-    
     elseif ($_POST['dirName'] == ""){
         $errors['name'] = 'Input is required.';
     }
@@ -28,41 +27,21 @@ $data           = array();      // array to pass back data
 
     // if there are any errors in our errors array, return a success boolean of false
     if ( ! empty($errors)) {
-
         // if there are items in our errors array, return those errors
         $data['success'] = false;
         $data['errors']  = $errors;
     } else {
-
-        
         
         // DO ALL YOUR FORM PROCESSING HERE
-  
-
    
-       deleteSidebarIncludeString($dirName);
-
+        deleteSidebarIncludeString($dirName);
         deleteCatPageFile($dirName);
-
         deleteCatSidebarIncludeFile($dirName);
-
         deleteCompDir($dirName);
-
-
-
         deleteCatScssImportString($dirName);
-
-
         deleteScssDir($dirName);
-
-
         deleteAjaxDir($dirName);
         
-        
-        
-        
-        
-
         // show a message of success and provide a true success variable
         $data['success'] = true;
         $data['message'] = 'Success!';
@@ -74,43 +53,4 @@ $data           = array();      // array to pass back data
 
 ?>
 
-
-
-<?php
-
-
-/*if (!empty($_POST['deleteDir'])){
-
-
-
-$inputName = test_input($_POST["inputName"]);
-
-
-deleteSidebarIncludeString($inputName );
-
-deleteCatPageFile($inputName );
-
-deleteCatSidebarIncludeFile($inputName );
-
-deleteCompDir($inputName );
-
-
-
-deleteCatScssImportString($inputName );
-
-
-deleteScssDir($inputName );
-
-
-deleteAjaxDir($inputName);
-
-
-
-header("location:index.php");
-
-}*/
-
-
-
-?>
 

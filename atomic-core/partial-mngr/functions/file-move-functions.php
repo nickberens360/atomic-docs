@@ -2,7 +2,7 @@
 
 function moveScssFile($catName, $fileName, $newDir)
 {	
-    rename ("../scss/$catName/_$fileName.scss", "../scss/$newDir/_$fileName.scss");
+    rename ("../../scss/$catName/_$fileName.scss", "../../scss/$newDir/_$fileName.scss");
 }
 
 
@@ -10,12 +10,12 @@ function moveScssFile($catName, $fileName, $newDir)
 
 function moveCompFile($catName, $fileName, $newDir)
 {	
-    rename ("../components/$catName/$fileName.php", "../components/$newDir/$fileName.php");
+    rename ("../../components/$catName/$fileName.php", "../../components/$newDir/$fileName.php");
 }
 
 function moveAjaxFile($catName, $fileName, $newDir)
 {	
-    rename ("actions/$catName/_ajaxComp-$fileName.php", "actions/$newDir/_ajaxComp-$fileName.php");
+    rename ("../actions/$catName/_ajaxComp-$fileName.php", "../actions/$newDir/_ajaxComp-$fileName.php");
 }
 
 
@@ -27,9 +27,9 @@ function moveChangeCommentString($catName, $fileName, $newDir)
     $newString = '<!--components/'.$newDir.'/'.$fileName.'.php-->';
 
 	//Place contents of file into variable
-	$contents = file_get_contents('../components/'.$catName.'/'.$fileName.'.php');
+	$contents = file_get_contents('../../components/'.$catName.'/'.$fileName.'.php');
 	$contents = str_replace($oldString, $newString , $contents);
-	$contents = file_put_contents('../components/'.$catName.'/'.$fileName.'.php', $contents);
+	$contents = file_put_contents('../../components/'.$catName.'/'.$fileName.'.php', $contents);
     
 
 }
