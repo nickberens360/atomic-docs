@@ -18,7 +18,7 @@ $data           = array();      // array to pass back data
     $fileExists = '../../components/'.$newDir.'/'.$fileMoveName.'.php';
     
     if (file_exists($fileExists) && $fileMoveName != ""){
-        $errors['exists'] = 'A file in that location already exists.';
+        $errors['exists'] = 'A file named '.$fileMoveName .' already exists in that destination.';
     }
     
     /*elseif ($_POST['renameFileName'] == ""){

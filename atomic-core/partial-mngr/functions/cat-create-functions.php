@@ -151,7 +151,7 @@ function createAjaxIncludeAndFile($dirName)
       <div class="inputBtnGroup">
         <label class="ad_label">What\'s your component\'s name?</label>
         <button class="ad_btn ad_btn-pos" type="submit" >Add</button>
-        <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="fileCreateName" required></div>
+        <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="fileCreateName"></div>
       </div>
       <input type="hidden" name="compDir" value="'.$dirName.'"/>
       <input type="hidden" name="create" value="create"/>

@@ -16,7 +16,7 @@ $data           = array();      // array to pass back data
     $filename = '../../components/'.$dirName.'';
     
     if (!file_exists($filename) && $dirName != ""){
-        $errors['exists'] = 'Category does not exists.';
+        $errors['exists'] = 'There is not a category named '.$dirName.'.';
     }
     elseif ($_POST['dirName'] == ""){
         $errors['name'] = 'Input is required.';

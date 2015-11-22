@@ -1,1 +1,1 @@
-<span id="boxes" class="compTitle">boxes</span><div class="component"><?php include("../components/utilities/boxes.php");?></div>
+<span id="blue" class="compTitle">blue</span><div class="component"><?php include("../components/utilities/blue.php");?></div>

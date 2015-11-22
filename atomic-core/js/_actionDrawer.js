@@ -385,7 +385,7 @@ $('.ad_actionBtn').click(function(event) {
                 } else {
                   
 
-                  //alert(reDirect);
+                
                   //redirect here
                   window.location = '/atomic-docs/atomic-core/'+reDirect+'.php';
                   // usually after form submission, you'll want to redirect
@@ -400,12 +400,6 @@ $('.ad_actionBtn').click(function(event) {
             // stop the form from submitting the normal way and refreshing the page
             event.preventDefault();
           });
-
-
-
-
-
-
 
 
 

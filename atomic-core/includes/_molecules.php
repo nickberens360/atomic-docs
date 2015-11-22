@@ -1,0 +1,2 @@
+<span id="test" class="compTitle">test</span><div class="component"><?php include("../components/molecules/test.php");?></div>
+<span id="green" class="compTitle">green</span><div class="component"><?php include("../components/molecules/green.php");?></div>

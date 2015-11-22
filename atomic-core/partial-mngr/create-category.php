@@ -16,7 +16,7 @@ $data           = array();      // array to pass back data
     $filename = '../../components/'.$dirName.'';
     
     if (file_exists($filename) && $dirName != ""){
-        $errors['exists'] = 'Category already exists.';
+        $errors['exists'] = 'The category '.$dirName .' already exists.';
     }
     elseif ($_POST['dirName'] == ""){
         $errors['name'] = 'Name is required.';

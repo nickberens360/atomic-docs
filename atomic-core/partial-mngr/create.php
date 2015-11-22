@@ -17,7 +17,7 @@ $data           = array();      // array to pass back data
     $fileExists = '../../components/'.$compDir.'/'.$fileCreateName.'.php';
     
     if (file_exists($fileExists) && $fileCreateName != ""){
-        $errors['exists'] = 'File already exists in components directory.';
+        $errors['exists'] = 'A file named '.$fileCreateName.' already exists.';
     }
     
 	elseif ($_POST['fileCreateName'] == ""){

@@ -54,6 +54,10 @@
   @extend .grid-row;
   .ad_btn{
     float: right;
+    &:focus{
+      outline: none;
+      border:none;
+    }
   }
   .form-control{
     

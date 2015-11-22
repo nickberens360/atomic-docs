@@ -18,7 +18,7 @@ $data           = array();      // array to pass back data
     $fileExists = '../../components/'.$compDir.'/'.$deleteFileName.'.php';
     
     if (!file_exists($fileExists) && $deleteFileName != ""){
-        $errors['exists'] = 'There is no file by that name.';
+        $errors['exists'] = 'There is no file named '.$deleteFileName.' to delete.';
     }
     
 	elseif ($_POST['deleteFileName'] == ""){
