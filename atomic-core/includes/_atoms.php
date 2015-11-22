@@ -1,1 +1,0 @@
-<span id="test" class="compTitle">test</span><div class="component"><?php include("../components/atoms/test.php");?></div>

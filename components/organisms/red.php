@@ -1,1 +1,0 @@
-<!--components/organisms/red.php-->

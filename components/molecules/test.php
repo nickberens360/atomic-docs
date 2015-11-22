@@ -1,1 +1,0 @@
-<!--components/molecules/test.php-->

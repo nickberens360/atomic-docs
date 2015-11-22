@@ -1,1 +1,0 @@
-<!--components/molecules/green.php-->

@@ -1,1 +1,0 @@
-<span id="red" class="compTitle">red</span><div class="component"><?php include("../components/organisms/red.php");?></div>
