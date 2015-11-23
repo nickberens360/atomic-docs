@@ -1,1 +1,2 @@
 <span id="red" class="compTitle">red</span><div class="component"><?php include("../components/organisms/red.php");?></div>
+<span id="blue" class="compTitle">blue</span><div class="component"><?php include("../components/organisms/blue.php");?></div>
