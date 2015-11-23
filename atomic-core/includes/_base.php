@@ -1,0 +1,1 @@
+<span id="buttons" class="compTitle">buttons</span><div class="component"><?php include("../components/base/buttons.php");?></div>

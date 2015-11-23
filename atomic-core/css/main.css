@@ -1014,24 +1014,27 @@ pre[class*="language-"] {
 /* line 68, organisms/_atomic-nav.scss */
 .ad_fileSection {
   padding-left: 0;
-  margin-bottom: 15px;
 }
-/* line 71, organisms/_atomic-nav.scss */
+/* line 70, organisms/_atomic-nav.scss */
 .ad_fileSection li {
   list-style: none;
 }
-/* line 75, organisms/_atomic-nav.scss */
+/* line 72, organisms/_atomic-nav.scss */
+.ad_fileSection li:last-child {
+  margin-bottom: 15px;
+}
+/* line 77, organisms/_atomic-nav.scss */
 .ad_fileSection a:hover {
   text-decoration: none;
 }
 
-/* line 80, organisms/_atomic-nav.scss */
+/* line 82, organisms/_atomic-nav.scss */
 .border-top {
   border-top: 1px solid #424242;
 }
 
 /****************************/
-/* line 96, organisms/_atomic-nav.scss */
+/* line 98, organisms/_atomic-nav.scss */
 .atoms-side_hide {
   cursor: pointer;
   display: block;
@@ -1041,7 +1044,7 @@ pre[class*="language-"] {
   font-size: 14px;
 }
 
-/* line 105, organisms/_atomic-nav.scss */
+/* line 107, organisms/_atomic-nav.scss */
 .atoms-side_show {
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -1060,12 +1063,12 @@ pre[class*="language-"] {
   opacity: .4;
 }
 
-/* line 120, organisms/_atomic-nav.scss */
+/* line 122, organisms/_atomic-nav.scss */
 .atoms-side_show:hover {
   opacity: 1;
 }
 
-/* line 123, organisms/_atomic-nav.scss */
+/* line 125, organisms/_atomic-nav.scss */
 .toggle-line {
   border: 1px solid #fff;
   display: block;
@@ -1076,7 +1079,7 @@ pre[class*="language-"] {
   left: -1px;
 }
 
-/* line 135, organisms/_atomic-nav.scss */
+/* line 137, organisms/_atomic-nav.scss */
 .catAdd a {
   padding: 10px 38px;
   display: block;

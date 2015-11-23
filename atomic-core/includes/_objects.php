@@ -1,0 +1,1 @@
+<span id="media" class="compTitle">media</span><div class="component"><?php include("../components/objects/media.php");?></div>

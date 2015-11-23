@@ -67,9 +67,11 @@
 
 .ad_fileSection{
 	padding-left:0;
-  margin-bottom: 15px;
 	li{
 		list-style:none;
+		&:last-child{
+			margin-bottom: 15px;
+		}
 	}
 	
 	a:hover{
