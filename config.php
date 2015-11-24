@@ -1,4 +1,5 @@
-<?php 
-define( "ROOT_PATH", dirname( __FILE__ ) . DIRECTORY_SEPARATOR );
+
+<?php
+$dir = dirname(__FILE__);
 
 ?>

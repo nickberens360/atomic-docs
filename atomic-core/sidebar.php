@@ -10,10 +10,17 @@
 
 	$current_page = basename($_SERVER['PHP_SELF']);
 
-
+  
+   require '../config.php';
+   
+   echo "<p>Full path to this dir: " . $dir . "</p>";
+   //echo "<p>Full path to a .htpasswd file in this dir: " . $dir . "/.htpasswd" . "</p>";
+   
 ?>
 
-  
+    
+
+
 
 
 
