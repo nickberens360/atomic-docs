@@ -1,0 +1,1 @@
+<span id="box" class="compTitle">box</span><div class="component"><?php include("../components/modules/box.php");?></div>
