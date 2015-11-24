@@ -1,1 +1,0 @@
-<!--components/templates/blog-single.php-->

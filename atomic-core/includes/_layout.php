@@ -1,1 +1,0 @@
-<span id="grid" class="compTitle">grid</span><div class="component"><?php include("../components/layout/grid.php");?></div>
