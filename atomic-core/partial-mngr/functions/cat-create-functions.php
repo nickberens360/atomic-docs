@@ -147,7 +147,7 @@ function createAjaxIncludeAndFile($dirName)
 	
 	$includeString = 
 '<div id="form-create-file" class="ad_fileFormGroup">
-    <form id="form-create-file" class="ad_fileForm " action="/atomic-docs/atomic-core/'.$dirName.'.php" method="post">
+    <form id="form-create-file" class="ad_fileForm " action="/atomic-core/'.$dirName.'.php" method="post">
       <div class="inputBtnGroup">
         <label class="ad_label">What\'s your component\'s name?</label>
         <button class="ad_btn ad_btn-pos" type="submit" >Add</button>

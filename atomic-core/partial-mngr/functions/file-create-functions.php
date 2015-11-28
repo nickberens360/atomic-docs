@@ -66,7 +66,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
 	
 	$includeString = 
 '<div class="ad_fileFormGroup">
-	<form id="form-rename-file"  class="ad_fileForm " action="/atomic-docs/atomic-core/partial-mngr/file-rename.php" method="post">
+	<form id="form-rename-file"  class="ad_fileForm " action="/atomic-core/partial-mngr/file-rename.php" method="post">
       <div class="formInputGroup">
         <div class="inputBtnGroup">
           <label class="ad_label">Rename <span class="ad_label__file">'.$fileName.'</span> component file</label>
@@ -79,7 +79,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
       <input type="hidden" name="oldName" value="'.$fileName.'"/>
     </form>
 
-	<form id="form-file-move" class="ad_fileForm " action="/atomic-docs/atomic-core/partial-mngr/file-move.php" method="post">
+	<form id="form-file-move" class="ad_fileForm " action="/atomic-core/partial-mngr/file-move.php" method="post">
       <div class="formGroup">
         <div class="formInputGroup">
           <div class="inputBtnGroup">
@@ -121,7 +121,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
     </form>
 
 
-    <form id="form-delete-file" class="ad_fileForm " action="/atomic-docs/atomic-core/partial-mngr/delete.php" method="post">
+    <form id="form-delete-file" class="ad_fileForm " action="/atomic-core/partial-mngr/delete.php" method="post">
       <div class="formInputGroup">
         <div class="inputBtnGroup">
           <label class="ad_label">Type <span class="ad_label__file">'.$fileName.'</span> to delete the component files</label>
