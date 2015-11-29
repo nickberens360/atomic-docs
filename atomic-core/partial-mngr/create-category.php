@@ -41,23 +41,23 @@ $data           = array();      // array to pass back data
         
         // DO ALL YOUR FORM PROCESSING HERE
   
-        /*createAtomicCategoryDir($dirName );
+        createAtomicCategoryDir($dirName );
 
         createSidebarIncludeAndFile($dirName );
 
         writeNavItem($dirName);
 
-        createAjaxIncludeAndFile($dirName);*/
+        createAjaxIncludeAndFile($dirName);
 
         createPageIncludeFile($dirName );
            
-        //createPageTemplate($dirName );
+        createPageTemplate($dirName );
    
-        /*createCompCatDir($dirName );
+        createCompCatDir($dirName );
         
         createScssCatDirAndFile($dirName );
 
-        createStringForMainScssFile($dirName );*/
+        createStringForMainScssFile($dirName );
 
         
         

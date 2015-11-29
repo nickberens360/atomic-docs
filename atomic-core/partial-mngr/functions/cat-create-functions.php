@@ -4,10 +4,10 @@
 
 
 
-/*function createPageIncludeFile($dirName)
+function createPageIncludeFile($dirName)
 {
-	fopen("../includes/_$dirName.php", 'x+') or die("can't open file");
-}*/
+	fopen("../categories/$dirName/$dirName.php", 'x+') or die("can't open file");
+}
 
 
 
@@ -68,7 +68,7 @@ function createPageTemplate($dirName)
 					<h1 id="'.$dirName.'" class="atomic-h1">'.$dirName.'</h1>
 	
 	
-							<?php include ("includes/_'.$dirName.'.php");?>
+							<?php include ("categories/'.$dirName.'/'.$dirName.'.php");?>
               
 	
 	
