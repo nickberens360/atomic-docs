@@ -106,7 +106,7 @@ function createSidebarIncludeAndFile($dirName)
 		</div>
 		<ul class="ad_fileSection">
       <li class="ad_addFileItem">
-        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="/atomic-core/categories/'.$dirName.'/form-'.$dirName.'.php"><span class="fa fa-plus"></span> Add Component</a>
+        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/categories/'.$dirName.'/form-'.$dirName.'.php"><span class="fa fa-plus"></span> Add Component</a>
       </li>
 			<?php
 				$orig = "../components/'.$dirName.'";
@@ -122,7 +122,7 @@ function createSidebarIncludeAndFile($dirName)
 				$ok = "false";	
 				}
 				if ($ok == "true"){
-				echo "<li class=\'ad_fileSection__file\'><a class=\'ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o\' href=\'atomic-core/categories/'.$dirName.'/_ajaxComp-$filename.php\'></a><a href=\'#$filename\'>$filename</a></li>";
+				echo "<li class=\'ad_fileSection__file\'><a class=\'ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o\' href=\'atomic-core/categories/'.$dirName.'/form-$filename.php\'></a><a href=\'#$filename\'>$filename</a></li>";
 				}
 				}
 				closedir($dir);

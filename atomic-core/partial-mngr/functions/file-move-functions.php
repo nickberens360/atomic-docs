@@ -15,7 +15,7 @@ function moveCompFile($catName, $fileName, $newDir)
 
 function moveAjaxFile($catName, $fileName, $newDir)
 {	
-    rename ("../categories/$catName/_ajaxComp-$fileName.php", "../categories/$newDir/_ajaxComp-$fileName.php");
+    rename ("../categories/$catName/form-$fileName.php", "../categories/$newDir/form-$fileName.php");
 }
 
 

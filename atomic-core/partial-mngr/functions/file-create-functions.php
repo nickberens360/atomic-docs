@@ -50,10 +50,10 @@ function createIncludeString($catName, $fileName)
 	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.php'.'");?></div>';
 	$includeString = "\n$includeString\n";
 	
-	$fileHandle = fopen('../includes/_'.$catName.'.php', 'a') or die("can't open file");
+	$fileHandle = fopen('../categories/'.$catName.'/'.$catName.'.php', 'a') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	file_put_contents('../includes/_'.$catName.'.php', implode(PHP_EOL, file('../includes/_'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	file_put_contents('../categories/'.$catName.'/'.$catName.'.php', implode(PHP_EOL, file('../categories/'.$catName.'/'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
 }
 
@@ -137,10 +137,10 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
 
 	$includeString = "\n$includeString\n";
 	
-	$fileHandle = fopen('../categories/'.$catName.'/_ajaxComp-'.$fileName.'.php', 'x+') or die("can't open file");
+	$fileHandle = fopen('../categories/'.$catName.'/form-'.$fileName.'.php', 'x+') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	file_put_contents('../categories/'.$catName.'/_ajaxComp-'.$fileName.'.php', implode(PHP_EOL, file('../categories/'.$catName.'/_ajaxComp-'.$fileName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	file_put_contents('../categories/'.$catName.'/form-'.$fileName.'.php', implode(PHP_EOL, file('../categories/'.$catName.'/form-'.$fileName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
 }
 

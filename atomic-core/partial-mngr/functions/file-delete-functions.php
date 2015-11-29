@@ -26,10 +26,10 @@ function deleteCompIncludetString($catName, $fileName)
 	//create @import string
 	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.php");?></div>';
 	//Place contents of file into variable
-	$contents = file_get_contents('../includes/_'.$catName.'.php');
+	$contents = file_get_contents('../categories/'.$catName.'/'.$catName.'.php');
 	
 	$contents = str_replace($includeString, "", $contents);
-	$contents = file_put_contents('../includes/_'.$catName.'.php', $contents);
+	$contents = file_put_contents('../categories/'.$catName.'/'.$catName.'.php', $contents);
 }
 
 
@@ -42,7 +42,7 @@ function deleteCompFile($catName, $fileName)
 
 function deleteAjaxCompFile($catName, $fileName)
 {
-	unlink('../categories/'.$catName.'/_ajaxComp-'.$fileName.'.php');
+	unlink('../categories/'.$catName.'/form-'.$fileName.'.php');
 }
 
 ?>

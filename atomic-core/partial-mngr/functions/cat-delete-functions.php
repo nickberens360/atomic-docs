@@ -8,10 +8,43 @@ function deleteCatPageFile($catName)
 	unlink('../'.$catName.'.php');
 }
 
-function deleteCatSidebarIncludeFile($catName)
+function deleteAtomicCatDir($catName) { 
+		
+   $catName = '../categories/'.$catName;
+	
+   if (is_dir($catName)) { 
+     $objects = scandir($catName); 
+     foreach ($objects as $object) { 
+       if ($object != "." && $object != "..") { 
+         if (filetype($catName."/".$object) == "dir") deleteCompDir($catName."/".$object); else unlink($catName."/".$object); 
+       } 
+     } 
+     reset($objects); 
+     rmdir($catName); 
+   } 
+} 
+
+function deleteAtomicNavIncludeString($dirName)
+{
+	
+   $includeString = "<?php include ('$dirName/navItem-$dirName.php');?>";		
+
+
+	//Place contents of file into variable
+	$contents = file_get_contents('../categories/atomic-nav.php');
+	
+	$contents = str_replace($includeString, "", $contents);
+	$contents = file_put_contents('../categories/atomic-nav.php', $contents);
+
+	file_put_contents('../categories/atomic-nav.php', implode(PHP_EOL, file('../categories/atomic-nav.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES))); 
+}
+
+
+/*function deleteCatSidebarIncludeFile($catName)
 {
 	unlink('../includes/_'.$catName.'.php');
-}
+}*/
+
 
 function deleteCompDir($catName) { 
 		
@@ -29,49 +62,14 @@ function deleteCompDir($catName) {
    } 
 } 
 
-function deleteSidebarIncludeString($catName)
-{
-	
-$includeString = 
-'<li class="ad_dir <?php if ($current_page == "'.$catName.'.php"){ echo "active "; }?>">
-		<div class="ad_dir__dirNameGroup">
-			<i class="ad_dir__dirNameGroup__icon  fa fa-folder-o"></i>
-			<a class="ad_dir__dirNameGroup__name" href="atomic-core/'.$catName.'.php">'.$catName.'</a>
-		</div>
-		<ul class="ad_fileSection">
-      <li class="ad_addFileItem">
-        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/categories/'.$catName.'/_ajax-'.$catName.'.php"><span class="fa fa-plus"></span> Add Component</a>
-      </li>
-			<?php
-				$orig = "../components/'.$catName.'";
-				if ($dir = opendir($orig)) {
-				while ($file = readdir($dir)) {
-				$ok = "true";	
-				$filename = $file;
-				$filename = basename($filename, ".php");
-				if ($file == "."){
-				$ok = "false";
-				}
-				else if ($file == ".."){
-				$ok = "false";	
-				}
-				if ($ok == "true"){
-				echo "<li class=\'ad_fileSection__file\'><a class=\'ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o\' href=\'atomic-core/categories/'.$catName.'/_ajaxComp-$filename.php\'></a><a href=\'#$filename\'>$filename</a></li>";
-				}
-				}
-				closedir($dir);
-				}
-			?>
-		</ul>
-</li>'		
-;
 
-	//Place contents of file into variable
-	$contents = file_get_contents('../includes/_sidebar.php');
-	
-	$contents = str_replace($includeString, "", $contents);
-	$contents = file_put_contents('../includes/_sidebar.php', $contents);
-}
+
+
+
+
+
+
+
 
 function deleteCatScssImportString($catName)
 {
@@ -120,21 +118,7 @@ function deleteScssDir($catName) {
 
 
 
-function deleteAjaxDir($catName) { 
-		
-   $catName = '../categories/'.$catName;
-	
-   if (is_dir($catName)) { 
-     $objects = scandir($catName); 
-     foreach ($objects as $object) { 
-       if ($object != "." && $object != "..") { 
-         if (filetype($catName."/".$object) == "dir") deleteCompDir($catName."/".$object); else unlink($catName."/".$object); 
-       } 
-     } 
-     reset($objects); 
-     rmdir($catName); 
-   } 
-} 
+
 
 
 
