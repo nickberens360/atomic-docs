@@ -4,10 +4,10 @@
 
 
 
-function createPageIncludeFile($dirName)
+/*function createPageIncludeFile($dirName)
 {
 	fopen("../includes/_$dirName.php", 'x+') or die("can't open file");
-}
+}*/
 
 
 
@@ -33,7 +33,10 @@ function createStringForMainScssFile($dirName)
 
 
 
-
+function createAtomicCategoryDir($dirName )
+{
+    mkdir("../categories/$dirName");
+}
 
 
 function createCompCatDir($dirName)
@@ -103,7 +106,7 @@ function createSidebarIncludeAndFile($dirName)
 		</div>
 		<ul class="ad_fileSection">
       <li class="ad_addFileItem">
-        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/'.$dirName.'/_ajax-'.$dirName.'.php"><span class="fa fa-plus"></span> Add Component</a>
+        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="/atomic-core/categories/'.$dirName.'/form-'.$dirName.'.php"><span class="fa fa-plus"></span> Add Component</a>
       </li>
 			<?php
 				$orig = "../components/'.$dirName.'";
@@ -119,7 +122,7 @@ function createSidebarIncludeAndFile($dirName)
 				$ok = "false";	
 				}
 				if ($ok == "true"){
-				echo "<li class=\'ad_fileSection__file\'><a class=\'ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o\' href=\'atomic-core/actions/'.$dirName.'/_ajaxComp-$filename.php\'></a><a href=\'#$filename\'>$filename</a></li>";
+				echo "<li class=\'ad_fileSection__file\'><a class=\'ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o\' href=\'atomic-core/categories/'.$dirName.'/_ajaxComp-$filename.php\'></a><a href=\'#$filename\'>$filename</a></li>";
 				}
 				}
 				closedir($dir);
@@ -130,14 +133,36 @@ function createSidebarIncludeAndFile($dirName)
 ;
 
 	$includeString = "\n$includeString\n";
+
 	
-	$fileHandle = fopen('../includes/_sidebar.php', 'a') or die("can't open file");
+	$fileHandle = fopen('../categories/'.$dirName.'/navItem-'.$dirName.'.php', 'a') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	file_put_contents('../includes/_sidebar.php', implode(PHP_EOL, file('../includes/_sidebar.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	/*file_put_contents('../includes/_sidebar.php', implode(PHP_EOL, file('../includes/_sidebar.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));*/
   
 	
 }
+
+
+
+function writeNavItem($dirName)
+{
+	
+	//create @import string
+	$importString = "<?php include ('$dirName/navItem-$dirName.php');?>";
+	$importString = "\n$importString\n";
+	
+	//open parent scss file and write @import string to it
+	$fileHandle = fopen('../categories/atomic-nav.php', 'a') or die("can't open file");
+	fwrite($fileHandle, $importString);
+    fclose($fileHandle);   
+	
+	//remove any extra line breaks from file
+	file_put_contents('../categories/atomic-nav.php', implode(PHP_EOL, file('../categories/atomic-nav.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
+}
+
+
+
 
 
 
@@ -161,13 +186,12 @@ function createAjaxIncludeAndFile($dirName)
 
 	$includeString = "\n$includeString\n";
   
-  
-  mkdir("../actions/$dirName");
+  	
 	
-	$fileHandle = fopen('../actions/'.$dirName.'/_ajax-'.$dirName.'.php', 'x+') or die("can't open file");
+	$fileHandle = fopen('../categories/'.$dirName.'/form-'.$dirName.'.php', 'x+') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	file_put_contents('../actions/'.$dirName.'/_ajax-'.$dirName.'.php', implode(PHP_EOL, file('../actions/'.$dirName.'/_ajax-'.$dirName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	file_put_contents('../categories/'.$dirName.'/form-'.$dirName.'.php', implode(PHP_EOL, file('../categories/'.$dirName.'/form-'.$dirName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
 }
 

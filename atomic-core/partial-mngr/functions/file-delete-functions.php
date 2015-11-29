@@ -42,7 +42,7 @@ function deleteCompFile($catName, $fileName)
 
 function deleteAjaxCompFile($catName, $fileName)
 {
-	unlink('../actions/'.$catName.'/_ajaxComp-'.$fileName.'.php');
+	unlink('../categories/'.$catName.'/_ajaxComp-'.$fileName.'.php');
 }
 
 ?>

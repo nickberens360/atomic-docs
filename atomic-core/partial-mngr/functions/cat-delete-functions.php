@@ -40,7 +40,7 @@ $includeString =
 		</div>
 		<ul class="ad_fileSection">
       <li class="ad_addFileItem">
-        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/actions/'.$catName.'/_ajax-'.$catName.'.php"><span class="fa fa-plus"></span> Add Component</a>
+        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/categories/'.$catName.'/_ajax-'.$catName.'.php"><span class="fa fa-plus"></span> Add Component</a>
       </li>
 			<?php
 				$orig = "../components/'.$catName.'";
@@ -56,7 +56,7 @@ $includeString =
 				$ok = "false";	
 				}
 				if ($ok == "true"){
-				echo "<li class=\'ad_fileSection__file\'><a class=\'ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o\' href=\'atomic-core/actions/'.$catName.'/_ajaxComp-$filename.php\'></a><a href=\'#$filename\'>$filename</a></li>";
+				echo "<li class=\'ad_fileSection__file\'><a class=\'ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o\' href=\'atomic-core/categories/'.$catName.'/_ajaxComp-$filename.php\'></a><a href=\'#$filename\'>$filename</a></li>";
 				}
 				}
 				closedir($dir);
@@ -122,7 +122,7 @@ function deleteScssDir($catName) {
 
 function deleteAjaxDir($catName) { 
 		
-   $catName = '../actions/'.$catName;
+   $catName = '../categories/'.$catName;
 	
    if (is_dir($catName)) { 
      $objects = scandir($catName); 

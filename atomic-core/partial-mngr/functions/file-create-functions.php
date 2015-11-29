@@ -137,10 +137,10 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
 
 	$includeString = "\n$includeString\n";
 	
-	$fileHandle = fopen('../actions/'.$catName.'/_ajaxComp-'.$fileName.'.php', 'x+') or die("can't open file");
+	$fileHandle = fopen('../categories/'.$catName.'/_ajaxComp-'.$fileName.'.php', 'x+') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	file_put_contents('../actions/'.$catName.'/_ajaxComp-'.$fileName.'.php', implode(PHP_EOL, file('../actions/'.$catName.'/_ajaxComp-'.$fileName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	file_put_contents('../categories/'.$catName.'/_ajaxComp-'.$fileName.'.php', implode(PHP_EOL, file('../categories/'.$catName.'/_ajaxComp-'.$fileName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 	
 }
 
