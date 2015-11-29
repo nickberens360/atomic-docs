@@ -33,14 +33,24 @@ $data           = array();      // array to pass back data
     } else {
         
         // DO ALL YOUR FORM PROCESSING HERE
+
+
+
+
    
-        deleteSidebarIncludeString($dirName);
+        deleteAtomicNavIncludeString($dirName);
         deleteCatPageFile($dirName);
-        deleteCatSidebarIncludeFile($dirName);
+        deleteAtomicCatDir($dirName);
+
         deleteCompDir($dirName);
         deleteCatScssImportString($dirName);
         deleteScssDir($dirName);
-        deleteAjaxDir($dirName);
+        
+
+
+
+
+
         
         // show a message of success and provide a true success variable
         $data['success'] = true;

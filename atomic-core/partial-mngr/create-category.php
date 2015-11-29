@@ -41,7 +41,17 @@ $data           = array();      // array to pass back data
         
         // DO ALL YOUR FORM PROCESSING HERE
   
+        createAtomicCategoryDir($dirName );
 
+        createSidebarIncludeAndFile($dirName );
+
+        writeNavItem($dirName);
+
+        createAjaxIncludeAndFile($dirName);
+
+        createPageIncludeFile($dirName );
+           
+        createPageTemplate($dirName );
    
         createCompCatDir($dirName );
         
@@ -49,13 +59,11 @@ $data           = array();      // array to pass back data
 
         createStringForMainScssFile($dirName );
 
-        createPageIncludeFile($dirName );
-           
-        createPageTemplate($dirName );
         
-        createSidebarIncludeAndFile($dirName );
+        
+        
                
-        createAjaxIncludeAndFile($dirName);
+    
         
         
         
