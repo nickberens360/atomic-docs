@@ -1,1 +1,0 @@
-<!--components/black/tester.php-->

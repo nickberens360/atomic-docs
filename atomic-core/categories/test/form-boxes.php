@@ -7,7 +7,7 @@
           <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="renameFileName" required></div>
         </div>  
       </div>
-      <input type="hidden" name="compDir" value="black"/>
+      <input type="hidden" name="compDir" value="test"/>
       <input type="hidden" name="rename" value="rename"/>
       <input type="hidden" name="oldName" value="boxes"/>
     </form>
@@ -39,7 +39,7 @@
           </div>  
         </div>
       </div>
-      <input type="hidden" name="compDir" value="black"/>
+      <input type="hidden" name="compDir" value="test"/>
       <input type="hidden" name="fileMoveName" value="boxes"/>
       <input type="hidden" name="moveFile" value="moveFile"/>
     </form>
@@ -51,7 +51,7 @@
           <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="deleteFileName" placeholder="Must type component name"></div>
         </div>  
       </div>
-      <input type="hidden" name="compDir" value="black"/>
+      <input type="hidden" name="compDir" value="test"/>
       <input type="hidden" name="delete" value="delete"/>
     </form>
 </div>
