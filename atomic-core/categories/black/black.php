@@ -1,1 +1,0 @@
-<span id="blue" class="compTitle">blue</span><div class="component"><?php include("../components/black/blue.php");?></div>

@@ -1,0 +1,1 @@
+<!--components/base/colors.php-->
