@@ -80,7 +80,7 @@ $('.ad_actionBtn').click(function(event) {
             // process the form
             $.ajax({
               type 		: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url 		: '/atomic-docs/atomic-core/partial-mngr/create-category.php', // the url where we want to POST
+              url 		: 'atomic-core/partial-mngr/create-category.php', // the url where we want to POST
               data 		: formData, // our data object
               dataType 	: 'json', // what type of data do we expect back from the server
               encode 		: true
@@ -149,7 +149,7 @@ $('.ad_actionBtn').click(function(event) {
             // process the form
             $.ajax({
               type 		: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url 		: '/atomic-docs/atomic-core/partial-mngr/delete-category.php', // the url where we want to POST
+              url 		: 'atomic-core/partial-mngr/delete-category.php', // the url where we want to POST
               data 		: formData, // our data object
               dataType 	: 'json', // what type of data do we expect back from the server
               encode 		: true
@@ -180,7 +180,7 @@ $('.ad_actionBtn').click(function(event) {
                   
                 } else {
                   //redirect here
-                   window.location = '/atomic-docs/atomic-core/index.php';
+                   window.location = 'atomic-core/index.php';
                   // usually after form submission, you'll want to redirect
                 }
               })
@@ -212,7 +212,7 @@ $('.ad_actionBtn').click(function(event) {
             // process the form
             $.ajax({
               type    : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url     : '/atomic-docs/atomic-core/partial-mngr/create.php', // the url where we want to POST
+              url     : 'atomic-core/partial-mngr/create.php', // the url where we want to POST
               data    : formData, // our data object
               dataType  : 'json', // what type of data do we expect back from the server
               encode    : true
@@ -242,7 +242,7 @@ $('.ad_actionBtn').click(function(event) {
                 } else {
                   
                   //redirect here
-                   window.location = '/atomic-docs/atomic-core/'+reDirect+'.php';
+                   window.location = 'atomic-core/'+reDirect+'.php';
                   // usually after form submission, you'll want to redirect
                 }
               })
@@ -278,7 +278,7 @@ $('.ad_actionBtn').click(function(event) {
             // process the form
             $.ajax({
               type    : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url     : '/atomic-docs/atomic-core/partial-mngr/file-rename.php', // the url where we want to POST
+              url     : 'atomic-core/partial-mngr/file-rename.php', // the url where we want to POST
               data    : formData, // our data object
               dataType  : 'json', // what type of data do we expect back from the server
               encode    : true
@@ -308,7 +308,7 @@ $('.ad_actionBtn').click(function(event) {
                 } else {
                   
                   //redirect here
-                   window.location = '/atomic-docs/atomic-core/'+reDirect+'.php';
+                   window.location = 'atomic-core/'+reDirect+'.php';
                   // usually after form submission, you'll want to redirect
                 }
               })
@@ -357,7 +357,7 @@ $('.ad_actionBtn').click(function(event) {
             // process the form
             $.ajax({
               type    : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url     : '/atomic-docs/atomic-core/partial-mngr/file-move.php', // the url where we want to POST
+              url     : 'atomic-core/partial-mngr/file-move.php', // the url where we want to POST
               data    : formData, // our data object
               dataType  : 'json', // what type of data do we expect back from the server
               encode    : true
@@ -387,7 +387,7 @@ $('.ad_actionBtn').click(function(event) {
 
                 
                   //redirect here
-                  window.location = '/atomic-docs/atomic-core/'+reDirect+'.php';
+                  window.location = 'atomic-core/'+reDirect+'.php';
                   // usually after form submission, you'll want to redirect
                 }
               })
@@ -416,7 +416,7 @@ $('.ad_actionBtn').click(function(event) {
             // process the form
             $.ajax({
               type    : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url     : '/atomic-docs/atomic-core/partial-mngr/delete.php', // the url where we want to POST
+              url     : 'atomic-core/partial-mngr/delete.php', // the url where we want to POST
               data    : formData, // our data object
               dataType  : 'json', // what type of data do we expect back from the server
               encode    : true
@@ -446,7 +446,7 @@ $('.ad_actionBtn').click(function(event) {
 
                   //alert(reDirect);
                   //redirect here
-                  window.location = '/atomic-docs/atomic-core/'+reDirect+'.php';
+                  window.location = 'atomic-core/'+reDirect+'.php';
                   // usually after form submission, you'll want to redirect
                 }
               })
