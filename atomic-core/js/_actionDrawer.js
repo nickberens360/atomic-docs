@@ -110,7 +110,7 @@ $('.ad_actionBtn').click(function(event) {
                 } else {
                   
                   //redirect here
-                   window.location = '/atomic-docs/atomic-core/'+reDirect+'.php';
+                   window.location = 'atomic-core/'+reDirect+'.php';
                   // usually after form submission, you'll want to redirect
                 }
               })
