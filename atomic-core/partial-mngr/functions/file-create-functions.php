@@ -1,8 +1,12 @@
 <?php
+
 function createScssFile($catName, $fileName)
 {
-	
-  $fileHandle = fopen('../../scss/'.$catName.'/'.'_'.$fileName.'.scss', 'x+') or die("can't open file");
+  $config = getConfig();
+  $cssDir = $config['cssDir'];
+  $cssExt = $config['cssExt'];
+  
+  $fileHandle = fopen('../../'.$cssDir.'/'.$catName.'/'.'_'.$fileName.'.'.$cssExt.'', 'x+') or die("can't open file");
 	fwrite($fileHandle, ".".$fileName."{\n\n}");
 	fclose($fileHandle);
 }
@@ -10,18 +14,21 @@ function createScssFile($catName, $fileName)
 
 function writeScssImportFile($catName, $fileName)
 {
-	
+	$config = getConfig();
+  $cssDir = $config['cssDir'];
+  $cssExt = $config['cssExt'];
+  
 	//create @import string
 	$importString = "@import " . '"' . $fileName . '";' ;
 	$importString = "\n$importString\n";
 	
 	//open parent scss file and write @import string to it
-	$fileHandle = fopen('../../scss/'.$catName.'/'.'_'.$catName.'.scss', 'a') or die("can't open file");
+	$fileHandle = fopen('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', 'a') or die("can't open file");
 	fwrite($fileHandle, $importString);
   fclose($fileHandle);   
 	
 	//remove any extra line breaks from file
-	file_put_contents('../../scss/'.$catName.'/'.'_'.$catName.'.scss', implode(PHP_EOL, file('../../scss/'.$catName.'/'.'_'.$catName.'.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
+	file_put_contents('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', implode(PHP_EOL, file('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
 }
 
 
@@ -30,14 +37,18 @@ function writeScssImportFile($catName, $fileName)
 function createCompFile($catName, $fileName)
 {
   
-  $commentString = '<!--components/'.$catName.'/'.$fileName.'.php-->';
+  $config = getConfig();
+  $compExt = $config['compExt'];
+  
+  
+  $commentString = '<!--components/'.$catName.'/'.$fileName.'.'.$compExt.'-->';
 	$commentString = "\n$commentString\n";
 	
-  $fileHandle = fopen('../../components/'.$catName.'/'.$fileName.'.php', 'x+') or die("can't open file");
+  $fileHandle = fopen('../../components/'.$catName.'/'.$fileName.'.'.$compExt.'', 'x+') or die("can't open file");
 	fwrite($fileHandle, $commentString);
   fclose($fileHandle);
   
-  file_put_contents('../../components/'.$catName.'/'.$fileName.'.php', implode(PHP_EOL, file('../../components/'.$catName.'/'.$fileName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+  file_put_contents('../../components/'.$catName.'/'.$fileName.'.'.$compExt.'', implode(PHP_EOL, file('../../components/'.$catName.'/'.$fileName.'.'.$compExt.'', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 }
 
 
@@ -45,9 +56,11 @@ function createCompFile($catName, $fileName)
 //creates include string and writes to component parent file
 function createIncludeString($catName, $fileName)
 {
+  
+  $config = getConfig();
+  $compExt = $config['compExt'];
 
-
-	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.php'.'");?></div>';
+	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.'.$compExt.''.'");?></div>';
 	$includeString = "\n$includeString\n";
 	
 	$fileHandle = fopen('../categories/'.$catName.'/'.$catName.'.php', 'a') or die("can't open file");

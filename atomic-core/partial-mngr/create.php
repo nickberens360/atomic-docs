@@ -1,12 +1,11 @@
 <?php
-require '../../config.php';
 require 'functions/functions.php';
 
 
 $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
 
-// validate the variables ======================================================
+     // validate the variables ======================================================
     // if any of these variables don't exist, add an error to our $errors array
     
 
@@ -44,13 +43,13 @@ $data           = array();      // array to pass back data
 
         createScssFile($compDir, $fileCreateName );
 
-		writeScssImportFile($compDir, $fileCreateName );
-
-		createCompFile($compDir, $fileCreateName );
-
-		createIncludeString($compDir, $fileCreateName );
-
-		createAjaxIncludeAndCompFile($compDir, $fileCreateName);
+        writeScssImportFile($compDir, $fileCreateName );
+    
+        createCompFile($compDir, $fileCreateName );
+    
+        createIncludeString($compDir, $fileCreateName );
+    
+        createAjaxIncludeAndCompFile($compDir, $fileCreateName);
         
         
         
