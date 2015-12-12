@@ -1,1 +1,0 @@
-<!--components/base/buttons.php-->

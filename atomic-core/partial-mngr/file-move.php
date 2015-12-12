@@ -2,6 +2,8 @@
 require '../../config.php';
 require 'functions/functions.php';
 
+$config = getConfig();
+$compExt = $config['compExt'];
 
 $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
@@ -15,7 +17,7 @@ $data           = array();      // array to pass back data
     $compDir = test_input($_POST["compDir"]);
     $newDir = test_input($_POST["newDir"]);
     
-    $fileExists = '../../components/'.$newDir.'/'.$fileMoveName.'.php';
+    $fileExists = '../../components/'.$newDir.'/'.$fileMoveName.'.'.$compExt.'';
     
     if (file_exists($fileExists) && $fileMoveName != ""){
         $errors['exists'] = 'A file named '.$fileMoveName .' already exists in that destination.';

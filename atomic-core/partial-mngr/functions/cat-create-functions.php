@@ -97,6 +97,8 @@ function createPageTemplate($dirName)
 
 function createSidebarIncludeAndFile($dirName)
 {
+	$config = getConfig();
+    $compExt = $config['compExt'];
 	
 	$includeString = 
 '<li class="ad_dir <?php if ($current_page == "'.$dirName.'.php"){ echo "active "; }?>">
@@ -114,7 +116,7 @@ function createSidebarIncludeAndFile($dirName)
 				while ($file = readdir($dir)) {
 				$ok = "true";	
 				$filename = $file;
-				$filename = basename($filename, ".php");
+				$filename = basename($filename, ".'.$compExt.'");
 				if ($file == "."){
 				$ok = "false";
 				}
@@ -122,6 +124,9 @@ function createSidebarIncludeAndFile($dirName)
 				$ok = "false";	
 				}
 				if ($ok == "true"){
+					
+				$filename = str_replace(".'.$compExt.'", "", $filename );
+
 				echo "<li class=\'ad_fileSection__file\'><a class=\'ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o\' href=\'atomic-core/categories/'.$dirName.'/form-$filename.php\'></a><a href=\'#$filename\'>$filename</a></li>";
 				}
 				}

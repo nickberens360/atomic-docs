@@ -342,6 +342,12 @@ $('.ad_actionBtn').click(function(event) {
           dirVal = $('#form-file-move input[name=compDir]').val();
 
           $("#newDir option[value="+dirVal+"]").remove();
+          
+          dirCount = $('#newDir option').size();
+          
+          if(dirCount < 1){
+             $('#form-file-move').remove();
+          }
 
 
           $('#form-file-move').submit(function(event) {

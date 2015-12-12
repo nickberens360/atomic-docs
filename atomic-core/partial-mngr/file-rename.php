@@ -1,7 +1,9 @@
 <?php
-require '../../config.php';
+
 require 'functions/functions.php';
 
+$config = getConfig();
+$compExt = $config['compExt'];
 
 $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
@@ -15,7 +17,7 @@ $data           = array();      // array to pass back data
     $catName = test_input($_POST["compDir"]);
     $oldName = test_input($_POST["oldName"]);
     
-    $fileExists = '../../components/'.$catName.'/'.$renameFileName.'.php';
+    $fileExists = '../../components/'.$catName.'/'.$renameFileName.'.'.$compExt.'';
     
     if (file_exists($fileExists) && $renameFileName != ""){
         $errors['exists'] = 'Please enter a unique file name.';
