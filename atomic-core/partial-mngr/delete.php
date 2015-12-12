@@ -2,6 +2,8 @@
 require '../../config.php';
 require 'functions/functions.php';
 
+$config = getConfig();
+$compExt = $config['compExt'];
 
 $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
@@ -10,12 +12,13 @@ $data           = array();      // array to pass back data
     // if any of these variables don't exist, add an error to our $errors array
     
 
+
     
     $compDir = test_input($_POST["compDir"]);
     $deleteFileName = test_input($_POST["deleteFileName"]);
 
     
-    $fileExists = '../../components/'.$compDir.'/'.$deleteFileName.'.php';
+    $fileExists = '../../components/'.$compDir.'/'.$deleteFileName.'.'.$compExt.'';
     
     if (!file_exists($fileExists) && $deleteFileName != ""){
         $errors['exists'] = 'There is no file named '.$deleteFileName.' to delete.';

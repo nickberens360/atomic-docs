@@ -5,26 +5,37 @@
 function deleteScssImportString($catName, $fileName)
 {
 
+  $config = getConfig();
+  $cssDir = $config['cssDir'];
+  $cssExt = $config['cssExt'];
+
 	$importString = "@import " . '"' . $fileName . '";' ;
 	//Place contents of file into variable
-	$contents = file_get_contents('../../scss/'.$catName.'/_'.$catName.'.scss');
+	$contents = file_get_contents('../../'.$cssDir.'/'.$catName.'/_'.$catName.'.'.$cssExt.'');
 	$contents = str_replace($importString, "", $contents);
-	$contents = file_put_contents('../../scss/'.$catName.'/_'.$catName.'.scss', $contents);
+	$contents = file_put_contents('../../'.$cssDir.'/'.$catName.'/_'.$catName.'.'.$cssExt.'', $contents);
 }
 
 
 function deleteScssFile($catName, $fileName)
 {        
-	unlink('../../scss/'.$catName.'/_'.$fileName.'.scss');
+	$config = getConfig();
+	$cssDir = $config['cssDir'];
+    $cssExt = $config['cssExt'];
+
+	unlink('../../'.$cssDir.'/'.$catName.'/_'.$fileName.'.'.$cssExt.'');
 }
 
 
 
 function deleteCompIncludetString($catName, $fileName)
 {
-	
+	$config = getConfig();
+    $compExt = $config['compExt'];
+
 	//create @import string
-	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.php");?></div>';
+	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.'.$compExt.'");?></div>';
+
 	//Place contents of file into variable
 	$contents = file_get_contents('../categories/'.$catName.'/'.$catName.'.php');
 	
@@ -35,7 +46,10 @@ function deleteCompIncludetString($catName, $fileName)
 
 function deleteCompFile($catName, $fileName)
 {
-	unlink('../../components/'.$catName.'/'.$fileName.'.php');
+	$config = getConfig();
+    $compExt = $config['compExt'];
+
+	unlink('../../components/'.$catName.'/'.$fileName.'.'.$compExt.'');
 }
 
 

@@ -1,12 +1,13 @@
 <?php
-require '../../config.php';
 require 'functions/functions.php';
 
+$config = getConfig();
+$compExt = $config['compExt'];
 
 $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
 
-// validate the variables ======================================================
+     // validate the variables ======================================================
     // if any of these variables don't exist, add an error to our $errors array
     
 
@@ -14,7 +15,7 @@ $data           = array();      // array to pass back data
     $compDir = test_input($_POST["compDir"]);
     $fileCreateName = test_input($_POST["fileCreateName"]);
     
-    $fileExists = '../../components/'.$compDir.'/'.$fileCreateName.'.php';
+    $fileExists = '../../components/'.$compDir.'/'.$fileCreateName.'.'.$compExt.'';
     
     if (file_exists($fileExists) && $fileCreateName != ""){
         $errors['exists'] = 'A file named '.$fileCreateName.' already exists.';
@@ -44,13 +45,13 @@ $data           = array();      // array to pass back data
 
         createScssFile($compDir, $fileCreateName );
 
-		writeScssImportFile($compDir, $fileCreateName );
-
-		createCompFile($compDir, $fileCreateName );
-
-		createIncludeString($compDir, $fileCreateName );
-
-		createAjaxIncludeAndCompFile($compDir, $fileCreateName);
+        writeScssImportFile($compDir, $fileCreateName );
+    
+        createCompFile($compDir, $fileCreateName );
+    
+        createIncludeString($compDir, $fileCreateName );
+    
+        createAjaxIncludeAndCompFile($compDir, $fileCreateName);
         
         
         
