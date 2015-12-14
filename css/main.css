@@ -1045,6 +1045,14 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+/* line 10, ../scss/_cleanup.scss */
+.highlightMe {
+  background: #44C4F3;
+  color: #fff;
+  font-size: 14px;
+  padding: 2px 8px;
+}
+
 /* line 1, ../scss/atoms/_headings.scss */
 .h1, h1, h2, .h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 {
   margin-top: 0;
