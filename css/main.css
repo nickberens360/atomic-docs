@@ -1047,8 +1047,8 @@ body {
 
 /* line 10, ../scss/_cleanup.scss */
 .highlightMe {
-  background: #44C4F3;
-  color: #fff;
+  background: #FFFFFF;
+  color: #6C6F6F;
   font-size: 14px;
   padding: 2px 8px;
 }
