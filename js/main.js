@@ -22,14 +22,14 @@ jQuery( document ).ready(function( $ ) {
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 80,
+      "value": 130,
       "density": {
         "enable": true,
         "value_area": 800
       }
     },
     "color": {
-      "value": "#bebebe"
+      "value": "#a3a2a2"
     },
     "shape": {
       "type": "circle",
@@ -69,13 +69,13 @@ particlesJS("particles-js", {
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#bebebe",
+      "color": "#a3a2a2",
       "opacity": 0.4,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 1,
+      "speed": .75,
       "direction": "none",
       "random": false,
       "straight": false,
