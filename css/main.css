@@ -1119,13 +1119,14 @@ body {
 /* line 5, ../scss/modules/_headingList.scss */
 .headingList ul {
   padding-left: 20px;
+  margin-bottom: 0;
 }
-/* line 8, ../scss/modules/_headingList.scss */
+/* line 9, ../scss/modules/_headingList.scss */
 .headingList li {
   margin-bottom: 12px;
 }
 
-/* line 12, ../scss/modules/_headingList.scss */
+/* line 13, ../scss/modules/_headingList.scss */
 .headingList__heading {
   margin-bottom: 24px;
 }
