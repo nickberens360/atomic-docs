@@ -6,6 +6,7 @@
 
 function createPageIncludeFile($dirName)
 {
+  
 	fopen("../categories/$dirName/$dirName.php", 'x+') or die("can't open file");
 }
 
@@ -13,22 +14,32 @@ function createPageIncludeFile($dirName)
 
 function createScssCatDirAndFile($dirName)
 {
-	mkdir("../../scss/$dirName");
-	$fileHandle = fopen("../../scss/$dirName/_$dirName.scss", 'x+') or die("can't open file");
+  
+  $config = getConfig();
+  $cssDir = $config['cssDir'];
+  $cssExt = $config['cssExt'];
+  
+	mkdir("../../$cssDir/$dirName");
+	$fileHandle = fopen("../../$cssDir/$dirName/_$dirName.$cssExt", 'x+') or die("can't open file");
 }
 
 
 
 function createStringForMainScssFile($dirName)
 {
+  
+  $config = getConfig();
+  $cssDir = $config['cssDir'];
+  $cssExt = $config['cssExt'];
+  
 	$includeString ='@import "'.$dirName.'/'.$dirName.'";'; 
 	
 	$includeString = "\n$includeString\n";
 	
-	$fileHandle = fopen('../../scss/main.scss', 'a') or die("can't open file");
+	$fileHandle = fopen('../../'.$cssDir.'/main.'.$cssExt.'', 'a') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	file_put_contents('../../scss/main.scss', implode(PHP_EOL, file('../../scss/main.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+	file_put_contents('../../'.$cssDir.'/main.'.$cssExt.'', implode(PHP_EOL, file('../../'.$cssDir.'/main.'.$cssExt.'', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 }
 
 
@@ -153,6 +164,8 @@ function createSidebarIncludeAndFile($dirName)
 function writeNavItem($dirName)
 {
 	
+  
+  
 	//create @import string
 	$importString = "<?php include ('$dirName/navItem-$dirName.php');?>";
 	$importString = "\n$importString\n";

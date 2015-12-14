@@ -4,8 +4,7 @@ function getConfig() {
   $config['dir'] = dirname(__FILE__);
   $config['cssDir'] = 'scss';
   $config['cssExt'] = 'scss';
-  
-  $config['compExt'] = 'mustache';
+  $config['compExt'] = 'php';
   
   return $config;
 }
