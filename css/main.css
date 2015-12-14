@@ -1110,6 +1110,68 @@ body {
   margin-left: 0;
 }
 
+/* line 1, ../scss/atoms/_btns.scss */
+.btns {
+  display: inline-block;
+  background: #ccc;
+  padding: 10px 0;
+  width: 142px;
+  color: #fff;
+  opacity: 1;
+  cursor: pointer;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  position: relative;
+  border: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* line 16, ../scss/atoms/_btns.scss */
+.btns:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 20, ../scss/atoms/_btns.scss */
+.btns:active {
+  top: 1px;
+}
+
+/* line 23, ../scss/atoms/_btns.scss */
+.btn1 {
+  background: #00AFF0;
+}
+
+/* line 26, ../scss/atoms/_btns.scss */
+.btn2 {
+  background: #3D4A57;
+}
+
+/* line 29, ../scss/atoms/_btns.scss */
+.btn3 {
+  background: #880100;
+  top: 10px;
+  padding: 4px 40px;
+  line-height: 1;
+}
+/* line 34, ../scss/atoms/_btns.scss */
+.btn3 span {
+  display: block;
+}
+
+/* line 38, ../scss/atoms/_btns.scss */
+.btn4 {
+  background: #1A61F1;
+}
+
+/* line 43, ../scss/atoms/_btns.scss */
+.btnGroup {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
 /* line 1, ../scss/modules/_headingList.scss */
 .headingList {
   max-width: 500px;
@@ -1507,7 +1569,7 @@ ul.ascii li {
   font-size: 55px;
   font-weight: 300;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 0;
   color: #00aff0;
 }
@@ -1515,7 +1577,7 @@ ul.ascii li {
 /* line 16, ../scss/organisms/_banner.scss */
 .banner__sub {
   font-size: 18px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   font-weight: 300;
   text-align: center;
 }
