@@ -1,0 +1,45 @@
+.main{
+  padding:70px 20px;
+  margin-bottom: 1px;
+	.main-inner{
+	    @extend .wrap;
+        @extend .grid-row;
+	}
+}
+.main-wht{
+	background: #fff;
+}
+.main-blue{
+	background: #D7F3F6;
+}
+.main-content{
+	padding:$base;
+	//background: #fff;
+}
+
+.main-aside{
+  background:#E7E3E3; 
+  padding:$base;
+}
+
+.main-2col{
+	.main-content{
+		@include col($eight);
+	}
+	.main-aside{
+		@include col($four);
+		
+	}
+}
+
+.main-2col.main-right{
+	.main-content{
+		@include col($eight);
+		float:right;
+	}
+	.main-aside{
+		@include col($four);
+		float:right;
+	}
+}
+

@@ -1,0 +1,14 @@
+.headingList{
+	max-width:500px;
+  margin:auto;
+	margin-bottom: 0;
+  ul{
+    padding-left: 20px;
+  }
+  li{
+  	margin-bottom: 12px;
+  }
+}
+.headingList__heading{
+	margin-bottom: $base;
+}

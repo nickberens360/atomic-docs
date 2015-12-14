@@ -1,0 +1,1 @@
+<span id="banner" class="compTitle">banner</span><div class="component"><?php include("../components/organisms/banner.php");?></div>

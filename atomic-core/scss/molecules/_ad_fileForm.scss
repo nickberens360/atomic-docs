@@ -1,0 +1,29 @@
+.ad_fileForm{
+	.form-control{
+		border-radius:0;
+		border:none;
+		background:#fff;
+		box-shadow:none;
+		margin-bottom:10px;
+		//color: #B9B9B9;
+		width: 100%;
+		height: 50px;
+	    font-size: 14px;
+	    text-indent: 10px;
+	    box-shadow: 0;	    &:focus{
+	    	outline:none;
+	    	border:none;
+	    	
+	    }
+	}
+	.btn{
+		border-radius:0;
+		padding: 7px 12px;
+		border:none;
+	}
+	::-webkit-input-placeholder {
+		 color: #B9B9B9;
+		 font-style: 12px;
+	}
+}
+

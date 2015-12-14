@@ -1,0 +1,18 @@
+$font2: 'Lora', serif;
+$font1: 'Open Sans', sans-serif;
+$font3: 'Roboto Condensed', sans-serif;
+$font4: 'Montserrat', sans-serif;
+
+
+.font1{
+	font-family: $font1; 
+}
+.font2{
+	font-family: $font2; 
+}
+
+.font{
+	span{
+		display:block;
+	}
+}
