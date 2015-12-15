@@ -2,20 +2,20 @@
 	<form id="form-rename-file"  class="ad_fileForm " action="/atomic-core/partial-mngr/file-rename.php" method="post">
       <div class="formInputGroup">
         <div class="inputBtnGroup">
-          <label class="ad_label">Rename <span class="ad_label__file">test</span> component file</label>
+          <label class="ad_label">Rename <span class="ad_label__file">file</span> component file</label>
           <button class="ad_btn ad_btn-pos" type="submit" >Rename</button>
           <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="renameFileName" required></div>
         </div>  
       </div>
-      <input type="hidden" name="compDir" value="base"/>
+      <input type="hidden" name="compDir" value="test"/>
       <input type="hidden" name="rename" value="rename"/>
-      <input type="hidden" name="oldName" value="test"/>
+      <input type="hidden" name="oldName" value="file"/>
     </form>
 	<form id="form-file-move" class="ad_fileForm " action="/atomic-core/partial-mngr/file-move.php" method="post">
       <div class="formGroup">
         <div class="formInputGroup">
           <div class="inputBtnGroup">
-            <label class="ad_label">Move <span class="ad_label__file">test</span> to...</label>
+            <label class="ad_label">Move <span class="ad_label__file">file</span> to...</label>
             <button class="ad_btn ad_btn-pos" type="submit">Move</button>
             <div class="inputBtnGroup__inputWrap">
               <select id="newDir" class="form-control" >
@@ -39,19 +39,20 @@
           </div>  
         </div>
       </div>
-      <input type="hidden" name="compDir" value="base"/>
-      <input type="hidden" name="fileMoveName" value="test"/>
+      <input type="hidden" name="compDir" value="test"/>
+      <input type="hidden" name="fileMoveName" value="file"/>
       <input type="hidden" name="moveFile" value="moveFile"/>
+      <input type="hidden" name="compNotes" value=""/>
     </form>
     <form id="form-delete-file" class="ad_fileForm " action="/atomic-core/partial-mngr/delete.php" method="post">
       <div class="formInputGroup">
         <div class="inputBtnGroup">
-          <label class="ad_label">Type <span class="ad_label__file">test</span> to delete the component files</label>
+          <label class="ad_label">Type <span class="ad_label__file">file</span> to delete the component files</label>
           <button class="ad_btn ad_btn-neg" type="submit" >Delete</button>
           <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="deleteFileName" placeholder="Must type component name"></div>
         </div>  
       </div>
-      <input type="hidden" name="compDir" value="base"/>
+      <input type="hidden" name="compDir" value="test"/>
       <input type="hidden" name="delete" value="delete"/>
     </form>
 </div>

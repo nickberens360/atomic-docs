@@ -634,6 +634,11 @@ pre[class*="language-"] {
   background: #222222;
 }
 
+.ad_fileForm textarea.form-control {
+  height: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .ad_fileForm .form-control {
   border-radius: 0;
   border: none;
@@ -644,7 +649,7 @@ pre[class*="language-"] {
   height: 50px;
   font-size: 14px;
   text-indent: 10px;
-  box-shadow: 0;
+  box-shadow: none;
 }
 .ad_fileForm .form-control:focus {
   outline: none;
@@ -658,6 +663,10 @@ pre[class*="language-"] {
 .ad_fileForm ::-webkit-input-placeholder {
   color: #B9B9B9;
   font-style: 12px;
+}
+
+.inputGroup {
+  margin-bottom: 12px;
 }
 
 .ad_fileSection {

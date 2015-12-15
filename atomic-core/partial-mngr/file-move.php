@@ -16,6 +16,7 @@ $data           = array();      // array to pass back data
     $fileMoveName = test_input($_POST["fileMoveName"]);
     $compDir = test_input($_POST["compDir"]);
     $newDir = test_input($_POST["newDir"]);
+    $compNotes = test_input($_POST["compNotes"]);
     
     $fileExists = '../../components/'.$newDir.'/'.$fileMoveName.'.'.$compExt.'';
     
@@ -55,9 +56,15 @@ $data           = array();      // array to pass back data
         
         moveCompFile($compDir, $fileMoveName, $newDir);
         
-        deleteCompIncludetString($compDir, $fileMoveName );
         
-        createIncludeString($newDir, $fileMoveName );
+        deleteCompIncludetString($compDir, $compNotes, $fileMoveName );
+        
+        
+        
+        
+        createIncludeString($newDir, $compNotes, $fileMoveName );
+        
+        
         
         deleteAjaxCompFile($compDir, $fileMoveName);
         

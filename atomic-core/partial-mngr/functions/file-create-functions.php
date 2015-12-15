@@ -54,13 +54,13 @@ function createCompFile($catName, $fileName)
 
 
 //creates include string and writes to component parent file
-function createIncludeString($catName, $fileName)
+function createIncludeString($catName, $compNotes, $fileName)
 {
   
   $config = getConfig();
   $compExt = $config['compExt'];
 
-	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.'.$compExt.''.'");?></div>';
+	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><p class="compNotes">'.$compNotes.'</p><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.'.$compExt.''.'");?></div>';
 	$includeString = "\n$includeString\n";
 	
 	$fileHandle = fopen('../categories/'.$catName.'/'.$catName.'.php', 'a') or die("can't open file");
@@ -131,6 +131,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
       <input type="hidden" name="compDir" value="'.$catName.'"/>
       <input type="hidden" name="fileMoveName" value="'.$fileName.'"/>
       <input type="hidden" name="moveFile" value="moveFile"/>
+      <input type="hidden" name="compNotes" value=""/>
     </form>
 
 

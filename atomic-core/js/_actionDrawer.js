@@ -50,6 +50,11 @@ $('body').on('click', '.ad_js-errorBox__close', function(events){
 
 
 $('.ad_actionBtn').click(function(event) {
+  
+
+
+   
+  
    event.preventDefault();
    $.ajax(this.href, {
       success: function(data) {      
@@ -207,7 +212,8 @@ $('.ad_actionBtn').click(function(event) {
             // there are many ways to get this data using jQuery (you can use the class or id also)
             var formData = {
               'compDir'       : $('input[name=compDir]').val(),
-              'fileCreateName'  : $('input[name=fileCreateName]').val()
+              'fileCreateName'  : $('input[name=fileCreateName]').val(),
+              'compNotes'  : $('textarea[name=compNotes]').val()
             };
             // process the form
             $.ajax({
@@ -328,12 +334,18 @@ $('.ad_actionBtn').click(function(event) {
 
           
 
+         notesTarget = $('input[name=fileMoveName]').val();
+         notesContent = $('.atoms-main #'+notesTarget).next().text();
+         
+         
+         $('input[name=compNotes]').val(notesContent);
+         
+         //alert(notesContent);
+         
+         
 
 
-
-
-
-
+         
 
 
 
@@ -358,7 +370,8 @@ $('.ad_actionBtn').click(function(event) {
             var formData = {
               'compDir'       : $('input[name=compDir]').val(),
               'newDir'       : $('#newDir').val(),
-              'fileMoveName'  : $('input[name=fileMoveName]').val()
+              'fileMoveName'  : $('input[name=fileMoveName]').val(),
+              'compNotes'  : $('input[name=compNotes]').val(),
             };
             // process the form
             $.ajax({

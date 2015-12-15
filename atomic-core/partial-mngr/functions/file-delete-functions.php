@@ -28,13 +28,16 @@ function deleteScssFile($catName, $fileName)
 
 
 
-function deleteCompIncludetString($catName, $fileName)
+function deleteCompIncludetString($catName, $compNotes, $fileName)
 {
 	$config = getConfig();
     $compExt = $config['compExt'];
 
 	//create @import string
-	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.'.$compExt.'");?></div>';
+	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><p class="compNotes">'.$compNotes.'</p><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.'.$compExt.''.'");?></div>';
+  
+ 
+  
 
 	//Place contents of file into variable
 	$contents = file_get_contents('../categories/'.$catName.'/'.$catName.'.php');
