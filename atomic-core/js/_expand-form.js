@@ -37,7 +37,7 @@ $('.cat-form-group .fa').click(function() {
 
 
 $( ".ad_dir__dirNameGroup .ad_dir__dirNameGroup__icon" ).click(function() {
-  $(this).parent().next().slideToggle();
+  $(this).parent().next().slideToggle('fast');
     $(this).toggleClass('fa-folder-o fa-folder-open-o ');
 });
 

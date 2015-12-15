@@ -1,13 +1,14 @@
 .atoms-side{
 	float:left;
 	height:100%;
-	background: #343843;
+	background: #F2F5F0;
 	color:#fff;
 	position: fixed;
 	left:0;
 	transition: all .5s;
 	z-index:5000;
 	width:262px;
+  border-right: 1px solid #E3E3E3;
 	a{
 		text-decoration: none;
 	}
@@ -19,11 +20,16 @@
 }
 
 
+.ad_dir{
+  border-bottom:1px solid #E3E3E3; 
+}
+
+
 
 .atoms-nav{
 	list-style:none;
 	padding:0;
-	padding-top: 13px;
+  margin-top: 1px;
 }
 .ad_dir__dirNameGroup__name{
 	display:block;
@@ -31,23 +37,44 @@
 	padding-left:0;
 	margin-left:38px;
 	//text-transform:uppercase;
-	color:#a6adb3;
+	color:#7a7a7a;
+  font-size: 16px;
 }
 .ad_dir__dirNameGroup__name:hover{
-	color:#a6adb3;
 	text-decoration:none;
 }
+
+.ad_addFile{
+  color: #9DA0A0;
+  padding-left: 39px;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.ad_fileSection__file{
+  padding-left: 39px;
+  .fa{
+    margin-right:5px; 
+    position:relative;
+    top:1px;
+  }
+  a{
+		color: #7a7a7a;
+		font-size:14px;
+	}
+}
+
 .ad_fileSection{
 	padding-left:0;
 	li{
 		list-style:none;
+		&:last-child{
+			margin-bottom: 15px;
+		}
 	}
-	a{
-		padding-left: 50px;
-		display: block;
-		color: #5FC5FF;
-		font-size:14px;
-	}
+	
 	a:hover{
 		text-decoration:none;
 	}
@@ -107,4 +134,14 @@
 }
 
 
+.catAdd{
+  a{
+    padding: 10px 38px;
+    display:block;
+    color: #9DA0A0;
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+  }
+}
 

@@ -5,9 +5,13 @@
 <div class="grid-row atoms-container">
 	<?php include ("sidebar.php");?>
 	
+
 	
 	<div class="atoms-main">
-		<div class="docBlock">
+
+	
+	<?php /*?><?php echo ROOT_PATH; ?><?php */?>
+		<!--<div class="docBlock">
 			<h1 class="docBlock-heading">Welcome!</h1>
 			<p>Atomic Docs is made for <a href="https://www.previousnext.com.au/blog/style-guide-driven-development-new-web-development">styleguide driven development</a>.</p>
 			<p>Requirements: A local PHP enviornment. And a CSS preprocessor.<p> 
@@ -31,9 +35,14 @@
 				</li>
 				<li>And that's it!</li>
 			</ol>
-		</div>
+		</div>-->
 
 	</div>
 </div>
-
+<div class="ad_js-actionDrawer ad_actionDrawer">
+  <div class="ad_actionDrawer__wrap">
+	  <div class="ad_js-actionClose ad_actionDrawer__close"><i class="fa fa-times fa-3x"></i></div>
+	  <div id="js_actionDrawer__content" class="actionDrawer__content"></div>
+  </div>
+</div>
 <?php include ("footer.php");?>
