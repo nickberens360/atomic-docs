@@ -1,6 +1,5 @@
 .headingList{
-	max-width:500px;
-  margin:auto;
+	@extend .wrap;
 	margin-bottom: 0;
   ul{
     padding-left: 20px;
