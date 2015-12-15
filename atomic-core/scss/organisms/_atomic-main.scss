@@ -1,0 +1,41 @@
+.atoms-container{
+	height:100%;
+}
+
+
+
+.atoms-main{
+	
+	//@include col($ten);
+	//float:right;
+	padding:20px;
+	transition:all .5s;
+	padding-left:282px;
+	width:100%;
+}
+
+
+
+
+code, kbd, pre, samp {
+    font-size: 14px;
+}
+pre[class*="language-"] {
+    padding: 2em;
+}
+
+
+.atoms-code-example{
+	position:relative;
+}
+
+
+
+.atoms-group{
+	margin-bottom:50px;
+}
+
+
+
+
+
