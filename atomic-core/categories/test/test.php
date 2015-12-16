@@ -1,1 +1,0 @@
-<span id="file" class="compTitle">file</span><p class="compNotes">file desc</p><div class="component"><?php include("../components/test/file.php");?></div>

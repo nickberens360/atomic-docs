@@ -5,6 +5,7 @@
 //@prepros-append _sidebar-show-hide.js
 //@prepros-append _expand-form.js
 //@prepros-append _sidebar-show-hide.js
+//@prepros-append formShowHide.js
 //@prepros-append _actionDrawer.js
 
 

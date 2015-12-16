@@ -10,6 +10,7 @@
 	require 'file-delete-functions.php';
 	require 'file-rename-functions.php';
 	require 'file-move-functions.php';
+	require 'notes-rename-functions.php';
 	require 'validation.php';
 
 ?>

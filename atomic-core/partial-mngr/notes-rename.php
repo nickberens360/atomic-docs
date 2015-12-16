@@ -1,5 +1,5 @@
 <?php
-
+require '../../config.php';
 require 'functions/functions.php';
 
 $config = getConfig();
@@ -12,22 +12,23 @@ $data           = array();      // array to pass back data
     // if any of these variables don't exist, add an error to our $errors array
     
 
-    
-    $renameFileName = test_input($_POST["renameFileName"]);
-    $catName = test_input($_POST["compDir"]);
-    $oldName = test_input($_POST["oldName"]);
-    $compNotes = test_input($_POST["compNotes"]);
 
     
-    $fileExists = '../../components/'.$catName.'/'.$renameFileName.'.'.$compExt.'';
+    $compDir = test_input($_POST["compDir"]);
+    $compNotes = test_input($_POST["compNotes"]);
+    $compNotesNew = test_input($_POST["compNotesNew"]);
+    $fileName = test_input($_POST["fileName"]);
+
     
-    if (file_exists($fileExists) && $renameFileName != ""){
-        $errors['exists'] = 'Please enter a unique file name.';
+    /*$fileExists = '../../components/'.$compDir.'/'.$deleteFileName.'.'.$compExt.'';
+    
+    if (!file_exists($fileExists) && $deleteFileName != ""){
+        $errors['exists'] = 'There is no file named '.$deleteFileName.' to delete.';
     }
     
-    elseif ($_POST['renameFileName'] == ""){
+	elseif ($_POST['deleteFileName'] == ""){
         $errors['name'] = 'Name is required.';
-    }
+    }*/
         
 
 
@@ -47,29 +48,7 @@ $data           = array();      // array to pass back data
         
         // DO ALL YOUR FORM PROCESSING HERE
 
-
-
-
-
-        changeCommentString($catName, $renameFileName, $oldName);
-
-    
-        renameScssFile($catName, $renameFileName, $oldName);
-        
-        
-        deleteScssImportString($catName, $oldName );
-        
-        writeScssImportFile($catName, $renameFileName );
-        
-        renameCompFile($catName, $renameFileName, $oldName);
-        
-        deleteCompIncludetString($catName, $compNotes, $oldName );
-        
-        createIncludeString($catName, $compNotes, $renameFileName );
-        
-        deleteAjaxCompFile($catName, $oldName);
-        
-        createAjaxIncludeAndCompFile($catName, $renameFileName);
+        changeIncludeString($compDir, $compNotes, $compNotesNew, $fileName);
         
         
         
@@ -85,4 +64,3 @@ $data           = array();      // array to pass back data
     
 
 ?>
-
