@@ -14,10 +14,10 @@
 	}
 }
 
-.atoms-overflow{
+/*.atoms-overflow{
     overflow: auto;
     height: 100%;
-}
+}*/
 
 
 .ad_dir{
@@ -143,5 +143,40 @@
     font-size: 12px;
     font-style: italic;
   }
+}
+
+.navToggle{
+  @extend .atoms-side_show; 
+  display:none;
+  right:20px;
+  z-index:6000;
+}
+
+@media (min-width: 824px){ 
+  .atoms-side{
+    display:block !important; 
+  }
+}
+
+@media (max-width: 823px){ 
+   /*.navToggle{
+     display:block; 
+   }
+  .atoms-side{
+    width:100%; 
+    height:auto;
+    float:none;
+    top:-100%;
+  }*/
+  .atoms-side{
+    display:none;
+  }
+
+ .atoms-side_show, .atoms-side_hide{
+    display:none; 
+  }
+  
+  
+
 }
 

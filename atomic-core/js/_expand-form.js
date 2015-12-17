@@ -1,5 +1,5 @@
 
-$( window ).resize(function() {
+/*$( window ).resize(function() {
     sideHeight = $('.atoms-side').outerHeight();
 
     formHeight = $('.cat-form-group').outerHeight();
@@ -22,7 +22,7 @@ oflowHeight = sideHeight - formHeight;
 
 
 
-$('.atoms-overflow').css('height',oflowHeight);
+$('.atoms-overflow').css('height',oflowHeight);*/
 
 
 $('.cat-form-group .fa').click(function() {	

@@ -11,6 +11,8 @@
 	position: relative;;
 	top:12px;
 	cursor:pointer;
+  font-size:18px;
+  transition:font-size .25s;
 	.fa-plus{
 		transform: rotate(0deg);
 		transition:all .25s;
@@ -18,4 +20,10 @@
 	.fa-plus-is-rotated{
 		transform: rotate(45deg);
 	}
+}
+.ad_label-is-closed{
+  font-size:12px !important; 
+}
+.ad_label-is-open{
+  font-size:20px !important; 
 }

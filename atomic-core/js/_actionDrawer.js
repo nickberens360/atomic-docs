@@ -73,11 +73,11 @@ $('.ad_actionBtn').click(function(event) {
       
 $('.js-showHide-trigger').click(function() {
   
-    $('.showHide').slideUp('fast');
+    $('.showHide').slideUp(250);
     $('.fa-plus').removeClass('fa-plus-is-rotated');
     
     if($(this).next().is(':hidden')){
-       $(this).next().slideDown('fast');
+       $(this).next().slideDown(250);
        $(this).find('.fa-plus').addClass('fa-plus-is-rotated');
     }
 });
