@@ -66,6 +66,8 @@ $('.ad_actionBtn').click(function(event) {
 $('.js-showHide-trigger').click(function() {
   $('.showHide').slideUp();
    $(this).next().slideDown();
+   $('.fa-plus').removeClass('fa-plus-is-rotated');
+   $(this).find('.fa-plus').addClass('fa-plus-is-rotated');
 });
          
          
@@ -429,7 +431,8 @@ $('.js-showHide-trigger').click(function() {
             // there are many ways to get this data using jQuery (you can use the class or id also)
             var formData = {
               'compDir'       : $('input[name=compDir]').val(),
-              'deleteFileName'  : $('input[name=deleteFileName]').val()
+              'deleteFileName'  : $('input[name=deleteFileName]').val(),
+              'compNotes'  : $('input[name=compNotes]').val()
             };
             // process the form
             $.ajax({
@@ -496,6 +499,11 @@ $('.js-showHide-trigger').click(function() {
 
 
            $('#form-rename-notes').submit(function(event) {
+
+            notesEditTarget = $('input[name=fileName]').val();
+            notesEditTarget = $('.atoms-main #'+notesTarget).next().text();
+
+            $('input[name=compNotes]').val(notesEditTarget);
             reDirect = $('input[name=compDir]').val();
              // remove the error text
             // get the form data

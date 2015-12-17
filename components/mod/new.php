@@ -1,1 +1,0 @@
-<!--components/mod/new.php-->

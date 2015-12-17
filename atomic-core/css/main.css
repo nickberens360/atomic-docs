@@ -693,6 +693,32 @@ pre[class*="language-"] {
 .showHide {
   display: none;
 }
+/* line 3, utilities/_showHide.scss */
+.showHide .form-control, .showHide .formInputGroup {
+  margin-bottom: 0;
+}
+
+/* line 9, utilities/_showHide.scss */
+.ad_label.js-showHide-trigger {
+  margin-bottom: 24px;
+  position: relative;
+  top: 12px;
+  cursor: pointer;
+}
+/* line 14, utilities/_showHide.scss */
+.ad_label.js-showHide-trigger .fa-plus {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+/* line 18, utilities/_showHide.scss */
+.ad_label.js-showHide-trigger .fa-plus-is-rotated {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
 /* line 1, atoms/_atomic-h1.scss */
 .atomic-h1 {
@@ -733,14 +759,32 @@ pre[class*="language-"] {
   background: #222222;
 }
 
-/* line 2, molecules/_ad_fileForm.scss */
-.ad_fileForm textarea.form-control {
-  height: 200px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+/* line 3, molecules/_ad_fileForm.scss */
+.ad_fileForm .btn {
+  border-radius: 0;
+  padding: 7px 12px;
+  border: none;
 }
-/* line 7, molecules/_ad_fileForm.scss */
-.ad_fileForm .form-control {
+/* line 8, molecules/_ad_fileForm.scss */
+.ad_fileForm ::-webkit-input-placeholder {
+  color: #B9B9B9;
+  font-style: 12px;
+}
+
+/* line 13, molecules/_ad_fileForm.scss */
+.inputGroup {
+  margin-bottom: 12px;
+}
+
+/* line 17, molecules/_ad_fileForm.scss */
+textarea.form-control {
+  height: 200px;
+  padding: 20px;
+  text-indent: 0;
+}
+
+/* line 22, molecules/_ad_fileForm.scss */
+.form-control {
   border-radius: 0;
   border: none;
   background: #fff;
@@ -754,26 +798,10 @@ pre[class*="language-"] {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 18, molecules/_ad_fileForm.scss */
-.ad_fileForm .form-control:focus {
+/* line 33, molecules/_ad_fileForm.scss */
+.form-control:focus {
   outline: none;
   border: none;
-}
-/* line 24, molecules/_ad_fileForm.scss */
-.ad_fileForm .btn {
-  border-radius: 0;
-  padding: 7px 12px;
-  border: none;
-}
-/* line 29, molecules/_ad_fileForm.scss */
-.ad_fileForm ::-webkit-input-placeholder {
-  color: #B9B9B9;
-  font-style: 12px;
-}
-
-/* line 34, molecules/_ad_fileForm.scss */
-.inputGroup {
-  margin-bottom: 12px;
 }
 
 /* line 1, molecules/_atomic-sub-menu.scss */
@@ -934,24 +962,25 @@ pre[class*="language-"] {
   transition: all .5s;
   padding-left: 282px;
   width: 100%;
+  padding-top: 0;
 }
 
-/* line 20, organisms/_atomic-main.scss */
+/* line 21, organisms/_atomic-main.scss */
 code, kbd, pre, samp {
   font-size: 14px;
 }
 
-/* line 23, organisms/_atomic-main.scss */
+/* line 24, organisms/_atomic-main.scss */
 pre[class*="language-"] {
   padding: 2em;
 }
 
-/* line 28, organisms/_atomic-main.scss */
+/* line 29, organisms/_atomic-main.scss */
 .atoms-code-example {
   position: relative;
 }
 
-/* line 34, organisms/_atomic-main.scss */
+/* line 35, organisms/_atomic-main.scss */
 .atoms-group {
   margin-bottom: 50px;
 }

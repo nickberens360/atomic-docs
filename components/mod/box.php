@@ -1,1 +1,0 @@
-<!--components/mod/box.php-->

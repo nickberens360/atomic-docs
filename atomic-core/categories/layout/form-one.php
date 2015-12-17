@@ -1,38 +1,35 @@
 <div class="ad_fileFormGroup">
-<p class="js-showHide-trigger">Change file name.</p>
+<label class="ad_label js-showHide-trigger">Rename <span class="ad_label__file">one</span> component file</label>
 <div class="showHide">
 	<form id="form-rename-file"  class="ad_fileForm " action="/atomic-core/partial-mngr/file-rename.php" method="post">
       <div class="formInputGroup">
         <div class="inputBtnGroup">
-          <label class="ad_label">Rename <span class="ad_label__file">box</span> component file</label>
+          
           <button class="ad_btn ad_btn-pos" type="submit" >Rename</button>
           <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="renameFileName" required></div>
         </div>     
-        
       </div>
-      <input type="hidden" name="compDir" value="mod"/>
+      <input type="hidden" name="compDir" value="layout"/>
       <input type="hidden" name="rename" value="rename"/>
-      <input type="hidden" name="oldName" value="box"/>
+      <input type="hidden" name="oldName" value="one"/>
     </form>
 </div>
-<p class="js-showHide-trigger">Change description.</p>
+<label class="ad_label js-showHide-trigger">Change the description for <span class="ad_label__file">one</span></label>
 <div class="showHide">
    <form id="form-rename-notes"  class="ad_fileForm " action="/atomic-core/partial-mngr/notes-rename.php" method="post">
-        <label class="ad_label">Component description.</label>
         <textarea class="form-control" name="compNotesNew"></textarea>        
         <button class="ad_btn ad_btn-pos" type="submit" >Rename</button>
-      <input type="hidden" name="compDir" value="mod"/>
-      <input type="hidden" name="fileName" value="box"/>
+      <input type="hidden" name="compDir" value="layout"/>
+      <input type="hidden" name="fileName" value="one"/>
       <input type="hidden" name="compNotes" value=""/>
     </form>
 </div>
-<p class="js-showHide-trigger">Move to.</p>
+<label class="ad_label js-showHide-trigger">Move <span class="ad_label__file">one</span> to.../label>
 <div class="showHide">
 	<form id="form-file-move" class="ad_fileForm " action="/atomic-core/partial-mngr/file-move.php" method="post">
       <div class="formGroup">
         <div class="formInputGroup">
           <div class="inputBtnGroup">
-            <label class="ad_label">Move <span class="ad_label__file">box</span> to...</label>
             <button class="ad_btn ad_btn-pos" type="submit">Move</button>
             <div class="inputBtnGroup__inputWrap">
               <select id="newDir" class="form-control" >
@@ -56,8 +53,8 @@
           </div>  
         </div>
       </div>
-      <input type="hidden" name="compDir" value="mod"/>
-      <input type="hidden" name="fileMoveName" value="box"/>
+      <input type="hidden" name="compDir" value="layout"/>
+      <input type="hidden" name="fileMoveName" value="one"/>
       <input type="hidden" name="moveFile" value="moveFile"/>
       <input type="hidden" name="compNotes" value=""/>
     </form>
@@ -67,12 +64,12 @@
     <form id="form-delete-file" class="ad_fileForm " action="/atomic-core/partial-mngr/delete.php" method="post">
       <div class="formInputGroup">
         <div class="inputBtnGroup">
-          <label class="ad_label">Type <span class="ad_label__file">box</span> to delete the component files</label>
+          <label class="ad_label">Type <span class="ad_label__file">one</span> to delete the component files</label>
           <button class="ad_btn ad_btn-neg" type="submit" >Delete</button>
           <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="deleteFileName" placeholder="Must type component name"></div>
         </div>  
       </div>
-      <input type="hidden" name="compDir" value="mod"/>
+      <input type="hidden" name="compDir" value="layout"/>
       <input type="hidden" name="delete" value="delete"/>
       <input type="hidden" name="compNotes" value=""/>
     </form>

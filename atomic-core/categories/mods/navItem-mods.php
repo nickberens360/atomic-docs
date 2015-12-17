@@ -1,15 +1,15 @@
 
-<li class="ad_dir <?php if ($current_page == "mod.php"){ echo "active "; }?>">
+<li class="ad_dir <?php if ($current_page == "mods.php"){ echo "active "; }?>">
 		<div class="ad_dir__dirNameGroup">
 			<i class="ad_dir__dirNameGroup__icon  fa fa-folder-o"></i>
-			<a class="ad_dir__dirNameGroup__name" href="atomic-core/mod.php">mod</a>
+			<a class="ad_dir__dirNameGroup__name" href="atomic-core/mods.php">mods</a>
 		</div>
 		<ul class="ad_fileSection">
       <li class="ad_addFileItem">
-        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/categories/mod/form-mod.php"><span class="fa fa-plus"></span> Add Component</a>
+        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/categories/mods/form-mods.php"><span class="fa fa-plus"></span> Add Component</a>
       </li>
 			<?php
-				$orig = "../components/mod";
+				$orig = "../components/mods";
 				if ($dir = opendir($orig)) {
 				while ($file = readdir($dir)) {
 				$ok = "true";	
@@ -25,7 +25,7 @@
 					
 				$filename = str_replace(".php", "", $filename );
 
-				echo "<li class='ad_fileSection__file'><a class='ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o' href='atomic-core/categories/mod/form-$filename.php'></a><a href='#$filename'>$filename</a></li>";
+				echo "<li class='ad_fileSection__file'><a class='ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o' href='atomic-core/categories/mods/form-$filename.php'></a><a href='#$filename'>$filename</a></li>";
 				}
 				}
 				closedir($dir);

@@ -1,8 +1,23 @@
 .ad_fileForm{
-  textarea.form-control{
+  
+	.btn{
+		border-radius:0;
+		padding: 7px 12px;
+		border:none;
+	}
+	::-webkit-input-placeholder {
+		 color: #B9B9B9;
+		 font-style: 12px;
+	}
+}
+.inputGroup{
+  margin-bottom:12px; 
+}
+
+textarea.form-control{
     height:200px; 
-    padding-top:20px;
-    padding-bottom:20px;
+    padding:20px;
+    text-indent: 0;
   }
 	.form-control{
 		border-radius:0;
@@ -21,16 +36,3 @@
 	    	
 	    }
 	}
-	.btn{
-		border-radius:0;
-		padding: 7px 12px;
-		border:none;
-	}
-	::-webkit-input-placeholder {
-		 color: #B9B9B9;
-		 font-style: 12px;
-	}
-}
-.inputGroup{
-  margin-bottom:12px; 
-}

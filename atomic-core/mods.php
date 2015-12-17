@@ -1,5 +1,5 @@
 <?php include ("head.php");?>
-	<body class="mod">
+	<body class="mods">
 	
 	
 	<div class="grid-row atoms-container">
@@ -7,10 +7,10 @@
 			
 			
 			<div class="atoms-main">
-					<h1 id="mod" class="atomic-h1">mod</h1>
+					<h1 id="mods" class="atomic-h1">mods</h1>
 	
 	
-							<?php include ("categories/mod/mod.php");?>
+							<?php include ("categories/mods/mods.php");?>
               
 	
 	

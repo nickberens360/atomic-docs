@@ -1,2 +1,0 @@
-<span id="box" class="compTitle">box</span><p class="compNotes">box description changed</p><div class="component"><?php include("../components/mod/box.php");?></div>
-<span id="new" class="compTitle">new</span><p class="compNotes">notes new</p><div class="component"><?php include("../components/mod/new.php");?></div>
