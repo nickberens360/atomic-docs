@@ -63,13 +63,25 @@ $('.ad_actionBtn').click(function(event) {
          
       
 //accordion for file forms
-$('.js-showHide-trigger').click(function() {
+/*$('.js-showHide-trigger').click(function() {
   $('.showHide').slideUp();
    $(this).next().slideDown();
    $('.fa-plus').removeClass('fa-plus-is-rotated');
    $(this).find('.fa-plus').addClass('fa-plus-is-rotated');
 });
-         
+      */   
+      
+$('.js-showHide-trigger').click(function() {
+  
+    $('.showHide').slideUp('fast');
+    $('.fa-plus').removeClass('fa-plus-is-rotated');
+    
+    if($(this).next().is(':hidden')){
+       $(this).next().slideDown('fast');
+       $(this).find('.fa-plus').addClass('fa-plus-is-rotated');
+    }
+});
+            
          
          
          

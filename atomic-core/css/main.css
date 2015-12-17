@@ -4,21 +4,14 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
-/* line 8, _normalize.scss */
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 11, _normalize.scss */
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
-/* line 15, _normalize.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -31,7 +24,6 @@ html {
 /**
  * Remove default margin.
  */
-/* line 25, _normalize.scss */
 body {
   margin: 0;
 }
@@ -44,7 +36,6 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-/* line 39, _normalize.scss */
 article,
 aside,
 details,
@@ -65,7 +56,6 @@ summary {
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 60, _normalize.scss */
 audio,
 canvas,
 progress,
@@ -80,7 +70,6 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 73, _normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -90,7 +79,6 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
  */
-/* line 83, _normalize.scss */
 [hidden],
 template {
   display: none;
@@ -101,7 +89,6 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-/* line 95, _normalize.scss */
 a {
   background-color: transparent;
 }
@@ -110,7 +97,6 @@ a {
  * Improve readability of focused elements when they are also in an
  * active/hover state.
  */
-/* line 104, _normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -121,7 +107,6 @@ a:hover {
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
-/* line 116, _normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -129,7 +114,6 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-/* line 124, _normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -138,7 +122,6 @@ strong {
 /**
  * Address styling not present in Safari and Chrome.
  */
-/* line 133, _normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -147,7 +130,6 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-/* line 142, _normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -156,7 +138,6 @@ h1 {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 151, _normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -165,7 +146,6 @@ mark {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 160, _normalize.scss */
 small {
   font-size: 80%;
 }
@@ -173,7 +153,6 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 168, _normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -182,12 +161,10 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 176, _normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 180, _normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -197,7 +174,6 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
-/* line 191, _normalize.scss */
 img {
   border: 0;
 }
@@ -205,7 +181,6 @@ img {
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-/* line 199, _normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -215,7 +190,6 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
-/* line 210, _normalize.scss */
 figure {
   margin: 1em 40px;
 }
@@ -223,10 +197,7 @@ figure {
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 218, _normalize.scss */
 hr {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -234,7 +205,6 @@ hr {
 /**
  * Contain overflow in all browsers.
  */
-/* line 227, _normalize.scss */
 pre {
   overflow: auto;
 }
@@ -242,7 +212,6 @@ pre {
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-/* line 235, _normalize.scss */
 code,
 kbd,
 pre,
@@ -263,7 +232,6 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-/* line 258, _normalize.scss */
 button,
 input,
 optgroup,
@@ -280,7 +248,6 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-/* line 272, _normalize.scss */
 button {
   overflow: visible;
 }
@@ -291,7 +258,6 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-/* line 283, _normalize.scss */
 button,
 select {
   text-transform: none;
@@ -304,7 +270,6 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 296, _normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -318,7 +283,6 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 308, _normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -327,7 +291,6 @@ html input[disabled] {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 317, _normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -338,7 +301,6 @@ input::-moz-focus-inner {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 328, _normalize.scss */
 input {
   line-height: normal;
 }
@@ -350,11 +312,8 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 340, _normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -366,7 +325,6 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-/* line 352, _normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -376,12 +334,9 @@ input[type="number"]::-webkit-outer-spin-button {
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
-/* line 362, _normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   /* 2 */
 }
@@ -391,7 +346,6 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 373, _normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -400,7 +354,6 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 382, _normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -411,7 +364,6 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 393, _normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -422,7 +374,6 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-/* line 402, _normalize.scss */
 textarea {
   overflow: auto;
 }
@@ -431,7 +382,6 @@ textarea {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-/* line 411, _normalize.scss */
 optgroup {
   font-weight: bold;
 }
@@ -441,13 +391,11 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
-/* line 422, _normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 427, _normalize.scss */
 td,
 th {
   padding: 0;
@@ -459,7 +407,6 @@ th {
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-/* line 8, _prism.scss */
 code[class*="language-"],
 pre[class*="language-"] {
   color: black;
@@ -479,19 +426,12 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
-/* line 30, _prism.scss */
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
   text-shadow: none;
   background: #b3d4fc;
 }
 
-/* line 36, _prism.scss */
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
   text-shadow: none;
@@ -499,34 +439,29 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 }
 
 @media print {
-  /* line 43, _prism.scss */
   code[class*="language-"],
   pre[class*="language-"] {
     text-shadow: none;
   }
 }
 /* Code blocks */
-/* line 50, _prism.scss */
 pre[class*="language-"] {
   padding: 1em;
   margin: .5em 0;
   overflow: auto;
 }
 
-/* line 56, _prism.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #f5f2f0;
 }
 
 /* Inline code */
-/* line 62, _prism.scss */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em;
 }
 
-/* line 67, _prism.scss */
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -534,17 +469,14 @@ pre[class*="language-"] {
   color: slategray;
 }
 
-/* line 74, _prism.scss */
 .token.punctuation {
   color: #999;
 }
 
-/* line 78, _prism.scss */
 .namespace {
   opacity: .7;
 }
 
-/* line 82, _prism.scss */
 .token.property,
 .token.tag,
 .token.boolean,
@@ -554,7 +486,6 @@ pre[class*="language-"] {
   color: #905;
 }
 
-/* line 91, _prism.scss */
 .token.selector,
 .token.attr-name,
 .token.string,
@@ -562,7 +493,6 @@ pre[class*="language-"] {
   color: #690;
 }
 
-/* line 98, _prism.scss */
 .token.operator,
 .token.entity,
 .token.url,
@@ -573,30 +503,25 @@ pre[class*="language-"] {
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* line 108, _prism.scss */
 .token.atrule,
 .token.attr-value,
 .token.keyword {
   color: #07a;
 }
 
-/* line 115, _prism.scss */
 .token.regex,
 .token.important {
   color: #e90;
 }
 
-/* line 120, _prism.scss */
 .token.important {
   font-weight: bold;
 }
 
-/* line 124, _prism.scss */
 .token.entity {
   cursor: help;
 }
 
-/* line 1, utilities/_grid.scss */
 [class*='nb-'] {
   position: relative;
   -moz-box-sizing: border-box;
@@ -604,84 +529,70 @@ pre[class*="language-"] {
   box-sizing: border-box;
 }
 
-/* line 8, utilities/_grid.scss */
 [class*='nb-']:last-of-type {
   margin-right: 0;
 }
 
-/* line 11, utilities/_grid.scss */
 .nb-1 {
   width: 08.333333333%;
   float: left;
 }
 
-/* line 15, utilities/_grid.scss */
 .nb-2 {
   width: 16.6666666667%;
   float: left;
 }
 
-/* line 19, utilities/_grid.scss */
 .nb-3 {
   width: 25%;
   float: left;
 }
 
-/* line 23, utilities/_grid.scss */
 .nb-4 {
   width: 33.3333333333%;
   float: left;
 }
 
-/* line 27, utilities/_grid.scss */
 .nb-5 {
   width: 41.6666666667%;
   float: left;
 }
 
-/* line 31, utilities/_grid.scss */
 .nb-6, .atoms-side_options .atoms-side_hide, .atoms-side_options .atoms-panel_show {
   width: 50%;
   float: left;
 }
 
-/* line 35, utilities/_grid.scss */
 .nb-7 {
   width: 58.3333333333%;
   float: left;
 }
 
-/* line 39, utilities/_grid.scss */
 .nb-8 {
   width: 66.6666666667%;
   float: left;
 }
 
-/* line 43, utilities/_grid.scss */
 .nb-9 {
   width: 75%;
   float: left;
 }
 
-/* line 47, utilities/_grid.scss */
 .nb-10 {
   width: 83.3333333333%;
   float: left;
 }
 
-/* line 51, utilities/_grid.scss */
 .nb-11 {
   width: 91.6666666667%;
   float: left;
 }
 
-/* line 55, utilities/_grid.scss */
 .nb-12 {
   width: 100%;
   float: left;
 }
 
-/* line 59, utilities/_grid.scss */
 .grid-row:after, .atoms-side_options:after, .inputBtnGroup:after {
   content: "";
   display: table;
@@ -689,38 +600,27 @@ pre[class*="language-"] {
 }
 
 /*@include col($six);*/
-/* line 1, utilities/_showHide.scss */
 .showHide {
   display: none;
 }
-/* line 3, utilities/_showHide.scss */
 .showHide .form-control, .showHide .formInputGroup {
   margin-bottom: 0;
 }
 
-/* line 9, utilities/_showHide.scss */
 .ad_label.js-showHide-trigger {
   margin-bottom: 24px;
   position: relative;
   top: 12px;
   cursor: pointer;
 }
-/* line 14, utilities/_showHide.scss */
 .ad_label.js-showHide-trigger .fa-plus {
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: all .25s;
   transition: all .25s;
 }
-/* line 18, utilities/_showHide.scss */
 .ad_label.js-showHide-trigger .fa-plus-is-rotated {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 1, atoms/_atomic-h1.scss */
 .atomic-h1 {
   border-bottom: 1px solid #ccc;
   margin-bottom: 24px;
@@ -729,18 +629,15 @@ pre[class*="language-"] {
   font-weight: 300;
 }
 
-/* line 2, atoms/_form-elements.scss */
 .formGroup-check label {
   font-weight: normal;
   margin-bottom: 0;
 }
 
-/* line 8, atoms/_form-elements.scss */
 .formInput-check {
   display: none;
 }
 
-/* line 11, atoms/_form-elements.scss */
 .formInput-check + label span {
   display: inline-block;
   width: 14px;
@@ -754,81 +651,66 @@ pre[class*="language-"] {
   top: -2px;
 }
 
-/* line 23, atoms/_form-elements.scss */
 .formInput-check:checked + label span {
   background: #222222;
 }
 
-/* line 3, molecules/_ad_fileForm.scss */
 .ad_fileForm .btn {
   border-radius: 0;
   padding: 7px 12px;
   border: none;
 }
-/* line 8, molecules/_ad_fileForm.scss */
 .ad_fileForm ::-webkit-input-placeholder {
   color: #B9B9B9;
   font-style: 12px;
 }
 
-/* line 13, molecules/_ad_fileForm.scss */
 .inputGroup {
   margin-bottom: 12px;
 }
 
-/* line 17, molecules/_ad_fileForm.scss */
 textarea.form-control {
   height: 200px;
   padding: 20px;
   text-indent: 0;
 }
 
-/* line 22, molecules/_ad_fileForm.scss */
 .form-control {
   border-radius: 0;
   border: none;
   background: #fff;
-  -webkit-box-shadow: none;
   box-shadow: none;
   margin-bottom: 10px;
   width: 100%;
   height: 50px;
   font-size: 14px;
   text-indent: 10px;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 33, molecules/_ad_fileForm.scss */
 .form-control:focus {
   outline: none;
   border: none;
 }
 
-/* line 1, molecules/_atomic-sub-menu.scss */
 .ad_fileSection {
   display: none;
 }
-/* line 3, molecules/_atomic-sub-menu.scss */
 .ad_fileSection li {
   list-style: none;
 }
 
-/* line 9, molecules/_atomic-sub-menu.scss */
 .active .ad_fileSection {
   display: block;
 }
 
-/* line 1, molecules/_atomic-link-group.scss */
 .ad_dir__dirNameGroup {
   position: relative;
 }
 
-/* line 10, molecules/_atomic-link-group.scss */
 .active .ad_dir__dirNameGroup__icon {
   display: inline;
 }
 
-/* line 15, molecules/_atomic-link-group.scss */
 .ad_dir__dirNameGroup__icon {
   color: #00aff0;
   position: absolute;
@@ -839,21 +721,14 @@ textarea.form-control {
   text-align: center;
   font-weight: bold;
   font-size: 20px;
-  -webkit-transition: all .25s;
   transition: all .25s;
 }
 
-/* line 32, molecules/_atomic-link-group.scss */
 .rotate {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  -webkit-transform-origin: 50%;
-  -ms-transform-origin: 50%;
   transform-origin: 50%;
 }
 
-/* line 1, molecules/_cat-form.scss */
 .cat-form-btn {
   display: block;
   padding: 10px 38px;
@@ -869,7 +744,6 @@ textarea.form-control {
 .cat-form{
 	display:none;
 } */
-/* line 15, molecules/_cat-form.scss */
 .cat-form-group {
   background: #00aff0;
   position: fixed;
@@ -879,24 +753,19 @@ textarea.form-control {
   left: 0;
   padding: 15px 0;
   z-index: 100;
-  -webkit-transition: all .5s;
   transition: all .5s;
 }
-/* line 25, molecules/_cat-form.scss */
 .cat-form-group .ad_fileForm .form-control {
   background: #3F434E;
   margin-bottom: 7px;
   height: 40px;
 }
-/* line 30, molecules/_cat-form.scss */
 .cat-form-group ::-webkit-input-placeholder {
   color: #626673;
 }
-/* line 33, molecules/_cat-form.scss */
 .cat-form-group .form-control {
   color: #B9B9B9;
 }
-/* line 36, molecules/_cat-form.scss */
 .cat-form-group .fa {
   position: absolute;
   right: 10px;
@@ -904,88 +773,71 @@ textarea.form-control {
   cursor: pointer;
 }
 
-/* line 45, molecules/_cat-form.scss */
 .cat-form {
   margin-top: 10px;
 }
 
-/* line 50, molecules/_cat-form.scss */
 .js-showContent {
   display: none;
 }
 
-/* line 1, molecules/_compNotes.scss */
 .compNotes {
   font-size: 13px;
 }
 
-/* line 1, organisms/_introBlock.scss */
 .docBlock {
   max-width: 500px;
   margin: auto;
 }
-/* line 4, organisms/_introBlock.scss */
 .docBlock a {
   color: #4bc6ef;
 }
 
-/* line 9, organisms/_introBlock.scss */
 .docBlock-ul li {
   margin-bottom: 20px;
   line-height: 1.5;
 }
 
-/* line 14, organisms/_introBlock.scss */
 .docBlock-img {
   display: block;
   max-width: 250px;
   margin-top: 20px;
   margin-bottom: 40px;
-  -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.38);
   box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.38);
 }
 
-/* line 21, organisms/_introBlock.scss */
 .docBlock-img__big {
   max-width: 100%;
 }
 
-/* line 1, organisms/_atomic-main.scss */
 .atoms-container {
   height: 100%;
 }
 
-/* line 7, organisms/_atomic-main.scss */
 .atoms-main {
   padding: 20px;
-  -webkit-transition: all .5s;
   transition: all .5s;
   padding-left: 282px;
   width: 100%;
   padding-top: 0;
 }
 
-/* line 21, organisms/_atomic-main.scss */
 code, kbd, pre, samp {
   font-size: 14px;
 }
 
-/* line 24, organisms/_atomic-main.scss */
 pre[class*="language-"] {
   padding: 2em;
 }
 
-/* line 29, organisms/_atomic-main.scss */
 .atoms-code-example {
   position: relative;
 }
 
-/* line 35, organisms/_atomic-main.scss */
 .atoms-group {
   margin-bottom: 50px;
 }
 
-/* line 1, organisms/_atomic-nav.scss */
 .atoms-side {
   float: left;
   height: 100%;
@@ -993,36 +845,30 @@ pre[class*="language-"] {
   color: #fff;
   position: fixed;
   left: 0;
-  -webkit-transition: all .5s;
   transition: all .5s;
   z-index: 5000;
   width: 262px;
   border-right: 1px solid #E3E3E3;
 }
-/* line 12, organisms/_atomic-nav.scss */
 .atoms-side a {
   text-decoration: none;
 }
 
-/* line 17, organisms/_atomic-nav.scss */
 .atoms-overflow {
   overflow: auto;
   height: 100%;
 }
 
-/* line 23, organisms/_atomic-nav.scss */
 .ad_dir {
   border-bottom: 1px solid #E3E3E3;
 }
 
-/* line 29, organisms/_atomic-nav.scss */
 .atoms-nav {
   list-style: none;
   padding: 0;
   margin-top: 1px;
 }
 
-/* line 34, organisms/_atomic-nav.scss */
 .ad_dir__dirNameGroup__name {
   display: block;
   padding: 10px 38px;
@@ -1032,12 +878,10 @@ pre[class*="language-"] {
   font-size: 16px;
 }
 
-/* line 43, organisms/_atomic-nav.scss */
 .ad_dir__dirNameGroup__name:hover {
   text-decoration: none;
 }
 
-/* line 47, organisms/_atomic-nav.scss */
 .ad_addFile {
   color: #9DA0A0;
   padding-left: 39px;
@@ -1047,46 +891,37 @@ pre[class*="language-"] {
   font-style: italic;
 }
 
-/* line 56, organisms/_atomic-nav.scss */
 .ad_fileSection__file {
   padding-left: 39px;
 }
-/* line 58, organisms/_atomic-nav.scss */
 .ad_fileSection__file .fa {
   margin-right: 5px;
   position: relative;
   top: 1px;
 }
-/* line 63, organisms/_atomic-nav.scss */
 .ad_fileSection__file a {
   color: #7a7a7a;
   font-size: 14px;
 }
 
-/* line 69, organisms/_atomic-nav.scss */
 .ad_fileSection {
   padding-left: 0;
 }
-/* line 71, organisms/_atomic-nav.scss */
 .ad_fileSection li {
   list-style: none;
 }
-/* line 73, organisms/_atomic-nav.scss */
 .ad_fileSection li:last-child {
   margin-bottom: 15px;
 }
-/* line 78, organisms/_atomic-nav.scss */
 .ad_fileSection a:hover {
   text-decoration: none;
 }
 
-/* line 83, organisms/_atomic-nav.scss */
 .border-top {
   border-top: 1px solid #424242;
 }
 
 /****************************/
-/* line 99, organisms/_atomic-nav.scss */
 .atoms-side_hide {
   cursor: pointer;
   display: block;
@@ -1096,9 +931,7 @@ pre[class*="language-"] {
   font-size: 14px;
 }
 
-/* line 108, organisms/_atomic-nav.scss */
 .atoms-side_show {
-  -webkit-transition: all .5s;
   transition: all .5s;
   background: #00aff0;
   cursor: pointer;
@@ -1110,17 +943,14 @@ pre[class*="language-"] {
   border-radius: 50%;
   padding-top: 10px;
   top: 7px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 5px 2px;
   box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 5px 2px;
   opacity: .4;
 }
 
-/* line 123, organisms/_atomic-nav.scss */
 .atoms-side_show:hover {
   opacity: 1;
 }
 
-/* line 126, organisms/_atomic-nav.scss */
 .toggle-line {
   border: 1px solid #fff;
   display: block;
@@ -1131,7 +961,6 @@ pre[class*="language-"] {
   left: -1px;
 }
 
-/* line 138, organisms/_atomic-nav.scss */
 .catAdd a {
   padding: 10px 38px;
   display: block;
@@ -1141,35 +970,29 @@ pre[class*="language-"] {
   font-style: italic;
 }
 
-/* line 1, organisms/_actionDrawer.scss */
 .ad_actionDrawer {
   position: fixed;
   top: 0;
   right: -100%;
   bottom: 0;
   width: 100%;
-  background: #E3E4E3;
+  background: rgba(227, 228, 227, 0.77);
   z-index: 1000;
   padding: 50px;
   height: 100%;
 }
 
-/* line 13, organisms/_actionDrawer.scss */
 .ad_actionDrawer__wrap {
   max-width: 500px;
   margin: auto;
   position: relative;
   top: 30%;
-  -webkit-transform: translateY(-30%);
-  -ms-transform: translateY(-30%);
   transform: translateY(-30%);
 }
-/* line 19, organisms/_actionDrawer.scss */
 .ad_actionDrawer__wrap h1 {
   color: #7A7A7A;
 }
 
-/* line 28, organisms/_actionDrawer.scss */
 .ad_actionDrawer__close {
   cursor: pointer;
   /* color: #F94B4B; */
@@ -1179,40 +1002,33 @@ pre[class*="language-"] {
   top: -53px;
 }
 
-/* line 38, organisms/_actionDrawer.scss */
 .ad_label {
   display: block;
   margin-bottom: 6px;
   color: #7A7A7A;
 }
 
-/* line 44, organisms/_actionDrawer.scss */
 .ad_label__file {
   color: #00aff0;
   font-weight: bold;
 }
 
-/* line 49, organisms/_actionDrawer.scss */
 .formInputGroup {
   margin-bottom: 12px;
 }
 
-/* line 55, organisms/_actionDrawer.scss */
 .inputBtnGroup .ad_btn {
   float: right;
 }
-/* line 57, organisms/_actionDrawer.scss */
 .inputBtnGroup .ad_btn:focus {
   outline: none;
   border: none;
 }
 
-/* line 67, organisms/_actionDrawer.scss */
 .inputBtnGroup__inputWrap {
   overflow: hidden;
 }
 
-/* line 71, organisms/_actionDrawer.scss */
 .ad_btn {
   height: 50px;
   border: none;
@@ -1221,17 +1037,14 @@ pre[class*="language-"] {
   background-color: #7A7A7A;
 }
 
-/* line 79, organisms/_actionDrawer.scss */
 .ad_btn-pos {
   background-color: #51CD6D;
 }
 
-/* line 82, organisms/_actionDrawer.scss */
 .ad_btn-neg {
   background-color: #CD5151;
 }
 
-/* line 87, organisms/_actionDrawer.scss */
 .ad_errorBox {
   position: absolute;
   top: 0;
@@ -1242,30 +1055,25 @@ pre[class*="language-"] {
   color: #fff;
   font-weight: bold;
 }
-/* line 96, organisms/_actionDrawer.scss */
 .ad_errorBox .fa {
   cursor: pointer;
 }
 
-/* line 100, organisms/_actionDrawer.scss */
 .ad_errorBox__message {
   margin: 11px;
 }
 
-/* line 1, _cleanup.scss */
 body {
   background: #FCFEFA;
   color: #7A7A7A;
   font-family: "Open Sans", sans-serif;
 }
 
-/* line 6, _cleanup.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #E2F3F5;
 }
 
-/* line 10, _cleanup.scss */
 .compTitle {
   text-transform: capitalize;
   display: block;
