@@ -1,0 +1,6 @@
+/* line 1, modules/_box.scss */
+.box {
+  height: 150px;
+  width: 300px;
+  background: #eee;
+}
