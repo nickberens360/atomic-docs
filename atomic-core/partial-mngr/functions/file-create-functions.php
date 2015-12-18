@@ -123,7 +123,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
         <div class="formInputGroup">
           <div class="inputBtnGroup">
             <button class="ad_btn ad_btn-pos" type="submit">Move</button>
-            <div class="inputBtnGroup__inputWrap">
+            <div class="inputBtnGroup__inputWrap u-bgWhite">
               <select id="newDir" class="form-control" >
                 <?php
 
