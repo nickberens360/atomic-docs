@@ -1,3 +1,35 @@
+var sideOpen = [
+  { elements: $(".atoms-side_show"), properties: { left: "-100%" }, options: { duration: 300} },
+  { elements: $(".atoms-side"), properties: { translateX: "0" }, options: { duration: 200} }, 
+  { elements: $(".atoms-main"), properties: { paddingLeft:"282px"}, options: { duration: 200, sequenceQueue: false } },
+  
+];
+
+$(".atoms-side_show ").on('click', function(event) {
+  event.preventDefault();
+  $.Velocity.RunSequence(sideOpen);
+});
+
+
+
+
+
+var sideClose = [
+  { elements: $(".atoms-side"), properties: { translateX: "-100%" }, options: { duration: 200} }, 
+  { elements: $(".atoms-main"), properties: { paddingLeft:"40px"}, options: { duration: 200, sequenceQueue: false } },
+  { elements: $(".atoms-side_show"), properties: { left: "7px" }, options: { duration: 300} }
+];
+
+$(".atoms-side_hide").on('click', function(event) {
+  $.Velocity.RunSequence(sideClose);
+});
+
+
+
+
+
+
+
 /*var navOpen = [
   { elements: $(".atoms-side"), properties: { left:"auto"}, options: { duration: 300} },
   
@@ -69,7 +101,7 @@ $('.navToggle').click(function() {
 
 
 
-function sidebar(){
+/*function sidebar(){
 	var $side = $('.atoms-side');
 	var $main = $('.atoms-main');
 	var $showBtn = $('.atoms-side_show');
@@ -107,7 +139,7 @@ $( ".atoms-side_show" ).click(function() {
 
 sideBarWidth = $( ".atoms-side_hide" ).outerWidth();
 	
-$('.atoms-main').css('padding-left',sideBarWidth+20);
+$('.atoms-main').css('padding-left',sideBarWidth+20);*/
 
 
 

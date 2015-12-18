@@ -9,7 +9,7 @@
           <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="renameFileName" required></div>
         </div>     
       </div>
-      <input type="hidden" name="compDir" value="modules"/>
+      <input type="hidden" name="compDir" value="layout"/>
       <input type="hidden" name="rename" value="rename"/>
       <input type="hidden" name="oldName" value="grid"/>
     </form>
@@ -19,7 +19,7 @@
    <form id="form-rename-notes"  class="ad_fileForm " action="/atomic-core/partial-mngr/notes-rename.php" method="post">
         <textarea class="form-control" name="compNotesNew"></textarea>        
         <button class="ad_btn ad_btn-pos" type="submit" >Rename</button>
-      <input type="hidden" name="compDir" value="modules"/>
+      <input type="hidden" name="compDir" value="layout"/>
       <input type="hidden" name="fileName" value="grid"/>
       <input type="hidden" name="compNotes" value=""/>
     </form>
@@ -53,7 +53,7 @@
           </div>  
         </div>
       </div>
-      <input type="hidden" name="compDir" value="modules"/>
+      <input type="hidden" name="compDir" value="layout"/>
       <input type="hidden" name="fileMoveName" value="grid"/>
       <input type="hidden" name="moveFile" value="moveFile"/>
       <input type="hidden" name="compNotes" value=""/>
@@ -68,7 +68,7 @@
           <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="deleteFileName" placeholder="Must type component name"></div>
         </div>  
       </div>
-      <input type="hidden" name="compDir" value="modules"/>
+      <input type="hidden" name="compDir" value="layout"/>
       <input type="hidden" name="delete" value="delete"/>
       <input type="hidden" name="compNotes" value=""/>
     </form>

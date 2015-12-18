@@ -8,7 +8,11 @@
 
 
 
-
+<div class="atoms-side_show-small ">
+	<span class="toggle-line"></span>
+	<span class="toggle-line"></span>
+	<span class="toggle-line"></span>
+</div>
 
 <div class="atoms-side_show ">
 	<span class="toggle-line"></span>

@@ -9,7 +9,7 @@
 	//@include col($ten);
 	//float:right;
 	padding:20px;
-	transition:all .5s;
+	//transition:all .5s;
 	padding-left:282px;
 	width:100%;
 	padding-top: 0;
@@ -39,7 +39,8 @@ pre[class*="language-"] {
 
 @media (max-width: 823px){ 
   .atoms-main{
-    padding-left:20px; 
+    padding-left:20px !important ; 
+    width:100%;
   }
 }
 
