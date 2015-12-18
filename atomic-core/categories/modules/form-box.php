@@ -1,12 +1,12 @@
 <div class="ad_fileFormGroup">
-<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Rename</span> box component file</label>
+<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Rename</span> box</label>
 <div class="showHide">
 	<form id="form-rename-file"  class="ad_fileForm " action="/atomic-core/partial-mngr/file-rename.php" method="post">
       <div class="formInputGroup">
         <div class="inputBtnGroup">
           
           <button class="ad_btn ad_btn-pos" type="submit" >Rename</button>
-          <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="renameFileName" required></div>
+          <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="renameFileName" value="box" required></div>
         </div>     
       </div>
       <input type="hidden" name="compDir" value="modules"/>
@@ -24,7 +24,7 @@
       <input type="hidden" name="compNotes" value=""/>
     </form>
 </div>
-<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Move</span>  box to...</label>
+<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Move</span>  box</label>
 <div class="showHide">
 	<form id="form-file-move" class="ad_fileForm " action="/atomic-core/partial-mngr/file-move.php" method="post">
       <div class="formGroup">
@@ -59,13 +59,13 @@
       <input type="hidden" name="compNotes" value=""/>
     </form>
 </div>
-<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> Type box to <span class="ad_label__file">delete</span> the component files</label>
+<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Delete</span> box</label>
 <div class="showHide">
     <form id="form-delete-file" class="ad_fileForm " action="/atomic-core/partial-mngr/delete.php" method="post">
       <div class="formInputGroup">
         <div class="inputBtnGroup">
           <button class="ad_btn ad_btn-neg" type="submit" >Delete</button>
-          <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="deleteFileName" placeholder="Must type component name"></div>
+          <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="deleteFileName" placeholder="Must type box to delete"></div>
         </div>  
       </div>
       <input type="hidden" name="compDir" value="modules"/>

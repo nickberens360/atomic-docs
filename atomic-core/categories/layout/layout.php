@@ -1,1 +1,0 @@
-<span id="grid" class="compTitle">grid</span><p class="compNotes">Grid notes for you and you as well.</p><div class="component"><?php include("../components/layout/grid.php");?></div>

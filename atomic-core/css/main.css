@@ -900,6 +900,7 @@ pre[class*="language-"] {
 /* line 1, ../scss/molecules/_compNotes.scss */
 .atomsWrap .compNotes {
   font-size: 13px;
+  color: #7a7a7a;
 }
 /* line 1, ../scss/organisms/_introBlock.scss */
 .atomsWrap .docBlock {
@@ -1125,10 +1126,6 @@ pre[class*="language-"] {
     top: 0 !important;
     display: block !important;
   }
-  /* line 184, ../scss/organisms/_atomic-nav.scss */
-  .atomsWrap .atoms-side_show {
-    left: 7px !important;
-  }
 }
 @media (max-width: 823px) {
   /* line 4, ../scss/main.scss */
@@ -1147,30 +1144,32 @@ pre[class*="language-"] {
     -webkit-transform: translateX(0) !important;
     -ms-transform: translateX(0) !important;
     transform: translateX(0) !important;
+    -webkit-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.25);
   }
-  /* line 206, ../scss/organisms/_atomic-nav.scss */
+  /* line 207, ../scss/organisms/_atomic-nav.scss */
   .atomsWrap .atoms-side_show, .atomsWrap .atoms-side_hide {
     display: none;
   }
-  /* line 210, ../scss/organisms/_atomic-nav.scss */
+  /* line 211, ../scss/organisms/_atomic-nav.scss */
   .atomsWrap .atoms-side_show-small, .atomsWrap .smallOpen {
     top: 7px;
     right: 7px;
     display: block;
   }
-  /* line 215, ../scss/organisms/_atomic-nav.scss */
+  /* line 216, ../scss/organisms/_atomic-nav.scss */
   .atomsWrap .ad_addFile {
     display: none;
   }
-  /* line 218, ../scss/organisms/_atomic-nav.scss */
+  /* line 219, ../scss/organisms/_atomic-nav.scss */
   .atomsWrap .ad_fileSection__file .fa {
     display: none;
   }
-  /* line 221, ../scss/organisms/_atomic-nav.scss */
+  /* line 222, ../scss/organisms/_atomic-nav.scss */
   .atomsWrap .catAdd a {
     display: none;
   }
-  /* line 224, ../scss/organisms/_atomic-nav.scss */
+  /* line 225, ../scss/organisms/_atomic-nav.scss */
   .atomsWrap .atoms-nav {
     margin: 0;
   }

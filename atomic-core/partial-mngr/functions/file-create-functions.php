@@ -80,7 +80,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
 	$includeString = 
 '<div class="ad_fileFormGroup">
 
-<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Rename</span> '.$fileName.' component file</label>
+<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Rename</span> '.$fileName.'</label>
 <div class="showHide">
 	<form id="form-rename-file"  class="ad_fileForm " action="/atomic-core/partial-mngr/file-rename.php" method="post">
       <div class="formInputGroup">
@@ -88,7 +88,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
         <div class="inputBtnGroup">
           
           <button class="ad_btn ad_btn-pos" type="submit" >Rename</button>
-          <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="renameFileName" required></div>
+          <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="renameFileName" value="'.$fileName.'" required></div>
 
         </div>     
 
@@ -116,7 +116,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
 
 
 
-<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Move</span>  '.$fileName.' to...</label>
+<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Move</span>  '.$fileName.'</label>
 <div class="showHide">
 	<form id="form-file-move" class="ad_fileForm " action="/atomic-core/partial-mngr/file-move.php" method="post">
       <div class="formGroup">
@@ -164,13 +164,13 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
 
 
 
-<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> Type '.$fileName.' to <span class="ad_label__file">delete</span> the component files</label>
+<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Delete</span> '.$fileName.'</label>
 <div class="showHide">
     <form id="form-delete-file" class="ad_fileForm " action="/atomic-core/partial-mngr/delete.php" method="post">
       <div class="formInputGroup">
         <div class="inputBtnGroup">
           <button class="ad_btn ad_btn-neg" type="submit" >Delete</button>
-          <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="deleteFileName" placeholder="Must type component name"></div>
+          <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="deleteFileName" placeholder="Must type '.$fileName.' to delete"></div>
         </div>  
       </div>
       <input type="hidden" name="compDir" value="'.$catName.'"/>

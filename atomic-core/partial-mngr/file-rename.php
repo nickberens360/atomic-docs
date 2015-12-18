@@ -22,7 +22,7 @@ $data           = array();      // array to pass back data
     $fileExists = '../../components/'.$catName.'/'.$renameFileName.'.'.$compExt.'';
     
     if (file_exists($fileExists) && $renameFileName != ""){
-        $errors['exists'] = 'Please enter a unique file name.';
+        $errors['exists'] = 'Please enter a unique component name.';
     }
     
     elseif ($_POST['renameFileName'] == ""){

@@ -19,12 +19,10 @@ $(".atoms-side_show-small").on('click', function(event) {
      $.Velocity.RunSequence(navOpen); 
      
   }
-  
-  
-    
-
 
 });
+
+ 
 
 
 
