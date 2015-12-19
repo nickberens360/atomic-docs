@@ -1,1 +1,0 @@
-<!--components/organisms/banner.php-->

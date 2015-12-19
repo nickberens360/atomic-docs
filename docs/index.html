@@ -1,0 +1,7 @@
+---
+layout: post
+---
+
+{% for post in site.categories['docs'] %}
+<a href="{{ site.baseurl }}{{ post.url }}"><span class="post-title">{{ post.title }}<span></a>
+{% endfor %}

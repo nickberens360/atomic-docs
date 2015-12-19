@@ -1,3 +1,0 @@
-<span id="headingList" class="compTitle">headingList</span><div class="component"><?php include("../components/modules/headingList.php");?></div>
-<span id="ascii-folders" class="compTitle">ascii-folders</span><div class="component"><?php include("../components/modules/ascii-folders.php");?></div>
-<span id="introText" class="compTitle">introText</span><div class="component"><?php include("../components/modules/introText.php");?></div>
