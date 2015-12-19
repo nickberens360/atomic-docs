@@ -1,1 +1,2 @@
 <span id="box" class="compTitle">box</span><p class="compNotes">This is the description for the box element.</p><div class="component"><?php include("../components/modules/box.php");?></div>
+<span id="grid" class="compTitle">grid</span><p class="compNotes">this is a;lkfj;kljadsf'adigf</p><div class="component"><?php include("../components/modules/grid.php");?></div>
