@@ -25,21 +25,34 @@ layout: post
 </head>
 <body>
 <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 <div class="banner banner-alt">
-  <h1 class="logo">Documentation</h1>
-  <div id="particles-js"></div>
+  <h1 class="logo">Atomic Docs</h1>
+  <div class="btnGroup">
+    <a href="#" class="btns btn1">Download</a>
+    <a href="https://github.com/nickberens360/atomic-docs" class="btns btn2">Github</a>
+    <a href="/docs" class="btns btn3">Documentation</a>
+  </div>
 </div>
-<div class="main main-white">
-  <div class="main-inner">
+
+<div class="main main-2col main-right main-white">
+  <div class="main-inner main-inner-alt">
     <div class="main-content">
       
-         <h1>{{page.title}}</h1>
-	
-
-	      <p>{{content}}</p>
-        
+         <h1 class="h1-alt">{{page.title}}</h1>
+	       {{content}}
+       
+     </div>
+     <div class="main-aside">
+       <ul class="docRoll">
+            {% for post in site.categories['docs'] %}
+              <li>   
+                <a href="{{ site.baseurl }}{{ post.url }}"><span class="post-title">{{ post.title }}<span></a>
+                
+              </li>
+            {% endfor %}
+        </ul>
      </div>
     </div>
   </div>

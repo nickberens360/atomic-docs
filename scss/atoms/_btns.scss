@@ -27,13 +27,7 @@
   background:#3D4A57;
 }
 .btn3{
-	background:$color3;
-  top: 10px;
-  padding: 4px 40px;
-  line-height:1;
-  span{
-    display:block; 
-  }
+	background:#5583B2;
 }
 .btn4{
 	background:#1A61F1;
@@ -43,4 +37,9 @@
 .btnGroup{
   text-align:center; 
   margin-bottom:100px;
+}
+
+a{
+   color: #7B7C7D;
+   text-decoration:none;
 }

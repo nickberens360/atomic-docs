@@ -1,10 +1,15 @@
 .main{
   padding:70px 20px;
   margin-bottom: 1px;
-	.main-inner{
-	    @extend .wrap;
-        @extend .grid-row;
-	}
+	
+}
+.main-inner{
+  @extend .wrap;
+  @extend .grid-row;
+}
+.main-inner.main-inner-alt{
+  max-width:1200px;
+  margin:auto;
 }
 .main-wht{
 	background: #fff;
@@ -18,7 +23,7 @@
 }
 
 .main-aside{
-  background:#E7E3E3; 
+  //background:#E7E3E3; 
   padding:$base;
 }
 
@@ -33,13 +38,18 @@
 }
 
 .main-2col.main-right{
+  padding-top:150px;
 	.main-content{
-		@include col($eight);
+		@include col($nine);
 		float:right;
+    border-left: 1px solid #BABABA;
+    padding-left: 80px;
+    padding-top:0;
 	}
 	.main-aside{
-		@include col($four);
+		@include col($three);
 		float:right;
+    padding-top:0;
 	}
 }
 

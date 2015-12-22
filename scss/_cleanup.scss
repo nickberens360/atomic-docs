@@ -2,7 +2,7 @@ img{
   max-width:100%; 
 }
 body{
-	background: #EBECEA;
+	//background:#D7F3F6;
 	color: #656565;
 	font-family: $font1;
 }
@@ -12,6 +12,17 @@ body{
   color: #6C6F6F;
   font-size: 14px;
   padding: 2px 8px;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+p{
+  line-height:1.5; 
+  font-size:18px;
 }
 
 
