@@ -42,7 +42,7 @@
 	.main-content{
 		@include col($nine);
 		float:right;
-    border-left: 1px solid #BABABA;
+    border-left: 1px dashed #BABABA;
     padding-left: 80px;
     padding-top:0;
 	}
