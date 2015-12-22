@@ -24,3 +24,21 @@ permalink: /docs/project-structure
     </ul>
   </li>
 </ul>
+<dl class="dlList">
+  <dt>atomic-docs/</dt>
+  <dd>The root project directory. Change to whatever the name of your project is.</dd>
+  <dt>atomic-core/</dt>
+  <dd>The directory that holds the atomic-docs application logic. (I'm stricly a front-end programmer, view my janky backend code at your own risk)</dd>
+  <dt>components/</dt>
+  <dd>This directory holds the component files where you will be authoring your html. For example, if you create a component named "box", you would find box.html in this directory.</dd>
+  <dt>css/</dt>
+  <dd>Nothing fancy here. Just the usual css directory that your sass/less files will be preprocessed into.</dd>
+  <dt>scss/</dt>
+  <dd>The scss directory where you author the styles for your components. For example, if you create a component named "box", you would find _box.scss in this directory. You can change this directory name to whatever you want. Just make sure to update the name in the config.php file.</dd>
+  <dt>.htaccss</dt>
+  <dd>Used to turn output_buffering to on to solve error issues in osx. Need to find a better solution, this works for now however.</dd>
+  <dt>config.php</dt>
+  <dd>Change certain defaults here. You can change the name of the scss dir to less here. You can change the .scss file extension to .less as well. Also you can change the component extension from .php to .html or .mustache or whatever you'd like.</dd>
+  <dt>index.php</dt>
+  <dd>Your projects index file. </dd>
+</dl>
