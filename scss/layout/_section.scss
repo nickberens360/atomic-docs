@@ -1,39 +1,35 @@
 .section{
-  padding:0 20px;
-  border:1px solid #B7B7B7;
   margin-bottom: 1px;
+  padding: 70px 20px;
 	.section-inner{
-		@extend .wrap;
+		@include wrap(1000px, 0);
     @extend .grid-row;
 	}
 }
 .section-content{
-	padding:$base;
-  background:#DADADA; 
+   padding:20px;
 }
 
 .section-aside{
-  background:#E7E3E3; 
-  padding:$base;
+  text-align:center;
+  padding:20px;
 }
 
 .section-2col{
 	.section-content{
-		@include col($eight);
+		@include col($six);
 	}
 	.section-aside{
-		@include col($four);
+		@include col($six);
 		
 	}
 }
 
 .section-2col.section-right{
 	.section-content{
-		@include col($eight);
 		float:right;
 	}
 	.section-aside{
-		@include col($four);
 		float:right;
 	}
 }

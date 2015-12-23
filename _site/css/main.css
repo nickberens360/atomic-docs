@@ -36,7 +36,6 @@
   z-index: 3000;
   right: 0;
   top: 0;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.57);
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.57);
 }
 /* line 39, ../scss/variables/_colors.scss */
@@ -71,7 +70,7 @@ pre, table, hr, .atoms-code-example {
 }
 
 /* line 4, ../scss/variables/_wrap.scss */
-.wrap, .main-inner, .section .section-inner, .headingList {
+.wrap, .main-inner, .headingList {
   max-width: 720px;
   padding-right: 20px;
   padding-left: 20px;
@@ -81,7 +80,7 @@ pre, table, hr, .atoms-code-example {
 
 @media (max-width: 120px) {
   /* line 12, ../scss/variables/_wrap.scss */
-  .wrap, .main-inner, .section .section-inner, .headingList {
+  .wrap, .main-inner, .headingList {
     max-width: 100%;
   }
 }
@@ -362,7 +361,6 @@ figure {
 /* line 211, ../scss/reset/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -489,8 +487,6 @@ input {
 /* line 334, ../scss/reset/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -1432,7 +1428,7 @@ th {
   float: left;
   width: 75%;
   float: right;
-  border-left: 1px solid #BABABA;
+  border-left: 1px dashed #BABABA;
   padding-left: 80px;
   padding-top: 0;
 }
@@ -1446,44 +1442,52 @@ th {
 
 /* line 1, ../scss/layout/_section.scss */
 .section {
-  padding: 0 20px;
-  border: 1px solid #B7B7B7;
   margin-bottom: 1px;
+  padding: 70px 20px;
+}
+/* line 4, ../scss/layout/_section.scss */
+.section .section-inner {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+@media (max-width: 1100px) {
+  /* line 28, ../scss/variables/_wrap.scss */
+  .section .section-inner {
+    max-width: 100%;
+  }
 }
 
-/* line 10, ../scss/layout/_section.scss */
+/* line 9, ../scss/layout/_section.scss */
 .section-content {
-  padding: 24px;
-  background: #DADADA;
+  padding: 20px;
 }
 
-/* line 15, ../scss/layout/_section.scss */
+/* line 13, ../scss/layout/_section.scss */
 .section-aside {
-  background: #E7E3E3;
-  padding: 24px;
+  text-align: center;
+  padding: 20px;
 }
 
-/* line 21, ../scss/layout/_section.scss */
+/* line 19, ../scss/layout/_section.scss */
 .section-2col .section-content {
   float: left;
-  width: 66.66667%;
+  width: 50%;
 }
-/* line 24, ../scss/layout/_section.scss */
+/* line 22, ../scss/layout/_section.scss */
 .section-2col .section-aside {
   float: left;
-  width: 33.33333%;
+  width: 50%;
 }
 
-/* line 31, ../scss/layout/_section.scss */
+/* line 29, ../scss/layout/_section.scss */
 .section-2col.section-right .section-content {
-  float: left;
-  width: 66.66667%;
   float: right;
 }
-/* line 35, ../scss/layout/_section.scss */
+/* line 32, ../scss/layout/_section.scss */
 .section-2col.section-right .section-aside {
-  float: left;
-  width: 33.33333%;
   float: right;
 }
 
@@ -1508,15 +1512,11 @@ body {
 
 /* line 17, ../scss/_cleanup.scss */
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 /* line 20, ../scss/_cleanup.scss */
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -1524,6 +1524,16 @@ html {
 p {
   line-height: 1.5;
   font-size: 18px;
+}
+
+/* line 28, ../scss/_cleanup.scss */
+.u_bgBlue {
+  background: #D7F3F6;
+}
+
+/* line 32, ../scss/_cleanup.scss */
+.docImage {
+  box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* line 1, ../scss/atoms/_headings.scss */
@@ -1544,6 +1554,7 @@ p {
 /* line 13, ../scss/atoms/_headings.scss */
 .h1-alt {
   font-size: 60px;
+  color: #5583B2;
 }
 
 /* line 17, ../scss/atoms/_headings.scss */
@@ -1597,7 +1608,6 @@ p {
   color: #fff;
   opacity: 1;
   cursor: pointer;
-  -webkit-transition: all .25s;
   transition: all .25s;
   position: relative;
   border: none;
@@ -2105,7 +2115,6 @@ ul.ascii li {
   margin: auto;
   display: block;
   margin-bottom: -100px;
-  -webkit-box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -2117,7 +2126,6 @@ ul.ascii li {
   background-color: #FCFEFA;
   background-image: url("");
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
   background-position: 50% 50%;
   top: 0;
