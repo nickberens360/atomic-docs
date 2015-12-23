@@ -1423,11 +1423,11 @@ th {
   width: 25%;
 }
 
-/* line 42, ../scss/layout/_main.scss */
+/* line 44, ../scss/layout/_main.scss */
 .main-2col.main-right {
   padding-top: 150px;
 }
-/* line 44, ../scss/layout/_main.scss */
+/* line 46, ../scss/layout/_main.scss */
 .main-2col.main-right .main-content {
   float: left;
   width: 75%;
@@ -1436,7 +1436,7 @@ th {
   padding-left: 80px;
   padding-top: 0;
 }
-/* line 51, ../scss/layout/_main.scss */
+/* line 53, ../scss/layout/_main.scss */
 .main-2col.main-right .main-aside {
   float: left;
   width: 25%;
