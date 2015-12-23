@@ -2052,6 +2052,10 @@ ul.ascii li {
   max-width: 500px;
   margin: auto;
 }
+/* line 5, ../scss/modules/_introText.scss */
+.introText .btnGroup {
+  margin-bottom: 0;
+}
 
 /* line 1, ../scss/modules/_docRoll.scss */
 .docRoll {
