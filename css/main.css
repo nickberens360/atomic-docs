@@ -1392,42 +1392,42 @@ th {
   margin: auto;
 }
 
-/* line 14, ../scss/layout/_main.scss */
+/* line 16, ../scss/layout/_main.scss */
 .main-wht {
   background: #fff;
 }
 
-/* line 17, ../scss/layout/_main.scss */
+/* line 19, ../scss/layout/_main.scss */
 .main-blue {
   background: #D7F3F6;
 }
 
-/* line 20, ../scss/layout/_main.scss */
+/* line 22, ../scss/layout/_main.scss */
 .main-content {
   padding: 24px;
 }
 
-/* line 25, ../scss/layout/_main.scss */
+/* line 27, ../scss/layout/_main.scss */
 .main-aside {
   padding: 24px;
 }
 
-/* line 31, ../scss/layout/_main.scss */
+/* line 33, ../scss/layout/_main.scss */
 .main-2col .main-content {
   float: left;
-  width: 66.66667%;
+  width: 75%;
 }
-/* line 34, ../scss/layout/_main.scss */
+/* line 36, ../scss/layout/_main.scss */
 .main-2col .main-aside {
   float: left;
-  width: 33.33333%;
+  width: 25%;
 }
 
-/* line 40, ../scss/layout/_main.scss */
+/* line 42, ../scss/layout/_main.scss */
 .main-2col.main-right {
   padding-top: 150px;
 }
-/* line 42, ../scss/layout/_main.scss */
+/* line 44, ../scss/layout/_main.scss */
 .main-2col.main-right .main-content {
   float: left;
   width: 75%;
@@ -1436,7 +1436,7 @@ th {
   padding-left: 80px;
   padding-top: 0;
 }
-/* line 49, ../scss/layout/_main.scss */
+/* line 51, ../scss/layout/_main.scss */
 .main-2col.main-right .main-aside {
   float: left;
   width: 25%;

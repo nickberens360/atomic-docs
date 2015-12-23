@@ -11,6 +11,8 @@
   max-width:1200px;
   margin:auto;
 }
+
+
 .main-wht{
 	background: #fff;
 }
@@ -29,10 +31,10 @@
 
 .main-2col{
 	.main-content{
-		@include col($eight);
+		@include col($nine);
 	}
 	.main-aside{
-		@include col($four);
+		@include col($three);
 		
 	}
 }
