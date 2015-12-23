@@ -1430,7 +1430,7 @@ th {
 /* line 46, ../scss/layout/_main.scss */
 .main-2col.main-right .main-content {
   float: left;
-  width: 75%;
+  width: 83.33333%;
   float: right;
   border-left: 1px dashed #BABABA;
   padding-left: 80px;
@@ -1439,7 +1439,7 @@ th {
 /* line 53, ../scss/layout/_main.scss */
 .main-2col.main-right .main-aside {
   float: left;
-  width: 25%;
+  width: 16.66667%;
   float: right;
   padding-top: 0;
 }
