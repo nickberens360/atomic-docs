@@ -2113,8 +2113,12 @@ ul.ascii li {
   margin-bottom: 0;
   color: #00aff0;
 }
+/* line 35, ../scss/organisms/_banner.scss */
+.logo a {
+  color: #00aff0;
+}
 
-/* line 37, ../scss/organisms/_banner.scss */
+/* line 40, ../scss/organisms/_banner.scss */
 .banner__sub {
   font-size: 18px;
   margin-bottom: 30px;
@@ -2122,7 +2126,7 @@ ul.ascii li {
   text-align: center;
 }
 
-/* line 44, ../scss/organisms/_banner.scss */
+/* line 47, ../scss/organisms/_banner.scss */
 .demoImg {
   max-width: 800px;
   width: 100%;
@@ -2133,7 +2137,7 @@ ul.ascii li {
   box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* line 56, ../scss/organisms/_banner.scss */
+/* line 59, ../scss/organisms/_banner.scss */
 #particles-js {
   position: absolute;
   width: 100%;
