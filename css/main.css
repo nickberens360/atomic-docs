@@ -1412,22 +1412,22 @@ th {
   padding: 24px;
 }
 
-/* line 33, ../scss/layout/_main.scss */
+/* line 32, ../scss/layout/_main.scss */
 .main-2col .main-content {
   float: left;
   width: 75%;
 }
-/* line 36, ../scss/layout/_main.scss */
+/* line 35, ../scss/layout/_main.scss */
 .main-2col .main-aside {
   float: left;
   width: 25%;
 }
 
-/* line 44, ../scss/layout/_main.scss */
+/* line 43, ../scss/layout/_main.scss */
 .main-2col.main-right {
   padding-top: 150px;
 }
-/* line 46, ../scss/layout/_main.scss */
+/* line 45, ../scss/layout/_main.scss */
 .main-2col.main-right .main-content {
   float: left;
   width: 83.33333%;
@@ -1436,7 +1436,7 @@ th {
   padding-left: 80px;
   padding-top: 0;
 }
-/* line 53, ../scss/layout/_main.scss */
+/* line 52, ../scss/layout/_main.scss */
 .main-2col.main-right .main-aside {
   float: left;
   width: 16.66667%;
