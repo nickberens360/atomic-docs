@@ -1,6 +1,5 @@
 .main{
-  padding:70px 20px;
-  margin-bottom: 1px;
+  padding:70px 0;
 	
 }
 .main-inner{
@@ -10,6 +9,8 @@
 .main-inner.main-inner-alt{
   @include wrap(1200px, 20px);
 }
+
+
 
 
 .main-wht{
