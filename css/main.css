@@ -2291,3 +2291,15 @@ ul.ascii li {
     font-size: 16px;
   }
 }
+/* line 1, ../scss/organisms/_footer.scss */
+.footerMain {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  background: #3D4A57;
+}
+/* line 6, ../scss/organisms/_footer.scss */
+.footerMain a {
+  color: #BEBEBE;
+  font-family: "Roboto Condensed", sans-serif;
+}
