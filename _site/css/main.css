@@ -1382,64 +1382,74 @@ th {
 
 /* line 1, ../scss/layout/_main.scss */
 .main {
-  padding: 70px 20px;
-  margin-bottom: 1px;
+  padding: 70px 0;
 }
 
-/* line 10, ../scss/layout/_main.scss */
+/* line 9, ../scss/layout/_main.scss */
 .main-inner.main-inner-alt {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+@media (max-width: 1000px) {
+  /* line 28, ../scss/variables/_wrap.scss */
+  .main-inner.main-inner-alt {
+    max-width: 100%;
+  }
 }
 
-/* line 14, ../scss/layout/_main.scss */
+/* line 16, ../scss/layout/_main.scss */
 .main-wht {
   background: #fff;
 }
 
-/* line 17, ../scss/layout/_main.scss */
+/* line 19, ../scss/layout/_main.scss */
 .main-blue {
   background: #D7F3F6;
 }
 
-/* line 20, ../scss/layout/_main.scss */
+/* line 22, ../scss/layout/_main.scss */
 .main-content {
   padding: 24px;
+  padding-right: 0;
 }
 
-/* line 25, ../scss/layout/_main.scss */
+/* line 28, ../scss/layout/_main.scss */
 .main-aside {
   padding: 24px;
+  padding-left: 0;
 }
 
-/* line 31, ../scss/layout/_main.scss */
+/* line 34, ../scss/layout/_main.scss */
 .main-2col .main-content {
   float: left;
-  width: 66.66667%;
+  width: 75%;
 }
-/* line 34, ../scss/layout/_main.scss */
+/* line 37, ../scss/layout/_main.scss */
 .main-2col .main-aside {
   float: left;
-  width: 33.33333%;
+  width: 25%;
 }
 
-/* line 40, ../scss/layout/_main.scss */
+/* line 45, ../scss/layout/_main.scss */
 .main-2col.main-right {
   padding-top: 150px;
 }
-/* line 42, ../scss/layout/_main.scss */
+/* line 47, ../scss/layout/_main.scss */
 .main-2col.main-right .main-content {
   float: left;
-  width: 75%;
+  width: 83.33333%;
   float: right;
   border-left: 1px dashed #BABABA;
   padding-left: 80px;
   padding-top: 0;
 }
-/* line 49, ../scss/layout/_main.scss */
+/* line 54, ../scss/layout/_main.scss */
 .main-2col.main-right .main-aside {
   float: left;
-  width: 25%;
+  width: 16.66667%;
   float: right;
   padding-top: 0;
 }
@@ -2052,6 +2062,10 @@ ul.ascii li {
   max-width: 500px;
   margin: auto;
 }
+/* line 5, ../scss/modules/_introText.scss */
+.introText .btnGroup {
+  margin-bottom: 0;
+}
 
 /* line 1, ../scss/modules/_docRoll.scss */
 .docRoll {
@@ -2074,14 +2088,14 @@ ul.ascii li {
 
 /* line 9, ../scss/organisms/_banner.scss */
 .banner-alt {
-  max-width: 1140px;
+  max-width: 940px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 50px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   /* line 28, ../scss/variables/_wrap.scss */
   .banner-alt {
     max-width: 100%;
@@ -2109,8 +2123,12 @@ ul.ascii li {
   margin-bottom: 0;
   color: #00aff0;
 }
+/* line 35, ../scss/organisms/_banner.scss */
+.logo a {
+  color: #00aff0;
+}
 
-/* line 37, ../scss/organisms/_banner.scss */
+/* line 40, ../scss/organisms/_banner.scss */
 .banner__sub {
   font-size: 18px;
   margin-bottom: 30px;
@@ -2118,7 +2136,7 @@ ul.ascii li {
   text-align: center;
 }
 
-/* line 44, ../scss/organisms/_banner.scss */
+/* line 47, ../scss/organisms/_banner.scss */
 .demoImg {
   max-width: 800px;
   width: 100%;
@@ -2129,7 +2147,7 @@ ul.ascii li {
   box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* line 56, ../scss/organisms/_banner.scss */
+/* line 59, ../scss/organisms/_banner.scss */
 #particles-js {
   position: absolute;
   width: 100%;

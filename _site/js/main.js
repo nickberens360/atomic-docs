@@ -1,6 +1,8 @@
 jQuery( document ).ready(function( $ ) {
 
 
+$(".vidWrap").fitVids();
+
 /* $('.menu').dropit();
  
  
