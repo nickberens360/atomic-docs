@@ -26,6 +26,7 @@
 
 .main-aside{
   padding:$base;
+  padding-left:0;
 }
 
 .main-2col{
@@ -52,7 +53,7 @@
 	.main-aside{
 		@include col($two);
 		float:right;
-    padding-top:0;
+        padding-top:0;
 	}
 }
 
