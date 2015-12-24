@@ -7,7 +7,7 @@
   @extend .grid-row;
 }
 .main-inner.main-inner-alt{
-  @include wrap(1200px, 20px);
+  @include wrap(900px, 20px);
 }
 
 
