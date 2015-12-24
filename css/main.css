@@ -1439,8 +1439,7 @@ th {
 }
 /* line 47, ../scss/layout/_main.scss */
 .main-2col.main-right .main-content {
-  float: left;
-  width: 83.33333%;
+  width: 80%;
   float: right;
   border-left: 1px dashed #BABABA;
   padding-left: 80px;
@@ -1448,8 +1447,7 @@ th {
 }
 /* line 54, ../scss/layout/_main.scss */
 .main-2col.main-right .main-aside {
-  float: left;
-  width: 16.66667%;
+  width: 20%;
   float: right;
   padding-top: 0;
 }

@@ -45,14 +45,14 @@
 .main-2col.main-right{
   padding-top:150px;
 	.main-content{
-		@include col($ten);
+		width:80%;
 		float:right;
     border-left: 1px dashed #BABABA;
     padding-left: 80px;
     padding-top:0;
 	}
 	.main-aside{
-		@include col($two);
+		width:20%;
 		float:right;
     padding-top:0;
 	}

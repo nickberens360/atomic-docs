@@ -36,7 +36,6 @@
   z-index: 3000;
   right: 0;
   top: 0;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.57);
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.57);
 }
 /* line 39, ../scss/variables/_colors.scss */
@@ -362,7 +361,6 @@ figure {
 /* line 211, ../scss/reset/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -489,8 +487,6 @@ input {
 /* line 334, ../scss/reset/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -1439,8 +1435,7 @@ th {
 }
 /* line 47, ../scss/layout/_main.scss */
 .main-2col.main-right .main-content {
-  float: left;
-  width: 83.33333%;
+  width: 80%;
   float: right;
   border-left: 1px dashed #BABABA;
   padding-left: 80px;
@@ -1448,8 +1443,7 @@ th {
 }
 /* line 54, ../scss/layout/_main.scss */
 .main-2col.main-right .main-aside {
-  float: left;
-  width: 16.66667%;
+  width: 20%;
   float: right;
   padding-top: 0;
 }
@@ -1582,15 +1576,11 @@ body {
 
 /* line 17, ../scss/_cleanup.scss */
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 /* line 20, ../scss/_cleanup.scss */
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -1613,7 +1603,6 @@ p {
 
 /* line 35, ../scss/_cleanup.scss */
 .docImage {
-  -webkit-box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -1707,7 +1696,6 @@ p {
   color: #fff;
   opacity: 1;
   cursor: pointer;
-  -webkit-transition: all .25s;
   transition: all .25s;
   position: relative;
   border: none;
@@ -1755,7 +1743,7 @@ p {
 
 /* line 42, ../scss/atoms/_btns.scss */
 a {
-  color: #7B7C7D;
+  color: #5583B2;
   text-decoration: none;
 }
 
@@ -2246,7 +2234,6 @@ ul.ascii li {
   margin: auto;
   display: block;
   margin-bottom: -100px;
-  -webkit-box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -2258,7 +2245,6 @@ ul.ascii li {
   background-color: #FCFEFA;
   background-image: url("");
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
   background-position: 50% 50%;
   top: 0;
