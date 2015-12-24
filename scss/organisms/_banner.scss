@@ -20,7 +20,25 @@
     margin-top:0;
     font-size: 32px;
   }
+  @media (max-width: 707px){ 
+    padding-top:48px;
+    .logo{
+      float:none;
+      text-align:center; 
+      margin-bottom:48px;
+    }
+    .btnGroup{
+      margin-bottom:0;
+      float:none;
+      .btns{
+        width:100%;
+        display:block; 
+        margin-bottom:12px;
+      }
+    }
+  }
 }
+
 
 
 
@@ -54,8 +72,6 @@
 }
 
 
-
-
 #particles-js {
   position: absolute;
   width: 100%;
@@ -68,3 +84,31 @@
   top:0;
   z-index: -1;
 }
+
+
+@media (max-width: 498px){ 
+  .btnGroup{
+    margin-bottom:48px;
+    .btns{
+      width:100%;
+      display:block; 
+      margin-bottom:12px;
+    }
+  }
+  .demoImg{
+    margin-bottom: 48px; 
+  }
+  .logo{
+    margin-top:48px; 
+    font-size:38px;
+  }
+  .banner__sub {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+

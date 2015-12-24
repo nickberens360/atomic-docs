@@ -54,7 +54,33 @@
 	.main-aside{
 		@include col($two);
 		float:right;
-        padding-top:0;
+    padding-top:0;
 	}
+}
+@media (max-width: 934px){ 
+  .main-2col.main-right{
+    padding-top:100px;
+    .main-content{
+      padding-left: 40px;
+    }
+  }
+}
+
+@media (max-width: 797px){ 
+  .main-2col.main-right{
+    padding-top:48px;
+    .main-content{
+      @include col($twelve);
+      float:none;
+      border-left: none;
+      border-bottom: 1px dashed #BABABA;
+      margin-bottom:24px;
+      padding-left: 0;
+      padding-top:0;
+    }
+    .main-aside{
+      @include col($twelve);
+    }
+  }
 }
 

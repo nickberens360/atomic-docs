@@ -1454,6 +1454,38 @@ th {
   padding-top: 0;
 }
 
+@media (max-width: 934px) {
+  /* line 61, ../scss/layout/_main.scss */
+  .main-2col.main-right {
+    padding-top: 100px;
+  }
+  /* line 63, ../scss/layout/_main.scss */
+  .main-2col.main-right .main-content {
+    padding-left: 40px;
+  }
+}
+@media (max-width: 797px) {
+  /* line 70, ../scss/layout/_main.scss */
+  .main-2col.main-right {
+    padding-top: 48px;
+  }
+  /* line 72, ../scss/layout/_main.scss */
+  .main-2col.main-right .main-content {
+    float: left;
+    width: 100%;
+    float: none;
+    border-left: none;
+    border-bottom: 1px dashed #BABABA;
+    margin-bottom: 24px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  /* line 81, ../scss/layout/_main.scss */
+  .main-2col.main-right .main-aside {
+    float: left;
+    width: 100%;
+  }
+}
 /* line 1, ../scss/layout/_section.scss */
 .section {
   margin-bottom: 1px;
@@ -1505,6 +1537,30 @@ th {
   float: right;
 }
 
+@media (max-width: 794px) {
+  /* line 37, ../scss/layout/_section.scss */
+  .section-content {
+    padding: 0;
+  }
+
+  /* line 41, ../scss/layout/_section.scss */
+  .section-2col .section-content {
+    float: left;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  /* line 47, ../scss/layout/_section.scss */
+  .section-2col .section-aside {
+    float: left;
+    width: 100%;
+    padding: 0;
+    /*.docImage{
+      margin-top:48px; 
+      display:inline-block;
+    }*/
+  }
+}
 /* line 1, ../scss/_cleanup.scss */
 img {
   max-width: 100%;
@@ -1543,13 +1599,19 @@ p {
   line-height: 1.5;
   font-size: 18px;
 }
+@media (max-width: 411px) {
+  /* line 23, ../scss/_cleanup.scss */
+  p {
+    font-size: 16px;
+  }
+}
 
-/* line 28, ../scss/_cleanup.scss */
+/* line 31, ../scss/_cleanup.scss */
 .u_bgBlue {
   background: #D7F3F6;
 }
 
-/* line 32, ../scss/_cleanup.scss */
+/* line 35, ../scss/_cleanup.scss */
 .docImage {
   -webkit-box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
@@ -1575,25 +1637,43 @@ p {
   font-size: 60px;
   color: #5583B2;
 }
+@media (max-width: 594px) {
+  /* line 13, ../scss/atoms/_headings.scss */
+  .h1-alt {
+    font-size: 48px;
+  }
+}
+@media (max-width: 394px) {
+  /* line 13, ../scss/atoms/_headings.scss */
+  .h1-alt {
+    font-size: 36px;
+  }
+}
 
-/* line 17, ../scss/atoms/_headings.scss */
+/* line 23, ../scss/atoms/_headings.scss */
 .h2 {
   font-size: 20px;
 }
 
-/* line 21, ../scss/atoms/_headings.scss */
+/* line 27, ../scss/atoms/_headings.scss */
 .h3 {
   font-size: 40px;
   color: #35363a;
   text-transform: none;
   font-weight: bold;
 }
+@media (max-width: 411px) {
+  /* line 27, ../scss/atoms/_headings.scss */
+  .h3 {
+    font-size: 30px;
+  }
+}
 
-/* line 31, ../scss/atoms/_headings.scss */
+/* line 39, ../scss/atoms/_headings.scss */
 .h3__alt {
   border-bottom: 1px dotted;
 }
-/* line 33, ../scss/atoms/_headings.scss */
+/* line 41, ../scss/atoms/_headings.scss */
 .h3__alt span {
   font-family: "Lora", serif;
   font-weight: bold;
@@ -1601,7 +1681,7 @@ p {
   text-transform: uppercase;
 }
 
-/* line 42, ../scss/atoms/_headings.scss */
+/* line 50, ../scss/atoms/_headings.scss */
 .h4 {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
@@ -2113,8 +2193,31 @@ ul.ascii li {
   margin-top: 0;
   font-size: 32px;
 }
+@media (max-width: 707px) {
+  /* line 9, ../scss/organisms/_banner.scss */
+  .banner-alt {
+    padding-top: 48px;
+  }
+  /* line 25, ../scss/organisms/_banner.scss */
+  .banner-alt .logo {
+    float: none;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  /* line 30, ../scss/organisms/_banner.scss */
+  .banner-alt .btnGroup {
+    margin-bottom: 0;
+    float: none;
+  }
+  /* line 33, ../scss/organisms/_banner.scss */
+  .banner-alt .btnGroup .btns {
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+  }
+}
 
-/* line 28, ../scss/organisms/_banner.scss */
+/* line 46, ../scss/organisms/_banner.scss */
 .logo {
   font-size: 55px;
   font-weight: 300;
@@ -2123,12 +2226,12 @@ ul.ascii li {
   margin-bottom: 0;
   color: #00aff0;
 }
-/* line 35, ../scss/organisms/_banner.scss */
+/* line 53, ../scss/organisms/_banner.scss */
 .logo a {
   color: #00aff0;
 }
 
-/* line 40, ../scss/organisms/_banner.scss */
+/* line 58, ../scss/organisms/_banner.scss */
 .banner__sub {
   font-size: 18px;
   margin-bottom: 30px;
@@ -2136,7 +2239,7 @@ ul.ascii li {
   text-align: center;
 }
 
-/* line 47, ../scss/organisms/_banner.scss */
+/* line 65, ../scss/organisms/_banner.scss */
 .demoImg {
   max-width: 800px;
   width: 100%;
@@ -2147,7 +2250,7 @@ ul.ascii li {
   box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* line 59, ../scss/organisms/_banner.scss */
+/* line 75, ../scss/organisms/_banner.scss */
 #particles-js {
   position: absolute;
   width: 100%;
@@ -2160,4 +2263,33 @@ ul.ascii li {
   background-position: 50% 50%;
   top: 0;
   z-index: -1;
+}
+
+@media (max-width: 498px) {
+  /* line 90, ../scss/organisms/_banner.scss */
+  .btnGroup {
+    margin-bottom: 48px;
+  }
+  /* line 92, ../scss/organisms/_banner.scss */
+  .btnGroup .btns {
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  /* line 98, ../scss/organisms/_banner.scss */
+  .demoImg {
+    margin-bottom: 48px;
+  }
+
+  /* line 101, ../scss/organisms/_banner.scss */
+  .logo {
+    margin-top: 48px;
+    font-size: 38px;
+  }
+
+  /* line 105, ../scss/organisms/_banner.scss */
+  .banner__sub {
+    font-size: 16px;
+  }
 }

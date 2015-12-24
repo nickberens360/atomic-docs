@@ -33,3 +33,24 @@
 		float:right;
 	}
 }
+@media (max-width: 794px){ 
+  .section-content{
+    padding:0;
+  }
+  .section-2col{
+    .section-content{
+      @include col($twelve);
+      padding:0;
+      text-align:center;
+      
+    }
+    .section-aside{
+      @include col($twelve);
+      padding:0;
+      /*.docImage{
+        margin-top:48px; 
+        display:inline-block;
+      }*/
+    }
+  }
+}

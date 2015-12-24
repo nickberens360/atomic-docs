@@ -13,6 +13,12 @@
 .h1-alt{
   font-size:60px; 
   color: #5583B2;
+  @media (max-width: 594px){ 
+    font-size:48px; 
+  }
+  @media (max-width: 394px){ 
+    font-size:36px;
+  }
 }
 .h2{
   font-size:20px;
@@ -22,8 +28,10 @@
   font-size:40px;
   color:#35363a;
   text-transform:none;
-  
   font-weight: bold;
+  @media (max-width: 411px){ 
+    font-size:30px;
+  }
 }
 
 
