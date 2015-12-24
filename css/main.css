@@ -2087,14 +2087,14 @@ ul.ascii li {
 
 /* line 9, organisms/_banner.scss */
 .banner-alt {
-  max-width: 1140px;
+  max-width: 1240px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 50px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   /* line 28, variables/_wrap.scss */
   .banner-alt {
     max-width: 100%;
