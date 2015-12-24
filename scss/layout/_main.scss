@@ -8,8 +8,7 @@
   @extend .grid-row;
 }
 .main-inner.main-inner-alt{
-  max-width:1200px;
-  margin:auto;
+  @include wrap(1200px, 20px);
 }
 
 
