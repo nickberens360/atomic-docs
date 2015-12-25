@@ -19,6 +19,5 @@
     
 		<?php 
 		include ("../atomic-head.php");
-		require '../config.php';
 		?>
 </head>

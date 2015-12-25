@@ -3,7 +3,7 @@
    <head>
     <title>Title of the document</title>
 
-    <?php include ("_shared-head.php");?>
+    <?php include ("atomic-head.php");?>
 
     <style>
       html, body{
@@ -32,7 +32,7 @@
     </div>  
   </body>
   
-  <?php include ("_shared-foot.php");?>
+  <?php include ("atomic-foot.php");?>
 
 </html>
 
