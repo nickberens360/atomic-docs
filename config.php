@@ -2,9 +2,11 @@
 function getConfig() {
   $config = array();
   $config['dir'] = dirname(__FILE__);
-  $config['cssDir'] = 'scss';
-  $config['cssExt'] = 'scss';
-  $config['compExt'] = 'php';
+
+  //user defined varibales
+  $config['cssDir'] = 'scss'; //CSS proprocessed dir name
+  $config['cssExt'] = 'scss'; //prerocessed file ext. E.G. scss
+  $config['compExt'] = 'php'; //markup file ext. E.G. .html
   
   return $config;
 }
