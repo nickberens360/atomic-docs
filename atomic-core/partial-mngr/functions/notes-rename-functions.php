@@ -12,9 +12,9 @@ function changeIncludeString($compDir, $compNotes, $compNotesNew, $fileName)
     $newString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><p class="compNotes">'.$compNotesNew.'</p><div class="component"><?php include("../components/'.$compDir.'/'.$fileName.'.'.$compExt.''.'");?></div>';
 
 	//Place contents of file into variable
-	$contents = file_get_contents('../categories/'.$compDir.'/'.$compDir.'.'.$compExt.'');
+	$contents = file_get_contents('../categories/'.$compDir.'/'.$compDir.'.php');
 	$contents = str_replace($oldString, $newString , $contents);
-	$contents = file_put_contents('../categories/'.$compDir.'/'.$compDir.'.'.$compExt.'', $contents);
+	$contents = file_put_contents('../categories/'.$compDir.'/'.$compDir.'.php', $contents);
     
 
 }

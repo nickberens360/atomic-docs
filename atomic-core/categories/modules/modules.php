@@ -1,0 +1,1 @@
+<span id="boxes" class="compTitle">boxes</span><p class="compNotes">box compontent notes!!!!!!!!!</p><div class="component"><?php include("../components/modules/boxes.html");?></div>
