@@ -1,0 +1,70 @@
+.main-wht{
+ background:#fff}
+.main-inner{
+	@extend .grid-row;
+}
+.main-blue{
+ background:#D7F3F6}
+
+.main-content{
+ padding:24px; 
+ padding-right:0}
+
+.main-aside{
+ padding:24px; 
+ padding-left:0}
+
+.main-2col .main-content{
+ float:left; 
+ width:75%}
+
+.main-2col .main-aside{
+ float:left; 
+ width:25%}
+
+.main-2col.main-right{
+ padding-top:150px}
+
+.main-2col.main-right .main-content{
+ width:80%; 
+ float:right; 
+ border-left:1px dashed #BABABA; 
+ padding-left:80px; 
+ padding-top:0}
+
+.main-2col.main-right .main-aside{
+ width:20%; 
+ float:right; 
+ padding-top:0}
+
+@media (max-width:934px){
+ 
+ .main-2col.main-right{
+ padding-top:100px}
+ 
+ .main-2col.main-right .main-content{
+ padding-left:40px}}
+@media (max-width:797px){
+ 
+ .main-2col.main-right{
+ padding-top:48px}
+ 
+ .main-2col.main-right .main-content{
+ float:left; 
+ width:100%; 
+ float:none; 
+ border-left:none; 
+ border-bottom:1px dashed #BABABA; 
+ margin-bottom:24px; 
+ padding-left:0; 
+ padding-top:0}
+ 
+ .main-2col.main-right .main-aside{
+ float:left; 
+ width:100%}}
+
+ .source{
+ 	.main, .main-content, .main-aside{
+ 		border:1px solid #ccc;
+ 	}
+ }
