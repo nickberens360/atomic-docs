@@ -1162,3 +1162,7 @@ a {
   color: #BEBEBE;
   font-family: "Roboto Condensed", sans-serif;
 }
+
+.js-showContent {
+    display: block;
+}
