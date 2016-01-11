@@ -1164,5 +1164,5 @@ a {
 }
 
 .js-showContent {
-    display: block;
+    display: block !important;
 }
