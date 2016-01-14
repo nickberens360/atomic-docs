@@ -631,6 +631,7 @@ pre[class*="language-"] {
   margin-top: 0;
   color: #7A7A7A;
   font-weight: 300;
+  font-family: "Open Sans", sans-serif;
 }
 .atomsWrap .formGroup-check label {
   font-weight: normal;
@@ -1081,6 +1082,11 @@ pre[class*="language-"] {
   display: block;
   margin-bottom: 12px;
   color: #00AFF0;
+  border-left: 5px solid;
+  padding-left: 3px;
+  transition: all .25s;
+  max-height: 0;
+  max-height: 25px;
 }
 .atomsWrap .u-bgWhite {
   background: #fff;

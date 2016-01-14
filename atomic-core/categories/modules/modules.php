@@ -1,1 +1,1 @@
-<span id="boxes" class="compTitle">boxes</span><p class="compNotes">box compontent notes!!!!!!!!!</p><div class="component"><?php include("../components/modules/boxes.html");?></div>
+<span id="box" class="compTitle">box</span><p class="compNotes">This is the description for the box component. It's grey and a rectangle.</p><div class="component"><?php include("../components/modules/box.html");?></div>

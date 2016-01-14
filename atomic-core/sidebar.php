@@ -22,6 +22,7 @@
 <aside class="atoms-side">
 <div class="atoms-overflow">
 
+	<!-- <span class="atoms-side_hide"><span class="fa fa-bars"></span><span class="fa fa-code"></span></span> -->
 	<span class="atoms-side_hide">Hide Sidebar</span>
 
 	<nav>

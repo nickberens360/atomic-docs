@@ -12,6 +12,11 @@ pre[class*="language-"] {
 	display: block;
 	margin-bottom: 12px;
 	color: #00AFF0;
+	border-left: 5px solid;
+    padding-left: 3px;
+    transition: all .25s;
+    max-height: 0;
+    max-height: 25px;
 }
 .u-bgWhite{
 	background:#fff;
