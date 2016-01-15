@@ -25,6 +25,7 @@
 	<div class="atoms-side_hide">
 		<span class="js-hideSide fa fa-bars">
 		</span><span class="js-hideTitle fa fa-header"></span>
+    </span><span class="js-hideNotes fa fa-paragraph"></span>
 		</span><span class="js-hideCode fa fa-code"></span>
     </div>
 	<!-- <span class="atoms-side_hide">Hide Sidebar</span> -->

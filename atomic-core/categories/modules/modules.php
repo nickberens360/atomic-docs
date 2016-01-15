@@ -1,3 +1,2 @@
-<span id="box" class="compTitle">box</span><p class="compNotes">This is the description for the box component. It's grey and a rectangle.</p><div class="component"><?php include("../components/modules/box.html");?></div>
-<span id="test" class="compTitle">test</span><p class="compNotes">tis is a test</p><div class="component"><?php include("../components/modules/test.html");?></div>
-<span id="new" class="compTitle">new</span><p class="compNotes"></p><div class="component"><?php include("../components/modules/new.html");?></div>
+<div class="component"><span id="box" class="compTitle">box <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">This is a box.</p><?php include("../components/modules/box.html");?></div>
+<div class="component"><span id="test" class="compTitle">test <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">adf</p><?php include("../components/modules/test.html");?></div>

@@ -25,74 +25,18 @@ $(".js-hideSide").on('click', function(event) {
 });
 
 
-var titleClose = [
-  { elements: $(".compTitle"), properties: { height: "0", opacity: "0" }, options: { duration: 200, sequenceQueue: false } }, 
-];
-var codeOpen = [
-  { elements: $(".atoms-code-example"), properties: { height: "100%" , opacity:"1"}, options: { duration: 200, sequenceQueue: false } }, 
-];
-
-
-
-$(".js-hideTitle").on('click', function(event) {
-  
-  
-  if($('.compTitle').css('height') == '0px'){ 
-  
-     //$.Velocity.RunSequence(codeOpen); 
-     $(".compTitle").animateAuto("height", 200, "linear"); 
-     $(".compTitle").velocity({
-        opacity: "1",
-    }, {
-        duration: 200
-    });
-     
-  } else { 
-     
-     $.Velocity.RunSequence(titleClose); 
-          
-     
-  }
-
-});
-
-/*$('.js-hideTitle').on('click', function(event) {
-  $('.compTitle').toggleClass('compTitle-close');
-});*/
 
 
 
 
-var codeClose = [
-  { elements: $(".atoms-code-example"), properties: { height: "0", opacity: "0" }, options: { duration: 200, sequenceQueue: false } }, 
-];
-var codeOpen = [
-  { elements: $(".atoms-code-example"), properties: { height: "100%" , opacity:"1"}, options: { duration: 200, sequenceQueue: false } }, 
-];
 
 
 
-$(".js-hideCode").on('click', function(event) {
-  
-  
-  if($('.atoms-code-example').css('height') == '0px'){ 
-  
-     //$.Velocity.RunSequence(codeOpen); 
-     $(".atoms-code-example").animateAuto("height", 200, "linear"); 
-     $(".atoms-code-example").velocity({
-        opacity: "1",
-    }, {
-        duration: 200
-    });
-     
-  } else { 
-     
-     $.Velocity.RunSequence(codeClose); 
-          
-     
-  }
 
-});
+
+
+
+
 
 
 

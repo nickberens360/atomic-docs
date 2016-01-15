@@ -34,7 +34,7 @@ function deleteCompIncludetString($catName, $compNotes, $fileName)
     $compExt = $config['compExt'];
 
 	//create @import string
-	$includeString = '<span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><p class="compNotes">'.$compNotes.'</p><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.'.$compExt.''.'");?></div>';
+	$includeString = '<div class="component"><span id="'.$fileName.'" class="compTitle">'.$fileName.' <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">'.$compNotes.'</p><?php include("../components/'.$catName.'/'.$fileName.'.'.$compExt.''.'");?></div>';
 
   
  
