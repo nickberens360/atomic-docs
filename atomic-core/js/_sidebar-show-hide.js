@@ -20,12 +20,120 @@ var sideClose = [
   { elements: $(".atoms-side_show"), properties: { left: "7px" }, options: { duration: 300} }
 ];
 
-$(".atoms-side_hide").on('click', function(event) {
+$(".js-hideSide").on('click', function(event) {
   $.Velocity.RunSequence(sideClose);
 });
 
 
+var titleClose = [
+  { elements: $(".compTitle"), properties: { height: "0", opacity: "0" }, options: { duration: 200, sequenceQueue: false } }, 
+];
+var codeOpen = [
+  { elements: $(".atoms-code-example"), properties: { height: "100%" , opacity:"1"}, options: { duration: 200, sequenceQueue: false } }, 
+];
 
+
+
+$(".js-hideTitle").on('click', function(event) {
+  
+  
+  if($('.compTitle').css('height') == '0px'){ 
+  
+     //$.Velocity.RunSequence(codeOpen); 
+     $(".compTitle").animateAuto("height", 200, "linear"); 
+     $(".compTitle").velocity({
+        opacity: "1",
+    }, {
+        duration: 200
+    });
+     
+  } else { 
+     
+     $.Velocity.RunSequence(titleClose); 
+          
+     
+  }
+
+});
+
+/*$('.js-hideTitle').on('click', function(event) {
+  $('.compTitle').toggleClass('compTitle-close');
+});*/
+
+
+
+
+var codeClose = [
+  { elements: $(".atoms-code-example"), properties: { height: "0", opacity: "0" }, options: { duration: 200, sequenceQueue: false } }, 
+];
+var codeOpen = [
+  { elements: $(".atoms-code-example"), properties: { height: "100%" , opacity:"1"}, options: { duration: 200, sequenceQueue: false } }, 
+];
+
+
+
+$(".js-hideCode").on('click', function(event) {
+  
+  
+  if($('.atoms-code-example').css('height') == '0px'){ 
+  
+     //$.Velocity.RunSequence(codeOpen); 
+     $(".atoms-code-example").animateAuto("height", 200, "linear"); 
+     $(".atoms-code-example").velocity({
+        opacity: "1",
+    }, {
+        duration: 200
+    });
+     
+  } else { 
+     
+     $.Velocity.RunSequence(codeClose); 
+          
+     
+  }
+
+});
+
+
+
+
+
+jQuery.fn.animateAuto = function(prop, speed, callback){
+    var elem, height, width;
+    return this.each(function(i, el){
+        el = jQuery(el), elem = el.clone().css({"height":"auto","width":"auto"}).appendTo("body");
+        height = elem.css("height"),
+        width = elem.css("width"),
+        elem.remove();
+        
+        if(prop === "height")
+            el.animate({"height":height}, speed, callback);
+        else if(prop === "width")
+            el.animate({"width":width}, speed, callback);  
+        else if(prop === "both")
+            el.animate({"width":width,"height":height}, speed, callback);
+    });  
+}
+
+/*$('.js-hideCode').on('click', function(event) {
+  $(this).addClass('js-showCode');
+  $('.atoms-code-example').toggleClass('atoms-code-example-close');
+  $('.atoms-code-example').velocity({
+      height: "0",
+    }, {
+        duration: 250,
+        easing: "swing"
+    });
+});
+
+$('.js-hideCode.js-showCode').on('click', function(event) {
+  $('.atoms-code-example').velocity({
+      height: "100%",
+    }, {
+        duration: 250,
+        easing: "swing"
+    });
+});*/
 
 
 
