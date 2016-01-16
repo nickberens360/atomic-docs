@@ -1,2 +1,0 @@
-<div class="component"><span id="box" class="compTitle">box <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">This is a box.</p><?php include("../components/modules/box.html");?></div>
-<div class="component"><span id="test" class="compTitle">test <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">adf</p><?php include("../components/modules/test.html");?></div>

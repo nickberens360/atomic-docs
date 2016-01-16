@@ -10,7 +10,7 @@ if($('.atomic-h1').css('opacity') == '0'){
       $(this).css('color','#00AFF0');
       
       
-      $('.component').velocity({
+      $('.compWrap').velocity({
           opacity: "1",
       }, {
           duration: 200
@@ -29,10 +29,10 @@ if($('.atomic-h1').css('opacity') == '0'){
   } else { 
   
      $(this).css('color','#EB6565');
-     $thisComp = $(this).closest('.component');
+     $thisComp = $(this).closest('.compWrap');
      
     
-    $('.component').not($thisComp).velocity({
+    $('.compWrap').not($thisComp).velocity({
         opacity: "0",
     }, {
         duration: 200

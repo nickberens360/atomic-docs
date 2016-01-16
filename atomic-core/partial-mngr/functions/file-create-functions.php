@@ -7,28 +7,28 @@ function createScssFile($catName, $fileName)
   $cssExt = $config['cssExt'];
   
   $fileHandle = fopen('../../'.$cssDir.'/'.$catName.'/'.'_'.$fileName.'.'.$cssExt.'', 'x+') or die("can't open file");
-	fwrite($fileHandle, ".".$fileName."{\n\n}");
-	fclose($fileHandle);
+  fwrite($fileHandle, ".".$fileName."{\n\n}");
+  fclose($fileHandle);
 }
 
 
 function writeScssImportFile($catName, $fileName)
 {
-	$config = getConfig();
+  $config = getConfig();
   $cssDir = $config['cssDir'];
   $cssExt = $config['cssExt'];
   
-	//create @import string
-	$importString = "@import " . '"' . $fileName . '";' ;
-	$importString = "\n$importString\n";
-	
-	//open parent scss file and write @import string to it
-	$fileHandle = fopen('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', 'a') or die("can't open file");
-	fwrite($fileHandle, $importString);
+  //create @import string
+  $importString = "@import " . '"' . $fileName . '";' ;
+  $importString = "\n$importString\n";
+  
+  //open parent scss file and write @import string to it
+  $fileHandle = fopen('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', 'a') or die("can't open file");
+  fwrite($fileHandle, $importString);
   fclose($fileHandle);   
-	
-	//remove any extra line breaks from file
-	file_put_contents('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', implode(PHP_EOL, file('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
+  
+  //remove any extra line breaks from file
+  file_put_contents('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', implode(PHP_EOL, file('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
 }
 
 
@@ -42,10 +42,10 @@ function createCompFile($catName, $fileName)
   
   
   $commentString = '<!--components/'.$catName.'/'.$fileName.'.'.$compExt.'-->';
-	$commentString = "\n$commentString\n";
-	
+  $commentString = "\n$commentString\n";
+  
   $fileHandle = fopen('../../components/'.$catName.'/'.$fileName.'.'.$compExt.'', 'x+') or die("can't open file");
-	fwrite($fileHandle, $commentString);
+  fwrite($fileHandle, $commentString);
   fclose($fileHandle);
   
   file_put_contents('../../components/'.$catName.'/'.$fileName.'.'.$compExt.'', implode(PHP_EOL, file('../../components/'.$catName.'/'.$fileName.'.'.$compExt.'', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
@@ -60,14 +60,14 @@ function createIncludeString($catName, $compNotes, $fileName)
   $config = getConfig();
   $compExt = $config['compExt'];
 
-	$includeString = '<div class="component"><span id="'.$fileName.'" class="compTitle">'.$fileName.' <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">'.$compNotes.'</p><?php include("../components/'.$catName.'/'.$fileName.'.'.$compExt.''.'");?></div>';
-	$includeString = "\n$includeString\n";
-	
-	$fileHandle = fopen('../categories/'.$catName.'/'.$catName.'.php', 'a') or die("can't open file");
-	fwrite($fileHandle, $includeString);
-	
-	file_put_contents('../categories/'.$catName.'/'.$catName.'.php', implode(PHP_EOL, file('../categories/'.$catName.'/'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
-	
+  $includeString = '<div class="compWrap"><span id="'.$fileName.'" class="compTitle">'.$fileName.' <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">'.$compNotes.'</p><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.'.$compExt.''.'");?></div></div>';
+  $includeString = "\n$includeString\n";
+  
+  $fileHandle = fopen('../categories/'.$catName.'/'.$catName.'.php', 'a') or die("can't open file");
+  fwrite($fileHandle, $includeString);
+  
+  file_put_contents('../categories/'.$catName.'/'.$catName.'.php', implode(PHP_EOL, file('../categories/'.$catName.'/'.$catName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+  
 }
 
 
@@ -76,13 +76,13 @@ function createIncludeString($catName, $compNotes, $fileName)
 //creates ajax form file
 function createAjaxIncludeAndCompFile($catName, $fileName)
 {
-	
-	$includeString = 
+  
+  $includeString = 
 '<div class="ad_fileFormGroup">
 
 <label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Rename</span> '.$fileName.'</label>
 <div class="showHide">
-	<form id="form-rename-file"  class="ad_fileForm " action="/atomic-core/partial-mngr/file-rename.php" method="post">
+  <form id="form-rename-file"  class="ad_fileForm " action="/atomic-core/partial-mngr/file-rename.php" method="post">
       <div class="formInputGroup">
 
         <div class="inputBtnGroup">
@@ -118,7 +118,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
 
 <label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Move</span>  '.$fileName.'</label>
 <div class="showHide">
-	<form id="form-file-move" class="ad_fileForm " action="/atomic-core/partial-mngr/file-move.php" method="post">
+  <form id="form-file-move" class="ad_fileForm " action="/atomic-core/partial-mngr/file-move.php" method="post">
       <div class="formGroup">
         <div class="formInputGroup">
           <div class="inputBtnGroup">
@@ -179,16 +179,16 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
     </form>
 </div>
 
-</div>'		
+</div>'   
 ;
 
-	$includeString = "\n$includeString\n";
-	
-	$fileHandle = fopen('../categories/'.$catName.'/form-'.$fileName.'.php', 'x+') or die("can't open file");
-	fwrite($fileHandle, $includeString);
-	
-	file_put_contents('../categories/'.$catName.'/form-'.$fileName.'.php', implode(PHP_EOL, file('../categories/'.$catName.'/form-'.$fileName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
-	
+  $includeString = "\n$includeString\n";
+  
+  $fileHandle = fopen('../categories/'.$catName.'/form-'.$fileName.'.php', 'x+') or die("can't open file");
+  fwrite($fileHandle, $includeString);
+  
+  file_put_contents('../categories/'.$catName.'/form-'.$fileName.'.php', implode(PHP_EOL, file('../categories/'.$catName.'/form-'.$fileName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+  
 }
 
 

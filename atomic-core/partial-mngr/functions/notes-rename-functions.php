@@ -7,9 +7,9 @@ function changeIncludeString($compDir, $compNotes, $compNotesNew, $fileName)
 
 
 
-    $oldString = '<div class="component"><span id="'.$fileName.'" class="compTitle">'.$fileName.' <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">'.$compNotes.'</p><?php include("../components/'.$compDir.'/'.$fileName.'.'.$compExt.''.'");?></div>';
+    $oldString = '<div class="compWrap"><span id="'.$fileName.'" class="compTitle">'.$fileName.' <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">'.$compNotes.'</p><div class="component"><?php include("../components/'.$compDir.'/'.$fileName.'.'.$compExt.''.'");?></div></div>';
 
-    $newString = '<div class="component"><span id="'.$fileName.'" class="compTitle">'.$fileName.' <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">'.$compNotesNew.'</p><?php include("../components/'.$compDir.'/'.$fileName.'.'.$compExt.''.'");?></div>';
+    $newString = '<div class="compWrap"><span id="'.$fileName.'" class="compTitle">'.$fileName.'</span><p class="compNotes">'.$compNotesNew.'</p><div class="component"><?php include("../components/'.$compDir.'/'.$fileName.'.'.$compExt.''.'");?></div></div';
 
 	//Place contents of file into variable
 	$contents = file_get_contents('../categories/'.$compDir.'/'.$compDir.'.php');
