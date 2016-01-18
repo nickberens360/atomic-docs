@@ -1,10 +1,13 @@
+
 @import "normalize";
 @import "prism";
+.atomsWrap{
 @import "utilities/utilities";
 @import "atoms/atoms";
 @import "molecules/molecules";
 @import "organisms/organisms";
 @import "cleanup";
+}
 
 
 

@@ -12,4 +12,29 @@ pre[class*="language-"] {
 	display: block;
 	margin-bottom: 12px;
 	color: #00AFF0;
+	border-left: 5px solid;
+  padding-left: 3px;
+  max-height: 25px;
+  .fa{
+    cursor:pointer; 
+  }
+}
+
+.compTitle-close{
+  max-height: 0;
+  overflow: hidden;;
+}
+
+.u-bgWhite{
+	background:#fff;
+}
+
+.atoms-side_hide{
+	.fa{
+		margin:0 16px;
+		display:inline-block;
+	}
+	.fa-code{
+		font-weight: bold;
+	}
 }

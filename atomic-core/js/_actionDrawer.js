@@ -50,16 +50,38 @@ $('body').on('click', '.ad_js-errorBox__close', function(events){
 
 
 $('.ad_actionBtn').click(function(event) {
+  
+
+
+   
+  
    event.preventDefault();
    $.ajax(this.href, {
       success: function(data) {      
          $('#js_actionDrawer__content').html($(data));
          
          
-         
-
-
-         
+      
+//accordion for file forms
+/*$('.js-showHide-trigger').click(function() {
+  $('.showHide').slideUp();
+   $(this).next().slideDown();
+   $('.fa-plus').removeClass('fa-plus-is-rotated');
+   $(this).find('.fa-plus').addClass('fa-plus-is-rotated');
+});
+      */   
+      
+$('.js-showHide-trigger').click(function() {
+  
+    $('.showHide').slideUp(250);
+    $('.fa-plus').removeClass('fa-plus-is-rotated');
+    
+    if($(this).next().is(':hidden')){
+       $(this).next().slideDown(250);
+       $(this).find('.fa-plus').addClass('fa-plus-is-rotated');
+    }
+});
+            
          
          
          
@@ -207,7 +229,8 @@ $('.ad_actionBtn').click(function(event) {
             // there are many ways to get this data using jQuery (you can use the class or id also)
             var formData = {
               'compDir'       : $('input[name=compDir]').val(),
-              'fileCreateName'  : $('input[name=fileCreateName]').val()
+              'fileCreateName'  : $('input[name=fileCreateName]').val(),
+              'compNotes'  : $('textarea[name=compNotes]').val()
             };
             // process the form
             $.ajax({
@@ -273,7 +296,8 @@ $('.ad_actionBtn').click(function(event) {
             var formData = {
               'compDir'       : $('input[name=compDir]').val(),
               'oldName'       : $('input[name=oldName]').val(),
-              'renameFileName'  : $('input[name=renameFileName]').val()
+              'renameFileName'  : $('input[name=renameFileName]').val(),
+              'compNotes'       : $('input[name=compNotes]').val()
             };
             // process the form
             $.ajax({
@@ -327,13 +351,14 @@ $('.ad_actionBtn').click(function(event) {
 
 
           
-
-
-
-
-
-
-
+        //put notes value in compNotes hidden field
+         notesTarget = $('input[name=fileMoveName]').val();
+         notesContent = $('.atoms-main #'+notesTarget).next().text();
+         
+         
+         $('input[name=compNotes]').val(notesContent);
+         
+         
 
 
 
@@ -358,7 +383,8 @@ $('.ad_actionBtn').click(function(event) {
             var formData = {
               'compDir'       : $('input[name=compDir]').val(),
               'newDir'       : $('#newDir').val(),
-              'fileMoveName'  : $('input[name=fileMoveName]').val()
+              'fileMoveName'  : $('input[name=fileMoveName]').val(),
+              'compNotes'  : $('input[name=compNotes]').val(),
             };
             // process the form
             $.ajax({
@@ -417,7 +443,8 @@ $('.ad_actionBtn').click(function(event) {
             // there are many ways to get this data using jQuery (you can use the class or id also)
             var formData = {
               'compDir'       : $('input[name=compDir]').val(),
-              'deleteFileName'  : $('input[name=deleteFileName]').val()
+              'deleteFileName'  : $('input[name=deleteFileName]').val(),
+              'compNotes'  : $('input[name=compNotes]').val()
             };
             // process the form
             $.ajax({
@@ -470,7 +497,81 @@ $('.ad_actionBtn').click(function(event) {
 
 
 
+            
 
+       
+         notesEditTarget = $('input[name=fileName]').val();
+         notesEditTarget = $('.atoms-main #'+notesTarget).next().text();
+         
+
+         $('textarea[name=compNotesNew]').val(notesEditTarget);
+
+
+
+
+
+           $('#form-rename-notes').submit(function(event) {
+
+            notesEditTarget = $('input[name=fileName]').val();
+            notesEditTarget = $('.atoms-main #'+notesTarget).next().text();
+
+            $('input[name=compNotes]').val(notesEditTarget);
+            reDirect = $('input[name=compDir]').val();
+             // remove the error text
+            // get the form data
+            // there are many ways to get this data using jQuery (you can use the class or id also)
+            var formData = {
+              'compDir'         : $('input[name=compDir]').val(),
+              'fileName'         : $('input[name=fileName]').val(),
+              'compNotes'         : $('input[name=compNotes]').val(),
+              'compNotesNew'         : $('textarea[name=compNotesNew]').val()
+            };
+            // process the form
+            $.ajax({
+              type    : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+              url     : 'atomic-core/partial-mngr/notes-rename.php', // the url where we want to POST
+              data    : formData, // our data object
+              dataType  : 'json', // what type of data do we expect back from the server
+              encode    : true
+            })
+              // using the done promise callback
+              .done(function(data) {
+                // log data to the console so we can see
+                console.log(data); 
+                // here we will handle errors and validation messages
+                if ( ! data.success) {
+                  // handle errors for name ---------------
+
+                  
+                  
+                  if (data.errors.exists) {
+                    $('.ad_errorBox__message').html("");
+                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                  }
+                  
+                  
+                  if (data.errors.name) {
+                    $('.ad_errorBox__message').html("");
+                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                  }
+                  
+                  
+                } else {
+                  
+                  //redirect here
+                   window.location = 'atomic-core/'+reDirect+'.php';
+                  // usually after form submission, you'll want to redirect
+                }
+              })
+              // using the fail promise callback
+              .fail(function(data) {
+                // show any errors
+                // best to remove for production
+                console.log(data);
+              });
+            // stop the form from submitting the normal way and refreshing the page
+            event.preventDefault();
+          }); 
 
 
     
