@@ -15,7 +15,7 @@
 </div>
 
 <div class="atoms-side_show ">
-	<span class="js-hideSide fa fa-arrow-right"></span>
+	<span class="js-showSide fa fa-arrow-right"></span>
 </div>
 <aside class="atoms-side">
 <div class="atoms-overflow">

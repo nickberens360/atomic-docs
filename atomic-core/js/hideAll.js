@@ -24,7 +24,7 @@ if($('.atomic-h1').css('opacity') == '0'){
       $('.atoms-side_show').velocity({
         opacity: "1",
     }, {
-        duration: 200
+        duration:500
     });
       $('.atomic-h1').velocity({
           opacity: "1",
@@ -47,7 +47,7 @@ if($('.atomic-h1').css('opacity') == '0'){
     $('.atoms-side_show').velocity({
         opacity: "0",
     }, {
-        duration: 200
+        duration: 0
     });
     
     $('.atoms-side').velocity({
