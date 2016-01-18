@@ -1,0 +1,2 @@
+<div class="compWrap"><span id="box" class="compTitle">box <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">This is a box.</p><div class="component"><?php include("../components/modules/box.html");?></div></div>
+<div class="compWrap"><span id="test" class="compTitle">test <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">This is a test.</p><div class="component"><?php include("../components/modules/test.html");?></div></div>
