@@ -4,7 +4,9 @@ var notesClose = [
 $(".js-hideNotes").on('click', function(event) {
   if($('.compNotes').css('height') == '0px'){ 
      $(this).css('color','#fff');
-     $(".compNotes").animateAuto("height", 200, "linear"); 
+     $(".compNotes").animateAuto("height", 200, "linear");
+     /*outHeight = $(".compNotes").outerHeight();
+     $(".compNotes").css('height', outHeight).css('padding-bottom','20px');*/
      $(".compNotes").velocity({
         opacity: "1",
     }, {
