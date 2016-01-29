@@ -1,0 +1,18 @@
+body{
+  background:#FCFEFA; 
+  color:#7A7A7A;
+  font-family: $font1;
+}
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #E2F3F5;
+}
+.compTitle{
+	text-transform:capitalize;
+	display: block;
+	margin-bottom: 12px;
+	color: #00AFF0;
+}
+.u-bgWhite{
+	background:#fff;
+}

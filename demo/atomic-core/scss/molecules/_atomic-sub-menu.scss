@@ -1,0 +1,13 @@
+.ad_fileSection {
+	display:none;
+	li{
+		list-style:none;
+	}
+}
+
+.active{
+	.ad_fileSection{
+		display: block;
+	}
+}
+

@@ -1,0 +1,4 @@
+<span id="grid" class="compTitle">grid</span><p class="compNotes"></p><div class="component"><?php include("../components/layout/grid.html");?></div>
+<span id="block-grid" class="compTitle">block-grid</span><p class="compNotes"></p><div class="component"><?php include("../components/layout/block-grid.html");?></div>
+<span id="section" class="compTitle">section</span><p class="compNotes">Borders on the section elements only appears in documentation to better illustrate dimensions.</p><div class="component"><?php include("../components/layout/section.html");?></div>
+<span id="main" class="compTitle">main</span><p class="compNotes">The primary layout container for inner pages. Borders on the section elements only appears in documentation to better illustrate dimensions.</p><div class="component"><?php include("../components/layout/main.html");?></div>

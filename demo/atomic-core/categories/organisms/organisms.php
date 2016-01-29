@@ -1,0 +1,2 @@
+<span id="banner" class="compTitle">banner</span><p class="compNotes"></p><div class="component"><?php include("../components/organisms/banner.html");?></div>
+<span id="footerMain" class="compTitle">footerMain</span><p class="compNotes"></p><div class="component"><?php include("../components/organisms/footerMain.html");?></div>
