@@ -28,7 +28,7 @@
 
   <body>
     <div class="indexBlock">
-      <h1 class="indexBlock__heading">Set up in your php local environment and start <a href="atomic-core/index.php">here</a></p>
+      <h1 class="indexBlock__heading">Set up in your php local environment and configure your sass preprocessor and start <a href="atomic-core/modules.php">here</a></p>
     </div>  
   </body>
   

@@ -1,1 +1,1 @@
-<div class="compWrap"><span id="box" class="compTitle">box <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes"></p><div class="component"><?php include("../components/modules/box.html");?></div></div>
+<div class="compWrap"><span id="box" class="compTitle">box <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">This is an example component. Feel free to delete me along with the modules category if you'd like.</p><div class="component"><?php include("../components/modules/box.html");?></div></div>
