@@ -1,0 +1,1 @@
+<div class="compWrap"><span id="box" class="compTitle">box <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes"></p><div class="component"><?php include("../components/modules/box.html");?></div></div>

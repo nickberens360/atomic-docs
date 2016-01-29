@@ -105,7 +105,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
    <form id="form-rename-notes"  class="ad_fileForm " action="/atomic-core/partial-mngr/notes-rename.php" method="post">
         <textarea class="form-control" name="compNotesNew"></textarea>        
 
-        <button class="ad_btn ad_btn-pos" type="submit" >Rename</button>
+        <button class="ad_btn ad_btn-pos" type="submit" >Update</button>
 
       <input type="hidden" name="compDir" value="'.$catName.'"/>
       <input type="hidden" name="fileName" value="'.$fileName.'"/>
