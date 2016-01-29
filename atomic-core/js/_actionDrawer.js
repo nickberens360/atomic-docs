@@ -506,6 +506,10 @@ $('.js-showHide-trigger').click(function() {
 
          $('textarea[name=compNotesNew]').val(notesEditTarget);
 
+
+
+
+
            $('#form-rename-notes').submit(function(event) {
 
             notesEditTarget = $('input[name=fileName]').val();
