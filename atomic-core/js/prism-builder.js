@@ -2,11 +2,12 @@ var $comp = $('.component');
 
 $comp.wrapInner( '<div class="source"></div>');
 
-$('.source').wrap( "<div class='atoms-group'></div>" );
+//$('#home').wrap( "<div class='atoms-group'></div>" );
 
-$('.atoms-group').append( '<div class="atoms-code-example"><pre><code class="dest language-markup"></code></pre></div>' );
+$('.markDown-display').append( '<div class="atoms-code-example"><pre><code class="dest language-markup"></code></pre></div>' );
 	
-var ls = $('.atoms-group');
+var ls = $('.compWrap');
+
 
 ls.each(function() {
 	
