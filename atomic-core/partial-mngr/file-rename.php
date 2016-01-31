@@ -53,8 +53,12 @@ $data           = array();      // array to pass back data
 
         changeCommentString($catName, $renameFileName, $oldName);
 
-    
+        changeScssCommentString($catName, $renameFileName, $oldName);
+        
         renameScssFile($catName, $renameFileName, $oldName);
+
+
+
         
         
         deleteScssImportString($catName, $oldName );

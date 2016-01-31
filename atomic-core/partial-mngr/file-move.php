@@ -48,6 +48,8 @@ $data           = array();      // array to pass back data
 
         moveChangeCommentString($compDir, $fileMoveName, $newDir);
 
+        moveScssChangeCommentString($compDir, $fileMoveName, $newDir);
+
         moveScssFile($compDir, $fileMoveName, $newDir);
         
         deleteScssImportString($compDir, $fileMoveName );

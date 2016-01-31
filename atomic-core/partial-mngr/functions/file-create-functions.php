@@ -6,7 +6,7 @@ function createScssFile($catName, $fileName)
   $cssDir = $config['cssDir'];
   $cssExt = $config['cssExt'];
 
-  $commentString = '/*../'.$cssDir.'/'.$catName.'/_'.$fileName.'.'.$cssExt.'*/';
+  $commentString = '/*'.$cssDir.'/'.$catName.'/_'.$fileName.'.'.$cssExt.'*/';
   $commentString = "$commentString\n\n";
   
   $fileHandle = fopen('../../'.$cssDir.'/'.$catName.'/'.'_'.$fileName.'.'.$cssExt.'', 'x+') or die("can't open file");

@@ -10,6 +10,25 @@ function moveScssFile($catName, $fileName, $newDir)
 }
 
 
+function moveScssChangeCommentString($catName, $fileName, $newDir)
+{	
+
+	$config = getConfig();
+	$cssDir = $config['cssDir'];
+    $cssExt = $config['cssExt'];
+
+    $oldString = '/*'.$cssDir.'/'.$catName.'/_'.$fileName.'.'.$cssExt.'*/';
+    $newString = '/*'.$cssDir.'/'.$newDir.'/_'.$fileName.'.'.$cssExt.'*/';
+
+	//Place contents of file into variable
+	$contents = file_get_contents('../../'.$cssDir.'/'.$catName.'/_'.$fileName.'.'.$cssExt.'');
+	$contents = str_replace($oldString, $newString , $contents);
+	$contents = file_put_contents('../../'.$cssDir.'/'.$catName.'/_'.$fileName.'.'.$cssExt.'', $contents);
+
+}
+
+
+
 
 
 function moveCompFile($catName, $fileName, $newDir)
@@ -39,7 +58,6 @@ function moveChangeCommentString($catName, $fileName, $newDir)
 	$contents = file_get_contents('../../components/'.$catName.'/'.$fileName.'.'.$compExt.'');
 	$contents = str_replace($oldString, $newString , $contents);
 	$contents = file_put_contents('../../components/'.$catName.'/'.$fileName.'.'.$compExt.'', $contents);
-    
 
 }
 
