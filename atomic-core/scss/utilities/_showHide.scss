@@ -3,7 +3,9 @@
 	.form-control, .formInputGroup{
 		margin-bottom: 0;
 	}
-
+	textarea.form-control{
+		margin-bottom:12px;
+	}
 	
 }
 .ad_label.js-showHide-trigger{

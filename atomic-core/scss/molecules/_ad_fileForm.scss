@@ -29,10 +29,11 @@ textarea.form-control{
 		height: 50px;
 	    font-size: 14px;
 	    text-indent: 20px;
-	    box-shadow: none;	    
+	    box-shadow: none;	
+	    padding: 0;    
       &:focus{
-	    	outline:none;
-	    	border:none;
-	    	
+			outline:none;
+			border:none;
+			box-shadow: none;
 	    }
 	}

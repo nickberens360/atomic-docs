@@ -7,9 +7,19 @@ if ($(".atoms-code-example")[0]){
          }, {
             duration: 200
          });
+         $(".nav-tabs").velocity({
+            opacity: "1",
+         }, {
+            duration: 200
+         });
       } else { 
          $(this).css('color','#247695');
          $(".atoms-code-example").velocity({
+            opacity: "0",
+         }, {
+            duration: 200
+         });
+         $(".nav-tabs").velocity({
             opacity: "0",
          }, {
             duration: 200

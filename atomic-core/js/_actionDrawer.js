@@ -502,6 +502,8 @@ $('.js-showHide-trigger').click(function() {
        
          notesEditTarget = $('input[name=fileName]').val();
          notesEditTarget = $('.atoms-main #'+notesTarget).next().text();
+
+         //alert(notesEditTarget);
          
 
          $('textarea[name=compNotesNew]').val(notesEditTarget);

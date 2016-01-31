@@ -6,6 +6,8 @@ body{
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #E2F3F5;
+  border: none;
+  margin-top: 0;
 }
 .compTitle{
 	text-transform:capitalize;
@@ -13,11 +15,14 @@ pre[class*="language-"] {
 	margin-bottom: 12px;
 	color: #00AFF0;
 	border-left: 5px solid;
-  padding-left: 3px;
-  max-height: 25px;
+	padding-left: 3px;
+	max-height: 25px;
   .fa{
     cursor:pointer; 
   }
+}
+.compWrap{
+	margin-bottom:48px;
 }
 
 .compTitle-close{
@@ -37,4 +42,8 @@ pre[class*="language-"] {
 	.fa-code{
 		font-weight: bold;
 	}
+}
+
+.component{
+	margin-bottom: 12px;
 }
