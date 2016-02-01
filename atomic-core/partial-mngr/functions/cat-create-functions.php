@@ -138,7 +138,7 @@ function createSidebarIncludeAndFile($dirName)
 					
 				$filename = str_replace(".'.$compExt.'", "", $filename );
 
-				echo "<li class=\'ad_fileSection__file\'><a class=\'ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o\' href=\'atomic-core/categories/'.$dirName.'/form-$filename.php\'></a><a href=\'#$filename\'>$filename</a></li>";
+				echo "<li class=\'ad_fileSection__file\'><a class=\'ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o\' href=\'atomic-core/categories/'.$dirName.'/form-$filename.php\'></a><a href=\'atomic-core/'.$dirName.'.php#$filename\'>$filename</a></li>";
 				}
 				}
 				closedir($dir);

@@ -25,7 +25,7 @@
 					
 				$filename = str_replace(".html", "", $filename );
 
-				echo "<li class='ad_fileSection__file'><a class='ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o' href='atomic-core/categories/layout/form-$filename.php'></a><a href='#$filename'>$filename</a></li>";
+				echo "<li class='ad_fileSection__file'><a class='ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o' href='atomic-core/categories/layout/form-$filename.php'></a><a href='atomic-core/layout.php#$filename'>$filename</a></li>";
 				}
 				}
 				closedir($dir);
