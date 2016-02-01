@@ -1818,6 +1818,7 @@ ul.ascii li {
   float: left;
   margin-top: 0;
   font-size: 32px;
+  max-width: 200px;
 }
 @media (max-width: 707px) {
   .banner-alt {
