@@ -1355,3 +1355,7 @@ pre[class*="language-"] {
 .atomsWrap .component {
   margin-bottom: 12px;
 }
+/* line 50, _cleanup.scss */
+.atomsWrap .compWrap .nav-tabs > li > a {
+  color: #00AFF0;
+}
