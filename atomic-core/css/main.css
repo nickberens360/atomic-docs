@@ -978,7 +978,9 @@ pre[class*="language-"] {
 .atomsWrap .atoms-side {
   float: left;
   height: 100%;
-  background: #F2F5F0;
+  background: #f2f5f0 url("../img/logo.png") center 98% no-repeat;
+  -webkit-background-size: 200px;
+  background-size: 200px;
   color: #fff;
   position: fixed;
   left: 0;
@@ -987,21 +989,21 @@ pre[class*="language-"] {
   width: 262px;
   border-right: 1px solid #E3E3E3;
 }
-/* line 13, organisms/_atomic-nav.scss */
+/* line 14, organisms/_atomic-nav.scss */
 .atomsWrap .atoms-side a {
   text-decoration: none;
 }
-/* line 24, organisms/_atomic-nav.scss */
+/* line 25, organisms/_atomic-nav.scss */
 .atomsWrap .ad_dir {
   border-bottom: 1px solid #E3E3E3;
 }
-/* line 30, organisms/_atomic-nav.scss */
+/* line 31, organisms/_atomic-nav.scss */
 .atomsWrap .atoms-nav {
   list-style: none;
   padding: 0;
   margin-top: 1px;
 }
-/* line 35, organisms/_atomic-nav.scss */
+/* line 36, organisms/_atomic-nav.scss */
 .atomsWrap .ad_dir__dirNameGroup__name {
   display: block;
   padding: 10px 38px;
@@ -1010,11 +1012,11 @@ pre[class*="language-"] {
   color: #7a7a7a;
   font-size: 16px;
 }
-/* line 44, organisms/_atomic-nav.scss */
+/* line 45, organisms/_atomic-nav.scss */
 .atomsWrap .ad_dir__dirNameGroup__name:hover {
   text-decoration: none;
 }
-/* line 48, organisms/_atomic-nav.scss */
+/* line 49, organisms/_atomic-nav.scss */
 .atomsWrap .ad_addFile {
   color: #9DA0A0;
   padding-left: 39px;
@@ -1023,42 +1025,42 @@ pre[class*="language-"] {
   font-size: 12px;
   font-style: italic;
 }
-/* line 57, organisms/_atomic-nav.scss */
+/* line 58, organisms/_atomic-nav.scss */
 .atomsWrap .ad_fileSection__file {
   padding-left: 39px;
 }
-/* line 59, organisms/_atomic-nav.scss */
+/* line 60, organisms/_atomic-nav.scss */
 .atomsWrap .ad_fileSection__file .fa {
   margin-right: 5px;
   position: relative;
   top: 1px;
 }
-/* line 64, organisms/_atomic-nav.scss */
+/* line 65, organisms/_atomic-nav.scss */
 .atomsWrap .ad_fileSection__file a {
   color: #7a7a7a;
   font-size: 14px;
 }
-/* line 70, organisms/_atomic-nav.scss */
+/* line 71, organisms/_atomic-nav.scss */
 .atomsWrap .ad_fileSection {
   padding-left: 0;
 }
-/* line 72, organisms/_atomic-nav.scss */
+/* line 73, organisms/_atomic-nav.scss */
 .atomsWrap .ad_fileSection li {
   list-style: none;
 }
-/* line 74, organisms/_atomic-nav.scss */
+/* line 75, organisms/_atomic-nav.scss */
 .atomsWrap .ad_fileSection li:last-child {
   margin-bottom: 15px;
 }
-/* line 79, organisms/_atomic-nav.scss */
+/* line 80, organisms/_atomic-nav.scss */
 .atomsWrap .ad_fileSection a:hover {
   text-decoration: none;
 }
-/* line 84, organisms/_atomic-nav.scss */
+/* line 85, organisms/_atomic-nav.scss */
 .atomsWrap .border-top {
   border-top: 1px solid #424242;
 }
-/* line 100, organisms/_atomic-nav.scss */
+/* line 101, organisms/_atomic-nav.scss */
 .atomsWrap .atoms-side_hide {
   cursor: pointer;
   display: block;
@@ -1067,7 +1069,7 @@ pre[class*="language-"] {
   padding-left: 38px;
   font-size: 14px;
 }
-/* line 111, organisms/_atomic-nav.scss */
+/* line 112, organisms/_atomic-nav.scss */
 .atomsWrap .atoms-side_show {
   background: #00aff0;
   cursor: pointer;
@@ -1083,11 +1085,11 @@ pre[class*="language-"] {
   top: 0;
   left: 0 !important;
 }
-/* line 126, organisms/_atomic-nav.scss */
+/* line 127, organisms/_atomic-nav.scss */
 .atomsWrap .atoms-side_show:hover {
   opacity: 1;
 }
-/* line 129, organisms/_atomic-nav.scss */
+/* line 130, organisms/_atomic-nav.scss */
 .atomsWrap .toggle-line {
   border: 1px solid #fff;
   display: block;
@@ -1097,7 +1099,7 @@ pre[class*="language-"] {
   position: relative;
   left: -1px;
 }
-/* line 141, organisms/_atomic-nav.scss */
+/* line 142, organisms/_atomic-nav.scss */
 .atomsWrap .atoms-side_show-small, .atomsWrap .smallOpen {
   background: #00aff0;
   cursor: pointer;
@@ -1116,11 +1118,11 @@ pre[class*="language-"] {
   right: -100%;
   z-index: 7000;
 }
-/* line 158, organisms/_atomic-nav.scss */
+/* line 159, organisms/_atomic-nav.scss */
 .atomsWrap .atoms-side_show-small:hover, .atomsWrap .smallOpen:hover {
   opacity: 1;
 }
-/* line 167, organisms/_atomic-nav.scss */
+/* line 168, organisms/_atomic-nav.scss */
 .atomsWrap .catAdd a {
   padding: 10px 38px;
   display: block;
@@ -1130,7 +1132,7 @@ pre[class*="language-"] {
   font-style: italic;
 }
 @media (min-width: 824px) {
-  /* line 180, organisms/_atomic-nav.scss */
+  /* line 181, organisms/_atomic-nav.scss */
   .atomsWrap .atoms-side {
     top: 0 !important;
   }
@@ -1142,7 +1144,7 @@ pre[class*="language-"] {
       display:block; 
     }*/
   }
-  /* line 197, organisms/_atomic-nav.scss */
+  /* line 198, organisms/_atomic-nav.scss */
   .atomsWrap .atoms-side {
     width: 100%;
     height: auto;
@@ -1155,29 +1157,29 @@ pre[class*="language-"] {
     -webkit-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.25);
   }
-  /* line 208, organisms/_atomic-nav.scss */
+  /* line 209, organisms/_atomic-nav.scss */
   .atomsWrap .atoms-side_show, .atomsWrap .atoms-side_hide {
     display: none;
   }
-  /* line 212, organisms/_atomic-nav.scss */
+  /* line 213, organisms/_atomic-nav.scss */
   .atomsWrap .atoms-side_show-small, .atomsWrap .smallOpen {
     top: 7px;
     right: 7px;
     display: block;
   }
-  /* line 217, organisms/_atomic-nav.scss */
+  /* line 218, organisms/_atomic-nav.scss */
   .atomsWrap .ad_addFile {
     display: none;
   }
-  /* line 220, organisms/_atomic-nav.scss */
+  /* line 221, organisms/_atomic-nav.scss */
   .atomsWrap .ad_fileSection__file .fa {
     display: none;
   }
-  /* line 223, organisms/_atomic-nav.scss */
+  /* line 224, organisms/_atomic-nav.scss */
   .atomsWrap .catAdd a {
     display: none;
   }
-  /* line 226, organisms/_atomic-nav.scss */
+  /* line 227, organisms/_atomic-nav.scss */
   .atomsWrap .atoms-nav {
     margin: 0;
   }
