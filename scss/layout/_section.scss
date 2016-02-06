@@ -1,0 +1,71 @@
+/*../scss/layout/_sections*/
+
+.section {
+  margin-bottom: 1px;
+  padding: 70px 20px;
+}
+.section .section-inner {
+  @extend .grid-row;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+@media (max-width: 1100px) {
+  .section .section-inner {
+    max-width: 100%;
+  }
+}
+.section-content {
+  padding: 20px;
+}
+.section-aside {
+  text-align: center;
+  padding: 20px;
+}
+.section-2col .section-content {
+  float: left;
+  width: 50%;
+}
+.section-2col .section-aside {
+  float: left;
+  width: 50%;
+}
+.section-2col.section-right .section-content {
+  float: right;
+}
+.section-2col.section-right .section-aside {
+  float: right;
+}
+
+@media (max-width: 794px) {
+  .section-content {
+    padding: 0;
+  }
+  .section-2col .section-content {
+    float: left;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .section-2col .section-aside {
+    float: left;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/*
+.source{
+	.section{
+		border:1px solid #ccc;
+	}
+	.section-content{
+		border:1px solid #ccc;
+	}
+	.section-aside{
+		border:1px solid #ccc;
+	}
+}
+*/
