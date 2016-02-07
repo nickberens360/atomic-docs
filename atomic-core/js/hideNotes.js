@@ -4,10 +4,6 @@
 
 
 
-if ($(".compNotes").is(':empty')){
-
-}
-else {
   $(".js-hideNotes").on('click', function(event) {
     if($('.compNotes').css('opacity') == '0'){ 
        $(this).css('color','#fff');
@@ -27,4 +23,4 @@ else {
     }
   });
 
-}
+

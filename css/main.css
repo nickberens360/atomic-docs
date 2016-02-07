@@ -131,7 +131,7 @@
 }
 
 /* line 61, layout/_grid.scss */
-.grid-row:after, [class*="block-grid-"]:after, .block-grid-example:after, .section .section-inner:after, .main-inner:after, .colors:after {
+.grid-row:after, [class*="block-grid-"]:after, .block-grid-example:after, .section .section-inner:after, .main-inner:after, .colors:after, .banner-alt:after {
   content: "";
   display: table;
   clear: both;
@@ -139,7 +139,7 @@
 
 /*@include col($six);*/
 /* line 94, layout/_grid.scss */
-.gridExample .grid-row, .gridExample [class*="block-grid-"], .gridExample .block-grid-example, .gridExample .section .section-inner, .section .gridExample .section-inner, .gridExample .main-inner, .gridExample .colors {
+.gridExample .grid-row, .gridExample [class*="block-grid-"], .gridExample .block-grid-example, .gridExample .section .section-inner, .section .gridExample .section-inner, .gridExample .main-inner, .gridExample .colors, .gridExample .banner-alt {
   margin-bottom: 10px;
 }
 /* line 97, layout/_grid.scss */
@@ -1127,7 +1127,7 @@ body {
   color: #5583B2;
 }
 
-/* line 16, atoms/_headings.scss */
+/* line 17, atoms/_headings.scss */
 .h2 {
   font-size: 40px;
   color: #35363a;
@@ -1279,63 +1279,50 @@ a {
   padding-left: 20px;
 }
 
-/* line 9, organisms/_banner.scss */
+/* line 10, organisms/_banner.scss */
 .banner-alt {
-  max-width: 940px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  max-width: 900px;
+  margin: auto;
   padding-top: 50px;
 }
-
-@media (max-width: 1000px) {
-  /* line 18, organisms/_banner.scss */
-  .banner-alt {
-    max-width: 100%;
-  }
-}
-/* line 21, organisms/_banner.scss */
+/* line 15, organisms/_banner.scss */
 .banner-alt .btnGroup {
   float: right;
   margin-bottom: 0;
 }
-
-/* line 25, organisms/_banner.scss */
+/* line 19, organisms/_banner.scss */
 .banner-alt .logo {
   text-align: left;
   float: left;
   margin-top: 0;
   font-size: 32px;
+  max-width: 200px;
 }
-
 @media (max-width: 707px) {
-  /* line 32, organisms/_banner.scss */
+  /* line 10, organisms/_banner.scss */
   .banner-alt {
     padding-top: 48px;
   }
-
-  /* line 35, organisms/_banner.scss */
+  /* line 28, organisms/_banner.scss */
   .banner-alt .logo {
     float: none;
     text-align: center;
     margin-bottom: 48px;
   }
-
-  /* line 40, organisms/_banner.scss */
+  /* line 33, organisms/_banner.scss */
   .banner-alt .btnGroup {
     margin-bottom: 0;
     float: none;
   }
-
-  /* line 44, organisms/_banner.scss */
+  /* line 36, organisms/_banner.scss */
   .banner-alt .btnGroup .btns {
     width: 100%;
     display: block;
     margin-bottom: 12px;
   }
 }
-/* line 49, organisms/_banner.scss */
+
+/* line 45, organisms/_banner.scss */
 .logo {
   font-size: 55px;
   font-weight: 300;
@@ -1344,13 +1331,12 @@ a {
   margin-bottom: 0;
   color: #00aff0;
 }
-
-/* line 57, organisms/_banner.scss */
+/* line 52, organisms/_banner.scss */
 .logo a {
   color: #00aff0;
 }
 
-/* line 60, organisms/_banner.scss */
+/* line 56, organisms/_banner.scss */
 .banner__sub {
   font-size: 18px;
   margin-bottom: 30px;
@@ -1358,7 +1344,7 @@ a {
   text-align: center;
 }
 
-/* line 66, organisms/_banner.scss */
+/* line 62, organisms/_banner.scss */
 .demoImg {
   max-width: 800px;
   width: 100%;
@@ -1369,7 +1355,7 @@ a {
   box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* line 75, organisms/_banner.scss */
+/* line 70, organisms/_banner.scss */
 #particles-js {
   position: absolute;
   width: 100%;
@@ -1385,30 +1371,29 @@ a {
 }
 
 @media (max-width: 498px) {
-  /* line 90, organisms/_banner.scss */
+  /* line 83, organisms/_banner.scss */
   .btnGroup {
     margin-bottom: 48px;
   }
-
-  /* line 93, organisms/_banner.scss */
+  /* line 85, organisms/_banner.scss */
   .btnGroup .btns {
     width: 100%;
     display: block;
     margin-bottom: 12px;
   }
 
-  /* line 99, organisms/_banner.scss */
+  /* line 91, organisms/_banner.scss */
   .demoImg {
     margin-bottom: 48px;
   }
 
-  /* line 103, organisms/_banner.scss */
+  /* line 94, organisms/_banner.scss */
   .logo {
     margin-top: 48px;
     font-size: 38px;
   }
 
-  /* line 108, organisms/_banner.scss */
+  /* line 98, organisms/_banner.scss */
   .banner__sub {
     font-size: 16px;
   }
@@ -1471,7 +1456,7 @@ a {
     margin-bottom: 12px;
   }
 }
-/*../scss/organisms/_footerMain*/
+/*scss/organisms/_footerMain.scss*/
 /* line 3, organisms/_footerMain.scss */
 .footerMain {
   text-align: center;
@@ -1485,7 +1470,7 @@ a {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-/* line 1, /Applications/XAMPP/xamppfiles/htdocs/atomic-docs/scss/_cleanup.scss */
+/* line 1, _cleanup.scss */
 img {
   max-width: 100%;
 }
