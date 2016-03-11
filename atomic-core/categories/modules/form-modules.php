@@ -7,6 +7,7 @@
       </div>
         <label class="ad_label">Component description.</label>
         <textarea class="form-control" name="compNotes"></textarea>
+        <input type='text' id="custom" />
         <button class="ad_btn ad_btn-pos" type="submit" >Add</button>
       <input type="hidden" name="compDir" value="modules"/>
       <input type="hidden" name="create" value="create"/>

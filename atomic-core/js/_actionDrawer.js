@@ -85,7 +85,10 @@ $('.js-showHide-trigger').click(function() {
          
          
          
-        
+  $("#custom").spectrum({
+    color: "#f00"
+  });
+  
           
           
           
