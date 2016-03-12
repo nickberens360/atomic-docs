@@ -62,15 +62,6 @@ $('.ad_actionBtn').click(function(event) {
          
          
       
-//accordion for file forms
-/*$('.js-showHide-trigger').click(function() {
-  $('.showHide').slideUp();
-   $(this).next().slideDown();
-   $('.fa-plus').removeClass('fa-plus-is-rotated');
-   $(this).find('.fa-plus').addClass('fa-plus-is-rotated');
-});
-      */   
-      
 $('.js-showHide-trigger').click(function() {
   
     $('.showHide').slideUp(250);
@@ -85,8 +76,11 @@ $('.js-showHide-trigger').click(function() {
          
          
          
-  $("#custom").spectrum({
-    color: "#f00"
+  $(".bgColor").spectrum({
+    allowEmpty: true,
+    preferredFormat: "hex",
+    showInput: true,
+    showAlpha: true
   });
   
           
@@ -233,7 +227,8 @@ $('.js-showHide-trigger').click(function() {
             var formData = {
               'compDir'       : $('input[name=compDir]').val(),
               'fileCreateName'  : $('input[name=fileCreateName]').val(),
-              'compNotes'  : $('textarea[name=compNotes]').val()
+              'compNotes'  : $('textarea[name=compNotes]').val(),
+              'bgColor'  : $('input[name=bgColor]').val()
             };
             // process the form
             $.ajax({
@@ -447,7 +442,8 @@ $('.js-showHide-trigger').click(function() {
             var formData = {
               'compDir'       : $('input[name=compDir]').val(),
               'deleteFileName'  : $('input[name=deleteFileName]').val(),
-              'compNotes'  : $('input[name=compNotes]').val()
+              'compNotes'  : $('input[name=compNotes]').val(),
+              'bgColor'  : $('input[name=bgColor]').val()
             };
             // process the form
             $.ajax({

@@ -17,6 +17,7 @@ $data           = array();      // array to pass back data
     $compDir = test_input($_POST["compDir"]);
     $deleteFileName = test_input($_POST["deleteFileName"]);
     $compNotes = test_input($_POST["compNotes"]);
+    $bgColor = test_input($_POST["bgColor"]);
 
     
     $fileExists = '../../components/'.$compDir.'/'.$deleteFileName.'.'.$compExt.'';
@@ -50,7 +51,7 @@ $data           = array();      // array to pass back data
         deleteScssImportString($compDir, $deleteFileName );
         deleteScssFile($compDir, $deleteFileName );
 
-        deleteCompIncludetString($compDir, $compNotes, $deleteFileName );
+        deleteCompIncludetString($compDir, $compNotes, $deleteFileName, $bgColor );
 
 
 
