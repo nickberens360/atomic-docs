@@ -80,7 +80,7 @@ $('.js-showHide-trigger').click(function() {
     allowEmpty: true,
     preferredFormat: "hex",
     showInput: true,
-    showAlpha: true
+    //showAlpha: true
   });
   
           
@@ -286,6 +286,20 @@ $('.js-showHide-trigger').click(function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           $('#form-rename-file').submit(function(event) {
             reDirect = $('input[name=compDir]').val();
              // remove the error text
@@ -356,6 +370,22 @@ $('.js-showHide-trigger').click(function() {
          
          $('input[name=compNotes]').val(notesContent);
          
+         colorTarget = $('input[name=fileMoveName]').val();
+         
+        
+         /*colorContent = $('#'+colorTarget).parent().find('.component').css('background-color');*/
+         
+         
+         //Sets the hidden field value for the current bgColor
+         colorContent = $('#'+colorTarget).parent().find('.component').attr( "style" );
+         colorContent = colorContent.split(":").pop();
+         colorContent.slice(0,-1);
+        $('input[name=bgColor]').val(colorContent);
+
+         
+         
+         
+         
          
 
 
@@ -383,6 +413,8 @@ $('.js-showHide-trigger').click(function() {
               'newDir'       : $('#newDir').val(),
               'fileMoveName'  : $('input[name=fileMoveName]').val(),
               'compNotes'  : $('input[name=compNotes]').val(),
+              'bgColor'  : $('input[name=bgColor]').val(),
+              
             };
             // process the form
             $.ajax({
@@ -508,9 +540,6 @@ $('.js-showHide-trigger').click(function() {
          $('textarea[name=compNotesNew]').val(notesEditTarget);
 
 
-
-
-
            $('#form-rename-notes').submit(function(event) {
 
             notesEditTarget = $('input[name=fileName]').val();
@@ -524,9 +553,12 @@ $('.js-showHide-trigger').click(function() {
             var formData = {
               'compDir'         : $('input[name=compDir]').val(),
               'fileName'         : $('input[name=fileName]').val(),
+              'bgColor'         : $('input[name=bgColor]').val(),
               'compNotes'         : $('input[name=compNotes]').val(),
               'compNotesNew'         : $('textarea[name=compNotesNew]').val()
             };
+            
+            
             // process the form
             $.ajax({
               type    : 'POST', // define the type of HTTP verb we want to use (POST for our form)
@@ -573,11 +605,113 @@ $('.js-showHide-trigger').click(function() {
             // stop the form from submitting the normal way and refreshing the page
             event.preventDefault();
           }); 
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+
+        colorTarget = $('input[name=fileMoveName]').val();
+         
+         
+         
+         //Sets the hidden field value for the current bgColor
+         
+        /* colorContent = $('#'+colorTarget).parent().find('.component').attr( "style" );
+         colorContent = colorContent.split(":").pop();
+         colorContent.slice(0,-1);
+        
+         alert(colorContent);*/
+          
+         
 
 
-    
-    
-    
+           $('#form-change-bgColor').submit(function(event) {
+
+            reDirect = $('input[name=compDir]').val();
+             // remove the error text
+            // get the form data
+            // there are many ways to get this data using jQuery (you can use the class or id also)
+            var formData = {
+              'compDir'         : $('input[name=compDir]').val(),
+              'fileName'         : $('input[name=fileName]').val(),
+              'compNotes'         : $('input[name=compNotes]').val(),
+              'bgColor'         : $('input[name=bgColor]').val(),
+              'bgColorNew'         : $('input[name=bgColorNew]').val(),
+            };
+            // process the form
+            $.ajax({
+              type    : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+              url     : 'atomic-core/partial-mngr/bgcolor-rename.php', // the url where we want to POST
+              data    : formData, // our data object
+              dataType  : 'json', // what type of data do we expect back from the server
+              encode    : true
+            })
+              // using the done promise callback
+              .done(function(data) {
+                // log data to the console so we can see
+                console.log(data); 
+                // here we will handle errors and validation messages
+                if ( ! data.success) {
+                  // handle errors for name ---------------
+
+                  
+                  
+                  if (data.errors.exists) {
+                    $('.ad_errorBox__message').html("");
+                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                  }
+                  
+                  
+                  if (data.errors.name) {
+                    $('.ad_errorBox__message').html("");
+                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                  }
+                  
+                  
+                } else {
+                  
+                  //redirect here
+                   window.location = 'atomic-core/'+reDirect+'.php';
+                  // usually after form submission, you'll want to redirect
+                }
+              })
+              // using the fail promise callback
+              .fail(function(data) {
+                // show any errors
+                // best to remove for production
+                console.log(data);
+              });
+            // stop the form from submitting the normal way and refreshing the page
+            event.preventDefault();
+          }); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
     

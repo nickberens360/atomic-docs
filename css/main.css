@@ -1,1 +1,6 @@
-/*scss/layout/_test.scss*/
+/*scss/atoms/_links.scss*/
+.links {
+  width: 200px;
+  height: 150px;
+  background: #eee;
+}

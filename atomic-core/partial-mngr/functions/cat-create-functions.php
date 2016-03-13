@@ -198,7 +198,10 @@ function createAjaxIncludeAndFile($dirName)
       </div>
         <label class="ad_label">Component description.</label>
         <textarea class="form-control" name="compNotes"></textarea>
-        <input class="bgColor" type="text" name="bgColor" />
+        <label class="ad_label">Contextual background color.</label>
+        <div class="bgColorWrap">
+          <input class="bgColor" type="text" name="bgColor" value="" />
+        </div>
         <button class="ad_btn ad_btn-pos" type="submit" >Add</button>
       <input type="hidden" name="compDir" value="'.$dirName.'"/>
       <input type="hidden" name="create" value="create"/>

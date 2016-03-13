@@ -1705,3 +1705,12 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 .atomsWrap .compWrap .nav-tabs > li > a {
   color: #00AFF0;
 }
+.atomsWrap .component {
+  padding: 20px;
+}
+.atomsWrap .bgColorWrap {
+  margin-bottom: 12px;
+}
+.atomsWrap .sp-preview .sp-clear-display {
+  background-image: none;
+}

@@ -16,12 +16,9 @@ $data           = array();      // array to pass back data
     
     $compDir = test_input($_POST["compDir"]);
     $compNotes = test_input($_POST["compNotes"]);
-    $compNotesNew = test_input($_POST["compNotesNew"]);
     $fileName = test_input($_POST["fileName"]);
     $bgColor = test_input($_POST["bgColor"]);
-    
-    
-
+    $bgColorNew = test_input($_POST["bgColorNew"]);
     
     /*$fileExists = '../../components/'.$compDir.'/'.$deleteFileName.'.'.$compExt.'';
     
@@ -51,10 +48,7 @@ $data           = array();      // array to pass back data
         
         // DO ALL YOUR FORM PROCESSING HERE
 
-
-
-
-        changeIncludeString($compDir, $compNotes, $compNotesNew, $fileName, $bgColor);
+        changeBgIncludeString($compDir, $compNotes, $fileName, $bgColorNew, $bgColor );
         
         
         
