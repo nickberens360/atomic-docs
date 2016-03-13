@@ -55,7 +55,7 @@ pre[class*="language-"] {
 
 
 
-.component{
+.component.component-hasBg{
   padding:20px;
 }
 
@@ -65,10 +65,14 @@ pre[class*="language-"] {
   margin-bottom:12px; 
 }
 
-
+.sp-replacer{
+	background-color:#fff;
+	border: none;
+}
 .sp-preview .sp-clear-display{
  background-image:none;  
 }
+
 
 
 

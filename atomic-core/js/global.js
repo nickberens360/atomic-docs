@@ -1,7 +1,18 @@
-//$( document ).ready(function() {
-//   
-//   $('.component').css('background-color').length;
-//   
-//   alert ($('.component').css('background-color').length);
-//   
-//});
+$( document ).ready(function() {
+
+
+$('.component').each(function() {
+	
+  bgLength = $(this).css('background-color').length;
+
+  if(bgLength > 16){
+	$(this).addClass('component-hasBg');
+  }
+
+});	
+  
+
+  
+  
+  
+});
