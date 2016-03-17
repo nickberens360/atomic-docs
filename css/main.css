@@ -1,10 +1,8 @@
-/*scss/atoms/_links.scss*/
-/* line 3, atoms/_links.scss */
-.links {
-  width: 200px;
+/*scss/modules/_box.scss*/
+/* line 3, modules/_box.scss */
+.box {
+  width: 300px;
   height: 150px;
+  padding: 20px;
   background: #eee;
 }
-
-/*scss/atoms/_test.scss*/
-/*scss/layout/_btns.scss*/

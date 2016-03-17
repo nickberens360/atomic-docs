@@ -1,5 +1,5 @@
 <div class="ad_fileFormGroup">
-    <form id="form-create-file" class="ad_fileForm " action="/atomic-core/atoms.php" method="post">
+    <form id="form-create-file" class="ad_fileForm " action="/atomic-core/modules.php" method="post">
      
       <div class="inputGroup">
         <label class="ad_label">What's your component's name?</label>
@@ -12,7 +12,7 @@
           <input class="bgColor" type="text" name="bgColor" value="" />
         </div>
         <button class="ad_btn ad_btn-pos" type="submit" >Add</button>
-      <input type="hidden" name="compDir" value="atoms"/>
+      <input type="hidden" name="compDir" value="modules"/>
       <input type="hidden" name="create" value="create"/>
     </form>
 </div>
