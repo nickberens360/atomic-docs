@@ -31,11 +31,17 @@ if($('.atomic-h1').css('opacity') == '0'){
       }, {
           duration: 200
       });
+      $('.compCodeBox').velocity({
+        opacity: "1",
+      }, {
+          duration: 200
+      });
   } else { 
   
      $(this).css('color','#EB6565');
      $thisComp = $(this).closest('.compWrap');
      
+    
     
     $('.compWrap').not($thisComp).velocity({
         opacity: "0",
@@ -60,5 +66,11 @@ if($('.atomic-h1').css('opacity') == '0'){
     }, {
         duration: 200
     });
+    $('.compCodeBox').velocity({
+        opacity: "0",
+    }, {
+        duration: 200
+    });
+    
   }
 });
