@@ -1,11 +1,13 @@
-$( document ).ready(function() {
+/*$( document ).ready(function() {
 
 
 $('.component').each(function() {
 	
   bgLength = $(this).css('background-color').length;
 
-  if(bgLength > 16){
+  console.log(bgLength);
+
+  if(bgLength > 10){
 	$(this).addClass('component-hasBg');
   }
 
@@ -15,4 +17,4 @@ $('.component').each(function() {
   
   
   
-});
+});*/

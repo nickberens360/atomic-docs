@@ -2001,7 +2001,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   color: #00AFF0;
 }
 /* line 58, _cleanup.scss */
-.atomsWrap .component.component-hasBg {
+.atomsWrap .component {
+  /* .component-hasBg */
   padding: 20px;
 }
 /* line 64, _cleanup.scss */
