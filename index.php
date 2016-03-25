@@ -3,7 +3,7 @@
    <head>
     <title>Title of the document</title>
 
-    <?php include ("atomic-head.php");?>
+    <?php include ("auto-head.php");?>
 
     <style>
       html, body{
@@ -28,11 +28,11 @@
 
   <body>
     <div class="indexBlock">
-      <h1 class="indexBlock__heading">Set up in your php local environment and configure your sass preprocessor and start <a href="atomic-core/modules.php">here</a></p>
+      <h1 class="indexBlock__heading">Set up in your php local environment and configure your sass preprocessor and start <a href="auto-core/modules.php">here</a></p>
     </div>  
   </body>
   
-  <?php include ("atomic-foot.php");?>
+  <?php include ("auto-foot.php");?>
 
 </html>
 
