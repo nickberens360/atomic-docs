@@ -9,7 +9,7 @@
           <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="renameFileName" value="box" required></div>
         </div>     
       </div>
-      <input type="hidden" name="compDir" value="modules"/>
+      <input type="hidden" name="compDir" value="test"/>
       <input type="hidden" name="rename" value="rename"/>
       <input type="hidden" name="oldName" value="box"/>
     </form>
@@ -19,7 +19,7 @@
    <form id="form-rename-notes"  class="ad_fileForm " action="/atomic-core/partial-mngr/notes-rename.php" method="post">
         <textarea class="form-control" name="compNotesNew"></textarea>        
         <button class="ad_btn ad_btn-pos" type="submit" >Update</button>
-      <input type="hidden" name="compDir" value="modules"/>
+      <input type="hidden" name="compDir" value="test"/>
       <input type="hidden" name="fileName" value="box"/>
       <input type="hidden" name="compNotes" value=""/>
       <input type="hidden" name="bgColor" value=""/>
@@ -33,7 +33,7 @@
           <input class="bgColor" type="text" name="bgColorNew" value="" />
         </div>      
         <button class="ad_btn ad_btn-pos" type="submit" >Update</button>
-      <input type="hidden" name="compDir" value="modules"/>
+      <input type="hidden" name="compDir" value="test"/>
       <input type="hidden" name="fileName" value="box"/>
       <input type="hidden" name="compNotes" value=""/>
       <input type="hidden" name="bgColor" value=""/>
@@ -68,7 +68,7 @@
           </div>  
         </div>
       </div>
-      <input type="hidden" name="compDir" value="modules"/>
+      <input type="hidden" name="compDir" value="test"/>
       <input type="hidden" name="fileMoveName" value="box"/>
       <input type="hidden" name="moveFile" value="moveFile"/>
       <input type="hidden" name="compNotes" value=""/>
@@ -84,7 +84,7 @@
           <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="deleteFileName" placeholder="Must type box to delete"></div>
         </div>  
       </div>
-      <input type="hidden" name="compDir" value="modules"/>
+      <input type="hidden" name="compDir" value="test"/>
       <input type="hidden" name="delete" value="delete"/>
       <input type="hidden" name="compNotes" value=""/>
       <input type="hidden" name="bgColor" value=""/>

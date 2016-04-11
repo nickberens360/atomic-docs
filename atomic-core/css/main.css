@@ -1087,6 +1087,43 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 
 .atomsWrap {
+  /*// Reset and dependencies
+  @import "bootstrap/normalize";
+  @import "bootstrap/print";
+  @import "bootstrap/glyphicons";*/
+  /*@import "bootstrap/scaffolding";
+  @import "bootstrap/type";
+  @import "bootstrap/code";
+  @import "bootstrap/grid";
+  @import "bootstrap/tables";
+  @import "bootstrap/forms";
+  @import "bootstrap/buttons";*/
+  /*@import "bootstrap/component-animations";
+  @import "bootstrap/dropdowns";
+  @import "bootstrap/button-groups";
+  @import "bootstrap/input-groups";*/
+  /*@import "bootstrap/navbar";
+  @import "bootstrap/breadcrumbs";
+  @import "bootstrap/pagination";
+  @import "bootstrap/pager";
+  @import "bootstrap/labels";
+  @import "bootstrap/badges";
+  @import "bootstrap/jumbotron";
+  @import "bootstrap/thumbnails";
+  @import "bootstrap/alerts";
+  @import "bootstrap/progress-bars";
+  @import "bootstrap/media";
+  @import "bootstrap/list-group";
+  @import "bootstrap/panels";
+  @import "bootstrap/responsive-embed";
+  @import "bootstrap/wells";
+  @import "bootstrap/close";*/
+  /*@import "bootstrap/modals";
+  @import "bootstrap/tooltip";
+  @import "bootstrap/popovers";
+  @import "bootstrap/carousel";*/
+  /*@import "bootstrap/utilities";
+  @import "bootstrap/responsive-utilities";*/
   /*@include col($six);*/
   /* .cat-form-btn.show-hide_cls{
   	display:none;
@@ -1099,6 +1136,159 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
       height: 100%;
   }*/
   /****************************/
+}
+.atomsWrap .nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.atomsWrap .nav:before, .atomsWrap .nav:after {
+  content: " ";
+  display: table;
+}
+.atomsWrap .nav:after {
+  clear: both;
+}
+.atomsWrap .nav > li {
+  position: relative;
+  display: block;
+}
+.atomsWrap .nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.atomsWrap .nav > li > a:hover, .atomsWrap .nav > li > a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+.atomsWrap .nav > li.disabled > a {
+  color: #777777;
+}
+.atomsWrap .nav > li.disabled > a:hover, .atomsWrap .nav > li.disabled > a:focus {
+  color: #777777;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: not-allowed;
+}
+.atomsWrap .nav .open > a, .atomsWrap .nav .open > a:hover, .atomsWrap .nav .open > a:focus {
+  background-color: #eeeeee;
+  border-color: #337ab7;
+}
+.atomsWrap .nav .nav-divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+.atomsWrap .nav > li > a > img {
+  max-width: none;
+}
+.atomsWrap .nav-tabs {
+  border-bottom: 1px solid #dddddd;
+}
+.atomsWrap .nav-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+}
+.atomsWrap .nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+.atomsWrap .nav-tabs > li > a:hover {
+  border-color: #eeeeee #eeeeee #dddddd;
+}
+.atomsWrap .nav-tabs > li.active > a, .atomsWrap .nav-tabs > li.active > a:hover, .atomsWrap .nav-tabs > li.active > a:focus {
+  color: #555555;
+  background-color: white;
+  border: 1px solid #dddddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+.atomsWrap .nav-pills > li {
+  float: left;
+}
+.atomsWrap .nav-pills > li > a {
+  border-radius: 4px;
+}
+.atomsWrap .nav-pills > li + li {
+  margin-left: 2px;
+}
+.atomsWrap .nav-pills > li.active > a, .atomsWrap .nav-pills > li.active > a:hover, .atomsWrap .nav-pills > li.active > a:focus {
+  color: white;
+  background-color: #337ab7;
+}
+.atomsWrap .nav-stacked > li {
+  float: none;
+}
+.atomsWrap .nav-stacked > li + li {
+  margin-top: 2px;
+  margin-left: 0;
+}
+.atomsWrap .nav-justified, .atomsWrap .nav-tabs.nav-justified {
+  width: 100%;
+}
+.atomsWrap .nav-justified > li, .atomsWrap .nav-tabs.nav-justified > li {
+  float: none;
+}
+.atomsWrap .nav-justified > li > a, .atomsWrap .nav-tabs.nav-justified > li > a {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.atomsWrap .nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+@media (min-width: 768px) {
+  .atomsWrap .nav-justified > li, .atomsWrap .nav-tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .atomsWrap .nav-justified > li > a, .atomsWrap .nav-tabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+.atomsWrap .nav-tabs-justified, .atomsWrap .nav-tabs.nav-justified {
+  border-bottom: 0;
+}
+.atomsWrap .nav-tabs-justified > li > a, .atomsWrap .nav-tabs.nav-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+.atomsWrap .nav-tabs-justified > .active > a, .atomsWrap .nav-tabs.nav-justified > .active > a,
+.atomsWrap .nav-tabs-justified > .active > a:hover,
+.atomsWrap .nav-tabs.nav-justified > .active > a:hover,
+.atomsWrap .nav-tabs-justified > .active > a:focus,
+.atomsWrap .nav-tabs.nav-justified > .active > a:focus {
+  border: 1px solid #dddddd;
+}
+@media (min-width: 768px) {
+  .atomsWrap .nav-tabs-justified > li > a, .atomsWrap .nav-tabs.nav-justified > li > a {
+    border-bottom: 1px solid #dddddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .atomsWrap .nav-tabs-justified > .active > a, .atomsWrap .nav-tabs.nav-justified > .active > a,
+  .atomsWrap .nav-tabs-justified > .active > a:hover,
+  .atomsWrap .nav-tabs.nav-justified > .active > a:hover,
+  .atomsWrap .nav-tabs-justified > .active > a:focus,
+  .atomsWrap .nav-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: white;
+  }
+}
+.atomsWrap .tab-content > .tab-pane {
+  display: none;
+  visibility: hidden;
+}
+.atomsWrap .tab-content > .active {
+  display: block;
+  visibility: visible;
+}
+.atomsWrap .nav-tabs .dropdown-menu {
+  margin-top: -1px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 .atomsWrap [class*='nb-'] {
   position: relative;
@@ -1201,6 +1391,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   font-family: "Open Sans", sans-serif;
   font-size: 29px;
   padding: 6px 0;
+  line-height: 1.1;
 }
 .atomsWrap .formGroup-check label {
   font-weight: normal;
@@ -1658,6 +1849,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   line-height: 1;
   border: none;
   border-radius: 0;
+  text-decoration: none;
+  font-size: 14px;
 }
 .atomsWrap body {
   background: #FCFEFA;
@@ -1671,7 +1864,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   margin-top: 0;
 }
 .atomsWrap .compTitle {
-  text-transform: capitalize;
   display: block;
   margin-bottom: 12px;
   color: #00AFF0;

@@ -16,6 +16,12 @@ if($('.atomic-h1').css('opacity') == '0'){
           duration: 200
       });
       
+      $('.compNotes').not($thisComp).velocity({
+        opacity: "1",
+    }, {
+        duration: 200
+    });
+      
       $('.atoms-side').velocity({
           opacity: "1",
       }, {
@@ -44,6 +50,12 @@ if($('.atomic-h1').css('opacity') == '0'){
     
     
     $('.compWrap').not($thisComp).velocity({
+        opacity: "0",
+    }, {
+        duration: 200
+    });
+    
+    $('.compNotes').not($thisComp).velocity({
         opacity: "0",
     }, {
         duration: 200

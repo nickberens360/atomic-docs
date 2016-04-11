@@ -1,3 +1,4 @@
+//@prepros-append bootstrap.min.js
 //@prepros-append prism.js
 
 
