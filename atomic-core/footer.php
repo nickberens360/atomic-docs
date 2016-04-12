@@ -3,6 +3,5 @@
 <script src="atomic-core/js/min/compiled.min.js"></script>
 <?php include ("../atomic-foot.php");?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
-
     </body>
 </html>
