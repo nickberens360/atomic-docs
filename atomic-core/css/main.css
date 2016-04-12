@@ -2048,6 +2048,14 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     margin: 0;
   }
 }
+/* line 234, ../scss/organisms/_atomic-nav.scss */
+.atomsWrap .ad_dir .fa-pencil-square-o {
+  display: none;
+}
+/* line 238, ../scss/organisms/_atomic-nav.scss */
+.atomsWrap .ad_dir.active .fa-pencil-square-o {
+  display: inline-block;
+}
 /* line 1, ../scss/organisms/_actionDrawer.scss */
 .atomsWrap .ad_actionDrawer {
   position: fixed;
