@@ -1279,6 +1279,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   .cat-form{
   	display:none;
   } */
+  /* CSS Document */
   /*.atoms-overflow{
       overflow: auto;
       height: 100%;
@@ -1771,6 +1772,21 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 .atomsWrap .js-showContent {
   display: none;
 }
+/* line 3, ../scss/molecules/_copyBtn.scss */
+.atomsWrap .copyBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  display: block;
+  padding: 5px 8px;
+  font-size: 12px;
+  color: #767676;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #e1e1e8;
+  border-radius: 0 4px 0 4px;
+}
 /* line 1, ../scss/molecules/_compNotes.scss */
 .atomsWrap .compNotes {
   font-size: 13px;
@@ -2253,4 +2269,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 /* line 68, ../scss/_cleanup.scss */
 .atomsWrap .sp-preview .sp-clear-display {
   background-image: none;
+}
+/* line 72, ../scss/_cleanup.scss */
+.atomsWrap .language-css {
+  position: relative;
 }

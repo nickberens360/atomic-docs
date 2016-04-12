@@ -1,4 +1,5 @@
 <?php include ("head.php");?>
+
 	<body class="modules">
 	
 	
@@ -9,10 +10,12 @@
 			<div class="atoms-main">
 					<h1 id="modules" class="atomic-h1">modules</h1>
 	
-	
+<!--	<div id="d_clip_button" data-clipboard-target="fe_text" class="clip_button"  title="Click to copy." style="border:1px solid black; padding:20px;">Copy To Clipboard</div>-->
+  
 							<?php include ("categories/modules/modules.php");?>
               
 	
+  <p data-clipboard-text
 	
 			</div>
 	</div>
@@ -23,3 +26,4 @@
 	<div/>
   </div>
 	<?php include ("footer.php");?>
+  
