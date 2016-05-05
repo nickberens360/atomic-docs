@@ -1,4 +1,4 @@
-# atomic-docs
+# Atomic Docs
 
 Frontend styleguide / toolkit / pattern library generator. Inspired by Brad Frost's Atomic Design principles.
 
