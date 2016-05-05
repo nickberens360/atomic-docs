@@ -9,3 +9,9 @@ Frontend styleguide / toolkit / pattern library generator. Inspired by Brad Fros
 Have full documentaion to hand off to other teams, internal or external.
 
 <img class="docImage" src="http://atomicdocs.io/img/document.png">
+
+##Organize
+
+Organize all your components under categories that you name. "Base", "Modules", "Atoms" etc...
+
+<img src="http://atomicdocs.io/img/organize.png"/>
