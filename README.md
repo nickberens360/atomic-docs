@@ -7,7 +7,9 @@ Frontend styleguide / toolkit / pattern library generator. Inspired by Brad Fros
 ##Getting Started
 
 Download Atomic Docs and add to your local PHP environment.
+
 Configure your preprocessor to output scss/main.scss to css/main.css.
+
 Go to http://localhost/atomic-docs/atomic-core/index.php and get started.
 
 ##Document
