@@ -1,6 +1,7 @@
 # atomic-docs
 Frontend styleguide / toolkit / pattern library generator. Inspired by Brad Frost's Atomic Design principles.
 
-Documentation can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>
-
 <a href="http://atomicdocs.io/"><img class="demoImg" src="http://atomicdocs.io/img/demo1.gif"></a>
+
+##Document
+<img class="docImage" src="img/document.png">
