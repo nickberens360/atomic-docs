@@ -15,3 +15,10 @@ Have full documentaion to hand off to other teams, internal or external.
 Organize all your components under categories that you name. "Base", "Modules", "Atoms" etc...
 
 <img src="http://atomicdocs.io/img/organize.png"/>
+
+##Manage
+
+Manage all your components. Move, rename and delete with a clean GUI interface.
+
+<img src="http://atomicdocs.io/img/manage.gif"/>
+
