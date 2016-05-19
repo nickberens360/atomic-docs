@@ -31,7 +31,7 @@
 	<nav>
 		<ul class="atoms-nav">
 			<?php include ("categories/atomic-nav.php");?>
-      <li class="catAdd"><a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/categories/_catActions.php"><span class="fa fa-plus"></span> Add / Delete Category</a></li>
+      <li class="catAdd"><a class="aa_js-actionOpen aa_actionBtn" href="atomic-core/categories/_catActions.php"><span class="fa fa-plus"></span> Add / Delete Category</a></li>
 		</ul>
 		 
 	</nav>
@@ -51,7 +51,7 @@
 	<nav>
 		<ul class="atoms-nav">
 			<?php include ("categories/atomic-nav.php");?>
-      <li class="catAdd"><a class="ad_js-actionOpen ad_actionBtn" href="atomic-core/categories/_catActions.php"><span class="fa fa-plus"></span> Add / Delete Category</a></li>
+      <li class="catAdd"><a class="aa_js-actionOpen aa_actionBtn" href="atomic-core/categories/_catActions.php"><span class="fa fa-plus"></span> Add / Delete Category</a></li>
 		</ul>
 		 
 	</nav>

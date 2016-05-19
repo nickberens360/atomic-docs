@@ -1,2 +1,2 @@
-<?php include ('test/navItem-test.php');?>
-<?php include ('new/navItem-new.php');?>
+<?php include ('modules/navItem-modules.php');?>
+<?php include ('layout/navItem-layout.php');?>

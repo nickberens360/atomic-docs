@@ -85,9 +85,9 @@ function createPageTemplate($dirName)
 	
 			</div>
 	</div>
-	<div class="ad_js-actionDrawer ad_actionDrawer">
-	<div class="ad_actionDrawer__wrap">
-	    <div class="ad_js-actionClose  ad_actionDrawer__close"><i class="fa fa-times fa-3x"></i></div>
+	<div class="aa_js-actionDrawer aa_actionDrawer">
+	<div class="aa_actionDrawer__wrap">
+	    <div class="aa_js-actionClose  aa_actionDrawer__close"><i class="fa fa-times fa-3x"></i></div>
 	    <div id="js_actionDrawer__content" class="actionDrawer__content"></div>
 	<div/>
   </div>
@@ -112,14 +112,14 @@ function createSidebarIncludeAndFile($dirName)
     $compExt = $config['compExt'];
 	
 	$includeString = 
-'<li class="ad_dir <?php if ($current_page == "'.$dirName.'.php"){ echo "active "; }?>">
-		<div class="ad_dir__dirNameGroup">
-			<i class="ad_dir__dirNameGroup__icon  fa fa-folder-o"></i>
-			<a class="ad_dir__dirNameGroup__name" href="atomic-core/'.$dirName.'.php">'.$dirName.'</a>
+'<li class="aa_dir <?php if ($current_page == "'.$dirName.'.php"){ echo "active "; }?>">
+		<div class="aa_dir__dirNameGroup">
+			<i class="aa_dir__dirNameGroup__icon  fa fa-folder-o"></i>
+			<a class="aa_dir__dirNameGroup__name" href="atomic-core/'.$dirName.'.php">'.$dirName.'</a>
 		</div>
-		<ul class="ad_fileSection">
-      <li class="ad_addFileItem">
-        <a class="ad_addFile ad_js-actionOpen ad_actionBtn" href="atomic-core/categories/'.$dirName.'/form-'.$dirName.'.php"><span class="fa fa-plus"></span> Add Component</a>
+		<ul class="aa_fileSection">
+      <li class="aa_addFileItem">
+        <a class="aa_addFile aa_js-actionOpen aa_actionBtn" href="atomic-core/categories/'.$dirName.'/form-'.$dirName.'.php"><span class="fa fa-plus"></span> Add Component</a>
       </li>
 			<?php
 				$orig = "../components/'.$dirName.'";
@@ -138,7 +138,7 @@ function createSidebarIncludeAndFile($dirName)
 					
 				$filename = str_replace(".'.$compExt.'", "", $filename );
 
-				echo "<li class=\'ad_fileSection__file\'><a class=\'ad_js-actionOpen ad_actionBtn fa fa-pencil-square-o\' href=\'atomic-core/categories/'.$dirName.'/form-$filename.php\'></a><a href=\'atomic-core/'.$dirName.'.php#$filename\'>$filename</a></li>";
+				echo "<li class=\'aa_fileSection__file\'><a class=\'aa_js-actionOpen aa_actionBtn fa fa-pencil-square-o\' href=\'atomic-core/categories/'.$dirName.'/form-$filename.php\'></a><a href=\'atomic-core/'.$dirName.'.php#$filename\'>$filename</a></li>";
 				}
 				}
 				closedir($dir);
@@ -189,20 +189,20 @@ function createAjaxIncludeAndFile($dirName)
 {
 	
 	$includeString = 
-'<div class="ad_fileFormGroup">
-    <form id="form-create-file" class="ad_fileForm " action="/atomic-core/'.$dirName.'.php" method="post">
+'<div class="aa_fileFormGroup">
+    <form id="form-create-file" class="aa_fileForm " action="/atomic-core/' .$dirName.'.php" method="post">
      
       <div class="inputGroup">
-        <label class="ad_label">What\'s your component\'s name?</label>
+        <label class="aa_label">What\'s your component\'s name?</label>
         <input type="text" class="form-control" name="fileCreateName">
       </div>
-        <label class="ad_label">Component description.</label>
+        <label class="aa_label">Component description.</label>
         <textarea class="form-control" name="compNotes"></textarea>
-        <label class="ad_label">Contextual background color.</label>
+        <label class="aa_label">Contextual background color.</label>
         <div class="bgColorWrap">
           <input class="bgColor" type="text" name="bgColor" value="" />
         </div>
-        <button class="ad_btn ad_btn-pos" type="submit" >Add</button>
+        <button class="aa_btn aa_btn-pos" type="submit" >Add</button>
       <input type="hidden" name="compDir" value="'.$dirName.'"/>
       <input type="hidden" name="create" value="create"/>
     </form>
