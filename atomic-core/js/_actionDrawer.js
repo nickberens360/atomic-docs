@@ -3,7 +3,7 @@
 function actionsWidth(){
 	$side = $('.atoms-side');
 	$body = $('body');
-	$action = $('.ad_js-actionDrawer');
+	$action = $('.aa_js-actionDrawer');
 	sideWidth = $($side).outerWidth();
 	bodyWidth = $('body').outerWidth();
 	$action.css('width', bodyWidth - sideWidth - 1);	
@@ -17,39 +17,39 @@ $( window ).resize(function() {
 
 
 var actionOpen = [
-  { elements: $(".ad_js-actionDrawer"), properties: { right:"auto"}, options: { duration: 300} },
+  { elements: $(".aa_js-actionDrawer"), properties: { right:"auto"}, options: { duration: 300} },
   
 ];
 
 var actionClose = [
-  { elements: $(".ad_js-actionDrawer"), properties: { right:"-100%"}, options: { duration: 300} }, 
+  { elements: $(".aa_js-actionDrawer"), properties: { right:"-100%"}, options: { duration: 300} }, 
 ];
 
 
-$(".ad_js-actionOpen").on('click', function(event) {
+$(".aa_js-actionOpen").on('click', function(event) {
   event.preventDefault();
   $.Velocity.RunSequence(actionOpen);
 });
 
-$(".ad_js-actionClose").on('click', function(event) {
+$(".aa_js-actionClose").on('click', function(event) {
   event.preventDefault();
   $.Velocity.RunSequence(actionClose);
 });
 
 
-$('body').on('click', '.ad_js-actionOpen', function(events){
-   $('.ad_errorBox').remove();
+$('body').on('click', '.aa_js-actionOpen', function(events){
+   $('.aa_errorBox').remove();
 });
 
-$('body').on('click', '.ad_js-errorBox__close', function(events){
-   $('.ad_errorBox').fadeOut(200);
+$('body').on('click', '.aa_js-errorBox__close', function(events){
+   $('.aa_errorBox').fadeOut(200);
 });
 
 
 
 
 
-$('.ad_actionBtn').click(function(event) {
+$('.aa_actionBtn').click(function(event) {
   
 
 
@@ -118,14 +118,14 @@ $('.js-showHide-trigger').click(function() {
                   
                   
                   if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   
                   if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   
@@ -187,14 +187,14 @@ $('.js-showHide-trigger').click(function() {
                   
                   
                   if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   
                   if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   
@@ -251,14 +251,14 @@ $('.js-showHide-trigger').click(function() {
                   
                   
                   if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   
                   if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   
@@ -318,14 +318,14 @@ $('.js-showHide-trigger').click(function() {
                   
                   
                   if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   
                   if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   
@@ -403,14 +403,14 @@ $('.js-showHide-trigger').click(function() {
                   // handle errors for name --------------- 
                   
                   if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   
                   if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   
@@ -463,14 +463,14 @@ $('.js-showHide-trigger').click(function() {
                   // handle errors for name --------------- 
                   
                   if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   
                   if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   
@@ -547,14 +547,14 @@ $('.js-showHide-trigger').click(function() {
                   
                   
                   if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   
                   if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
+                    $('.aa_errorBox__message').html("");
+                    $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200); 
                   }
                   
                   

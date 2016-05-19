@@ -85,16 +85,16 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
 {
   
   $includeString = 
-'<div class="ad_fileFormGroup">
+'<div class="aa_fileFormGroup">
 
-<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Rename</span> '.$fileName.'</label>
+<label class="aa_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="aa_label__file">Rename</span> '.$fileName.'</label>
 <div class="showHide">
-  <form id="form-rename-file"  class="ad_fileForm " action="/atomic-core/partial-mngr/file-rename.php" method="post">
+  <form id="form-rename-file"  class="aa_fileForm " action="/atomic-core/partial-mngr/file-rename.php" method="post">
       <div class="formInputGroup">
 
         <div class="inputBtnGroup">
           
-          <button class="ad_btn ad_btn-pos" type="submit" >Rename</button>
+          <button class="aa_btn aa_btn-pos" type="submit" >Rename</button>
           <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="renameFileName" value="'.$fileName.'" required></div>
 
         </div>     
@@ -107,12 +107,12 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
 </div>
 
 
-<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> Change the <span class="ad_label__file">description</span> for '.$fileName.'</label>
+<label class="aa_label js-showHide-trigger"><span class="fa fa-plus"></span> Change the <span class="aa_label__file">description</span> for '.$fileName.'</label>
 <div class="showHide">
-   <form id="form-rename-notes"  class="ad_fileForm " action="/atomic-core/partial-mngr/notes-rename.php" method="post">
+   <form id="form-rename-notes"  class="aa_fileForm " action="/atomic-core/partial-mngr/notes-rename.php" method="post">
         <textarea class="form-control" name="compNotesNew"></textarea>        
 
-        <button class="ad_btn ad_btn-pos" type="submit" >Update</button>
+        <button class="aa_btn aa_btn-pos" type="submit" >Update</button>
 
       <input type="hidden" name="compDir" value="'.$catName.'"/>
       <input type="hidden" name="fileName" value="'.$fileName.'"/>
@@ -123,13 +123,13 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
 
 
 
-<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Move</span>  '.$fileName.'</label>
+<label class="aa_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="aa_label__file">Move</span>  '.$fileName.'</label>
 <div class="showHide">
-  <form id="form-file-move" class="ad_fileForm " action="/atomic-core/partial-mngr/file-move.php" method="post">
+  <form id="form-file-move" class="aa_fileForm " action="/atomic-core/partial-mngr/file-move.php" method="post">
       <div class="formGroup">
         <div class="formInputGroup">
           <div class="inputBtnGroup">
-            <button class="ad_btn ad_btn-pos" type="submit">Move</button>
+            <button class="aa_btn aa_btn-pos" type="submit">Move</button>
             <div class="inputBtnGroup__inputWrap u-bgWhite">
               <select id="newDir" class="form-control" >
                 <?php
@@ -171,12 +171,12 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
 
 
 
-<label class="ad_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="ad_label__file">Delete</span> '.$fileName.'</label>
+<label class="aa_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="aa_label__file">Delete</span> '.$fileName.'</label>
 <div class="showHide">
-    <form id="form-delete-file" class="ad_fileForm " action="/atomic-core/partial-mngr/delete.php" method="post">
+    <form id="form-delete-file" class="aa_fileForm " action="/atomic-core/partial-mngr/delete.php" method="post">
       <div class="formInputGroup">
         <div class="inputBtnGroup">
-          <button class="ad_btn ad_btn-neg" type="submit" >Delete</button>
+          <button class="aa_btn aa_btn-neg" type="submit" >Delete</button>
           <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="deleteFileName" placeholder="Must type '.$fileName.' to delete"></div>
         </div>  
       </div>

@@ -617,7 +617,7 @@ pre[class*="language-"] {
 .atomsWrap .showHide textarea.form-control {
   margin-bottom: 12px;
 }
-.atomsWrap .ad_label.js-showHide-trigger {
+.atomsWrap .aa_label.js-showHide-trigger {
   margin-bottom: 24px;
   position: relative;
   top: 12px;
@@ -626,22 +626,22 @@ pre[class*="language-"] {
   -webkit-transition: font-size .25s;
   transition: font-size .25s;
 }
-.atomsWrap .ad_label.js-showHide-trigger .fa-plus {
+.atomsWrap .aa_label.js-showHide-trigger .fa-plus {
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: all .25s;
   transition: all .25s;
 }
-.atomsWrap .ad_label.js-showHide-trigger .fa-plus-is-rotated {
+.atomsWrap .aa_label.js-showHide-trigger .fa-plus-is-rotated {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.atomsWrap .ad_label-is-closed {
+.atomsWrap .aa_label-is-closed {
   font-size: 12px !important;
 }
-.atomsWrap .ad_label-is-open {
+.atomsWrap .aa_label-is-open {
   font-size: 20px !important;
 }
 .atomsWrap .atomic-h1 {
@@ -676,12 +676,12 @@ pre[class*="language-"] {
 .atomsWrap .formInput-check:checked + label span {
   background: #222222;
 }
-.atomsWrap .ad_fileForm .btn {
+.atomsWrap .aa_fileForm .btn {
   border-radius: 0;
   padding: 7px 12px;
   border: none;
 }
-.atomsWrap .ad_fileForm ::-webkit-input-placeholder {
+.atomsWrap .aa_fileForm ::-webkit-input-placeholder {
   color: #B9B9B9;
   font-style: 12px;
 }
@@ -714,22 +714,22 @@ pre[class*="language-"] {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.atomsWrap .ad_fileSection {
+.atomsWrap .aa_fileSection {
   display: none;
 }
-.atomsWrap .ad_fileSection li {
+.atomsWrap .aa_fileSection li {
   list-style: none;
 }
-.atomsWrap .active .ad_fileSection {
+.atomsWrap .active .aa_fileSection {
   display: block;
 }
-.atomsWrap .ad_dir__dirNameGroup {
+.atomsWrap .aa_dir__dirNameGroup {
   position: relative;
 }
-.atomsWrap .active .ad_dir__dirNameGroup__icon {
+.atomsWrap .active .aa_dir__dirNameGroup__icon {
   display: inline;
 }
-.atomsWrap .ad_dir__dirNameGroup__icon {
+.atomsWrap .aa_dir__dirNameGroup__icon {
   color: #00aff0;
   position: absolute;
   left: 13px;
@@ -770,7 +770,7 @@ pre[class*="language-"] {
   -webkit-transition: all .5s;
   transition: all .5s;
 }
-.atomsWrap .cat-form-group .ad_fileForm .form-control {
+.atomsWrap .cat-form-group .aa_fileForm .form-control {
   background: #3F434E;
   margin-bottom: 7px;
   height: 40px;
@@ -864,7 +864,7 @@ pre[class*="language-"] {
 .atomsWrap .atoms-side a {
   text-decoration: none;
 }
-.atomsWrap .ad_dir {
+.atomsWrap .aa_dir {
   border-bottom: 1px solid #E3E3E3;
 }
 .atomsWrap .atoms-nav {
@@ -872,7 +872,7 @@ pre[class*="language-"] {
   padding: 0;
   margin-top: 1px;
 }
-.atomsWrap .ad_dir__dirNameGroup__name {
+.atomsWrap .aa_dir__dirNameGroup__name {
   display: block;
   padding: 10px 38px;
   padding-left: 0;
@@ -880,10 +880,10 @@ pre[class*="language-"] {
   color: #7a7a7a;
   font-size: 16px;
 }
-.atomsWrap .ad_dir__dirNameGroup__name:hover {
+.atomsWrap .aa_dir__dirNameGroup__name:hover {
   text-decoration: none;
 }
-.atomsWrap .ad_addFile {
+.atomsWrap .aa_addFile {
   color: #9DA0A0;
   padding-left: 39px;
   margin-bottom: 10px;
@@ -891,28 +891,28 @@ pre[class*="language-"] {
   font-size: 12px;
   font-style: italic;
 }
-.atomsWrap .ad_fileSection__file {
+.atomsWrap .aa_fileSection__file {
   padding-left: 39px;
 }
-.atomsWrap .ad_fileSection__file .fa {
+.atomsWrap .aa_fileSection__file .fa {
   margin-right: 5px;
   position: relative;
   top: 1px;
 }
-.atomsWrap .ad_fileSection__file a {
+.atomsWrap .aa_fileSection__file a {
   color: #7a7a7a;
   font-size: 14px;
 }
-.atomsWrap .ad_fileSection {
+.atomsWrap .aa_fileSection {
   padding-left: 0;
 }
-.atomsWrap .ad_fileSection li {
+.atomsWrap .aa_fileSection li {
   list-style: none;
 }
-.atomsWrap .ad_fileSection li:last-child {
+.atomsWrap .aa_fileSection li:last-child {
   margin-bottom: 15px;
 }
-.atomsWrap .ad_fileSection a:hover {
+.atomsWrap .aa_fileSection a:hover {
   text-decoration: none;
 }
 .atomsWrap .border-top {
@@ -1013,10 +1013,10 @@ pre[class*="language-"] {
     right: 7px;
     display: block;
   }
-  .atomsWrap .ad_addFile {
+  .atomsWrap .aa_addFile {
     display: none;
   }
-  .atomsWrap .ad_fileSection__file .fa {
+  .atomsWrap .aa_fileSection__file .fa {
     display: none;
   }
   .atomsWrap .catAdd a {
@@ -1026,7 +1026,7 @@ pre[class*="language-"] {
     margin: 0;
   }
 }
-.atomsWrap .ad_actionDrawer {
+.atomsWrap .aa_actionDrawer {
   position: fixed;
   top: 0;
   right: -100%;
@@ -1037,7 +1037,7 @@ pre[class*="language-"] {
   padding: 50px;
   height: 100%;
 }
-.atomsWrap .ad_actionDrawer__wrap {
+.atomsWrap .aa_actionDrawer__wrap {
   max-width: 500px;
   margin: auto;
   position: relative;
@@ -1046,10 +1046,10 @@ pre[class*="language-"] {
   -ms-transform: translateY(-30%);
   transform: translateY(-30%);
 }
-.atomsWrap .ad_actionDrawer__wrap h1 {
+.atomsWrap .aa_actionDrawer__wrap h1 {
   color: #7A7A7A;
 }
-.atomsWrap .ad_actionDrawer__close {
+.atomsWrap .aa_actionDrawer__close {
   cursor: pointer;
   /* color: #F94B4B; */
   color: #B5B4B4;
@@ -1057,43 +1057,43 @@ pre[class*="language-"] {
   right: 0;
   top: -53px;
 }
-.atomsWrap .ad_label {
+.atomsWrap .aa_label {
   display: block;
   margin-bottom: 6px;
   color: #7A7A7A;
   font-weight: normal;
 }
-.atomsWrap .ad_label__file {
+.atomsWrap .aa_label__file {
   color: #00aff0;
   font-weight: bold;
 }
 .atomsWrap .formInputGroup {
   margin-bottom: 12px;
 }
-.atomsWrap .inputBtnGroup .ad_btn {
+.atomsWrap .inputBtnGroup .aa_btn {
   float: right;
 }
-.atomsWrap .inputBtnGroup .ad_btn:focus {
+.atomsWrap .inputBtnGroup .aa_btn:focus {
   outline: none;
   border: none;
 }
 .atomsWrap .inputBtnGroup__inputWrap {
   overflow: hidden;
 }
-.atomsWrap .ad_btn {
+.atomsWrap .aa_btn {
   height: 50px;
   border: none;
   width: 100px;
   color: #fff;
   background-color: #7A7A7A;
 }
-.atomsWrap .ad_btn-pos {
+.atomsWrap .aa_btn-pos {
   background-color: #51CD6D;
 }
-.atomsWrap .ad_btn-neg {
+.atomsWrap .aa_btn-neg {
   background-color: #CD5151;
 }
-.atomsWrap .ad_errorBox {
+.atomsWrap .aa_errorBox {
   position: absolute;
   top: 0;
   right: 0;
@@ -1103,10 +1103,10 @@ pre[class*="language-"] {
   color: #fff;
   font-weight: bold;
 }
-.atomsWrap .ad_errorBox .fa {
+.atomsWrap .aa_errorBox .fa {
   cursor: pointer;
 }
-.atomsWrap .ad_errorBox__message {
+.atomsWrap .aa_errorBox__message {
   margin: 11px;
 }
 .atomsWrap .compWrap .nav-tabs {
@@ -1173,4 +1173,10 @@ pre[class*="language-"] {
 }
 .atomsWrap .compWrap .nav-tabs > li > a {
   color: #00AFF0;
+}
+.atomsWrap .aa_dir .fa-pencil-square-o {
+  display: none;
+}
+.atomsWrap .aa_dir.active .fa-pencil-square-o {
+  display: inline-block;
 }

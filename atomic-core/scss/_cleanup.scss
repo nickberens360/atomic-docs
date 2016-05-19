@@ -50,3 +50,19 @@ pre[class*="language-"] {
 .compWrap .nav-tabs > li > a {
     color: #00AFF0;
 }
+
+.aa_dir {
+	.fa-pencil-square-o{
+		display: none;
+	}
+}
+.aa_dir.active {
+	.fa-pencil-square-o{
+		display: inline-block;
+	}
+}
+
+
+
+
+
