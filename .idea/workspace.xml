@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="982fc8ab-3454-40eb-b4dd-9d17abbfd3cb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/atomic-core/categories/more/form-more.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/atomic-core/categories/more/form-new.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/atomic-core/categories/more/more.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/atomic-core/categories/more/navItem-more.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/atomic-core/js/min/animateHeight.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/atomic-core/js/min/compiled.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/atomic-core/js/min/prism-builder.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/atomic-core/js/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/atomic-core/more.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/more/new.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/more/_more.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/more/_new.scss" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atomic-core/categories/atomic-nav.php" afterPath="$PROJECT_DIR$/atomic-core/categories/atomic-nav.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atomic-core/categories/test/test.php" afterPath="$PROJECT_DIR$/atomic-core/categories/test/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atomic-core/js/_actionDrawer.js" afterPath="$PROJECT_DIR$/atomic-core/js/_actionDrawer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atomic-core/js/compiled.js" afterPath="$PROJECT_DIR$/atomic-core/js/compiled.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atomic-core/partial-mngr/file-move.php" afterPath="$PROJECT_DIR$/atomic-core/partial-mngr/file-move.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atomic-core/partial-mngr/file-rename.php" afterPath="$PROJECT_DIR$/atomic-core/partial-mngr/file-rename.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/main.scss" afterPath="$PROJECT_DIR$/scss/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/test/_test.scss" afterPath="$PROJECT_DIR$/scss/test/_test.scss" />
     </list>
     <ignored path="atomic-docs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,8 +57,8 @@
       <file leaf-file-name="prism-builder.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/atomic-core/js/prism-builder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+            <state relative-caret-position="714">
+              <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -139,6 +118,7 @@
         <option value="$PROJECT_DIR$/scss/new/_bluess.scss" />
         <option value="$PROJECT_DIR$/components/new/bluess.php" />
         <option value="$PROJECT_DIR$/atomic-core/partial-mngr/file-move.php" />
+        <option value="$PROJECT_DIR$/atomic-core/js/prism-builder.js" />
       </list>
     </option>
   </component>
@@ -298,12 +278,12 @@
       <workItem from="1463606822182" duration="431000" />
       <workItem from="1463673551154" duration="38000" />
       <workItem from="1463673597366" duration="19000" />
-      <workItem from="1463673657513" duration="7474000" />
+      <workItem from="1463673657513" duration="8054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10070000" />
+    <option name="totallyTimeSpent" value="10650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-109" width="1936" height="1096" extended-state="6" />
@@ -506,8 +486,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/atomic-core/js/prism-builder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="714">
+          <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
           <folding />
         </state>
       </provider>
