@@ -1,731 +1,600 @@
 //action drawer.js
 
 
+$('.ad_fileSection__file .ad_actionBtn').click(function (event) {
 
 
+    event.preventDefault();
+    $.ajax(this.href, {
+        success: function (data) {
+            $('#js_actionDrawer__content').html($(data));
 
-function actionsWidth(){
-	$side = $('.atoms-side');
-	$body = $('body');
-	$action = $('.ad_js-actionDrawer');
-	sideWidth = $($side).outerWidth();
-	bodyWidth = $('body').outerWidth();
-	$action.css('width', bodyWidth - sideWidth - 1);	
-}
+            //Rotates plus icon for edit component forms
+            $('.js-showHide-trigger').click(function () {
 
-actionsWidth();
-$( window ).resize(function() {
-  actionsWidth();
-});
+                $('.showHide').slideUp(250);
+                $('.fa-plus').removeClass('fa-plus-is-rotated');
 
-
-
-var actionOpen = [
-  { elements: $(".ad_js-actionDrawer"), properties: { right:"auto"}, options: { duration: 300} },
-  
-];
-
-var actionClose = [
-  { elements: $(".ad_js-actionDrawer"), properties: { right:"-100%"}, options: { duration: 300} }, 
-];
-
-
-$(".ad_js-actionOpen").on('click', function(event) {
-  event.preventDefault();
-  $.Velocity.RunSequence(actionOpen);
-});
-
-$(".ad_js-actionClose").on('click', function(event) {
-  event.preventDefault();
-  $.Velocity.RunSequence(actionClose);
-});
-
-
-$('body').on('click', '.ad_js-actionOpen', function(events){
-   $('.ad_errorBox').remove();
-});
-
-$('body').on('click', '.ad_js-errorBox__close', function(events){
-   $('.ad_errorBox').fadeOut(200);
-});
-
-
-
-
-
-$('.ad_actionBtn').click(function(event) {
-  
-
-
-   
-  
-   event.preventDefault();
-   $.ajax(this.href, {
-      success: function(data) {      
-         $('#js_actionDrawer__content').html($(data));
-         
-         
-      
-$('.js-showHide-trigger').click(function() {
-  
-    $('.showHide').slideUp(250);
-    $('.fa-plus').removeClass('fa-plus-is-rotated');
-    
-    if($(this).next().is(':hidden')){
-       $(this).next().slideDown(250);
-       $(this).find('.fa-plus').addClass('fa-plus-is-rotated');
-    }
-});
-            
-         
-         
-         
-  $(".bgColor").spectrum({
-    allowEmpty: true,
-    preferredFormat: "hex",
-    showInput: true,
-    //showAlpha: true
-  });
-  
-          
-          
-          
-          
-          
-          $('#form-create-category').submit(function(event) {
-            reDirect = $('input[name=dirName]').val();
-             // remove the error text
-            // get the form data
-            // there are many ways to get this data using jQuery (you can use the class or id also)
-            var formData = {
-              'dirName' 				: $('input[name=dirName]').val()
-            };
-            // process the form
-            $.ajax({
-              type 		: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url 		: 'atomic-core/partial-mngr/create-category.php', // the url where we want to POST
-              data 		: formData, // our data object
-              dataType 	: 'json', // what type of data do we expect back from the server
-              encode 		: true
-            })
-              // using the done promise callback
-              .done(function(data) {
-                // log data to the console so we can see
-                console.log(data); 
-                // here we will handle errors and validation messages
-                if ( ! data.success) {
-                  // handle errors for name ---------------
-
-                  
-                  
-                  if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                  if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                } else {
-                  
-                  //redirect here
-                   window.location = 'atomic-core/'+reDirect+'.php';
-                  // usually after form submission, you'll want to redirect
+                if ($(this).next().is(':hidden')) {
+                    $(this).next().slideDown(250);
+                    $(this).find('.fa-plus').addClass('fa-plus-is-rotated');
                 }
-              })
-              // using the fail promise callback
-              .fail(function(data) {
-                // show any errors
-                // best to remove for production
-                console.log(data);
-              });
-            // stop the form from submitting the normal way and refreshing the page
-            event.preventDefault();
-          });
+            });
 
 
-          
-          
-       
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          $('#form-delete-category').submit(function(event) {
-             // remove the error text
-            // get the form data
-            // there are many ways to get this data using jQuery (you can use the class or id also)
-            var formData = {
-              'dirName' 				: $('input[name=inputNameDelete]').val()
-            };
-            // process the form
-            $.ajax({
-              type 		: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url 		: 'atomic-core/partial-mngr/delete-category.php', // the url where we want to POST
-              data 		: formData, // our data object
-              dataType 	: 'json', // what type of data do we expect back from the server
-              encode 		: true
-            })
-              // using the done promise callback
-              .done(function(data) {
-                // log data to the console so we can see
-                console.log(data); 
-                // here we will handle errors and validation messages
-                if ( ! data.success) {
-                  // handle errors for name ---------------
+            //Initialize color picker
+            $(".bgColor").spectrum({
+                allowEmpty: true,
+                preferredFormat: "hex",
+                showInput: true,
+                //showAlpha: true
+            });
 
-                  
-                  
-                  if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                  if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                  
-                  
-                } else {
-                  //redirect here
-                   window.location = 'atomic-core/index.php';
-                  // usually after form submission, you'll want to redirect
-                }
-              })
-              // using the fail promise callback
-              .fail(function(data) {
-                // show any errors
-                // best to remove for production
-                console.log(data);
-              });
-            // stop the form from submitting the normal way and refreshing the page
-            event.preventDefault();
-          });
-          
-      
-      
-    
-    
-    
-    
-          $('#form-create-file').submit(function(event) {
-            reDirect = $('input[name=compDir]').val();
-             // remove the error text
-            // get the form data
-            // there are many ways to get this data using jQuery (you can use the class or id also)
-            var formData = {
-              'compDir'       : $('input[name=compDir]').val(),
-              'fileCreateName'  : $('input[name=fileCreateName]').val(),
-              'compNotes'  : $('textarea[name=compNotes]').val(),
-              'bgColor'  : $('input[name=bgColor]').val()
-            };
-            // process the form
-            $.ajax({
-              type    : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url     : 'atomic-core/partial-mngr/create.php', // the url where we want to POST
-              data    : formData, // our data object
-              dataType  : 'json', // what type of data do we expect back from the server
-              encode    : true
-            })
-              // using the done promise callback
-              .done(function(data) {
-                // log data to the console so we can see
-                console.log(data); 
-                // here we will handle errors and validation messages
-                if ( ! data.success) {
-                  // handle errors for name ---------------
-
-                  
-                  
-                  if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                  if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                } else {
-                  
-                  //redirect here
-                   window.location = 'atomic-core/'+reDirect+'.php';
-                  // usually after form submission, you'll want to redirect
-                }
-              })
-              // using the fail promise callback
-              .fail(function(data) {
-                // show any errors
-                // best to remove for production
-                console.log(data);
-              });
-            // stop the form from submitting the normal way and refreshing the page
-            event.preventDefault();
-          });
+            //Submits rename file data
+            $('#form-rename-file').submit(function (event) {
+                reDirect = $('input[name=compDir]').val();
+                var formData = {
+                    'compDir': $('input[name=compDir]').val(),
+                    'oldName': $('input[name=oldName]').val(),
+                    'renameFileName': $('input[name=renameFileName]').val(),
+                    'compNotes': $('input[name=compNotes]').val(),
+                    'bgColor': $('input[name=bgColor]').val(),
+                };
+                // process the form
+                $.ajax({
+                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                        url: 'atomic-core/partial-mngr/file-rename.php', // the url where we want to POST
+                        data: formData, // our data object
+                        dataType: 'json', // what type of data do we expect back from the server
+                        encode: true
+                    })
+                    // using the done promise callback
+                    .done(function (data) {
+                        // log data to the console so we can see
+                        console.log(data);
+                        // here we will handle errors and validation messages
+                        if (!data.success) {
+                            // handle errors for name ---------------
 
 
+                            if (data.errors.exists) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
 
 
+                            if (data.errors.name) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
 
 
+                        } else {
+
+                            //redirect here
+                            window.location = 'atomic-core/' + reDirect + '.php';
+                            // usually after form submission, you'll want to redirect
+                        }
+                    })
+                    // using the fail promise callback
+                    .fail(function (data) {
+                        // show any errors
+                        // best to remove for production
+                        console.log(data);
+                    });
+                // stop the form from submitting the normal way and refreshing the page
+                event.preventDefault();
+            });
 
 
+            //put notes value in compNotes hidden field
+            notesTarget = $('input[name=fileMoveName]').val();
+            notesContent = $('.atoms-main #' + notesTarget).next().text();
 
 
+            $('input[name=compNotes]').val(notesContent);
 
 
+            /*colorContent = $('#'+colorTarget).parent().find('.component').css('background-color');*/
 
 
+            //Sets the hidden field value for the current bgColor
 
+            colorTarget = $('input[name=fileMoveName]').val();
 
-
-
-
-
-
-
-
-
-          $('#form-rename-file').submit(function(event) {
-            reDirect = $('input[name=compDir]').val();
-             // remove the error text
-            // get the form data
-            // there are many ways to get this data using jQuery (you can use the class or id also)
-            var formData = {
-              'compDir'       : $('input[name=compDir]').val(),
-              'oldName'       : $('input[name=oldName]').val(),
-              'renameFileName'  : $('input[name=renameFileName]').val(),
-              'compNotes'       : $('input[name=compNotes]').val()
-            };
-            // process the form
-            $.ajax({
-              type    : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url     : 'atomic-core/partial-mngr/file-rename.php', // the url where we want to POST
-              data    : formData, // our data object
-              dataType  : 'json', // what type of data do we expect back from the server
-              encode    : true
-            })
-              // using the done promise callback
-              .done(function(data) {
-                // log data to the console so we can see
-                console.log(data); 
-                // here we will handle errors and validation messages
-                if ( ! data.success) {
-                  // handle errors for name ---------------
-
-                  
-                  
-                  if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                  if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                } else {
-                  
-                  //redirect here
-                   window.location = 'atomic-core/'+reDirect+'.php';
-                  // usually after form submission, you'll want to redirect
-                }
-              })
-              // using the fail promise callback
-              .fail(function(data) {
-                // show any errors
-                // best to remove for production
-                console.log(data);
-              });
-            // stop the form from submitting the normal way and refreshing the page
-            event.preventDefault();
-          });
-
-
-
-
-
-          
-        //put notes value in compNotes hidden field
-         notesTarget = $('input[name=fileMoveName]').val();
-         notesContent = $('.atoms-main #'+notesTarget).next().text();
-         
-         
-         $('input[name=compNotes]').val(notesContent);
-         
-         colorTarget = $('input[name=fileMoveName]').val();
-         
-        
-         /*colorContent = $('#'+colorTarget).parent().find('.component').css('background-color');*/
-         
-         
-         //Sets the hidden field value for the current bgColor
-         colorContent = $('#'+colorTarget).parent().find('.component').attr( "style" );
-         colorContent = colorContent.split(":").pop();
-         colorContent.slice(0,-1);
-        $('input[name=bgColor]').val(colorContent);
-
-         
-         
-         
-         
-         
-
-
+            colorContent = $('#' + colorTarget).parent().find('.component').attr("style");
+            console.log(colorContent);
+            colorContent = colorContent.split(":").pop();
+            colorContent.slice(0, -1);
+            $('input[name=bgColor]').val(colorContent);
 
 
             //check what is the current category and remove from select
-          dirVal = $('#form-file-move input[name=compDir]').val();
+            dirVal = $('#form-file-move input[name=compDir]').val();
 
-          $("#newDir option[value="+dirVal+"]").remove();
-          
-          dirCount = $('#newDir option').size();
-          
-          if(dirCount < 1){
-             $('#form-file-move').remove();
-          }
+            $("#newDir option[value=" + dirVal + "]").remove();
+
+            dirCount = $('#newDir option').size();
+
+            if (dirCount < 1) {
+                $('#form-file-move').remove();
+            }
+
+            //Submits move file data
+            $('#form-file-move').submit(function (event) {
+                reDirect = $('#newDir').val();
+                // remove the error text
+                // get the form data
+                // there are many ways to get this data using jQuery (you can use the class or id also)
+                var formData = {
+                    'compDir': $('input[name=compDir]').val(),
+                    'newDir': $('#newDir').val(),
+                    'fileMoveName': $('input[name=fileMoveName]').val(),
+                    'compNotes': $('input[name=compNotes]').val(),
+                    'bgColor': $('input[name=bgColor]').val(),
+
+                };
+                // process the form
+                $.ajax({
+                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                        url: 'atomic-core/partial-mngr/file-move.php', // the url where we want to POST
+                        data: formData, // our data object
+                        dataType: 'json', // what type of data do we expect back from the server
+                        encode: true
+                    })
+                    // using the done promise callback
+                    .done(function (data) {
+                        // log data to the console so we can see
+                        console.log(data);
+                        // here we will handle errors and validation messages
+                        if (!data.success) {
+                            // handle errors for name ---------------
+
+                            if (data.errors.exists) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
 
 
-          $('#form-file-move').submit(function(event) {
-            reDirect = $('#newDir').val();
-             // remove the error text
-            // get the form data
-            // there are many ways to get this data using jQuery (you can use the class or id also)
-            var formData = {
-              'compDir'       : $('input[name=compDir]').val(),
-              'newDir'       : $('#newDir').val(),
-              'fileMoveName'  : $('input[name=fileMoveName]').val(),
-              'compNotes'  : $('input[name=compNotes]').val(),
-              'bgColor'  : $('input[name=bgColor]').val(),
-              
-            };
-            // process the form
-            $.ajax({
-              type    : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url     : 'atomic-core/partial-mngr/file-move.php', // the url where we want to POST
-              data    : formData, // our data object
-              dataType  : 'json', // what type of data do we expect back from the server
-              encode    : true
-            })
-              // using the done promise callback
-              .done(function(data) {
-                // log data to the console so we can see
-                console.log(data); 
-                // here we will handle errors and validation messages
-                if ( ! data.success) {
-                  // handle errors for name --------------- 
-                  
-                  if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                  if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                } else {
-                  
+                            if (data.errors.name) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
 
-                
-                  //redirect here
-                  window.location = 'atomic-core/'+reDirect+'.php';
-                  // usually after form submission, you'll want to redirect
-                }
-              })
-              // using the fail promise callback
-              .fail(function(data) {
-                // show any errors
-                // best to remove for production
-                console.log(data);
-              });
-            // stop the form from submitting the normal way and refreshing the page
-            event.preventDefault();
-          });
+
+                        } else {
 
 
 
-
-          $('#form-delete-file').submit(function(event) {
-            reDirect = $('input[name=compDir]').val();
-             // remove the error text
-            // get the form data
-            // there are many ways to get this data using jQuery (you can use the class or id also)
-            var formData = {
-              'compDir'       : $('input[name=compDir]').val(),
-              'deleteFileName'  : $('input[name=deleteFileName]').val(),
-              'compNotes'  : $('input[name=compNotes]').val(),
-              'bgColor'  : $('input[name=bgColor]').val()
-            };
-            // process the form
-            $.ajax({
-              type    : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url     : 'atomic-core/partial-mngr/delete.php', // the url where we want to POST
-              data    : formData, // our data object
-              dataType  : 'json', // what type of data do we expect back from the server
-              encode    : true
-            })
-              // using the done promise callback
-              .done(function(data) {
-                // log data to the console so we can see
-                console.log(data); 
-                // here we will handle errors and validation messages
-                if ( ! data.success) {
-                  // handle errors for name --------------- 
-                  
-                  if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                  if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                } else {
-                  
-
-                  //alert(reDirect);
-                  //redirect here
-                  window.location = 'atomic-core/'+reDirect+'.php';
-                  // usually after form submission, you'll want to redirect
-                }
-              })
-              // using the fail promise callback
-              .fail(function(data) {
-                // show any errors
-                // best to remove for production
-                console.log(data);
-              });
-            // stop the form from submitting the normal way and refreshing the page
-            event.preventDefault();
-          });
+                            //redirect here
+                            window.location = 'atomic-core/' + reDirect + '.php';
+                            // usually after form submission, you'll want to redirect
+                        }
+                    })
+                    // using the fail promise callback
+                    .fail(function (data) {
+                        // show any errors
+                        // best to remove for production
+                        console.log(data);
+                    });
+                // stop the form from submitting the normal way and refreshing the page
+                event.preventDefault();
+            });
 
 
+            $('#form-delete-file').submit(function (event) {
+                reDirect = $('input[name=compDir]').val();
+                // remove the error text
+                // get the form data
+                // there are many ways to get this data using jQuery (you can use the class or id also)
+                var formData = {
+                    'compDir': $('input[name=compDir]').val(),
+                    'deleteFileName': $('input[name=deleteFileName]').val(),
+                    'compNotes': $('input[name=compNotes]').val(),
+                    'bgColor': $('input[name=bgColor]').val()
+                };
+                // process the form
+                $.ajax({
+                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                        url: 'atomic-core/partial-mngr/delete.php', // the url where we want to POST
+                        data: formData, // our data object
+                        dataType: 'json', // what type of data do we expect back from the server
+                        encode: true
+                    })
+                    // using the done promise callback
+                    .done(function (data) {
+                        // log data to the console so we can see
+                        console.log(data);
+                        // here we will handle errors and validation messages
+                        if (!data.success) {
+                            // handle errors for name ---------------
+
+                            if (data.errors.exists) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
 
 
-
-            
-
-       
-         notesEditTarget = $('input[name=fileName]').val();
-         notesEditTarget = $('.atoms-main #'+notesTarget).next().text();
-
-         //alert(notesEditTarget);
-         
-
-         $('textarea[name=compNotesNew]').val(notesEditTarget);
+                            if (data.errors.name) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
 
 
-           $('#form-rename-notes').submit(function(event) {
+                        } else {
+
+
+                            //alert(reDirect);
+                            //redirect here
+                            window.location = 'atomic-core/' + reDirect + '.php';
+                            // usually after form submission, you'll want to redirect
+                        }
+                    })
+                    // using the fail promise callback
+                    .fail(function (data) {
+                        // show any errors
+                        // best to remove for production
+                        console.log(data);
+                    });
+                // stop the form from submitting the normal way and refreshing the page
+                event.preventDefault();
+            });
+
 
             notesEditTarget = $('input[name=fileName]').val();
-            notesEditTarget = $('.atoms-main #'+notesTarget).next().text();
+            notesEditTarget = $('.atoms-main #' + notesTarget).next().text();
 
-            $('input[name=compNotes]').val(notesEditTarget);
-            reDirect = $('input[name=compDir]').val();
-             // remove the error text
-            // get the form data
-            // there are many ways to get this data using jQuery (you can use the class or id also)
-            var formData = {
-              'compDir'         : $('input[name=compDir]').val(),
-              'fileName'         : $('input[name=fileName]').val(),
-              'bgColor'         : $('input[name=bgColor]').val(),
-              'compNotes'         : $('input[name=compNotes]').val(),
-              'compNotesNew'         : $('textarea[name=compNotesNew]').val()
-            };
-            
-            
-            // process the form
-            $.ajax({
-              type    : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url     : 'atomic-core/partial-mngr/notes-rename.php', // the url where we want to POST
-              data    : formData, // our data object
-              dataType  : 'json', // what type of data do we expect back from the server
-              encode    : true
-            })
-              // using the done promise callback
-              .done(function(data) {
-                // log data to the console so we can see
-                console.log(data); 
-                // here we will handle errors and validation messages
-                if ( ! data.success) {
-                  // handle errors for name ---------------
-
-                  
-                  
-                  if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                  if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                } else {
-                  
-                  //redirect here
-                   window.location = 'atomic-core/'+reDirect+'.php';
-                  // usually after form submission, you'll want to redirect
-                }
-              })
-              // using the fail promise callback
-              .fail(function(data) {
-                // show any errors
-                // best to remove for production
-                console.log(data);
-              });
-            // stop the form from submitting the normal way and refreshing the page
-            event.preventDefault();
-          }); 
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-
-        colorTarget = $('input[name=fileMoveName]').val();
-         
-         
-         
-         //Sets the hidden field value for the current bgColor
-         
-         // colorContent = $('#'+colorTarget).parent().find('.component').attr( "style" );
-         // colorContent = colorContent.split(":").pop();
-         // colorContent.slice(0,-1);
-         //
-         //  alert(colorContent);
-          
-         
+            //alert(notesEditTarget);
 
 
-           $('#form-change-bgColor').submit(function(event) {
+            $('textarea[name=compNotesNew]').val(notesEditTarget);
 
-            reDirect = $('input[name=compDir]').val();
-             // remove the error text
-            // get the form data
-            // there are many ways to get this data using jQuery (you can use the class or id also)
-            var formData = {
-              'compDir'         : $('input[name=compDir]').val(),
-              'fileName'         : $('input[name=fileName]').val(),
-              'compNotes'         : $('input[name=compNotes]').val(),
-              'bgColor'         : $('input[name=bgColor]').val(),
-              'bgColorNew'         : $('input[name=bgColorNew]').val(),
-            };
-            // process the form
-            $.ajax({
-              type    : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-              url     : 'atomic-core/partial-mngr/bgcolor-rename.php', // the url where we want to POST
-              data    : formData, // our data object
-              dataType  : 'json', // what type of data do we expect back from the server
-              encode    : true
-            })
-              // using the done promise callback
-              .done(function(data) {
-                // log data to the console so we can see
-                console.log(data); 
-                // here we will handle errors and validation messages
-                if ( ! data.success) {
-                  // handle errors for name ---------------
+            //Submits rename notes data
+            $('#form-rename-notes').submit(function (event) {
 
-                  
-                  
-                  if (data.errors.exists) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                  if (data.errors.name) {
-                    $('.ad_errorBox__message').html("");
-                    $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200); 
-                  }
-                  
-                  
-                } else {
-                  
-                  //redirect here
-                   window.location = 'atomic-core/'+reDirect+'.php';
-                  // usually after form submission, you'll want to redirect
-                }
-              })
-              // using the fail promise callback
-              .fail(function(data) {
-                // show any errors
-                // best to remove for production
-                console.log(data);
-              });
-            // stop the form from submitting the normal way and refreshing the page
-            event.preventDefault();
-          }); 
+                notesEditTarget = $('input[name=fileName]').val();
+                notesEditTarget = $('.atoms-main #' + notesTarget).next().text();
+
+                $('input[name=compNotes]').val(notesEditTarget);
+                reDirect = $('input[name=compDir]').val();
+                // remove the error text
+                // get the form data
+                // there are many ways to get this data using jQuery (you can use the class or id also)
+                var formData = {
+                    'compDir': $('input[name=compDir]').val(),
+                    'fileName': $('input[name=fileName]').val(),
+                    'bgColor': $('input[name=bgColor]').val(),
+                    'compNotes': $('input[name=compNotes]').val(),
+                    'compNotesNew': $('textarea[name=compNotesNew]').val()
+                };
+
+
+                // process the form
+                $.ajax({
+                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                        url: 'atomic-core/partial-mngr/notes-rename.php', // the url where we want to POST
+                        data: formData, // our data object
+                        dataType: 'json', // what type of data do we expect back from the server
+                        encode: true
+                    })
+                    // using the done promise callback
+                    .done(function (data) {
+                        // log data to the console so we can see
+                        console.log(data);
+                        // here we will handle errors and validation messages
+                        if (!data.success) {
+                            // handle errors for name ---------------
+
+
+                            if (data.errors.exists) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
+
+
+                            if (data.errors.name) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
+
+
+                        } else {
+
+                            //redirect here
+                            window.location = 'atomic-core/' + reDirect + '.php';
+                            // usually after form submission, you'll want to redirect
+                        }
+                    })
+                    // using the fail promise callback
+                    .fail(function (data) {
+                        // show any errors
+                        // best to remove for production
+                        console.log(data);
+                    });
+                // stop the form from submitting the normal way and refreshing the page
+                event.preventDefault();
+            });
+
+
+            colorTarget = $('input[name=fileMoveName]').val();
+
+
+            //Submits change background color data
+            $('#form-change-bgColor').submit(function (event) {
+
+                reDirect = $('input[name=compDir]').val();
+                // remove the error text
+                // get the form data
+                // there are many ways to get this data using jQuery (you can use the class or id also)
+                var formData = {
+                    'compDir': $('input[name=compDir]').val(),
+                    'fileName': $('input[name=fileName]').val(),
+                    'compNotes': $('input[name=compNotes]').val(),
+                    'bgColor': $('input[name=bgColor]').val(),
+                    'bgColorNew': $('input[name=bgColorNew]').val(),
+                };
+                // process the form
+                $.ajax({
+                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                        url: 'atomic-core/partial-mngr/bgcolor-rename.php', // the url where we want to POST
+                        data: formData, // our data object
+                        dataType: 'json', // what type of data do we expect back from the server
+                        encode: true
+                    })
+                    // using the done promise callback
+                    .done(function (data) {
+                        // log data to the console so we can see
+                        console.log(data);
+                        // here we will handle errors and validation messages
+                        if (!data.success) {
+                            // handle errors for name ---------------
+
+
+                            if (data.errors.exists) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
+
+
+                            if (data.errors.name) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
+
+
+                        } else {
+
+                            //redirect here
+                            window.location = 'atomic-core/' + reDirect + '.php';
+                            // usually after form submission, you'll want to redirect
+                        }
+                    })
+                    // using the fail promise callback
+                    .fail(function (data) {
+                        // show any errors
+                        // best to remove for production
+                        console.log(data);
+                    });
+                // stop the form from submitting the normal way and refreshing the page
+                event.preventDefault();
+            });
+
+
+        },
+        error: function () {
+            //alert('did not worked!');
+        }
+    });
+});
 
 
 
 
+$('.ad_addFileItem .ad_actionBtn').click(function (event) {
+
+
+    event.preventDefault();
+    $.ajax(this.href, {
+        success: function (data) {
+            $('#js_actionDrawer__content').html($(data));
+
+            //Initialize color picker
+            $(".bgColor").spectrum({
+                allowEmpty: true,
+                preferredFormat: "hex",
+                showInput: true,
+                //showAlpha: true
+            });
+
+            //Submits create file data
+            $('#form-create-file').submit(function (event) {
+                reDirect = $('input[name=compDir]').val();
+                // remove the error text
+                // get the form data
+                // there are many ways to get this data using jQuery (you can use the class or id also)
+                var formData = {
+                    'compDir': $('input[name=compDir]').val(),
+                    'fileCreateName': $('input[name=fileCreateName]').val(),
+                    'compNotes': $('textarea[name=compNotes]').val(),
+                    'bgColor': $('input[name=bgColor]').val()
+                };
+                // process the form
+                $.ajax({
+                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                        url: 'atomic-core/partial-mngr/create.php', // the url where we want to POST
+                        data: formData, // our data object
+                        dataType: 'json', // what type of data do we expect back from the server
+                        encode: true
+                    })
+                    // using the done promise callback
+                    .done(function (data) {
+                        // log data to the console so we can see
+                        console.log(data);
+                        // here we will handle errors and validation messages
+                        if (!data.success) {
+                            // handle errors for name ---------------
+
+
+                            if (data.errors.exists) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
+
+
+                            if (data.errors.name) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
+
+
+                        } else {
+
+                            //redirect here
+                            window.location = 'atomic-core/' + reDirect + '.php';
+                            // usually after form submission, you'll want to redirect
+                        }
+                    })
+                    // using the fail promise callback
+                    .fail(function (data) {
+                        // show any errors
+                        // best to remove for production
+                        console.log(data);
+                    });
+                // stop the form from submitting the normal way and refreshing the page
+                event.preventDefault();
+            });
+
+
+        },
+        error: function () {
+            //alert('did not worked!');
+        }
+    });
+});
 
 
 
+$('.catAdd .ad_actionBtn').click(function (event) {
 
 
+    event.preventDefault();
+    $.ajax(this.href, {
+        success: function (data) {
+            $('#js_actionDrawer__content').html($(data));
 
 
+            //Submits create category data
+            $('#form-create-category').submit(function (event) {
+                reDirect = $('input[name=dirName]').val();
+                // remove the error text
+                // get the form data
+                // there are many ways to get this data using jQuery (you can use the class or id also)
+                var formData = {
+                    'dirName': $('input[name=dirName]').val()
+                };
+                // process the form
+                $.ajax({
+                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                        url: 'atomic-core/partial-mngr/create-category.php', // the url where we want to POST
+                        data: formData, // our data object
+                        dataType: 'json', // what type of data do we expect back from the server
+                        encode: true
+                    })
+                    // using the done promise callback
+                    .done(function (data) {
+                        // log data to the console so we can see
+                        console.log(data);
+                        // here we will handle errors and validation messages
+                        if (!data.success) {
+                            // handle errors for name ---------------
 
 
+                            if (data.errors.exists) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
 
 
+                            if (data.errors.name) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
 
 
+                        } else {
+
+                            //redirect here
+                            window.location = 'atomic-core/' + reDirect + '.php';
+                            // usually after form submission, you'll want to redirect
+                        }
+                    })
+                    // using the fail promise callback
+                    .fail(function (data) {
+                        // show any errors
+                        // best to remove for production
+                        console.log(data);
+                    });
+                // stop the form from submitting the normal way and refreshing the page
+                event.preventDefault();
+            });
+
+            //Submits delete category data
+            $('#form-delete-category').submit(function (event) {
+                // remove the error text
+                // get the form data
+                // there are many ways to get this data using jQuery (you can use the class or id also)
+                var formData = {
+                    'dirName': $('input[name=inputNameDelete]').val()
+                };
+                // process the form
+                $.ajax({
+                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                        url: 'atomic-core/partial-mngr/delete-category.php', // the url where we want to POST
+                        data: formData, // our data object
+                        dataType: 'json', // what type of data do we expect back from the server
+                        encode: true
+                    })
+                    // using the done promise callback
+                    .done(function (data) {
+                        // log data to the console so we can see
+                        console.log(data);
+                        // here we will handle errors and validation messages
+                        if (!data.success) {
+                            // handle errors for name ---------------
 
 
+                            if (data.errors.exists) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
 
 
-    
-    
-    
-     
-      
-      
-      
-      },
-      error: function() {
-         //alert('did not worked!');
-      }
-   });
+                            if (data.errors.name) {
+                                $('.ad_errorBox__message').html("");
+                                $('.ad_actionDrawer').prepend('<div class="ad_errorBox"><p class="ad_errorBox__message"><i class="fa fa-times ad_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.ad_errorBox').hide().fadeIn(200);
+                            }
+
+
+                        } else {
+                            //redirect here
+                            window.location = 'atomic-core/index.php';
+                            // usually after form submission, you'll want to redirect
+                        }
+                    })
+                    // using the fail promise callback
+                    .fail(function (data) {
+                        // show any errors
+                        // best to remove for production
+                        console.log(data);
+                    });
+                // stop the form from submitting the normal way and refreshing the page
+                event.preventDefault();
+            });
+
+
+        },
+        error: function () {
+            //alert('did not worked!');
+        }
+    });
 });

@@ -17,6 +17,7 @@ $data           = array();      // array to pass back data
     $catName = test_input($_POST["compDir"]);
     $oldName = test_input($_POST["oldName"]);
     $compNotes = test_input($_POST["compNotes"]);
+    $bgColor = test_input($_POST["bgColor"]);
 
     
     $fileExists = '../../components/'.$catName.'/'.$renameFileName.'.'.$compExt.'';
@@ -67,9 +68,9 @@ $data           = array();      // array to pass back data
         
         renameCompFile($catName, $renameFileName, $oldName);
         
-        deleteCompIncludetString($catName, $compNotes, $oldName );
+        deleteCompIncludetString($catName, $compNotes, $oldName, $bgColor );
         
-        createIncludeString($catName, $compNotes, $renameFileName );
+        createIncludeString($catName, $compNotes, $renameFileName, $bgColor );
         
         deleteAjaxCompFile($catName, $oldName);
         

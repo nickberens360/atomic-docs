@@ -1,0 +1,1 @@
+<!--components/test/namess.php-->

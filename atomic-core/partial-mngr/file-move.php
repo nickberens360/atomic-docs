@@ -31,7 +31,6 @@ $data           = array();      // array to pass back data
     /*elseif ($_POST['renameFileName'] == ""){
         $errors['name'] = 'Name is required.';
     }*/
-        
 
 
 
@@ -64,9 +63,6 @@ $data           = array();      // array to pass back data
         
         
         deleteCompIncludetString ($compDir, $compNotes, $fileMoveName, $bgColor );
-
-        
-        
         
         createIncludeString($newDir, $compNotes, $fileMoveName, $bgColor );
         
