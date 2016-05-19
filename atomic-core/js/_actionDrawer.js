@@ -1,5 +1,9 @@
 //action drawer.js
 
+
+
+
+
 function actionsWidth(){
 	$side = $('.atoms-side');
 	$body = $('body');
@@ -623,11 +627,11 @@ $('.js-showHide-trigger').click(function() {
          
          //Sets the hidden field value for the current bgColor
          
-        /* colorContent = $('#'+colorTarget).parent().find('.component').attr( "style" );
-         colorContent = colorContent.split(":").pop();
-         colorContent.slice(0,-1);
-        
-         alert(colorContent);*/
+         // colorContent = $('#'+colorTarget).parent().find('.component').attr( "style" );
+         // colorContent = colorContent.split(":").pop();
+         // colorContent.slice(0,-1);
+         //
+         //  alert(colorContent);
           
          
 

@@ -1,0 +1,1 @@
+<!--components/more/new.php-->
