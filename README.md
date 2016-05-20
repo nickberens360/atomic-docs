@@ -30,7 +30,7 @@ Manage all your components. Move, rename and delete with a clean GUI interface.
 ##Time saving
 Does all the "wiring" of your SCSS partials. Never write @import "partial-name"; again.
 
-<img src="http://atomicdocs.io/img/helpful.png"/>
+<img width="500" src="http://atomicdocs.io/img/helpful.png"/>
 
 
 
