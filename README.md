@@ -1,7 +1,7 @@
 # atomic-docs
 Atomic Docs is a front end style guide generator and SASS component manager. Atomic Docs is built in PHP. Inspired by Brad Frost's Atomic Design principles.
 
-Documentaion can be found at <a href="http://atomic-docs.io/">Atomic-docs.io</a>
+Documentaion can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>
 
 <img src="http://atomicdocs.io/img/demo1.gif" alt="atomic docs gif" />
 
@@ -32,5 +32,5 @@ Does all the "wiring" of your SCSS partials. Never write @import "partial-name";
 
 <img width="500" src="http://atomicdocs.io/img/helpful.png"/>
 
-
+Documentaion can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>
 
