@@ -227,8 +227,17 @@
   .atoms-nav{
     margin:0; 
   }
-  
-    
+}
 
+
+.aa_dir{
+ .fa-pencil-square-o{
+   display:none; 
+ }
+ &.active{
+   .fa-pencil-square-o{
+     display:inline-block; 
+   }
+ }
 }
 

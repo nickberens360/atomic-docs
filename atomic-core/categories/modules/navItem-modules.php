@@ -14,7 +14,7 @@
 				while ($file = readdir($dir)) {
 				$ok = "true";	
 				$filename = $file;
-				$filename = basename($filename, ".html");
+				$filename = basename($filename, ".php");
 				if ($file == "."){
 				$ok = "false";
 				}
@@ -23,7 +23,7 @@
 				}
 				if ($ok == "true"){
 					
-				$filename = str_replace(".html", "", $filename );
+				$filename = str_replace(".php", "", $filename );
 
 				echo "<li class='aa_fileSection__file'><a class='aa_js-actionOpen aa_actionBtn fa fa-pencil-square-o' href='atomic-core/categories/modules/form-$filename.php'></a><a href='atomic-core/modules.php#$filename'>$filename</a></li>";
 				}

@@ -15,6 +15,8 @@ $data           = array();      // array to pass back data
     $compDir = test_input($_POST["compDir"]);
     $fileCreateName = test_input($_POST["fileCreateName"]);
     $compNotes = test_input($_POST["compNotes"]);
+    $bgColor = test_input($_POST["bgColor"]);
+    
     
     $fileExists = '../../components/'.$compDir.'/'.$fileCreateName.'.'.$compExt.'';
     
@@ -50,7 +52,7 @@ $data           = array();      // array to pass back data
     
         createCompFile($compDir, $fileCreateName );
     
-        createIncludeString($compDir, $compNotes, $fileCreateName );
+        createIncludeString($compDir, $compNotes, $fileCreateName, $bgColor );
     
         createAjaxIncludeAndCompFile($compDir, $fileCreateName);
         

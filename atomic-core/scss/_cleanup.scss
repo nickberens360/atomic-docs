@@ -10,7 +10,6 @@ pre[class*="language-"] {
   margin-top: 0;
 }
 .compTitle{
-	text-transform:capitalize;
 	display: block;
 	margin-bottom: 12px;
 	color: #00AFF0;
@@ -51,16 +50,29 @@ pre[class*="language-"] {
     color: #00AFF0;
 }
 
-.aa_dir {
-	.fa-pencil-square-o{
-		display: none;
-	}
+
+.component{/* .component-hasBg */
+  padding:20px;
 }
-.aa_dir.active {
-	.fa-pencil-square-o{
-		display: inline-block;
-	}
+
+
+
+.bgColorWrap{
+  margin-bottom:12px; 
 }
+
+.sp-replacer{
+	background-color:#fff;
+	border: none;
+}
+.sp-preview .sp-clear-display{
+ background-image:none;  
+}
+
+.language-css{
+  position:relative; 
+}
+
 
 
 

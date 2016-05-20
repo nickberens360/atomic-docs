@@ -17,6 +17,10 @@ $data           = array();      // array to pass back data
     $compDir = test_input($_POST["compDir"]);
     $newDir = test_input($_POST["newDir"]);
     $compNotes = test_input($_POST["compNotes"]);
+    $bgColor = test_input($_POST["bgColor"]);
+    
+    
+    
     
     $fileExists = '../../components/'.$newDir.'/'.$fileMoveName.'.'.$compExt.'';
     
@@ -27,7 +31,6 @@ $data           = array();      // array to pass back data
     /*elseif ($_POST['renameFileName'] == ""){
         $errors['name'] = 'Name is required.';
     }*/
-        
 
 
 
@@ -59,12 +62,9 @@ $data           = array();      // array to pass back data
         moveCompFile($compDir, $fileMoveName, $newDir);
         
         
-        deleteCompIncludetString($compDir, $compNotes, $fileMoveName );
+        deleteCompIncludetString ($compDir, $compNotes, $fileMoveName, $bgColor );
         
-        
-        
-        
-        createIncludeString($newDir, $compNotes, $fileMoveName );
+        createIncludeString($newDir, $compNotes, $fileMoveName, $bgColor );
         
         
         

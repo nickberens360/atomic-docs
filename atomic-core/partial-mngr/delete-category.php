@@ -13,9 +13,10 @@ $data           = array();      // array to pass back data
     
     
     
-    $filename = '../../components/'.$dirName.'';
+    $compFilePath = '../../components/'.$dirName.'';
+    $scssFilePath = '../../scss/'.$dirName.'';
     
-    if (!file_exists($filename) && $dirName != ""){
+    if (!file_exists($compFilePath) && !file_exists($scssFilePath) && $dirName != ""){
         $errors['exists'] = 'There is not a category named '.$dirName.'.';
     }
     elseif ($_POST['dirName'] == ""){

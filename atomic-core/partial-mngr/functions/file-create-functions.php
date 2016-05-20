@@ -58,7 +58,7 @@ function createCompFile($catName, $fileName)
 
 
 //creates include string and writes to component parent file
-function createIncludeString($catName, $compNotes, $fileName)
+function createIncludeString($catName, $compNotes, $fileName, $bgColor)
 {
   
   $config = getConfig();
@@ -66,7 +66,7 @@ function createIncludeString($catName, $compNotes, $fileName)
   $cssDir = $config['cssDir'];
   $cssExt = $config['cssExt'];
 
-  $includeString = '<div class="compWrap"><span id="'.$fileName.'" class="compTitle">'.$fileName.' <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">'.$compNotes.'</p><div class="component"><?php include("../components/'.$catName.'/'.$fileName.'.'.$compExt.''.'");?></div><div class="compCodeBox"> <ul class="nav nav-tabs" role="tablist"> <li role="presentation" class="active"><a href="#'.$fileName.'-markup" aria-controls="'.$fileName.'-markup" role="tab" data-toggle="tab">Markup</a></li><li role="presentation"><a href="#'.$fileName.'-css" aria-controls="'.$fileName.'-css" role="tab" data-toggle="tab">'.$cssDir.'</a></li></ul> <div class="tab-content"> <div role="tabpanel" class="tab-pane active markup-display" id="'.$fileName.'-markup"></div><div role="tabpanel" class="tab-pane" id="'.$fileName.'-css"><pre><code class="language-css"><?php include("../'.$cssDir.'/'.$catName.'/_'.$fileName.'.'.$cssExt .'");?></code></pre></div></div></div></div>';
+  $includeString = '<div class="compWrap"><span id="'.$fileName.'" class="compTitle">'.$fileName.' <span class="js-hideAll fa fa-eye"></span></span><p class="compNotes">'.$compNotes.'</p><div class="component" style="background-color:'.$bgColor.'"><?php include("../components/'.$catName.'/'.$fileName.'.'.$compExt.''.'");?></div><div class="compCodeBox"> <ul class="nav nav-tabs" role="tablist"> <li role="presentation" class="active"><a href="#'.$fileName.'-markup" aria-controls="'.$fileName.'-markup" role="tab" data-toggle="tab">Markup</a></li><li role="presentation"><a href="#'.$fileName.'-css" aria-controls="'.$fileName.'-css" role="tab" data-toggle="tab">'.$cssDir.'</a></li></ul> <div class="tab-content"> <div role="tabpanel" class="tab-pane active markup-display" id="'.$fileName.'-markup"></div><div role="tabpanel" class="tab-pane" id="'.$fileName.'-css"><pre><code class="language-css"><?php include("../'.$cssDir.'/'.$catName.'/_'.$fileName.'.'.$cssExt .'");?></code></pre></div></div></div></div>';
 
   $includeString = "\n$includeString\n";
   
@@ -87,7 +87,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
   $includeString = 
 '<div class="aa_fileFormGroup">
 
-<label class="aa_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="aa_label__file">Rename</span> '.$fileName.'</label>
+<label class="aa_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="aa_label__file">Rename</span> '.$fileName. '</label>
 <div class="showHide">
   <form id="form-rename-file"  class="aa_fileForm " action="/atomic-core/partial-mngr/file-rename.php" method="post">
       <div class="formInputGroup">
@@ -95,7 +95,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
         <div class="inputBtnGroup">
           
           <button class="aa_btn aa_btn-pos" type="submit" >Rename</button>
-          <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="renameFileName" value="'.$fileName.'" required></div>
+          <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="renameFileName" value="' .$fileName.'" required></div>
 
         </div>     
 
@@ -107,16 +107,37 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
 </div>
 
 
-<label class="aa_label js-showHide-trigger"><span class="fa fa-plus"></span> Change the <span class="aa_label__file">description</span> for '.$fileName.'</label>
+<label class="aa_label js-showHide-trigger"><span class="fa fa-plus"></span> Change the <span class="aa_label__file">description</span> for '.$fileName. '</label>
 <div class="showHide">
    <form id="form-rename-notes"  class="aa_fileForm " action="/atomic-core/partial-mngr/notes-rename.php" method="post">
         <textarea class="form-control" name="compNotesNew"></textarea>        
 
         <button class="aa_btn aa_btn-pos" type="submit" >Update</button>
 
-      <input type="hidden" name="compDir" value="'.$catName.'"/>
+      <input type="hidden" name="compDir" value="' .$catName.'"/>
       <input type="hidden" name="fileName" value="'.$fileName.'"/>
       <input type="hidden" name="compNotes" value=""/>
+      <input type="hidden" name="bgColor" value=""/>
+    </form>
+</div>
+
+
+
+
+<label class="aa_label js-showHide-trigger"><span class="fa fa-plus"></span> Change the <span class="aa_label__file">contextual background color</span> for '.$fileName. '</label>
+<div class="showHide">
+   <form id="form-change-bgColor"  class="aa_fileForm " action="/atomic-core/partial-mngr/bgcolor-rename.php" method="post">
+        
+        <div class="bgColorWrap">
+          <input class="bgColor" type="text" name="bgColorNew" value="" />
+        </div>      
+
+        <button class="aa_btn aa_btn-pos" type="submit" >Update</button>
+
+      <input type="hidden" name="compDir" value="' .$catName.'"/>
+      <input type="hidden" name="fileName" value="'.$fileName.'"/>
+      <input type="hidden" name="compNotes" value=""/>
+      <input type="hidden" name="bgColor" value=""/>
     </form>
 </div>
 
@@ -133,24 +154,16 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
             <div class="inputBtnGroup__inputWrap u-bgWhite">
               <select id="newDir" class="form-control" >
                 <?php
-
                     $path = "../../../components";
-
                     $dir = new DirectoryIterator($path);
-
                   
-
                     foreach ($dir as $fileinfo) {
                         if ($fileinfo->isDir() && !$fileinfo->isDot()) {
                             
                             echo \'<option value="\';
-
                             echo $fileinfo->getFilename();
-
                             echo \'">\';          
-
                             echo $fileinfo->getFilename();
-
                             echo \'</option>\';  
                         }
                     }
@@ -164,6 +177,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
       <input type="hidden" name="fileMoveName" value="'.$fileName.'"/>
       <input type="hidden" name="moveFile" value="moveFile"/>
       <input type="hidden" name="compNotes" value=""/>
+      <input type="hidden" name="bgColor" value=""/>
     </form>
 </div>
 
@@ -183,6 +197,7 @@ function createAjaxIncludeAndCompFile($catName, $fileName)
       <input type="hidden" name="compDir" value="'.$catName.'"/>
       <input type="hidden" name="delete" value="delete"/>
       <input type="hidden" name="compNotes" value=""/>
+      <input type="hidden" name="bgColor" value=""/>
     </form>
 </div>
 
