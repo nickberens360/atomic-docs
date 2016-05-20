@@ -14,8 +14,9 @@ $data           = array();      // array to pass back data
     
     
     $filename = '../../components/'.$dirName.'';
+    $scssFilePath = '../../scss/'.$dirName.'';
     
-    if (file_exists($filename) && $dirName != ""){
+    if (file_exists($filename) || file_exists($scssFilePath) && $dirName != ""){
         $errors['exists'] = 'The category '.$dirName .' already exists.';
     }
     elseif ($_POST['dirName'] == ""){

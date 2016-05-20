@@ -119,7 +119,8 @@ $('.aa_fileSection__file .aa_actionBtn').click(function (event) {
             dirCount = $('#newDir option').size();
 
             if (dirCount < 1) {
-                $('#form-file-move').remove();
+                //$('#form-file-move').remove();
+                $('#form-file-move').parent().html('There are no catgories to move to at this time.');
             }
 
             //Submits move file data
