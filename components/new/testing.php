@@ -1,1 +1,0 @@
-<!--components/new/testing.php-->
