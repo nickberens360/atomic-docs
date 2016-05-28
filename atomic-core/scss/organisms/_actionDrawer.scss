@@ -7,7 +7,7 @@
   //background:#E3E4E3;
   //background: rgba(227, 228, 227, 0.77);
   background: rgba(227, 228, 227, 1);
-  z-index:1000; 
+  z-index:6000; 
   padding:50px;
   height:100%;
 }
@@ -102,5 +102,12 @@
 }
 .aa_errorBox__message{
   margin: 11px; 
+}
+
+@media (max-width: 824px){ 
+ .aa_actionDrawer{
+    width: 100% !important;
+    padding: 25px;
+ }
 }
 

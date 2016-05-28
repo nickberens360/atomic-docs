@@ -1,5 +1,5 @@
 .atoms-side{
-	float:left;
+	//float:left;
 	height:100%;
 	background: #F2F5F0 url('../img/logo.png') center 98% no-repeat;
   background-size: 200px;
@@ -7,7 +7,7 @@
 	position: fixed;
 	left:0;
   top:0;
-	//transition: all .5s;
+	//transition: all .25s;
 	z-index:5000;
 	width:262px;
   border-right: 1px solid #E3E3E3;
@@ -176,24 +176,28 @@
 }
 
 
+@media (max-width: 824px){ 
+ .atoms-side{
+    transition: all .25s;
+    transform: translateX(-100%);
+    width: 100%;
+ }
+ .atomic-h1 {
+    margin-left: 24px;
+ }
+}
 
-@media (min-width: 824px){ 
+
+/* @media (min-width: 824px){ 
   .atoms-side{
-    //display:block !important; 
     top:0 !important; 
-    //display:block !important;
   }
   .atoms-side_show{
-    //left:7px !important; 
   }
 }
 
+
 @media (max-width: 823px){ 
-   /*.navToggle{
-     display:block; 
-   }*/
-   
-   
    
   .atoms-side{
     width:100%; 
@@ -227,7 +231,7 @@
   .atoms-nav{
     margin:0; 
   }
-}
+} */
 
 
 .aa_dir{
