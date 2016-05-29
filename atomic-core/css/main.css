@@ -1285,6 +1285,50 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
       height: 100%;
   }*/
   /****************************/
+  /* @media (min-width: 824px){ 
+    .atoms-side{
+      top:0 !important; 
+    }
+    .atoms-side_show{
+    }
+  }
+  
+  
+  @media (max-width: 823px){ 
+     
+    .atoms-side{
+      width:100%; 
+      height:auto;
+      float:none;
+      top:-100%;
+      display:block !important;
+      transform: translateX(0) !important;
+      box-shadow: 0px 6px 24px 0px rgba(0,0,0,0.25);
+    }
+  
+  
+   .atoms-side_show, .atoms-side_hide{
+      display:none; 
+    }
+    
+    .atoms-side_show-small, .smallOpen{
+      top:7px;  
+      right:7px;
+      display:block;
+    }
+     .aa_addFile {
+       display:none; 
+     }
+    .aa_fileSection__file .fa {
+       display: none;
+    }
+    .catAdd a {
+      display:none; 
+    }
+    .atoms-nav{
+      margin:0; 
+    }
+  } */
 }
 /* line 9, bootstrap/bootstrap/_navs.scss */
 .atomsWrap .nav {
@@ -1831,24 +1875,24 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   width: 100%;
   padding-top: 0;
 }
-/* line 21, organisms/_atomic-main.scss */
+/* line 18, organisms/_atomic-main.scss */
 .atomsWrap code, .atomsWrap kbd, .atomsWrap pre, .atomsWrap samp {
   font-size: 14px;
 }
-/* line 24, organisms/_atomic-main.scss */
+/* line 21, organisms/_atomic-main.scss */
 .atomsWrap pre[class*="language-"] {
   padding: 2em;
 }
-/* line 29, organisms/_atomic-main.scss */
+/* line 26, organisms/_atomic-main.scss */
 .atomsWrap .atoms-code-example {
   position: relative;
 }
-/* line 35, organisms/_atomic-main.scss */
+/* line 32, organisms/_atomic-main.scss */
 .atomsWrap .atoms-group {
   margin-bottom: 50px;
 }
 @media (max-width: 823px) {
-  /* line 41, organisms/_atomic-main.scss */
+  /* line 38, organisms/_atomic-main.scss */
   .atomsWrap .atoms-main {
     padding-left: 20px !important;
     width: 100%;
@@ -1856,7 +1900,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 /* line 1, organisms/_atomic-nav.scss */
 .atomsWrap .atoms-side {
-  float: left;
   height: 100%;
   background: #f2f5f0 url("../img/logo.png") center 98% no-repeat;
   -webkit-background-size: 200px;
@@ -2011,64 +2054,26 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   font-size: 12px;
   font-style: italic;
 }
-@media (min-width: 824px) {
-  /* line 181, organisms/_atomic-nav.scss */
+@media (max-width: 824px) {
+  /* line 180, organisms/_atomic-nav.scss */
   .atomsWrap .atoms-side {
-    top: 0 !important;
-  }
-}
-@media (max-width: 823px) {
-  /* line 4, main.scss */
-  .atomsWrap {
-    /*.navToggle{
-      display:block; 
-    }*/
-  }
-  /* line 198, organisms/_atomic-nav.scss */
-  .atomsWrap .atoms-side {
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
     width: 100%;
-    height: auto;
-    float: none;
-    top: -100%;
-    display: block !important;
-    -webkit-transform: translateX(0) !important;
-    -ms-transform: translateX(0) !important;
-    transform: translateX(0) !important;
-    -webkit-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.25);
   }
-  /* line 209, organisms/_atomic-nav.scss */
-  .atomsWrap .atoms-side_show, .atomsWrap .atoms-side_hide {
-    display: none;
-  }
-  /* line 213, organisms/_atomic-nav.scss */
-  .atomsWrap .atoms-side_show-small, .atomsWrap .smallOpen {
-    top: 7px;
-    right: 7px;
-    display: block;
-  }
-  /* line 218, organisms/_atomic-nav.scss */
-  .atomsWrap .aa_addFile {
-    display: none;
-  }
-  /* line 221, organisms/_atomic-nav.scss */
-  .atomsWrap .aa_fileSection__file .fa {
-    display: none;
-  }
-  /* line 224, organisms/_atomic-nav.scss */
-  .atomsWrap .catAdd a {
-    display: none;
-  }
-  /* line 227, organisms/_atomic-nav.scss */
-  .atomsWrap .atoms-nav {
-    margin: 0;
+  /* line 185, organisms/_atomic-nav.scss */
+  .atomsWrap .atomic-h1 {
+    margin-left: 24px;
   }
 }
-/* line 234, organisms/_atomic-nav.scss */
+/* line 238, organisms/_atomic-nav.scss */
 .atomsWrap .aa_dir .fa-pencil-square-o {
   display: none;
 }
-/* line 238, organisms/_atomic-nav.scss */
+/* line 242, organisms/_atomic-nav.scss */
 .atomsWrap .aa_dir.active .fa-pencil-square-o {
   display: inline-block;
 }
@@ -2080,7 +2085,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   bottom: 0;
   width: 100%;
   background: #e3e4e3;
-  z-index: 1000;
+  z-index: 6000;
   padding: 50px;
   height: 100%;
 }
@@ -2170,6 +2175,13 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 /* line 103, organisms/_actionDrawer.scss */
 .atomsWrap .aa_errorBox__message {
   margin: 11px;
+}
+@media (max-width: 824px) {
+  /* line 109, organisms/_actionDrawer.scss */
+  .atomsWrap .aa_actionDrawer {
+    width: 100% !important;
+    padding: 25px;
+  }
 }
 /* line 2, organisms/_atomic-tabs.scss */
 .atomsWrap .compWrap .nav-tabs {
