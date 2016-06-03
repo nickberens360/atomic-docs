@@ -1,38 +1,55 @@
 <!DOCTYPE html>
-  <html>
-   <head>
+<html>
+<head>
     <title>Title of the document</title>
 
-    <?php include ("atomic-head.php");?>
+    <?php include("atomic-head.php"); ?>
 
     <style>
-      html, body{
-        height:100%;
-      }
-      .indexBlock {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        text-align: center;
-      }
-      .indexBlock__heading{
-         font-family: sans-serif;
-      }
-      .indexBlock__heading a{
-         color:#4BC6EF;
-      }
-      
+        html, body {
+            height: 100%;
+        }
+
+        .indexBlock {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            max-width: 900px;;
+            margin: auto;
+        }
+
+        img {
+            max-width: 100%;
+            box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        p {
+            font-family: sans-serif;
+            font-weight:bold;
+        }
+
+        a {
+            color: #4BC6EF;
+        }
+
     </style>
 
-  </head>
+</head>
 
-  <body>
-    <div class="indexBlock">
-      <h1 class="indexBlock__heading">Set up in your php local environment and configure your sass preprocessor and start <a href="atomic-core/modules.php">here</a></p>
-    </div>  
-  </body>
-  
-  <?php include ("atomic-foot.php");?>
+<body>
+<div class="indexBlock">
+    <p>Set up in your php local environment and configure your sass preprocessor and start
+        <a href="atomic-core/modules.php">here</a>.</p>
+
+    <p>This GIF pretty much explains what to do after that. Otherwise you can checkout
+        this <a href="https://www.youtube.com/watch?v=e8LjP6ynryQ" target="_blank">video</a>.</p><br/>
+    <img src="http://atomicdocs.io/img/demo1.gif"/>
+
+</div>
+</body>
+
+<?php include("atomic-foot.php"); ?>
 
 </html>
 
