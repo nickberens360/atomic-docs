@@ -5,6 +5,7 @@
 
 function deleteCatPageFile($catName)
 {
+
 	unlink('../'.$catName.'.php');
 }
 
@@ -40,11 +41,6 @@ function deleteAtomicNavIncludeString($dirName)
 }
 
 
-/*function deleteCatSidebarIncludeFile($catName)
-{
-	unlink('../includes/_'.$catName.'.php');
-}*/
-
 
 function deleteCompDir($catName) { 
 		
@@ -73,21 +69,30 @@ function deleteCompDir($catName) {
 
 function deleteCatScssImportString($catName)
 {
-	
+
+    $config = getConfig();
+    $cssDir = $config['preCssDir'];
+    $cssExt = $config['preCssExt'];
+
 	$importString ='@import "'.$catName.'/'.$catName.'";';
 		
 	//Place contents of file into variable
-	$contents = file_get_contents('../../scss/main.scss');
+	$contents = file_get_contents('../../'.$cssDir.'/main.'.$cssExt.'');
 	
 	$contents = str_replace($importString, "", $contents);
-	$contents = file_put_contents('../../scss/main.scss', $contents);
+	$contents = file_put_contents('../../'.$cssDir.'/main.'.$cssExt.'', $contents);
 }
 
 
 
-function deleteScssDir($catName) { 
+function deleteScssDir($catName) {
 
-	   $catName = '../../scss/'.$catName;
+    $config = getConfig();
+    $cssDir = $config['preCssDir'];
+    $cssExt = $config['preCssExt'];
+
+
+	   $catName = '../../'.$cssDir.'/'.$catName;
 	
 	   if (is_dir($catName)) { 
 	     $objects = scandir($catName); 
@@ -98,35 +103,9 @@ function deleteScssDir($catName) {
 	     } 
 	     reset($objects); 
 	     rmdir($catName); 
-	   } 
-		
-	
-   /*if (is_dir('../../scss/'.$catName)) { 
-     $objects = scandir('../../scss/'.$catName); 
-     foreach ($objects as $object) { 
-       if ($object != "." && $object != "..") { 
-         if (filetype($catName."/".$object) == "dir") deleteScssDir('../../scss/'.$catName."/".$object); else unlink('../../scss/'.$catName."/".$object); 
-       } 
-     } 
-     reset($objects); 
-     rmdir('../../scss/'.$catName); 
-   } */
+	   }
 } 
 
-
-
-
-
-
-
-
-
-
-//function deleteAjaxFile($inputName)
-//{
-//	unlink('actions/_ajax-'.$inputName.'.php');
-//  
-//}
 
 
 

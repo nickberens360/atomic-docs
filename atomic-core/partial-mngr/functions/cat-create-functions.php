@@ -16,8 +16,8 @@ function createScssCatDirAndFile($dirName)
 {
   
   $config = getConfig();
-  $cssDir = $config['cssDir'];
-  $cssExt = $config['cssExt'];
+  $cssDir = $config['preCssDir'];
+  $cssExt = $config['preCssExt'];
   
 	mkdir("../../$cssDir/$dirName");
 	$fileHandle = fopen("../../$cssDir/$dirName/_$dirName.$cssExt", 'x+') or die("can't open file");
@@ -29,8 +29,8 @@ function createStringForMainScssFile($dirName)
 {
   
   $config = getConfig();
-  $cssDir = $config['cssDir'];
-  $cssExt = $config['cssExt'];
+  $cssDir = $config['preCssDir'];
+  $cssExt = $config['preCssExt'];
   
 	$includeString ='@import "'.$dirName.'/'.$dirName.'";'; 
 	
@@ -154,7 +154,6 @@ function createSidebarIncludeAndFile($dirName)
 	$fileHandle = fopen('../categories/'.$dirName.'/navItem-'.$dirName.'.php', 'a') or die("can't open file");
 	fwrite($fileHandle, $includeString);
 	
-	/*file_put_contents('../includes/_sidebar.php', implode(PHP_EOL, file('../includes/_sidebar.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));*/
   
 	
 }

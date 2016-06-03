@@ -1,7 +1,9 @@
 <?php
-//require '../../config.php';
+require '../../atomic-config.php';
 require 'functions/functions.php';
 
+$config = getConfig();
+$preCssDir = $config['preCssDir'];
 
 $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
@@ -14,7 +16,7 @@ $data           = array();      // array to pass back data
     
     
     $filename = '../../components/'.$dirName.'';
-    $scssFilePath = '../../scss/'.$dirName.'';
+    $scssFilePath = '../../'.$preCssDir.'/'.$dirName.'';
     
     if (file_exists($filename) || file_exists($scssFilePath) && $dirName != ""){
         $errors['exists'] = 'The category '.$dirName .' already exists.';
