@@ -1,8 +1,7 @@
 <?php
-	
-	//require '/Applications/XAMPP/xamppfiles/htdocs/atomic-docs/config.php';
 
-  require_once '../../config.php';
+
+    require_once '../../atomic-config.php';
   
 	require 'cat-delete-functions.php';
 	require 'cat-create-functions.php';
@@ -11,7 +10,7 @@
 	require 'file-rename-functions.php';
 	require 'file-move-functions.php';
 	require 'notes-rename-functions.php';
-  require 'bgcolor-change-functions.php';
+    require 'bgcolor-change-functions.php';
 	require 'validation.php';
 
 ?>

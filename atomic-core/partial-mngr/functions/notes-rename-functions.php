@@ -4,8 +4,8 @@ function changeIncludeString($compDir, $compNotes, $compNotesNew, $fileName, $bg
 
 	$config = getConfig();
 	$compExt = $config['compExt'];
-	$cssDir = $config['cssDir'];
-  $cssExt = $config['cssExt'];
+	$cssDir = $config['preCssDir'];
+  $cssExt = $config['preCssExt'];
 
 
 

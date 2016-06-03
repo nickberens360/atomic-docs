@@ -1,5 +1,5 @@
 <?php
-require '../../config.php';
+require '../../atomic-config.php';
 require 'functions/functions.php';
 
 $config = getConfig();
@@ -20,19 +20,6 @@ $data           = array();      // array to pass back data
     $fileName = test_input($_POST["fileName"]);
     $bgColor = test_input($_POST["bgColor"]);
     
-    
-
-    
-    /*$fileExists = '../../components/'.$compDir.'/'.$deleteFileName.'.'.$compExt.'';
-    
-    if (!file_exists($fileExists) && $deleteFileName != ""){
-        $errors['exists'] = 'There is no file named '.$deleteFileName.' to delete.';
-    }
-    
-	elseif ($_POST['deleteFileName'] == ""){
-        $errors['name'] = 'Name is required.';
-    }*/
-        
 
 
 

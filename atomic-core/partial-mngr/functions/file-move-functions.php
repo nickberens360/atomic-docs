@@ -3,8 +3,8 @@
 function moveScssFile($catName, $fileName, $newDir)
 {	
 	$config = getConfig();
-	$cssDir = $config['cssDir'];
-    $cssExt = $config['cssExt'];
+	$cssDir = $config['preCssDir'];
+    $cssExt = $config['preCssExt'];
 
     rename ("../../$cssDir/$catName/_$fileName.$cssExt", "../../$cssDir/$newDir/_$fileName.$cssExt");
 }
@@ -14,8 +14,8 @@ function moveScssChangeCommentString($catName, $fileName, $newDir)
 {	
 
 	$config = getConfig();
-	$cssDir = $config['cssDir'];
-    $cssExt = $config['cssExt'];
+	$cssDir = $config['preCssDir'];
+    $cssExt = $config['preCssExt'];
 
     $oldString = '/*'.$cssDir.'/'.$catName.'/_'.$fileName.'.'.$cssExt.'*/';
     $newString = '/*'.$cssDir.'/'.$newDir.'/_'.$fileName.'.'.$cssExt.'*/';

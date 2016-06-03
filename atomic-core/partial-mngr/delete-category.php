@@ -1,6 +1,9 @@
 <?php
-require '../../config.php';
+require '../../atomic-config.php';
 require 'functions/functions.php';
+
+$config = getConfig();
+$scssDir = $config['preCssDir'];
 
 
 $errors         = array();      // array to hold validation errors
@@ -14,7 +17,7 @@ $data           = array();      // array to pass back data
     
     
     $compFilePath = '../../components/'.$dirName.'';
-    $scssFilePath = '../../scss/'.$dirName.'';
+    $scssFilePath = '../../'.$scssDir.'/'.$dirName.'';
     
     if (!file_exists($compFilePath) && !file_exists($scssFilePath) && $dirName != ""){
         $errors['exists'] = 'There is not a category named '.$dirName.'.';

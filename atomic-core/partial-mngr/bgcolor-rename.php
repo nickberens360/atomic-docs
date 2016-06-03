@@ -1,9 +1,7 @@
 <?php
-require '../../config.php';
+
 require 'functions/functions.php';
 
-$config = getConfig();
-$compExt = $config['compExt'];
 
 $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
@@ -19,16 +17,7 @@ $data           = array();      // array to pass back data
     $fileName = test_input($_POST["fileName"]);
     $bgColor = test_input($_POST["bgColor"]);
     $bgColorNew = test_input($_POST["bgColorNew"]);
-    
-    /*$fileExists = '../../components/'.$compDir.'/'.$deleteFileName.'.'.$compExt.'';
-    
-    if (!file_exists($fileExists) && $deleteFileName != ""){
-        $errors['exists'] = 'There is no file named '.$deleteFileName.' to delete.';
-    }
-    
-	elseif ($_POST['deleteFileName'] == ""){
-        $errors['name'] = 'Name is required.';
-    }*/
+
         
 
 

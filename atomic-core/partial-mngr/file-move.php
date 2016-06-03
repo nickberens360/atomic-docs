@@ -1,5 +1,5 @@
 <?php
-require '../../config.php';
+require '../../atomic-config.php';
 require 'functions/functions.php';
 
 $config = getConfig();
