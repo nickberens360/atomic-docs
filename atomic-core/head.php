@@ -15,12 +15,14 @@
 
 		<link rel="stylesheet" type="text/css" href="atomic-core/css/main.css">
     
-    <link rel="stylesheet" href="atomic-core/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="atomic-core/font-awesome/css/font-awesome.min.css">
     
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+       <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
-    
-		<?php 
-		include ("../atomic-head.php");
+		<?php
+			$filename = '../atomic-head.php';
+			if (file_exists($filename)) {
+			    include ("../atomic-head.php"); 
+			}
 		?>
 </head>
