@@ -77,7 +77,7 @@ function deleteCatScssImportString($catName)
 	$importString ='@import "'.$catName.'/'.$catName.'";';
 		
 	//Place contents of file into variable
-	$contents = file_get_contents('../../'.$cssDir.'/main.'.$cssDir.'');
+	$contents = file_get_contents('../../'.$cssDir.'/main.'.$cssExt.'');
 	
 	$contents = str_replace($importString, "", $contents);
 	$contents = file_put_contents('../../'.$cssDir.'/main.'.$cssExt.'', $contents);
