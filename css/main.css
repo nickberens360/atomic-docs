@@ -1352,7 +1352,7 @@ ol li, ul li {
   margin-top: 0;
   margin-bottom: 24px;
   font-weight: 300;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #35363a;
 }
 
@@ -1382,7 +1382,7 @@ ol li, ul li {
 
 .h3 {
   font-size: 40px;
-  color: #35363a;
+  color: #3D4A57;
   text-transform: none;
   font-weight: bold;
 }
