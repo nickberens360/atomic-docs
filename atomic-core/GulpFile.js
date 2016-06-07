@@ -21,6 +21,7 @@ gulp.task('scripts', function() {
         .pipe(order([
             'js/bootstrap.min.js',
             'js/prism.js',
+            'js/spectrum-picker.js',
             'js/uncomment.js',
             'js/prism-builder.js',
             'js/velocity.js',

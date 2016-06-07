@@ -1,8 +1,5 @@
 //action drawer.js
 
-console.log('test gulp order3');
-
-
 
 $('.aa_fileSection__file .aa_actionBtn').click(function (event) {
 
