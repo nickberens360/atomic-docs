@@ -1,84 +1,84 @@
-.main{
-  padding:70px 0;
-	
+.main {
+  padding: 70px 0;
+
 }
-.main-inner{
+
+.main-inner {
   @extend .wrap;
   @extend .grid-row;
 }
-.main-inner.main-inner-alt{
+
+.main-inner.main-inner-alt {
   @include wrap(900px, 20px);
 }
 
-
-
-
-.main-wht{
-	background: #fff;
-}
-.main-blue{
-	background: #D7F3F6;
-}
-.main-content{
-	padding:$base;
-  padding-right:0;
-	//background: #fff;
+.main-wht {
+  background: #fff;
 }
 
-.main-aside{
-  padding:$base;
-  padding-left:0;
+.main-blue {
+  background: #D7F3F6;
 }
 
-.main-2col{
-	.main-content{
-		@include col($nine);
-	}
-	.main-aside{
-		@include col($three);
-		
-	}
+.main-content {
+  padding: $base;
+  padding-right: 0;
+  //background: #fff;
 }
 
+.main-aside {
+  padding: $base;
+  padding-left: 0;
+}
 
+.main-2col {
+  .main-content {
+    @include col($nine);
+  }
+  .main-aside {
+    @include col($three);
 
-.main-2col.main-right{
-  padding-top:150px;
-	.main-content{
-		width:80%;
-		float:right;
+  }
+}
+
+.main-2col.main-right {
+  //padding-top: 150px;
+  .main-content {
+    width: 80%;
+    float: right;
     border-left: 1px dashed #BABABA;
     padding-left: 80px;
-    padding-top:0;
-	}
-	.main-aside{
-		width:20%;
-		float:right;
-    padding-top:0;
-	}
+    padding-top: 0;
+  }
+  .main-aside {
+    width: 20%;
+    float: right;
+    padding-top: 0;
+  }
 }
-@media (max-width: 934px){ 
-  .main-2col.main-right{
-    padding-top:100px;
-    .main-content{
+
+@media (max-width: 934px) {
+  .main-2col.main-right {
+    padding-top: 100px;
+    .main-content {
       padding-left: 40px;
     }
   }
 }
 
-@media (max-width: 797px){ 
-  .main-2col.main-right{
-    padding-top:48px;
-    .main-content{
+@media (max-width: 797px) {
+  .main-2col.main-right {
+    padding-top: 48px;
+    .main-content {
       @include col($twelve);
-      float:none;
+      float: none;
       border-left: none;
       border-bottom: 1px dashed #BABABA;
-      margin-bottom:24px;
+      margin-bottom: 24px;
       padding-left: 0;
-      padding-top:0;
+      padding-top: 0;
     }
-    .main-aside{
+    .main-aside {
       @include col($twelve);
     }
   }
