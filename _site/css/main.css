@@ -1606,13 +1606,20 @@ html, body, .layout, .layout__main {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 20px;
 }
 /* line 44, ../scss/layout/_mainLayout.scss */
+.sideNav .btns {
+  width: 100%;
+}
+/* line 47, ../scss/layout/_mainLayout.scss */
+.sideNav .btn3 {
+  margin-bottom: 20px;
+}
+/* line 50, ../scss/layout/_mainLayout.scss */
 .sideNav li {
   margin: 0;
 }
-/* line 47, ../scss/layout/_mainLayout.scss */
+/* line 53, ../scss/layout/_mainLayout.scss */
 .sideNav a {
   display: block;
   padding: 10px 20px;
@@ -1620,12 +1627,12 @@ html, body, .layout, .layout__main {
 }
 
 @media only screen and (max-width: 909px) {
-  /* line 55, ../scss/layout/_mainLayout.scss */
+  /* line 65, ../scss/layout/_mainLayout.scss */
   .layout__main {
     height: auto;
   }
 
-  /* line 58, ../scss/layout/_mainLayout.scss */
+  /* line 68, ../scss/layout/_mainLayout.scss */
   .logoBlock {
     position: fixed;
     top: 0;
@@ -1633,18 +1640,18 @@ html, body, .layout, .layout__main {
     left: 0;
     padding: 10px;
   }
-  /* line 64, ../scss/layout/_mainLayout.scss */
+  /* line 74, ../scss/layout/_mainLayout.scss */
   .logoBlock img {
     max-width: 120px;
   }
 
-  /* line 68, ../scss/layout/_mainLayout.scss */
+  /* line 78, ../scss/layout/_mainLayout.scss */
   .layout__side {
     width: 100%;
     position: static;
   }
 
-  /* line 73, ../scss/layout/_mainLayout.scss */
+  /* line 83, ../scss/layout/_mainLayout.scss */
   .layout__main {
     padding-left: 0;
     padding-top: 58px;
@@ -1726,7 +1733,7 @@ ol li, ul li {
 .h1, h1, h2, .h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 {
   margin-top: 0;
   margin-bottom: 24px;
-  font-weight: 300;
+  font-weight: bold;
   font-family: "Montserrat", sans-serif;
   color: #35363a;
 }

@@ -56,12 +56,19 @@ layout: post
         <a href="/"><img src="/img/logo.png" /></a>
     </div>
     <ul class="sideNav">
+        <li>
+            <a href="http://www.nickberens.me/atomic-docs/atomic-core/base.php" class="btns btn1">Demo</a>
+        </li>
+        <li>
+            <a href="https://github.com/nickberens360/atomic-docs" class="btns btn3">Github</a>
+        </li>
         {% for post in site.categories['docs'] %}
         <li>
             <a href="{{ site.baseurl }}{{ post.url }}"><span class="post-title">{{ post.title }}<span></a>
 
         </li>
         {% endfor %}
+
     </ul>
 </div>
 </div>
