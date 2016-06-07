@@ -1606,7 +1606,7 @@ html, body, .layout, .layout__main {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 /* line 45, ../scss/layout/_mainLayout.scss */
 .sideNav .btns {
