@@ -23,7 +23,7 @@ function writeScssImportFile($catName, $fileName)
   $cssExt = $config['preCssExt'];
   
   //create @import string
-  $importString = "@import " . '"' . $fileName . '";' ;
+  $importString = "@import " . '"_'.$fileName.'";' ;
   $importString = "\n$importString\n";
   
   //open parent scss file and write @import string to it

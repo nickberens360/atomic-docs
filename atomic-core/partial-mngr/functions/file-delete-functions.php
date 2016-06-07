@@ -9,7 +9,7 @@ function deleteScssImportString($catName, $fileName)
   $cssDir = $config['preCssDir'];
   $cssExt = $config['preCssExt'];
 
-	$importString = "@import " . '"' . $fileName . '";' ;
+	$importString = "@import " . '"_'.$fileName.'";' ;
 	//Place contents of file into variable
 	$contents = file_get_contents('../../'.$cssDir.'/'.$catName.'/_'.$catName.'.'.$cssExt.'');
 	$contents = str_replace($importString, "", $contents);

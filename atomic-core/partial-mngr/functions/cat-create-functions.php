@@ -32,7 +32,7 @@ function createStringForMainScssFile($dirName)
   $cssDir = $config['preCssDir'];
   $cssExt = $config['preCssExt'];
   
-	$includeString ='@import "'.$dirName.'/'.$dirName.'";'; 
+	$includeString ='@import "'.$dirName.'/_'.$dirName.'";';
 	
 	$includeString = "\n$includeString\n";
 	
