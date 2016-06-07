@@ -88,7 +88,7 @@ pre, table, hr, .atoms-code-example {
 /*@include wrap($wrapWidth, $mpad);*/
 /*@include col($six);*/
 /* line 28, ../scss/variables/_col.scss */
-.gridExample .grid-row, .gridExample .colors, .gridExample [class*="block-grid-"], .gridExample .block-grid-example, .gridExample .matchheight, .gridExample .main-inner, .gridExample .section .section-inner, .section .gridExample .section-inner, .gridExample .banner-alt {
+.gridExample .grid-row, .gridExample .colors, .gridExample [class*="block-grid-"], .gridExample .block-grid-example, .gridExample .matchheight, .gridExample .main-inner, .gridExample .section .section-inner, .section .gridExample .section-inner, .gridExample .layout, .gridExample .banner-alt {
   margin-bottom: 10px;
 }
 /* line 31, ../scss/variables/_col.scss */
@@ -1374,7 +1374,7 @@ th {
 }
 
 /* line 59, ../scss/layout/_grid.scss */
-.grid-row:after, .colors:after, [class*="block-grid-"]:after, .block-grid-example:after, .matchheight:after, .main-inner:after, .section .section-inner:after, .banner-alt:after {
+.grid-row:after, .colors:after, [class*="block-grid-"]:after, .block-grid-example:after, .matchheight:after, .main-inner:after, .section .section-inner:after, .layout:after, .banner-alt:after {
   content: "";
   display: table;
   clear: both;
@@ -1553,6 +1553,101 @@ th {
       margin-top:48px; 
       display:inline-block;
     }*/
+  }
+}
+/* line 1, ../scss/layout/_mainLayout.scss */
+html, body, .layout, .layout__main {
+  height: 100%;
+}
+
+/* line 5, ../scss/layout/_mainLayout.scss */
+.layout {
+  background: #3D4A57;
+}
+
+/* line 9, ../scss/layout/_mainLayout.scss */
+.layout__side {
+  width: 300px;
+  background: #3D4A57;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  left: 0;
+}
+
+/* line 19, ../scss/layout/_mainLayout.scss */
+.layout__main {
+  padding-left: 300px;
+  padding-top: 50px;
+  background: #fff;
+}
+
+/* line 25, ../scss/layout/_mainLayout.scss */
+.layout__content {
+  max-width: 820px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* line 31, ../scss/layout/_mainLayout.scss */
+.logoBlock {
+  text-align: center;
+  padding: 20px;
+  background: #eee;
+}
+/* line 35, ../scss/layout/_mainLayout.scss */
+.logoBlock img {
+  max-width: 200px;
+}
+
+/* line 39, ../scss/layout/_mainLayout.scss */
+.sideNav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+/* line 44, ../scss/layout/_mainLayout.scss */
+.sideNav li {
+  margin: 0;
+}
+/* line 47, ../scss/layout/_mainLayout.scss */
+.sideNav a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+@media only screen and (max-width: 909px) {
+  /* line 55, ../scss/layout/_mainLayout.scss */
+  .layout__main {
+    height: auto;
+  }
+
+  /* line 58, ../scss/layout/_mainLayout.scss */
+  .logoBlock {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 10px;
+  }
+  /* line 64, ../scss/layout/_mainLayout.scss */
+  .logoBlock img {
+    max-width: 120px;
+  }
+
+  /* line 68, ../scss/layout/_mainLayout.scss */
+  .layout__side {
+    width: 100%;
+    position: static;
+  }
+
+  /* line 73, ../scss/layout/_mainLayout.scss */
+  .layout__main {
+    padding-left: 0;
+    padding-top: 58px;
   }
 }
 /* line 1, ../scss/_cleanup.scss */
