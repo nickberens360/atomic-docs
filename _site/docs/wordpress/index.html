@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<!--<meta charset="utf-8">-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Documentation | Atomic Docs</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/normalize.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
+
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-26167724-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="documentation">
+<!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<div class="layout">
+
+    <div class="layout__main">
+        <div class="layout__content">
+            <div class="sideTrigger">
+            </div>
+            <h1 class="h1-alt">Atomic Docs and WordPress</h1>
+            <p>Working with Atomic Docs in WordPress easy. This article will show you how to set up Atomic Docs so that you can use
+    all of WordPress' functions in your components.</p>
+
+<h2>Steps</h2>
+
+<ol>
+    <li>Download <a href="https://github.com/nickberens360/atomic-docs">Atomic Docs</a></li>
+    <li>Move the contents into the root of your theme.<br/><br/>
+        <ul class="ascii ascii-main">
+            <li><span class="ascii__mainDir"><strong>theme-name/</strong></span>
+                <ul>
+                    <li>atomic-core/</li>
+                    <li>components/</li>
+                    <li>css/
+                        <ul>
+                            <li>main.css</li>
+                        </ul>
+                    </li>
+                    <li>scss/
+                        <ul>
+                            <li>main.scss</li>
+                        </ul>
+                    </li>
+                    <li>.htaccess</li>
+                    <li>config.php</li>
+                    <li>index.php</li>
+                    <li>atomic-head.php</li>
+                    <li>atomic-foot.php</li>
+                    <li>index.php</li>
+                    <li>header.php</li>
+                    <li>footer.php</li>
+                    <li>single.css</li>
+                    <li>style.css</li>
+                    <li>etc...</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>To view Atomic Docs, go to: <span class="highLight">http://www.mysite.com/wp-content/themes/my-theme/atomic-core/</span>
+    </li>
+    <li>Because scss/main.scss needs to compile to css/main.css you either need to use <a
+            href="https://developer.wordpress.org/reference/functions/wp_enqueue_style/">wp_enqueue_style</a> to include
+        main.css in your theme, or simply import it into style.css using <span
+                class="highLight">@import "css/main.css";</span> .
+    </li>
+    <li>wp-load.php allows us to use WordPress functionality outside of your WordPress theme. AKA Atomic Docs. Open up
+        atomic-head.php and place the following code block there.
+        <pre><code class="language-php"><script>
+<?php
+    $parse_uri = explode( 'wp-content', $_SERVER['SCRIPT_FILENAME'] );
+    require_once( $parse_uri[0] . 'wp-load.php' );
+?>
+            </script></code></pre>
+    </li>
+    <li>You now can use WordPress functions like wp_query inside of your components.</li>
+</ol>
+        </div>
+    </div>
+    <div class="layout__side">
+    <div class="logoBlock">
+        <a href="/"><img src="/img/logo.png" /></a>
+    </div>
+    <ul class="sideNav">
+        <li>
+            <a href="http://www.nickberens.me/atomic-docs/atomic-core/base.php" class="btns btn1">Demo</a>
+        </li>
+        <li>
+            <a href="https://github.com/nickberens360/atomic-docs" class="btns btn3">Github</a>
+        </li>
+        
+        <li>
+            <a href="//docs/video-primer"><span class="post-title">Video Primer<span></a>
+
+        </li>
+        
+        <li>
+            <a href="//docs/requirements"><span class="post-title">Requirements<span></a>
+
+        </li>
+        
+        <li>
+            <a href="//docs/setup"><span class="post-title">Set Up<span></a>
+
+        </li>
+        
+        <li>
+            <a href="//docs/project-structure"><span class="post-title">Project Structure<span></a>
+
+        </li>
+        
+        <li>
+            <a href="//docs/wordpress"><span class="post-title">Atomic Docs and WordPress<span></a>
+
+        </li>
+        
+
+    </ul>
+</div>
+</div>
+
+
+
+<!--
+<div class="banner ">
+  <div class="logo"><a href="/"><img src="/img/logo.png" /></a></div>
+  <div class="btnGroup">
+    <a href="http://www.nickberens.me/atomic-docs/atomic-core/base.php" class="btns btn1">Demo</a>
+    <a href="https://github.com/nickberens360/atomic-docs" class="btns btn2">Github</a>
+    <a href="/docs/video-primer" class="btns btn3">Documentation</a>
+  </div>
+</div>
+
+
+
+<div class="main main-2col main-right main-white">
+  <div class="main-inner main-inner-alt">
+    <div class="main-content">
+      
+         <h1 class="h1-alt">Atomic Docs and WordPress</h1>
+	       <p>Working with Atomic Docs in WordPress easy. This article will show you how to set up Atomic Docs so that you can use
+    all of WordPress' functions in your components.</p>
+
+<h2>Steps</h2>
+
+<ol>
+    <li>Download <a href="https://github.com/nickberens360/atomic-docs">Atomic Docs</a></li>
+    <li>Move the contents into the root of your theme.<br/><br/>
+        <ul class="ascii ascii-main">
+            <li><span class="ascii__mainDir"><strong>theme-name/</strong></span>
+                <ul>
+                    <li>atomic-core/</li>
+                    <li>components/</li>
+                    <li>css/
+                        <ul>
+                            <li>main.css</li>
+                        </ul>
+                    </li>
+                    <li>scss/
+                        <ul>
+                            <li>main.scss</li>
+                        </ul>
+                    </li>
+                    <li>.htaccess</li>
+                    <li>config.php</li>
+                    <li>index.php</li>
+                    <li>atomic-head.php</li>
+                    <li>atomic-foot.php</li>
+                    <li>index.php</li>
+                    <li>header.php</li>
+                    <li>footer.php</li>
+                    <li>single.css</li>
+                    <li>style.css</li>
+                    <li>etc...</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>To view Atomic Docs, go to: <span class="highLight">http://www.mysite.com/wp-content/themes/my-theme/atomic-core/</span>
+    </li>
+    <li>Because scss/main.scss needs to compile to css/main.css you either need to use <a
+            href="https://developer.wordpress.org/reference/functions/wp_enqueue_style/">wp_enqueue_style</a> to include
+        main.css in your theme, or simply import it into style.css using <span
+                class="highLight">@import "css/main.css";</span> .
+    </li>
+    <li>wp-load.php allows us to use WordPress functionality outside of your WordPress theme. AKA Atomic Docs. Open up
+        atomic-head.php and place the following code block there.
+        <pre><code class="language-php"><script>
+<?php
+    $parse_uri = explode( 'wp-content', $_SERVER['SCRIPT_FILENAME'] );
+    require_once( $parse_uri[0] . 'wp-load.php' );
+?>
+            </script></code></pre>
+    </li>
+    <li>You now can use WordPress functions like wp_query inside of your components.</li>
+</ol>
+       
+     </div>
+     <div class="main-aside">
+       <ul class="docRoll doc-class">
+            
+              <li>   
+                <a href="//docs/video-primer"><span class="post-title">Video Primer<span></a>
+                
+              </li>
+            
+              <li>   
+                <a href="//docs/requirements"><span class="post-title">Requirements<span></a>
+                
+              </li>
+            
+              <li>   
+                <a href="//docs/setup"><span class="post-title">Set Up<span></a>
+                
+              </li>
+            
+              <li>   
+                <a href="//docs/project-structure"><span class="post-title">Project Structure<span></a>
+                
+              </li>
+            
+              <li>   
+                <a href="//docs/wordpress"><span class="post-title">Atomic Docs and WordPress<span></a>
+                
+              </li>
+            
+        </ul>
+     </div>
+    </div>
+  </div>
+</div>
+-->
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script> 
+<script src="/js/min/site.min.js"></script>
+
+</body>
+</html>

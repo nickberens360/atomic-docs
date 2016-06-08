@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="323a34f5-330e-4cc5-a3d6-6d43a5ba9480" name="Default" comment="" />
+    <list default="true" id="323a34f5-330e-4cc5-a3d6-6d43a5ba9480" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2013/12/30/me.html" afterPath="$PROJECT_DIR$/_site/2013/12/30/me.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/main.css" afterPath="$PROJECT_DIR$/_site/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/demo/atomic-core/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/_site/demo/atomic-core/font-awesome/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/docs/index.html" afterPath="$PROJECT_DIR$/_site/docs/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/docs/project-structure/index.html" afterPath="$PROJECT_DIR$/_site/docs/project-structure/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/docs/requirements/index.html" afterPath="$PROJECT_DIR$/_site/docs/requirements/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/docs/setup/index.html" afterPath="$PROJECT_DIR$/_site/docs/setup/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/docs/video-primer/index.html" afterPath="$PROJECT_DIR$/_site/docs/video-primer/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/js/min/site.min.js" afterPath="$PROJECT_DIR$/_site/js/min/site.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/js/site.js" afterPath="$PROJECT_DIR$/_site/js/site.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/scss/main.scss" afterPath="$PROJECT_DIR$/_site/scss/main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/min/site.min.js" afterPath="$PROJECT_DIR$/js/min/site.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/site.js" afterPath="$PROJECT_DIR$/js/site.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/_cleanup.scss" afterPath="$PROJECT_DIR$/scss/_cleanup.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/atoms/_headings.scss" afterPath="$PROJECT_DIR$/scss/atoms/_headings.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/main.scss" afterPath="$PROJECT_DIR$/scss/main.scss" />
+    </list>
     <ignored path="atomic-docs.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -22,21 +42,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="post.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_layouts/post.html">
+      <file leaf-file-name="_headings.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/atoms/_headings.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+            <state relative-caret-position="374">
+              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_mainLayout.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scss/layout/_mainLayout.scss">
+      <file leaf-file-name="2015-12-16-wordpress.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2015-12-16-wordpress.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+            <state relative-caret-position="842">
+              <caret line="60" column="84" selection-start-line="60" selection-start-column="84" selection-end-line="60" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -71,18 +91,23 @@
         <option value="$PROJECT_DIR$/atomic-core/partial-mngr/functions/cat-delete-functions.php" />
         <option value="$PROJECT_DIR$/test/modules/_modules.scss" />
         <option value="$PROJECT_DIR$/atomic-config.php" />
-        <option value="$PROJECT_DIR$/scss/main.scss" />
         <option value="$PROJECT_DIR$/scss/modules/_box.scss" />
         <option value="$PROJECT_DIR$/components/modules/box.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/scss/organisms/_banner.scss" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
         <option value="$PROJECT_DIR$/scss/layout/_main.scss" />
-        <option value="$PROJECT_DIR$/scss/_cleanup.scss" />
         <option value="$PROJECT_DIR$/scss/layout/_layout.scss" />
-        <option value="$PROJECT_DIR$/scss/atoms/_headings.scss" />
         <option value="$PROJECT_DIR$/_layouts/post.html" />
         <option value="$PROJECT_DIR$/scss/layout/_mainLayout.scss" />
+        <option value="$PROJECT_DIR$/scss/atoms/_headings.scss" />
+        <option value="$PROJECT_DIR$/scss/main.scss" />
+        <option value="$PROJECT_DIR$/js/prism.js" />
+        <option value="$PROJECT_DIR$/scss/_prism.scss" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/site.js" />
+        <option value="$PROJECT_DIR$/scss/_cleanup.scss" />
+        <option value="$PROJECT_DIR$/docs/_posts/2015-12-16-wordpress.html" />
       </list>
     </option>
   </component>
@@ -154,18 +179,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="_layouts" />
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atomic-docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atomic-docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="Y:/drexelteam" />
+    <property name="last_opened_file_path" value="Y:/iuoe139" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
   </component>
@@ -218,17 +257,18 @@
       <workItem from="1464975452293" duration="10217000" />
       <workItem from="1465222464038" duration="4701000" />
       <workItem from="1465313963924" duration="6284000" />
+      <workItem from="1465396559786" duration="4534000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23501000" />
+    <option name="totallyTimeSpent" value="28035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-109" width="1936" height="1096" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25746268" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26012793" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -263,42 +303,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="26" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_cleanup.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/layout/_main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-core/scss/molecules/_compNotes.scss" />
-    <entry file="file://$PROJECT_DIR$/atomic-core/partial-mngr/functions/validation.php" />
-    <entry file="file://$PROJECT_DIR$/atomic-core/partial-mngr/file-move.php" />
-    <entry file="file://$PROJECT_DIR$/atomic-core/partial-mngr/delete.php" />
-    <entry file="file://$PROJECT_DIR$/atomic-core/partial-mngr/notes-rename.php" />
     <entry file="file://$PROJECT_DIR$/scss/test/_test.scss" />
     <entry file="file://$PROJECT_DIR$/scss/test/_new.scss" />
     <entry file="file://$PROJECT_DIR$/components/test/new.php" />
@@ -332,13 +336,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/modules/_modules.scss" />
     <entry file="file://$PROJECT_DIR$/atomic-config.php" />
-    <entry file="file://$PROJECT_DIR$/scss/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/modules/_box.scss" />
     <entry file="file://$PROJECT_DIR$/atomic-core/partial-mngr/functions/notes-rename-functions.php" />
     <entry file="file://$PROJECT_DIR$/components/modules/box.php" />
@@ -373,14 +370,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_cleanup.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="3" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/layout/_layout.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -389,10 +378,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/atoms/_headings.scss">
+    <entry file="file://$PROJECT_DIR$/scss/layout/_mainLayout.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        <state relative-caret-position="247">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -405,10 +394,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/layout/_mainLayout.scss">
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2015-12-18-working-with-live-data">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2015-12-20-project-structure.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/atoms/_headings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/prism.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="10" column="58" selection-start-line="0" selection-start-column="0" selection-end-line="6037" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/prism.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="6037" column="0" selection-start-line="6037" selection-start-column="0" selection-end-line="6037" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/prism.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_prism.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2270">
+          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/particles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="144" column="31" selection-start-line="17" selection-start-column="0" selection-end-line="144" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/site.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_cleanup.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2015-12-16-wordpress.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="842">
+          <caret line="60" column="84" selection-start-line="60" selection-start-column="84" selection-end-line="60" selection-end-column="84" />
           <folding />
         </state>
       </provider>

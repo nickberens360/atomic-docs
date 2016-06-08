@@ -1,0 +1,62 @@
+---
+layout: post
+title: Atomic Docs and WordPress
+permalink: /docs/wordpress
+---
+
+<p>Working with Atomic Docs in WordPress easy. This article will show you how to set up Atomic Docs so that you can use
+    all of WordPress' functions in your components.</p>
+
+<h2>Steps</h2>
+
+<ol>
+    <li>Download <a href="https://github.com/nickberens360/atomic-docs">Atomic Docs</a></li>
+    <li>Move the contents into the root of your theme.<br/><br/>
+        <ul class="ascii ascii-main">
+            <li><span class="ascii__mainDir"><strong>theme-name/</strong></span>
+                <ul>
+                    <li>atomic-core/</li>
+                    <li>components/</li>
+                    <li>css/
+                        <ul>
+                            <li>main.css</li>
+                        </ul>
+                    </li>
+                    <li>scss/
+                        <ul>
+                            <li>main.scss</li>
+                        </ul>
+                    </li>
+                    <li>.htaccess</li>
+                    <li>config.php</li>
+                    <li>index.php</li>
+                    <li>atomic-head.php</li>
+                    <li>atomic-foot.php</li>
+                    <li>index.php</li>
+                    <li>header.php</li>
+                    <li>footer.php</li>
+                    <li>single.css</li>
+                    <li>style.css</li>
+                    <li>etc...</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>To view Atomic Docs, go to: <span class="highLight">http://www.mysite.com/wp-content/themes/my-theme/atomic-core/</span>
+    </li>
+    <li>Because scss/main.scss needs to compile to css/main.css you either need to use <a
+            href="https://developer.wordpress.org/reference/functions/wp_enqueue_style/">wp_enqueue_style</a> to include
+        main.css in your theme, or simply import it into style.css using <span
+                class="highLight">@import "css/main.css";</span> .
+    </li>
+    <li>wp-load.php allows us to use WordPress functionality outside of your WordPress theme. AKA Atomic Docs. Open up
+        atomic-head.php and place the following code block there.
+        <pre><code class="language-php"><script>
+<?php
+    $parse_uri = explode( 'wp-content', $_SERVER['SCRIPT_FILENAME'] );
+    require_once( $parse_uri[0] . 'wp-load.php' );
+?>
+            </script></code></pre>
+    </li>
+    <li>You now can use WordPress functions like wp_query inside of your components.</li>
+</ol>

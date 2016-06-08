@@ -2,4 +2,5 @@
 //@prepros-append matchHeight.js
 //@prepros-append particles.js
 //@prepros-append fitvids.js
+//@prepros-append prism.js
 //@prepros-append main.js
