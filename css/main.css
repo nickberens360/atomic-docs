@@ -1444,6 +1444,7 @@ html, body, .layout, .layout__main {
 .documentation #particles-js {
   left: 0;
   background: #fff;
+  z-index: 2;
 }
 
 .layout__side {
@@ -1474,9 +1475,12 @@ html, body, .layout, .layout__main {
 .logoBlock {
   text-align: center;
   padding: 20px;
+  position: relative;
 }
 .logoBlock img {
   max-width: 200px;
+  z-index: 3;
+  position: relative;
 }
 
 .sideNav {
@@ -1484,6 +1488,8 @@ html, body, .layout, .layout__main {
   padding: 0;
   margin: 0;
   padding-bottom: 20px;
+  position: relative;
+  z-index: 4;
 }
 .sideNav .btns {
   width: 100%;
@@ -1498,6 +1504,16 @@ html, body, .layout, .layout__main {
   display: block;
   padding: 10px 20px;
   color: #fff;
+}
+
+.bgLogo {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 909px) {
