@@ -1,151 +1,191 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js">
 <!--<![endif]-->
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Atomic Docs</title>
-<meta name="description" content="Front end style guide generator and Sass partial manager. Atomic Docs is built with Sass and PHP">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/normalize.min.css">
-<link rel="stylesheet" href="css/main.css">
-<link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Atomic Docs</title>
+    <meta name="description"
+          content="Front end style guide generator and Sass partial manager. Atomic Docs is built with Sass and PHP">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
 
-<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
 
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" type="image/png" href="/favicon.png">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-26167724-3', 'auto');
-  ga('send', 'pageview');
+        ga('create', 'UA-26167724-3', 'auto');
+        ga('send', 'pageview');
 
-</script>
+    </script>
 </head>
 <body>
 <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 <div class="banner">
-  <div class="logo"><img src="img/logo.png" /></div>
-  <h2 class="banner__sub">A style guide generator and Sass component manager.</h2>
-  <div class="btnGroup">
-    <a href="http://www.nickberens.me/atomic-docs/atomic-core/base.php" class="btns btn1">Demo</a>
-    <a href="https://github.com/nickberens360/atomic-docs" class="btns btn2">Github</a>
-    <a href="/docs/video-primer" class="btns btn3">Documentation</a>
-  </div>
-  <img class="demoImg" src="img/demo1.gif" />
-  <div id="particles-js"></div>
-</div>
-
-<div class="section u_bgBlue">
-  <div class="section-inner">
-    <div class="section-content introText">
-       <h3 class="h3">About Atomic Docs</h3>
-       <p>Atomic Docs is a front end style guide generator and Sass component manager. Atomic Docs is built in PHP and Sass. Inspired by Brad Frost's Atomic Design principles.</p>
-    </div>
-  </div>
-</div>
-
-<div class="section section-2col">
-  <div class="section-inner">
-    <div class="section-content">
-      <h3 class="h3">Document</h3>
-      <p>Have full documentaion to hand off to other teams, internal or external.</p>
-    </div>
-    <div class="section-aside">
-      <img class="docImage" src="img/document.png" />
-    </div>
-  </div>
-</div>
-
-<div class="section section-right section-2col u_bgBlue">
-  <div class="section-inner">
-    <div class="section-content">
-      <h3 class="h3">Categorize</h3>
-      <p>Organize all your components under categories that you name. "Base", "Modules", "Atoms" etc...</p>
-    </div>
-    <div class="section-aside">
-      <img class="docImage" src="img/organize.png" />
-    </div>
-  </div>
-</div>
-
-<div class="section section-2col ">
-  <div class="section-inner">
-    <div class="section-content">
-      <h3 class="h3">Manage</h3>
-      <!--<p>Manage all your components. Move, rename and delete with a clean GUI interface.</p>-->
-      <p>Atomic Docs provides a GUI for handling the creation of the Scss and HTML partial files associated with your components. </p><p>Through this interface you can also rename files, move them to a different category and delete them.</p>
-    </div>
-    <div class="section-aside">
-      <img class="docImage" src="img/manage.gif" />
-    </div>
-  </div>
-</div>
-
-<div class="section section-right section-2col u_bgBlue">
-  <div class="section-inner">
-    <div class="section-content">
-      <h3 class="h3">Time Saving</h3>
-      <p>Again, Atomic Docs does the "wiring" of your Scss partials. Never write <span class="highlightMe">@import "partial-name";</span> again.</p>
-    </div>
-    <div class="section-aside">
-      <img class="docImage" src="img/helpful.png" />
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-<div class="section">
-  <div class="section-inner">
-    <div class="section-content introText introText-alt">
-      <h3 class="h3">Check it out!</h3>
-      <div class="vidWrap docImage">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/e8LjP6ynryQ" frameborder="0" allowfullscreen></iframe>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-<div class="section u_bgBlue">
-  <div class="section-inner">
-    <div class="section-content introText">
-      <h3 class="h3">James wouldn't lie.</h3>
-      <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/bl0cklevel">@bl0cklevel</a> <a href="https://t.co/PSlGXBTFix">https://t.co/PSlGXBTFix</a> is incredible - thanks for taking the time to produce this for the community! <a href="https://twitter.com/hashtag/wisconsintech?src=hash">#wisconsintech</a></p>&mdash; James McKenzie (@jmkenz) <a href="https://twitter.com/jmkenz/status/738744234853945344">June 3, 2016</a></blockquote>
-      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-  </div>
-</div>
-
-<div class="section">
-  <div class="section-inner">
-    <div class="section-content introText">
-
-      <div class="btnGroup">
+    <div class="logo"><img src="img/logo.png"/></div>
+    <h2 class="banner__sub">A style guide generator and Sass component manager.</h2>
+    <div class="btnGroup">
         <a href="http://www.nickberens.me/atomic-docs/atomic-core/base.php" class="btns btn1">Demo</a>
         <a href="https://github.com/nickberens360/atomic-docs" class="btns btn2">Github</a>
         <a href="/docs/video-primer" class="btns btn3">Documentation</a>
-      </div>
     </div>
-  </div>
+    <img class="demoImg" src="img/demo1.gif"/>
+    <div id="particles-js"></div>
 </div>
 
+<div class="section u_bgBlue">
+    <div class="section-inner">
+        <div class="section-content introText">
+            <h3 class="h3">About Atomic Docs</h3>
+            <p>Atomic Docs is a front end style guide generator and Sass component manager. Atomic Docs is built in PHP
+                and Sass. Inspired by Brad Frost's Atomic Design principles.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section section-2col">
+    <div class="section-inner">
+        <div class="section-content">
+            <h3 class="h3">Document</h3>
+            <p>Have full documentaion to hand off to other teams, internal or external.</p>
+        </div>
+        <div class="section-aside">
+            <img class="docImage" src="img/document.png"/>
+        </div>
+    </div>
+</div>
+
+<div class="section section-right section-2col u_bgBlue">
+    <div class="section-inner">
+        <div class="section-content">
+            <h3 class="h3">Categorize</h3>
+            <p>Organize all your components under categories that you name. "Base", "Modules", "Atoms" etc...</p>
+        </div>
+        <div class="section-aside">
+            <img class="docImage" src="img/organize.png"/>
+        </div>
+    </div>
+</div>
+
+<div class="section section-2col ">
+    <div class="section-inner">
+        <div class="section-content">
+            <h3 class="h3">Manage</h3>
+            <!--<p>Manage all your components. Move, rename and delete with a clean GUI interface.</p>-->
+            <p>Atomic Docs provides a GUI for handling the creation of the Scss and HTML partial files associated with
+                your components. </p>
+            <p>Through this interface you can also rename files, move them to a different category and delete them.</p>
+        </div>
+        <div class="section-aside">
+            <img class="docImage" src="img/manage.gif"/>
+        </div>
+    </div>
+</div>
+
+<div class="section section-right section-2col u_bgBlue">
+    <div class="section-inner">
+        <div class="section-content">
+            <h3 class="h3">Save Time</h3>
+            <p>Again, Atomic Docs does the "wiring" of your Scss partials. Never write <span class="highlightMe">@import "partial-name";</span>
+                again.</p>
+        </div>
+        <div class="section-aside">
+            <img class="docImage" src="img/helpful.png"/>
+        </div>
+    </div>
+</div>
+
+
+<div class="section">
+    <div class="section-inner">
+        <div class="section-content introText introText-alt">
+            <h3 class="h3">Check it out!</h3>
+            <div class="vidWrap docImage">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/e8LjP6ynryQ" frameborder="0"
+                        allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="section u_bgBlue">
+    <div class="section-inner section-inner-full">
+        <div class="section-content">
+            <!--<h3 class="h3">James wouldn't lie.</h3>-->
+            <div class="twitterRow">
+                <div class="twitterRow__item">
+                    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a
+                            href="https://twitter.com/bl0cklevel">@bl0cklevel</a> <a href="https://t.co/PSlGXBTFix">https://t.co/PSlGXBTFix</a>
+                        is incredible - thanks for taking the time to produce this for the community! <a
+                                href="https://twitter.com/hashtag/wisconsintech?src=hash">#wisconsintech</a></p>&mdash;
+                        James McKenzie (@jmkenz) <a href="https://twitter.com/jmkenz/status/738744234853945344">June 3,
+                            2016</a></blockquote>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="twitterRow__item">
+                    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Atomic Docs awesome tool for
+                        creating digital style guide <a
+                                href="https://twitter.com/hashtag/webdesign?src=hash">#webdesign</a>
+                        <a href="https://twitter.com/hashtag/css?src=hash">#css</a> <a
+                                href="https://twitter.com/hashtag/design?src=hash">#design</a> <a
+                                href="https://t.co/9wdIjCnLy3">https://t.co/9wdIjCnLy3</a></p>&mdash; Daniel Salazar
+                        (@edse83) <a href="https://twitter.com/edse83/status/740559135834525696">June 8, 2016</a>
+                    </blockquote>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="twitterRow__item">
+                    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I needed a
+                        pattern-library-Tool
+                        right now and have found this! Pretty cool! <a href="https://t.co/E5Mx04LjUI">https://t.co/E5Mx04LjUI</a>
+                    </p>&mdash; Ole (@oleseyen) <a href="https://twitter.com/oleseyen/status/734725177582444544">May 23,
+                        2016</a></blockquote>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-inner">
+        <div class="section-content introText">
+
+            <div class="btnGroup">
+                <a href="http://www.nickberens.me/atomic-docs/atomic-core/base.php" class="btns btn1">Demo</a>
+                <a href="https://github.com/nickberens360/atomic-docs" class="btns btn2">Github</a>
+                <a href="/docs/video-primer" class="btns btn3">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <footer class="footerMain">
@@ -154,8 +194,8 @@
  
 </footer>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-<script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
 <script src="js/min/site.min.js"></script>
 
 </body>

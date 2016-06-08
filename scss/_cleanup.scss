@@ -62,6 +62,26 @@ pre[class*="language-"] {
   overflow: auto;
 }
 
+.section-inner.section-inner-full{
+  max-width:1200px;
+}
 
+.twitterRow{
+  @extend .grid-row;
+  text-align: center;
+}
+.twitterRow__item{
+  @include col($four);
+  padding: 0 10px;
+
+  display: inline-block;
+  @media only screen and ( max-width: 889px ){
+    @include col($twelve);
+    width:auto;
+    float: none;
+    padding:0;
+    margin-bottom:$base;
+  }
+}
 
 

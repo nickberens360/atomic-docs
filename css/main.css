@@ -73,7 +73,7 @@ pre, table, hr, .atoms-code-example {
 }
 /*@include wrap($wrapWidth, $mpad);*/
 /*@include col($six);*/
-.gridExample .grid-row, .gridExample .colors, .gridExample [class*="block-grid-"], .gridExample .block-grid-example, .gridExample .matchheight, .gridExample .main-inner, .gridExample .section .section-inner, .section .gridExample .section-inner, .gridExample .layout, .gridExample .banner-alt {
+.gridExample .grid-row, .gridExample .colors, .gridExample [class*="block-grid-"], .gridExample .block-grid-example, .gridExample .matchheight, .gridExample .main-inner, .gridExample .section .section-inner, .section .gridExample .section-inner, .gridExample .layout, .gridExample .twitterRow, .gridExample .banner-alt {
   margin-bottom: 10px;
 }
 .gridExample [class*='nb-'] {
@@ -1278,7 +1278,7 @@ pre[class*="language-"] {
   float: left;
 }
 
-.grid-row:after, .colors:after, [class*="block-grid-"]:after, .block-grid-example:after, .matchheight:after, .main-inner:after, .section .section-inner:after, .layout:after, .banner-alt:after {
+.grid-row:after, .colors:after, [class*="block-grid-"]:after, .block-grid-example:after, .matchheight:after, .main-inner:after, .section .section-inner:after, .layout:after, .twitterRow:after, .banner-alt:after {
   content: "";
   display: table;
   clear: both;
@@ -1629,6 +1629,31 @@ pre[class*="language-"] {
   overflow: auto;
 }
 
+.section-inner.section-inner-full {
+  max-width: 1200px;
+}
+
+.twitterRow {
+  text-align: center;
+}
+
+.twitterRow__item {
+  float: left;
+  width: 33.33333%;
+  padding: 0 10px;
+  display: inline-block;
+}
+@media only screen and (max-width: 889px) {
+  .twitterRow__item {
+    float: left;
+    width: 100%;
+    width: auto;
+    float: none;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+}
+
 .h1, h1, h2, .h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 {
   margin-top: 0;
   margin-bottom: 24px;
@@ -1659,6 +1684,7 @@ pre[class*="language-"] {
 
 h2, .h2 {
   font-size: 20px;
+  color: #3D4A57;
 }
 @media (max-width: 394px) {
   h2, .h2 {
@@ -1749,7 +1775,7 @@ h2, .h2 {
 }
 
 a {
-  color: #5583B2;
+  color: #00AFF0;
   text-decoration: none;
 }
 
