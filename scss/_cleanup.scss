@@ -56,6 +56,11 @@ ol li, ul li{
   font-size:13px;
   padding:2px 8px;
 }
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 33px 0;
+  overflow: auto;
+}
 
 
 

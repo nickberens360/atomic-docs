@@ -12,19 +12,21 @@
 }
 
 .h1-alt {
-  font-size: 40px;
-  color: #5583B2;
+  font-size: 36px;
+  color: #3D4A57;
   @media (max-width: 594px) {
-    font-size: 48px;
+    font-size: 28px;
   }
   @media (max-width: 394px) {
-    font-size: 36px;
+    font-size: 20px;
   }
 }
 
-.h2 {
+h2, .h2 {
   font-size: 20px;
-
+  @media (max-width: 394px) {
+    font-size:18px;
+  }
 }
 
 .h3 {
