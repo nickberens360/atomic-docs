@@ -1487,6 +1487,7 @@ html, body, .layout, .layout__main {
 }
 .sideNav .btns {
   width: 100%;
+  font-family: "Open Sans", sans-serif;
 }
 .sideNav .btn3 {
   margin-bottom: 20px;
