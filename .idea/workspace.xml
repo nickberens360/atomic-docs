@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="323a34f5-330e-4cc5-a3d6-6d43a5ba9480" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/main.css" afterPath="$PROJECT_DIR$/_site/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/_cleanup.scss" afterPath="$PROJECT_DIR$/scss/_cleanup.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/atoms/_btns.scss" afterPath="$PROJECT_DIR$/scss/atoms/_btns.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/atoms/_headings.scss" afterPath="$PROJECT_DIR$/scss/atoms/_headings.scss" />
     </list>
     <ignored path="atomic-docs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_headings.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_headings.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/atoms/_headings.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+            <state relative-caret-position="111">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -61,44 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_mainLayout.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_mainLayout.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scss/layout/_mainLayout.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_layouts/default.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="48" />
-              <folding>
-                <marker date="1465418311317" expanded="true" signature="1941:2094" placeholder="..." />
-                <marker date="1465418311317" expanded="true" signature="2034:2062" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2015-12-16-wordpress.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/2015-12-16-wordpress.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_layouts/post.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+            <state relative-caret-position="94">
+              <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -265,7 +225,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="Y:/iuoe139" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Websites/wiscohwy-staging" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
   </component>
@@ -318,12 +278,12 @@
       <workItem from="1464975452293" duration="10217000" />
       <workItem from="1465222464038" duration="4701000" />
       <workItem from="1465313963924" duration="6284000" />
-      <workItem from="1465396559786" duration="11036000" />
+      <workItem from="1465396559786" duration="12341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34537000" />
+    <option name="totallyTimeSpent" value="35842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-109" width="1936" height="1096" extended-state="0" />
@@ -533,25 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/layout/_mainLayout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="48" />
-          <folding>
-            <marker date="1465418311317" expanded="true" signature="1941:2094" placeholder="..." />
-            <marker date="1465418311317" expanded="true" signature="2034:2062" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/_cleanup.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
@@ -570,8 +511,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/atoms/_headings.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        <state relative-caret-position="111">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="48" />
+          <folding>
+            <marker date="1465418311317" expanded="true" signature="1941:2094" placeholder="..." />
+            <marker date="1465418311317" expanded="true" signature="2034:2062" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/layout/_mainLayout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
           <folding />
         </state>
       </provider>
