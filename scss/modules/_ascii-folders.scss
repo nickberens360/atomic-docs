@@ -80,7 +80,9 @@ ul.ascii > li > ul > li:last-child > ul > li:last-child > ul > li:last-child > u
 
 //my additions
 ul.ascii-main{
-  margin-bottom:$base*2; 
+  margin-bottom:$base*2;
+  background: #F5F2F0;
+  padding: 24px;
 }
 ul.ascii > li > ul > li > ul > li::before {
     position: relative;
@@ -93,4 +95,5 @@ ul.ascii li {
 .ascii__mainDir{
   margin-bottom:12px;
   display:block;
+  font-weight:bold;
 }

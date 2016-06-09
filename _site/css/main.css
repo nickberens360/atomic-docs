@@ -2066,6 +2066,8 @@ ul.ascii > li > ul > li:last-child > ul > li:last-child > ul > li:last-child > u
 
 ul.ascii-main {
   margin-bottom: 48px;
+  background: #F5F2F0;
+  padding: 24px;
 }
 
 ul.ascii > li > ul > li > ul > li::before {
@@ -2081,6 +2083,7 @@ ul.ascii li {
 .ascii__mainDir {
   margin-bottom: 12px;
   display: block;
+  font-weight: bold;
 }
 
 .introText {
