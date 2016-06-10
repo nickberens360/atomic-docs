@@ -31,8 +31,8 @@
                     </g>
                 </g>
                 <g id="DOTS" transform="translate(0.745152, 0.000000)">
-                    <g id="RIGHT" transform="translate(66.500000, 26.500000) scale(-1, 1) translate(-66.500000, -26.500000) translate(60.000000, 21.000000)" fill="#00C2F5">
-                        <use id="RIGHT-DOT" style="mix-blend-mode: multiply;" xlink:href="#path-7"></use>
+                    <g id="RIGHT" transform="translate(66.500000, 26.500000) scale(-1, 1) translate(-66.500000, -26.500000) translate(60.000000, 21.000000)" fill="#0093EB">
+                        <use id="RIGHT-DOT" xlink:href="#path-7"></use>
                     </g>
                     <use id="CENTER-DROP-BOTTOM" fill="#006681" xlink:href="#path-8"></use>
                     <use id="CENTER-DROP-BOTTOM-Copy" fill="#006681" transform="translate(43.360136, 6.875369) scale(-1, -1) rotate(-0.300000) translate(-43.360136, -6.875369) " xlink:href="#path-9"></use>
