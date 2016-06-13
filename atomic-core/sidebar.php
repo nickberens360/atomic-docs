@@ -43,26 +43,7 @@
             
           
 </aside>
-<?php /*?><aside class="atoms-side">
-<div class="atoms-overflow">
 
-	<span class="atoms-side_hide">Hide Sidebar</span>
-
-	<nav>
-		<ul class="atoms-nav">
-			<?php include ("categories/atomic-nav.php");?>
-      <li class="catAdd"><a class="aa_js-actionOpen aa_actionBtn" href="atomic-core/categories/_catActions.php"><span class="fa fa-plus"></span> Add / Delete Category</a></li>
-		</ul>
-		 
-	</nav>
-
-
-</div>
-
-            <div class="cat-form js-showContent"></div>
-            
-          
-</aside><?php */?>
 
 
 

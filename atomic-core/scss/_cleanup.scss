@@ -73,7 +73,11 @@ pre[class*="language-"] {
   position:relative; 
 }
 
-
+.atoms-overflow{
+	overflow: auto;
+	position: relative;
+	height: 100%;
+}
 
 
 
