@@ -6,11 +6,11 @@ Documentaion can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>
 <img src="http://atomicdocs.io/img/demo1.gif" alt="atomic docs gif" />
 
 ##Set up
-<ol>
-	<li>Download Atomic Docs and add to your local PHP environment.</li>
-  <li>Configure your preprocessor to output scss/main.scss to css/main.css.</li>
-  <li>Go to http://localhost/atomic-docs/atomic-core/index.php and get started.</li>
-</ol>
+
+1. Download Atomic Docs and add to your local PHP environment.
+2. Install node.js dependencies.
+    Run `npm i` inside of *atomic-core* folder.
+3. Go to http://localhost/atomic-docs/atomic-core/index.php and get started.
 
 ##Document
 Have full documentaion to hand off to other teams, internal or external.

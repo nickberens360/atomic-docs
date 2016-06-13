@@ -50,3 +50,5 @@ gulp.task('default',function() {
     gulp.watch('scss/**/*.scss',['styles']);
     gulp.watch('js/*.js',['scripts']);
 });
+
+gulp.task('setup', ['styles']);
