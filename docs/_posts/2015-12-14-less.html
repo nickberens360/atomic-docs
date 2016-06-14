@@ -1,0 +1,33 @@
+---
+layout: post
+title: Atomic Docs and LESS
+permalink: /docs/less
+---
+
+<p>Setting up Atomic Docs with Less preprocessor is pretty easy, but comes with one caveat.</p>
+
+<h2>Caveat</h2>
+<p>By convention, LESS partials are not prefixed with an underscore like Sass partials are. In Atomic Docs, at least for the moment, all
+    partials need to have the underscore whether Sass or Less.</p>
+
+<h2>Steps</h2>
+
+<ul>
+    <li> open up atomic-config.php and change <span class="highLight">$config['preCssDir']</span> to "less". Also change <span class="highLight">$config['preCssExt']</span> to "less".
+<pre><code class="language-php"><script>
+function getConfig() {
+    $config = array();
+    $config['dir'] = dirname(__FILE__);
+    //user defined varibales
+    $config['preCssDir'] = 'less'; //Scss preprocessor directory name. E.G sass, less
+    $config['preCssExt'] = 'less'; //prerocessed file ext. E.G. scss, sass, less
+    $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
+    return $config;
+}
+</script></code></pre>
+    </li>
+</ul>
+
+
+
+

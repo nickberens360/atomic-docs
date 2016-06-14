@@ -3,8 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="323a34f5-330e-4cc5-a3d6-6d43a5ba9480" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_ascii-folders.scss" afterPath="$PROJECT_DIR$/scss/modules/_ascii-folders.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2013/12/30/me.html" afterPath="$PROJECT_DIR$/_site/2013/12/30/me.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/demo/atomic-core/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/_site/demo/atomic-core/font-awesome/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/docs/index.html" afterPath="$PROJECT_DIR$/_site/docs/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/docs/project-structure/index.html" afterPath="$PROJECT_DIR$/_site/docs/project-structure/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/docs/requirements/index.html" afterPath="$PROJECT_DIR$/_site/docs/requirements/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/docs/setup/index.html" afterPath="$PROJECT_DIR$/_site/docs/setup/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/docs/video-primer/index.html" afterPath="$PROJECT_DIR$/_site/docs/video-primer/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/docs/wordpress/index.html" afterPath="$PROJECT_DIR$/_site/docs/wordpress/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/js/min/flexslider.min.js" afterPath="$PROJECT_DIR$/_site/js/min/flexslider.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/js/min/site.min.js" afterPath="$PROJECT_DIR$/_site/js/min/site.min.js" />
     </list>
     <ignored path="atomic-docs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,52 +36,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_headings.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/atoms/_headings.scss">
+      <file leaf-file-name="2015-12-14-less.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2015-12-14-less.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+              <caret line="15" column="103" selection-start-line="15" selection-start-column="103" selection-end-line="15" selection-end-column="103" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_cleanup.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/_cleanup.scss">
+      <file leaf-file-name="default.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_layouts/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1343">
-              <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_btns.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/atoms/_btns.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_mainLayout.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/layout/_mainLayout.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_ascii-folders.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scss/modules/_ascii-folders.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="109" column="56" selection-start-line="109" selection-start-column="56" selection-end-line="109" selection-end-column="56" />
+              <folding>
+                <marker date="1465931007815" expanded="true" signature="1941:2094" placeholder="..." />
+                <marker date="1465931007815" expanded="true" signature="2034:2062" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,9 +87,6 @@
         <option value="$PROJECT_DIR$/sass/layout/_grid.scss" />
         <option value="$PROJECT_DIR$/atomic-core/partial-mngr/functions/cat-delete-functions.php" />
         <option value="$PROJECT_DIR$/test/modules/_modules.scss" />
-        <option value="$PROJECT_DIR$/atomic-config.php" />
-        <option value="$PROJECT_DIR$/scss/modules/_box.scss" />
-        <option value="$PROJECT_DIR$/components/modules/box.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/scss/organisms/_banner.scss" />
         <option value="$PROJECT_DIR$/scss/layout/_main.scss" />
@@ -119,11 +99,22 @@
         <option value="$PROJECT_DIR$/docs/_posts/2015-12-16-wordpress.html" />
         <option value="$PROJECT_DIR$/_layouts/post.html" />
         <option value="$PROJECT_DIR$/scss/layout/_mainLayout.scss" />
-        <option value="$PROJECT_DIR$/_layouts/default.html" />
         <option value="$PROJECT_DIR$/scss/_cleanup.scss" />
         <option value="$PROJECT_DIR$/scss/atoms/_btns.scss" />
         <option value="$PROJECT_DIR$/scss/atoms/_headings.scss" />
         <option value="$PROJECT_DIR$/scss/modules/_ascii-folders.scss" />
+        <option value="$PROJECT_DIR$/atomic-core/sidebar.php" />
+        <option value="$PROJECT_DIR$/atomic-core/scss/_cleanup.scss" />
+        <option value="$PROJECT_DIR$/less/mods/_mods.less" />
+        <option value="$PROJECT_DIR$/less/mods/_box.less" />
+        <option value="$PROJECT_DIR$/components/mods/box.php" />
+        <option value="$PROJECT_DIR$/components/modules/box.php" />
+        <option value="$PROJECT_DIR$/scss/modules/_box.scss" />
+        <option value="$PROJECT_DIR$/atomic-config.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/docs/_posts/2015-12-14-less.html" />
+        <option value="$PROJECT_DIR$/_layouts/default.html" />
       </list>
     </option>
   </component>
@@ -168,7 +159,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -197,44 +187,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="atomic-docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="atomic-docs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="atoms" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="atomic-docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="atomic-docs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="_layouts" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,25 +251,26 @@
       <workItem from="1465222464038" duration="4701000" />
       <workItem from="1465313963924" duration="6284000" />
       <workItem from="1465396559786" duration="12341000" />
-      <workItem from="1465489110606" duration="98000" />
+      <workItem from="1465489110606" duration="1709000" />
+      <workItem from="1465820163308" duration="14604000" />
+      <workItem from="1465917314494" duration="1930000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35940000" />
+    <option name="totallyTimeSpent" value="54085000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-109" width="1936" height="1096" extended-state="0" />
+    <frame x="-1928" y="-109" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26279318" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26812366" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -318,6 +278,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -338,18 +299,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/test/new.php" />
-    <entry file="file://$PROJECT_DIR$/atomic-core/partial-mngr/bgcolor-rename.php" />
-    <entry file="file://$PROJECT_DIR$/atomic-core/partial-mngr/functions/cat-create-functions.php" />
-    <entry file="file://$PROJECT_DIR$/atomic-core/partial-mngr/functions/functions.php" />
-    <entry file="file://$PROJECT_DIR$/atomic-core/partial-mngr/functions/helpers.php" />
-    <entry file="file://$PROJECT_DIR$/atomic-core/partial-mngr/delete-category.php" />
-    <entry file="file://$PROJECT_DIR$/atomic-core/partial-mngr/create-category.php" />
-    <entry file="file://$PROJECT_DIR$/scss/layout/_grids.scss" />
-    <entry file="file://$PROJECT_DIR$/components/layout/grids.html" />
-    <entry file="file://$PROJECT_DIR$/scss/molecules/_box.scss" />
-    <entry file="file://$PROJECT_DIR$/components/molecules/box.html" />
-    <entry file="file://$PROJECT_DIR$/atomic-core/scss/_main-bu.scss" />
     <entry file="file://$PROJECT_DIR$/sass/main.scss" />
     <entry file="file://$PROJECT_DIR$/sass/modules/_modules.scss" />
     <entry file="file://$PROJECT_DIR$/sass/modules/_box.scss" />
@@ -368,58 +317,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/modules/_modules.scss" />
-    <entry file="file://$PROJECT_DIR$/atomic-config.php" />
-    <entry file="file://$PROJECT_DIR$/scss/modules/_box.scss" />
     <entry file="file://$PROJECT_DIR$/atomic-core/partial-mngr/functions/notes-rename-functions.php" />
-    <entry file="file://$PROJECT_DIR$/components/modules/box.php" />
     <entry file="file://$PROJECT_DIR$/index.php" />
-    <entry file="file://$PROJECT_DIR$/scss/variables/_fonts.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/organisms/_banner.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/layout/_main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/layout/_layout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2015-12-18-working-with-live-data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2015-12-20-project-structure.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/variables/_fonts.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/organisms/_banner.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/layout/_main.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/layout/_layout.scss" />
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2015-12-18-working-with-live-data" />
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2015-12-20-project-structure.html" />
     <entry file="file://$PROJECT_DIR$/scss/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -430,13 +339,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/prism.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="6037" column="0" selection-start-line="6037" selection-start-column="0" selection-end-line="6037" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/js/prism.js" />
     <entry file="file://$USER_HOME$/Downloads/prism.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -444,20 +347,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_prism.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2270">
-          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/particles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_prism.scss" />
+    <entry file="file://$PROJECT_DIR$/js/particles.js" />
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
@@ -465,75 +356,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/site.js">
+    <entry file="file://$PROJECT_DIR$/js/site.js" />
+    <entry file="file://$PROJECT_DIR$/_layouts/post.html" />
+    <entry file="file://$PROJECT_DIR$/scss/atoms/_btns.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/atoms/_headings.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/modules/_ascii-folders.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/layout/_mainLayout.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/_cleanup.scss" />
+    <entry file="file://$PROJECT_DIR$/less/mods/_mods.less" />
+    <entry file="file://$PROJECT_DIR$/atomic-core/scss/_cleanup.scss" />
+    <entry file="file://$PROJECT_DIR$/atomic-core/sidebar.php" />
+    <entry file="file://$PROJECT_DIR$/components/mods/box.php" />
+    <entry file="file://$PROJECT_DIR$/less/mods/_box.less" />
+    <entry file="file://$PROJECT_DIR$/scss/modules/_modules.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="30" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
+    <entry file="file://$PROJECT_DIR$/scss/modules/_box.scss" />
+    <entry file="file://$PROJECT_DIR$/components/modules/box.php" />
+    <entry file="file://$PROJECT_DIR$/atomic-config.php" />
+    <entry file="file://$PROJECT_DIR$/atomic-core/package.json" />
+    <entry file="file://$PROJECT_DIR$/atomic-core/GulpFile.js" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2015-12-26-setup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/_posts/2015-12-16-wordpress.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_cleanup.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
+        <state relative-caret-position="425">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/atoms/_btns.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/atoms/_headings.scss">
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2015-12-14-less.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <caret line="15" column="103" selection-start-line="15" selection-start-column="103" selection-end-line="15" selection-end-column="103" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="48" />
+        <state relative-caret-position="255">
+          <caret line="109" column="56" selection-start-line="109" selection-start-column="56" selection-end-line="109" selection-end-column="56" />
           <folding>
-            <marker date="1465418311317" expanded="true" signature="1941:2094" placeholder="..." />
-            <marker date="1465418311317" expanded="true" signature="2034:2062" placeholder="..." />
+            <marker date="1465931007815" expanded="true" signature="1941:2094" placeholder="..." />
+            <marker date="1465931007815" expanded="true" signature="2034:2062" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/layout/_mainLayout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_ascii-folders.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
