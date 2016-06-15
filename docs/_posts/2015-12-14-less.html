@@ -1,30 +1,39 @@
 ---
 layout: post
-title: Atomic Docs and LESS
-permalink: /docs/less
+title: Working with Less and Stylus
+permalink: /docs/less-stylus
 ---
 
-<p>Setting up Atomic Docs with Less preprocessor is pretty easy, but comes with one caveat.</p>
+<p>Setting up Atomic Docs with Less or Stylus is pretty easy, but comes with one caveat.</p>
 
 <h2>Caveat</h2>
-<p>By convention, LESS partials are not prefixed with an underscore like Sass partials are. In Atomic Docs, at least for the moment, all
-    partials need to have the underscore whether Sass or Less.</p>
+<p>By convention, LESS and Stylus partials are not prefixed with an underscore like Sass partials are. In Atomic Docs,
+    at least for the moment, all
+    partials are created with the underscore whether Sass, Less or Stylus. If this doesn't make you sad everything
+    should work fine.</p>
 
 <h2>Steps</h2>
 
+<p>The following are the steps for setting up Atomic Docs to work with Less. For stylus use the <span class="highLight">styl</span>
+    extension instead <span class="highLight">less</span> as shown in the example.</p>
+
 <ul>
-    <li> open up atomic-config.php and change <span class="highLight">$config['preCssDir']</span> to "less". Also change <span class="highLight">$config['preCssExt']</span> to "less".
-<pre><code class="language-php"><script>
-function getConfig() {
-    $config = array();
-    $config['dir'] = dirname(__FILE__);
-    //user defined varibales
-    $config['preCssDir'] = 'less'; //Scss preprocessor directory name. E.G sass, less
-    $config['preCssExt'] = 'less'; //prerocessed file ext. E.G. scss, sass, less
-    $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
-    return $config;
-}
-</script></code></pre>
+    <li> open up atomic-config.php and change <span class="highLight">$config['preCssDir']</span> to equal <span
+            class="highLight">less</span>. Also change <span class="highLight">$config['preCssExt']</span> to equal <span
+            class="highLight">less</span> (you can name this whatever you want actually).
+<pre><code class="language-php">
+    <script>
+        function getConfig() {
+            $config = array();
+            $config['dir'] = dirname(__FILE__);
+            //user defined varibales
+            $config['preCssDir'] = 'less'; //Scss preprocessor directory name. E.G sass, less
+            $config['preCssExt'] = 'less'; //prerocessed file ext. E.G. scss, sass, less
+            $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
+            return $config;
+        }
+    </script>
+</code></pre>
     </li>
 </ul>
 

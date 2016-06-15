@@ -44,12 +44,44 @@
         <div class="layout__content">
             <div class="sideTrigger">
             </div>
-            <h1 class="h1-alt">Set Up</h1>
-            <ol>
-	<li>Download Atomic Docs and add to your local PHP environment.</li>
-  <li>Configure your preprocessor to output scss/main.scss to css/main.css.</li>
-  <li>Go to http://localhost/atomic-docs/atomic-core/index.php and get started.</li>
-</ol>
+            <h1 class="h1-alt">Working with Less and Stylus</h1>
+            <p>Setting up Atomic Docs with Less or Stylus is pretty easy, but comes with one caveat.</p>
+
+<h2>Caveat</h2>
+<p>By convention, LESS and Stylus partials are not prefixed with an underscore like Sass partials are. In Atomic Docs,
+    at least for the moment, all
+    partials are created with the underscore whether Sass, Less or Stylus. If this doesn't make you sad everything
+    should work fine.</p>
+
+<h2>Steps</h2>
+
+<p>The following are the steps for setting up Atomic Docs to work with Less. For stylus use the <span class="highLight">styl</span>
+    extension instead <span class="highLight">less</span> as shown in the example.</p>
+
+<ul>
+    <li> open up atomic-config.php and change <span class="highLight">$config['preCssDir']</span> to equal <span
+            class="highLight">less</span>. Also change <span class="highLight">$config['preCssExt']</span> to equal <span
+            class="highLight">less</span> (you can name this whatever you want actually).
+<pre><code class="language-php">
+    <script>
+        function getConfig() {
+            $config = array();
+            $config['dir'] = dirname(__FILE__);
+            //user defined varibales
+            $config['preCssDir'] = 'less'; //Scss preprocessor directory name. E.G sass, less
+            $config['preCssExt'] = 'less'; //prerocessed file ext. E.G. scss, sass, less
+            $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
+            return $config;
+        }
+    </script>
+</code></pre>
+    </li>
+</ul>
+
+
+
+
+
         </div>
     </div>
     <div class="layout__side">
@@ -120,12 +152,44 @@
   <div class="main-inner main-inner-alt">
     <div class="main-content">
       
-         <h1 class="h1-alt">Set Up</h1>
-	       <ol>
-	<li>Download Atomic Docs and add to your local PHP environment.</li>
-  <li>Configure your preprocessor to output scss/main.scss to css/main.css.</li>
-  <li>Go to http://localhost/atomic-docs/atomic-core/index.php and get started.</li>
-</ol>
+         <h1 class="h1-alt">Working with Less and Stylus</h1>
+	       <p>Setting up Atomic Docs with Less or Stylus is pretty easy, but comes with one caveat.</p>
+
+<h2>Caveat</h2>
+<p>By convention, LESS and Stylus partials are not prefixed with an underscore like Sass partials are. In Atomic Docs,
+    at least for the moment, all
+    partials are created with the underscore whether Sass, Less or Stylus. If this doesn't make you sad everything
+    should work fine.</p>
+
+<h2>Steps</h2>
+
+<p>The following are the steps for setting up Atomic Docs to work with Less. For stylus use the <span class="highLight">styl</span>
+    extension instead <span class="highLight">less</span> as shown in the example.</p>
+
+<ul>
+    <li> open up atomic-config.php and change <span class="highLight">$config['preCssDir']</span> to equal <span
+            class="highLight">less</span>. Also change <span class="highLight">$config['preCssExt']</span> to equal <span
+            class="highLight">less</span> (you can name this whatever you want actually).
+<pre><code class="language-php">
+    <script>
+        function getConfig() {
+            $config = array();
+            $config['dir'] = dirname(__FILE__);
+            //user defined varibales
+            $config['preCssDir'] = 'less'; //Scss preprocessor directory name. E.G sass, less
+            $config['preCssExt'] = 'less'; //prerocessed file ext. E.G. scss, sass, less
+            $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
+            return $config;
+        }
+    </script>
+</code></pre>
+    </li>
+</ul>
+
+
+
+
+
        
      </div>
      <div class="main-aside">
