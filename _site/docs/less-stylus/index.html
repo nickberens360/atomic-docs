@@ -45,13 +45,11 @@
             <div class="sideTrigger">
             </div>
             <h1 class="h1-alt">Working with Less and Stylus</h1>
-            <p>Setting up Atomic Docs with Less or Stylus is pretty easy, but comes with one caveat.</p>
+            <p>By default, Atomic Docs is set up for Sass. Setting up Atomic Docs with Less or Stylus is pretty easy, but comes with one caveat.</p>
 
 <h2>Caveat</h2>
 <p>By convention, LESS and Stylus partials are not prefixed with an underscore like Sass partials are. In Atomic Docs,
-    at least for the moment, all
-    partials are created with the underscore whether Sass, Less or Stylus. If this doesn't make you sad everything
-    should work fine.</p>
+    at least for the moment, all partials are created with the underscore whether Sass, Less or Stylus. Everything still works as it should though, so if the underscores don't bother you, you're good to go.</p>
 
 <h2>Steps</h2>
 
@@ -59,23 +57,24 @@
     extension instead <span class="highLight">less</span> as shown in the example.</p>
 
 <ul>
-    <li> open up atomic-config.php and change <span class="highLight">$config['preCssDir']</span> to equal <span
+    <li>The first thing you'll need to do is go to <span class="highLight">http://localhost/atomic-docs/atomic-core/</span> and use the <span class="highLight">+ Add / Delete Category</span> link to remove the modules and box component example. Since the example is in Sass you will encounter issues later if you are working with Less or Stylus.</li>
+    <li> Open up atomic-config.php in the root and change <span class="highLight">$config['preCssDir']</span> to equal <span
             class="highLight">less</span>. Also change <span class="highLight">$config['preCssExt']</span> to equal <span
             class="highLight">less</span> (you can name this whatever you want actually).
-<pre><code class="language-php">
-    <script>
-        function getConfig() {
-            $config = array();
-            $config['dir'] = dirname(__FILE__);
-            //user defined varibales
-            $config['preCssDir'] = 'less'; //Scss preprocessor directory name. E.G sass, less
-            $config['preCssExt'] = 'less'; //prerocessed file ext. E.G. scss, sass, less
-            $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
-            return $config;
-        }
-    </script>
+<pre><code class="language-php"><script>
+function getConfig() {
+    $config = array();
+    $config['dir'] = dirname(__FILE__);
+    //user defined varibales
+    $config['preCssDir'] = 'less'; //Scss preprocessor directory name. E.G sass, less
+    $config['preCssExt'] = 'less'; //prerocessed file ext. E.G. scss, sass, less
+    $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
+    return $config;
+}
+</script>
 </code></pre>
     </li>
+    <li>Set up your pre-processor and start creating your categories and components at <span class="highLight">http://localhost/atomic-docs/atomic-core/</span>.</li>
 </ul>
 
 
@@ -153,13 +152,11 @@
     <div class="main-content">
       
          <h1 class="h1-alt">Working with Less and Stylus</h1>
-	       <p>Setting up Atomic Docs with Less or Stylus is pretty easy, but comes with one caveat.</p>
+	       <p>By default, Atomic Docs is set up for Sass. Setting up Atomic Docs with Less or Stylus is pretty easy, but comes with one caveat.</p>
 
 <h2>Caveat</h2>
 <p>By convention, LESS and Stylus partials are not prefixed with an underscore like Sass partials are. In Atomic Docs,
-    at least for the moment, all
-    partials are created with the underscore whether Sass, Less or Stylus. If this doesn't make you sad everything
-    should work fine.</p>
+    at least for the moment, all partials are created with the underscore whether Sass, Less or Stylus. Everything still works as it should though, so if the underscores don't bother you, you're good to go.</p>
 
 <h2>Steps</h2>
 
@@ -167,23 +164,24 @@
     extension instead <span class="highLight">less</span> as shown in the example.</p>
 
 <ul>
-    <li> open up atomic-config.php and change <span class="highLight">$config['preCssDir']</span> to equal <span
+    <li>The first thing you'll need to do is go to <span class="highLight">http://localhost/atomic-docs/atomic-core/</span> and use the <span class="highLight">+ Add / Delete Category</span> link to remove the modules and box component example. Since the example is in Sass you will encounter issues later if you are working with Less or Stylus.</li>
+    <li> Open up atomic-config.php in the root and change <span class="highLight">$config['preCssDir']</span> to equal <span
             class="highLight">less</span>. Also change <span class="highLight">$config['preCssExt']</span> to equal <span
             class="highLight">less</span> (you can name this whatever you want actually).
-<pre><code class="language-php">
-    <script>
-        function getConfig() {
-            $config = array();
-            $config['dir'] = dirname(__FILE__);
-            //user defined varibales
-            $config['preCssDir'] = 'less'; //Scss preprocessor directory name. E.G sass, less
-            $config['preCssExt'] = 'less'; //prerocessed file ext. E.G. scss, sass, less
-            $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
-            return $config;
-        }
-    </script>
+<pre><code class="language-php"><script>
+function getConfig() {
+    $config = array();
+    $config['dir'] = dirname(__FILE__);
+    //user defined varibales
+    $config['preCssDir'] = 'less'; //Scss preprocessor directory name. E.G sass, less
+    $config['preCssExt'] = 'less'; //prerocessed file ext. E.G. scss, sass, less
+    $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
+    return $config;
+}
+</script>
 </code></pre>
     </li>
+    <li>Set up your pre-processor and start creating your categories and components at <span class="highLight">http://localhost/atomic-docs/atomic-core/</span>.</li>
 </ul>
 
 
