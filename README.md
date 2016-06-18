@@ -1,4 +1,7 @@
 # Atomic Docs
+
+Atomic docs started as an internal tool and has be oieced together over the years often without best development practices in mind. Since there seems to be interest in Atomic Docs I will be refactoring the code. I am currently looking for PHP dev contributors to help in this process as my development skills are mainly frontend.
+
 Atomic Docs is a front end style guide generator and component manager. Atomic Docs is built in PHP and Sass. Inspired by Brad Frost's Atomic Design principles.
 
 Atomic docs works with Sass, Less and Stylus. 
