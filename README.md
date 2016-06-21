@@ -6,7 +6,7 @@ Atomic Docs is a front end style guide generator and component manager. Atomic D
 
 Atomic Docs works with Sass, Less and Stylus.
 
-Documentaion can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>.
+Documentation can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>.
 
 <img src="http://atomicdocs.io/img/demo1.gif" alt="atomic docs gif" />
 
@@ -17,7 +17,7 @@ Documentaion can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>.
 3. Go to `http://localhost/atomic-docs/atomic-core/index.php` and get started.
 
 ##Document
-Have full documentaion to hand off to other teams, internal or external.
+Have full documentation to hand off to other teams, internal or external.
 
 <img src="http://atomicdocs.io/img/document.png" />
 
@@ -36,5 +36,5 @@ Does all the "wiring" of your SCSS partials. Never write `@import "partial-name"
 
 <img width="500" src="http://atomicdocs.io/img/helpful.png"/>
 
-Documentaion can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>.
+Documentation can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>.
 
