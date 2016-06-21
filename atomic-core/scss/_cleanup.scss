@@ -1,6 +1,6 @@
 body{
-  background:#FCFEFA;
-  color:#7A7A7A;
+  background: #FCFEFA;
+  color: #7A7A7A;
   font-family: $font1;
 }
 :not(pre) > code[class*="language-"],
@@ -26,17 +26,17 @@ pre[class*="language-"] {
 
 .compTitle-close{
   max-height: 0;
-  overflow: hidden;;
+  overflow: hidden;
 }
 
 .u-bgWhite{
-	background:#fff;
+	background: #fff;
 }
 
 .atoms-side_hide{
 	.fa{
-		margin:0 16px;
-		display:inline-block;
+		margin: 0 16px;
+		display: inline-block;
 	}
 	.fa-code{
 		font-weight: bold;
@@ -52,25 +52,25 @@ pre[class*="language-"] {
 
 
 .component{/* .component-hasBg */
-  padding:20px;
+  padding: 20px;
 }
 
 
 
 .bgColorWrap{
-  margin-bottom:12px; 
+  margin-bottom: 12px; 
 }
 
 .sp-replacer{
-	background-color:#fff;
+	background-color: #fff;
 	border: none;
 }
 .sp-preview .sp-clear-display{
- background-image:none;  
+ background-image: none;  
 }
 
 .language-css{
-  position:relative; 
+  position: relative; 
 }
 
 .atoms-overflow{
