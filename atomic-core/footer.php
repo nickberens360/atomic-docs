@@ -3,7 +3,15 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+<script src="atomic-core/js/src-min/ace.js"></script>
+
+<script>
+	var editor = ace.edit("editor");
+	editor.getSession().setMode("ace/mode/html");
+</script>
+
 <script src="atomic-core/js/min/compiled.min.js"></script>
+
 <?php
 			$filename = '../atomic-foot.php';
 			if (file_exists($filename)) {

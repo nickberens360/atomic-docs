@@ -5,16 +5,16 @@
         "comp_context_color": "",
         "comp_markup_path": "../components/modules/box.php",
         "comp_styles_path": "../scss/modules/_box.scss",
-        "comp_category": "molecules",
-        "comp_sort_order": "30"
+        "comp_category": "atoms",
+        "comp_sort_order": "10"
     },
     {
-        "comp_name": "Test",
+        "comp_name": "test",
         "comp_notes": "Test notes",
         "comp_context_color": "#ccc",
         "comp_markup_path": "../components/modules/box.php",
         "comp_styles_path": "../scss/modules/_box.scss",
-        "comp_category": "molecules",
+        "comp_category": "atoms",
         "comp_sort_order": "20"
     }
 ]
