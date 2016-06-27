@@ -6,7 +6,7 @@
         "comp_markup_path": "../components/modules/box.php",
         "comp_styles_path": "../scss/modules/_box.scss",
         "comp_category": "molecules",
-        "comp_sort_order": "10"
+        "comp_sort_order": "30"
     },
     {
         "comp_name": "Test",
