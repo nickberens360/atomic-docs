@@ -7,7 +7,7 @@
 <?php
 			$filename = '../atomic-foot.php';
 			if (file_exists($filename)) {
-			    include ("../atomic-foot.php"); 
+			    include ("../atomic-foot.php");
 			}
 		?>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>-->

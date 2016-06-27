@@ -1,48 +1,118 @@
-<?php include ("head.php");?>
-<body class="atoms">
+<?php include("head.php"); ?>
+    <body class="atoms">
 
 
 <div class="grid-row atoms-container">
-	<?php include ("sidebar.php");?>
-	
+    <div class="atoms-side_show-small ">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+    <div class="atoms-side_show ">
+        <span class="js-showSide fa fa-arrow-right"></span>
+    </div>
+    <aside class="atoms-side">
+        <div class="atoms-overflow">
 
-	
-	<div class="atoms-main">
+            <div class="atoms-side_hide">
+                <span class="js-hideSide fa fa-arrow-left"></span>
+                <span class="js-hideTitle fa fa-header"></span>
+                <span class="js-hideNotes fa fa-paragraph"></span>
+                <span class="js-hideCode fa fa-code"></span>
+            </div>
 
-	
-	<?php /*?><?php echo ROOT_PATH; ?><?php */?>
-		<!--<div class="docBlock">
-			<h1 class="docBlock-heading">Welcome!</h1>
-			<p>Atomic Docs is made for <a href="https://www.previousnext.com.au/blog/style-guide-driven-development-new-web-development">styleguide driven development</a>.</p>
-			<p>Requirements: A local PHP enviornment. And a CSS preprocessor.<p> 
-			
-			<ol class="docBlock-ul">
-				<li>Set up your CSS preprocessor of choice. As expected we will be processing from our SCSS directory to the CSS directory.</li>
-				<li>In the lower left hand corner, open the "Manage Categories" form. In the create category field we will create a new component category. In a nod to <a href="http://atomicdesign.bradfrost.com/"> Brad Frost</a>, I'll call this one "molecules".
-					<img class="docBlock-img" src="atomic-core/img/doc1.png" />
-				</li>
-				<li>Click on the newly created molecules link in the sidebar to go to the molecules page. In the form below the molecules link let's create a new component called "calloutBox".
-					<img class="docBlock-img" src="atomic-core/img/doc2.png" />
-				</li>
-				<li>So next we'll create the HTML for the calloutBox component. In the project directory you'll notice a folder named "compontents". Open that and you'll find the folder molecules. This is the directory that all of the HTML component files you create under the molecules category will be located. Let's open the file "calloutBox.php" and put some HTML code there.
-                    <img class="docBlock-img" src="atomic-core/img/doc3.png" />
-				</li>
-				<li>Back in our projects directory open up the SCSS folder. You will see the folder molecules and within molecules is the the newly created _calloutBox.scss file. This of course is where we'll put our styles for the calloutBox component. As a side note, atomic-docs handles wiring up all of the scss "@import" strings. Even if I'm not creating a style guide this feature is sooo time saving.
-                   <img class="docBlock-img" src="atomic-core/img/doc4.png" />
-				</li>
-				<li>Now back to our project in the browser. Click on the molecules link in the sidebar and you'll see our newly created component.
-                    <img class="docBlock-img docBlock-img__big" src="atomic-core/img/doc5.png" />
-				</li>
-				<li>And that's it!</li>
-			</ol>
-		</div>-->
+            <nav>
+                <ul class="atoms-nav">
 
-	</div>
+                    <li class="aa_dir ">
+                        <div class="aa_dir__dirNameGroup">
+                            <i class="aa_dir__dirNameGroup__icon  fa fa-folder-o"></i>
+                            <a class="aa_dir__dirNameGroup__name" href="atomic-core/modules.php">modules</a>
+                        </div>
+                        <ul class="aa_fileSection">
+                            <li class="aa_addFileItem">
+                                <a class="aa_addFile aa_js-actionOpen aa_actionBtn"
+                                   href="atomic-core/categories/modules/form-modules.php"><span
+                                        class="fa fa-plus"></span> Add Component</a>
+                            </li>
+                            <li class="aa_fileSection__file"><a
+                                    class="aa_js-actionOpen aa_actionBtn fa fa-pencil-square-o"
+                                    href="atomic-core/categories/modules/form-box.php"></a><a
+                                    href="atomic-core/modules.php#box">box</a></li>
+                        </ul>
+                    </li>
+                    <li class="catAdd"><a class="aa_js-actionOpen aa_actionBtn"
+                                          href="atomic-core/categories/_catActions.php"><span
+                                class="fa fa-plus"></span> Add / Delete Category</a></li>
+                </ul>
+
+            </nav>
+
+
+        </div>
+
+        <div class="cat-form js-showContent"></div>
+
+
+    </aside>
+
+
+    <div class="atoms-main">
+        <h1 id="modules" class="atomic-h1">modules</h1>
+
+
+
+        <?php
+        require "fllat.php";
+        $appdb = new Fllat("appdb");
+
+
+
+        $data = $appdb -> select(array());
+
+        usort($data , function($a, $b) {
+            return $a['comp_sort_order'] - $b['comp_sort_order'];
+        });
+
+        ?>
+
+        <?php foreach ($data as $value) { ?>
+
+
+
+
+
+
+        <div class="compWrap"><span id="<?php echo $value['comp_name'] ?>" class="compTitle"><?php echo $value['comp_name'] ?> <span class="js-hideAll fa fa-eye"></span></span>
+            <p class="compNotes"><?php echo $value['comp_notes'] ?> </p>
+            <div class="component" style="background-color:<?php echo $value['comp_context_color'] ?>"><?php include($value['comp_markup_path']); ?></div>
+            <div class="compCodeBox">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#<?php echo $value['comp_name'] ?>-markup" aria-controls="box-markup" role="tab"
+                                                              data-toggle="tab">Markup</a></li>
+                    <li role="presentation"><a href="#<?php echo $value['comp_name'] ?>-css" aria-controls="box-css" role="tab"
+                                               data-toggle="tab">scss</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active markup-display" id="<?php echo $value['comp_name'] ?>-markup"></div>
+                    <div role="tabpanel" class="tab-pane" id="<?php echo $value['comp_name'] ?>-css">
+                        <pre><code class="language-css"><?php include($value['comp_styles_path']); ?></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <?php } ?>
+
+
+
+
+    </div>
 </div>
 <div class="aa_js-actionDrawer aa_actionDrawer">
-  <div class="aa_actionDrawer__wrap">
-	  <div class="aa_js-actionClose aa_actionDrawer__close"><i class="fa fa-times fa-3x"></i></div>
-	  <div id="js_actionDrawer__content" class="actionDrawer__content"></div>
-  </div>
+    <div class="aa_actionDrawer__wrap">
+        <div class="aa_js-actionClose aa_actionDrawer__close"><i class="fa fa-times fa-3x"></i></div>
+        <div id="js_actionDrawer__content" class="actionDrawer__content"></div>
+    </div>
 </div>
-<?php include ("footer.php");?>
+<?php include("footer.php"); ?>
