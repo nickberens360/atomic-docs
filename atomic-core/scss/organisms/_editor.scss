@@ -1,4 +1,13 @@
-.editor {
-  width: 100%;
-  margin: 0;
+.atomic-editorWrap{
+  padding:20px 0;
+  background-color: #e2f3f5;
+  font-size:16px;
+}
+.ace-tm {
+  background-color: #e2f3f5;
+  font-size: 15px;
+}
+.ace-tm .ace_gutter {
+  background: #e2f3f5;
+  color: #8e8e8e;
 }

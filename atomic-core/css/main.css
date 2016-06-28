@@ -1914,9 +1914,18 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   text-decoration: none;
   font-size: 14px;
 }
-.atomsWrap .editor {
-  width: 100%;
-  margin: 0;
+.atomsWrap .atomic-editorWrap {
+  padding: 20px 0;
+  background-color: #e2f3f5;
+  font-size: 16px;
+}
+.atomsWrap .ace-tm {
+  background-color: #e2f3f5;
+  font-size: 15px;
+}
+.atomsWrap .ace-tm .ace_gutter {
+  background: #e2f3f5;
+  color: #8e8e8e;
 }
 .atomsWrap body {
   background: #FCFEFA;

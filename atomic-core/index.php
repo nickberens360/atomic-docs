@@ -145,15 +145,17 @@ $cat_data = $catdb->select(array());
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="<?php echo $comp_value['comp_name'] ?>-markup-tab"">
                             <?php $markup_file_content = file_get_contents($comp_value['comp_markup_path'], true); ?>
-                            <div class="editorWrap">
-                                <div class="editor" id="editor-markup-<?php echo $comp_value['comp_name'] ?>"><script> <?php echo $markup_file_content; ?></script></div>
-                            </div>
+                            <form class="atomic-editorWrap">
+                                <div class="atomic-editor" id="editor-markup-<?php echo $comp_value['comp_name'] ?>"><script> <?php echo $markup_file_content; ?></script></div>
+                                <input class="new-val-input" type="hidden" name="new-markup-val" value="" />
+                            </form>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="<?php echo $comp_value['comp_name'] ?>-styles-tab">
                             <?php $styles_file_content = file_get_contents($comp_value['comp_styles_path'], true); ?>
-                            <div class="editorWrap">
-                                <div class="editor" id="editor-styles-<?php echo $comp_value['comp_name'] ?>"><script> <?php echo $styles_file_content; ?></script></div>
-                            </div>
+                            <form class="atomic-editorWrap">
+                                <div class="atomic-editor" id="editor-styles-<?php echo $comp_value['comp_name'] ?>"><script> <?php echo $styles_file_content; ?></script></div>
+                                <input type="hidden" name="new-styles-val" value="" />
+                            </form>
                         </div>
                     </div>
 
