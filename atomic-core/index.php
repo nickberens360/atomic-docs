@@ -88,11 +88,11 @@ $cat_data = $catdb->select(array());
     <div class="atoms-main">
         <h1 id="modules" class="atomic-h1"><?php echo $_GET['cat'];?></h1>
 
-        
+
 
 
         <style>
-            #editor {
+            .editor {
                 margin-left: 15px;
                 margin-top: 15px;
                 width: 1000px;
@@ -101,18 +101,12 @@ $cat_data = $catdb->select(array());
         </style>
 
 
-<?php $file = file_get_contents('../components/modules/box.php', true); ?>
-<div id="editor"><script>
-<?php echo $file; ?>
-</script></div>
+
 
 
             <?php
-
                 $cat = $_GET['cat'];
-
                 global $cat;
-
                 $comp_data = array_filter($comp_data, function($v) {
                     global $cat;
                     return $v['comp_category'] == $cat;});
@@ -145,6 +139,12 @@ $cat_data = $catdb->select(array());
                         </div>
                     </div>
                 </div>
+
+                <?php $file = file_get_contents($comp_value['comp_markup_path'], true); ?>
+                <div class="editor" id="editor-<?php echo $comp_value['comp_name'] ?>"><script> <?php echo $file; ?></script></div>
+
+
+
             </div>
 
         <?php } ?>

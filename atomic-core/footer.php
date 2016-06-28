@@ -5,7 +5,7 @@
 <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
 <script src="atomic-core/js/src-min/ace.js"></script>
 
-<!-- <php $file = file_get_contents('../components/modules/box.php', FILE_USE_INCLUDE_PATH); 
+<!-- <php $file = file_get_contents('../components/modules/box.php', FILE_USE_INCLUDE_PATH);
 ehco $file;
 echo "testing";
 ?> -->
@@ -18,13 +18,24 @@ echo "testing";
 
 
 
-
+<?php
+$cat = $_GET['cat'];
+global $cat;
+$comp_data = array_filter($comp_data, function($v) {
+    global $cat;
+    return $v['comp_category'] == $cat;});
+usort($comp_data , function($a, $b) {
+    return $a['comp_sort_order'] - $b['comp_sort_order'];
+});
+foreach ($comp_data as $comp_value) {
+?>
 <script>
-	var editor = ace.edit("editor");
+	var editor = ace.edit("editor-<?php echo $comp_value['comp_name'] ?>");
 	var code = editor.getValue();
 	console.log(code);
 	editor.getSession().setMode("ace/mode/html");
 </script>
+<?php } ?>
 
 <script src="atomic-core/js/min/compiled.min.js"></script>
 
