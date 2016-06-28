@@ -91,14 +91,7 @@ $cat_data = $catdb->select(array());
 
 
 
-        <style>
-            .editor {
-                margin-left: 15px;
-                margin-top: 15px;
-                width: 1000px;
-                height: 400px;
-            }
-        </style>
+
 
 
 
@@ -122,26 +115,52 @@ $cat_data = $catdb->select(array());
                 <p class="compNotes"><?php echo $comp_value['comp_notes'] ?> </p>
                 <div class="component"
                      style="background-color:<?php echo $comp_value['comp_context_color'] ?>"><?php include($comp_value['comp_markup_path']); ?></div>
-                <div class="compCodeBox">
+                <!--<div class="compCodeBox">
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#<?php echo $comp_value['comp_name'] ?>-markup"
+                        <li role="presentation" class="active"><a href="#<?php /*echo $comp_value['comp_name'] */?>-markup"
                                                                   aria-controls="box-markup" role="tab"
                                                                   data-toggle="tab">Markup</a></li>
-                        <li role="presentation"><a href="#<?php echo $comp_value['comp_name'] ?>-css" aria-controls="box-css"
+                        <li role="presentation"><a href="#<?php /*echo $comp_value['comp_name'] */?>-css" aria-controls="box-css"
                                                    role="tab"
                                                    data-toggle="tab">scss</a></li>
                     </ul>
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active markup-display"
-                             id="<?php echo $comp_value['comp_name'] ?>-markup"></div>
-                        <div role="tabpanel" class="tab-pane" id="<?php echo $comp_value['comp_name'] ?>-css">
-                            <pre><code class="language-css"><?php include($comp_value['comp_styles_path']); ?></code></pre>
+                             id="<?php /*echo $comp_value['comp_name'] */?>-markup"></div>
+                        <div role="tabpanel" class="tab-pane" id="<?php /*echo $comp_value['comp_name'] */?>-css">
+                            <pre><code class="language-css"><?php /*include($comp_value['comp_styles_path']); */?></code></pre>
                         </div>
                     </div>
+                </div>-->
+
+                <div>
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#<?php echo $comp_value['comp_name'] ?>-markup-tab" aria-controls="home" role="tab" data-toggle="tab">Markup</a></li>
+                        <li role="presentation"><a href="#<?php echo $comp_value['comp_name'] ?>-styles-tab" aria-controls="profile" role="tab" data-toggle="tab">Styles</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="<?php echo $comp_value['comp_name'] ?>-markup-tab"">
+                            <?php $markup_file_content = file_get_contents($comp_value['comp_markup_path'], true); ?>
+                            <div class="editorWrap">
+                                <div class="editor" id="editor-markup-<?php echo $comp_value['comp_name'] ?>"><script> <?php echo $markup_file_content; ?></script></div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="<?php echo $comp_value['comp_name'] ?>-styles-tab">
+                            <?php $styles_file_content = file_get_contents($comp_value['comp_styles_path'], true); ?>
+                            <div class="editorWrap">
+                                <div class="editor" id="editor-styles-<?php echo $comp_value['comp_name'] ?>"><script> <?php echo $styles_file_content; ?></script></div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <?php $file = file_get_contents($comp_value['comp_markup_path'], true); ?>
-                <div class="editor" id="editor-<?php echo $comp_value['comp_name'] ?>"><script> <?php echo $file; ?></script></div>
+
+
 
 
 

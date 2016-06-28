@@ -30,11 +30,25 @@ usort($comp_data , function($a, $b) {
 foreach ($comp_data as $comp_value) {
 ?>
 <script>
-	var editor = ace.edit("editor-<?php echo $comp_value['comp_name'] ?>");
+	var editor = ace.edit("editor-markup-<?php echo $comp_value['comp_name'] ?>");
 	var code = editor.getValue();
 	console.log(code);
 	editor.getSession().setMode("ace/mode/html");
+	editor.setOptions({
+		maxLines: Infinity
+	});
+	editor.setHighlightActiveLine(false);
 </script>
+	<script>
+		var editor = ace.edit("editor-styles-<?php echo $comp_value['comp_name'] ?>");
+		var code = editor.getValue();
+		console.log(code);
+		editor.getSession().setMode("ace/mode/scss");
+		editor.setOptions({
+			maxLines: Infinity
+		});
+		editor.setHighlightActiveLine(false);
+	</script>
 <?php } ?>
 
 <script src="atomic-core/js/min/compiled.min.js"></script>
