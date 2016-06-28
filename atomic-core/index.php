@@ -88,6 +88,8 @@ $cat_data = $catdb->select(array());
     <div class="atoms-main">
         <h1 id="modules" class="atomic-h1"><?php echo $_GET['cat'];?></h1>
 
+        
+
 
         <style>
             #editor {
@@ -99,8 +101,9 @@ $cat_data = $catdb->select(array());
         </style>
 
 
-<div id="editor"><script><!--components/modules/box.php-->
-<div class="box">Box</div>
+<?php $file = file_get_contents('../components/modules/box.php', true); ?>
+<div id="editor"><script>
+<?php echo $file; ?>
 </script></div>
 
 
