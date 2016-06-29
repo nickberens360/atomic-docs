@@ -13,7 +13,21 @@ echo "testing";
 
 
 
+<script>
+$(document).ready(function() {
 
+    
+
+
+$( ".ace_content" ).click(function() {
+  $(this).closest('.atomic-editorWrap').addClass('atomic-editorWrap-active');
+});
+
+});
+
+
+
+</script>
 
 
 
