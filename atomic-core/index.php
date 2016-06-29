@@ -103,9 +103,9 @@ $cat_data = $catdb->select(array());
             ?>
 
             <div id="<?php echo $comp_value['comp_name'] ?>-container" class="compWrap"><span id="<?php echo $comp_value['comp_name'] ?>"
-                                        class="compTitle"><?php echo $comp_value['comp_name'] ?> <span
+                                        class="compTitle atomic-editable-input"><?php echo $comp_value['comp_name'] ?> <span
                         class="js-hideAll fa fa-eye"></span></span>
-                <p class="compNotes"><?php echo $comp_value['comp_notes'] ?> </p>
+                <p class="compNotes atomic-editable"><?php echo $comp_value['comp_notes'] ?> </p>
                 <div class="component"
                      style="background-color:<?php echo $comp_value['comp_context_color'] ?>"><?php include($comp_value['comp_markup_path']); ?></div>
 
@@ -180,7 +180,6 @@ $cat_data = $catdb->select(array());
 
 
 
-
             </div>
 
         <?php } ?>
@@ -198,3 +197,40 @@ $cat_data = $catdb->select(array());
     </div>
 </div>
 <?php include("footer.php"); ?>
+
+
+
+<style>
+    .atomic-form{
+        background: #a6d4da;
+        max-width:500px;
+        padding:10px;
+    }
+    .textChange{
+        width:100%;
+        border:none;
+        font-size: 13px;
+        color: #7A7A7A;
+        margin-bottom:0;
+    }
+    textarea.textChange{
+        height:200px;
+        padding:10px;
+    }
+    .atomic-form-input.textChange{
+        padding:10px;
+    }
+    .atomic-form-footer{
+        text-align: right;
+        padding-top:5px;
+    }
+    .atomic-form-footer .atomic-btns{
+        margin-right:10px;
+        display:inline-block;
+    }
+</style>
+
+
+
+
+
