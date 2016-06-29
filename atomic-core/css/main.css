@@ -2271,7 +2271,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 /* line 77, organisms/_editor.scss */
 .atomsWrap .atomic-editor-footer {
-  background: #eee;
+  background: #a6d4da;
   padding: 15px 30px;
   text-align: right;
   position: absolute;
@@ -2281,20 +2281,20 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   top: 0;
   z-index: -1;
 }
-/* line 89, organisms/_editor.scss */
+/* line 90, organisms/_editor.scss */
 .atomsWrap .atomic-editorWrap-active {
   margin-bottom: 95px;
 }
-/* line 91, organisms/_editor.scss */
+/* line 92, organisms/_editor.scss */
 .atomsWrap .atomic-editorWrap-active .atomic-editor-footer {
   top: 100%;
   z-index: 1;
 }
-/* line 95, organisms/_editor.scss */
+/* line 96, organisms/_editor.scss */
 .atomsWrap .atomic-editorWrap-active .ace-tm .ace_gutter {
   left: 0;
 }
-/* line 98, organisms/_editor.scss */
+/* line 99, organisms/_editor.scss */
 .atomsWrap .atomic-editorWrap-active .ace_scroller {
   left: 43px !important;
 }
