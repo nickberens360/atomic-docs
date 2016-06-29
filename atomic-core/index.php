@@ -90,13 +90,6 @@ $cat_data = $catdb->select(array());
 
 
 
-
-
-
-
-
-
-
             <?php
                 $cat = $_GET['cat'];
                 global $cat;
@@ -109,12 +102,13 @@ $cat_data = $catdb->select(array());
                foreach ($comp_data as $comp_value) {
             ?>
 
-            <div class="compWrap"><span id="<?php echo $comp_value['comp_name'] ?>"
+            <div id="<?php echo $comp_value['comp_name'] ?>-container" class="compWrap"><span id="<?php echo $comp_value['comp_name'] ?>"
                                         class="compTitle"><?php echo $comp_value['comp_name'] ?> <span
                         class="js-hideAll fa fa-eye"></span></span>
                 <p class="compNotes"><?php echo $comp_value['comp_notes'] ?> </p>
                 <div class="component"
                      style="background-color:<?php echo $comp_value['comp_context_color'] ?>"><?php include($comp_value['comp_markup_path']); ?></div>
+
                 <!--<div class="compCodeBox">
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#<?php /*echo $comp_value['comp_name'] */?>-markup"
@@ -147,6 +141,11 @@ $cat_data = $catdb->select(array());
                             <?php $markup_file_content = file_get_contents($comp_value['comp_markup_path'], true); ?>
                             <form class="atomic-editorWrap">
                                 <div class="atomic-editorInner">
+
+
+                                    <div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
+
+
                                     <div class="atomic-editor" id="editor-markup-<?php echo $comp_value['comp_name'] ?>"><script><?php echo $markup_file_content; ?></script></div>
                                     <input class="new-val-input" type="hidden" name="new-markup-val" value="" />
                                 </div>
@@ -161,6 +160,9 @@ $cat_data = $catdb->select(array());
                             <?php $styles_file_content = file_get_contents($comp_value['comp_styles_path'], true); ?>
                             <form class="atomic-editorWrap">
                                 <div class="atomic-editorInner">
+
+                                    <div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
+
                                     <div class="atomic-editor" id="editor-styles-<?php echo $comp_value['comp_name'] ?>"><script><?php echo $styles_file_content; ?></script></div>
                                     <input type="hidden" name="new-styles-val" value="" />
                                 </div>

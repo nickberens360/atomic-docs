@@ -2410,16 +2410,16 @@ $comp.wrapInner( '<div class="source"></div>');
 //$('#home').wrap( "<div class='atoms-group'></div>" );
 
 $('.markup-display').append( '<div class="atoms-code-example"><pre><code class="dest language-markup"></code></pre></div>' );
-	
+
 var ls = $('.compWrap');
 ls.each(function() {
-	
+
 var source =	$(this).find('.source').html();
 var dest = 		$(this).find('.dest')
 
 dest.text(source);
 
-});	
+});
 
 $(document).ready(function () {
     $('.dest').each(function () {
@@ -2432,8 +2432,8 @@ $(document).ready(function () {
             .insertBefore(this); // insert copy button before <pre>
         new ZeroClipboard($copyBtn);
     });
-    
-    
+
+
     $('.language-css').each(function () {
         // Get the text to be copied to the clipboard
         var text = $(this).text().replace(/\/\*(.*?)\*\//g, '');
@@ -7151,6 +7151,8 @@ $(document).ready(function() {
             link = $this.attr('href');
         $this.attr('href', pathname + link);
     });
+
+
 });
 
 
@@ -7856,27 +7858,27 @@ $('.catAdd .aa_actionBtn').click(function (event) {
 // JavaScript Document
 
 $(".js-hideAll").on('click', function(event) {
-    
-    
-   
-    
-if($('.atomic-h1').css('opacity') == '0'){ 
-      
+
+
+
+
+if($('.atomic-h1').css('opacity') == '0'){
+
       $(this).css('color','#00AFF0');
-      
-      
+
+
       $('.compWrap').velocity({
           opacity: "1",
       }, {
           duration: 200
       });
-      
+
       $('.compNotes').not($thisComp).velocity({
         opacity: "1",
     }, {
         duration: 200
     });
-      
+
       $('.atoms-side').velocity({
           opacity: "1",
       }, {
@@ -7897,32 +7899,32 @@ if($('.atomic-h1').css('opacity') == '0'){
       }, {
           duration: 200
       });
-  } else { 
-  
+  } else {
+
      $(this).css('color','#EB6565');
      $thisComp = $(this).closest('.compWrap');
-     
-    
-    
+
+
+
     $('.compWrap').not($thisComp).velocity({
         opacity: "0",
     }, {
         duration: 200
     });
-    
+
     $('.compNotes').not($thisComp).velocity({
         opacity: "0",
     }, {
         duration: 200
     });
 
-    
+
     $('.atoms-side_show').velocity({
         opacity: "0",
     }, {
         duration: 0
     });
-    
+
     $('.atoms-side').velocity({
         opacity: "0",
     }, {
@@ -7938,9 +7940,12 @@ if($('.atomic-h1').css('opacity') == '0'){
     }, {
         duration: 200
     });
-    
+
   }
 });
+
+
+
 if ($(".atoms-code-example")[0]){
     $(".js-hideCode").on('click', function(event) {
       if($('.compCodeBox').css('opacity') == '0'){ 

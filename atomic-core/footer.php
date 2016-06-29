@@ -4,11 +4,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
 <script src="atomic-core/js/src-min/ace.js"></script>
-
-<!-- <php $file = file_get_contents('../components/modules/box.php', FILE_USE_INCLUDE_PATH);
-ehco $file;
-echo "testing";
-?> -->
+<script src="atomic-core/zero/ZeroClipboard.js"></script>
 
 
 
@@ -16,7 +12,7 @@ echo "testing";
 <script>
 $(document).ready(function() {
 
-   
+
 
 
 	$( ".ace_content" ).click(function() {
@@ -44,6 +40,7 @@ $(document).mouseup(function (e)
 
 
 
+
 </script>
 
 
@@ -65,9 +62,17 @@ foreach ($comp_data as $comp_value) {
 
 
 <script>
+
 	var editor = ace.edit("editor-markup-<?php echo $comp_value['comp_name'] ?>");
 	var code = editor.getValue();
-	//console.log(code);
+
+
+	var code = code.replace(/<!--(.*?)-->/g, '');
+	var code = code.trim();
+
+	$('#<?php echo $comp_value['comp_name'] ?>-container').find(".copyBtn-markup").attr('data-clipboard-text', code);
+	new ZeroClipboard($('.copyBtn-markup'));
+
 	editor.getSession().setMode("ace/mode/html");
 	editor.setOptions({
 		maxLines: Infinity
@@ -78,7 +83,13 @@ foreach ($comp_data as $comp_value) {
 	<script>
 		var editor = ace.edit("editor-styles-<?php echo $comp_value['comp_name'] ?>");
 		var code = editor.getValue();
-		//console.log(code);
+
+		var code = code.replace(/\/\*(.*?)\*\//g, '');
+		var code = code.trim();
+
+		$('#<?php echo $comp_value['comp_name'] ?>-container').find(".copyBtn-styles").attr('data-clipboard-text', code);
+		new ZeroClipboard($('.copyBtn-styles'));
+
 		editor.getSession().setMode("ace/mode/scss");
 		editor.setOptions({
 			maxLines: Infinity
@@ -96,8 +107,6 @@ foreach ($comp_data as $comp_value) {
 			    include ("../atomic-foot.php");
 			}
 		?>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>-->
-<script src="atomic-core/zero/ZeroClipboard.js"></script>
 
 
 
