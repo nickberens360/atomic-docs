@@ -20,10 +20,20 @@
 	text-shadow: 0 1px white;
 	font-family: Consolas, Monaco, 'Andale Mono', monospace;
 }
+
+
+
+
 .ace-tm .ace_gutter {
   background: #e2f3f5;
   color: #8e8e8e;
+  left:-100%;
+  transition:all .25s;
 }
+
+.ace_hidden-cursors {opacity:0} 
+
+
 .ace-tm .ace_comment {
     color: rgb(160, 160, 160);
 }
@@ -62,10 +72,13 @@
 
 
 .atomic-editorWrap-active{
-	    margin-bottom: 95px;
+	margin-bottom: 95px;
 	.atomic-editor-footer{
 		top:100%;
 		z-index: 1;
+	}
+	.ace-tm .ace_gutter {
+	  left:0;
 	}
 }
 
