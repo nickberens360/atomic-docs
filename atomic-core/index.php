@@ -106,8 +106,9 @@ $cat_data = $catdb->select(array());
                                         class="compTitle atomic-editable-input"><?php echo $comp_value['comp_name'] ?> <span
                         class="js-hideAll fa fa-eye"></span></span>
                 <p class="compNotes atomic-editable"><?php echo $comp_value['comp_notes'] ?> </p>
-                <div class="component"
-                     style="background-color:<?php echo $comp_value['comp_context_color'] ?>"><?php include($comp_value['comp_markup_path']); ?></div>
+                <div class="component">
+                  <iframe id="snippet-viewport" src="/atomic-core/snippet.php?comp-name=<?php echo $comp_value['comp_name'] ?>" sandbox="allow-same-origin allow-scripts"></iframe>
+                </div>
 
                 <!--<div class="compCodeBox">
                     <ul class="nav nav-tabs" role="tablist">
@@ -228,9 +229,14 @@ $cat_data = $catdb->select(array());
         margin-right:10px;
         display:inline-block;
     }
+    #snippet-viewport {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    }
 </style>
-
-
-
-
-
