@@ -5,6 +5,8 @@ var order = require("gulp-order");
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var gulpRelease = require('gulp-release-tasks')(gulp);
+
 
 
 gulp.task('styles', function() {
