@@ -11,24 +11,13 @@
 			<?php
 				$orig = "../components/modules";
 				if ($dir = opendir($orig)) {
-				while ($file = readdir($dir)) {
-				$ok = "true";	
-				$filename = $file;
-				$filename = basename($filename, ".php");
-				if ($file == "."){
-				$ok = "false";
-				}
-				else if ($file == ".."){
-				$ok = "false";	
-				}
-				if ($ok == "true"){
-					
-				$filename = str_replace(".php", "", $filename );
-
-				echo "<li class='aa_fileSection__file'><a class='aa_js-actionOpen aa_actionBtn fa fa-pencil-square-o' href='atomic-core/categories/modules/form-$filename.php'></a><a href='atomic-core/modules.php#$filename'>$filename</a></li>";
-				}
-				}
-				closedir($dir);
+					while ($file = readdir($dir)) {
+						$filename = basename($file, '.php');
+						if ($file != '.' && $file != '..') {
+							echo "<li class='aa_fileSection__file'><a class='aa_js-actionOpen aa_actionBtn fa fa-pencil-square-o' href='atomic-core/categories/modules/form-$filename.php'></a><a href='atomic-core/modules.php#$filename'>$filename</a></li>";
+						}
+					}
+					closedir($dir);
 				}
 			?>
 		</ul>
