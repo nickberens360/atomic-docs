@@ -30,7 +30,7 @@ $comp_data = $compdb->where(array(),"comp_name", $_GET["comp-name"]);
     <!-- Custom css for every snippet. -->
     <style type="text/css">
         body, html { overflow: hidden}
-        #snippet { padding: 1px 0}
+        #patialr { padding: 1px 0}
     </style>
 
     <!-- Insert your CSS resources here. -->
@@ -38,13 +38,13 @@ $comp_data = $compdb->where(array(),"comp_name", $_GET["comp-name"]);
 
 <?php if(!empty($comp_data) && !empty($comp_data[0]['comp_markup_path'])) { ?>
 <body style="background-color:<?php echo $comp_data[0]['comp_context_color'] ?>">
-    <div id="snippet">
+    <div id="partial">
       <?php require $comp_data[0]['comp_markup_path']; ?>
     </div>
 </body>
 
 <?php } else { ?>
   <body>
-    Component not found
+    Partial not found
   </body>
 <?php } ?>
