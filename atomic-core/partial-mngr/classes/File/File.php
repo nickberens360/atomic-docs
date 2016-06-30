@@ -32,6 +32,10 @@ class File extends Atomic {
 		$this->data = array();
 	}
 
+	public function pathPhp($component, $category = null) {
+		return parent::pathPhp($component, $category);
+	}
+
 	/**
 	 * Create a file
 	 *
@@ -41,7 +45,7 @@ class File extends Atomic {
 	 *
 	 * @return array
 	 */
-	function create($file, $content = '', $append = '') {
+	function createFile($file, $content = '', $append = '') {
 //		$file = $directory.'/'.'_'.$filename;
 		$valid = $this->validate($file);
 
@@ -64,7 +68,7 @@ class File extends Atomic {
 		}
 	}
 
-	function open($file) {
+	function openFile($file) {
 		return file_get_contents($file);
 	}
 
@@ -110,7 +114,7 @@ class File extends Atomic {
 	 *
 	 * @param $file Full path and filename of file to be removed
 	 */
-	function remove($file) {
+	function removeFile($file) {
 		unlink($file);
 	}
 	

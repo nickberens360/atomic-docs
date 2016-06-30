@@ -38,7 +38,7 @@ class FileScss extends File {
 		$mainBody = "\n\n." . $filename . " {\n\n}";
 		$content = $commentString . $mainBody;
 
-		$created = parent::create($fullFilePath, $content);
+		$created = parent::createFile($fullFilePath, $content);
 
 		if (!$created['status']) {
 			return $created;
@@ -77,13 +77,13 @@ class FileScss extends File {
 		$fullPath = $this->config['preCssDir'] . '/' . $directory;
 		$filename .= '.' . $this->config['preCssExt'];
 
-		parent::remove($fullPath . '/' . $filename);
+		parent::removeFile($fullPath . '/' . $filename);
 	}
 
 	public function open($component, $category) {
 		$path = $this->pathScss($component, $category);
 
-		return parent::open($path);
+		return parent::openFile($path);
 	}
 
 	/**

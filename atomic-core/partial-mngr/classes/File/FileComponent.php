@@ -27,21 +27,22 @@ class FileComponent extends File {
 		$fullFilePath = $fullPath .'/'. $filename;
 
 
-		$create = parent::create($fullFilePath, $content);
+		$create = parent::createFile($fullFilePath, $content);
 
 		return $create;
 	}
 
 	public function open($component, $category){
-		$path = $this->pathPhp($component, $category);
-		return parent::open($path);
+		$path = parent::pathPhp($component, $category);
+
+		return parent::openFile($path);
 	}
 
 	public function remove($filename, $directory){
 		$fullPath = $this->config['preCssDir'] . '/' . $directory;
 		$filename .= '.'. $this->config['preCssExt'];
 
-		parent::remove($fullPath.'/'.$filename);
+		parent::removeFile($fullPath.'/'.$filename);
 	}
 
 }
