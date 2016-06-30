@@ -1,0 +1,7 @@
+{
+    "name": "nickberens360/atomic-docs",
+    "description": "Front end code documentation generator.",
+    "type": "library",
+    "license": "ISC",
+    "require": {}
+}
