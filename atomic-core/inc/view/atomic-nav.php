@@ -73,7 +73,6 @@ $categories = $FllatCategory->select();
 
 foreach ($categories as $category) {
 	?>
-	}
 	<li class="aa_dir <?php if ($current_page == $category['category']) {
 		echo "active ";
 	} ?>">
