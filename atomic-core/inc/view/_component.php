@@ -8,7 +8,6 @@ $componentDB = $componentDB[0];
 $content = Atomic::receive('content');
 $category = Atomic::receive('category');
 
-//var_dump($componentDB, $componentDB['description']);
 ?>
 <div class="compWrap">
 	<span id="<?= $component; ?>" class="compTitle atomic-editable"><?= $component; ?> <span class="js-hideAll fa fa-eye"></span></span>
