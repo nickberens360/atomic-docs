@@ -6,7 +6,7 @@
  * Date: 6/17/16
  * Time: 2:07 PM
  */
-require_once 'File.php';
+require_once 'FileHelper.php';
 
 class FileComponent extends File {
 

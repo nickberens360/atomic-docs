@@ -6,7 +6,7 @@
  * Date: 6/17/16
  * Time: 11:19 AM
  */
-require_once 'File.php';
+require_once 'FileHelper.php';
 
 /**
  * Class FileScss

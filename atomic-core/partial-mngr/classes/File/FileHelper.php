@@ -33,6 +33,7 @@ class File extends Atomic {
 	}
 
 	public function pathPhp($component, $category = null) {
+		var_dump('here');
 		return parent::pathPhp($component, $category);
 	}
 
