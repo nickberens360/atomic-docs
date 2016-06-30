@@ -2,8 +2,8 @@
 	{
 		"component": "font",
 		"category": "atoms",
-		"description": "",
-		"backgroundColor": "",
+		"description": "This is the font description",
+		"backgroundColor": "#f00",
 		"order": 1
 	},
 	{

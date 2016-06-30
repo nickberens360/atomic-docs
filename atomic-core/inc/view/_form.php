@@ -19,7 +19,7 @@ if( $_GET['form'] === 'component-edit'){
 
 		<div class="inputGroup">
 			<label class="aa_label">What's your component's name?</label>
-			<input type="text" class="form-control" name="fileCreateName" value="<?= Atomic::getValue('component'); ?>">
+			<input type="text" class="form-control" name="fileCreateName" value="">
 		</div>
 		<label class="aa_label">Component description.</label>
 		<textarea class="form-control" name="compNotes"></textarea>

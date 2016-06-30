@@ -1,17 +1,19 @@
 <?php
 global $Atomic;
-$content = Atomic::receive('content');
+$FllatComponent = new FllatComponent();
 $component = Atomic::receive('component');
+$componentDB = $FllatComponent->where('component', $component, false);
+$componentDB = $componentDB[0];
+
+$content = Atomic::receive('content');
 $category = Atomic::receive('category');
+
+//var_dump($componentDB, $componentDB['description']);
 ?>
 <div class="compWrap">
-	<span id="<?= $component; ?>" class="compTitle"><?= $component; ?> <span class="js-hideAll fa fa-eye"></span></span>
-	<p class="compNotes">This is the <?= $component; ?> component. It serves as an example. You can edit the Scss for
-		this
-		component in scss/<?= $category; ?>/_<?= $component; ?>.scss. You can edit the markup for this component in
-		components/modules/<?= $component; ?>.php. Make sure your preprocessor is set up to process scss/main.scss to
-		css/main!</p>
-	<div class="component" style="background-color:">
+	<span id="<?= $component; ?>" class="compTitle atomic-editable"><?= $component; ?> <span class="js-hideAll fa fa-eye"></span></span>
+	<p class="compNotes atomic-editable"><?= $componentDB['description']; ?></p>
+	<div class="component" style="background-color: <?= $componentDB['backgroundColor']; ?>">
 		<?= $content['markup']; ?>
 	</div>
 	<div class="compCodeBox">
@@ -25,12 +27,36 @@ $category = Atomic::receive('category');
 		</ul>
 		<div class="tab-content">
 			<div role="tabpanel" class="tab-pane active markup-display" id="<?= $component; ?>-markup">
-				<div class="atoms-code-example">
-					<pre><code class="language-markup"><?= htmlentities($content['markup']); ?></code></pre>
-				</div>
+				<form class="atomic-editorWrap">
+					<div class="atomic-editorInner">
+						<div class="atoms-code-example">
+							<div class="atomic-editor ace_editor ace-tm" id="editor-markup-<?= $component; ?>">
+								<pre><code class="language-markup"><?= htmlentities($content['markup']); ?></code></pre>
+								<input type="hidden" name="new-styles-val" value=""/>
+							</div>
+						</div>
+					</div>
+					<div class="atomic-editor-footer">
+						<button type="submit" class="atomic-btns atomic-btn1">Save</button>
+						<span type="reset" class="js-close-editor atomic-btns atomic-btn2">Cancel</span>
+					</div>
+				</form>
 			</div>
 			<div role="tabpanel" class="tab-pane" id="<?= $component; ?>-css">
-				<pre><code class="language-css"><?= $content['scss']; ?></code></pre>
+				<form class="atomic-editorWrap">
+					<div class="atomic-editorInner">
+						<div class="atoms-code-example">
+							<div class="atomic-editor ace_editor ace-tm" id="editor-style-<?= $component; ?>">
+								<pre><code class="language-css"><?= $content['scss']; ?></code></pre>
+								<input type="hidden" name="new-styles-val" value=""/>
+							</div>
+						</div>
+					</div>
+					<div class="atomic-editor-footer">
+						<button type="submit" class="atomic-btns atomic-btn1">Save</button>
+						<span type="reset" class="js-close-editor atomic-btns atomic-btn2">Cancel</span>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

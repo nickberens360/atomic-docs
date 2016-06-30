@@ -14,12 +14,16 @@ class FllatComponent extends Fllat {
 		return parent::select();
 	}
 	
-	public function where($key, $val) {
+	public function where($key, $val, $order = true) {
 		$columns = array();
 
 		$components = parent::where($columns, $key, $val);
 
-		return $this->order($components);
+		if( $order ) {
+			return $this->order($components);
+		}
+		
+		return $components;
 	}
 	
 	/**
