@@ -79,7 +79,7 @@ foreach ($categories as $category) {
 		<div class="aa_dir__dirNameGroup">
 			<i class="aa_dir__dirNameGroup__icon  fa fa-folder-o"></i>
 			<a class="aa_dir__dirNameGroup__name"
-			   href="atomic-core/<?= $category['category']; ?>"><?= $category['category']; ?></a>
+			   href="atomic-core/?v=<?= $category['category']; ?>"><?= $category['category']; ?></a>
 		</div>
 		<ul class="aa_fileSection">
 			<?php
@@ -92,7 +92,7 @@ foreach ($categories as $category) {
 					   data-form="component-edit" data-component="<?= $component['component']; ?>">
 						<span class="fa fa-pencil-square-o"></span>
 					</a>
-					<a href="atomic-core/<?= $category['category']; ?>#<?= $component['component']; ?>"><?= $component['component']; ?></a>
+					<a href="atomic-core/?v=<?= $category['category']; ?>#<?= $component['component']; ?>"><?= $component['component']; ?></a>
 				</li>
 				<?php
 			}
