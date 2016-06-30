@@ -3,7 +3,7 @@
 
 ## How to launch a new release
 
-This project uses (semantic versioning)[http://semver.org/].
+This project uses [semantic versioning](http://semver.org/).
 
 
 To release a PATCH:
