@@ -35,6 +35,7 @@ gulp.task('scripts', function() {
 			'js/hideTitle.js',
 			'js/navSmall.js',
 			'js/animateHeight.js',
+			'js/atomic.js',
 			'js/editor-stuff.js',
 			'js/editable-content.js'
 		], { base: './' }))
