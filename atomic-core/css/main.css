@@ -1695,3 +1695,35 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     overflow: auto;
     position: relative;
     height: 100%; }
+  .atomsWrap .atomic-btns {
+    background: #ccc;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 12px;
+    cursor: pointer; }
+  .atomsWrap .atomic-btn1 {
+    background: #37c737; }
+  .atomsWrap .atomic-btn2 {
+    background: #e65d5d; }
+  .atomsWrap .atomic-form {
+    background: #a6d4da;
+    max-width: 500px;
+    padding: 10px; }
+  .atomsWrap .textChange {
+    width: 100%;
+    border: none;
+    font-size: 13px;
+    color: #7A7A7A;
+    margin-bottom: 0; }
+  .atomsWrap textarea.textChange {
+    height: 200px;
+    padding: 10px; }
+  .atomsWrap .atomic-form-input.textChange {
+    padding: 10px; }
+  .atomsWrap .atomic-form-footer {
+    text-align: right;
+    padding-top: 5px; }
+  .atomsWrap .atomic-form-footer .atomic-btns {
+    margin-right: 10px;
+    display: inline-block; }
