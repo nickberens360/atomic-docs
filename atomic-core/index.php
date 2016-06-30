@@ -146,7 +146,7 @@ $cat_data = $catdb->select(array());
                                     <div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
 
 
-                                    <div class="atomic-editor" id="editor-markup-<?php echo $comp_value['comp_name'] ?>"><script><?php echo $markup_file_content; ?></script></div>
+                                    <div class="atomic-editor" id="editor-markup-<?php echo $comp_value['comp_name'] ?>"><?php echo htmlspecialchars($markup_file_content, ENT_QUOTES); ?></div>
                                     <input class="new-val-input" type="hidden" name="new-markup-val" value="" />
                                 </div>
 
@@ -163,7 +163,7 @@ $cat_data = $catdb->select(array());
 
                                     <div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
 
-                                    <div class="atomic-editor" id="editor-styles-<?php echo $comp_value['comp_name'] ?>"><script><?php echo $styles_file_content; ?></script></div>
+                                    <div class="atomic-editor" id="editor-styles-<?php echo $comp_value['comp_name'] ?>"><?php echo htmlspecialchars($styles_file_content, ENT_QUOTES); ?></div>
                                     <input type="hidden" name="new-styles-val" value="" />
                                 </div>
                                 <div class="atomic-editor-footer">
