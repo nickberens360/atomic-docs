@@ -41,7 +41,7 @@ gulp.task('scripts', function() {
 		], { base: './' }))
 		.pipe(concat('compiled.js'))
 		.pipe(gulp.dest(jsDest))
-		.pipe(rename('compiled.md.min.js'))
+		.pipe(rename('compiled.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest(jsDest));
 });

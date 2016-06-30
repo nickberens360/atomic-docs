@@ -1,3 +1,4 @@
+
 body{
   background:#FCFEFA;
   color:#7A7A7A;
@@ -135,8 +136,17 @@ textarea.textChange{
 	display:inline-block;
 }
 
+[contenteditable="true"]{
+	padding:0;
+	transition: all .25s;
+	display: inline-block;
+}
+[contenteditable="true"]:focus{
+	border:none;
+	outline:none;
+	//background: #eee;
+	padding:4px 8px;
+	box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.1);
 
-
-
-
+}
 

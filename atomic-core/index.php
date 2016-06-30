@@ -14,8 +14,9 @@ $viewCategory = Atomic::getValue('v');
 
 <div class="grid-row atoms-container">
 	<?php include("sidebar.php"); ?>
-	
+
 	<div class="atoms-main">
+		<h1 class="atomic-h1"><span contenteditable="true">Need category name here</span></h1>
 		<?php
 		if( $viewCategory ) {
 			$Atomic->includeCategoryComponents($viewCategory);

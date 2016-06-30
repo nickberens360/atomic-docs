@@ -1,7 +1,8 @@
 /**
  * Created by michael on 6/30/16.
  */
-$('.atomic-editable').click(function() {
+
+/*$('.atomic-editable').click(function() {
 
 	var notesContent = $(this).text();
 
@@ -13,7 +14,7 @@ $('.atomic-editable').click(function() {
 
 	$(this).css('display','none');
 
-});
+});*/
 
 $('.atomic-editable-input').click(function() {
 
@@ -28,4 +29,3 @@ $('.atomic-editable-input').click(function() {
 	$(this).css('display','none');
 
 });
-
