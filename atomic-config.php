@@ -8,6 +8,7 @@ function getConfig() {
   $config['preCssDir'] = 'scss'; //Scss preprocessor directory name. E.G sass, less
   $config['preCssExt'] = 'scss'; //prerocessed file ext. E.G. scss, sass, less
   $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
+  $config['dbPath'] = 'atomic-core/db'; //path of the db folder
 
   return $config;
 }
