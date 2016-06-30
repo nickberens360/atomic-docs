@@ -37,7 +37,8 @@ gulp.task('scripts', function() {
             'js/hideTitle.js',
             'js/navSmall.js',
             'js/animateHeight.js',
-            'js/editor-stuff.js'
+            'js/editor-stuff.js',
+            'js/editable-content.js'
         ], { base: './' }))
         .pipe(concat('compiled.js'))
         .pipe(gulp.dest(jsDest))

@@ -8065,7 +8065,6 @@ $(".atoms-side_show-small").on('click', function(event) {
 $(document).ready(function() {
 
 
-
     $( ".ace_content" ).click(function() {
         $('.atomic-editorWrap').removeClass('atomic-editorWrap-active');
         $(this).closest('.atomic-editorWrap').addClass('atomic-editorWrap-active');
@@ -8088,8 +8087,6 @@ $(document).mouseup(function (e)
         container.removeClass('atomic-editorWrap-active');
     }
 });
-
-
 
 $('.atomic-editable').click(function() {
 
@@ -8120,5 +8117,4 @@ $('.atomic-editable-input').click(function() {
     $(this).css('display','none');
 
 });
-
 

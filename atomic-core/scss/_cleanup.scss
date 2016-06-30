@@ -17,7 +17,7 @@ pre[class*="language-"] {
 	padding-left: 3px;
 	max-height: 25px;
   .fa{
-    cursor:pointer; 
+    cursor:pointer;
   }
 }
 .compWrap{
@@ -58,7 +58,7 @@ pre[class*="language-"] {
 
 
 .bgColorWrap{
-  margin-bottom:12px; 
+  margin-bottom:12px;
 }
 
 .sp-replacer{
@@ -66,11 +66,11 @@ pre[class*="language-"] {
 	border: none;
 }
 .sp-preview .sp-clear-display{
- background-image:none;  
+ background-image:none;
 }
 
 .language-css{
-  position:relative; 
+  position:relative;
 }
 
 .atoms-overflow{
@@ -100,11 +100,40 @@ pre[class*="language-"] {
 
 
 
-    
 
 
 
 
+
+
+
+.atomic-form{
+	background: #a6d4da;
+	max-width:500px;
+	padding:10px;
+}
+.textChange{
+	width:100%;
+	border:none;
+	font-size: 13px;
+	color: #7A7A7A;
+	margin-bottom:0;
+}
+textarea.textChange{
+	height:200px;
+	padding:10px;
+}
+.atomic-form-input.textChange{
+	padding:10px;
+}
+.atomic-form-footer{
+	text-align: right;
+	padding-top:5px;
+}
+.atomic-form-footer .atomic-btns{
+	margin-right:10px;
+	display:inline-block;
+}
 
 
 
