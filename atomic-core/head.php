@@ -1,3 +1,16 @@
+<?php
+global $Atomic;
+//global $DBCategory;
+//global $FllatComponent;
+require_once('partial-mngr/classes/Atomic.php');
+require_once('fllat.php');
+//require_once('lib/FllatComponent/FllatComponent.php');
+
+//$FllatComponent = new FllatComponent();
+//$DBComponent = new Fllat('component');
+
+$Atomic = new Atomic();
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->

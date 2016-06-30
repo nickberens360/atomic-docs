@@ -1,6 +1,7 @@
 <?php
 
 
+require_once dirname(__FILE__) . '/../classes/File/FileScss.php';
 
 function deleteScssImportString($catName, $fileName)
 {
@@ -18,12 +19,9 @@ function deleteScssImportString($catName, $fileName)
 
 
 function deleteScssFile($catName, $fileName)
-{        
-	$config = getConfig();
-	$cssDir = $config['preCssDir'];
-    $cssExt = $config['preCssExt'];
-
-	unlink('../../'.$cssDir.'/'.$catName.'/_'.$fileName.'.'.$cssExt.'');
+{
+	$FileScss = new FileScss();
+	$FileScss->remove($fileName, $catName);
 }
 
 

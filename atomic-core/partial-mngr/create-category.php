@@ -40,27 +40,36 @@ $data           = array();      // array to pass back data
     } else {
 
         // if there are no errors process our form, then return a message
-        
-        
+
+
+        include_once('classes/Category.php');
+        $Category = new Category();
+
+        $created = $Category->create($dirName);
+
+        echo json_encode($created);
+
+        die();
+
         // DO ALL YOUR FORM PROCESSING HERE
   
-        createAtomicCategoryDir($dirName );
+//        createAtomicCategoryDir($dirName );
 
-        createSidebarIncludeAndFile($dirName );
+//        createSidebarIncludeAndFile($dirName );
 
-        writeNavItem($dirName);
+//        writeNavItem($dirName);
 
-        createAjaxIncludeAndFile($dirName);
+//        createAjaxIncludeAndFile($dirName);
 
-        createPageIncludeFile($dirName );
-           
-        createPageTemplate($dirName );
-   
-        createCompCatDir($dirName );
-        
-        createScssCatDirAndFile($dirName );
-
-        createStringForMainScssFile($dirName );
+//        createPageIncludeFile($dirName );
+//
+//        createPageTemplate($dirName );
+//
+//        createCompCatDir($dirName );
+//
+//        createScssCatDirAndFile($dirName );
+//
+//        createStringForMainScssFile($dirName );
 
         
         

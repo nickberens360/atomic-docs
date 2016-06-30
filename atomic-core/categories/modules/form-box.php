@@ -1,7 +1,7 @@
 <div class="aa_fileFormGroup">
 <label class="aa_label js-showHide-trigger"><span class="fa fa-plus"></span> <span class="aa_label__file">Rename</span> box</label>
 <div class="showHide">
-  <form id="form-rename-file"  class="aa_fileForm " action="/atomic-core/partial-mngr/file-rename.php" method="post">
+  <form id="form-rename-file" class="aa_fileForm " action="/atomic-core/partial-mngr/file-rename.php" method="post">
       <div class="formInputGroup">
         <div class="inputBtnGroup">
           
@@ -16,7 +16,7 @@
 </div>
 <label class="aa_label js-showHide-trigger"><span class="fa fa-plus"></span> Change the <span class="aa_label__file">description</span> for box</label>
 <div class="showHide">
-   <form id="form-rename-notes"  class="aa_fileForm " action="/atomic-core/partial-mngr/notes-rename.php" method="post">
+   <form id="form-rename-notes" class="aa_fileForm " action="/atomic-core/partial-mngr/notes-rename.php" method="post">
         <textarea class="form-control" name="compNotesNew"></textarea>        
         <button class="aa_btn aa_btn-pos" type="submit" >Update</button>
       <input type="hidden" name="compDir" value="modules"/>
@@ -27,7 +27,7 @@
 </div>
 <label class="aa_label js-showHide-trigger"><span class="fa fa-plus"></span> Change the <span class="aa_label__file">contextual background color</span> for box</label>
 <div class="showHide">
-   <form id="form-change-bgColor"  class="aa_fileForm " action="/atomic-core/partial-mngr/bgcolor-rename.php" method="post">
+   <form id="form-change-bgColor" class="aa_fileForm " action="/atomic-core/partial-mngr/bgcolor-rename.php" method="post">
         
         <div class="bgColorWrap">
           <input class="bgColor" type="text" name="bgColorNew" value="" />

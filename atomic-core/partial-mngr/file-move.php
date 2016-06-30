@@ -29,7 +29,7 @@ $data           = array();      // array to pass back data
     }
     
     /*elseif ($_POST['renameFileName'] == ""){
-        $errors['name'] = 'Name is required.';
+        $errors['name'] = 'Name is required.';c
     }*/
 
 

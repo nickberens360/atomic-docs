@@ -1,0 +1,17 @@
+[
+	{
+		"path": "\/var\/www\/websites\/dev\/atomic-docs.dev\/atomic-core\/partial-mngr\/classes\/..\/..\/..\/src\/categories\/organisms",
+		"category": "organisms",
+		"order": 2
+	},
+	{
+		"path": "\/var\/www\/websites\/dev\/atomic-docs.dev\/atomic-core\/partial-mngr\/classes\/..\/..\/..\/src\/categories\/molecules",
+		"category": "molecules",
+		"order": 1
+	},
+	{
+		"path": "\/var\/www\/websites\/dev\/atomic-docs.dev\/atomic-core\/partial-mngr\/classes\/..\/..\/..\/src\/categories\/atoms",
+		"category": "atoms",
+		"order": 0
+	}
+]

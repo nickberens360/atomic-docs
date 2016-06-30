@@ -1,5 +1,8 @@
+<?php
+global $Atomic;
+?>
 <div class="aa_fileFormGroup">
-    <form id="form-create-file" class="aa_fileForm " action="/atomic-core/modules.php" method="post">
+    <form id="form-create-file" class="aa_fileForm " action="<?= $Atomic->config['atomicCorePath']; ?>/modules.php" method="post">
      
       <div class="inputGroup">
         <label class="aa_label">What's your component's name?</label>

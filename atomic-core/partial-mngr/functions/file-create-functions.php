@@ -1,38 +1,31 @@
 <?php
 
+require dirname(__FILE__) . '/../classes/File/FileScss.php';
+
 function createScssFile($catName, $fileName)
 {
-  $config = getConfig();
-  $cssDir = $config['preCssDir'];
-  $cssExt = $config['preCssExt'];
-
-  $commentString = '/*'.$cssDir.'/'.$catName.'/_'.$fileName.'.'.$cssExt.'*/';
-  $commentString = "$commentString\n\n";
-  
-  $fileHandle = fopen('../../'.$cssDir.'/'.$catName.'/'.'_'.$fileName.'.'.$cssExt.'', 'x+') or die("can't open file");
-  fwrite($fileHandle, $commentString);
-  fwrite($fileHandle, ".".$fileName."{\n\n}");
-  fclose($fileHandle);
+  $FileScss = new FileScss();
+  $FileScss->create($fileName, $catName);
 }
 
 
 function writeScssImportFile($catName, $fileName)
 {
-  $config = getConfig();
-  $cssDir = $config['preCssDir'];
-  $cssExt = $config['preCssExt'];
-  
-  //create @import string
-  $importString = "@import " . '"_'.$fileName.'";' ;
-  $importString = "\n$importString\n";
-  
-  //open parent scss file and write @import string to it
-  $fileHandle = fopen('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', 'a') or die("can't open file");
-  fwrite($fileHandle, $importString);
-  fclose($fileHandle);   
-  
-  //remove any extra line breaks from file
-  file_put_contents('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', implode(PHP_EOL, file('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));       
+//  $config = getConfig();
+//  $cssDir = $config['preCssDir'];
+//  $cssExt = $config['preCssExt'];
+//
+//  //create @import string
+//  $importString = "@import " . '"_'.$fileName.'";' ;
+//  $importString = "\n$importString\n";
+//
+//  //open parent scss file and write @import string to it
+//  $fileHandle = fopen('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', 'a') or die("can't open file");
+//  fwrite($fileHandle, $importString);
+//  fclose($fileHandle);
+//
+//  //remove any extra line breaks from file
+//  file_put_contents('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', implode(PHP_EOL, file('../../'.$cssDir.'/'.$catName.'/'.'_'.$catName.'.'.$cssExt.'', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 }
 
 
