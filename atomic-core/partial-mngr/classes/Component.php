@@ -25,7 +25,7 @@ class Component extends Atomic {
 	}
 
 	public function get($component){
-		
+
 	}
 
 	/**
@@ -40,7 +40,7 @@ class Component extends Atomic {
 		$FileScss = new FileScss();
 		$FileComponent = new FileComponent();
 
-		$commentString = '<?php /*' . $this->config['categoryDirectoryName'] . '/' . $category . '/' . $component . '*/ ?>';
+		$commentString = '<!--' . $this->config['categoryDirectoryName'] . '/' . $category . '/' . $component . '-->';
 		$mainBody = "\n\n<section class='{$component}'>" . $component . "</section>\n\n";
 		$content = $commentString . $mainBody;
 

@@ -1,5 +1,5 @@
 <!-- Place any head info you would like shared between the styleguide and the root of your project. Eg. Links to js scripts etc.. -->
 
-<link rel="stylesheet" type="text/css" href="/src/css/main.css">
+<link rel="stylesheet" type="text/css" href="src/css/main.css">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 

@@ -1,3 +1,8 @@
-.reads{padding:10px;border:1px solid #767676}.new{background:pink}.new{background:pink}
+/* You may rearrange the order of imports if necessary for your scss to compile*/
+.logo {
+  color: red;
+}
 
-/*# sourceMappingURL=main.css.map */
+.test {
+  color: green;
+}

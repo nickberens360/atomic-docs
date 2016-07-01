@@ -34,10 +34,13 @@ $Atomic = new Atomic();
 
     <link rel="stylesheet" href="atomic-core/font-awesome/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="atomic-core/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="atomic-core/vendor/jquery-ui/jquery-ui.structure.min.css">
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    
+
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
 
     <script src="atomic-core/zero/ZeroClipboard.js"></script>
