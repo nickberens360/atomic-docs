@@ -9,7 +9,9 @@ if(!$dbPath){
   $dbPath = "db";
 }
 
+
 $compdb = new Fllat("compdb",$dbPath);
+
 $comp_data = $compdb->where(array(),"comp_name", $_GET["comp-name"]);
 
 
@@ -38,13 +40,17 @@ $comp_data = $compdb->where(array(),"comp_name", $_GET["comp-name"]);
     <!-- Insert your CSS resources here. -->
 </head>
 
-<?php if(!empty($comp_data) && !empty($comp_data[0]['comp_markup_path'])) { ?>
-<body style="background-color:<?php echo $comp_data[0]['comp_context_color'] ?>">
+
+<?php if(!empty($comp_data) && !empty($comp_data[1]['comp_markup_path'])) { ?>
+<body style="background-color:<?php echo $comp_data[1]['comp_context_color'] ?>">
 
 
 
     <div id="partial">
-      <?php require $comp_data[0]['comp_markup_path']; ?>
+      <?php require $comp_data[1]['comp_markup_path']; ?>
+
+     <?php var_dump($comp_data);?>
+
     </div>
 </body>
 

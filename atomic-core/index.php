@@ -11,6 +11,11 @@ $cat_data = $catdb->select(array());
 
 ?>
     <body class="atoms">
+    <script language="javascript" type="text/javascript">
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        }
+    </script>
 
 
 <div class="grid-row atoms-container">
@@ -110,23 +115,6 @@ $cat_data = $catdb->select(array());
                   <iframe id="partial-viewport" src="atomic-core/partial.php?comp-name=<?php echo $comp_value['comp_name'] ?>" sandbox="allow-same-origin allow-scripts" onload="resizeIframe(this)"></iframe>
                 </div>
 
-                <!--<div class="compCodeBox">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#<?php /*echo $comp_value['comp_name'] */?>-markup"
-                                                                  aria-controls="box-markup" role="tab"
-                                                                  data-toggle="tab">Markup</a></li>
-                        <li role="presentation"><a href="#<?php /*echo $comp_value['comp_name'] */?>-css" aria-controls="box-css"
-                                                   role="tab"
-                                                   data-toggle="tab">scss</a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active markup-display"
-                             id="<?php /*echo $comp_value['comp_name'] */?>-markup"></div>
-                        <div role="tabpanel" class="tab-pane" id="<?php /*echo $comp_value['comp_name'] */?>-css">
-                            <pre><code class="language-css"><?php /*include($comp_value['comp_styles_path']); */?></code></pre>
-                        </div>
-                    </div>
-                </div>-->
 
                 <div>
 
@@ -197,11 +185,7 @@ $cat_data = $catdb->select(array());
 </div>
 <?php include("footer.php"); ?>
 
-<script language="javascript" type="text/javascript">
-    function resizeIframe(obj) {
-        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-    }
-</script>
+
 
 
 <style>
