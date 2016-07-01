@@ -12,7 +12,7 @@ if(!$dbPath){
 
 $compdb = new Fllat("compdb",$dbPath);
 
-$comp_data = $compdb->where(array(),"comp_name", $_GET["comp-name"]);
+$comp_data = array_values( $compdb->where(array(),"comp_name", $_GET["comp-name"]) )[0];
 
 
 
@@ -41,15 +41,14 @@ $comp_data = $compdb->where(array(),"comp_name", $_GET["comp-name"]);
 </head>
 
 
-<?php if(!empty($comp_data) && !empty($comp_data[1]['comp_markup_path'])) { ?>
-<body style="background-color:<?php echo $comp_data[1]['comp_context_color'] ?>">
+<?php if(!empty($comp_data) && !empty($comp_data['comp_markup_path'])) { ?>
+<body style="background-color:<?php echo $comp_data['comp_context_color'] ?>">
+
 
 
 
     <div id="partial">
-      <?php require $comp_data[1]['comp_markup_path']; ?>
-
-     <?php var_dump($comp_data);?>
+      <?php require $comp_data['comp_markup_path']; ?>
 
     </div>
 </body>
