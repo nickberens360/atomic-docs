@@ -69,9 +69,9 @@ $cat_data = $catdb->select(array());
                         </li>
 
                     <?php } ?>
-                    <li class="catAdd"><a class="aa_js-actionOpen aa_actionBtn"
-                                          href="atomic-core/categories/_catActions.php"><span
-                                class="fa fa-plus"></span> Add / Delete Category</a></li>
+                    <li class="catAdd"><a class="aa_js-actionOpen aa_actionBtn" href="atomic-core/categories/_catActions.php"><span class="fa fa-plus"></span> Add / Delete Category</a></li>
+
+
                 </ul>
 
             </nav>
@@ -106,8 +106,9 @@ $cat_data = $catdb->select(array());
                                         class="compTitle atomic-editable-input"><?php echo $comp_value['comp_name'] ?> <span
                         class="js-hideAll fa fa-eye"></span></span>
                 <p class="compNotes atomic-editable"><?php echo $comp_value['comp_notes'] ?> </p>
-                <div class="component"
-                     style="background-color:<?php echo $comp_value['comp_context_color'] ?>"><?php include($comp_value['comp_markup_path']); ?></div>
+                <div class="component">
+                  <iframe id="partial-viewport" src="atomic-core/partial.php?comp-name=<?php echo $comp_value['comp_name'] ?>" sandbox="allow-same-origin allow-scripts" onload="resizeIframe(this)"></iframe>
+                </div>
 
                 <!--<div class="compCodeBox">
                     <ul class="nav nav-tabs" role="tablist">
@@ -196,9 +197,49 @@ $cat_data = $catdb->select(array());
 </div>
 <?php include("footer.php"); ?>
 
+<script language="javascript" type="text/javascript">
+    function resizeIframe(obj) {
+        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+    }
+</script>
 
 
-
-
-
-
+<style>
+    .atomic-form{
+        background: #a6d4da;
+        max-width:500px;
+        padding:10px;
+    }
+    .textChange{
+        width:100%;
+        border:none;
+        font-size: 13px;
+        color: #7A7A7A;
+        margin-bottom:0;
+    }
+    textarea.textChange{
+        height:200px;
+        padding:10px;
+    }
+    .atomic-form-input.textChange{
+        padding:10px;
+    }
+    .atomic-form-footer{
+        text-align: right;
+        padding-top:5px;
+    }
+    .atomic-form-footer .atomic-btns{
+        margin-right:10px;
+        display:inline-block;
+    }
+    #partial-viewport {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+        width:100%;
+    }
+</style>
