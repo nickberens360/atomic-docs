@@ -69,9 +69,9 @@ $cat_data = $catdb->select(array());
                         </li>
 
                     <?php } ?>
-                    <li class="catAdd"><a class="aa_js-actionOpen aa_actionBtn"
-                                          href="atomic-core/categories/_catActions.php"><span
-                                class="fa fa-plus"></span> Add / Delete Category</a></li>
+                    <li class="catAdd"><a class="aa_js-actionOpen aa_actionBtn" href="atomic-core/categories/_catActions.php"><span class="fa fa-plus"></span> Add / Delete Category</a></li>
+
+
                 </ul>
 
             </nav>
@@ -107,7 +107,7 @@ $cat_data = $catdb->select(array());
                         class="js-hideAll fa fa-eye"></span></span>
                 <p class="compNotes atomic-editable"><?php echo $comp_value['comp_notes'] ?> </p>
                 <div class="component">
-                  <iframe id="partial-viewport" src="/atomic-core/partial.php?comp-name=<?php echo $comp_value['comp_name'] ?>" sandbox="allow-same-origin allow-scripts" onload="resizeIframe(this)"></iframe>
+                  <iframe id="partial-viewport" src="atomic-core/partial.php?comp-name=<?php echo $comp_value['comp_name'] ?>" sandbox="allow-same-origin allow-scripts" onload="resizeIframe(this)"></iframe>
                 </div>
 
                 <!--<div class="compCodeBox">
@@ -240,7 +240,6 @@ $cat_data = $catdb->select(array());
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: white;
         width:100%;
     }
 </style>

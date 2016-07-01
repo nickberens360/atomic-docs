@@ -9,5 +9,7 @@ function getConfig() {
   $config['preCssExt'] = 'scss'; //prerocessed file ext. E.G. scss, sass, less
   $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
 
+  $config['dbPath'] = 'db';
+
   return $config;
 }

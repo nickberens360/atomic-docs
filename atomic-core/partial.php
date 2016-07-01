@@ -13,6 +13,8 @@ $compdb = new Fllat("compdb",$dbPath);
 $comp_data = $compdb->where(array(),"comp_name", $_GET["comp-name"]);
 
 
+
+
 ?>
 
 <head lang="en">
