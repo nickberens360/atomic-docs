@@ -126,7 +126,7 @@ $cat_data = $catdb->select(array());
 
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="<?php echo $comp_value['comp_name'] ?>-markup-tab"">
+                        <div role="tabpanel" class="tab-pane active" id="<?php echo $comp_value['comp_name'] ?>-markup-tab">
                             <?php $markup_file_content = file_get_contents($comp_value['comp_markup_path'], true); ?>
                             <form class="atomic-editorWrap">
                                 <div class="atomic-editorInner">
