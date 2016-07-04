@@ -8,7 +8,7 @@ Atomic Docs works with Sass, Less and Stylus.
 
 Documentation can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>.
 
-<img src="http://atomicdocs.io/img/demo1.gif" alt="atomic docs gif" />
+<!--<img src="http://atomicdocs.io/img/demo1.gif" alt="atomic docs gif" />-->
 
 ##Set up
 
@@ -19,22 +19,22 @@ Documentation can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>.
 ##Document
 Have full documentation to hand off to other teams, internal or external.
 
-<img src="http://atomicdocs.io/img/document.png" />
+<!--<img src="http://atomicdocs.io/img/document.png" />-->
 
 ##Organize
 Organize all your components under categories that you name. "Base", "Modules", "Atoms" etc...
 
-<img src="http://atomicdocs.io/img/organize.png"/>
+<!--<img src="http://atomicdocs.io/img/organize.png"/>-->
 
 ##Manage
 Manage all your components. Move, rename and delete with a clean GUI interface.
 
-<img src="http://atomicdocs.io/img/manage.gif" />
+<!--<img src="http://atomicdocs.io/img/manage.gif" />-->
 
 ##Save time
 Does all the "wiring" of your SCSS partials. Never write `@import "partial-name";` again.
 
-<img width="500" src="http://atomicdocs.io/img/helpful.png"/>
+<!--<img width="500" src="http://atomicdocs.io/img/helpful.png"/>-->
 
 Documentation can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>.
 
