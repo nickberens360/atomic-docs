@@ -38,3 +38,6 @@ Does all the "wiring" of your SCSS partials. Never write `@import "partial-name"
 
 Documentation can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>.
 
+##Join the Atomic Docs conversation on <a href="https://nick578.typeform.com/to/NwX0ox">Slack</a>!
+
+
