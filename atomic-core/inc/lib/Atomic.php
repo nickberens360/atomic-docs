@@ -11,6 +11,9 @@ class Atomic {
 	 * @var array
 	 */
 	public $config;
+	/**
+	 * @var
+	 */
 	static $includePath;
 
 	/**
@@ -31,6 +34,9 @@ class Atomic {
 		$this->config['filenamePrefix'] = '_';
 	}
 
+	/**
+	 * @return string
+	 */
 	static function includePath(){
 		return dirname(__FILE__) . '/../..';
 	}
@@ -65,15 +71,26 @@ class Atomic {
 		return $this->config['componentDirectory'] . '/' . $component;
 	}
 
+	/**
+	 * @param $category
+	 */
 	function includeCategoryComponents($category) {
 		$this->fileIterator($category, array('Component', 'outputContents'));
 	}
 
+	/**
+	 * @param $file
+	 * @param $directory
+	 */
 	function includeFile($file, $directory) {
 		$path = $directory . '/' . $file . '.' . $this->config['componentExt'];
 		include($path);
 	}
 
+	/**
+	 * @param      $category
+	 * @param null $callback
+	 */
 	function fileIterator($category, $callback = null) {
 		$fullpath = $this->pathPhp($category);
 
@@ -145,10 +162,20 @@ class Atomic {
 		return $includeString;
 	}
 
+	/**
+	 * @param $key
+	 * @param $value
+	 */
 	public static function give($key, $value) {
 		$GLOBALS[$key] = $value;
 	}
 
+	/**
+	 * @param      $key
+	 * @param null $default
+	 *
+	 * @return mixed|null
+	 */
 	public static function receive($key, $default = null) {
 		return isset($GLOBALS[$key]) ? $GLOBALS[$key] : $default;
 	}
@@ -181,12 +208,18 @@ class Atomic {
 		}
 	}
 
+	/**
+	 * @param null $view
+	 */
 	public static function render($view = null) {
 		if($view){
 
 		}
 	}
 
+	/**
+	 * @param $view
+	 */
 	public static function partial($view) {
 		$path = self::includePath() .'/inc/view/_'. $view .'.php';
 

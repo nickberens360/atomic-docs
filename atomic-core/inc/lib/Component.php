@@ -14,11 +14,23 @@ require_once(Atomic::includePath() . '/inc/lib/fllat.php');
 require_once(Atomic::includePath() . '/inc/lib/FllatComponent/FllatComponent.php');
 
 
+/**
+ * Class Component
+ */
 class Component extends Atomic {
 
+	/**
+	 * @var array
+	 */
 	private $errors;
+	/**
+	 * @var array
+	 */
 	private $data;
 
+	/**
+	 * Component constructor.
+	 */
 	public function __construct() {
 		parent::__construct();
 
@@ -26,6 +38,9 @@ class Component extends Atomic {
 		$this->data = array();
 	}
 
+	/**
+	 * @param $component
+	 */
 	public function get($component) {
 
 	}
@@ -74,6 +89,9 @@ class Component extends Atomic {
 	}
 
 
+	/**
+	 * @return int
+	 */
 	function getCount() {
 		$FllatComponent = new FllatComponent();
 
@@ -89,6 +107,12 @@ class Component extends Atomic {
 		unlink($file);
 	}
 
+	/**
+	 * @param $component
+	 * @param $category
+	 *
+	 * @return array
+	 */
 	function getContents($component, $category) {
 		$FileScss = new FileScss();
 		$FileComponent = new FileComponent();
@@ -98,6 +122,10 @@ class Component extends Atomic {
 		return array('markup' => $markup, 'scss' => $scss);
 	}
 
+	/**
+	 * @param $component
+	 * @param $category
+	 */
 	function outputContents($component, $category) {
 		$content = $this->getContents($component, $category);
 		Atomic::give('content', $content);

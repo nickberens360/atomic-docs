@@ -32,6 +32,12 @@ class File extends Atomic {
 		$this->data = array();
 	}
 
+	/**
+	 * @param      $component
+	 * @param null $category
+	 *
+	 * @return string
+	 */
 	public function pathPhp($component, $category = null) {
 		return parent::pathPhp($component, $category);
 	}
@@ -57,6 +63,11 @@ class File extends Atomic {
 		}
 	}
 
+	/**
+	 * @param $directory
+	 *
+	 * @return array
+	 */
 	function mkdir($directory){
 		$created = mkdir($directory, 0755);
 
@@ -68,6 +79,11 @@ class File extends Atomic {
 		}
 	}
 
+	/**
+	 * @param $file
+	 *
+	 * @return string
+	 */
 	function openFile($file) {
 		return file_get_contents($file);
 	}
@@ -118,6 +134,10 @@ class File extends Atomic {
 		unlink($file);
 	}
 	
+	/**
+	 * @param $file
+	 * @param $directory
+	 */
 	function outputContents($file, $directory) {
 		$contents = $this->open($directory . '/' . $file . '.' . $this->config['componentExt']);
 		?>

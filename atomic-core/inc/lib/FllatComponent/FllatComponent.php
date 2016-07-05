@@ -2,18 +2,39 @@
 
 require_once(Atomic::includePath() .'/inc/lib/fllat.php');
 
+/**
+ * Class FllatComponent
+ */
 class FllatComponent extends Fllat {
+	/**
+	 * @var string
+	 */
 	protected $table = 'component';
 
+	/**
+	 * FllatComponent constructor.
+	 */
 	public function __construct() {
 		parent::__construct();
 		parent::init($this->table, $this->config['atomicCorePath'] . '/db');
 	}
 
+	/**
+	 * @param array $cols
+	 *
+	 * @return array
+	 */
 	public function select($cols) {
 		return parent::select();
 	}
 	
+	/**
+	 * @param array  $key
+	 * @param string $val
+	 * @param bool   $order
+	 *
+	 * @return array
+	 */
 	public function where($key, $val, $order = true) {
 		$columns = array();
 
@@ -39,12 +60,18 @@ class FllatComponent extends Fllat {
 		return parent::add($data);
 	}
 
+	/**
+	 * @param null $index
+	 */
 	public function rm($index = null) {
 		if ($index !== null) {
 			parent::rm($index);
 		}
 	}
 
+	/**
+	 * @return int
+	 */
 	public function count(){
 		return parent::count();
 	}

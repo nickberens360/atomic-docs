@@ -48,6 +48,11 @@ class FileScss extends File {
 
 	}
 
+	/**
+	 * @param $category
+	 *
+	 * @return array
+	 */
 	public function createCategory($category) {
 		$fullPath = $this->config['preCssDir'] . '/' . $category;
 		$file = $category . '.' . $this->config['preCssExt'];
@@ -80,6 +85,12 @@ class FileScss extends File {
 		parent::removeFile($fullPath . '/' . $filename);
 	}
 
+	/**
+	 * @param $component
+	 * @param $category
+	 *
+	 * @return string
+	 */
 	public function open($component, $category) {
 		$path = $this->pathScss($component, $category);
 
