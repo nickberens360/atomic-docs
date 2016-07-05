@@ -1,12 +1,14 @@
 <?php //require_once('modules/navItem-modules.php'); ?>
 <?php //include('atoms/navItem-atoms.php'); ?>
 <?php
+
 global $Atomic;
 global $current_page;
 $orig = $Atomic->config['componentDirectory'];
 
 require_once(dirname(__FILE__) . '/../../lib/FllatCategory/FllatCategory.php');
 require_once(dirname(__FILE__) . '/../../lib/FllatComponent/FllatComponent.php');
+
 $FllatCategory = new FllatCategory();
 $FllatComponent = new FllatComponent();
 
@@ -22,6 +24,7 @@ foreach ($categories as $category) {
 			<a class="aa_dir__dirNameGroup__name"
 			   href="atomic-core/?v=<?= $category['category']; ?>"><?= $category['category']; ?></a>
 		</div>
+
 		<ul class="aa_fileSection">
 			<li class="aa_addFileItem">
 				<a class="aa_addFile aa_js-actionOpen aa_actionBtn js-show-form"
@@ -29,6 +32,7 @@ foreach ($categories as $category) {
 				   data-category="<?= $category['category']; ?>">
 					<span class="fa fa-plus"></span> Add Component</a>
 			</li>
+
 			<?php
 			$components = $FllatComponent->where('category', $category['category']);
 
