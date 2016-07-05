@@ -13,8 +13,8 @@
  *
  */
 
-require_once(Atomic::includePath() . '/Atomic.php');
-require "vendor/prequel.php";
+require_once(Atomic::includePath() . '/inc/lib/Atomic.php');
+require_once(Atomic::includePath() . '/vendor/prequel.php');
 
 class Fllat extends Atomic {
 

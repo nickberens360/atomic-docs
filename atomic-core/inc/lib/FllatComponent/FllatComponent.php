@@ -1,6 +1,6 @@
 <?php
 
-require_once(dirname(__FILE__) . '/../../fllat.php');
+require_once(Atomic::includePath() .'/inc/lib/fllat.php');
 
 class FllatComponent extends Fllat {
 	protected $table = 'component';

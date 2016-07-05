@@ -1,17 +1,29 @@
 <?php
 
 require_once(Atomic::includePath() . '/inc/lib/Atomic.php');
-require_once dirname(__FILE__) . '/File/FileScss.php';
-require_once dirname(__FILE__) . '/File/FileCategory.php';
-require_once(dirname(__FILE__) . '/../../fllat.php');
-require_once(dirname(__FILE__) . '/../lib/FllatCategory/FllatCategory.php');
-require_once dirname(__FILE__) . '/Atomic.php';
+require_once(Atomic::includePath() . '/inc/lib/File/FileScss.php');
+require_once(Atomic::includePath() . '/inc/lib/File/FileCategory.php');
+require_once(Atomic::includePath() . '/inc/lib/fllat.php');
+require_once(Atomic::includePath() . '/inc/lib/FllatCategory/FllatCategory.php');
+require_once(Atomic::includePath() . '/inc/lib/Atomic.php');
 
+/**
+ * Class Category
+ */
 class Category extends Atomic {
 
+	/**
+	 * @var array
+	 */
 	private $errors;
+	/**
+	 * @var array
+	 */
 	private $data;
 
+	/**
+	 * Category constructor.
+	 */
 	public function __construct() {
 		parent::__construct();
 
@@ -19,6 +31,11 @@ class Category extends Atomic {
 		$this->data = array();
 	}
 
+	/**
+	 * @param $category
+	 *
+	 * @return array
+	 */
 	function create($category) {
 		$fullFilePath = $this->config['categoryDirectory'] . '/' . $category;
 
@@ -45,6 +62,9 @@ class Category extends Atomic {
 		}
 	}
 
+	/**
+	 * @return mixed
+	 */
 	function getCount(){
 		$FllatCategory = new FllatCategory();
 		return $FllatCategory->getCount();

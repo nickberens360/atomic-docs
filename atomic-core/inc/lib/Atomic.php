@@ -90,8 +90,7 @@ class Atomic {
 				}
 				if ($ok) {
 					$filename = str_replace(".php", "", $filename);
-
-					require_once($this->config['atomicCorePath'] . '/partial-mngr/classes/Component.php');
+					require_once(Atomic::includePath() . '/inc/lib/Component.php');
 					$class = new $callback[0];
 					if (method_exists($class, $callback[1])) {
 						$class->$callback[1]($filename, $category);
@@ -189,7 +188,8 @@ class Atomic {
 	}
 
 	public static function partial($view) {
-		$path = dirname(__FILE__) . '/../..' .'/inc/view/_'. $view .'.php';
+		$path = self::includePath() .'/inc/view/_'. $view .'.php';
+
 		if(file_exists($path)){
 			include $path;
 		}

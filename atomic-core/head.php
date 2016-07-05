@@ -1,13 +1,8 @@
 <?php
 global $Atomic;
-//global $DBCategory;
-//global $FllatComponent;
-require_once('partial-mngr/classes/Atomic.php');
-require_once('fllat.php');
-//require_once('lib/FllatComponent/FllatComponent.php');
 
-//$FllatComponent = new FllatComponent();
-//$DBComponent = new Fllat('component');
+require_once(Atomic::includePath() . '/inc/lib/Atomic.php');
+require_once(Atomic::includePath() . '/inc/lib/fllat.php');
 
 $Atomic = new Atomic();
 ?>

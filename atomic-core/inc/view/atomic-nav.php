@@ -6,8 +6,9 @@ global $Atomic;
 global $current_page;
 $orig = $Atomic->config['componentDirectory'];
 
-require_once(dirname(__FILE__) . '/../../lib/FllatCategory/FllatCategory.php');
-require_once(dirname(__FILE__) . '/../../lib/FllatComponent/FllatComponent.php');
+
+require_once(Atomic::includePath() .'/inc/lib/FllatCategory/FllatCategory.php');
+require_once(Atomic::includePath() .'/inc/lib/FllatComponent/FllatComponent.php');
 
 $FllatCategory = new FllatCategory();
 $FllatComponent = new FllatComponent();

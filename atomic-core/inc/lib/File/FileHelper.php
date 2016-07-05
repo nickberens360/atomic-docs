@@ -6,7 +6,7 @@
  * Date: 6/17/16
  * Time: 10:58 AM
  */
-require_once dirname(__FILE__) . '/../Atomic.php';
+require_once(Atomic::includePath() . '/inc/lib/Atomic.php');
 
 /**
  * Class File

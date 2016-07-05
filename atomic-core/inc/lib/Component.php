@@ -6,11 +6,13 @@
  * Date: 6/17/16
  * Time: 10:58 AM
  */
-require_once dirname(__FILE__) . '/Atomic.php';
-require_once dirname(__FILE__) . '/File/FileScss.php';
-require_once dirname(__FILE__) . '/File/FileComponent.php';
-require_once(dirname(__FILE__) . '/../../fllat.php');
-require_once(dirname(__FILE__) . '/../../lib/FllatComponent/FllatComponent.php');
+
+require_once(Atomic::includePath() . '/inc/lib/Atomic.php');
+require_once(Atomic::includePath() . '/inc/lib/File/FileScss.php');
+require_once(Atomic::includePath() . '/inc/lib/File/FileComponent.php');
+require_once(Atomic::includePath() . '/inc/lib/fllat.php');
+require_once(Atomic::includePath() . '/inc/lib/FllatComponent/FllatComponent.php');
+
 
 class Component extends Atomic {
 
@@ -24,7 +26,7 @@ class Component extends Atomic {
 		$this->data = array();
 	}
 
-	public function get($component){
+	public function get($component) {
 
 	}
 
@@ -58,7 +60,7 @@ class Component extends Atomic {
 
 			$status = $db->add(array('component' => $component, 'category' => $category, 'description' => $description, 'backgroundColor' => $backgroundColor, 'order' => $this->getCount()));
 
-			if( $status['status'] ) {
+			if ($status['status']) {
 				return array('status' => true, 'message' => 'Successful');
 			}
 			else {
@@ -72,8 +74,9 @@ class Component extends Atomic {
 	}
 
 
-	function getCount(){
+	function getCount() {
 		$FllatComponent = new FllatComponent();
+
 		return $FllatComponent->count();
 	}
 

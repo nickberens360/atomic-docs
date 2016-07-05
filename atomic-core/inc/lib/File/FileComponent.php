@@ -8,8 +8,14 @@
  */
 require_once 'FileHelper.php';
 
+/**
+ * Class FileComponent
+ */
 class FileComponent extends File {
 
+	/**
+	 * FileComponent constructor.
+	 */
 	public function __construct() {
 		parent::__construct();
 	}
@@ -23,21 +29,28 @@ class FileComponent extends File {
 	public function create($file, $directory, $content = '') {
 		$fullPath = $this->config['componentDirectory'] . '/' . $directory;
 		$filename = $file .'.'. $this->config['componentExt'];
-
 		$fullFilePath = $fullPath .'/'. $filename;
-
-
 		$create = parent::createFile($fullFilePath, $content);
 
 		return $create;
 	}
 
+	/**
+	 * @param $component
+	 * @param $category
+	 *
+	 * @return string
+	 */
 	public function open($component, $category){
 		$path = parent::pathPhp($component, $category);
 
 		return parent::openFile($path);
 	}
 
+	/**
+	 * @param $filename
+	 * @param $directory
+	 */
 	public function remove($filename, $directory){
 		$fullPath = $this->config['preCssDir'] . '/' . $directory;
 		$filename .= '.'. $this->config['preCssExt'];

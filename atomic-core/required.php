@@ -1,5 +1,5 @@
 <?php
-require_once(dirname(__FILE__) .'/partial-mngr/classes/Atomic.php');
+require_once(dirname(__FILE__) . '/inc/lib/Atomic.php');
 
 global $Atomic;
 
