@@ -53,15 +53,16 @@ var AJAX_URL = '/atomic-core/inc/ajax';
 			// get the form data
 			// there are many ways to get this data using jQuery (you can use the class or id also)
 			var formData = {
-				'compDir': formObj.find('input[name=compDir]').val(),
-				'fileCreateName': $('input[name=fileCreateName]').val(),
-				'compNotes': formObj.find('textarea[name=compNotes]').val(),
-				'bgColor': formObj.find('input[name=bgColor]').val()
+				'category': formObj.find('input[name=compDir]').val(),
+				'component': $('input[name=fileCreateName]').val(),
+				'description': formObj.find('textarea[name=compNotes]').val(),
+				'backgroundColor': formObj.find('input[name=bgColor]').val(),
+				'form': 'component-create'
 			};
 			// process the form
 			$.ajax({
-				type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-				url: 'atomic-core/partial-mngr/create.php', // the url where we want to POST
+				type: 'GET', // define the type of HTTP verb we want to use (POST for our form)
+				url: AJAX_URL + '/_create.php', // the url where we want to POST
 				data: formData, // our data object
 				encode: true,
 				success: function (d) {

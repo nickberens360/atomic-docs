@@ -3,7 +3,7 @@
 
 
 
-<script src="atomic-core/js/min/compiled.md.min.js"></script>
+<script src="atomic-core/js/min/compiled.min.js"></script>
 <script src="atomic-core/vendor/jquery-ui/jquery-ui.min.js"></script>
 
 
