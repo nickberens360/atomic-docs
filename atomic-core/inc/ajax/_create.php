@@ -6,9 +6,10 @@ global $Atomic;
 if( Atomic::getValue('form') === 'component-create' ){
 	require_once($Atomic::includePath() .'/inc/lib/Component.php');
 	$Component = new Component();
-	$created = $Component->create(Atomic::getValue('component'), Atomic::getValue('category'), Atomic::getValue('description'), Atomic::getValue('backgroundColor'));
-	echo json_encode($created);
+	$return = $Component->create(Atomic::getValue('component'), Atomic::getValue('category'), Atomic::getValue('description'), Atomic::getValue('backgroundColor'));
 }
 else {
-	echo 'couldn\'t tell which form';
+	$return = array('status' => false, 'message' => 'Form incorrectly accessed');
 }
+
+echo json_encode($return);

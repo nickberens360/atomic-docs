@@ -78,9 +78,19 @@ class Fllat extends Atomic {
 	 * @param array $data
 	 */
 	function rw($data) {
-		file_put_contents($this->file, json_encode($data));
+		$put = file_put_contents($this->file, json_encode($data));
 
-		return $data;
+		$return = array(
+			'status' => true,
+			'message' => 'Data written'
+		);
+
+		if (!$put){
+			$return['status'] = false;
+			$return['message'] = 'Error writing to file.';
+		}
+
+		return $return;
 	}
 
 	/**
