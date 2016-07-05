@@ -42,7 +42,7 @@ foreach ($categories as $category) {
 				<li class="aa_fileSection__file">
 					<a class="js-show-form" href="javascript: void(0)" data-category="<?= $category['category']; ?>"
 					   data-form="component-edit" data-component="<?= $component['component']; ?>">
-						<span class="fa fa-pencil-square-o"></span>
+						<!--<span class="fa fa-pencil-square-o"></span>-->
 					</a>
 					<a href="atomic-core/?v=<?= $category['category']; ?>#<?= $component['component']; ?>"><?= $component['component']; ?></a>
 				</li>
