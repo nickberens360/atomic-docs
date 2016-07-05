@@ -1,8 +1,17 @@
 <?php include("head.php"); ?>
 <?php
 require "fllat.php";
-$compdb = new Fllat("compdb");
-$catdb = new Fllat("catdb");
+require "../atomic-config.php";
+
+
+$config = getConfig();
+$dbPath = $config['dbPath'];
+if(!$dbPath){
+  $dbPath = "db";
+}
+
+$compdb = new Fllat("compdb",$dbPath);
+$catdb = new Fllat("catdb",$dbPath);
 
 
 $comp_data = $compdb->select(array());
