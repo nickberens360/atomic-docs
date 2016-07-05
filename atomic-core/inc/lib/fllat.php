@@ -13,7 +13,7 @@
  *
  */
 
-require_once dirname(__FILE__) . '/partial-mngr/classes/Atomic.php';
+require_once(Atomic::includePath() . '/Atomic.php');
 require "vendor/prequel.php";
 
 class Fllat extends Atomic {

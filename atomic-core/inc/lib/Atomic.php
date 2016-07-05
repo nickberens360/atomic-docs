@@ -11,6 +11,7 @@ class Atomic {
 	 * @var array
 	 */
 	public $config;
+	static $includePath;
 
 	/**
 	 * Atomic constructor.
@@ -28,6 +29,10 @@ class Atomic {
 		$this->config['categoryDirectoryName'] = 'categories';
 		$this->config['categoryDirectory'] = $this->config['basePath'] . '/' . $this->config['categoryDirectoryName']; //markup file ext. E.G. html, twig, etc...
 		$this->config['filenamePrefix'] = '_';
+	}
+
+	static function includePath(){
+		return dirname(__FILE__) . '/../..';
 	}
 
 	/**

@@ -1,11 +1,11 @@
 <?php
 
-require_once dirname(__FILE__) . '/Atomic.php';
+require_once(Atomic::includePath() . '/inc/lib/Atomic.php');
 require_once dirname(__FILE__) . '/File/FileScss.php';
 require_once dirname(__FILE__) . '/File/FileCategory.php';
 require_once(dirname(__FILE__) . '/../../fllat.php');
-require_once(dirname(__FILE__) . '/../../lib/FllatCategory/FllatCategory.php');
-require_once dirname(__FILE__) .'/Atomic.php';
+require_once(dirname(__FILE__) . '/../lib/FllatCategory/FllatCategory.php');
+require_once dirname(__FILE__) . '/Atomic.php';
 
 class Category extends Atomic {
 
