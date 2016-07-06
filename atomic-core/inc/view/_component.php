@@ -24,7 +24,13 @@ $content = $Component->getContents($component['component'], $component['category
 	<p class="compNotes"><span contenteditable="true" class="content-editable" data-name="description"><?= $component['description'] ?></span></p>
 
 	<div class="component" style="background-color:<?= $backgroundColor; ?>">
-		<?= $content['markup'] ?>
+
+
+		<?/*= $content['markup'] */?>
+
+		<iframe id="partial-viewport" src="atomic-core/partial.php?comp-name=<?= $component['component']; ?>&cat-name=<?= $component['category']; ?>" sandbox="allow-same-origin allow-scripts"></iframe>
+
+
 	</div>
 
 	<div>
