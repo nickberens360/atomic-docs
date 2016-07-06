@@ -47,6 +47,12 @@ class FileComponent extends File {
 		return parent::openFile($path);
 	}
 
+	public function rename($component, $newName, $category){
+		$file = $this->pathPhp($component, $category);
+		$newFile = $this->pathPhp($newName, $category);
+		return parent::rename($file, $newFile);
+	}
+
 	/**
 	 * @param $filename
 	 * @param $directory

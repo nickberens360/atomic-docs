@@ -29,3 +29,29 @@ $('.atomic-editable-input').click(function() {
 	$(this).css('display','none');
 
 });
+
+var updateWait = null;
+
+$(function(){
+
+	$('body').on('keyup', '.content-editable', function(e){
+		var $this = $(this);
+		var data = {
+			component: $this.data('component'),
+			category: $this.data('category'),
+			key: $this.data('key'),
+			oldValue: $this.data('value'),
+			newValue: $this.text().trim()
+		};
+
+		clearTimeout(updateWait);
+		updateWait = null;
+
+		updateWait = setTimeout(function(){
+			console.log('update');
+			updateComponent(data)
+		}, 1000);
+
+	});
+
+});

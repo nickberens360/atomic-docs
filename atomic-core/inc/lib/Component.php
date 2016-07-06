@@ -88,6 +88,19 @@ class Component extends Atomic {
 
 	}
 
+	public function update($component, array $data){
+		$FllatComponent = new FllatComponent();
+		$FllatComponent->updateName($component, $data);
+		$nameUpdated = $this->updateName($component, $data['newValue'], $data['category']);
+
+		return $nameUpdated;
+	}
+
+	public function updateName($component, $newName, $category){
+		$FileComponent = new FileComponent();
+		return $FileComponent->rename($component, $newName, $category);
+	}
+
 
 	/**
 	 * @return int

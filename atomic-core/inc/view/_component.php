@@ -15,16 +15,19 @@ $content = $Component->getContents($component['component'], $component['category
 ?>
 
 
-<div id="<?= $component['component']; ?>-container" class="compWrap"><span id="<?= $component['component']; ?>" class="compTitle" ><span contenteditable="true"><?= $component['component']; ?></span> <span class="js-hideAll fa fa-eye"></span></span>
+<div id="<?= $component['component']; ?>-container" class="compWrap">
+	<p id="<?= $component['component']; ?>" class="content-editable compTitle" data-component="<?= $component['component']; ?>" data-category="<?= $component['category']; ?>" data-key="component" data-value="<?= $component['component']; ?>">
+		<span contenteditable="true"><?= $component['component']; ?></span>
+		<span class="js-hideAll fa fa-eye"></span>
+	</p>
 
-	<p class="compNotes"><span contenteditable="true"><?= $component['description'] ?></span></p>
+	<p class="compNotes"><span contenteditable="true" class="content-editable" data-name="description"><?= $component['description'] ?></span></p>
+
 	<div class="component" style="background-color:<?= $backgroundColor; ?>">
 		<?= $content['markup'] ?>
 	</div>
 
-
 	<div>
-
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs" role="tablist">
 			<li role="presentation" class="active"><a href="#<?= $component['component']; ?>-markup-tab" aria-controls="home" role="tab" data-toggle="tab">Markup</a></li>
