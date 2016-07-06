@@ -152,10 +152,19 @@ textarea.textChange {
     display: block;
   }
 }
-.dropzone-active-post{
+
+.dropzone-active-post {
   .aa_fileSection {
     display: block;
   }
 }
+[contenteditable="true"]:focus{
+	border:none;
+	outline:none;
+	//background: #eee;
+	padding:4px 8px;
+	box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.1);
+}
+
 
 

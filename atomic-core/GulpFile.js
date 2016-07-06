@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 
 var order = require("gulp-order");
 var concat = require('gulp-concat');
@@ -9,8 +10,10 @@ var uglify = require('gulp-uglify');
 
 gulp.task('styles', function() {
 	gulp.src('scss/**/*.scss')
+		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest('./css/'));
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest('./css/'))
 });
 
 var jsFiles = 'js/*.js',
