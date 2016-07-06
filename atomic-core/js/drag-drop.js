@@ -3,6 +3,11 @@ $(function () {
     $(".aa_fileSection").sortable({
         connectWith: ".aa_fileSection",
         start: function (event, ui) {
+
+            //$('.atoms-nav').addClass('atomic-nav-dragging');
+
+
+
             compVal = ui.item.find('a').attr("data-component");
             console.log(compVal);
 
@@ -19,5 +24,15 @@ $(function () {
         }
     });
 
+    $( ".aa_dir" ).droppable({
+        hoverClass: "dropzone-active",
+        activeClass: "dropzone-active",
+        drop: function( event, ui ) {
+            $( this )
+                .addClass( "dropzone-active-post" );
+        }
+
+
+    });
 
 });

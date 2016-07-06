@@ -1736,3 +1736,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     outline: none;
     padding: 4px 8px;
     box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1); }
+  .atomsWrap .dropzone-active .aa_fileSection {
+    display: block; }
+  .atomsWrap .dropzone-active-post .aa_fileSection {
+    display: block; }
