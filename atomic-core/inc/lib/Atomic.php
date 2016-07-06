@@ -212,8 +212,13 @@ class Atomic {
 	 * @param null $view
 	 */
 	public static function render($view = null) {
-		if($view){
-
+		$path = self::includePath() .'/inc/view/_'. $view .'.php';
+		
+		if(file_exists($path)){
+			include $path;
+		}
+		else {
+			var_dump('invalid file: '. $path);
 		}
 	}
 

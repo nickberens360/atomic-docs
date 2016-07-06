@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 0);
-ini_set('display_startup_errors', 0);
-error_reporting(0);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(1);
 
 require_once('required.php');
 
@@ -16,10 +16,11 @@ $viewCategory = Atomic::getValue('v');
 	<?php include("sidebar.php"); ?>
 
 	<div class="atoms-main">
-		<h1 class="atomic-h1"><span contenteditable="true">Need category name here</span></h1>
+		<h1 class="atomic-h1"><span contenteditable="true"><?= ucwords($viewCategory); ?></span></h1>
 		<?php
 		if( $viewCategory ) {
-			$Atomic->includeCategoryComponents($viewCategory);
+			Atomic::give('viewCategory', $viewCategory);
+			Atomic::render('category');
 		}
 		?>
 	</div>
