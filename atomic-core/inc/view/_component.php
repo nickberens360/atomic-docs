@@ -41,7 +41,7 @@ $content = $Component->getContents($component['component'], $component['category
 				<div class="atomic-editorInner">
 					<div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
 					<div class="atomic-editor" id="editor-markup-<?= $component['component']; ?>"><?= htmlspecialchars($content['markup'], ENT_QUOTES); ?></div>
-					<input class="new-val-input" type="hidden" name="new-markup-val" value="" />
+					<input class="new-val-input" type="hidden" name="new-markup-val-<?= $component['component']; ?>" value="" />
 				</div>
 				<div class="atomic-editor-footer">
 					<button type="submit" class="atomic-btns atomic-btn1">Save</button>
@@ -54,7 +54,7 @@ $content = $Component->getContents($component['component'], $component['category
 				<div class="atomic-editorInner">
 					<div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
 					<div class="atomic-editor" id="editor-styles-<?= $component['component']; ?>"><?= htmlspecialchars($content['scss'], ENT_QUOTES); ?></div>
-					<input type="hidden" name="new-styles-val" value="" />
+					<input type="hidden" name="new-styles-val-<?= $component['component']; ?>" value="" />
 				</div>
 				<div class="atomic-editor-footer">
 					<button type="submit" class="atomic-btns atomic-btn1">Save</button>
@@ -72,8 +72,13 @@ $content = $Component->getContents($component['component'], $component['category
 
 <script>
 
-	var editor = ace.edit("editor-markup-<?= $component['component']; ?>");
-	var code = editor.getValue();
+	var editormarkup<?= $component['component']; ?> = ace.edit("editor-markup-<?= $component['component']; ?>");
+	var code = editormarkup<?= $component['component']; ?>.getValue();
+
+	editormarkup<?= $component['component']; ?>.getSession().on('change', function () {
+		$("input[name=new-markup-val-<?= $component['component']; ?>]").val(editormarkup<?= $component['component']; ?>.getSession().getValue());
+		$("input[name=new-markup-val-<?= $component['component']; ?>]").val(editormarkup<?= $component['component']; ?>.getSession().getValue());
+	});
 
 
 	var code = code.replace(/<!--(.*?)-->/g, '');
@@ -82,16 +87,20 @@ $content = $Component->getContents($component['component'], $component['category
 	$('#<?= $component['component']; ?>-container').find(".copyBtn-markup").attr('data-clipboard-text', code);
 	new ZeroClipboard($('.copyBtn-markup'));
 
-	editor.getSession().setMode("ace/mode/html");
-	editor.setOptions({
+	editormarkup<?= $component['component']; ?>.getSession().setMode("ace/mode/html");
+	editormarkup<?= $component['component']; ?>.setOptions({
 		maxLines: Infinity
 	});
-	editor.setHighlightActiveLine(false);
-	editor.setShowPrintMargin(false);
+	editormarkup<?= $component['component']; ?>.setHighlightActiveLine(false);
+	editormarkup<?= $component['component']; ?>.setShowPrintMargin(false);
 </script>
+
 <script>
-	var editor = ace.edit("editor-styles-<?= $component['component']; ?>");
-	var code = editor.getValue();
+	var editorstyles<?= $component['component']; ?> = ace.edit("editor-styles-<?= $component['component']; ?>");
+	var code = editorstyles<?= $component['component']; ?>.getValue();
+	editorstyles<?= $component['component']; ?>.getSession().on('change', function () {
+		$("input[name=new-styles-val-<?= $component['component']; ?>]").val(editorstyles<?= $component['component']; ?>.getSession().getValue());
+	});
 
 	var code = code.replace(/\/\*(.*?)\*\//g, '');
 	var code = code.trim();
@@ -99,10 +108,10 @@ $content = $Component->getContents($component['component'], $component['category
 	$('#<?= $component['component']; ?>-container').find(".copyBtn-styles").attr('data-clipboard-text', code);
 	new ZeroClipboard($('.copyBtn-styles'));
 
-	editor.getSession().setMode("ace/mode/scss");
-	editor.setOptions({
+	editorstyles<?= $component['component']; ?>.getSession().setMode("ace/mode/scss");
+	editorstyles<?= $component['component']; ?>.setOptions({
 		maxLines: Infinity
 	});
-	editor.setHighlightActiveLine(false);
-	editor.setShowPrintMargin(false);
+	editorstyles<?= $component['component']; ?>.setHighlightActiveLine(false);
+	editorstyles<?= $component['component']; ?>.setShowPrintMargin(false);
 </script>
