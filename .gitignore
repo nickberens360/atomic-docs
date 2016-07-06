@@ -3,3 +3,4 @@ atomic-core/node_modules/
 prepros.cfg
 *.log
 src/
+atomic-core/db/
