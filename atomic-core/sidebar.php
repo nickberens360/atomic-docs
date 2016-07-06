@@ -28,14 +28,14 @@ $current_page = Atomic::getValue('v', '/');
 		<!-- <span class="atoms-side_hide">Hide Sidebar</span> -->
 
 		<nav>
-			<div class="atoms-nav">
+			<ul class="atoms-nav">
 				<?php include("inc/view/atomic-nav.php"); ?>
 				<li class="catAdd">
 					<a class="aa_js-actionOpen aa_actionBtn" href="atomic-core/categories/_catActions.php">
 						<span class="fa fa-plus"></span> Add / Delete
 					</a>
 				</li>
-			</div>
+			</ul>
 
 		</nav>
 

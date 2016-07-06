@@ -17,16 +17,23 @@ $categories = $FllatCategory->select();
 
 foreach ($categories as $category) {
 	?>
-	<div class="aa_dir <?php if ($current_page == $category['category']) {echo "active ";} ?>">
-
+	<li class="aa_dir <?php if ($current_page == $category['category']) {
+		echo "active ";
+	} ?>">
 		<div class="aa_dir__dirNameGroup">
 			<i class="aa_dir__dirNameGroup__icon  fa fa-folder-o"></i>
-			<a class="aa_dir__dirNameGroup__name" href="atomic-core/?v=<?= $category['category']; ?>"><?= $category['category']; ?></a>
+			<a class="aa_dir__dirNameGroup__name"
+			   href="atomic-core/?v=<?= $category['category']; ?>"><?= $category['category']; ?></a>
 		</div>
 
-		<a class="aa_addFile aa_js-actionOpen aa_actionBtn js-show-form" href="javascript: void(0);" data-form="component-new" data-category="<?= $category['category']; ?>"> <span class="fa fa-plus"></span> Add Component</a>
-
 		<ul class="aa_fileSection">
+			<li class="aa_addFileItem">
+				<a class="aa_addFile aa_js-actionOpen aa_actionBtn js-show-form"
+				   href="javascript: void(0);" data-form="component-new"
+				   data-category="<?= $category['category']; ?>">
+					<span class="fa fa-plus"></span> Add Component</a>
+			</li>
+
 			<?php
 			$components = $FllatComponent->where('category', $category['category']);
 
@@ -42,8 +49,8 @@ foreach ($categories as $category) {
 				<?php
 			}
 			?>
-		</ul>
 
-	</div>
+		</ul>
+	</li>
 	<?php
 }
