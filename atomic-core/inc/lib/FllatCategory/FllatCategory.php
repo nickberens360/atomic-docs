@@ -20,6 +20,34 @@ class FllatCategory extends Fllat {
 	}
 
 	/**
+	 * @return array
+	 */
+	public function select() {
+		$categories = parent::select();
+
+		return $this->order($categories);
+	}
+
+	/**
+	 * @param array  $key
+	 * @param string $val
+	 * @param bool   $order
+	 *
+	 * @return array
+	 */
+	public function where($key, $val, $order = true) {
+		$columns = array();
+
+		$categories = parent::where($columns, $key, $val);
+
+		if( $order ) {
+			return $this->order($categories);
+		}
+
+		return $categories;
+	}
+
+	/**
 	 * Associative array of:
 	 *  array(
 	 *      'name' => $name,
@@ -47,16 +75,6 @@ class FllatCategory extends Fllat {
 	public function count(){
 		return parent::count();
 	}
-	
-	/**
-	 * @return array
-	 */
-	public function select() {
-		$categories = parent::select();
-
-		return $this->order($categories);
-	}
-
 
 //	public function update() {
 //

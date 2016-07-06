@@ -25,7 +25,7 @@ class FllatComponent extends Fllat {
 	 * @return array
 	 */
 	public function select($cols) {
-		return parent::select();
+		return parent::select($cols);
 	}
 	
 	/**
@@ -77,9 +77,18 @@ class FllatComponent extends Fllat {
 	}
 
 
-//	public function update() {
-//
-//	}
+	public function updateName($component, array $data) {
+		$index = parent::index('component', $component);
+		$row = $this->where('component', $data['component']);
+		$row['component'] = $data['newValue'];
+
+		if( $index ) {
+			parent::update($index, $row);
+		}
+		else {
+			return array('status' => false, 'message' => 'Component not found.');
+		}
+	}
 //
 //	public function delete() {
 //

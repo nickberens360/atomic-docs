@@ -125,6 +125,22 @@ class File extends Atomic {
 		fclose($fileHandle);
 	}
 
+	function rename($file, $newFile){
+		$return = array(
+			'status' => true,
+			'message' => 'File renamed.',
+		);
+
+		$renamed = rename($file, $newFile);
+
+		if( !$renamed ){
+			$return['status'] = false;
+			$return['message'] = 'File rename failed.';
+		}
+
+		return $return;
+	}
+
 	/**
 	 * Remove a file
 	 *
