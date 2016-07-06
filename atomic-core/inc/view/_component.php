@@ -77,7 +77,6 @@ $content = $Component->getContents($component['component'], $component['category
 
 	editormarkup<?= $component['component']; ?>.getSession().on('change', function () {
 		$("input[name=new-markup-val-<?= $component['component']; ?>]").val(editormarkup<?= $component['component']; ?>.getSession().getValue());
-		$("input[name=new-markup-val-<?= $component['component']; ?>]").val(editormarkup<?= $component['component']; ?>.getSession().getValue());
 	});
 
 
