@@ -1,6 +1,5 @@
 .idea/
 atomic-core/node_modules/
-atomic-core/db/*
 prepros.cfg
 *.log
 src/
