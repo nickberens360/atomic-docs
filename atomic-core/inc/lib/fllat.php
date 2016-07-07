@@ -28,10 +28,11 @@ class Fllat extends Atomic {
 	 * @param string $name name of the database
 	 * @param string $path directory of the database file
 	 */
-	function init($name, $path = "db") {
+	function init($name) {
 		$this->name = $name;
-		$this->path = $path;
-		$this->go($path . "/" . $this->name . '.dat');
+		$this->path = $this->config['dbPath'];
+		
+		$this->go($this->path . "/" . $this->name . '.dat');
 	}
 
 	/**

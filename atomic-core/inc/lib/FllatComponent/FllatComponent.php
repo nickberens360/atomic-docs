@@ -16,7 +16,7 @@ class FllatComponent extends Fllat {
 	 */
 	public function __construct() {
 		parent::__construct();
-		parent::init($this->table, $this->config['atomicCorePath'] . '/db');
+		parent::init($this->table);
 	}
 
 	/**

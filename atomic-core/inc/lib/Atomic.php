@@ -24,6 +24,8 @@ class Atomic {
 		$this->config['basePath'] = dirname(__FILE__) . '/../../../src';
 		$this->config['atomicCorePath'] = dirname(__FILE__) . '/../..';
 		$this->config['atomicCoreUrl'] = '/atomic-core';
+		$this->config['dbDir'] = 'db';
+		$this->config['dbPath'] = $this->config['basePath'] . '/' . $this->config['dbDir'];
 		$this->config['preCssDirectoryName'] = 'scss'; //Preprocessed directory name. E.G sass, less
 		$this->config['preCssDir'] = $this->config['basePath'] . '/' . $this->config['preCssDirectoryName']; // Preprocessed full directory path
 		$this->config['preCssExt'] = 'scss'; //prerocessed file ext. E.G. scss, sass, less
