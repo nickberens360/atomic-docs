@@ -1,6 +1,6 @@
 {
   "name": "atomic-core",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "ERROR: No README data found!",
   "main": "index.js",
   "scripts": {
@@ -11,11 +11,14 @@
   "license": "BSD-2-Clause",
   "devDependencies": {
     "gulp": "~3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "~2.6.0",
     "gulp-install": "~0.6.0",
     "gulp-jshint": "~2.0.1",
+    "gulp-minify-css": "^1.2.4",
     "gulp-order": "^1.1.1",
-    "gulp-rename": "~1.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.6",
     "gulp-sass": "~2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "~1.5.4",
