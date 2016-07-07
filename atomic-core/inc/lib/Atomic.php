@@ -21,8 +21,8 @@ class Atomic {
 	 */
 	function __construct() {
 		$this->config = array();
-		$this->config['basePath'] = dirname(__FILE__) . '/../../../src';
-		$this->config['atomicCorePath'] = dirname(__FILE__) . '/../..';
+		$this->config['basePath'] = realpath(dirname(__FILE__) . '/../../../src');
+		$this->config['atomicCorePath'] = realpath(dirname(__FILE__) . '/../..');
 		$this->config['atomicCoreUrl'] = '/atomic-core';
 		$this->config['dbDir'] = 'db';
 		$this->config['dbPath'] = $this->config['basePath'] . '/' . $this->config['dbDir'];
