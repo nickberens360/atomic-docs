@@ -7386,7 +7386,8 @@ $(".atoms-side_show-small").on('click', function(event) {
 /**
  * Created by michael on 6/23/16.
  */
-var AJAX_URL = '/atomic-core/inc/ajax';
+var AJAX_URL = 'atomic-core/inc/ajax';
+
 
 (function ($) {
 

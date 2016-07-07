@@ -32,3 +32,12 @@ if( $_GET['form'] === 'component-edit'){
 		<input type="hidden" name="action" value="<?= $_GET['form']; ?>"/>
 	</form>
 </div>
+
+<script>
+	$(".bgColor").spectrum({
+		allowEmpty: true,
+		preferredFormat: "hex",
+		showInput: true,
+		//showAlpha: true
+	});
+</script>
