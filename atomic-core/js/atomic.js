@@ -6,9 +6,9 @@ var AJAX_URL = '/atomic-core/inc/ajax';
 (function ($) {
 
 	$('body').on('submit', '#form-create-file', function (event) {
+		event.preventDefault();
 		createComponent($(this));
 		// stop the form from submitting the normal way and refreshing the page
-		event.preventDefault();
 	});
 
 	$('body').on('submit', '#form-update-file', function (e) {
