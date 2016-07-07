@@ -8032,9 +8032,7 @@ function openForm(formName, formObj) {
  */
 function createComponent(formObj) {
 	reDirect = formObj.find('input[name=compDir]').val();
-	// remove the error text
-	// get the form data
-	// there are many ways to get this data using jQuery (you can use the class or id also)
+
 	var formData = {
 		'category': formObj.find('input[name=compDir]').val(),
 		'component': $('input[name=fileCreateName]').val(),
@@ -8042,34 +8040,28 @@ function createComponent(formObj) {
 		'backgroundColor': formObj.find('input[name=bgColor]').val(),
 		'form': 'component-create'
 	};
-	// process the form
+
 	$.ajax({
-		type: 'GET', // define the type of HTTP verb we want to use (POST for our form)
-		url: AJAX_URL + '/_component.php', // the url where we want to POST
-		data: formData, // our data object
+		type: 'GET',
+		url: AJAX_URL + '/_component.php',
+		data: formData,
 		encode: true,
 		success: function (d) {
-			// log data to the console so we can see
-			console.log(d);
-
+			console.log('success');
 			var data = $.parseJSON(d);
-			// here we will handle errors and validation messages
-			if (!data.success) {
-				// handle errors for name ---------------
 
+			if (!data.success) {
 				$('.aa_errorBox__message').html("");
 				$('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.message + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
 
 			} else {
-				//redirect here
 				window.location = 'atomic-core/' + reDirect + '.php';
-				// usually after form submission, you'll want to redirect
 			}
 		},
-		// using the fail promise callback
 		error: function (data) {
-			// show any errors
-			// best to remove for production
+			console.log('error');
+		},
+		complete: function(data) {
 			console.log(data);
 		}
 	});
