@@ -42,7 +42,7 @@ function openForm(formName, formObj) {
 				'right': '0px'
 			});
 		}
-	})
+	});
 }
 
 /**

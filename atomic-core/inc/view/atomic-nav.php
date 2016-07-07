@@ -29,7 +29,7 @@ foreach ($categories as $category) {
 		<ul class="aa_fileSection">
 			<li class="aa_addFileItem">
 				<a class="aa_addFile aa_js-actionOpen aa_actionBtn js-show-form"
-				   href="javascript: void(0);" data-form="component-new"
+				   href="#" data-form="component-new"
 				   data-category="<?= $category['category']; ?>">
 					<span class="fa fa-plus"></span> Add Component</a>
 			</li>
