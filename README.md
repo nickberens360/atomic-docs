@@ -13,6 +13,14 @@ Documentaion can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>
 2. Configure your preprocessor to output scss/main.scss to css/main.css.
 3. Go to http://localhost/atomic-docs/atomic-core/index.php and get started.
 
+##Dependencies
+1. Gulp
+from terminal (Ubuntu)  
+
+```bash
+npm install gulp-sass gulp-sourcemaps gulp-order gulp-concat gulp-rename gulp-uglify
+```
+
 ##Document
 Have full documentaion to hand off to other teams, internal or external.
 
