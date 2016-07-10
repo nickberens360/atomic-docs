@@ -1,5 +1,7 @@
 <?php
 
+require_once(Atomic::includePath() . '/../atomic-config.php');
+
 /**
  * Created by PhpStorm.
  * User: michael
@@ -20,21 +22,32 @@ class Atomic {
 	 * Atomic constructor.
 	 */
 	function __construct() {
-		$this->config = array();
-		$this->config['basePath'] = realpath(dirname(__FILE__) . '/../../../src');
-		$this->config['atomicCorePath'] = realpath(dirname(__FILE__) . '/../..');
-		$this->config['atomicCoreUrl'] = '/atomic-core';
-		$this->config['dbDir'] = 'db';
-		$this->config['dbPath'] = $this->config['basePath'] . '/' . $this->config['dbDir'];
-		$this->config['preCssDirectoryName'] = 'scss'; //Preprocessed directory name. E.G sass, less
-		$this->config['preCssDir'] = $this->config['basePath'] . '/' . $this->config['preCssDirectoryName']; // Preprocessed full directory path
-		$this->config['preCssExt'] = 'scss'; //prerocessed file ext. E.G. scss, sass, less
-		$this->config['componentExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
-		$this->config['componentDirectory'] = $this->config['basePath'] . '/components';
-		$this->config['categoryDirectoryName'] = 'categories';
-		$this->config['categoryDirectory'] = $this->config['basePath'] . '/' . $this->config['categoryDirectoryName']; //markup file ext. E.G. html, twig, etc...
-		$this->config['filenamePrefix'] = '_';
+		$this->config = array_merge($this->defaultConfig(),getConfig());
 	}
+
+	/**
+	 * Build default config array
+	 *
+	 * @return array
+	 */
+	static function defaultConfig(){
+		$config = array();
+		$config['basePath'] = realpath(dirname(__FILE__) . '/../../../src');
+		$config['atomicCorePath'] = realpath(dirname(__FILE__) . '/../..');
+		$config['atomicCoreUrl'] = '/atomic-core';
+		$config['dbDir'] = 'db';
+		$config['dbPath'] = $config['basePath'] . '/' . $config['dbDir'];
+		$config['preCssDirectoryName'] = 'scss'; //Preprocessed directory name. E.G sass, less
+		$config['preCssDir'] = $config['basePath'] . '/' . $config['preCssDirectoryName']; // Preprocessed full directory path
+		$config['preCssExt'] = 'scss'; //prerocessed file ext. E.G. scss, sass, less
+		$config['componentExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
+		$config['componentDirectory'] = $config['basePath'] . '/components';
+		$config['categoryDirectoryName'] = 'categories';
+		$config['categoryDirectory'] = $config['basePath'] . '/' . $config['categoryDirectoryName']; //markup file ext. E.G. html, twig, etc...
+		$config['filenamePrefix'] = '_';
+		return $config;
+	}
+
 
 	/**
 	 * @return string
@@ -215,7 +228,7 @@ class Atomic {
 	 */
 	public static function render($view = null) {
 		$path = self::includePath() .'/inc/view/_'. $view .'.php';
-		
+
 		if(file_exists($path)){
 			include $path;
 		}
