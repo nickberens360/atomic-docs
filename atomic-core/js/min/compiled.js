@@ -7453,6 +7453,7 @@ function createComponent(formObj) {
 		encode: true,
 		success: function (d) {
 			console.log('success');
+			console.log(d);
 			var data = $.parseJSON(d);
 
 			if (!data.success) {

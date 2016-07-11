@@ -37,7 +37,7 @@ class FileScss extends File {
 		$commentString = '/*' . $this->config['preCssDirectoryName'] . '/' . $category . '/_' . $file . '*/';
 		$mainBody = "\n\n." . $filename . " {\n\n}";
 		$content = $commentString . $mainBody;
-
+		
 		$created = parent::createFile($fullFilePath, $content);
 
 		if (!$created['status']) {
