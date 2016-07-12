@@ -5,9 +5,9 @@ error_reporting(1);
 
 require_once('required.php');
 
-include("head.php");
-
 $viewCategory = Atomic::getValue('v');
+
+include("head.php");
 ?>
 	<body class="atoms">
 
