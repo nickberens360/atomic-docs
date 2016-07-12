@@ -1,11 +1,11 @@
 
 $(function () {
     $(".aa_fileSection").sortable({
+        items: ".aa_fileSection__file",
         connectWith: ".aa_fileSection",
         start: function (event, ui) {
 
             //$('.atoms-nav').addClass('atomic-nav-dragging');
-
 
 
             compVal = ui.item.find('a').attr("data-component");
