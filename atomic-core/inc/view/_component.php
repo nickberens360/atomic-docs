@@ -75,14 +75,16 @@ $content = $Component->getContents($component['component'], $component['category
 
 
 
-
+<?php
+$jsComponentName = str_replace(array('-',' '), '_', $component['component']);
+?>
 <script>
 
-	var editormarkup<?= $component['component']; ?> = ace.edit("editor-markup-<?= $component['component']; ?>");
-	var code = editormarkup<?= $component['component']; ?>.getValue();
+	var editormarkup_<?= $jsComponentName; ?> = ace.edit("editor-markup-<?= $component['component']; ?>");
+	var code = editormarkup_<?= $jsComponentName; ?>.getValue();
 
-	editormarkup<?= $component['component']; ?>.getSession().on('change', function () {
-		$("input[name=new-markup-val-<?= $component['component']; ?>]").val(editormarkup<?= $component['component']; ?>.getSession().getValue());
+	editormarkup_<?= $jsComponentName; ?>.getSession().on('change', function () {
+		$("input[name=new-markup-val-<?= $component['component']; ?>]").val(editormarkup_<?= $jsComponentName; ?>.getSession().getValue());
 	});
 
 
@@ -92,19 +94,19 @@ $content = $Component->getContents($component['component'], $component['category
 	$('#<?= $component['component']; ?>-container').find(".copyBtn-markup").attr('data-clipboard-text', code);
 	new ZeroClipboard($('.copyBtn-markup'));
 
-	editormarkup<?= $component['component']; ?>.getSession().setMode("ace/mode/html");
-	editormarkup<?= $component['component']; ?>.setOptions({
+	editormarkup_<?= $jsComponentName; ?>.getSession().setMode("ace/mode/html");
+	editormarkup_<?= $jsComponentName; ?>.setOptions({
 		maxLines: Infinity
 	});
-	editormarkup<?= $component['component']; ?>.setHighlightActiveLine(false);
-	editormarkup<?= $component['component']; ?>.setShowPrintMargin(false);
+	editormarkup_<?= $jsComponentName; ?>.setHighlightActiveLine(false);
+	editormarkup_<?= $jsComponentName; ?>.setShowPrintMargin(false);
 </script>
 
 <script>
-	var editorstyles<?= $component['component']; ?> = ace.edit("editor-styles-<?= $component['component']; ?>");
-	var code = editorstyles<?= $component['component']; ?>.getValue();
-	editorstyles<?= $component['component']; ?>.getSession().on('change', function () {
-		$("input[name=new-styles-val-<?= $component['component']; ?>]").val(editorstyles<?= $component['component']; ?>.getSession().getValue());
+	var editorstyles_<?= $jsComponentName; ?> = ace.edit("editor-styles-<?= $component['component']; ?>");
+	var code = editorstyles_<?= $jsComponentName; ?>.getValue();
+	editorstyles_<?= $jsComponentName; ?>.getSession().on('change', function () {
+		$("input[name=new-styles-val-<?= $component['component']; ?>]").val(editorstyles_<?= $jsComponentName; ?>.getSession().getValue());
 	});
 
 	var code = code.replace(/\/\*(.*?)\*\//g, '');
@@ -113,10 +115,10 @@ $content = $Component->getContents($component['component'], $component['category
 	$('#<?= $component['component']; ?>-container').find(".copyBtn-styles").attr('data-clipboard-text', code);
 	new ZeroClipboard($('.copyBtn-styles'));
 
-	editorstyles<?= $component['component']; ?>.getSession().setMode("ace/mode/scss");
-	editorstyles<?= $component['component']; ?>.setOptions({
+	editorstyles_<?= $jsComponentName; ?>.getSession().setMode("ace/mode/scss");
+	editorstyles_<?= $jsComponentName; ?>.setOptions({
 		maxLines: Infinity
 	});
-	editorstyles<?= $component['component']; ?>.setHighlightActiveLine(false);
-	editorstyles<?= $component['component']; ?>.setShowPrintMargin(false);
+	editorstyles_<?= $jsComponentName; ?>.setHighlightActiveLine(false);
+	editorstyles_<?= $jsComponentName; ?>.setShowPrintMargin(false);
 </script>
