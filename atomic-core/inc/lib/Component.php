@@ -92,9 +92,26 @@ class Component extends Atomic {
 		$FllatComponent = new FllatComponent();
 		$FllatComponent->updateName($component, $data);
 		$nameUpdated = $this->updateName($component, $data['newValue'], $data['category']);
-
 		return $nameUpdated;
 	}
+
+
+
+	public function updateCommentString($component, $newName, $category){
+
+		//functions from version 1
+
+		/*$oldString = '<!--components/'.$catName.'/'.$oldName.'.'.$compExt.'-->';
+		$newString = '<!--components/'.$catName.'/'.$fileName.'.'.$compExt.'-->';
+
+		$contents = file_get_contents('../../components/'.$catName.'/'.$oldName.'.'.$compExt.'');
+		$contents = str_replace($oldString, $newString , $contents);
+		$contents = file_put_contents('../../components/'.$catName.'/'.$oldName.'.'.$compExt.'', $contents);*/
+
+	}
+
+
+
 
 	public function updateName($component, $newName, $category){
 		$FileComponent = new FileComponent();
