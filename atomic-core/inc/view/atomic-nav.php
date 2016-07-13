@@ -19,7 +19,7 @@ foreach ($categories as $category) {
 	?>
 	<li class="aa_dir <?php if ($current_page == $category['category']) {
 		echo "active ";
-	} ?>">
+	} ?>" data-navitem="<?= $category['category']; ?>">
 		<div class="aa_dir__dirNameGroup">
 			<i class="aa_dir__dirNameGroup__icon  fa fa-folder-o"></i>
 			<a class="aa_dir__dirNameGroup__name"
@@ -39,11 +39,7 @@ foreach ($categories as $category) {
 
 			foreach ($components as $component) {
 				?>
-				<li class="aa_fileSection__file">
-					<a class="js-show-form" href="javascript: void(0)" data-category="<?= $category['category']; ?>"
-					   data-form="component-edit" data-component="<?= $component['component']; ?>">
-						<!--<span class="fa fa-pencil-square-o"></span>-->
-					</a>
+				<li class="aa_fileSection__file" data-component="<?= $component['component']; ?>" data-category="<?= $category['category']; ?>">
 					<a href="atomic-core/?v=<?= $category['category']; ?>#<?= $component['component']; ?>"><?= $component['component']; ?></a>
 				</li>
 				<?php
