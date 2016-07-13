@@ -27,12 +27,11 @@ foreach ($categories as $category) {
 		</div>
 
 		<ul class="aa_fileSection">
-			<li class="aa_addFileItem">
-				<a class="aa_addFile aa_js-actionOpen aa_actionBtn js-show-form"
-				   href="#" data-form="component-new"
-				   data-category="<?= $category['category']; ?>">
-					<span class="fa fa-plus"></span> Add Component</a>
-			</li>
+			<a class="aa_addFile aa_js-actionOpen aa_actionBtn js-show-form"
+									  href="#" data-form="component-new"
+									  data-category="<?= $category['category']; ?>">
+				<span class="fa fa-plus"></span> Add Component</a>
+
 
 			<?php
 			$components = $FllatComponent->where('category', $category['category']);

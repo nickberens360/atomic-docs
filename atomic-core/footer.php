@@ -59,8 +59,8 @@
 			console.log('New category: ' + navItemParent);
 		},
 		onEnd: function (/**Event*/evt) {
-			var oldPosition = evt.oldIndex -1;
-			var newPosition = evt.newIndex -1;
+			var oldPosition = evt.oldIndex;
+			var newPosition = evt.newIndex;
 
 			console.log('Old position: ' + oldPosition);
 			console.log('New position: ' + newPosition);
