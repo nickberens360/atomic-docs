@@ -7045,18 +7045,6 @@ return function (global, window, document, undefined) {
     };
 }((window.jQuery || window.Zepto || window), window, document);
 }));
-/*$( window ).resize(function() {
- sideHeight = $('.atoms-side').outerHeight();
- formHeight = $('.cat-form-group').outerHeight();
- oflowHeight = sideHeight - formHeight;
- console.log(oflowHeight);
- $('.atoms-overflow').css('height',oflowHeight);
- });
- sideHeight = $('.atoms-side').outerHeight();
- formHeight = $('.cat-form-group').outerHeight();
- oflowHeight = sideHeight - formHeight;
- $('.atoms-overflow').css('height',oflowHeight);*/
-
 
 $('.cat-form-group .fa').click(function() {
 	$(this).toggleClass('fa-minus-square-o fa-plus-square-o');
@@ -7595,13 +7583,21 @@ $(function(){
 
 });
 
+
+
+
+
+
+
+/*
+
 $(function () {
     $(".aa_fileSection").sortable({
         items: ".aa_fileSection__file",
         connectWith: ".aa_fileSection",
         start: function (event, ui) {
 
-            //$('.atoms-nav').addClass('atomic-nav-dragging');
+
 
 
             compVal = ui.item.find('a').attr("data-component");
@@ -7632,6 +7628,7 @@ $(function () {
     });
 
 });
+*/
 
 // //action drawer.js
 //
