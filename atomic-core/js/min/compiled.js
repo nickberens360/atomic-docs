@@ -7577,13 +7577,14 @@ $(function(){
 		var data = {
 			component: $this.data('component'),
 			category: $this.data('category'),
+			updateType: $this.data('update-type'),
 			key: $this.data('key'),
 			oldValue: $this.data('value'),
 			newValue: $this.text().trim()
 		};
 
 		clearTimeout(updateWait);
-		updateWait = null;
+		updateWait = null; 
 
 		updateWait = setTimeout(function(){
 			console.log('update');

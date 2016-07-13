@@ -88,16 +88,46 @@ class Component extends Atomic {
 
 	}
 
-	public function update($component, array $data){
+	/**
+	 * Update a component
+	 *
+	 * @param       $component name of the component
+	 * @param array $data key => value pair of data
+	 * @param array $where
+	 *
+	 * @return array
+	 */
+	public function update($component, array $data, $where = array(), $updateType = 'full') {
 		$FllatComponent = new FllatComponent();
-		$FllatComponent->updateName($component, $data);
-		$nameUpdated = $this->updateName($component, $data['newValue'], $data['category']);
-		return $nameUpdated;
+
+		switch ($updateType) {
+
+			case 'name':
+				$updated = $FllatComponent->updateName($component, $data, $where);
+				$updated[] = $this->updateName($component, $data['newValue'], $data['category']);
+				break;
+			
+			case 'description':
+				$updated = $FllatComponent->update($component, $data, $where);
+				break;
+
+			case 'markup':
+				
+				break;
+
+			case 'styles':
+				
+				break;
+
+			case 'full':
+			default:
+
+		}
+
+		return $updated;
 	}
 
-
-
-	public function updateCommentString($component, $newName, $category){
+	public function updateCommentString($component, $newName, $category) {
 
 		//functions from version 1
 
@@ -110,14 +140,11 @@ class Component extends Atomic {
 
 	}
 
-
-
-
-	public function updateName($component, $newName, $category){
+	public function updateName($component, $newName, $category) {
 		$FileComponent = new FileComponent();
+
 		return $FileComponent->rename($component, $newName, $category);
 	}
-
 
 	/**
 	 * @return int
