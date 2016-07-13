@@ -6,7 +6,7 @@
 <script src="atomic-core/js/min/compiled.min.js"></script>
 <!--<script src="atomic-core/vendor/jquery-ui/jquery-ui.min.js"></script>-->
 
-<script src="atomic-core/Sortable/jquery.fn.sortable.js"></script>
+<script src="atomic-core/newSort/jquery.fn.sortable.js"></script>
 
 
 <script>
