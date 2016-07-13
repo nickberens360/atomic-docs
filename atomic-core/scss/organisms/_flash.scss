@@ -1,0 +1,35 @@
+/*******************************
+
+        Flash Message
+
+******************************/
+
+.flashWrapper {
+	display: block;
+	position: fixed;
+	top: 5%;
+	text-align: center;
+	width: 100%;
+	z-index: 9999;
+}
+
+.flashMessage {
+	display: inline-block;
+	position: relative;
+	margin: 0 auto;
+	padding: 10px 30px;
+	text-align: center;
+	width: auto;
+	box-sizing: border-box;
+	cursor: pointer;
+
+	&.success {
+		background: #68bb5e;
+		color: #006100;
+	}
+
+	&.error {
+		background: #c50123;
+		color: #ffdfe5;
+	}
+}

@@ -3,7 +3,6 @@
  */
 var AJAX_URL = 'atomic-core/inc/ajax';
 
-
 (function ($) {
 
 	$('body').on('submit', '#form-create-file', function (event) {
@@ -101,6 +100,8 @@ function updateComponent(data) {
 
 			var data = $.parseJSON(d);
 
+			flash(data);
+
 			if (!data.success) {
 
 				$('.aa_errorBox__message').html("");
@@ -114,4 +115,76 @@ function updateComponent(data) {
 			console.log(data);
 		}
 	});
+}
+
+function fadeOutFlashWrapper(t) {
+	if (typeof t === 'undefined') {
+		t = 400;
+	}
+	$('.flashWrapper').fadeOut(t, function () {
+		$(this).remove();
+	});
+}
+
+function flash(obj, length, fadeLength) {
+	if ($('.flashWrapper').length > 0) {
+		$('.flashWrapper').remove();
+	}
+
+	$('<div />', {
+		class: 'flashWrapper'
+	}).appendTo('body');
+
+	var messages = '';
+
+	if (typeof obj === 'string') {
+		messages += '<div class="flashMessage pointer success" title="Click to dismiss">' + obj + '</div>';
+	}
+	else if (typeof obj === 'object' && Array.isArray(obj)) {
+
+		for (var i = 0; i < obj.length; i++) {
+			if (typeof (obj[i].class) === 'undefined' && typeof obj[i].status !== 'undefined') {
+				obj[i].class = obj[i].status ? 'success' : 'error';
+			}
+			if ((typeof obj[i].message !== 'undefined' && typeof obj[i].ignore === 'undefined') || (typeof obj[i].ignore !== 'undefined' && !obj[i].ignore)) {
+				messages += '<div class="flashMessage pointer ' + obj[i].class + '" title="Click to dismiss">' + obj[i].message + '</div>';
+			}
+		}
+
+	}
+	else {
+		if (typeof (obj.class) === 'undefined' && typeof obj.status !== 'undefined') {
+			obj.class = obj.status ? 'success' : 'error';
+		}
+		messages = '<div class="flashMessage pointer ' + obj.class + '" title="Click to dismiss">' + obj.message + '</div>';
+	}
+
+	$('.flashWrapper').append(messages);
+
+	if (typeof length !== 'undefined') {
+		if (!isNaN(length) && length > 0) {
+			if (typeof fadeLength === 'undefined') {
+				fadeLength = 500;
+			}
+			setTimeout(function () {
+				fadeOutFlashWrapper();
+			}, length);
+		}
+	}
+	$('.flashMessage').click(function () {
+		fadeOutFlashWrapper();
+	});
+
+}
+
+function closeFlash(t) {
+	if (typeof t === 'undefined') {
+		t = 500;
+	}
+	if ($('.flashWrapper').length > 0) {
+		$('.flashWrapper').fadeOut(t, function () {
+			$(this).remove();
+		});
+	}
+
 }
