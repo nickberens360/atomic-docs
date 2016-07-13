@@ -192,6 +192,10 @@ class Component extends Atomic {
 		Atomic::partial('component');
 	}
 
+	function show($component, $category){
+		include($this->pathPhp($component, $category));
+	}
+
 	/**
 	 * Build file path
 	 * Used for include writes and File* creation
