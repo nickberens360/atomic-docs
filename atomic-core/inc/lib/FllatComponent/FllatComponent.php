@@ -77,18 +77,22 @@ class FllatComponent extends Fllat {
 	}
 
 
-	public function updateName($component, array $data) {
+	public function update($component, array $data, $where = array()) {
 		$index = parent::index('component', $component);
-		$row = $this->where('component', $data['component']);
-		$row['component'] = $data['newValue'];
+		$row = $this->where('component', $where['component']);
+
+		foreach($data as $key => $val) {
+			$row[$key] = $val;
+		}
 
 		if( $index ) {
-			parent::update($index, $row);
+			return parent::update($index, $row);
 		}
 		else {
 			return array('status' => false, 'message' => 'Component not found.');
 		}
 	}
+
 //
 //	public function delete() {
 //

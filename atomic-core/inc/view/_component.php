@@ -1,5 +1,5 @@
 <?php
-require_once(Atomic::includePath() . '/inc/lib/Component.php');
+require_once(Atomic::includePath() .'/inc/lib/Component.php');
 global $Atomic;
 $Component = new Component();
 //$FllatComponent = new FllatComponent();
@@ -20,20 +20,21 @@ $content = $Component->getContents($component['component'], $component['category
 	   class="content-editable compTitle"
 	   data-component="<?= $component['component']; ?>"
 	   data-category="<?= $component['category']; ?>"
+	   data-update-type="name"
 	   data-key="component"
 	   data-value="<?= $component['component']; ?>">
 		<span contenteditable="true"><?= $component['component']; ?></span>
 		<span class="js-hideAll fa fa-eye"></span>
 	</p>
 
-	<p class="compNotes">
-		<span contenteditable="true" class="content-editable"
-		      data-component="<?= $component['component']; ?>"
-		      data-category="<?= $component['category']; ?>"
-		      data-key="description"
-		      data-value="<?= $component['component']; ?>"
-		      data-name="description"><?= $component['description'] ?></span>
-	</p>
+	<p class="compNotes"><span contenteditable="true"
+	                           class="content-editable"
+	                           data-component="<?= $component['component']; ?>"
+	                           data-category="<?= $component['category']; ?>"
+	                           data-update-type="description"
+	                           data-key="description"
+	                           data-value="<?= $component['description']; ?>"
+	                           data-name="description"><?= $component['description'] ?></span></p>
 
 	<div class="component" style="background-color:<?= $backgroundColor; ?>">
 
@@ -94,7 +95,7 @@ $content = $Component->getContents($component['component'], $component['category
 
 
 <?php
-$jsComponentName = str_replace(array('-', ' '), '_', $component['component']);
+$jsComponentName = str_replace(array('-',' '), '_', $component['component']);
 ?>
 <script>
 
