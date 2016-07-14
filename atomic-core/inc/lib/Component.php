@@ -103,8 +103,8 @@ class Component extends Atomic {
 		switch ($updateType) {
 
 			case 'name':
-				$updated = $FllatComponent->updateName($component, $data, $where);
-				$updated[] = $this->updateName($component, $data['newValue'], $data['category']);
+				$FllatComponent->update($component, $data, $where);
+				$updated = $this->updateName($component, $data['component'], $data['category']);
 				break;
 			
 			case 'description':
@@ -141,9 +141,30 @@ class Component extends Atomic {
 	}
 
 	public function updateName($component, $newName, $category) {
-		$FileComponent = new FileComponent();
+		$return = array(
+			'status' => true,
+			'message' => 'Files updated.'
+		);
 
-		return $FileComponent->rename($component, $newName, $category);
+		$FileComponent = new FileComponent();
+		$FileScss = new FileScss();
+		
+		$componentUpdated = $FileComponent->rename($component, $newName, $category);
+		$scssUpdated = $FileScss->rename($component, $newName, $category);
+		
+		if( !$componentUpdated['status'] && !$scssUpdated['status']){
+			$return['status'] = false;
+			$return['message'] = 'Failed to update '. $this->config['preCssExt'] . ' & '. $this->config['componentExt'] . ' filenames';
+		}
+		else if( !$componentUpdated['status'] ){
+			$return['status'] = false;
+			$return['message'] = 'Failed to update '. $this->config['preCssExt'] . ' filename';
+		}
+		else if( !$scssUpdated['status'] ){
+			$return['status'] = false;
+			$return['message'] = 'Failed to update '. $this->config['componentExt'] . ' filename';
+		}
+		return $return;
 	}
 
 	/**

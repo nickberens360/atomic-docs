@@ -16,7 +16,6 @@
 
 function file_force_contents($dir, $contents) {
 	$parts = explode('/', $dir);
-	var_dump($parts);
 	$file = array_pop($parts);
 	$dir = '';
 	foreach ($parts as $part) {

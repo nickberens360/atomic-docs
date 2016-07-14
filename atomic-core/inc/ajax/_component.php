@@ -10,12 +10,14 @@ if( Atomic::getValue('form') === 'component-create' ){
 }
 else if( Atomic::getValue('form') === 'component-update' ){
 	require_once($Atomic::includePath() .'/inc/lib/Component.php');
+
 	$Component = new Component();
 	$where = array(
 		'component' => Atomic::getValue('component')
 	);
 	$update = array(
-		Atomic::getValue('key') => Atomic::getValue('newValue')
+		Atomic::getValue('key') => Atomic::getValue('newValue'),
+		'category' => Atomic::getValue('category')
 	);
 
 	$return = $Component->update(Atomic::getValue('component'), $update, $where, Atomic::getValue('updateType'));

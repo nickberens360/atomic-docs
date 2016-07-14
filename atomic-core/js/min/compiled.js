@@ -7401,7 +7401,6 @@ var AJAX_URL = 'atomic-core/inc/ajax';
 	});
 
 	$('body').on('click', '.js-show-form', function () {
-		console.log('click');
 		openForm($(this).data('form'), $(this));
 	});
 
@@ -7455,11 +7454,8 @@ function createComponent(formObj) {
 			console.log(d);
 			var data = $.parseJSON(d);
 
-			if (!data.success) {
-				$('.aa_errorBox__message').html("");
-				$('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.message + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
-
-			} else {
+			flash(data);
+			if (data.success) {
 				window.location = 'atomic-core/' + reDirect + '.php';
 			}
 		},
@@ -7487,14 +7483,10 @@ function updateComponent(data) {
 
 			flash(data);
 
-			if (!data.success) {
-
-				$('.aa_errorBox__message').html("");
-				$('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.message + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
-
-			} else {
-				window.location = 'atomic-core/' + reDirect + '.php';
+			if( data.success ){
+				updateDataKey()
 			}
+
 		},
 		error: function (data) {
 			console.log(data);

@@ -97,6 +97,13 @@ class FileScss extends File {
 		return parent::openFile($path);
 	}
 
+	public function rename($component, $newName, $category){
+		$file = $this->pathScss($component, $category);
+		$newFile = $this->pathScss($newName, $category);
+		var_dump($newFile);
+		return parent::rename($file, $newFile);
+	}
+
 	/**
 	 * @TODO proper return of status message
 	 *

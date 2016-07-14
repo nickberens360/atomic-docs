@@ -89,7 +89,7 @@ class FllatComponent extends Fllat {
 			return parent::update($index, $row);
 		}
 		else {
-			return array('status' => false, 'message' => 'Component not found.');
+			return array('status' => false, 'message' => 'Component not found. '. $component);
 		}
 	}
 
