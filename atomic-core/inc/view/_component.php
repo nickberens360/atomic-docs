@@ -61,7 +61,11 @@ $content = $Component->getContents($component['component'], $component['category
 		<div class="tab-content">
 			<div role="tabpanel" class="tab-pane active" id="<?= $component['component']; ?>-markup-tab"
 			">
-			<form class="atomic-editorWrap">
+
+
+			
+
+			<form class="atomic-editorWrap" data-editorFormComp="<?= $component['component']; ?>" data-editorFormCat="<?= $component['category']; ?>">
 				<div class="atomic-editorInner">
 					<div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
 					<div class="atomic-editor"
@@ -74,6 +78,10 @@ $content = $Component->getContents($component['component'], $component['category
 					<span type="reset" class="js-close-editor atomic-btns atomic-btn2">Cancel</span>
 				</div>
 			</form>
+
+
+
+
 		</div>
 		<div role="tabpanel" class="tab-pane" id="<?= $component['component']; ?>-styles-tab">
 			<form class="atomic-editorWrap">
