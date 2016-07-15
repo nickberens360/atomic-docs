@@ -7083,6 +7083,8 @@ $(document).ready(function() {
 
 
 
+
+
 function showSideBar(){
    $(".atoms-side").velocity({
         translateX: "0",
@@ -7652,12 +7654,6 @@ $(function(){
 	});
 
 });
-
-
-
-
-
-
 
 /*
 
