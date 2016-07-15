@@ -9,6 +9,19 @@
 <script src="atomic-core/newSort/jquery.fn.sortable.js"></script>
 
 
+
+
+<script>
+
+	$('.partial-viewport').load(function() {
+		this.style.height = this.contentWindow.document.body.offsetHeight+20 + 'px';
+	});
+
+</script>
+
+
+
+
 <script>
 
 
@@ -69,6 +82,11 @@
 
 </script>
 
+
+
+
+
+
 <style>
 	.sortable-ghost{
 		opacity:0;
@@ -76,24 +94,7 @@
 
 </style>
 
-<!--<style>
-	.js-show-form{
-		display: none;
-	}
-</style>
 
-
-<script>
-	$(function() {
-
-
-
-		$( ".aa_fileSection" ).droppable();
-
-
-
-	});
-</script>-->
 
 
 

@@ -3,6 +3,7 @@
 
 
 $errors         = array();      // array to hold validation errors
+
 $data           = array();      // array to pass back data
 
 
@@ -10,17 +11,15 @@ $data           = array();      // array to pass back data
 $compName = $_POST["compName"];
 $catName = $_POST["catName"];
 $newCode = $_POST["newCode"];
+$codeDest = $_POST["codeDest"];
 
 
 
-echo $compName;
-echo $catName;
-echo $newCode;
 
 
 
 if ($newCode == ""){
-    $errors['name'] = 'Name is required.';
+    $errors['name'] = 'No change detected';
 }
 
 
@@ -38,12 +37,22 @@ if ( ! empty($errors)) {
 
 
 
-    function editorCodeUpdate($compName,$catName, $newCode){
-        $file = '../../src/components/'.$catName.'/'.$compName.'.php';
-        file_put_contents($file, $newCode);
+    function editorCodeUpdate($compName,$catName, $newCode, $codeDest){
+
+        if($codeDest == "components"){
+            $compName = $compName.'.php';
+        }
+        if($codeDest == "scss"){
+            $compName = '_'.$compName.'.scss';
+        }
+
+
+
+        $path = '../../src/'.$codeDest.'/'.$catName.'/'.$compName;
+        file_put_contents($path, $newCode);
     }
 
-    editorCodeUpdate($compName,$catName, $newCode);
+    editorCodeUpdate($compName,$catName, $newCode, $codeDest);
 
 
 

@@ -7529,6 +7529,10 @@ $('.atomic-editorWrap').submit(function (event) {
 
     var compName = $(this).data('editorformcomp');
     var catName = $(this).data('editorformcat');
+    var codeDest = $(this).data('codedest');
+
+
+
     var newCode = $(this).find('.new-val-input').val();
 
 
@@ -7537,6 +7541,7 @@ $('.atomic-editorWrap').submit(function (event) {
         'compName': compName,
         'catName': catName,
         'newCode': newCode,
+        'codeDest': codeDest,
     };
 
     $.ajax({
@@ -7552,29 +7557,33 @@ $('.atomic-editorWrap').submit(function (event) {
             console.log(data);
             // here we will handle errors and validation messages
             if (!data.success) {
-                // handle errors for name ---------------
 
 
+                console.log('not success');
 
 
 
                 if (data.errors.name) {
-                    console.log(data.errors.name);
+                    $('.aa_errorBox__message').html("");
+                    $('.atoms-main').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
                 }
-
 
             } else {
 
-                //redirect here
-                window.location = 'atomic-core/?v=molecules';
+                    $('.aa_errorBox__message').html("");
+                    $('.atoms-main').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.message + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
 
-                // usually after form submission, you'll want to redirect
+
+                console.log(data.message );
+
+                window.location = 'atomic-core/?v=atoms';
             }
         })
         // using the fail promise callback
         .fail(function (data) {
             // show any errors
             // best to remove for production
+            console.log('failed');
             console.log(data);
         });
     // stop the form from submitting the normal way and refreshing the page
