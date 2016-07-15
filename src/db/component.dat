@@ -5,5 +5,19 @@
     "description": "",
     "backgroundColor": "",
     "order": 0
+  },
+  {
+    "component": "new",
+    "category": "molecules",
+    "description": "",
+    "backgroundColor": "",
+    "order": 1
+  },
+  {
+    "component": "more",
+    "category": "organisms",
+    "description": "",
+    "backgroundColor": "",
+    "order": 2
   }
 ]
