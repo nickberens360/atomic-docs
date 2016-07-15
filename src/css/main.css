@@ -1,0 +1,8 @@
+/* You may rearrange the order of imports if necessary for your scss to compile*/
+.logo {
+  color: red;
+}
+
+.test {
+  color: green;
+}
