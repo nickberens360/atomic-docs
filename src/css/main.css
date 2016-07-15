@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* You may rearrange the order of imports if necessary for your scss to compile*/
 .logo {
   color: red;
@@ -6,8 +5,11 @@
 
 .test {
   color: green;
-=======
+}
+
+/*scss/atoms/_asdf.scss*/
 .test {
   color: red;
->>>>>>> editor
 }
+
+/*scss/atoms/_a new one.scss*/

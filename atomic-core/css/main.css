@@ -2170,3 +2170,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 .atomsWrap .partial-viewport {
   width: 100%;
 }
+.atomsWrap .sortable-ghost {
+  opacity: 0;
+}

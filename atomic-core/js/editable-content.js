@@ -16,6 +16,8 @@
 
 });*/
 
+
+
 $('.atomic-editable-input').click(function() {
 
 	var notesContent = $(this).text();

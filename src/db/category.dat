@@ -1,13 +1,5 @@
 [
   {
-    "category": "organisms",
-    "order": 2
-  },
-  {
-    "category": "molecules",
-    "order": 1
-  },
-  {
     "category": "atoms",
     "order": 0
   }
