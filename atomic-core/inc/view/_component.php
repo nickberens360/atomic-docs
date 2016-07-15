@@ -41,9 +41,10 @@ $content = $Component->getContents($component['component'], $component['category
 
 		<? /*= $content['markup'] */ ?>
 
-		<iframe id="partial-viewport"
+
+		<iframe class="partial-viewport myIframe"
 		        src="atomic-core/partial.php?component=<?= $component['component']; ?>&category=<?= $component['category']; ?>"
-		        sandbox="allow-same-origin allow-scripts"></iframe>
+		        sandbox="allow-same-origin allow-scripts  allow-modals"  frameborder="0" scrolling="no"></iframe>
 
 
 	</div>
@@ -61,7 +62,11 @@ $content = $Component->getContents($component['component'], $component['category
 		<div class="tab-content">
 			<div role="tabpanel" class="tab-pane active" id="<?= $component['component']; ?>-markup-tab"
 			">
-			<form class="atomic-editorWrap">
+
+
+
+
+			<form class="atomic-editorWrap" data-editorFormComp="<?= $component['component']; ?>" data-editorFormCat="<?= $component['category']; ?>" data-codeDest="components">
 				<div class="atomic-editorInner">
 					<div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
 					<div class="atomic-editor"
@@ -74,14 +79,18 @@ $content = $Component->getContents($component['component'], $component['category
 					<span type="reset" class="js-close-editor atomic-btns atomic-btn2">Cancel</span>
 				</div>
 			</form>
+
+
+
+
 		</div>
 		<div role="tabpanel" class="tab-pane" id="<?= $component['component']; ?>-styles-tab">
-			<form class="atomic-editorWrap">
+			<form class="atomic-editorWrap" data-editorFormComp="<?= $component['component']; ?>" data-editorFormCat="<?= $component['category']; ?>" data-codeDest="scss">
 				<div class="atomic-editorInner">
 					<div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
 					<div class="atomic-editor"
 					     id="editor-styles-<?= $component['component']; ?>"><?= htmlspecialchars($content['scss'], ENT_QUOTES); ?></div>
-					<input type="hidden" name="new-styles-val-<?= $component['component']; ?>" value=""/>
+					<input class="new-val-input" type="hidden" name="new-styles-val-<?= $component['component']; ?>" value=""/>
 				</div>
 				<div class="atomic-editor-footer">
 					<button type="submit" class="atomic-btns atomic-btn1">Save</button>
@@ -141,3 +150,5 @@ $jsComponentName = str_replace(array('-',' '), '_', $component['component']);
 	editorstyles_<?= $jsComponentName; ?>.setHighlightActiveLine(false);
 	editorstyles_<?= $jsComponentName; ?>.setShowPrintMargin(false);
 </script>
+
+

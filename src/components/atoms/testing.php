@@ -1,4 +1,2 @@
-<!--categories/atoms/testing-->
-
-<section class='testing'>testing</section>
+<div class="test">Testing editor!</div>
 
