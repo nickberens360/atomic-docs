@@ -19,15 +19,9 @@ echo $newCode;
 
 
 
-
-
-if ($_POST['newCode'] == ""){
+if ($newCode == ""){
     $errors['name'] = 'Name is required.';
 }
-
-
-
-
 
 
 // return a response ===========================================================
@@ -43,7 +37,6 @@ if ( ! empty($errors)) {
     // DO ALL YOUR FORM PROCESSING HERE
 
 
-    /**/
 
     function editorCodeUpdate($compName,$catName, $newCode){
         $file = '../../src/components/'.$catName.'/'.$compName.'.php';
@@ -56,15 +49,20 @@ if ( ! empty($errors)) {
 
 
 
-
-
-
-
-
-
     // show a message of success and provide a true success variable
     $data['success'] = true;
     $data['message'] = 'Success!';
 }
 // return all our data to an AJAX call
 echo json_encode($data);
+
+?>
+
+
+
+
+
+
+
+
+

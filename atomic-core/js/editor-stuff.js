@@ -55,9 +55,6 @@ $('.atomic-editorWrap').submit(function (event) {
     })
         // using the done promise callback
         .done(function (data) {
-
-
-
             // log data to the console so we can see
             console.log(data);
             // here we will handle errors and validation messages
@@ -65,23 +62,19 @@ $('.atomic-editorWrap').submit(function (event) {
                 // handle errors for name ---------------
 
 
-                if (data.errors.exists) {
 
-                }
 
 
                 if (data.errors.name) {
                     console.log(data.errors.name);
-                    alert('yo');
                 }
+
 
             } else {
 
-
-                alert('worked');
-
                 //redirect here
-                window.location = 'atomic-core/?v=atoms';
+                window.location = 'atomic-core/?v=molecules';
+
                 // usually after form submission, you'll want to redirect
             }
         })
