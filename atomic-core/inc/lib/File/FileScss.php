@@ -6,7 +6,7 @@
  * Date: 6/17/16
  * Time: 11:19 AM
  */
-require_once(Atomic::includePath() .'/inc/lib/File/FileHelper.php');
+require_once(Atomic::includePath() . '/inc/lib/File/FileHelper.php');
 
 /**
  * Class FileScss
@@ -18,6 +18,25 @@ class FileScss extends File {
 	 */
 	public function __construct() {
 		parent::__construct();
+	}
+
+	public function getCommentString($component, $category) {
+		return '/*' . $this->config['preCssDirectoryName'] . '/' . $category . '/_' . $component . '*/';
+	}
+
+	public function updateCommentString($old, $new, $category) {
+		require_once(Atomic::includePath() . '/inc/lib/Component.php');
+		$Component = new Component();
+		$contents = $Component->getContents($new, $category);
+		$style = $contents['scss'];
+
+		if ($style) {
+			$contents = str_replace($this->getCommentString($old, $category), $this->getCommentString($new, $category), $style);
+
+			return $this->write($this->pathScss($new, $category), $contents);
+		}
+
+		return array('status' => false, 'message' => 'Could not find component. Comment string not update.');
 	}
 
 	/**
@@ -34,7 +53,7 @@ class FileScss extends File {
 
 		$fullFilePath = $fullPath . '/' . '_' . $file;
 
-		$commentString = '/*' . $this->config['preCssDirectoryName'] . '/' . $category . '/_' . $file . '*/';
+		$commentString = $this->getCommentString($filename, $category);
 		$mainBody = "\n\n." . $filename . " {\n\n}";
 		$content = $commentString . $mainBody;
 		
@@ -97,11 +116,20 @@ class FileScss extends File {
 		return parent::openFile($path);
 	}
 
-	public function rename($component, $newName, $category){
+	public function rename($component, $newName, $category) {
 		$file = $this->pathScss($component, $category);
 		$newFile = $this->pathScss($newName, $category);
-		var_dump($newFile);
-		return parent::rename($file, $newFile);
+		$rename = parent::rename($file, $newFile);
+
+		if ($rename['status']) {
+			$comment = $this->updateCommentString($component, $newName, $category);
+
+			if (!$comment['status']) {
+				$rename['message'] = $comment['message'];
+			}
+		}
+
+		return $rename;
 	}
 
 	/**
@@ -113,7 +141,7 @@ class FileScss extends File {
 	 * @return array
 	 */
 	public function writeImportStatement($file, $category = null) {
-		if( $category === null ){
+		if ($category === null) {
 			$importString = "@import " . '"' . $file . '/' . $file . '";';
 			$importString = "\n$importString";
 

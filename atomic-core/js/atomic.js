@@ -12,7 +12,8 @@ var AJAX_URL = 'atomic-core/inc/ajax';
 	});
 
 	$('body').on('submit', '#form-update-file', function (e) {
-		updateComponent($(this));
+		var $this = $(this);
+		updateComponent($this);
 	});
 
 	$('body').on('click', '.js-show-form', function () {
@@ -83,7 +84,7 @@ function createComponent(formObj) {
 	});
 }
 
-function updateComponent(data) {
+function updateComponent(data, callback) {
 	data.form = 'component-update';
 	console.log(data);
 	$.ajax({
@@ -91,15 +92,17 @@ function updateComponent(data) {
 		url: AJAX_URL + '/_component.php', // the url where we want to POST
 		data: data, // our data object
 		encode: true,
-		success: function (d) {
-			console.log(d);
+		success: function (e) {
+			console.log(e);
 
-			var data = $.parseJSON(d);
+			var d = $.parseJSON(e);
 
-			flash(data);
+			flash(d);
 
-			if( data.success ){
-				updateDataKey()
+			if( d.success ){
+				if( typeof callback === 'function'){
+					callback(d, data)
+				}
 			}
 
 		},

@@ -50,7 +50,10 @@ $(function(){
 
 		updateWait = setTimeout(function(){
 			console.log('update');
-			updateComponent(data)
+			updateComponent(data, function(e){
+				console.log( e );
+				updateDataKey();
+			})
 		}, 1000);
 
 	});

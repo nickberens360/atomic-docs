@@ -57,12 +57,8 @@ class Component extends Atomic {
 		$FileScss = new FileScss();
 		$FileComponent = new FileComponent();
 
-		$commentString = '<!--' . $this->config['categoryDirectoryName'] . '/' . $category . '/' . $component . '-->';
-		$mainBody = "\n\n<section class='{$component}'>" . $component . "</section>\n\n";
-		$content = $commentString . $mainBody;
-
 		$scss = $FileScss->create($component, $category);
-		$comp = $FileComponent->create($component, $category, $content);
+		$comp = $FileComponent->create($component, $category);
 //		$includeString = $this->createIncludeString($component, $category);
 
 
