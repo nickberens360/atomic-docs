@@ -1,35 +1,28 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(1);
+ini_set('display_errors', 'On');
+ini_set('display_startup_errors', 'On');
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 require_once('required.php');
 
-include("head.php");
+$router = new AltoRouter();
 
-$viewCategory = Atomic::getValue('v');
-?>
-	<body class="atoms">
+$router->map( 'GET', '/', function() {
+	print 'here';
+},'home');
 
 
-<div class="grid-row atoms-container">
-	<?php include("sidebar.php"); ?>
+$router->map( 'GET', '/atomic-core/', function() {
+	require(__DIR__ . '/inc/view/home.php');
+},'index');
 
-	<div class="atoms-main">
-		<h1 class="atomic-h1"><span contenteditable="true"><?= ucwords($viewCategory); ?></span></h1>
-		<?php
-		if( $viewCategory ) {
-			Atomic::give('viewCategory', $viewCategory);
-			Atomic::render('category');
-		}
-		?>
-	</div>
+// match current request url
+$match = $router->match();
 
-</div>
-<div class="aa_js-actionDrawer aa_actionDrawer">
-	<div class="aa_actionDrawer__wrap">
-		<div class="aa_js-actionClose aa_actionDrawer__close"><i class="fa fa-times fa-3x"></i></div>
-		<div id="js_actionDrawer__content" class="actionDrawer__content"></div>
-	</div>
-</div>
-<?php include("footer.php"); ?>
+// call closure or throw 404 status
+if( $match && is_callable( $match['target'] ) ) {
+	call_user_func_array( $match['target'], $match['params'] );
+} else {
+	// no route was matched
+	header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
+}
