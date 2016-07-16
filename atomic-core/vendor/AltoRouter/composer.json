@@ -1,0 +1,35 @@
+{
+   "name": "altorouter/altorouter",
+   "description": "A lightning fast router for PHP",
+   "keywords": ["router", "routing", "lightweight"],
+   "homepage": "https://github.com/dannyvankooten/AltoRouter",
+   "license": "MIT",
+   "authors": [
+      {
+         "name": "Danny van Kooten",
+         "email": "dannyvankooten@gmail.com",
+         "homepage": "http://dannyvankooten.com/"
+      },
+      {
+         "name": "Koen Punt",
+         "homepage": "https://github.com/koenpunt"
+      },
+      {
+         "name": "niahoo",
+         "homepage": "https://github.com/niahoo"
+      }
+   ],
+   "require": {
+      "php": ">=5.3.0"
+   },
+   "require-dev": {
+      "phpunit/phpunit": "4.5.*",
+      "codeclimate/php-test-reporter": "dev-master"
+   },
+   "autoload": {
+      "classmap": ["AltoRouter.php"]
+   },
+   "scripts": {
+     "test": "vendor/bin/phpunit"
+   }
+}

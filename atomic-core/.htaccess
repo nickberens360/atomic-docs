@@ -1,15 +1,10 @@
 <IfModule mod_rewrite.c>
-	#RewriteEngine On
-	#RewriteBase /atomic-core
-	#RewriteRule ^index\.php$ - [L]
+	RewriteEngine On
+	RewriteBase /atomic-core
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule . index.php [NC]
 
 	#Remove trailing slashes
-	#RewriteCond %{REQUEST_FILENAME} !-f
-	#RewriteRule ^(.*)/$ /$1 [L,R=301]
-
-
-	#RewriteCond $1 !\.(gif|jpe?g|png)$ [NC]
-	#RewriteCond %{REQUEST_FILENAME} !-f
-	#RewriteCond %{REQUEST_FILENAME} !-d
-	#RewriteRule ^(.+)/?$ ?v=$1 [NC,QSA,L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.*)/$ /$1 [L,R=301]
 </IfModule>
