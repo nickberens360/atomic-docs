@@ -14,23 +14,24 @@ $(".atoms-nav ").sortable({
 
      console.log('New category: ' + navItemParent);
      },*/
+
+
+
     onEnd: function (evt) {
-        var oldPosition = evt.oldIndex;
-        var newPosition = evt.newIndex;
         var itemEl = evt.item;  // dragged HTMLElement
         var catName = $(itemEl).closest('.aa_dir').data("navitem");
+        var formData = [];
+        $(".atoms-nav ").find('.aa_dir').each(function () {
+            formData.push({
+                name:'catName[]',
+                value:$(this).data("navitem"),
+            });
+        });
 
-        /*console.log('Category name: ' + catName);
-
-         console.log('Old Category position: ' + oldPosition);
-         console.log('New Category position: ' + newPosition);*/
 
 
-        var formData = {
-            'oldPosition': oldPosition,
-            'newPosition': newPosition,
-            'catName': catName
-        };
+
+
 
 
         $.ajax({

@@ -1,24 +1,25 @@
 <?php
 
-require_once('../inc/lib/Atomic.php');
+/*require_once('../inc/lib/Atomic.php');
 require_once(Atomic::includePath() . '/vendor/prequel.php');
-require_once(Atomic::includePath() . '/inc/lib/FllatCategory/FllatCategory.php');
-
-$errors         = array();      // array to hold validation errors
-
-$data           = array();      // array to pass back data
+require_once(Atomic::includePath() . '/inc/lib/fllat.php');*/
 
 
+global $catdb;
+
+require "fllat.php";
+
+$catdb = new Fllat("category");
 
 
+$errors = array();      // array to hold validation errors
 
-$oldPosition = $_POST["oldPosition"];
-$newPosition = $_POST["newPosition"];
+$data = array();      // array to pass back data
+
+
+/*$oldPosition = $_POST["oldPosition"];
+$newPosition = $_POST["newPosition"];*/
 $catName = $_POST["catName"];
-
-
-
-
 
 
 
@@ -29,10 +30,10 @@ $catName = $_POST["catName"];
 
 // return a response ===========================================================
 // if there are any errors in our errors array, return a success boolean of false
-if ( ! empty($errors)) {
+if (!empty($errors)) {
     // if there are items in our errors array, return those errors
     $data['success'] = false;
-    $data['errors']  = $errors;
+    $data['errors'] = $errors;
 } else {
     // if there are no errors process our form, then return a message
 
@@ -40,21 +41,35 @@ if ( ! empty($errors)) {
     // DO ALL YOUR FORM PROCESSING HERE
 
 
+    function navCatOrder($db, $catName)
+    {
 
-    function navCatOrder($oldPosition,$newPosition, $catName){
+        $selectDB = $db->select(array());
+
+
+        $newOrder = 0;
+
+        foreach ($catName as $cn) {
+
+            foreach ($selectDB as $id => $item) {
+                if ($item["category"] == $cn) {
+                    $update_order = array("order" => $newOrder);
+                    $db->update($id, $update_order);
+                    $newOrder++;
+                    break;
+                }
+
+            }
+
+        }
 
 
 
 
-
-        //echo 'yo';
 
     }
 
-    navCatOrder($oldPosition,$newPosition, $catName);
-
-
-
+    navCatOrder($catdb, $catName);
 
 
     // show a message of success and provide a true success variable
