@@ -42,6 +42,23 @@ $(".atoms-nav ").sortable({
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 $(".aa_fileSection").sortable({
     group: ".aa_fileSection ",
     filter: ".aa_addFileItem",
@@ -54,7 +71,7 @@ $(".aa_fileSection").sortable({
         console.log('New position: ' + newPosition);
     },
 
-    /*onStart: function (evt) {
+    onStart: function (evt) {
         var itemEl = evt.item;  // dragged HTMLElement
         var currentComp = $(itemEl).data("component");
         var currentCat = $(itemEl).data("category");
@@ -74,5 +91,6 @@ $(".aa_fileSection").sortable({
 
         console.log('Old position: ' + oldPosition);
         console.log('New position: ' + newPosition);
-    }*/
+    }
 });
+*/
