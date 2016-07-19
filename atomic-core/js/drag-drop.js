@@ -40,7 +40,28 @@ $(".atoms-nav ").sortable({
 
 
 
+/*var index=0;
+var categories=[];
 
+categories[index]={
+    category:"atoms",
+    components:[]
+};
+categories[index].components.push({component:"box"});
+categories[index].components.push({component:"more"});
+index++;
+
+categories[index]={
+    category:"atoms",
+    components:[]
+};
+categories[index].components.push({component:"box"});
+categories[index].components.push({component:"more"});
+index++;
+
+
+
+$.post('update_data.php',categories,function(res){},'json');*/
 
 
 

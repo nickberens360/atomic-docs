@@ -1,31 +1,22 @@
 [
   {
-    "component": "testing",
     "category": "atoms",
-    "description": "",
-    "backgroundColor": "",
-    "order": 0
+    "order":0,
+    "components":[
+      {"component":"box","order":0},
+      {"component":"more","order":1},
+      {"component":"item3","order":2}
+    ]
   },
   {
-    "component": "box",
-    "category": "atoms",
-    "description": "",
-    "backgroundColor": "",
-    "order": 3
-  },
-  {
-    "component": "new",
-    "category": "molecules",
-    "description": "",
-    "backgroundColor": "",
-    "order": 1
-  },
-  {
-    "component": "more",
     "category": "organisms",
-    "description": "",
-    "backgroundColor": "",
-    "order": 2
+    "order":1,
+    "components":[
+      {"component":"item2","order":0},
+      {"component":"item4","order":1},
+      {"component":"item5","order":2},
+    ]
   }
 ]
+
 
