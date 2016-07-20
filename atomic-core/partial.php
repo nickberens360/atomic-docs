@@ -2,6 +2,7 @@
 $comp = $_GET["component"];
 $cat = $_GET["category"];
 ?>
+<!Doctype html>
 <head lang="en">
     <meta charset="UTF-8">
     <title><?php echo $_GET["comp-name"]; ?></title>
