@@ -1,0 +1,14 @@
+[
+  {
+    "category": "modules",
+    "components":[
+      {"component":"box","description": "Box component description", "bgColor": "#000"}
+    ]
+  },
+  {
+    "category": "atoms",
+    "components":[
+      {"component":"test","description": "Test component description", "bgColor": "#000"}
+    ]
+  }
+]
