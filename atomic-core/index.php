@@ -148,7 +148,16 @@ foreach ($data as $data_value) {
                                        data-value="<?= $component['description']; ?>"
                                        data-name="description"><?php echo $component['description'] ?></span></p>
 
-            <div class="component" style="background-color:<?= $backgroundColor; ?>">
+            <div class="component <?php if($component['bgColor']) { ?>component-bg<?php } ?>" style="background-color:<?php echo $component['bgColor'] ?>">
+
+
+
+
+
+
+
+
+
 
 
 
