@@ -236,7 +236,7 @@ foreach ($data as $data_value) {
 
 
 <style>
-    .atomic-form {
+/*    .atomic-form {
         background: #a6d4da;
         max-width: 500px;
         padding: 10px;
@@ -268,9 +268,5 @@ foreach ($data as $data_value) {
         margin-right: 10px;
         display: inline-block;
     }
-
-    .partial-viewport {
-        width: 100%;
-        border:1px solid red;
-    }
+    */
 </style>

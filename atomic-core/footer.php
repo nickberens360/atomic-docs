@@ -51,7 +51,7 @@ foreach ($data_value['components'] as $component) {
 
 <?php } ?>
 
-
+<script src="atomic-core/newSort/jquery.fn.sortable.js"></script>
 <script src="atomic-core/js/min/compiled.min.js"></script>
 
 
