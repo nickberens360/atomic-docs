@@ -7,13 +7,7 @@ $cat = $_GET["category"];
     <title><?php echo $_GET["comp-name"]; ?></title>
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
     <!-- Custom css for every snippet. -->
-   <style type="text/css">
-        body, html {
-            height:auto;
-            overflow: hidden;
-            background:#eee;
-        }
-    </style>
+
 </head>
 <!--Add conditional if component not found-->
 <body>
