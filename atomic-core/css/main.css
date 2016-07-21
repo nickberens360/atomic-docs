@@ -2000,9 +2000,12 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   display: block;
   margin-bottom: 12px;
   color: #00AFF0;
-  border-left: 5px solid;
   padding-left: 3px;
   max-height: 25px;
+}
+.atomsWrap .compTitle a {
+  text-decoration: none;
+  color: inherit;
 }
 .atomsWrap .compTitle .fa {
   cursor: pointer;

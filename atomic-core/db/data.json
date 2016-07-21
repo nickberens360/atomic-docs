@@ -2,7 +2,7 @@
   {
     "category": "modules",
     "components":[
-      {"component":"box","description": "Box component description", "bgColor": ""},
+      {"component":"box","description": "Box component description", "bgColor": "#d57474"},
       {"component":"list","description": "List component description", "bgColor": ""}
     ]
   },

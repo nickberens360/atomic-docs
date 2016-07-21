@@ -7647,214 +7647,10 @@ $('.aa_fileSection__file .aa_actionBtn').click(function (event) {
 
 
 
-$('.aa_addFileItem .aa_actionBtn').click(function (event) {
-
-
-    event.preventDefault();
-    $.ajax(this.href, {
-        success: function (data) {
-            $('#js_actionDrawer__content').html($(data));
-
-            //Initialize color picker
-            $(".bgColor").spectrum({
-                allowEmpty: true,
-                preferredFormat: "hex",
-                showInput: true,
-                //showAlpha: true
-            });
-
-            //Submits create file data
-            $('#form-create-file').submit(function (event) {
-                reDirect = $('input[name=compDir]').val();
-                // remove the error text
-                // get the form data
-                // there are many ways to get this data using jQuery (you can use the class or id also)
-                var formData = {
-                    'compDir': $('input[name=compDir]').val(),
-                    'fileCreateName': $('input[name=fileCreateName]').val(),
-                    'compNotes': $('textarea[name=compNotes]').val(),
-                    'bgColor': $('input[name=bgColor]').val()
-                };
-                // process the form
-                $.ajax({
-                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-                        url: 'atomic-core/partial-mngr/create.php', // the url where we want to POST
-                        data: formData, // our data object
-                        dataType: 'json', // what type of data do we expect back from the server
-                        encode: true
-                    })
-                    // using the done promise callback
-                    .done(function (data) {
-                        // log data to the console so we can see
-                        console.log(data);
-                        // here we will handle errors and validation messages
-                        if (!data.success) {
-                            // handle errors for name ---------------
-
-
-                            if (data.errors.exists) {
-                                $('.aa_errorBox__message').html("");
-                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
-                            }
-
-
-                            if (data.errors.name) {
-                                $('.aa_errorBox__message').html("");
-                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
-                            }
-
-
-                        } else {
-
-                            //redirect here
-                            window.location = 'atomic-core/' + reDirect + '.php';
-                            // usually after form submission, you'll want to redirect
-                        }
-                    })
-                    // using the fail promise callback
-                    .fail(function (data) {
-                        // show any errors
-                        // best to remove for production
-                        console.log(data);
-                    });
-                // stop the form from submitting the normal way and refreshing the page
-                event.preventDefault();
-            });
-
-
-        },
-        error: function () {
-            //alert('did not worked!');
-        }
-    });
-});
 
 
 
-$('.catAdd .aa_actionBtn').click(function (event) {
 
-
-    event.preventDefault();
-    $.ajax(this.href, {
-        success: function (data) {
-            $('#js_actionDrawer__content').html($(data));
-
-
-            //Submits create category data
-            $('#form-create-category').submit(function (event) {
-                reDirect = $('input[name=dirName]').val();
-                // remove the error text
-                // get the form data
-                // there are many ways to get this data using jQuery (you can use the class or id also)
-                var formData = {
-                    'dirName': $('input[name=dirName]').val()
-                };
-                // process the form
-                $.ajax({
-                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-                        url: 'atomic-core/partial-mngr/create-category.php', // the url where we want to POST
-                        data: formData, // our data object
-                        dataType: 'json', // what type of data do we expect back from the server
-                        encode: true
-                    })
-                    // using the done promise callback
-                    .done(function (data) {
-                        // log data to the console so we can see
-                        console.log(data);
-                        // here we will handle errors and validation messages
-                        if (!data.success) {
-                            // handle errors for name ---------------
-
-
-                            if (data.errors.exists) {
-                                $('.aa_errorBox__message').html("");
-                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
-                            }
-
-
-                            if (data.errors.name) {
-                                $('.aa_errorBox__message').html("");
-                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
-                            }
-
-
-                        } else {
-
-                            //redirect here
-                            window.location = 'atomic-core/' + reDirect + '.php';
-                            // usually after form submission, you'll want to redirect
-                        }
-                    })
-                    // using the fail promise callback
-                    .fail(function (data) {
-                        // show any errors
-                        // best to remove for production
-                        console.log(data);
-                    });
-                // stop the form from submitting the normal way and refreshing the page
-                event.preventDefault();
-            });
-
-            //Submits delete category data
-            $('#form-delete-category').submit(function (event) {
-                // remove the error text
-                // get the form data
-                // there are many ways to get this data using jQuery (you can use the class or id also)
-                var formData = {
-                    'dirName': $('input[name=inputNameDelete]').val()
-                };
-                // process the form
-                $.ajax({
-                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-                        url: 'atomic-core/partial-mngr/delete-category.php', // the url where we want to POST
-                        data: formData, // our data object
-                        dataType: 'json', // what type of data do we expect back from the server
-                        encode: true
-                    })
-                    // using the done promise callback
-                    .done(function (data) {
-                        // log data to the console so we can see
-                        console.log(data);
-                        // here we will handle errors and validation messages
-                        if (!data.success) {
-                            // handle errors for name ---------------
-
-
-                            if (data.errors.exists) {
-                                $('.aa_errorBox__message').html("");
-                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
-                            }
-
-
-                            if (data.errors.name) {
-                                $('.aa_errorBox__message').html("");
-                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
-                            }
-
-
-                        } else {
-                            //redirect here
-                            window.location = 'atomic-core/index.php';
-                            // usually after form submission, you'll want to redirect
-                        }
-                    })
-                    // using the fail promise callback
-                    .fail(function (data) {
-                        // show any errors
-                        // best to remove for production
-                        console.log(data);
-                    });
-                // stop the form from submitting the normal way and refreshing the page
-                event.preventDefault();
-            });
-
-
-        },
-        error: function () {
-            //alert('did not worked!');
-        }
-    });
-});
 // JavaScript Document
 
 $(".js-hideAll").on('click', function(event) {
@@ -8119,6 +7915,313 @@ $('.atomic-editable-input').click(function() {
 });
 
 
+$('.catAdd .aa_actionBtn').click(function (event) {
+
+
+    event.preventDefault();
+    $.ajax(this.href, {
+        success: function (data) {
+            $('#js_actionDrawer__content').html($(data));
+
+
+            //Submits create category data
+            $('#form-create-category').submit(function (event) {
+                reDirect = $('input[name=dirName]').val();
+                // remove the error text
+                // get the form data
+                // there are many ways to get this data using jQuery (you can use the class or id also)
+                var formData = {
+                    'dirName': $('input[name=dirName]').val()
+                };
+                // process the form
+                $.ajax({
+                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                        url: 'atomic-core/partial-mngr/create-category.php', // the url where we want to POST
+                        data: formData, // our data object
+                        dataType: 'json', // what type of data do we expect back from the server
+                        encode: true
+                    })
+                    // using the done promise callback
+                    .done(function (data) {
+                        // log data to the console so we can see
+                        console.log(data);
+                        // here we will handle errors and validation messages
+                        if (!data.success) {
+                            // handle errors for name ---------------
+
+
+                            if (data.errors.exists) {
+                                $('.aa_errorBox__message').html("");
+                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+                            }
+
+
+                            if (data.errors.name) {
+                                $('.aa_errorBox__message').html("");
+                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+                            }
+
+
+                        } else {
+
+                            //redirect here
+                            window.location = 'atomic-core/' + reDirect + '.php';
+                            // usually after form submission, you'll want to redirect
+                        }
+                    })
+                    // using the fail promise callback
+                    .fail(function (data) {
+                        // show any errors
+                        // best to remove for production
+                        console.log(data);
+                    });
+                // stop the form from submitting the normal way and refreshing the page
+                event.preventDefault();
+            });
+
+            //Submits delete category data
+            $('#form-delete-category').submit(function (event) {
+                // remove the error text
+                // get the form data
+                // there are many ways to get this data using jQuery (you can use the class or id also)
+                var formData = {
+                    'dirName': $('input[name=inputNameDelete]').val()
+                };
+                // process the form
+                $.ajax({
+                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                        url: 'atomic-core/partial-mngr/delete-category.php', // the url where we want to POST
+                        data: formData, // our data object
+                        dataType: 'json', // what type of data do we expect back from the server
+                        encode: true
+                    })
+                    // using the done promise callback
+                    .done(function (data) {
+                        // log data to the console so we can see
+                        console.log(data);
+                        // here we will handle errors and validation messages
+                        if (!data.success) {
+                            // handle errors for name ---------------
+
+
+                            if (data.errors.exists) {
+                                $('.aa_errorBox__message').html("");
+                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+                            }
+
+
+                            if (data.errors.name) {
+                                $('.aa_errorBox__message').html("");
+                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+                            }
+
+
+                        } else {
+                            //redirect here
+                            window.location = 'atomic-core/index.php';
+                            // usually after form submission, you'll want to redirect
+                        }
+                    })
+                    // using the fail promise callback
+                    .fail(function (data) {
+                        // show any errors
+                        // best to remove for production
+                        console.log(data);
+                    });
+                // stop the form from submitting the normal way and refreshing the page
+                event.preventDefault();
+            });
+
+
+        },
+        error: function () {
+            //alert('did not worked!');
+        }
+    });
+});
+
+$('.js_add-edit-component').click(function (event) {
+
+    var catName = $(this).data('cat');
+    var compName = $(this).data('comp');
+
+
+
+
+
+    event.preventDefault();
+    $.ajax(this.href, {
+        success: function (data) {
+            $('#js_actionDrawer__content').html($(data));
+
+            if(compName){
+
+                var notesVal = $('#'+compName+'-container').find('.compNotes').data('description');
+                var bgColor = $('#'+compName+'-container').find('.component').data('color');
+
+                $('input[name=fileCreateName]').val(compName);
+                $('textarea[name=compNotes]').val(notesVal);
+
+                $(".bgColor").spectrum({
+                    allowEmpty: true,
+                    preferredFormat: "hex",
+                    showInput: true,
+                    color: bgColor,
+                });
+
+
+            }
+            else{
+                $(".bgColor").spectrum({
+                    allowEmpty: true,
+                    preferredFormat: "hex",
+                    showInput: true
+                });
+            }
+
+
+
+
+
+
+
+
+
+
+            //Submits create file data
+            $('#form-create-file').submit(function (event) {
+
+
+
+
+
+                var formData = {
+                    'compDir': catName,
+                    'fileCreateName': $('input[name=fileCreateName]').val(),
+                    'compNotes': $('textarea[name=compNotes]').val(),
+                    'bgColor': $('input[name=bgColor]').val()
+                };
+                // process the form
+                $.ajax({
+                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                        url: 'atomic-core/temp-process/temp-create-component.php', // the url where we want to POST
+                        data: formData, // our data object
+                        dataType: 'json', // what type of data do we expect back from the server
+                        encode: true
+                    })
+                    // using the done promise callback
+                    .done(function (data) {
+                        // log data to the console so we can see
+                        console.log(data);
+                        // here we will handle errors and validation messages
+                        if (!data.success) {
+                            // handle errors for name ---------------
+
+
+                            if (data.errors.exists) {
+                                $('.aa_errorBox__message').html("");
+                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+                            }
+
+
+                            if (data.errors.name) {
+                                $('.aa_errorBox__message').html("");
+                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+                            }
+
+
+                        } else {
+
+
+                            //window.location = 'atomic-core/' + reDirect + '.php';
+                        }
+                    })
+                    // using the fail promise callback
+                    .fail(function (data) {
+                        // show any errors
+                        // best to remove for production
+                        console.log(data);
+                    });
+                // stop the form from submitting the normal way and refreshing the page
+                event.preventDefault();
+            });
+
+
+        },
+        error: function () {
+            //alert('did not worked!');
+        }
+    });
+});
+$('.atomic-editorWrap').submit(function (event) {
+
+    console.log('yo');
+
+    event.preventDefault();
+
+
+    var compName = $(this).data('editorformcomp');
+    var catName = $(this).data('editorformcat');
+    var codeDest = $(this).data('codedest');
+
+
+    var newCode = $(this).find('.new-val-input').val();
+
+
+
+
+    var formData = {
+        'compName': compName,
+        'catName': catName,
+        'newCode': newCode,
+        'codeDest': codeDest,
+    };
+
+    $.ajax({
+            type: 'POST',
+            url: 'atomic-core/temp-processing/temp-editor.php',
+            data: formData,
+            dataType: 'json',
+            encode: true
+        })
+        // using the done promise callback
+        .done(function (data) {
+            // log data to the console so we can see
+            console.log(data);
+            // here we will handle errors and validation messages
+            if (!data.success) {
+
+
+                console.log('not success');
+
+
+
+                if (data.errors.name) {
+                    $('.aa_errorBox__message').html("");
+                    $('.atoms-main').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+                }
+
+            } else {
+
+                $('.aa_errorBox__message').html("");
+                $('.atoms-main').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.message + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+
+
+                console.log(data.message );
+
+                window.location = 'atomic-core/?cat='+catName;
+            }
+        })
+        // using the fail promise callback
+        .fail(function (data) {
+            // show any errors
+            // best to remove for production
+            console.log('failed');
+            console.log(data);
+        });
+    // stop the form from submitting the normal way and refreshing the page
+    event.preventDefault();
+});
 $(".atoms-nav ").sortable({
     group: ".aa_dir ",
     handle: ".aa_dir__dirNameGroup__name",

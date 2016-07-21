@@ -2,26 +2,6 @@
 <?php
 $json = file_get_contents('db/data.json');
 $data = json_decode($json, true);
-/*require "fllat.php";
-$compdb = new Fllat("compdb");
-$catdb = new Fllat("catdb");
-
-
-$comp_data = $compdb->select(array());
-$cat_data = $catdb->select(array());*/
-
-
-/*$json = file_get_contents('db/data.json');
-
-$data = json_decode($json, true);
-
-foreach ($data as $data_value) {
-    echo $data_value['category'].'<br/>';
-
-    foreach ($data as $data_value) {
-        echo $data_value['category'].'<br/>';
-    }
-}*/
 
 
 ?>
@@ -56,9 +36,6 @@ foreach ($data as $data_value) {
                 <ul class="atoms-nav">
 
 
-
-
-
                     <?php foreach ($data as $data_value) {
 
 
@@ -72,8 +49,9 @@ foreach ($data as $data_value) {
                             </div>
                             <ul class="aa_fileSection">
                                 <li class="aa_addFileItem">
-                                    <a class="aa_addFile aa_js-actionOpen aa_actionBtn"
-                                       href="atomic-core/categories/modules/form-modules.php">
+                                    <a class="aa_addFile js_add-edit-component aa_js-actionOpen aa_actionBtn"
+                                       href="atomic-core/temp-forms/temp-component-form.php"
+                                       data-cat="<?php echo $data_value['category'] ?>">
                                         <span class="fa fa-plus"></span> Add Component</a>
                                 </li>
 
@@ -94,8 +72,8 @@ foreach ($data as $data_value) {
 
 
                     <li class="catAdd"><a class="aa_js-actionOpen aa_actionBtn"
-                                          href="atomic-core/categories/_catActions.php"><span class="fa fa-plus"></span>
-                            Add / Delete Category</a></li>
+                                          href="atomic-core/temp-forms/temp-category-form.php"><span
+                                class="fa fa-plus"></span> Add / Delete Category</a></li>
 
 
                 </ul>
@@ -116,51 +94,36 @@ foreach ($data as $data_value) {
 
 
         <?php
-            $cat = $_GET['cat'];
+        $cat = $_GET['cat'];
+        global $cat;
+        $data = array_filter($data, function ($v) {
             global $cat;
-            $data = array_filter($data, function($v) {
-                global $cat;
-                return $v['category'] == $cat;
-            });
-            foreach ($data as $data_value) {
-            foreach ($data_value['components'] as $component) {
+            return $v['category'] == $cat;
+        });
+        foreach ($data as $data_value) {
+        foreach ($data_value['components'] as $component) {
         ?>
 
 
         <div id="<?php echo $component['component'] ?>-container" class="compWrap">
             <p id="<?php echo $component['component'] ?>"
-               class="content-editable compTitle"
-               data-component="<?php echo $component['component'] ?>"
-               data-category="<?php echo $data_value['category'] ?>"
-               data-update-type="name"
-               data-key="component"
-               data-value="<?php echo $component['component'] ?>">
-                <span contenteditable="true"><?php echo $component['component'] ?></span>
-                <span class="js-hideAll fa fa-eye"></span>
+               class="content-editable compTitle">
+                <span><?php echo $component['component'] ?></span>&nbsp;
+                <span class="js-hideAll fa fa-eye"></span>&nbsp;
+                <a class="fa fa fa-pencil-square-o js_add-edit-component aa_js-actionOpen aa_actionBtn"
+                   href="atomic-core/temp-forms/temp-component-form.php"
+                   data-cat="<?php echo $data_value['category'] ?>" data-comp="<?php echo $component['component'] ?>">
+
+                </a>
+
+
             </p>
 
-            <p class="compNotes"><span contenteditable="true"
-                                       class="content-editable"
-                                       data-component="<?php echo $component['component'] ?>"
-                                       data-category="<?php echo $data_value['category'] ?>"
-                                       data-update-type="description"
-                                       data-key="description"
-                                       data-value="<?= $component['description']; ?>"
-                                       data-name="description"><?php echo $component['description'] ?></span></p>
+            <p class="compNotes" data-description="<?= $component['description']; ?>"><?php echo $component['description'] ?></p>
 
-            <div class="component <?php if($component['bgColor']) { ?>component-bg<?php } ?>" style="background-color:<?php echo $component['bgColor'] ?>">
-
-
-
-
-
-
-
-
-
-
-
-
+            <div class="component <?php if ($component['bgColor']) { ?>component-bg<?php } ?>"
+                 data-color="<?php echo $component['bgColor'] ?>"
+                 style="background-color:<?php echo $component['bgColor'] ?>">
 
 
                 <iframe class="partial-viewport"
@@ -190,8 +153,9 @@ foreach ($data as $data_value) {
                         <div class="atomic-editorInner">
                             <div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
 
-                            <?php $markup_file_content = file_get_contents('../components/'.$data_value['category'].'/'.$component['component'].'.php', true); ?>
-                            <div class="atomic-editor" id="editor-markup-<?php echo $component['component'] ?>"><?= htmlspecialchars($markup_file_content, ENT_QUOTES); ?></div>
+                            <?php $markup_file_content = file_get_contents('../components/' . $data_value['category'] . '/' . $component['component'] . '.php', true); ?>
+                            <div class="atomic-editor"
+                                 id="editor-markup-<?php echo $component['component'] ?>"><?= htmlspecialchars($markup_file_content, ENT_QUOTES); ?></div>
 
                             <input class="new-val-input" type="hidden"
                                    name="new-markup-val-<?php echo $component['component'] ?>"
@@ -210,9 +174,10 @@ foreach ($data as $data_value) {
                             <div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
 
 
-                            <?php $style_file_content = file_get_contents('../scss/'.$data_value['category'].'/_'.$component['component'].'.scss', true); ?>
+                            <?php $style_file_content = file_get_contents('../scss/' . $data_value['category'] . '/_' . $component['component'] . '.scss', true); ?>
 
-                            <div class="atomic-editor" id="editor-styles-<?php echo $component['component'] ?>"><?= htmlspecialchars($style_file_content, ENT_QUOTES); ?></div>
+                            <div class="atomic-editor"
+                                 id="editor-styles-<?php echo $component['component'] ?>"><?= htmlspecialchars($style_file_content, ENT_QUOTES); ?></div>
 
                             <input class="new-val-input" type="hidden"
                                    name="new-styles-val-<?php echo $component['component'] ?>" value=""/>
@@ -235,12 +200,19 @@ foreach ($data as $data_value) {
 
 </div>
 </div>
+
+
 <div class="aa_js-actionDrawer aa_actionDrawer">
     <div class="aa_actionDrawer__wrap">
         <div class="aa_js-actionClose aa_actionDrawer__close"><i class="fa fa-times fa-3x"></i></div>
-        <div id="js_actionDrawer__content" class="actionDrawer__content"></div>
+        <div id="js_actionDrawer__content" class="actionDrawer__content">
+
+
+        </div>
     </div>
 </div>
+
+
 <?php include("footer.php"); ?>
 
 
