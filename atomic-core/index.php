@@ -244,38 +244,4 @@ foreach ($data as $data_value) {
 <?php include("footer.php"); ?>
 
 
-<style>
-/*    .atomic-form {
-        background: #a6d4da;
-        max-width: 500px;
-        padding: 10px;
-    }
 
-    .textChange {
-        width: 100%;
-        border: none;
-        font-size: 13px;
-        color: #7A7A7A;
-        margin-bottom: 0;
-    }
-
-    textarea.textChange {
-        height: 200px;
-        padding: 10px;
-    }
-
-    .atomic-form-input.textChange {
-        padding: 10px;
-    }
-
-    .atomic-form-footer {
-        text-align: right;
-        padding-top: 5px;
-    }
-
-    .atomic-form-footer .atomic-btns {
-        margin-right: 10px;
-        display: inline-block;
-    }
-    */
-</style>

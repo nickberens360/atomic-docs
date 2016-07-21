@@ -8237,6 +8237,8 @@ $(".aa_fileSection").sortable({
     }*/
 });
 
-$('.partial-viewport').load(function() {
-    this.style.height = this.contentWindow.document.body.offsetHeight+20 + 'px';
+$( document ).ready(function() {
+    $('.partial-viewport').load(function() {
+        this.style.height = this.contentWindow.document.body.offsetHeight+20 + 'px';
+    });
 });
