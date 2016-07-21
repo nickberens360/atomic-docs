@@ -26,11 +26,13 @@ var actionClose = [
 $(".aa_js-actionOpen").on('click', function (event) {
     event.preventDefault();
     $.Velocity.RunSequence(actionOpen);
+    $('body').addClass('sidebar-open');
 });
 
 $(".aa_js-actionClose").on('click', function (event) {
     event.preventDefault();
     $.Velocity.RunSequence(actionClose);
+    $('body').removeClass('sidebar-open');
 });
 
 

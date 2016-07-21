@@ -1,5 +1,7 @@
 .atoms-container{
 	height:100%;
+	opacity:1;
+	transition:opacity .25s;
 }
 
 
@@ -34,9 +36,9 @@ pre[class*="language-"] {
 }
 
 
-@media (max-width: 823px){ 
+@media (max-width: 823px){
   .atoms-main{
-    padding-left:20px !important ; 
+    padding-left:20px !important ;
     width:100%;
   }
 }

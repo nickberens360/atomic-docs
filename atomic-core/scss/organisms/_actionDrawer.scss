@@ -3,13 +3,12 @@
   top:0;
   right:-100%;
   bottom:0;
-  width:100%;
-  //background:#E3E4E3;
-  //background: rgba(227, 228, 227, 0.77);
   background: rgba(227, 228, 227, 1);
-  z-index:6000; 
+  z-index:6000;
   padding:50px;
   height:100%;
+  width:500px !important;
+  box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.19);
 }
 
 .aa_actionDrawer__wrap{
@@ -19,16 +18,16 @@
   top: 30%;
   transform: translateY(-30%);
   h1{
-   color:#7A7A7A; 
+   color:#7A7A7A;
   }
 }
 
 .actionDrawer__content{
-  
+
 }
 
 .aa_actionDrawer__close{
-  //position:absolute; 
+  //position:absolute;
   cursor:pointer;
   /* color: #F94B4B; */
   color: #B5B4B4;
@@ -40,7 +39,7 @@
 .aa_label{
   display: block;
   margin-bottom: 6px;
-  color:#7A7A7A; 
+  color:#7A7A7A;
   font-weight: normal;
 }
 
@@ -63,7 +62,7 @@
     }
   }
   .form-control{
-    
+
 
   }
 }
@@ -72,7 +71,7 @@
 }
 
 .aa_btn{
-  height:50px; 
+  height:50px;
   border: none;
   width: 100px;
   color: #fff;
@@ -93,19 +92,19 @@
   right:0;
   left:0;
   text-align:center;
-  background:#CD5151; 
+  background:#CD5151;
   color:#fff;
   font-weight:bold;
   .fa{
-    cursor:pointer; 
+    cursor:pointer;
   }
 }
 .aa_errorBox__message{
-  margin: 11px; 
+  margin: 11px;
 }
 
 
-@media (max-width: 824px){ 
+@media (max-width: 824px){
  .aa_actionDrawer{
     width: 100% !important;
     padding: 25px;

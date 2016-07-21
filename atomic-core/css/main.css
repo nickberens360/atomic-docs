@@ -1624,6 +1624,9 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 .atomsWrap .atoms-container {
   height: 100%;
+  opacity: 1;
+  -webkit-transition: opacity .25s;
+  transition: opacity .25s;
 }
 .atomsWrap .atoms-main {
   padding: 20px;
@@ -1806,11 +1809,13 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   top: 0;
   right: -100%;
   bottom: 0;
-  width: 100%;
   background: #e3e4e3;
   z-index: 6000;
   padding: 50px;
   height: 100%;
+  width: 500px !important;
+  -webkit-box-shadow: -4px 0px 5px 0px rgba(0, 0, 0, 0.19);
+  box-shadow: -4px 0px 5px 0px rgba(0, 0, 0, 0.19);
 }
 .atomsWrap .aa_actionDrawer__wrap {
   max-width: 500px;
@@ -2104,4 +2109,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 .atomsWrap .atomic-h1 .fa {
   color: inherit;
   text-decoration: none;
+}
+.atomsWrap .sidebar-open .atoms-container {
+  opacity: .2;
 }
