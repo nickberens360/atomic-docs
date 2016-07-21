@@ -1137,19 +1137,19 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
       height: 100%;
   }*/
   /****************************/
-  /* @media (min-width: 824px){ 
+  /* @media (min-width: 824px){
     .atoms-side{
-      top:0 !important; 
+      top:0 !important;
     }
     .atoms-side_show{
     }
   }
   
   
-  @media (max-width: 823px){ 
-     
+  @media (max-width: 823px){
+  
     .atoms-side{
-      width:100%; 
+      width:100%;
       height:auto;
       float:none;
       top:-100%;
@@ -1160,25 +1160,25 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   
   
    .atoms-side_show, .atoms-side_hide{
-      display:none; 
+      display:none;
     }
-    
+  
     .atoms-side_show-small, .smallOpen{
-      top:7px;  
+      top:7px;
       right:7px;
       display:block;
     }
      .aa_addFile {
-       display:none; 
+       display:none;
      }
     .aa_fileSection__file .fa {
        display: none;
     }
     .catAdd a {
-      display:none; 
+      display:none;
     }
     .atoms-nav{
-      margin:0; 
+      margin:0;
     }
   } */
 }
@@ -2100,4 +2100,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 .atomsWrap .sortable-ghost {
   opacity: 0;
+}
+.atomsWrap .atomic-h1 .fa {
+  color: inherit;
+  text-decoration: none;
 }

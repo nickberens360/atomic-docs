@@ -90,7 +90,9 @@ $data = json_decode($json, true);
 
 
     <div class="atoms-main">
-        <h1 id="modules" class="atomic-h1"><?php echo $_GET['cat']; ?></h1>
+        <h1 id="modules" class="atomic-h1"><?php echo $_GET['cat']; ?> <a class="fa fa fa-pencil-square-o js_add-edit-component aa_js-actionOpen aa_actionBtn" href="atomic-core/temp-forms/temp-category-form.php">
+
+            </a></h1>
 
 
         <?php
