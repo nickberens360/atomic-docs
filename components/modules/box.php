@@ -1,1 +1,1 @@
-<div class="box">Boxs</div>
+<div class="box">Boxes</div>

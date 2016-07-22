@@ -19,6 +19,8 @@ pre[class*="language-"] {
 	a{
 		text-decoration: none;
 		color:inherit;
+		display: inline-block;
+		vertical-align: middle;
 	}
   .fa{
     cursor:pointer;
@@ -155,12 +157,18 @@ textarea.textChange{
 .atomic-h1 .fa{
 	color: inherit;
 	text-decoration: none;
+	display: inline-block;
+	vertical-align: middle;
 
 }
 
+.atoms-container{
+	transition:padding .25s;
+}
 
 .sidebar-open{
 	.atoms-container{
-		opacity:.2;
+		opacity:.5;
+		//padding-right:500px;
 	}
 }

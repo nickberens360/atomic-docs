@@ -2,14 +2,14 @@
   {
     "category": "modules",
     "components":[
-      {"component":"box","description": "Box component description", "bgColor": "#d57474"},
+      {"component":"box","description": "Box component description", "bgColor": ""},
       {"component":"list","description": "List component description", "bgColor": ""}
     ]
   },
   {
     "category": "atoms",
     "components":[
-      {"component":"test","description": "Test component description", "bgColor": "#d9d9d9"}
+      {"component":"test","description": "Test component description", "bgColor": "#d57474"}
     ]
   }
 ]

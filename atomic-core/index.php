@@ -73,7 +73,7 @@ $data = json_decode($json, true);
 
                     <li class="catAdd"><a class="aa_js-actionOpen aa_actionBtn"
                                           href="atomic-core/temp-forms/temp-category-form.php"><span
-                                class="fa fa-plus"></span> Add / Delete Category</a></li>
+                                class="fa fa-plus"></span> Add Category</a></li>
 
 
                 </ul>
