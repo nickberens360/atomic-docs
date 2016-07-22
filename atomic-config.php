@@ -11,5 +11,7 @@ function getConfig() {
 
   $config['dbPath'] = 'db';
 
+  $config['functionsPathToRoot'] = '../';
+
   return $config;
 }

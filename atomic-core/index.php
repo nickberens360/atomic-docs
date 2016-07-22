@@ -45,6 +45,7 @@ $data = json_decode($json, true);
                             <div class="aa_dir__dirNameGroup">
                                 <i class="aa_dir__dirNameGroup__icon  fa fa-folder-o"></i>
                                 <a class="aa_dir__dirNameGroup__name"
+                                   data-cat="<?php echo $data_value['category'] ?>"
                                    href="atomic-core/?cat=<?php echo $data_value['category'] ?>"><?php echo $data_value['category'] ?></a>
                             </div>
                             <ul class="aa_fileSection">
@@ -58,10 +59,8 @@ $data = json_decode($json, true);
 
                                 <?php foreach ($data_value['components'] as $component) { ?>
 
-                                    <li class="aa_fileSection__file">
-                                        <!--<a class="aa_js-actionOpen aa_actionBtn fa fa-pencil-square-o" href="atomic-core/categories/<?php /*echo $cat_value['cat_name'] */ ?>/form-<?php /*echo $comp_value['comp_name'] */ ?>.php"></a>-->
+                                    <li class="aa_fileSection__file" data-comp="<?php echo $component['component'] ?>">
                                         <a href="atomic-core/?cat=<?php echo $data_value['category'] ?>#<?php echo $component['component'] ?>"><?php echo $component['component'] ?></a>
-
                                     </li>
                                 <?php } ?>
                             </ul>
@@ -71,13 +70,13 @@ $data = json_decode($json, true);
                     <?php } ?>
 
 
-                    <li class="catAdd"><a class="aa_js-actionOpen aa_actionBtn"
-                                          href="atomic-core/temp-forms/temp-category-form.php"><span
-                                class="fa fa-plus"></span> Add Category</a></li>
+
 
 
                 </ul>
-
+                <div class="catAdd"><a class="js_cat-add aa_js-actionOpen aa_actionBtn"
+                                      href="atomic-core/temp-forms/temp-category-form.php"><span
+                            class="fa fa-plus"></span> Add Category</a></div>
             </nav>
 
 
@@ -106,7 +105,7 @@ $data = json_decode($json, true);
         foreach ($data_value['components'] as $component) {
         ?>
 
-
+            <?php if ($component['component']) { ?>
         <div id="<?php echo $component['component'] ?>-container" class="compWrap">
             <p id="<?php echo $component['component'] ?>"
                class="content-editable compTitle">
@@ -192,12 +191,12 @@ $data = json_decode($json, true);
                 </div>
             </div>
         </div>
+            <?php } ?>
     </div>
+        <?php } ?>
 
+        <?php } ?>
 
-    <?php } ?>
-
-    <?php } ?>
 
 
 </div>

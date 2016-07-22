@@ -1,12 +1,3 @@
-@import "normalize";
-@import "prism";
-@import "spectrum-picker";
-.atomsWrap{
-@import "bootstrap/bootstrap";
-@import "utilities/utilities";
-@import "atoms/atoms";
-@import "molecules/molecules";
-@import "organisms/organisms";
-@import "cleanup";
-}
-
+@import "modules/_modules";
+@import "atoms/_atoms";
+@import "test/_test";
