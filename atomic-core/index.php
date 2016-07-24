@@ -3,6 +3,14 @@
 $json = file_get_contents('db/data.json');
 $data = json_decode($json, true);
 
+/*require "fllat.php";
+$compdb = new Fllat("compdb");
+$catdb = new Fllat("catdb");
+
+
+$comp_data = $compdb->select(array());
+$cat_data = $catdb->select(array());*/
+
 
 ?>
 <body class="atoms">
