@@ -50,7 +50,7 @@ $data = json_decode($json, true);
                             </div>
                             <ul class="aa_fileSection">
                                 <li class="aa_addFileItem">
-                                    <a class="aa_addFile js_add-edit-component aa_js-actionOpen aa_actionBtn"
+                                    <a class="aa_addFile js_add-edit-c omponent aa_js-actionOpen aa_actionBtn"
                                        href="atomic-core/temp-forms/temp-component-form.php"
                                        data-cat="<?php echo $data_value['category'] ?>">
                                         <span class="fa fa-plus"></span> Add Component</a>
