@@ -49,7 +49,7 @@ $cat_data = $catdb->select(array());
                             <ul class="aa_fileSection">
                                 <li class="aa_addFileItem">
                                     <a class="aa_addFile aa_js-actionOpen aa_actionBtn"
-                                       href="atomic-core/categories/modules/form-modules.php">
+                                       href="#">
                                         <span class="fa fa-plus"></span> Add Component</a>
                                 </li>
 
@@ -107,7 +107,7 @@ $cat_data = $catdb->select(array());
                         class="js-hideAll fa fa-eye"></span></span>
                 <p class="compNotes atomic-editable"><?php echo $comp_value['comp_notes'] ?> </p>
                 <div class="component">
-                    <iframe id="partial-viewport" src="atomic-core/partial.php?comp-name=<?php echo $comp_value['comp_name'] ?>" sandbox="allow-same-origin allow-scripts" onload="resizeIframe(this)"></iframe>
+                    <iframe id="partial-viewport" src="atomic-core/partial.php?comp-name=<?php echo $comp_value['comp_name'] ?>" sandbox="allow-same-origin allow-scripts"></iframe>
                 </div>
 
 
