@@ -11,11 +11,6 @@ $cat_data = $catdb->select(array());
 
 ?>
     <body class="atoms">
-    <script language="javascript" type="text/javascript">
-        function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-        }
-    </script>
 
 
 <div class="grid-row atoms-container">

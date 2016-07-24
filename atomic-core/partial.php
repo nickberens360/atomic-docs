@@ -18,7 +18,7 @@ $comp_data = array_values( $compdb->where(array(),"comp_name", $_GET["comp-name"
 
 
 ?>
-
+<!Doctype html>
 <head lang="en">
     <meta charset="UTF-8">
     <title><?php echo $_GET["comp-name"]; ?></title>
