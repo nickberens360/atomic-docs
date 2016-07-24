@@ -9,7 +9,7 @@
     "comp_sort_order": "20"
   },
   {
-    "comp_name": "boxes",
+    "comp_name": "box",
     "comp_notes": "This is a box",
     "comp_context_color": "",
     "comp_markup_path": "../components/modules/box.php",

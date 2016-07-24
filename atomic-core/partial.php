@@ -1,6 +1,7 @@
 <?php
-$comp = $_GET["component"];
-$cat = $_GET["category"];
+$comp = $_GET["comp-name"];
+$cat = $_GET["cat-name"];
+
 ?>
 <!Doctype html>
 <head lang="en">
