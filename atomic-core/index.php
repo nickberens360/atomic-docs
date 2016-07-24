@@ -1,16 +1,16 @@
 <?php include("head.php"); ?>
 <?php
-$json = file_get_contents('db/data.json');
-$data = json_decode($json, true);
+require "fllat.php";
+$compdb = new Fllat("compdb");
+$catdb = new Fllat("catdb");
+
+
+$comp_data = $compdb->select(array());
+$cat_data = $catdb->select(array());
 
 
 ?>
 <body class="atoms">
-<script language="javascript" type="text/javascript">
-    function resizeIframe(obj) {
-        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-    }
-</script>
 
 
 <div class="grid-row atoms-container">
@@ -35,48 +35,45 @@ $data = json_decode($json, true);
             <nav>
                 <ul class="atoms-nav">
 
+                    <?php foreach ($cat_data as $cat_value) {
 
-                    <?php foreach ($data as $data_value) {
-
-
+                        global $cat_value
                         ?>
 
                         <li class="aa_dir ">
                             <div class="aa_dir__dirNameGroup">
                                 <i class="aa_dir__dirNameGroup__icon  fa fa-folder-o"></i>
                                 <a class="aa_dir__dirNameGroup__name"
-                                   data-cat="<?php echo $data_value['category'] ?>"
-                                   href="atomic-core/?cat=<?php echo $data_value['category'] ?>"><?php echo $data_value['category'] ?></a>
+                                   href="atomic-core/?cat=<?php echo $cat_value['cat_name'] ?>"><?php echo $cat_value['cat_name'] ?></a>
                             </div>
                             <ul class="aa_fileSection">
                                 <li class="aa_addFileItem">
-                                    <a class="aa_addFile js_add-edit-component aa_js-actionOpen aa_actionBtn"
-                                       href="atomic-core/temp-forms/temp-component-form.php"
-                                       data-cat="<?php echo $data_value['category'] ?>">
+                                    <a class="aa_addFile aa_js-actionOpen aa_actionBtn"
+                                       href="atomic-core/categories/modules/form-modules.php">
                                         <span class="fa fa-plus"></span> Add Component</a>
                                 </li>
 
+                                <?php $filtered = array_filter($comp_data, function ($v) {
+                                    global $cat_value;
+                                    return $v['comp_category'] == $cat_value['cat_name'];
+                                }); ?>
+                                <?php foreach ($filtered as $comp_value) { ?>
 
-                                <?php foreach ($data_value['components'] as $component) { ?>
-
-                                    <li class="aa_fileSection__file" data-comp="<?php echo $component['component'] ?>">
-                                        <a href="atomic-core/?cat=<?php echo $data_value['category'] ?>#<?php echo $component['component'] ?>"><?php echo $component['component'] ?></a>
+                                    <li class="aa_fileSection__file"><a
+                                            class="aa_js-actionOpen aa_actionBtn fa fa-pencil-square-o"
+                                            href="atomic-core/categories/<?php echo $cat_value['cat_name'] ?>/form-<?php echo $comp_value['comp_name'] ?>.php"></a><a
+                                            href="atomic-core/<?php echo $cat_value['cat_name'] ?>.php#box"><?php echo $comp_value['comp_name'] ?></a>
                                     </li>
                                 <?php } ?>
                             </ul>
                         </li>
 
-
                     <?php } ?>
-
-
-
+                    <li class="catAdd"><a class="aa_js-actionOpen aa_actionBtn" href="atomic-core/categories/_catActions.php"><span class="fa fa-plus"></span> Add / Delete Category</a></li>
 
 
                 </ul>
-                <div class="catAdd"><a class="js_cat-add aa_js-actionOpen aa_actionBtn"
-                                      href="atomic-core/temp-forms/temp-category-form.php"><span
-                            class="fa fa-plus"></span> Add Category</a></div>
+
             </nav>
 
 
@@ -89,132 +86,139 @@ $data = json_decode($json, true);
 
 
     <div class="atoms-main">
-        <h1 id="modules" class="atomic-h1"><?php echo $_GET['cat']; ?> <a class="fa fa fa-pencil-square-o js_add-edit-component aa_js-actionOpen aa_actionBtn" href="atomic-core/temp-forms/temp-category-form.php">
+        <h1 id="modules" class="atomic-h1"><?php echo $_GET['cat'];?></h1>
 
-            </a></h1>
 
 
         <?php
         $cat = $_GET['cat'];
         global $cat;
-        $data = array_filter($data, function ($v) {
+        $comp_data = array_filter($comp_data, function($v) {
             global $cat;
-            return $v['category'] == $cat;
+            return $v['comp_category'] == $cat;});
+        usort($comp_data , function($a, $b) {
+            return $a['comp_sort_order'] - $b['comp_sort_order'];
         });
-        foreach ($data as $data_value) {
-        foreach ($data_value['components'] as $component) {
-        ?>
+        foreach ($comp_data as $comp_value) {
+            ?>
 
-            <?php if ($component['component']) { ?>
-        <div id="<?php echo $component['component'] ?>-container" class="compWrap">
-            <p id="<?php echo $component['component'] ?>"
-               class="content-editable compTitle">
-                <span><?php echo $component['component'] ?></span>&nbsp;
-                <span class="js-hideAll fa fa-eye"></span>&nbsp;
-                <a class="fa fa fa-pencil-square-o js_add-edit-component aa_js-actionOpen aa_actionBtn"
-                   href="atomic-core/temp-forms/temp-component-form.php"
-                   data-cat="<?php echo $data_value['category'] ?>" data-comp="<?php echo $component['component'] ?>">
-
-                </a>
+            <div id="<?php echo $comp_value['comp_name'] ?>-container" class="compWrap"><span id="<?php echo $comp_value['comp_name'] ?>"
+                                                                                              class="compTitle atomic-editable-input"><?php echo $comp_value['comp_name'] ?> <span
+                        class="js-hideAll fa fa-eye"></span></span>
+                <p class="compNotes atomic-editable"><?php echo $comp_value['comp_notes'] ?> </p>
+                <div class="component">
+                    <iframe id="partial-viewport" src="atomic-core/partial.php?comp-name=<?php echo $comp_value['comp_name'] ?>" sandbox="allow-same-origin allow-scripts" onload="resizeIframe(this)"></iframe>
+                </div>
 
 
-            </p>
+                <div>
 
-            <p class="compNotes" data-description="<?= $component['description']; ?>"><?php echo $component['description'] ?></p>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#<?php echo $comp_value['comp_name'] ?>-markup-tab" aria-controls="home" role="tab" data-toggle="tab">Markup</a></li>
+                        <li role="presentation"><a href="#<?php echo $comp_value['comp_name'] ?>-styles-tab" aria-controls="profile" role="tab" data-toggle="tab">Styles</a></li>
+                    </ul>
 
-            <div class="component <?php if ($component['bgColor']) { ?>component-bg<?php } ?>"
-                 data-color="<?php echo $component['bgColor'] ?>"
-                 style="background-color:<?php echo $component['bgColor'] ?>">
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="<?php echo $comp_value['comp_name'] ?>-markup-tab">
+                            <?php $markup_file_content = file_get_contents($comp_value['comp_markup_path'], true); ?>
+                            <form class="atomic-editorWrap">
+                                <div class="atomic-editorInner">
 
 
-                <iframe class="partial-viewport"
-                        src="atomic-core/partial.php?component=<?php echo $component['component'] ?>&category=<?php echo $data_value['category'] ?>"
-                        sandbox="allow-same-origin allow-scripts  allow-modals" frameborder="0" scrolling="no"></iframe>
+                                    <div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
+
+
+                                    <div class="atomic-editor" id="editor-markup-<?php echo $comp_value['comp_name'] ?>"><?php echo htmlspecialchars($markup_file_content, ENT_QUOTES); ?></div>
+                                    <input class="new-val-input" type="hidden" name="new-markup-val" value="" />
+                                </div>
+
+                                <div class="atomic-editor-footer">
+                                    <button type="submit" class="atomic-btns atomic-btn1">Save</button>
+                                    <span type="reset" class="js-close-editor atomic-btns atomic-btn2">Cancel</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="<?php echo $comp_value['comp_name'] ?>-styles-tab">
+                            <?php $styles_file_content = file_get_contents($comp_value['comp_styles_path'], true); ?>
+                            <form class="atomic-editorWrap">
+                                <div class="atomic-editorInner">
+
+                                    <div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
+
+                                    <div class="atomic-editor" id="editor-styles-<?php echo $comp_value['comp_name'] ?>"><?php echo htmlspecialchars($styles_file_content, ENT_QUOTES); ?></div>
+                                    <input type="hidden" name="new-styles-val" value="" />
+                                </div>
+                                <div class="atomic-editor-footer">
+                                    <button type="submit" class="atomic-btns atomic-btn1">Save</button>
+                                    <span type="reset" class="js-close-editor atomic-btns atomic-btn2">Cancel</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
 
 
             </div>
 
-            <div>
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#<?php echo $component['component'] ?>-markup-tab"
-                                                              aria-controls="home" role="tab"
-                                                              data-toggle="tab">Markup</a></li>
-                    <li role="presentation"><a href="#<?php echo $component['component'] ?>-styles-tab"
-                                               aria-controls="profile"
-                                               role="tab" data-toggle="tab">Styles</a></li>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="<?php echo $component['component'] ?>-markup-tab"
-                    ">
-                    <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
-                          data-editorFormCat="<?php echo $data_value['category'] ?>" data-codeDest="components">
-                        <div class="atomic-editorInner">
-                            <div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
-
-                            <?php $markup_file_content = file_get_contents('../components/' . $data_value['category'] . '/' . $component['component'] . '.php', true); ?>
-                            <div class="atomic-editor"
-                                 id="editor-markup-<?php echo $component['component'] ?>"><?= htmlspecialchars($markup_file_content, ENT_QUOTES); ?></div>
-
-                            <input class="new-val-input" type="hidden"
-                                   name="new-markup-val-<?php echo $component['component'] ?>"
-                                   value=""/>
-                        </div>
-                        <div class="atomic-editor-footer">
-                            <button type="submit" class="atomic-btns atomic-btn1">Save</button>
-                            <span type="reset" class="js-close-editor atomic-btns atomic-btn2">Cancel</span>
-                        </div>
-                    </form>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="<?php echo $component['component'] ?>-styles-tab">
-                    <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
-                          data-editorFormCat="<?php echo $data_value['category'] ?>" data-codeDest="scss">
-                        <div class="atomic-editorInner">
-                            <div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
+        <?php } ?>
 
 
-                            <?php $style_file_content = file_get_contents('../scss/' . $data_value['category'] . '/_' . $component['component'] . '.scss', true); ?>
 
-                            <div class="atomic-editor"
-                                 id="editor-styles-<?php echo $component['component'] ?>"><?= htmlspecialchars($style_file_content, ENT_QUOTES); ?></div>
-
-                            <input class="new-val-input" type="hidden"
-                                   name="new-styles-val-<?php echo $component['component'] ?>" value=""/>
-                        </div>
-                        <div class="atomic-editor-footer">
-                            <button type="submit" class="atomic-btns atomic-btn1">Save</button>
-                            <span type="reset" class="js-close-editor atomic-btns atomic-btn2">Cancel</span>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-            <?php } ?>
     </div>
-        <?php } ?>
-
-        <?php } ?>
-
-
-
 </div>
-</div>
-
-
 <div class="aa_js-actionDrawer aa_actionDrawer">
     <div class="aa_actionDrawer__wrap">
         <div class="aa_js-actionClose aa_actionDrawer__close"><i class="fa fa-times fa-3x"></i></div>
-        <div id="js_actionDrawer__content" class="actionDrawer__content">
-
-
-        </div>
+        <div id="js_actionDrawer__content" class="actionDrawer__content"></div>
     </div>
 </div>
-
-
 <?php include("footer.php"); ?>
 
 
 
+
+<style>
+    .atomic-form{
+        background: #a6d4da;
+        max-width:500px;
+        padding:10px;
+    }
+    .textChange{
+        width:100%;
+        border:none;
+        font-size: 13px;
+        color: #7A7A7A;
+        margin-bottom:0;
+    }
+    textarea.textChange{
+        height:200px;
+        padding:10px;
+    }
+    .atomic-form-input.textChange{
+        padding:10px;
+    }
+    .atomic-form-footer{
+        text-align: right;
+        padding-top:5px;
+    }
+    .atomic-form-footer .atomic-btns{
+        margin-right:10px;
+        display:inline-block;
+    }
+    #partial-viewport {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width:100%;
+    }
+</style>
