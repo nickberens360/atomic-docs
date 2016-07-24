@@ -94,6 +94,22 @@ $data = json_decode($json, true);
             </a></h1>
 
 
+
+        <?php
+        /*$cat = $_GET['cat'];
+        global $cat;
+        $comp_data = array_filter($comp_data, function($v) {
+            global $cat;
+            return $v['comp_category'] == $cat;});
+        usort($comp_data , function($a, $b) {
+            return $a['comp_sort_order'] - $b['comp_sort_order'];
+        });
+        foreach ($comp_data as $comp_value) {*/
+        ?>
+
+
+
+
         <?php
         $cat = $_GET['cat'];
         global $cat;
