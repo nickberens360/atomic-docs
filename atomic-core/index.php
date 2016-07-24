@@ -1,15 +1,15 @@
 <?php include("head.php"); ?>
 <?php
-$json = file_get_contents('db/data.json');
-$data = json_decode($json, true);
+/*$json = file_get_contents('db/data.json');
+$data = json_decode($json, true);*/
 
-/*require "fllat.php";
+require "fllat.php";
 $compdb = new Fllat("compdb");
 $catdb = new Fllat("catdb");
 
 
 $comp_data = $compdb->select(array());
-$cat_data = $catdb->select(array());*/
+$cat_data = $catdb->select(array());
 
 
 ?>
@@ -53,22 +53,22 @@ $cat_data = $catdb->select(array());*/
                             <div class="aa_dir__dirNameGroup">
                                 <i class="aa_dir__dirNameGroup__icon  fa fa-folder-o"></i>
                                 <a class="aa_dir__dirNameGroup__name"
-                                   data-cat="<?php echo $data_value['category'] ?>"
-                                   href="atomic-core/?cat=<?php echo $data_value['category'] ?>"><?php echo $data_value['category'] ?></a>
+                                   data-cat="<?php echo $cat; ?>"
+                                   href="atomic-core/?cat=<?php echo $cat; ?>"><?php echo $cat; ?></a>
                             </div>
                             <ul class="aa_fileSection">
                                 <li class="aa_addFileItem">
                                     <a class="aa_addFile js_add-edit-c omponent aa_js-actionOpen aa_actionBtn"
                                        href="atomic-core/temp-forms/temp-component-form.php"
-                                       data-cat="<?php echo $data_value['category'] ?>">
+                                       data-cat="<?php echo $cat; ?>">
                                         <span class="fa fa-plus"></span> Add Component</a>
                                 </li>
 
 
                                 <?php foreach ($data_value['components'] as $component) { ?>
 
-                                    <li class="aa_fileSection__file" data-comp="<?php echo $component['component'] ?>">
-                                        <a href="atomic-core/?cat=<?php echo $data_value['category'] ?>#<?php echo $component['component'] ?>"><?php echo $component['component'] ?></a>
+                                    <li class="aa_fileSection__file" data-comp="<?php echo $comp_value['comp_name'] ?>">
+                                        <a href="atomic-core/?cat=<?php echo $cat; ?>#<?php echo $comp_value['comp_name'] ?>"><?php echo $comp_value['comp_name'] ?></a>
                                     </li>
                                 <?php } ?>
                             </ul>
@@ -104,7 +104,7 @@ $cat_data = $catdb->select(array());*/
 
 
         <?php
-        /*$cat = $_GET['cat'];
+        $cat = $_GET['cat'];
         global $cat;
         $comp_data = array_filter($comp_data, function($v) {
             global $cat;
@@ -112,47 +112,35 @@ $cat_data = $catdb->select(array());*/
         usort($comp_data , function($a, $b) {
             return $a['comp_sort_order'] - $b['comp_sort_order'];
         });
-        foreach ($comp_data as $comp_value) {*/
+        foreach ($comp_data as $comp_value) {
         ?>
 
+        
 
 
-
-        <?php
-        $cat = $_GET['cat'];
-        global $cat;
-        $data = array_filter($data, function ($v) {
-            global $cat;
-            return $v['category'] == $cat;
-        });
-        foreach ($data as $data_value) {
-        foreach ($data_value['components'] as $component) {
-        ?>
-
-            <?php if ($component['component']) { ?>
-        <div id="<?php echo $component['component'] ?>-container" class="compWrap">
-            <p id="<?php echo $component['component'] ?>"
+        <div id="<?php echo $comp_value['comp_name'] ?>-container" class="compWrap">
+            <p id="<?php echo $comp_value['comp_name'] ?>"
                class="content-editable compTitle">
-                <span><?php echo $component['component'] ?></span>&nbsp;
+                <span><?php echo $comp_value['comp_name'] ?></span>&nbsp;
                 <span class="js-hideAll fa fa-eye"></span>&nbsp;
                 <a class="fa fa fa-pencil-square-o js_add-edit-component aa_js-actionOpen aa_actionBtn"
                    href="atomic-core/temp-forms/temp-component-form.php"
-                   data-cat="<?php echo $data_value['category'] ?>" data-comp="<?php echo $component['component'] ?>">
+                   data-cat="<?php echo $cat; ?>" data-comp="<?php echo $comp_value['comp_name'] ?>">
 
                 </a>
 
 
             </p>
 
-            <p class="compNotes" data-description="<?= $component['description']; ?>"><?php echo $component['description'] ?></p>
+            <p class="compNotes" data-description="<?php echo $comp_value['comp_notes'] ?>"><?php echo $comp_value['comp_notes'] ?></p>
 
-            <div class="component <?php if ($component['bgColor']) { ?>component-bg<?php } ?>"
-                 data-color="<?php echo $component['bgColor'] ?>"
-                 style="background-color:<?php echo $component['bgColor'] ?>">
+            <div class="component"
+                 data-color="<?php echo $comp_value['comp_context_color'] ?>"
+                 style="background-color:<?php echo $comp_value['comp_context_color'] ?>">
 
 
                 <iframe class="partial-viewport"
-                        src="atomic-core/partial.php?component=<?php echo $component['component'] ?>&category=<?php echo $data_value['category'] ?>"
+                        src="atomic-core/partial.php?component=<?php echo $comp_value['comp_name'] ?>&category=<?php echo $cat; ?>"
                         sandbox="allow-same-origin allow-scripts  allow-modals" frameborder="0" scrolling="no"></iframe>
 
 
@@ -161,29 +149,29 @@ $cat_data = $catdb->select(array());*/
             <div>
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#<?php echo $component['component'] ?>-markup-tab"
+                    <li role="presentation" class="active"><a href="#<?php echo $comp_value['comp_name'] ?>-markup-tab"
                                                               aria-controls="home" role="tab"
                                                               data-toggle="tab">Markup</a></li>
-                    <li role="presentation"><a href="#<?php echo $component['component'] ?>-styles-tab"
+                    <li role="presentation"><a href="#<?php echo $comp_value['comp_name'] ?>-styles-tab"
                                                aria-controls="profile"
                                                role="tab" data-toggle="tab">Styles</a></li>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="<?php echo $component['component'] ?>-markup-tab"
+                    <div role="tabpanel" class="tab-pane active" id="<?php echo $comp_value['comp_name'] ?>-markup-tab"
                     ">
-                    <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
-                          data-editorFormCat="<?php echo $data_value['category'] ?>" data-codeDest="components">
+                    <form class="atomic-editorWrap" data-editorFormComp="<?php echo $comp_value['comp_name'] ?>"
+                          data-editorFormCat="<?php echo $cat; ?>" data-codeDest="components">
                         <div class="atomic-editorInner">
                             <div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
 
-                            <?php $markup_file_content = file_get_contents('../components/' . $data_value['category'] . '/' . $component['component'] . '.php', true); ?>
+                            <?php $markup_file_content = file_get_contents('../components/' . $cat . '/' . $comp_value['comp_name'] . '.php', true); ?>
                             <div class="atomic-editor"
-                                 id="editor-markup-<?php echo $component['component'] ?>"><?= htmlspecialchars($markup_file_content, ENT_QUOTES); ?></div>
+                                 id="editor-markup-<?php echo $comp_value['comp_name'] ?>"><?= htmlspecialchars($markup_file_content, ENT_QUOTES); ?></div>
 
                             <input class="new-val-input" type="hidden"
-                                   name="new-markup-val-<?php echo $component['component'] ?>"
+                                   name="new-markup-val-<?php echo $comp_value['comp_name'] ?>"
                                    value=""/>
                         </div>
                         <div class="atomic-editor-footer">
@@ -192,20 +180,20 @@ $cat_data = $catdb->select(array());*/
                         </div>
                     </form>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="<?php echo $component['component'] ?>-styles-tab">
-                    <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
-                          data-editorFormCat="<?php echo $data_value['category'] ?>" data-codeDest="scss">
+                <div role="tabpanel" class="tab-pane" id="<?php echo $comp_value['comp_name'] ?>-styles-tab">
+                    <form class="atomic-editorWrap" data-editorFormComp="<?php echo $comp_value['comp_name'] ?>"
+                          data-editorFormCat="<?php echo $cat; ?>" data-codeDest="scss">
                         <div class="atomic-editorInner">
                             <div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
 
 
-                            <?php $style_file_content = file_get_contents('../scss/' . $data_value['category'] . '/_' . $component['component'] . '.scss', true); ?>
+                            <?php $style_file_content = file_get_contents('../scss/' . $cat . '/_' . $comp_value['comp_name'] . '.scss', true); ?>
 
                             <div class="atomic-editor"
-                                 id="editor-styles-<?php echo $component['component'] ?>"><?= htmlspecialchars($style_file_content, ENT_QUOTES); ?></div>
+                                 id="editor-styles-<?php echo $comp_value['comp_name'] ?>"><?= htmlspecialchars($style_file_content, ENT_QUOTES); ?></div>
 
                             <input class="new-val-input" type="hidden"
-                                   name="new-styles-val-<?php echo $component['component'] ?>" value=""/>
+                                   name="new-styles-val-<?php echo $comp_value['comp_name'] ?>" value=""/>
                         </div>
                         <div class="atomic-editor-footer">
                             <button type="submit" class="atomic-btns atomic-btn1">Save</button>
@@ -215,10 +203,8 @@ $cat_data = $catdb->select(array());*/
                 </div>
             </div>
         </div>
-            <?php } ?>
-    </div>
-        <?php } ?>
 
+    </div>
         <?php } ?>
 
 
