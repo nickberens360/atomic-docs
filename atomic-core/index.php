@@ -60,7 +60,7 @@ $categories = $categories->select(array());
                                    data-cat="<?php echo $category['category'] ?>"
                                    href="atomic-core/?cat=<?php echo $category['category'] ?>"><?php echo $category['category'] ?></a>
                             </div>
-                            <ul class="aa_fileSection">
+                            <ul class="aa_fileSection fileSection-<?php echo $category['category'] ?>">
                                 <li class="aa_addFileItem">
                                     <a class="aa_addFile js_add-edit-component aa_js-actionOpen aa_actionBtn"
                                        href="atomic-core/temp-forms/temp-component-form.php"
@@ -81,7 +81,7 @@ $categories = $categories->select(array());
                                 ?>
                                 <?php foreach ($filtered as $component) { ?>
 
-                                    <li class="aa_fileSection__file" data-comp="<?php echo $component['component'] ?>">
+                                    <li class="aa_fileSection__file" data-comp="<?php echo $component['component'] ?>" data-cat="<?php echo $category['category'] ?>">
                                         <a href="atomic-core/?cat=<?php echo $category['category'] ?>#<?php echo $component['component'] ?>"><?php echo $component['component'] ?></a>
                                     </li>
 
