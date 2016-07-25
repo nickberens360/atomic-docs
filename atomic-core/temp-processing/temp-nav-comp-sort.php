@@ -1,5 +1,7 @@
 <?php
 
+require "../temp-functions/sort-functions.php";
+
 global $compdb;
 require "../fllat.php";
 
@@ -24,35 +26,7 @@ if (!empty($errors)) {
     $data['errors'] = $errors;
 } else {
 
-    function navCatOrder($db, $compName)
-    {
-
-        $selectDB = $db->select(array());
-        $newOrder = 0;
-
-        foreach ($compName as $cn) {
-
-            foreach ($selectDB as $id => $item) {
-                if ($item["component"] == $cn) {
-                    $update_order = array("order" => $newOrder);
-                    $db->update($id, $update_order);
-                    $newOrder++;
-                    break;
-                }
-            }
-
-        }
-    }
-
-    function stylesSubRootOrder($compName, $catName)
-    {
-        $string = "";
-        foreach ($compName as $cn) {
-            $string .= '@import "_'.$cn.'";'.PHP_EOL.'';
-        }
-        $path = '../../scss/'.$catName.'/_'.$catName.'.scss';
-        file_put_contents($path, $string);
-    }
+    
 
     stylesSubRootOrder($compName, $catName);
 
