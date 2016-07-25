@@ -11,14 +11,14 @@
     "category": "modules",
     "description": "",
     "backgroundColor": "",
-    "order": 3
+    "order": 1
   },
   {
     "component": "new",
     "category": "modules",
     "description": "",
     "backgroundColor": "",
-    "order": 1
+    "order": 3
   },
   {
     "component": "more",

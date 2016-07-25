@@ -45,12 +45,12 @@ $categories = $categories->select(array());
 
 
                     <?php
-                    $cat = $_GET['cat'];
-                    global $cat;
+
                     usort($categories , function($a, $b) {
                         return $a['order'] - $b['order'];
                     });
                     foreach ($categories as $category) {
+                        global $category
                         ?>
 
                         <li class="aa_dir ">
@@ -70,8 +70,14 @@ $categories = $categories->select(array());
 
 
                                 <?php
-                                
-                                $filtered = array_filter($components, function($v) { return $v['category'] == 'atoms'; });
+
+                                $filtered = array_filter($components, function($v) {
+                                    global $category;
+                                    return $v['category'] == $category['category'];
+                                });
+                                usort($filtered , function($a, $b) {
+                                    return $a['order'] - $b['order'];
+                                });
                                 ?>
                                 <?php foreach ($filtered as $component) { ?>
 
