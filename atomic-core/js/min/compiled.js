@@ -8144,7 +8144,7 @@ $('.js_add-edit-component').click(function (event) {
 $(".atoms-nav ").sortable({
     group: ".aa_dir ",
     handle: ".aa_dir__dirNameGroup__name",
-    /*onEnd: function (evt) {
+    onEnd: function (evt) {
         var itemEl = evt.item;  // dragged HTMLElement
         var catName = $(itemEl).closest('.aa_dir').data("navitem");
         var formData = [];
@@ -8156,7 +8156,7 @@ $(".atoms-nav ").sortable({
         });
         $.ajax({
                 type: 'POST',
-                url: 'atomic-core/tempForms/temp-nav-cat-sort.php',
+                url: 'atomic-core/temp-processing/temp-nav-cat-sort.php',
                 data: formData,
                 dataType: 'json',
                 encode: true
@@ -8170,7 +8170,7 @@ $(".atoms-nav ").sortable({
                     }
                 } else {
                     console.log('success');
-                    window.location = 'atomic-core/?v='+catName+'';
+                    window.location = 'atomic-core/?cat='+catName+'';
                 }
             })
             .fail(function (data) {
@@ -8178,7 +8178,7 @@ $(".atoms-nav ").sortable({
             });
 
 
-    }*/
+    }
 });
 
 $('.atomic-editorWrap').submit(function (event) {

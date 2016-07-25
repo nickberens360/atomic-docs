@@ -1,9 +1,10 @@
 <?php
 
 global $catdb;
-require "fllat.php";
+require "../fllat.php";
 
-$catdb = new Fllat("category");
+//$catdb = new Fllat("category");
+$catdb = new Fllat("categories", "../db");
 
 $errors = array();
 $data = array();
@@ -46,7 +47,7 @@ if (!empty($errors)) {
         foreach ($catName as $cn) {
             $string .= '@import "'.$cn.'/_'.$cn.'";'.PHP_EOL.'';
         }
-        $path = '../../src/scss/main.scss';
+        $path = '../../scss/main.scss';
         file_put_contents($path, $string);
     }
 

@@ -53,7 +53,7 @@ $categories = $categories->select(array());
                         global $category
                         ?>
 
-                        <li class="aa_dir ">
+                        <li class="aa_dir" data-navitem="<?php echo $category['category'] ?>">
                             <div class="aa_dir__dirNameGroup">
                                 <i class="aa_dir__dirNameGroup__icon  fa fa-folder-o"></i>
                                 <a class="aa_dir__dirNameGroup__name"
