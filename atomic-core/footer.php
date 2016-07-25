@@ -6,9 +6,13 @@
 <script src="atomic-core/js/min/compiled.min.js"></script>
 
 <?php
-
-foreach ($data as $data_value) {
-foreach ($data_value['components'] as $component) {?>
+$cat = $_GET['cat'];
+global $cat;
+$components = array_filter($components, function($v) {
+    global $cat;
+    return $v['category'] == $cat;});
+foreach ($components as $component) {
+    ?>
 
     
     <script>
@@ -48,7 +52,6 @@ foreach ($data_value['components'] as $component) {?>
 
 
 
-<?php } ?>
 <?php } ?>
 
 

@@ -1,0 +1,21 @@
+[
+  {
+    "category": "atoms",
+    "order": 20
+  },
+  {
+    "category": "molecules",
+    "order": 10
+  },
+  {
+    "category": "organisms",
+    "order": 40
+  },
+  {
+    "category": "modules",
+    "order": 50
+  }
+]
+
+
+
