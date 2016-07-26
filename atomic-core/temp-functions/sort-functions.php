@@ -104,7 +104,7 @@ function deleteStylesImportString($thisCompName, $oldCat)
     //Place contents of file into variable
     $contents = file_get_contents('../../scss/'.$oldCat.'/_'.$oldCat.'.scss');
     $contents = str_replace($importString, "", $contents);
-    $contents = file_put_contents('../../scss/'.$oldCat.'/_'.$oldCat.'.scss', $contents);
+    file_put_contents('../../scss/'.$oldCat.'/_'.$oldCat.'.scss', $contents);
 }
 
 

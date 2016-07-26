@@ -7942,38 +7942,9 @@ $('.js_cat-add').click(function (event) {
 
                 var catName = $('input[name=catName]').val();
 
-                $.getJSON('atomic-core/db/data.json', function (data) {
-
-
-                    console.log(data);
-
-                });
 
 
 
-                $('.aa_dir ')
-                    .last('.aa_fileSection__file')
-                    .clone().appendTo('.atoms-nav')
-                    .find('.aa_dir__dirNameGroup__name')
-                    .attr('data-cat', catName)
-                    .text(catName)
-                    .closest('.aa_dir').find('.aa_fileSection__file').remove()
-                ;
-
-              // var jsonCat = $('aa_dir__dirNameGroup__name').data('cat');
-
-
-
-                $( ".aa_dir__dirNameGroup__name" ).each(function() {
-                    var jsonCat = $(this).data('cat');
-                    console.log(jsonCat);
-                    $(this).closest('.aa_dir ').find('.aa_fileSection__file').each(function() {
-                        var jsonComp = $(this).data('comp');
-                        console.log(jsonComp);
-                    });
-
-
-                });
 
 
 
@@ -8009,7 +7980,7 @@ $('.js_cat-add').click(function (event) {
 
                         } else {
 
-                            //window.location = 'atomic-core/?cat='+catName;
+                            window.location = 'atomic-core/?cat='+catName;
                         }
                     })
                     .fail(function (data) {

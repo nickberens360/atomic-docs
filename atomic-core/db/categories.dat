@@ -1,1 +1,14 @@
-[{"category":"atoms","order":0},{"category":"organisms","order":2},{"category":"modules","order":1}]
+[
+  {
+    "category": "atoms",
+    "order": 0
+  },
+  {
+    "category": "organisms",
+    "order": 2
+  },
+  {
+    "category": "modules",
+    "order": 1
+  }
+]

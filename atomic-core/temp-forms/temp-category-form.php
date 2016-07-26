@@ -6,5 +6,4 @@
             <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="catName"></div>
         </div>
     </div>
-<!--    <input type="hidden" name="createDir" value="createDir" disabled="">-->
 </form>

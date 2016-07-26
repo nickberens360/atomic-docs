@@ -1,12 +1,14 @@
 <?php
-require '../../atomic-config.php';
+//require '../../atomic-config.php';
 require '../temp-functions/create-category-functions.php';
+require '../temp-functions/db-functions.php';
 require '../temp-functions/validation.php';
 
+global $catdb;
+require "../fllat.php";
 
+$catdb = new Fllat("categories", "../db");
 
-$config = getConfig();
-$preCssDir = $config['preCssDir'];
 
 $errors         = array();
 $data           = array();
@@ -19,13 +21,15 @@ $catName = test_input($_POST["catName"]);
 
 
 $filename = '../../components/'.$catName.'';
-$scssFilePath = '../../'.$preCssDir.'/'.$catName.'';
+$scssFilePath = '../../scss/'.$catName.'';
 
 if (file_exists($filename) || file_exists($scssFilePath) && $catName != ""){
     $errors['exists'] = 'The category '.$catName .' already exists.';
 }
+
+
 if ($_POST['catName'] == ""){
-    $errors['name'] = 'Name is required.';
+    $errors['name'] = 'Input is required.';
 }
 
 
@@ -36,41 +40,18 @@ if ( ! empty($errors)) {
 } else {
 
 
+    function addCatItem($catName, $catdb){
+        $newCat = array("category" => $catName, "order" => 1000);
+        $catdb -> add($newCat);
+    }
 
 
-    $json = file_get_contents('../db/data.json');
-    //$appDB = json_decode($json, true);
+    addCatItem($catName, $catdb);
+    createScssCatDirAndFile($catName);
+    createStringForMainScssFile($catName);
 
-    $json = substr($json, 0, -3);
+    createCompCatDir($catName);
 
-    //var_dump($json);
-
-    $newCat = ',
-  {
-    "category": "'.$catName.'",
-    "components":[
-      {"component":"","description": "", "bgColor": ""}
-    ]
-  }
-]';
-
-
-
-   /*$newDB = $json.$newCat;
-
-    echo $newDB;
-
-    file_put_contents('../db/data.json', $newDB);
-
-
-
-
-
-    createCompCatDir($catName );
-
-    createScssCatDirAndFile($catName );
-
-    createStringForMainScssFile($catName );*/
 
 
 

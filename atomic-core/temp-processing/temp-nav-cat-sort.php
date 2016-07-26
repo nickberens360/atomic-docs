@@ -5,7 +5,6 @@ require "../temp-functions/sort-functions.php";
 global $catdb;
 require "../fllat.php";
 
-//$catdb = new Fllat("category");
 $catdb = new Fllat("categories", "../db");
 
 $errors = array();
