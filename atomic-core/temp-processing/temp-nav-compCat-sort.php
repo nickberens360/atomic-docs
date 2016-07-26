@@ -12,7 +12,11 @@ $errors = array();
 $data = array();
 
 $compName = $_POST["compName"];
-$catName = $_POST["currentCat"];
+$newCat = $_POST["newCat"];
+$oldCat = $_POST["oldCat"];
+$thisCompName = $_POST["thisCompName"];
+
+
 
 
 
@@ -28,9 +32,15 @@ if (!empty($errors)) {
 
 
 
-    stylesCompRootOrder($compName, $catName);
 
-    navCompOrder($compdb, $compName);
+
+
+    navCatCompOrder($compdb, $compName, $newCat);
+    stylesCompRootOrder($compName, $newCat);
+    deleteStylesImportString($thisCompName, $oldCat);
+    moveCompFile($oldCat, $thisCompName, $newCat);
+    moveStyleFile($oldCat, $thisCompName, $newCat);
+
 
 
     $data['success'] = true;

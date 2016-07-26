@@ -8193,15 +8193,7 @@ $(".aa_fileSection").sortable({
 
     onUpdate: function (evt) {
         var itemEl = evt.item;
-        var oldPosition = evt.oldIndex;
-        var newPosition = evt.newIndex;
         var currentCat = $(itemEl).data("cat");
-        /*console.log('Old position: ' + oldPosition);
-        console.log('New position: ' + newPosition);
-        console.log('Current category: ' + currentCat);*/
-
-
-
         var formData = [];
 
         $(".fileSection-"+currentCat).find('.aa_fileSection__file').each(function () {
@@ -8240,25 +8232,82 @@ $(".aa_fileSection").sortable({
             .fail(function (data) {
                 console.log('failed');
             });
-    }
+    },
 
 
 
 
-    /*,
-     onStart: function (evt) {
+
+     /*onStart: function (evt) {
          var itemEl = evt.item;  // dragged HTMLElement
          var currentComp = $(itemEl).data("comp");
          var currentCat = $(itemEl).data("cat");
          console.log('Component name: ' + currentComp);
          console.log('Current category: ' + currentCat);
-     }*/
-    /*,
+     },*/
+
+
+
      onAdd: function (evt) {
          var itemEl = evt.item;  // dragged HTMLElement
-         var navItemParent = $(itemEl).closest('.aa_dir').data("navitem");
-         console.log('New category: ' + navItemParent);
-     },
+         var newCat = $(itemEl).closest('.aa_dir').data("navitem");
+         var oldCat = $(itemEl).data("cat");
+         var thisCompName = $(itemEl).data("comp");
+          /*console.log('New category: ' + newCat);
+         console.log('Old category: ' + oldCat);*/
+
+         var formData = [];
+
+         $(".fileSection-"+newCat).find('.aa_fileSection__file').each(function () {
+
+             formData.push({
+                 name:'compName[]',
+                 value:$(this).data("comp")
+             });
+         });
+
+         formData.push({
+             name:'thisCompName',
+             value: thisCompName
+         });
+
+         formData.push({
+             name:'newCat',
+             value: newCat
+         });
+
+         formData.push({
+             name:'oldCat',
+             value: oldCat
+         });
+
+         $.ajax({
+                 type: 'POST',
+                 url: 'atomic-core/temp-processing/temp-nav-compCat-sort.php',
+                 data: formData,
+                 dataType: 'json',
+                 encode: true
+             })
+             .done(function (data) {
+                 console.log(data);
+                 if (!data.success) {
+                     console.log('not success');
+                     if (data.errors.name) {
+                         //do error stuff
+                     }
+                 } else {
+                     console.log('success');
+                     window.location = 'atomic-core/?cat='+newCat+'';
+                 }
+             })
+             .fail(function (data) {
+                 console.log('failed');
+             });
+
+
+
+     }
+/*,
      onEnd: function (/!**Event*!/evt) {
          var oldPosition = evt.oldIndex;
          var newPosition = evt.newIndex;
