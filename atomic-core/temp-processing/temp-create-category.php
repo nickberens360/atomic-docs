@@ -40,16 +40,11 @@ if ( ! empty($errors)) {
 } else {
 
 
-    function addCatItem($catName, $catdb){
-        $newCat = array("category" => $catName, "order" => 1000);
-        $catdb -> add($newCat);
-    }
 
 
-    addCatItem($catName, $catdb);
+    addCatDbItem($catName, $catdb);
     createScssCatDirAndFile($catName);
     createStringForMainScssFile($catName);
-
     createCompCatDir($catName);
 
 

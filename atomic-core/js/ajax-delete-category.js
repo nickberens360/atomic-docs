@@ -1,4 +1,4 @@
-$('.js_cat-add').click(function (event) {
+$('.js_cat-edit').click(function (event) {
 
 
     event.preventDefault();
@@ -6,7 +6,7 @@ $('.js_cat-add').click(function (event) {
         success: function (data) {
             $('#js_actionDrawer__content').html($(data));
 
-            
+
 
 
             $('#form-create-category').submit(function (event) {
