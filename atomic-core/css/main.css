@@ -2121,3 +2121,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 .atomsWrap .sidebar-open .atoms-container {
   opacity: .5;
 }
+.atomsWrap .u_textUnderline {
+  text-decoration: underline;
+}

@@ -1,174 +1,170 @@
-body{
-  background:#FCFEFA;
-  color:#7A7A7A;
+body {
+  background: #FCFEFA;
+  color: #7A7A7A;
   font-family: $font1;
 }
+
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #E2F3F5;
   border: none;
   margin-top: 0;
 }
-.compTitle{
-	display: block;
-	margin-bottom: 12px;
-	color: #00AFF0;
-	//border-left: 5px solid;
-	padding-left: 3px;
-	max-height: 25px;
-	a{
-		text-decoration: none;
-		color:inherit;
-		display: inline-block;
-		vertical-align: middle;
-	}
-  .fa{
-    cursor:pointer;
+
+.compTitle {
+  display: block;
+  margin-bottom: 12px;
+  color: #00AFF0;
+  //border-left: 5px solid;
+  padding-left: 3px;
+  max-height: 25px;
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .fa {
+    cursor: pointer;
   }
 }
-.compWrap{
-	margin-bottom:48px;
+
+.compWrap {
+  margin-bottom: 48px;
 }
 
-.compTitle-close{
+.compTitle-close {
   max-height: 0;
   overflow: hidden;;
 }
 
-.u-bgWhite{
-	background:#fff;
+.u-bgWhite {
+  background: #fff;
 }
 
-.atoms-side_hide{
-	.fa{
-		margin:0 16px;
-		display:inline-block;
-	}
-	.fa-code{
-		font-weight: bold;
-	}
+.atoms-side_hide {
+  .fa {
+    margin: 0 16px;
+    display: inline-block;
+  }
+  .fa-code {
+    font-weight: bold;
+  }
 }
 
-.component{
-	margin-bottom: 12px;
+.component {
+  margin-bottom: 12px;
 }
+
 .compWrap .nav-tabs > li > a {
-    color: #00AFF0;
+  color: #00AFF0;
 }
 
-
-.component-bg{
-  padding:20px;
+.component-bg {
+  padding: 20px;
 }
 
-
-
-.bgColorWrap{
-  margin-bottom:12px;
+.bgColorWrap {
+  margin-bottom: 12px;
 }
 
-.sp-replacer{
-	background-color:#fff;
-	border: none;
-}
-.sp-preview .sp-clear-display{
- background-image:none;
+.sp-replacer {
+  background-color: #fff;
+  border: none;
 }
 
-.language-css{
-  position:relative;
+.sp-preview .sp-clear-display {
+  background-image: none;
 }
 
-.atoms-overflow{
-	overflow: auto;
-	position: relative;
-	height: 100%;
+.language-css {
+  position: relative;
 }
 
-
-
-.atomic-btns{
-	background:#ccc;
-	border: none;
-	color: #fff;
-	font-size: 14px;
-    padding: 6px 12px;
-    cursor: pointer;
+.atoms-overflow {
+  overflow: auto;
+  position: relative;
+  height: 100%;
 }
 
-.atomic-btn1{
-	background: #37c737;
+.atomic-btns {
+  background: #ccc;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 12px;
+  cursor: pointer;
 }
 
-.atomic-btn2{
-	background: #e65d5d;
+.atomic-btn1 {
+  background: #37c737;
 }
 
-
-
-
-
-
-
-
-
-
-.atomic-form{
-	background: #a6d4da;
-	max-width:500px;
-	padding:10px;
-}
-.textChange{
-	width:100%;
-	border:none;
-	font-size: 13px;
-	color: #7A7A7A;
-	margin-bottom:0;
-}
-textarea.textChange{
-	height:200px;
-	padding:10px;
-}
-.atomic-form-input.textChange{
-	padding:10px;
-}
-.atomic-form-footer{
-	text-align: right;
-	padding-top:5px;
-}
-.atomic-form-footer .atomic-btns{
-	margin-right:10px;
-	display:inline-block;
+.atomic-btn2 {
+  background: #e65d5d;
 }
 
+.atomic-form {
+  background: #a6d4da;
+  max-width: 500px;
+  padding: 10px;
+}
 
+.textChange {
+  width: 100%;
+  border: none;
+  font-size: 13px;
+  color: #7A7A7A;
+  margin-bottom: 0;
+}
 
+textarea.textChange {
+  height: 200px;
+  padding: 10px;
+}
+
+.atomic-form-input.textChange {
+  padding: 10px;
+}
+
+.atomic-form-footer {
+  text-align: right;
+  padding-top: 5px;
+}
+
+.atomic-form-footer .atomic-btns {
+  margin-right: 10px;
+  display: inline-block;
+}
 
 .partial-viewport {
-	width:100%;
-	//border:1px solid red;
+  width: 100%;
+  //border:1px solid red;
 }
 
-.sortable-ghost{
-	opacity:0;
+.sortable-ghost {
+  opacity: 0;
 }
 
-
-.atomic-h1 .fa{
-	color: inherit;
-	text-decoration: none;
-	display: inline-block;
-	vertical-align: middle;
+.atomic-h1 .fa {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
 
 }
 
-.atoms-container{
-	transition:padding .25s;
+.atoms-container {
+  transition: padding .25s;
 }
 
-.sidebar-open{
-	.atoms-container{
-		opacity:.5;
-		//padding-right:500px;
-	}
+.sidebar-open {
+  .atoms-container {
+    opacity: .5;
+    //padding-right:500px;
+  }
+}
+
+.u_textUnderline {
+  text-decoration: underline;
 }

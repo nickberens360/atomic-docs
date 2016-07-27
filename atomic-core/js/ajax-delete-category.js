@@ -12,6 +12,9 @@ $('.js_cat-edit').click(function (event) {
 
 
 
+
+
+
             $('#form-delete-category').submit(function (event) {
 
 
@@ -23,10 +26,10 @@ $('.js_cat-edit').click(function (event) {
 
 
                 var formData = {
-                    'catName': catName
+                    'catName': catName,
+                    'thisCat': thisCat
                 };
 
-                console.log(formData);
 
 
                   $.ajax({
@@ -42,9 +45,9 @@ $('.js_cat-edit').click(function (event) {
                         if (!data.success) {
 
 
-                            if (data.errors.exists) {
+                            if (data.errors.different) {
                                 $('.aa_errorBox__message').html("");
-                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.different + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
                             }
 
 
