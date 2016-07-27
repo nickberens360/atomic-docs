@@ -10,9 +10,5 @@
   {
     "category": "modules",
     "order": 1
-  },
-  {
-    "category": "molecules",
-    "order": 3
   }
 ]

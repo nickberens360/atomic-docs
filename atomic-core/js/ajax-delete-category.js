@@ -1,21 +1,22 @@
 $('.js_cat-edit').click(function (event) {
 
+   var thisCat = $(this).data('cat');
 
     event.preventDefault();
     $.ajax(this.href, {
         success: function (data) {
+
             $('#js_actionDrawer__content').html($(data));
 
 
 
 
-            $('#form-create-category').submit(function (event) {
 
-
-                var catName = $('input[name=catName]').val();
+            $('#form-delete-category').submit(function (event) {
 
 
 
+                var catName = $(this).find('input[name=catName]').val();
 
 
 
@@ -25,9 +26,12 @@ $('.js_cat-edit').click(function (event) {
                     'catName': catName
                 };
 
-                $.ajax({
+                console.log(formData);
+
+
+                  $.ajax({
                         type: 'POST',
-                        url: 'atomic-core/temp-processing/temp-create-category.php',
+                        url: 'atomic-core/temp-processing/temp-delete-category.php',
                         data: formData,
                         dataType: 'json',
                         encode: true
@@ -52,7 +56,7 @@ $('.js_cat-edit').click(function (event) {
 
                         } else {
 
-                            window.location = 'atomic-core/?cat='+catName;
+                            //window.location = 'atomic-core/?cat='+catName;
                         }
                     })
                     .fail(function (data) {
@@ -60,6 +64,7 @@ $('.js_cat-edit').click(function (event) {
                     });
                 event.preventDefault();
             });
+
 
 
 

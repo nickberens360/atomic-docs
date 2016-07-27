@@ -1,12 +1,13 @@
 $('.js_cat-add').click(function (event) {
 
 
+
     event.preventDefault();
     $.ajax(this.href, {
         success: function (data) {
             $('#js_actionDrawer__content').html($(data));
 
-            
+
 
 
             $('#form-create-category').submit(function (event) {

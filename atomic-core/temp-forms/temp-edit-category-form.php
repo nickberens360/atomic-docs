@@ -13,8 +13,8 @@
     <div class="formInputGroup">
         <div class="inputBtnGroup">
             <label class="aa_label">Delete Category</label>
-            <button class="aa_btn aa_btn-neg" type="submit" disabled="">Delete</button>
-            <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="inputNameDelete" placeholder="Must type category name"></div>
+            <button class="aa_btn aa_btn-neg" type="submit">Delete</button>
+            <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="catName" placeholder="Must type category name"></div>
         </div>
     </div>
 </form>
