@@ -1,7 +1,9 @@
-
-$('.js_add-component').click(function (event) {
+$('.js_edit-component').click(function (event) {
 
     var catName = $(this).data('cat');
+    var compName = $(this).data('comp');
+
+
 
     event.preventDefault();
     $.ajax(this.href, {
@@ -9,29 +11,40 @@ $('.js_add-component').click(function (event) {
             $('#js_actionDrawer__content').html($(data));
 
 
-                $(".bgColor").spectrum({
-                    allowEmpty: true,
-                    preferredFormat: "hex",
-                    showInput: true
-                });
 
 
 
+            var notesVal = $('#' + compName + '-container').find('.compNotes').data('description');
+            var bgColor = $('#' + compName + '-container').find('.component').data('color');
+
+            $('input[name=compName]').val(compName);
+            $('textarea[name=compNotes]').val(notesVal);
+
+            $(".bgColor").spectrum({
+                allowEmpty: true,
+                preferredFormat: "hex",
+                showInput: true,
+                color: bgColor
+            });
 
 
 
-            //Submits create file data
-            $('#form-create-file').submit(function (event) {
+            $('#edit-comp-file').submit(function (event) {
                 var formData = {
                     'catName': catName,
-                    'compName': $('input[name=compName]').val(),
+                    'newName': $('input[name=compName]').val(),
+                    'oldName': compName,
                     'compNotes': $('textarea[name=compNotes]').val(),
                     'bgColor': $('input[name=bgColor]').val()
                 };
 
+
+
+
+
                 $.ajax({
                         type: 'POST',
-                        url: 'atomic-core/temp-processing/temp-create-component.php',
+                        url: 'atomic-core/temp-processing/temp-edit-component.php',
                         data: formData,
                         dataType: 'json',
                         encode: true
@@ -54,7 +67,7 @@ $('.js_add-component').click(function (event) {
 
                         } else {
 
-                            window.location = 'atomic-core/?cat='+catName+'';
+                            window.location = 'atomic-core/?cat=' + catName + '';
                         }
                     })
                     .fail(function (data) {
@@ -64,9 +77,12 @@ $('.js_add-component').click(function (event) {
             });
 
 
+
         },
         error: function () {
             //alert('did not worked!');
         }
-    });
-});
+    })
+    ;
+})
+;

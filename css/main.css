@@ -3,6 +3,10 @@
   background: #eee;
 }
 
+h1 {
+  color: red;
+}
+
 /*scss/modules/_box.scss*/
 .box {
   max-width: 300px;

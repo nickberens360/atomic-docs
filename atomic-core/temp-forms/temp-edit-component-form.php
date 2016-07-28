@@ -1,9 +1,8 @@
 <div class="aa_fileFormGroup">
-    <form id="form-create-file" class="aa_fileForm " action="/atomic-core/base.php" method="post">
-
+    <form id="edit-comp-file" class="aa_fileForm"  method="post">
         <div class="inputGroup">
-            <label class="aa_label">What's your component's name?</label>
-            <input type="text" class="form-control" name="fileCreateName">
+            <label class="aa_label">Change name</label>
+            <input type="text" class="form-control" name="compName">
         </div>
         <label class="aa_label">Component description.</label>
         <textarea class="form-control" name="compNotes"></textarea>

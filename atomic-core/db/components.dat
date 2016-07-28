@@ -1,37 +1,44 @@
 [
     {
-      "component": "testing",
-      "category": "atoms",
-      "description": "",
-      "backgroundColor": "",
-      "order": 0
+        "component": "testing",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": 0
     },
     {
-      "component": "box",
-      "category": "modules",
-      "description": "",
-      "backgroundColor": "",
-      "order": 0
+        "component": "box",
+        "category": "modules",
+        "description": "",
+        "backgroundColor": "",
+        "order": 0
     },
     {
-      "component": "new",
-      "category": "organisms",
-      "description": "",
-      "backgroundColor": "",
-      "order": 0
+        "component": "header",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": 1
     },
     {
-      "component": "more",
-      "category": "modules",
-      "description": "",
-      "backgroundColor": "",
-      "order": 1
+        "component": "test",
+        "category": "atoms",
+        "description": "test description",
+        "backgroundColor": "#da6767",
+        "order": 1000
     },
     {
-      "component": "header",
-      "category": "atoms",
-      "description": "",
-      "backgroundColor": "",
-      "order": 1
+        "component": "new",
+        "category": "modules",
+        "description": "new notes.",
+        "backgroundColor": "#57df94",
+        "order": 1000
+    },
+    {
+        "component": "blah",
+        "category": "modules",
+        "description": "blah notes...",
+        "backgroundColor": "#a0a0a0",
+        "order": 1000
     }
 ]

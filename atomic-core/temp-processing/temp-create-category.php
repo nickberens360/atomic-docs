@@ -1,5 +1,4 @@
 <?php
-//require '../../atomic-config.php';
 require '../temp-functions/create-category-functions.php';
 require '../temp-functions/db-functions.php';
 require '../temp-functions/validation.php';

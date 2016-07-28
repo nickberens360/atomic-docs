@@ -62,8 +62,8 @@ $categories = $categories->select(array());
                             </div>
                             <ul class="aa_fileSection fileSection-<?php echo $category['category'] ?>">
                                 <li class="aa_addFileItem">
-                                    <a class="aa_addFile js_add-edit-component aa_js-actionOpen aa_actionBtn"
-                                       href="atomic-core/temp-forms/temp-component-form.php"
+                                    <a class="aa_addFile js_add-component aa_js-actionOpen aa_actionBtn"
+                                       href="atomic-core/temp-forms/temp-create-component-form.php"
                                        data-cat="<?php echo $category['category'] ?>">
                                         <span class="fa fa-plus"></span> Add Component</a>
                                 </li>
@@ -139,8 +139,8 @@ $categories = $categories->select(array());
                class="content-editable compTitle">
                 <span><?php echo $component['component'] ?></span>&nbsp;
                 <span class="js-hideAll fa fa-eye"></span>&nbsp;
-                <a class="fa fa fa-pencil-square-o js_add-edit-component aa_js-actionOpen aa_actionBtn"
-                   href="atomic-core/temp-forms/temp-component-form.php"
+                <a class="fa fa fa-pencil-square-o js_edit-component aa_js-actionOpen aa_actionBtn"
+                   href="atomic-core/temp-forms/temp-edit-component-form.php"
                    data-cat="<?php echo $cat; ?>" data-comp="<?php echo $component['component'] ?>">
 
                 </a>

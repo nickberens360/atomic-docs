@@ -7993,48 +7993,21 @@ $('.js_cat-add').click(function (event) {
     });
 });
 
-$('.js_add-edit-component').click(function (event) {
+$('.js_add-component').click(function (event) {
 
     var catName = $(this).data('cat');
-    var compName = $(this).data('comp');
-
-
-
-
 
     event.preventDefault();
     $.ajax(this.href, {
         success: function (data) {
             $('#js_actionDrawer__content').html($(data));
 
-            if(compName){
 
-                var notesVal = $('#'+compName+'-container').find('.compNotes').data('description');
-                var bgColor = $('#'+compName+'-container').find('.component').data('color');
-
-                $('input[name=fileCreateName]').val(compName);
-                $('textarea[name=compNotes]').val(notesVal);
-
-                $(".bgColor").spectrum({
-                    allowEmpty: true,
-                    preferredFormat: "hex",
-                    showInput: true,
-                    color: bgColor,
-                });
-
-
-            }
-            else{
                 $(".bgColor").spectrum({
                     allowEmpty: true,
                     preferredFormat: "hex",
                     showInput: true
                 });
-            }
-
-
-
-
 
 
 
@@ -8043,34 +8016,24 @@ $('.js_add-edit-component').click(function (event) {
 
             //Submits create file data
             $('#form-create-file').submit(function (event) {
-
-
-
-
-
                 var formData = {
-                    'compDir': catName,
-                    'fileCreateName': $('input[name=fileCreateName]').val(),
+                    'catName': catName,
+                    'compName': $('input[name=compName]').val(),
                     'compNotes': $('textarea[name=compNotes]').val(),
                     'bgColor': $('input[name=bgColor]').val()
                 };
-                // process the form
+
                 $.ajax({
-                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-                        url: 'atomic-core/temp-process/temp-create-component.php', // the url where we want to POST
-                        data: formData, // our data object
-                        dataType: 'json', // what type of data do we expect back from the server
+                        type: 'POST',
+                        url: 'atomic-core/temp-processing/temp-create-component.php',
+                        data: formData,
+                        dataType: 'json',
                         encode: true
+
                     })
-                    // using the done promise callback
                     .done(function (data) {
-                        // log data to the console so we can see
                         console.log(data);
-                        // here we will handle errors and validation messages
                         if (!data.success) {
-                            // handle errors for name ---------------
-
-
                             if (data.errors.exists) {
                                 $('.aa_errorBox__message').html("");
                                 $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
@@ -8085,17 +8048,12 @@ $('.js_add-edit-component').click(function (event) {
 
                         } else {
 
-
-                            //window.location = 'atomic-core/' + reDirect + '.php';
+                            window.location = 'atomic-core/?cat='+catName+'';
                         }
                     })
-                    // using the fail promise callback
                     .fail(function (data) {
-                        // show any errors
-                        // best to remove for production
                         console.log(data);
                     });
-                // stop the form from submitting the normal way and refreshing the page
                 event.preventDefault();
             });
 
@@ -8107,67 +8065,40 @@ $('.js_add-edit-component').click(function (event) {
     });
 });
 $('.js_cat-edit').click(function (event) {
-
-   var thisCat = $(this).data('cat');
-
+    var thisCat = $(this).data('cat');
     event.preventDefault();
     $.ajax(this.href, {
         success: function (data) {
-
             $('#js_actionDrawer__content').html($(data));
 
 
 
 
-
-
-
-
             $('#form-delete-category').submit(function (event) {
-
-
-
                 var catName = $(this).find('input[name=catName]').val();
-
-
-
-
-
                 var formData = {
                     'catName': catName,
                     'thisCat': thisCat
                 };
-
-
-
-                  $.ajax({
+                $.ajax({
                         type: 'POST',
                         url: 'atomic-core/temp-processing/temp-delete-category.php',
                         data: formData,
                         dataType: 'json',
                         encode: true
                     })
-
                     .done(function (data) {
-
                         if (!data.success) {
-
-
                             if (data.errors.different) {
                                 $('.aa_errorBox__message').html("");
                                 $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.different + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
                             }
-
-
                             if (data.errors.name) {
                                 $('.aa_errorBox__message').html("");
                                 $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
                             }
-
-
                         } else {
-
-                            //window.location = 'atomic-core/?cat='+catName;
+                            window.location = 'atomic-core/index.php';
                         }
                     })
                     .fail(function (data) {
@@ -8179,13 +8110,136 @@ $('.js_cat-edit').click(function (event) {
 
 
 
+            $('#form-edit-category').find('input[name=catName]').val(thisCat);
 
+
+            $('#form-edit-category').submit(function (event) {
+                var catName = $(this).find('input[name=catName]').val();
+                var formData = {
+                    'catName': catName,
+                    'thisCat': thisCat
+                };
+                console.log(formData);
+                $.ajax({
+                        type: 'POST',
+                        url: 'atomic-core/temp-processing/temp-edit-category.php',
+                        data: formData,
+                        dataType: 'json',
+                        encode: true
+                    })
+                    .done(function (data) {
+                        if (!data.success) {
+                            if (data.errors.different) {
+                                $('.aa_errorBox__message').html("");
+                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.different + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+                            }
+                            if (data.errors.name) {
+                                $('.aa_errorBox__message').html("");
+                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+                            }
+                        } else {
+                            window.location = 'atomic-core/?cat='+catName+'';
+                        }
+                    })
+                    .fail(function (data) {
+                        console.log(data);
+                    });
+                event.preventDefault();
+            });
         },
         error: function () {
             //alert('did not worked!');
         }
     });
 });
+$('.js_edit-component').click(function (event) {
+
+    var catName = $(this).data('cat');
+    var compName = $(this).data('comp');
+
+
+
+    event.preventDefault();
+    $.ajax(this.href, {
+        success: function (data) {
+            $('#js_actionDrawer__content').html($(data));
+
+
+
+
+
+            var notesVal = $('#' + compName + '-container').find('.compNotes').data('description');
+            var bgColor = $('#' + compName + '-container').find('.component').data('color');
+
+            $('input[name=compName]').val(compName);
+            $('textarea[name=compNotes]').val(notesVal);
+
+            $(".bgColor").spectrum({
+                allowEmpty: true,
+                preferredFormat: "hex",
+                showInput: true,
+                color: bgColor
+            });
+
+
+
+            $('#edit-comp-file').submit(function (event) {
+                var formData = {
+                    'catName': catName,
+                    'newName': $('input[name=compName]').val(),
+                    'oldName': compName,
+                    'compNotes': $('textarea[name=compNotes]').val(),
+                    'bgColor': $('input[name=bgColor]').val()
+                };
+
+
+
+
+
+                $.ajax({
+                        type: 'POST',
+                        url: 'atomic-core/temp-processing/temp-edit-component.php',
+                        data: formData,
+                        dataType: 'json',
+                        encode: true
+
+                    })
+                    .done(function (data) {
+                        console.log(data);
+                        if (!data.success) {
+                            if (data.errors.exists) {
+                                $('.aa_errorBox__message').html("");
+                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+                            }
+
+
+                            if (data.errors.name) {
+                                $('.aa_errorBox__message').html("");
+                                $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+                            }
+
+
+                        } else {
+
+                            window.location = 'atomic-core/?cat=' + catName + '';
+                        }
+                    })
+                    .fail(function (data) {
+                        console.log(data);
+                    });
+                event.preventDefault();
+            });
+
+
+
+        },
+        error: function () {
+            //alert('did not worked!');
+        }
+    })
+    ;
+})
+;
 $(".atoms-nav ").sortable({
     group: ".aa_dir ",
     handle: ".aa_dir__dirNameGroup__name",
