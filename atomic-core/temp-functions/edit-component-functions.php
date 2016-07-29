@@ -28,6 +28,33 @@ function renameCompFile($catName, $newName, $oldName){
     rename($old,$new);
 }
 
+
+
+
+
+
+
+function editCompCommentString($catName, $oldName, $newName)
+{
+
+    $oldString = '<!--components/'.$catName.'/'.$oldName.'.php -->';
+    $newString = '<!--components/'.$catName.'/'.$newName.'.php -->';
+
+
+    $contents = file_get_contents('../../components/'.$catName.'/'.$newName.'.php');
+    $contents = str_replace($oldString, $newString , $contents);
+    file_put_contents('../../components/'.$catName.'/'.$newName.'.php', $contents);
+}
+
+
+
+
+
+
+
+
+
+
 function renameStylesFile($catName, $newName, $oldName){
 
     $old = "../../scss/$catName/_$oldName.scss";
@@ -35,3 +62,50 @@ function renameStylesFile($catName, $newName, $oldName){
 
     rename($old,$new);
 }
+
+function editStyleCommentString($catName, $oldName, $newName)
+{
+
+    $oldString = '/* scss/'.$catName.'/_'.$oldName.'.scss */';
+    $newString = '/* scss/'.$catName.'/_'.$newName.'.scss */';
+
+
+    $contents = file_get_contents('../../scss/'.$catName.'/_'.$newName.'.scss');
+    $contents = str_replace($oldString, $newString , $contents);
+    file_put_contents('../../scss/'.$catName.'/_'.$newName.'.scss', $contents);
+}
+
+
+
+
+function editStyleRootImportString($catName, $oldName, $newName)
+{
+
+    $oldString = '@import "_'.$oldName.'";';
+    $newString = '@import "_'.$newName.'";';
+
+
+    $contents = file_get_contents('../../scss/'.$catName.'/_'.$catName.'.scss');
+    $contents = str_replace($oldString, $newString , $contents);
+    file_put_contents('../../scss/'.$catName.'/_'.$catName.'.scss', $contents);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

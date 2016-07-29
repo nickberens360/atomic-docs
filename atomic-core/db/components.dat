@@ -25,20 +25,20 @@
         "category": "atoms",
         "description": "test description",
         "backgroundColor": "#da6767",
-        "order": 1000
+        "order": 3
     },
     {
         "component": "new",
         "category": "modules",
         "description": "new notes.",
         "backgroundColor": "#57df94",
-        "order": 1000
+        "order": 2
     },
     {
-        "component": "blah",
+        "component": "blahs",
         "category": "modules",
         "description": "blah notes...",
-        "backgroundColor": "#a0a0a0",
-        "order": 1000
+        "backgroundColor": "",
+        "order": 1
     }
 ]
