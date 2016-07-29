@@ -14,13 +14,6 @@
         "order": 0
     },
     {
-        "component": "blah",
-        "category": "organisms",
-        "description": "blah notes...",
-        "backgroundColor": "",
-        "order": 0
-    },
-    {
         "component": "box",
         "category": "modules",
         "description": "",
