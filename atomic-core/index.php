@@ -14,11 +14,7 @@ $categories = $categories->select(array());
 
 ?>
 <body class="atoms">
-<script language="javascript" type="text/javascript">
-    function resizeIframe(obj) {
-        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-    }
-</script>
+
 
 
 <div class="grid-row atoms-container">
@@ -53,7 +49,10 @@ $categories = $categories->select(array());
                         global $category
                         ?>
 
-                        <li class="aa_dir" data-navitem="<?php echo $category['category'] ?>">
+
+
+
+                        <li class="aa_dir <?php if ($category['category'] == $_GET['cat']) { ?>active<?php } ?>" data-navitem="<?php echo $category['category'] ?>">
                             <div class="aa_dir__dirNameGroup">
                                 <i class="aa_dir__dirNameGroup__icon  fa fa-folder-o"></i>
                                 <a class="aa_dir__dirNameGroup__name"
@@ -146,11 +145,15 @@ $categories = $categories->select(array());
                 </a>
 
 
+
+
+
+
             </p>
 
             <p class="compNotes" data-description="<?php echo $component['description'] ?>"><?php echo $component['description'] ?></p>
 
-            <div class="component"
+            <div class="component <?php if ($component['backgroundColor']) { ?>componentHasBg<?php } ?>"
                  data-color="<?php echo $component['backgroundColor'] ?>"
                  style="background-color:<?php echo $component['backgroundColor'] ?>">
 

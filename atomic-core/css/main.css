@@ -2124,3 +2124,13 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 .atomsWrap .u_textUnderline {
   text-decoration: underline;
 }
+.atomsWrap .componentHasBg {
+  padding: 20px;
+}
+.atomsWrap .delete-txt {
+  background: none;
+  border: none;
+  color: #CD5151;
+  margin-top: 20px;
+  font-size: 15px;
+}

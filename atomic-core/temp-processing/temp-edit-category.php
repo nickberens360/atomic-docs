@@ -41,11 +41,24 @@ if ( ! empty($errors)) {
     dbUpdateItems($catdb, $key, $thisCat, $catName);
     dbUpdateItems($compdb, $key, $thisCat, $catName);
     renameCompDir($thisCat, $catName);
+    //update all comp file comment strings
     renameStyleDir($thisCat, $catName);
+    renameStylesRoot($catName, $thisCat );
+    //update all style file comment stings
     changeRootStylesImportString($catName, $thisCat);
 
 
 
+
+
+
+    editAllCompCommentStrings($thisCat, $catName);
+
+
+
+    
+
+    editAllStyleCommentStrings($thisCat, $catName);
 
 
 

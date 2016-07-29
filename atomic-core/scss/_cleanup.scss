@@ -168,3 +168,17 @@ textarea.textChange {
 .u_textUnderline {
   text-decoration: underline;
 }
+
+.componentHasBg {
+  padding: 20px;
+}
+
+.delete-txt {
+  background: none;
+  border: none;
+  color: #CD5151;
+  //text-decoration: underline;
+  //vertical-align: bottom;
+  margin-top: 20px;
+  font-size: 15px;
+}

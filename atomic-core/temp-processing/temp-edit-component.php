@@ -35,11 +35,11 @@ $data = array();
 /*if ($catName == $thisCat){
     $errors['different'] = ' <span class="u_textUnderline">'.$thisCat .' </span>correctly.';
 }
+*/
 
-
-if ($_POST['catName'] == "") {
+if ($_POST['newName'] == "") {
     $errors['name'] = 'Input is required.';
-}*/
+}
 
 
 if (!empty($errors)) {

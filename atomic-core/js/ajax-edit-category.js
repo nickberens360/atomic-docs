@@ -73,10 +73,12 @@ $('.js_cat-edit').click(function (event) {
                             }
                         } else {
                             window.location = 'atomic-core/?cat='+catName+'';
+
                         }
                     })
                     .fail(function (data) {
                         console.log(data);
+                        console.log('failed');
                     });
                 event.preventDefault();
             });

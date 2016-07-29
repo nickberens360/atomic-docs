@@ -1,31 +1,10 @@
 [
     {
-        "component": "testing",
-        "category": "atoms",
-        "description": "",
-        "backgroundColor": "",
-        "order": 0
-    },
-    {
         "component": "box",
-        "category": "modules",
-        "description": "",
-        "backgroundColor": "",
+        "category": "organisms",
+        "description": "Box notes.",
+        "backgroundColor": "#787070",
         "order": 0
-    },
-    {
-        "component": "header",
-        "category": "atoms",
-        "description": "",
-        "backgroundColor": "",
-        "order": 1
-    },
-    {
-        "component": "test",
-        "category": "atoms",
-        "description": "test description",
-        "backgroundColor": "#da6767",
-        "order": 3
     },
     {
         "component": "new",
@@ -35,7 +14,7 @@
         "order": 2
     },
     {
-        "component": "blahs",
+        "component": "blah",
         "category": "modules",
         "description": "blah notes...",
         "backgroundColor": "",

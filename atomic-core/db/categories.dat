@@ -1,10 +1,10 @@
 [
     {
-        "category": "atoms",
-        "order": 0
-    },
-    {
         "category": "modules",
         "order": 1
+    },
+    {
+        "category": "organisms",
+        "order": 1000
     }
 ]
