@@ -8404,10 +8404,9 @@ $(".aa_fileSection").sortable({
             .done(function (data) {
                 console.log(data);
                 if (!data.success) {
-                    console.log('not success');
-                    if (data.errors.name) {
-                        //do error stuff
-                    }
+
+
+
                 } else {
                     console.log('success');
                     window.location = 'atomic-core/?cat='+currentCat+'';
@@ -8475,10 +8474,25 @@ $(".aa_fileSection").sortable({
              .done(function (data) {
                  console.log(data);
                  if (!data.success) {
-                     console.log('not success');
-                     if (data.errors.name) {
-                         //do error stuff
+                     if (data.errors.exists) {
+                         $('.aa_errorBox__message').html("");
+                         $('.atoms-main').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.exists + '</p></div>').find('.aa_errorBox').hide().fadeIn(200).delay(1000)
+                             .queue(function () {
+                                 window.location = 'atomic-core/?cat='+oldCat+'';
+                             });
+
+
+
+
                      }
+
+
+                     if (data.errors.name) {
+                         $('.aa_errorBox__message').html("");
+                         $('.aa_actionDrawer').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.errors.name + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
+                     }
+
+
                  } else {
                      console.log('success');
                      window.location = 'atomic-core/?cat='+newCat+'';

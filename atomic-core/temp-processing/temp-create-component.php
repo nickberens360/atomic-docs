@@ -19,15 +19,22 @@ $compNotes = test_input($_POST["compNotes"]);
 $bgColor = test_input($_POST["bgColor"]);
 
 
-/*$fileExists = '../../components/'.$compDir.'/'.$fileCreateName.'.'.$compExt.'';
+/*$fileExists = '../../components/'.$catName.'/'.$compName.'.php';
 
 if (file_exists($fileExists) && $fileCreateName != ""){
-    $errors['exists'] = 'A file named '.$fileCreateName.' already exists.';
+    $errors['exists'] = 'A file named '.$compName.' already exists.';
+}*/
+
+
+$filename = '../../components/'.$catName.'/'.$compName.'.php';
+$scssFilePath = '../../scss/'.$catName.'/_'.$compName.'.scss';
+
+if (file_exists($filename) || file_exists($scssFilePath) && $catName != ""){
+    $errors['exists'] = 'The component '.$compName .' already exists.';
 }
 
-elseif ($_POST['fileCreateName'] == ""){
-    $errors['name'] = 'Name is required.';
-}*/
+
+
 
 if ($_POST['compName'] == ""){
     $errors['name'] = 'Component name is required.';

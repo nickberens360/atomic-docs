@@ -17,12 +17,17 @@ $oldCat = $_POST["oldCat"];
 $thisCompName = $_POST["thisCompName"];
 
 
+$filename = '../../components/'.$newCat.'/'.$thisCompName.'.php';
+$scssFilePath = '../../scss/'.$newCat.'/_'.$thisCompName.'.scss';
+
+if (file_exists($filename) || file_exists($scssFilePath) && $catName != ""){
+    $errors['exists'] = 'A component named '.$thisCompName .' already exists in the target location.';
+}
 
 
 
-/*if ($newCode == ""){
-    $errors['name'] = 'No change detected';
-}*/
+
+
 
 if (!empty($errors)) {
 

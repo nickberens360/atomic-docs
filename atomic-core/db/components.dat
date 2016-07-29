@@ -4,20 +4,27 @@
         "category": "organisms",
         "description": "Box notes.",
         "backgroundColor": "#787070",
-        "order": 0
+        "order": 1
     },
     {
         "component": "new",
         "category": "modules",
         "description": "new notes.",
         "backgroundColor": "#57df94",
-        "order": 2
+        "order": 0
     },
     {
         "component": "blah",
-        "category": "modules",
+        "category": "organisms",
         "description": "blah notes...",
         "backgroundColor": "",
-        "order": 1
+        "order": 0
+    },
+    {
+        "component": "box",
+        "category": "modules",
+        "description": "",
+        "backgroundColor": "",
+        "order": 1000
     }
 ]
