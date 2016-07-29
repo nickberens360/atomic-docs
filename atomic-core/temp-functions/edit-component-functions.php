@@ -19,3 +19,19 @@ function dbUpdateComp($db, $oldName, $newName, $catName, $bgColor, $compNotes){
         }
     }
 }
+
+function renameCompFile($catName, $newName, $oldName){
+
+    $old = "../../components/$catName/$oldName.php";
+    $new = "../../components/$catName/$newName.php";
+
+    rename($old,$new);
+}
+
+function renameStylesFile($catName, $newName, $oldName){
+
+    $old = "../../scss/$catName/_$oldName.scss";
+    $new = "../../scss/$catName/_$newName.scss";
+
+    rename($old,$new);
+}

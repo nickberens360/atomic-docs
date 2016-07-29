@@ -55,8 +55,11 @@ if (!empty($errors)) {
 
 
     dbUpdateComp($compdb, $oldName, $newName, $catName, $bgColor, $compNotes);
+    renameCompFile($catName, $newName, $oldName);
+    renameStylesFile($catName, $newName, $oldName);
 
-    //update component file name
+
+
     //update component comment string
 
     //update scss file name
