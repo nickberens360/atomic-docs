@@ -44,6 +44,7 @@ $(".atoms-nav ").sortable({
 
 
 
+
 $(".aa_fileSection").sortable({
     group: ".aa_fileSection ",
     filter: ".aa_addFileItem",
@@ -178,11 +179,5 @@ $(".aa_fileSection").sortable({
 
 
      }
-/*,
-     onEnd: function (/!**Event*!/evt) {
-         var oldPosition = evt.oldIndex;
-         var newPosition = evt.newIndex;
-         console.log('Old position: ' + oldPosition);
-         console.log('New position: ' + newPosition);
-     }*/
+
 });

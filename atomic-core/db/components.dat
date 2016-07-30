@@ -1,23 +1,9 @@
 [
     {
         "component": "box",
-        "category": "organisms",
-        "description": "Box notes.",
-        "backgroundColor": "#787070",
-        "order": 1
-    },
-    {
-        "component": "new",
         "category": "modules",
-        "description": "new notes.",
-        "backgroundColor": "#57df94",
-        "order": 0
-    },
-    {
-        "component": "box",
-        "category": "modules",
-        "description": "",
+        "description": "This is the box component.",
         "backgroundColor": "",
-        "order": 1000
+        "order": 2
     }
 ]

@@ -1,7 +1,8 @@
 <?php
 
 function addCatDbItem($catName, $catdb){
-    $newCat = array("category" => $catName, "order" => 1000);
+    $i=count($catdb)+1;
+    $newCat = array("category" => $catName, "order" => $i);
     $catdb -> add($newCat);
 }
 
@@ -37,6 +38,7 @@ function dbUpdateItems($db, $key, $oldValue, $update_value){
 
 
 function addCompDbItem($compName, $catName, $compNotes, $bgColor, $db){
-    $newComp = array("component" => $compName, "category" => $catName, "description" => $compNotes, "backgroundColor" => $bgColor, "order" => 1000);
+    $i=count($db)+1;
+    $newComp = array("component" => $compName, "category" => $catName, "description" => $compNotes, "backgroundColor" => $bgColor, "order" => $i);
     $db -> add($newComp);
 }

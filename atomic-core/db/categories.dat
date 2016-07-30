@@ -1,10 +1,6 @@
 [
     {
         "category": "modules",
-        "order": 1
-    },
-    {
-        "category": "organisms",
-        "order": 0
+        "order": 2
     }
 ]
