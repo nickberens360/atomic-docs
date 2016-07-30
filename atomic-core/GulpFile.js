@@ -27,10 +27,8 @@ gulp.task('scripts', function() {
             'js/velocity.js',
             'js/velocity-ui.js',
             'js/_expand-form.js',
-            'js/_sidebar-show-hide.js',
             'js/formShowHide.js',
             'js/slideAnimation.js',
-            'js/_actionDrawer.js',
             'js/hideAll.js',
             'js/hideCode.js',
             'js/hideNotes.js',
@@ -46,6 +44,7 @@ gulp.task('scripts', function() {
         .pipe(uglify())
         .pipe(gulp.dest(jsDest));
 });
+
 
 //Watch task
 gulp.task('default',function() {

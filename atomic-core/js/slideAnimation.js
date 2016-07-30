@@ -43,3 +43,5 @@ $('body').on('click', '.aa_js-actionOpen', function (events) {
 $('body').on('click', '.aa_js-errorBox__close', function (events) {
     $('.aa_errorBox').fadeOut(200);
 });
+
+
