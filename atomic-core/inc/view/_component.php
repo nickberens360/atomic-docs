@@ -43,7 +43,7 @@ $content = $Component->getContents($component['component'], $component['category
 
 
 		<iframe class="partial-viewport myIframe"
-		        src="atomic-core/partial.php?component=<?= $component['component']; ?>&category=<?= $component['category']; ?>"
+		        src="atomic-core/inc/view/partial.php?component=<?= $component['component']; ?>&category=<?= $component['category']; ?>"
 		        sandbox="allow-same-origin allow-scripts  allow-modals"  frameborder="0" scrolling="no"></iframe>
 
 
@@ -150,5 +150,3 @@ $jsComponentName = str_replace(array('-',' '), '_', $component['component']);
 	editorstyles_<?= $jsComponentName; ?>.setHighlightActiveLine(false);
 	editorstyles_<?= $jsComponentName; ?>.setShowPrintMargin(false);
 </script>
-
-

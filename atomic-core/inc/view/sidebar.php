@@ -20,7 +20,7 @@
 
 		<nav>
 			<ul id="simpleList" class="atoms-nav">
-				<?php include("inc/view/atomic-nav.php"); ?>
+				<?php include("atomic-nav.php"); ?>
 				<li class="catAdd">
 					<a class="aa_js-actionOpen aa_actionBtn" href="atomic-core/categories/_catActions.php">
 						<span class="fa fa-plus"></span> Add / Delete

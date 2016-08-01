@@ -1,6 +1,6 @@
 <?php
 
-require_once('required.php');
+require_once('../../required.php');
 
 $viewCategory = Atomic::getValue('v');
 ?>
