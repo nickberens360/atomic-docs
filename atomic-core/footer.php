@@ -5,6 +5,10 @@
 <script src="atomic-core/vendor/newSort/jquery.fn.sortable.js"></script>
 <script src="atomic-core/js/min/compiled.min.js"></script>
 
+
+
+<?php if (!empty($_GET['cat'])) { ?>
+
 <?php
 $cat = $_GET['cat'];
 global $cat;
@@ -16,7 +20,7 @@ foreach ($components as $component) {
     $i++
     ?>
 
-    
+
     <script>
         var editormarkup_<?php echo $i; ?> = ace.edit("editor-markup-<?php echo $component['component'] ?>");
         var code = editormarkup_<?php echo $i; ?>.getValue();
@@ -56,7 +60,9 @@ foreach ($components as $component) {
 
 <?php } ?>
 
-
+<?php } else { ?>
+    index
+<?php } ?>
 
 </body>
 </html>
