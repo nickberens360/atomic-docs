@@ -1,6 +1,6 @@
 <?php
 
-require_once('required.php');
+require_once('../../required.php');
 
 $viewCategory = Atomic::getValue('v');
 ?>
@@ -8,7 +8,7 @@ $viewCategory = Atomic::getValue('v');
 <head lang="en">
 	<meta charset="UTF-8">
 	<title><?= Atomic::getValue('component'); ?></title>
-	<link rel="stylesheet" type="text/css" href="../src/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../src/css/main.css">
 
 
 

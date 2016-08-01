@@ -3,9 +3,11 @@
 <?php
 
 global $Atomic;
-global $current_page;
-$orig = $Atomic->config['componentDirectory'];
+global $_ROUTE;
 
+$current_page = $_ROUTE['params']['category'];
+
+$orig = $Atomic->config['componentDirectory'];
 
 require_once(Atomic::includePath() .'/inc/lib/FllatCategory/FllatCategory.php');
 require_once(Atomic::includePath() .'/inc/lib/FllatComponent/FllatComponent.php');
@@ -23,7 +25,7 @@ foreach ($categories as $category) {
 		<div class="aa_dir__dirNameGroup">
 			<i class="aa_dir__dirNameGroup__icon  fa fa-folder-o"></i>
 			<a class="aa_dir__dirNameGroup__name"
-			   href="atomic-core/?v=<?= $category['category']; ?>"><?= $category['category']; ?></a>
+			   href="atomic-core/<?= $category['category']; ?>"><?= $category['category']; ?></a>
 		</div>
 
 		<ul class="aa_fileSection">
