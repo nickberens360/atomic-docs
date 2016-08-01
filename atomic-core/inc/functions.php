@@ -20,10 +20,12 @@ function file_force_contents($dir, $contents) {
 	$dir = '';
 	foreach ($parts as $part) {
 		if (!is_dir($dir .= "/$part")) {
-			mkdir($dir);
+			mkdir($dir, 0755, true);
 		}
 	}
 	file_put_contents("$dir/$file", $contents);
 }
 
 ?>
+
+

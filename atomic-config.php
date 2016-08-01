@@ -1,14 +1,18 @@
 <?php
+
+/**
+ * DO NOT USE DURING DEVELOPMENT.
+ */
 function getConfig() {
-  $config = array();
-  $config['dir'] = dirname(__FILE__);
+	$config = array();
+//  $config['dir'] = dirname(__FILE__);
 
 
-  //user defined varibales
-  //$config['preCssDir'] = 'scss'; //Scss preprocessor directory name. E.G sass, less
-  //$config['preCssExt'] = 'scss'; //prerocessed file ext. E.G. scss, sass, less
-  $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
-  $config['dbDir'] = 'db';
+	//user defined varibales
+//  $config['preCssDir'] = 'scss'; //Scss preprocessor directory name. E.G sass, less
+//  $config['preCssExt'] = 'scss'; //prerocessed file ext. E.G. scss, sass, less
+//  $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
+//  $config['dbDir'] = 'db';
 
-  return $config;
+	return $config;
 }

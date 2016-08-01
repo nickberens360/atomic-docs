@@ -2,29 +2,21 @@
 
 
 
-
-<script src="atomic-core/js/min/compiled.min.js"></script>
-<script src="atomic-core/vendor/jquery-ui/jquery-ui.min.js"></script>
-
-
-<!--<style>
-	.js-show-form{
-		display: none;
-	}
-</style>
-
-
-<script>
-	$(function() {
+<script src="atomic-core/newSort/jquery.fn.sortable.js"></script>
+<script src="atomic-core/js/min/compiled.js"></script>
 
 
 
-		$( ".aa_fileSection" ).droppable();
 
 
 
-	});
-</script>-->
+
+
+
+
+
+
+
 
 
 

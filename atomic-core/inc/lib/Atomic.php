@@ -22,7 +22,7 @@ class Atomic {
 	 * Atomic constructor.
 	 */
 	function __construct() {
-		$this->config = array_merge($this->defaultConfig(),getConfig());
+		$this->config = array_merge(self::defaultConfig(), getConfig());
 	}
 
 	/**
@@ -45,6 +45,7 @@ class Atomic {
 		$config['categoryDirectoryName'] = 'categories';
 		$config['categoryDirectory'] = $config['basePath'] . '/' . $config['categoryDirectoryName']; //markup file ext. E.G. html, twig, etc...
 		$config['filenamePrefix'] = '_';
+		
 		return $config;
 	}
 

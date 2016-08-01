@@ -69,7 +69,7 @@ class File extends Atomic {
 	 * @return array
 	 */
 	function mkdir($directory){
-		$created = mkdir($directory, 0755);
+		$created = mkdir($directory, 0755, true);
 
 		if( $created ){
 			return array('status' => true, 'message' => 'Directory created');

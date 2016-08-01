@@ -16,19 +16,35 @@ $content = $Component->getContents($component['component'], $component['category
 
 
 <div id="<?= $component['component']; ?>-container" class="compWrap">
-	<p id="<?= $component['component']; ?>" class="content-editable compTitle" data-component="<?= $component['component']; ?>" data-category="<?= $component['category']; ?>" data-key="component" data-value="<?= $component['component']; ?>">
+	<p id="<?= $component['component']; ?>"
+	   class="content-editable compTitle"
+	   data-component="<?= $component['component']; ?>"
+	   data-category="<?= $component['category']; ?>"
+	   data-update-type="name"
+	   data-key="component"
+	   data-value="<?= $component['component']; ?>">
 		<span contenteditable="true"><?= $component['component']; ?></span>
 		<span class="js-hideAll fa fa-eye"></span>
 	</p>
 
-	<p class="compNotes"><span contenteditable="true" class="content-editable" data-name="description"><?= $component['description'] ?></span></p>
+	<p class="compNotes"><span contenteditable="true"
+	                           class="content-editable"
+	                           data-component="<?= $component['component']; ?>"
+	                           data-category="<?= $component['category']; ?>"
+	                           data-update-type="description"
+	                           data-key="description"
+	                           data-value="<?= $component['description']; ?>"
+	                           data-name="description"><?= $component['description'] ?></span></p>
 
 	<div class="component" style="background-color:<?= $backgroundColor; ?>">
 
 
-		<?/*= $content['markup'] */?>
+		<? /*= $content['markup'] */ ?>
 
-		<iframe id="partial-viewport" src="atomic-core/inc/view/partial.php?comp-name=<?= $component['component']; ?>&cat-name=<?= $component['category']; ?>" sandbox="allow-same-origin allow-scripts"></iframe>
+
+		<iframe class="partial-viewport myIframe"
+		        src="atomic-core/partial.php?component=<?= $component['component']; ?>&category=<?= $component['category']; ?>"
+		        sandbox="allow-same-origin allow-scripts  allow-modals"  frameborder="0" scrolling="no"></iframe>
 
 
 	</div>
@@ -36,31 +52,45 @@ $content = $Component->getContents($component['component'], $component['category
 	<div>
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs" role="tablist">
-			<li role="presentation" class="active"><a href="#<?= $component['component']; ?>-markup-tab" aria-controls="home" role="tab" data-toggle="tab">Markup</a></li>
-			<li role="presentation"><a href="#<?= $component['component']; ?>-styles-tab" aria-controls="profile" role="tab" data-toggle="tab">Styles</a></li>
+			<li role="presentation" class="active"><a href="#<?= $component['component']; ?>-markup-tab"
+			                                          aria-controls="home" role="tab" data-toggle="tab">Markup</a></li>
+			<li role="presentation"><a href="#<?= $component['component']; ?>-styles-tab" aria-controls="profile"
+			                           role="tab" data-toggle="tab">Styles</a></li>
 		</ul>
 
 		<!-- Tab panes -->
 		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active" id="<?= $component['component']; ?>-markup-tab"">
-			<form class="atomic-editorWrap">
+			<div role="tabpanel" class="tab-pane active" id="<?= $component['component']; ?>-markup-tab"
+			">
+
+
+
+
+			<form class="atomic-editorWrap" data-editorFormComp="<?= $component['component']; ?>" data-editorFormCat="<?= $component['category']; ?>" data-codeDest="components">
 				<div class="atomic-editorInner">
 					<div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
-					<div class="atomic-editor" id="editor-markup-<?= $component['component']; ?>"><?= htmlspecialchars($content['markup'], ENT_QUOTES); ?></div>
-					<input class="new-val-input" type="hidden" name="new-markup-val-<?= $component['component']; ?>" value="" />
+					<div class="atomic-editor"
+					     id="editor-markup-<?= $component['component']; ?>"><?= htmlspecialchars($content['markup'], ENT_QUOTES); ?></div>
+					<input class="new-val-input" type="hidden" name="new-markup-val-<?= $component['component']; ?>"
+					       value=""/>
 				</div>
 				<div class="atomic-editor-footer">
 					<button type="submit" class="atomic-btns atomic-btn1">Save</button>
 					<span type="reset" class="js-close-editor atomic-btns atomic-btn2">Cancel</span>
 				</div>
 			</form>
+
+
+
+
 		</div>
 		<div role="tabpanel" class="tab-pane" id="<?= $component['component']; ?>-styles-tab">
-			<form class="atomic-editorWrap">
+			<form class="atomic-editorWrap" data-editorFormComp="<?= $component['component']; ?>" data-editorFormCat="<?= $component['category']; ?>" data-codeDest="scss">
 				<div class="atomic-editorInner">
 					<div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
-					<div class="atomic-editor" id="editor-styles-<?= $component['component']; ?>"><?= htmlspecialchars($content['scss'], ENT_QUOTES); ?></div>
-					<input type="hidden" name="new-styles-val-<?= $component['component']; ?>" value="" />
+					<div class="atomic-editor"
+					     id="editor-styles-<?= $component['component']; ?>"><?= htmlspecialchars($content['scss'], ENT_QUOTES); ?></div>
+					<input class="new-val-input" type="hidden" name="new-styles-val-<?= $component['component']; ?>" value=""/>
 				</div>
 				<div class="atomic-editor-footer">
 					<button type="submit" class="atomic-btns atomic-btn1">Save</button>
@@ -73,16 +103,16 @@ $content = $Component->getContents($component['component'], $component['category
 </div>
 
 
-
-
-
+<?php
+$jsComponentName = str_replace(array('-',' '), '_', $component['component']);
+?>
 <script>
 
-	var editormarkup<?= $component['component']; ?> = ace.edit("editor-markup-<?= $component['component']; ?>");
-	var code = editormarkup<?= $component['component']; ?>.getValue();
+	var editormarkup_<?= $jsComponentName; ?> = ace.edit("editor-markup-<?= $component['component']; ?>");
+	var code = editormarkup_<?= $jsComponentName; ?>.getValue();
 
-	editormarkup<?= $component['component']; ?>.getSession().on('change', function () {
-		$("input[name=new-markup-val-<?= $component['component']; ?>]").val(editormarkup<?= $component['component']; ?>.getSession().getValue());
+	editormarkup_<?= $jsComponentName; ?>.getSession().on('change', function () {
+		$("input[name=new-markup-val-<?= $component['component']; ?>]").val(editormarkup_<?= $jsComponentName; ?>.getSession().getValue());
 	});
 
 
@@ -92,19 +122,19 @@ $content = $Component->getContents($component['component'], $component['category
 	$('#<?= $component['component']; ?>-container').find(".copyBtn-markup").attr('data-clipboard-text', code);
 	new ZeroClipboard($('.copyBtn-markup'));
 
-	editormarkup<?= $component['component']; ?>.getSession().setMode("ace/mode/html");
-	editormarkup<?= $component['component']; ?>.setOptions({
+	editormarkup_<?= $jsComponentName; ?>.getSession().setMode("ace/mode/html");
+	editormarkup_<?= $jsComponentName; ?>.setOptions({
 		maxLines: Infinity
 	});
-	editormarkup<?= $component['component']; ?>.setHighlightActiveLine(false);
-	editormarkup<?= $component['component']; ?>.setShowPrintMargin(false);
+	editormarkup_<?= $jsComponentName; ?>.setHighlightActiveLine(false);
+	editormarkup_<?= $jsComponentName; ?>.setShowPrintMargin(false);
 </script>
 
 <script>
-	var editorstyles<?= $component['component']; ?> = ace.edit("editor-styles-<?= $component['component']; ?>");
-	var code = editorstyles<?= $component['component']; ?>.getValue();
-	editorstyles<?= $component['component']; ?>.getSession().on('change', function () {
-		$("input[name=new-styles-val-<?= $component['component']; ?>]").val(editorstyles<?= $component['component']; ?>.getSession().getValue());
+	var editorstyles_<?= $jsComponentName; ?> = ace.edit("editor-styles-<?= $component['component']; ?>");
+	var code = editorstyles_<?= $jsComponentName; ?>.getValue();
+	editorstyles_<?= $jsComponentName; ?>.getSession().on('change', function () {
+		$("input[name=new-styles-val-<?= $component['component']; ?>]").val(editorstyles_<?= $jsComponentName; ?>.getSession().getValue());
 	});
 
 	var code = code.replace(/\/\*(.*?)\*\//g, '');
@@ -113,10 +143,12 @@ $content = $Component->getContents($component['component'], $component['category
 	$('#<?= $component['component']; ?>-container').find(".copyBtn-styles").attr('data-clipboard-text', code);
 	new ZeroClipboard($('.copyBtn-styles'));
 
-	editorstyles<?= $component['component']; ?>.getSession().setMode("ace/mode/scss");
-	editorstyles<?= $component['component']; ?>.setOptions({
+	editorstyles_<?= $jsComponentName; ?>.getSession().setMode("ace/mode/scss");
+	editorstyles_<?= $jsComponentName; ?>.setOptions({
 		maxLines: Infinity
 	});
-	editorstyles<?= $component['component']; ?>.setHighlightActiveLine(false);
-	editorstyles<?= $component['component']; ?>.setShowPrintMargin(false);
+	editorstyles_<?= $jsComponentName; ?>.setHighlightActiveLine(false);
+	editorstyles_<?= $jsComponentName; ?>.setShowPrintMargin(false);
 </script>
+
+

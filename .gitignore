@@ -2,5 +2,4 @@
 atomic-core/node_modules/
 prepros.cfg
 *.log
-src/
 .DS_Store

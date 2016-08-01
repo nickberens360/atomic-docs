@@ -57,12 +57,8 @@ class Component extends Atomic {
 		$FileScss = new FileScss();
 		$FileComponent = new FileComponent();
 
-		$commentString = '<!--' . $this->config['categoryDirectoryName'] . '/' . $category . '/' . $component . '-->';
-		$mainBody = "\n\n<section class='{$component}'>" . $component . "</section>\n\n";
-		$content = $commentString . $mainBody;
-
 		$scss = $FileScss->create($component, $category);
-		$comp = $FileComponent->create($component, $category, $content);
+		$comp = $FileComponent->create($component, $category);
 //		$includeString = $this->createIncludeString($component, $category);
 
 
@@ -88,19 +84,84 @@ class Component extends Atomic {
 
 	}
 
-	public function update($component, array $data){
+	/**
+	 * Update a component
+	 *
+	 * @param       $component name of the component
+	 * @param array $data key => value pair of data
+	 * @param array $where
+	 *
+	 * @return array
+	 */
+	public function update($component, array $data, $where = array(), $updateType = 'full') {
 		$FllatComponent = new FllatComponent();
-		$FllatComponent->updateName($component, $data);
-		$nameUpdated = $this->updateName($component, $data['newValue'], $data['category']);
 
-		return $nameUpdated;
+		switch ($updateType) {
+
+			case 'name':
+				$FllatComponent->update($component, $data, $where);
+				$updated = $this->updateName($component, $data['component'], $data['category']);
+				break;
+			
+			case 'description':
+				$updated = $FllatComponent->update($component, $data, $where);
+				break;
+
+			case 'markup':
+				
+				break;
+
+			case 'styles':
+				
+				break;
+
+			case 'full':
+			default:
+
+		}
+
+		return $updated;
 	}
 
-	public function updateName($component, $newName, $category){
+	public function updateCommentString($component, $newName, $category) {
+
+		//functions from version 1
+
+		/*$oldString = '<!--components/'.$catName.'/'.$oldName.'.'.$compExt.'-->';
+		$newString = '<!--components/'.$catName.'/'.$fileName.'.'.$compExt.'-->';
+
+		$contents = file_get_contents('../../components/'.$catName.'/'.$oldName.'.'.$compExt.'');
+		$contents = str_replace($oldString, $newString , $contents);
+		$contents = file_put_contents('../../components/'.$catName.'/'.$oldName.'.'.$compExt.'', $contents);*/
+
+	}
+
+	public function updateName($component, $newName, $category) {
+		$return = array(
+			'status' => true,
+			'message' => 'Files updated.'
+		);
+
 		$FileComponent = new FileComponent();
-		return $FileComponent->rename($component, $newName, $category);
+		$FileScss = new FileScss();
+		
+		$componentUpdated = $FileComponent->rename($component, $newName, $category);
+		$scssUpdated = $FileScss->rename($component, $newName, $category);
+		
+		if( !$componentUpdated['status'] && !$scssUpdated['status']){
+			$return['status'] = false;
+			$return['message'] = 'Failed to update '. $this->config['preCssExt'] . ' & '. $this->config['componentExt'] . ' filenames';
+		}
+		else if( !$componentUpdated['status'] ){
+			$return['status'] = false;
+			$return['message'] = 'Failed to update '. $this->config['preCssExt'] . ' filename';
+		}
+		else if( !$scssUpdated['status'] ){
+			$return['status'] = false;
+			$return['message'] = 'Failed to update '. $this->config['componentExt'] . ' filename';
+		}
+		return $return;
 	}
-
 
 	/**
 	 * @return int
@@ -146,6 +207,10 @@ class Component extends Atomic {
 		Atomic::give('category', $category);
 
 		Atomic::partial('component');
+	}
+
+	function show($component, $category){
+		include($this->pathPhp($component, $category));
 	}
 
 	/**

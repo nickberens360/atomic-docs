@@ -16,6 +16,8 @@
 
 });*/
 
+
+
 $('.atomic-editable-input').click(function() {
 
 	var notesContent = $(this).text();
@@ -39,6 +41,7 @@ $(function(){
 		var data = {
 			component: $this.data('component'),
 			category: $this.data('category'),
+			updateType: $this.data('update-type'),
 			key: $this.data('key'),
 			oldValue: $this.data('value'),
 			newValue: $this.text().trim()
@@ -49,7 +52,10 @@ $(function(){
 
 		updateWait = setTimeout(function(){
 			console.log('update');
-			updateComponent(data)
+			updateComponent(data, function(e){
+				console.log( e );
+				updateDataKey();
+			})
 		}, 1000);
 
 	});
