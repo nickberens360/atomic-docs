@@ -1342,8 +1342,9 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     color: #767676;
     cursor: pointer;
     background-color: #fff;
-    border: 1px solid #e1e1e8;
-    border-radius: 0 4px 0 4px; }
+    border: 1px solid #e1e1e8; }
+  .atomsWrap .copyBtn-edit {
+    right: 45px; }
   .atomsWrap .compNotes {
     font-size: 13px;
     color: #7A7A7A;

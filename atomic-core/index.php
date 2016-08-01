@@ -148,28 +148,17 @@ $categories = $categories->select(array());
                 <a class="fa fa fa-pencil-square-o js_edit-component aa_js-actionOpen aa_actionBtn"
                    href="atomic-core/temp-forms/temp-edit-component-form.php"
                    data-cat="<?php echo $cat; ?>" data-comp="<?php echo $component['component'] ?>">
-
                 </a>
-
-
-
-
-
-
             </p>
-
             <p class="compNotes" data-description="<?php echo $component['description'] ?>"><?php echo $component['description'] ?></p>
-
             <div class="component <?php if ($component['backgroundColor']) { ?>componentHasBg<?php } ?>"
                  data-color="<?php echo $component['backgroundColor'] ?>"
                  style="background-color:<?php echo $component['backgroundColor'] ?>">
-
-
                 <iframe class="partial-viewport"
                         src="atomic-core/partial.php?component=<?php echo $component['component'] ?>&category=<?php echo $cat; ?>"
-                        sandbox="allow-same-origin allow-scripts  allow-modals" frameborder="0" scrolling="no"></iframe>
+                        sandbox="allow-same-origin allow-scripts  allow-modals" frameborder="0" scrolling="no">
 
-
+                </iframe>
             </div>
 
             <div>
@@ -191,7 +180,7 @@ $categories = $categories->select(array());
                           data-editorFormCat="<?php echo $cat; ?>" data-codeDest="components">
                         <div class="atomic-editorInner">
                             <div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
-
+                            <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
                             <?php $markup_file_content = file_get_contents('../components/' . $cat . '/' . $component['component'] . '.php', true); ?>
                             <div class="atomic-editor"
                                  id="editor-markup-<?php echo $component['component'] ?>"><?= htmlspecialchars($markup_file_content, ENT_QUOTES); ?></div>
@@ -211,7 +200,7 @@ $categories = $categories->select(array());
                           data-editorFormCat="<?php echo $cat; ?>" data-codeDest="scss">
                         <div class="atomic-editorInner">
                             <div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
-
+                            <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
 
                             <?php $style_file_content = file_get_contents('../scss/' . $cat . '/_' . $component['component'] . '.scss', true); ?>
 

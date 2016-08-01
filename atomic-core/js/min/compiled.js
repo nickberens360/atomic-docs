@@ -7438,6 +7438,11 @@ $(document).ready(function() {
     });
 
 
+    $( ".js-copyBtn-edit" ).click(function() {
+        $('.atomic-editorWrap').removeClass('atomic-editorWrap-active');
+        $(this).closest('.atomic-editorWrap').addClass('atomic-editorWrap-active');
+    });
+
 });
 
 $(document).mouseup(function (e)
