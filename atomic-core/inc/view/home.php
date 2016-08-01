@@ -1,7 +1,11 @@
 <?php
+global $_ROUTE;
+
 include("head.php");
 
-$viewCategory = Atomic::getValue('v');
+
+
+$viewCategory = $_ROUTE['params']['category'];
 ?>
 	<body class="atoms">
 

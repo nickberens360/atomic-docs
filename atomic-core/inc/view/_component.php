@@ -28,7 +28,7 @@ $content = $Component->getContents($component['component'], $component['category
 
 		<?/*= $content['markup'] */?>
 
-		<iframe id="partial-viewport" src="atomic-core/partial.php?comp-name=<?= $component['component']; ?>&cat-name=<?= $component['category']; ?>" sandbox="allow-same-origin allow-scripts"></iframe>
+		<iframe id="partial-viewport" src="atomic-core/inc/view/partial.php?comp-name=<?= $component['component']; ?>&cat-name=<?= $component['category']; ?>" sandbox="allow-same-origin allow-scripts"></iframe>
 
 
 	</div>

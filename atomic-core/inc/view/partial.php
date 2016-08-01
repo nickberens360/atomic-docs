@@ -4,9 +4,9 @@
 
     <!--<link rel="stylesheet" href="css/main.css">-->
 
-    <link rel="stylesheet" type="text/css" href="../src/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../src/css/main.css">
 
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
 
@@ -30,7 +30,7 @@
 
 
     <div class="partial">
-        <?php require('../src/components/' . $_GET["cat-name"] . '/' . $_GET["comp-name"] . '.php') ?>
+        <?php require('../../../src/components/' . $_GET["cat-name"] . '/' . $_GET["comp-name"] . '.php') ?>
 
     </div>
     </body>
