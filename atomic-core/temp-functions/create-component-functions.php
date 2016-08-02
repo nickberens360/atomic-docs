@@ -5,34 +5,58 @@
 
 function createCompFile($catName, $compName)
 {
-    fopen("../../components/$catName/$compName.php", 'x+') or die("can't open file");
+    $config = getConfig('../..');
+
+    $compDir = $config[0]['component_directory'];
+    $compExt = $config[0]['component_extension'];
+
+
+    fopen("../../$compDir/$catName/$compName.$compExt", 'x+') or die("can't open file");
 }
 
 function createCompComment($catName, $compName)
 {
-    $commentString = '<!--components/'.$catName.'/'.$compName.'.php -->';
+
+    $config = getConfig('../..');
+
+    $compDir = $config[0]['component_directory'];
+    $compExt = $config[0]['component_extension'];
+
+    $commentString = '<!-- '.$compDir.'/'.$catName.'/'.$compName.'.'.$compExt.' -->';
     $commentString = "\n$commentString\n";
-    $fileHandle = fopen('../../components/'.$catName.'/'.$compName.'.php', 'w') or die("can't open file");
+    $fileHandle = fopen('../../'.$compDir.'/'.$catName.'/'.$compName.'.'.$compExt.'', 'w') or die("can't open file");
     fwrite($fileHandle, $commentString);
     fclose($fileHandle);
-    file_put_contents('../../components/'.$catName.'/'.$compName.'.php', implode(PHP_EOL, file('../../components/'.$catName.'/'.$compName.'.php', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+    file_put_contents('../../'.$compDir.'/'.$catName.'/'.$compName.'.'.$compExt.'', implode(PHP_EOL, file('../../'.$compDir.'/'.$catName.'/'.$compName.'.'.$compExt.'', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 }
 
 
 
 function createStylesFile($catName, $compName)
 {
-    fopen("../../scss/$catName/_$compName.scss", 'x+') or die("can't open file");
+    $config = getConfig('../..');
+
+    $stylesDir = $config[0]['styles_directory'];
+    $stylesExt = $config[0]['styles_extension'];
+
+    fopen("../../$stylesDir/$catName/_$compName.$stylesExt", 'x+') or die("can't open file");
 }
 
 function createStyleComment($catName, $compName)
 {
-    $commentString = '/* scss/'.$catName.'/_'.$compName.'.scss */';
+
+    $config = getConfig('../..');
+
+    $stylesDir = $config[0]['styles_directory'];
+    $stylesExt = $config[0]['styles_extension'];
+
+
+    $commentString = '/* '.$stylesDir.'/'.$catName.'/_'.$compName.'.'.$stylesExt.' */';
     $commentString = "\n$commentString\n";
-    $fileHandle = fopen('../../scss/'.$catName.'/_'.$compName.'.scss', 'w') or die("can't open file");
+    $fileHandle = fopen('../../'.$stylesDir.'/'.$catName.'/_'.$compName.'.'.$stylesExt.'', 'w') or die("can't open file");
     fwrite($fileHandle, $commentString);
     fclose($fileHandle);
-    file_put_contents('../../scss/'.$catName.'/_'.$compName.'.scss', implode(PHP_EOL, file('../../scss/'.$catName.'/_'.$compName.'.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+    file_put_contents('../../'.$stylesDir.'/'.$catName.'/_'.$compName.'.'.$stylesExt.'', implode(PHP_EOL, file('../../'.$stylesDir.'/'.$catName.'/_'.$compName.'.'.$stylesExt.'', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 }
 
 
@@ -40,54 +64,24 @@ function createStyleComment($catName, $compName)
 function writeStylesImport($catName, $compName)
 {
 
+    $config = getConfig('../..');
+
+    $stylesDir = $config[0]['styles_directory'];
+    $stylesExt = $config[0]['styles_extension'];
 
     //create @import string
     $importString = "@import " . '"_'.$compName.'";' ;
     $importString = "\n$importString\n";
 
     //open parent scss file and write @import string to it
-    $fileHandle = fopen('../../scss/'.$catName.'/'.'_'.$catName.'.scss', 'a') or die("can't open file");
+    $fileHandle = fopen('../../'.$stylesDir.'/'.$catName.'/'.'_'.$catName.'.'.$stylesExt.'', 'a') or die("can't open file");
     fwrite($fileHandle, $importString);
     fclose($fileHandle);
 
     //remove any extra line breaks from file
-    file_put_contents('../../scss/'.$catName.'/'.'_'.$catName.'.scss', implode(PHP_EOL, file('../../scss/'.$catName.'/'.'_'.$catName.'.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+    file_put_contents('../../'.$stylesDir.'/'.$catName.'/'.'_'.$catName.'.'.$stylesExt.'', implode(PHP_EOL, file('../../'.$stylesDir.'/'.$catName.'/'.'_'.$catName.'.'.$stylesExt.'', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 }
 
-/*
-function createScssCatDirAndFile($catName)
-{
-    mkdir("../../scss/$catName");
-    $fileHandle = fopen("../../scss/$catName/_$catName.scss", 'x+') or die("can't open file");
-}
-
-
-
-
-
-function createStringForMainScssFile($catName)
-{
-
-
-    $includeString ='@import "'.$catName.'/_'.$catName.'";';
-
-    $includeString = "\n$includeString\n";
-
-    $fileHandle = fopen('../../scss/main.scss', 'a') or die("can't open file");
-    fwrite($fileHandle, $includeString);
-
-    file_put_contents('../../scss/main.scss', implode(PHP_EOL, file('../../scss/main.scss', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
-}
-
-
-
-
-
-function createCompCatDir($catName)
-{
-
-    mkdir("../../components/$catName");
-}*/
 
 
 

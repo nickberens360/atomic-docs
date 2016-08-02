@@ -1,3 +1,3 @@
-<!--components/atoms/box.php -->
+<!-- components/modules/box.php -->
 
 <div class="box">Box</div>

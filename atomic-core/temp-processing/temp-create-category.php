@@ -1,26 +1,29 @@
 <?php
-require '../temp-functions/create-category-functions.php';
-require '../temp-functions/db-functions.php';
-require '../temp-functions/validation.php';
+require '../temp-functions/functions.php';
 
-global $catdb;
+
+
 require "../fllat.php";
 
-$catdb = new Fllat("categories", "../db");
+$catdb = new Fllat("categories", "../../atomic-db");
+
+
+$config = getConfig('../..');
+$stylesDir = $config[0]['styles_directory'];
+$compDir = $config[0]['component_directory'];
 
 
 $errors         = array();
 $data           = array();
 
-// validate the variables ======================================================
-// if any of these variables don't exist, add an error to our $errors array
+
 
 $catName = test_input($_POST["catName"]);
 
 
 
-$filename = '../../components/'.$catName.'';
-$scssFilePath = '../../scss/'.$catName.'';
+$filename = '../../'.$compDir.'/'.$catName.'';
+$scssFilePath = '../../'.$stylesDir.'/'.$catName.'';
 
 if (file_exists($filename) || file_exists($scssFilePath) && $catName != ""){
     $errors['exists'] = 'The category '.$catName .' already exists.';
@@ -37,6 +40,7 @@ if ( ! empty($errors)) {
     $data['success'] = false;
     $data['errors']  = $errors;
 } else {
+
 
 
 

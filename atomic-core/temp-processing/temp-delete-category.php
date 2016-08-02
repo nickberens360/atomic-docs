@@ -1,15 +1,11 @@
 <?php
-//require '../../atomic-config.php';
-require '../temp-functions/delete-category-functions.php';
-require '../temp-functions/db-functions.php';
-require '../temp-functions/validation.php';
+require '../temp-functions/functions.php';
 
-global $catdb;
-global $compdb;
+
 require "../fllat.php";
 
-$catdb = new Fllat("categories", "../db");
-$compdb = new Fllat("components", "../db");
+$catdb = new Fllat("categories", "../../atomic-db");
+$compdb = new Fllat("components", "../../atomic-db");
 $catName = $_POST["catName"];
 $thisCat = $_POST["thisCat"];
 $key = "category";

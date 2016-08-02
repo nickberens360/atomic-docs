@@ -1,10 +1,18 @@
 <?php
 
 function addCatDbItem($catName, $catdb){
-    $i=count($catdb)+1;
-    $newCat = array("category" => $catName, "order" => $i);
+
+    $categories = $catdb->select(array());
+
+    $i=count($categories);
+
+
+    $newCat = array("category" => $catName, "order" => $i+1);
     $catdb -> add($newCat);
+
+
 }
+
 
 
 

@@ -1,15 +1,25 @@
 <?php
 function renameCompDir($oldDir, $newDir){
-    $oldDir = "../../components/$oldDir";
-    $newDir = "../../components/$newDir";
+
+    $config = getConfig('../..');
+
+    $compDir = $config[0]['component_directory'];
+
+    $oldDir = "../../$compDir/$oldDir";
+    $newDir = "../../$compDir/$newDir";
 
     rename($oldDir,$newDir);
 }
 
 
 function renameStyleDir($oldDir, $newDir){
-    $oldDir = "../../scss/$oldDir";
-    $newDir = "../../scss/$newDir";
+
+    $config = getConfig('../..');
+
+    $stylesDir = $config[0]['styles_directory'];
+
+    $oldDir = "../../$stylesDir/$oldDir";
+    $newDir = "../../$stylesDir/$newDir";
 
     rename($oldDir,$newDir);
 }
@@ -17,21 +27,31 @@ function renameStyleDir($oldDir, $newDir){
 function changeRootStylesImportString($catName, $oldName)
 {
 
+    $config = getConfig('../..');
+
+    $stylesDir = $config[0]['styles_directory'];
+    $stylesExt = $config[0]['styles_extension'];
+
     $oldString = '@import "'.$oldName.'/_'.$oldName.'";';
     $newString = '@import "'.$catName.'/_'.$catName.'";';
 
 
-    $contents = file_get_contents('../../scss/main.scss');
+    $contents = file_get_contents('../../'.$stylesDir.'/main.'.$stylesExt.'');
     $contents = str_replace($oldString, $newString , $contents);
-    file_put_contents('../../scss/main.scss', $contents);
+    file_put_contents('../../'.$stylesDir.'/main.'.$stylesExt.'', $contents);
 }
 
 
 
 function renameStylesRoot( $newName, $oldName){
 
-    $old = "../../scss/$newName/_$oldName.scss";
-    $new = "../../scss/$newName/_$newName.scss";
+    $config = getConfig('../..');
+
+    $stylesDir = $config[0]['styles_directory'];
+    $stylesExt = $config[0]['styles_extension'];
+
+    $old = "../../$stylesDir/$newName/_$oldName.$stylesExt";
+    $new = "../../$stylesDir/$newName/_$newName.$stylesExt";
 
     rename($old,$new);
 }
@@ -39,11 +59,16 @@ function renameStylesRoot( $newName, $oldName){
 
 function editAllCompCommentStrings($oldCat, $newCat)
 {
-    foreach (glob("../../components/$newCat/*.php") as $filename) {
+    $config = getConfig('../..');
+
+    $compDir = $config[0]['component_directory'];
+    $compExt = $config[0]['component_extension'];
+
+    foreach (glob("../../$compDir/$newCat/*.$compExt") as $filename) {
 
 
-        $oldString = '<!--components/' . $oldCat . '/';
-        $newString = '<!--components/' . $newCat . '/';
+        $oldString = '<!-- '.$compDir.'/' . $oldCat . '/';
+        $newString = '<!-- '.$compDir.'/' . $newCat . '/';
 
         $contents = file_get_contents($filename);
         $contents = str_replace($oldString, $newString, $contents);
@@ -55,11 +80,17 @@ function editAllCompCommentStrings($oldCat, $newCat)
 
 function editAllStyleCommentStrings($oldCat, $newCat)
 {
-    foreach (glob("../../scss/$newCat/*.scss") as $filename) {
+
+    $config = getConfig('../..');
+
+    $stylesDir = $config[0]['styles_directory'];
+    $stylesExt = $config[0]['styles_extension'];
+
+    foreach (glob("../../$stylesDir/$newCat/*.$stylesExt") as $filename) {
 
 
-        $oldString = '/* scss/'.$oldCat.'/';
-        $newString = '/* scss/'.$newCat.'/';
+        $oldString = '/* '.$stylesDir.'/'.$oldCat.'/';
+        $newString = '/* '.$stylesDir.'/'.$newCat.'/';
 
         $contents = file_get_contents($filename);
         $contents = str_replace($oldString, $newString, $contents);

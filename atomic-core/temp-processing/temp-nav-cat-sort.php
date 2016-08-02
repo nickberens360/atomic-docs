@@ -1,11 +1,11 @@
 <?php
 
-require "../temp-functions/sort-functions.php";
+require '../temp-functions/functions.php';
 
 global $catdb;
 require "../fllat.php";
 
-$catdb = new Fllat("categories", "../db");
+$catdb = new Fllat("categories", "../../atomic-db");
 
 $errors = array();
 $data = array();

@@ -1,22 +1,12 @@
 <?php
-//require '../../atomic-config.php';
-require '../temp-functions/edit-component-functions.php';
-require '../temp-functions/db-functions.php';
-require '../temp-functions/validation.php';
+require '../temp-functions/functions.php';
 
 
 global $compdb;
 require "../fllat.php";
 
-$compdb = new Fllat("components", "../db");
+$compdb = new Fllat("components", "../../atomic-db");
 
-/*
-var formData = {
-    'catName': catName,
-    'compName': $('input[name=compName]').val(),
-    'compNotes': $('textarea[name=compNotes]').val(),
-    'bgColor': $('input[name=bgColor]').val()
-};*/
 
 
 $newName = $_POST["newName"];
@@ -32,10 +22,7 @@ $errors = array();
 $data = array();
 
 
-/*if ($catName == $thisCat){
-    $errors['different'] = ' <span class="u_textUnderline">'.$thisCat .' </span>correctly.';
-}
-*/
+
 
 if ($_POST['newName'] == "") {
     $errors['name'] = 'Input is required.';

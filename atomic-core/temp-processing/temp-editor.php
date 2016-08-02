@@ -1,4 +1,7 @@
 <?php
+require '../temp-functions/functions.php';
+require "../fllat.php";
+
 $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
 $compName = $_POST["compName"];
@@ -18,11 +21,20 @@ if ( ! empty($errors)) {
     // if there are no errors process our form, then return a message
     // DO ALL YOUR FORM PROCESSING HERE
     function editorCodeUpdate($compName,$catName, $newCode, $codeDest){
+
+        $config = getConfig('../..');
+
+
+        $compExt = $config[0]['component_extension'];
+        $stylesExt = $config[0]['styles_extension'];
+
+
+
         if($codeDest == "components"){
-            $compName = $compName.'.php';
+            $compName = $compName.'.'.$compExt.'';
         }
         if($codeDest == "scss"){
-            $compName = '_'.$compName.'.scss';
+            $compName = '_'.$compName.'.'.$stylesExt.'';
         }
         $path = '../../'.$codeDest.'/'.$catName.'/'.$compName;
         file_put_contents($path, $newCode);

@@ -1,14 +1,11 @@
 <?php
-//require '../../atomic-config.php';
-require '../temp-functions/delete-component-functions.php';
-require '../temp-functions/db-functions.php';
-require '../temp-functions/validation.php';
+require '../temp-functions/functions.php';
 
 
 global $compdb;
 require "../fllat.php";
 
-$compdb = new Fllat("components", "../db");
+$compdb = new Fllat("components", "../../atomic-db");
 $key = "component";
 
 $catName = $_POST["catName"];
@@ -19,15 +16,6 @@ $errors = array();
 $data = array();
 
 
-/*if ($catName == $thisCat){
-    $errors['different'] = ' <span class="u_textUnderline">'.$thisCat .' </span>correctly.';
-}
-
-
-if ($_POST['newName'] == "") {
-    $errors['name'] = 'Input is required.';
-}
-*/
 
 if (!empty($errors)) {
     $data['success'] = false;

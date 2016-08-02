@@ -1,12 +1,12 @@
 <?php
-require '../temp-functions/create-component-functions.php';
-require '../temp-functions/db-functions.php';
-require '../temp-functions/validation.php';
+require '../temp-functions/functions.php';
 
 global $compdb;
 require "../fllat.php";
 
-$compdb = new Fllat("components", "../db");
+$compdb = new Fllat("components", "../../atomic-db");
+
+
 
 
 $errors = array();      // array to hold validation errors
@@ -19,18 +19,21 @@ $compNotes = test_input($_POST["compNotes"]);
 $bgColor = test_input($_POST["bgColor"]);
 
 
-/*$fileExists = '../../components/'.$catName.'/'.$compName.'.php';
-
-if (file_exists($fileExists) && $fileCreateName != ""){
-    $errors['exists'] = 'A file named '.$compName.' already exists.';
-}*/
 
 
-$filename = '../../components/'.$catName.'/'.$compName.'.php';
-$scssFilePath = '../../scss/'.$catName.'/_'.$compName.'.scss';
+$config = getConfig('../..');
+
+$stylesDir = $config[0]['styles_directory'];
+$stylesExt = $config[0]['styles_extension'];
+$compDir = $config[0]['component_directory'];
+$compExt = $config[0]['component_extension'];
+
+
+$filename = '../../'.$compDir.'/'.$catName.'/'.$compName.'.'.$compExt.'';
+$scssFilePath = '../../'.$stylesDir.'/'.$catName.'/_'.$compName.'.'.$stylesExt.'';
 
 if (file_exists($filename) || file_exists($scssFilePath) && $catName != ""){
-    $errors['exists'] = 'The component '.$compName .' already exists.';
+    $errors['exists'] = 'The component '.$compName.' already exists.';
 }
 
 

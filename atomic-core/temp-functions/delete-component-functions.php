@@ -4,12 +4,23 @@
 
 function deleteCompFile($catName, $fileName)
 {
-    unlink('../../components/'.$catName.'/'.$fileName.'.php');
+
+    $config = getConfig('../..');
+
+    $compDir = $config[0]['component_directory'];
+    $compExt = $config[0]['component_extension'];
+
+    unlink('../../'.$compDir.'/'.$catName.'/'.$fileName.'.'.$compExt.'');
 }
 
 function deleteStyleFile($catName, $fileName)
 {
-    unlink('../../scss/'.$catName.'/_'.$fileName.'.scss');
+    $config = getConfig('../..');
+
+    $stylesDir = $config[0]['styles_directory'];
+    $stylesExt = $config[0]['styles_extension'];
+
+    unlink('../../'.$stylesDir.'/'.$catName.'/_'.$fileName.'.'.$stylesExt.'');
 }
 
 
@@ -17,9 +28,14 @@ function deleteStyleFile($catName, $fileName)
 function deleteScssImportString($catName, $fileName)
 {
 
+    $config = getConfig('../..');
+
+    $stylesDir = $config[0]['styles_directory'];
+    $stylesExt = $config[0]['styles_extension'];
+
     $importString = "@import " . '"_'.$fileName.'";' ;
-    //Place contents of file into variable
-    $contents = file_get_contents('../../scss/'.$catName.'/_'.$catName.'.scss');
+
+    $contents = file_get_contents('../../'.$stylesDir.'/'.$catName.'/_'.$catName.'.'.$stylesExt.'');
     $contents = str_replace($importString, "", $contents);
-    file_put_contents('../../scss/'.$catName.'/_'.$catName.'.scss', $contents);
+    file_put_contents('../../'.$stylesDir.'/'.$catName.'/_'.$catName.'.'.$stylesExt.'', $contents);
 }

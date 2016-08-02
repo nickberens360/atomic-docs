@@ -1,12 +1,12 @@
 <?php
 
-require "../temp-functions/sort-functions.php";
+require '../temp-functions/functions.php';
 
 global $compdb;
 require "../fllat.php";
 
 
-$compdb = new Fllat("components", "../db");
+$compdb = new Fllat("components", "../../atomic-db");
 
 $errors = array();
 $data = array();
@@ -17,8 +17,16 @@ $oldCat = $_POST["oldCat"];
 $thisCompName = $_POST["thisCompName"];
 
 
-$filename = '../../components/'.$newCat.'/'.$thisCompName.'.php';
-$scssFilePath = '../../scss/'.$newCat.'/_'.$thisCompName.'.scss';
+$config = getConfig('../..');
+
+$stylesDir = $config[0]['styles_directory'];
+$stylesExt = $config[0]['styles_extension'];
+$compDir = $config[0]['component_directory'];
+$compExt = $config[0]['component_extension'];
+
+
+$filename = '../../'.$compDir.'/'.$newCat.'/'.$thisCompName.'.'.$compExt.'';
+$scssFilePath = '../../'.$stylesDir.'/'.$newCat.'/_'.$thisCompName.'.'.$stylesExt.'';
 
 if (file_exists($filename) || file_exists($scssFilePath) && $catName != ""){
     $errors['exists'] = 'A component named '.$thisCompName .' already exists in the target location.';

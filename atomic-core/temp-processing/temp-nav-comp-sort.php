@@ -1,12 +1,12 @@
 <?php
 
-require "../temp-functions/sort-functions.php";
+require '../temp-functions/functions.php';
 
 global $compdb;
 require "../fllat.php";
 
 
-$compdb = new Fllat("components", "../db");
+$compdb = new Fllat("components", "../../atomic-db");
 
 $errors = array();
 $data = array();

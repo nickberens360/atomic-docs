@@ -1,15 +1,19 @@
-<?php include("head.php"); ?>
 <?php
-/*$json = file_get_contents('db/data.json');
-$data = json_decode($json, true);*/
+
+include("head.php");
 
 require "fllat.php";
-$components = new Fllat("components");
-$categories = new Fllat("categories");
+$components = new Fllat("components", "../atomic-db");
+$categories = new Fllat("categories", "../atomic-db");
+
+$settings = new Fllat("settings", "../atomic-db");
 
 
 $components = $components->select(array());
 $categories = $categories->select(array());
+$settings = $settings->select(array());
+
+
 
 
 ?>
@@ -130,11 +134,13 @@ $categories = $categories->select(array());
         global $cat;
         $components = array_filter($components, function($v) {
             global $cat;
-            return $v['category'] == $cat;});
+            return $v['category'] == $cat;
+        });
         usort($components , function($a, $b) {
             return $a['order'] - $b['order'];
         });
         foreach ($components as $component) {
+            foreach ($settings as $setting)
         ?>
 
 
@@ -181,7 +187,7 @@ $categories = $categories->select(array());
                         <div class="atomic-editorInner">
                             <div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
                             <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
-                            <?php $markup_file_content = file_get_contents('../components/' . $cat . '/' . $component['component'] . '.php', true); ?>
+                            <?php $markup_file_content = file_get_contents('../'.$setting['component_directory'].'/' . $cat . '/' . $component['component'].'.'.$setting['component_extension'].'', true); ?>
                             <div class="atomic-editor"
                                  id="editor-markup-<?php echo $component['component'] ?>"><?= htmlspecialchars($markup_file_content, ENT_QUOTES); ?></div>
 
@@ -202,7 +208,7 @@ $categories = $categories->select(array());
                             <div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
                             <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
 
-                            <?php $style_file_content = file_get_contents('../scss/' . $cat . '/_' . $component['component'] . '.scss', true); ?>
+                            <?php $style_file_content = file_get_contents('../'.$setting['styles_directory'].'/' . $cat . '/_' . $component['component'].'.'.$setting['styles_extension'].'', true); ?>
 
                             <div class="atomic-editor"
                                  id="editor-styles-<?php echo $component['component'] ?>"><?= htmlspecialchars($style_file_content, ENT_QUOTES); ?></div>

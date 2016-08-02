@@ -1,0 +1,14 @@
+[
+    {
+        "category": "modules",
+        "order": 0
+    },
+    {
+        "category": "new",
+        "order": 2
+    },
+    {
+        "category": "test",
+        "order": 1
+    }
+]

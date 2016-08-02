@@ -22,8 +22,13 @@ function dbUpdateComp($db, $oldName, $newName, $catName, $bgColor, $compNotes){
 
 function renameCompFile($catName, $newName, $oldName){
 
-    $old = "../../components/$catName/$oldName.php";
-    $new = "../../components/$catName/$newName.php";
+    $config = getConfig('../..');
+
+    $compDir = $config[0]['component_directory'];
+    $compExt = $config[0]['component_extension'];
+
+    $old = "../../$compDir/$catName/$oldName.$compExt";
+    $new = "../../$compDir/$catName/$newName.$compExt";
 
     rename($old,$new);
 }
@@ -37,13 +42,18 @@ function renameCompFile($catName, $newName, $oldName){
 function editCompCommentString($catName, $oldName, $newName)
 {
 
-    $oldString = '<!--components/'.$catName.'/'.$oldName.'.php -->';
-    $newString = '<!--components/'.$catName.'/'.$newName.'.php -->';
+    $config = getConfig('../..');
+
+    $compDir = $config[0]['component_directory'];
+    $compExt = $config[0]['component_extension'];
+
+    $oldString = '<!-- '.$compDir.'/'.$catName.'/'.$oldName.'.'.$compExt.' -->';
+    $newString = '<!-- '.$compDir.'/'.$catName.'/'.$newName.'.'.$compExt.' -->';
 
 
-    $contents = file_get_contents('../../components/'.$catName.'/'.$newName.'.php');
+    $contents = file_get_contents('../../'.$compDir.'/'.$catName.'/'.$newName.'.'.$compExt.'');
     $contents = str_replace($oldString, $newString , $contents);
-    file_put_contents('../../components/'.$catName.'/'.$newName.'.php', $contents);
+    file_put_contents('../../'.$compDir.'/'.$catName.'/'.$newName.'.'.$compExt.'', $contents);
 }
 
 
@@ -57,8 +67,13 @@ function editCompCommentString($catName, $oldName, $newName)
 
 function renameStylesFile($catName, $newName, $oldName){
 
-    $old = "../../scss/$catName/_$oldName.scss";
-    $new = "../../scss/$catName/_$newName.scss";
+    $config = getConfig('../..');
+
+    $stylesDir = $config[0]['styles_directory'];
+    $stylesExt = $config[0]['styles_extension'];
+
+    $old = "../../$stylesDir/$catName/_$oldName.$stylesExt";
+    $new = "../../$stylesDir/$catName/_$newName.$stylesExt";
 
     rename($old,$new);
 }
@@ -66,13 +81,18 @@ function renameStylesFile($catName, $newName, $oldName){
 function editStyleCommentString($catName, $oldName, $newName)
 {
 
-    $oldString = '/* scss/'.$catName.'/_'.$oldName.'.scss */';
-    $newString = '/* scss/'.$catName.'/_'.$newName.'.scss */';
+    $config = getConfig('../..');
+
+    $stylesDir = $config[0]['styles_directory'];
+    $stylesExt = $config[0]['styles_extension'];
+
+    $oldString = '/* '.$stylesDir.'/'.$catName.'/_'.$oldName.'.'.$stylesExt.' */';
+    $newString = '/* '.$stylesDir.'/'.$catName.'/_'.$newName.'.'.$stylesExt.' */';
 
 
-    $contents = file_get_contents('../../scss/'.$catName.'/_'.$newName.'.scss');
+    $contents = file_get_contents('../../'.$stylesDir.'/'.$catName.'/_'.$newName.'.'.$stylesExt.'');
     $contents = str_replace($oldString, $newString , $contents);
-    file_put_contents('../../scss/'.$catName.'/_'.$newName.'.scss', $contents);
+    file_put_contents('../../'.$stylesDir.'/'.$catName.'/_'.$newName.'.'.$stylesExt.'', $contents);
 }
 
 
@@ -81,13 +101,18 @@ function editStyleCommentString($catName, $oldName, $newName)
 function editStyleRootImportString($catName, $oldName, $newName)
 {
 
+    $config = getConfig('../..');
+
+    $stylesDir = $config[0]['styles_directory'];
+    $stylesExt = $config[0]['styles_extension'];
+
     $oldString = '@import "_'.$oldName.'";';
     $newString = '@import "_'.$newName.'";';
 
 
-    $contents = file_get_contents('../../scss/'.$catName.'/_'.$catName.'.scss');
+    $contents = file_get_contents('../../'.$stylesDir.'/'.$catName.'/_'.$catName.'.'.$stylesExt.'');
     $contents = str_replace($oldString, $newString , $contents);
-    file_put_contents('../../scss/'.$catName.'/_'.$catName.'.scss', $contents);
+    file_put_contents('../../'.$stylesDir.'/'.$catName.'/_'.$catName.'.'.$stylesExt.'', $contents);
 }
 
 
