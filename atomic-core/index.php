@@ -36,7 +36,7 @@ $settings = $settings->select(array());
             <div class="atoms-side_hide">
                 <span class="js-hideSide navIcon navIcon-left fa fa-arrow-left"></span>
                 <span class="navIcon fa fa-search aa_js-actionOpen aa_actionBtn"></span>
-                <span class="navIcon fa fa-gear aa_js-actionOpen aa_actionBtn"></span>
+                <a class="js-edit-settings navIcon fa fa-gear aa_js-actionOpen aa_actionBtn" href="atomic-core/temp-forms/temp-edit-settings-form.php"></a>
                 <!--<span class="js-hideTitle fa fa-header"></span>
                 <span class="js-hideNotes fa fa-paragraph"></span>
                 <span class="js-hideCode fa fa-code"></span>-->

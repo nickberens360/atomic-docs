@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "component": "box",
+        "category": "modules",
+        "description": "Box notes.",
+        "backgroundColor": "",
+        "order": 2
+    }
+]
