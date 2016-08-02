@@ -35,6 +35,7 @@ $settings = $settings->select(array());
 
             <div class="atoms-side_hide">
                 <span class="js-hideSide navIcon navIcon-left fa fa-arrow-left"></span>
+                <span class="navIcon fa fa-search aa_js-actionOpen aa_actionBtn"></span>
                 <span class="navIcon fa fa-gear aa_js-actionOpen aa_actionBtn"></span>
                 <!--<span class="js-hideTitle fa fa-header"></span>
                 <span class="js-hideNotes fa fa-paragraph"></span>
