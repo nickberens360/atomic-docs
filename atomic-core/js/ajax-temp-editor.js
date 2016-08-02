@@ -1,6 +1,6 @@
 $('.atomic-editorWrap').submit(function (event) {
 
-    console.log('yo');
+ 
 
     event.preventDefault();
 

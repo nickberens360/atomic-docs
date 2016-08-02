@@ -54,6 +54,11 @@ if (!empty($errors)) {
     moveCompFile($oldCat, $thisCompName, $newCat);
     moveStyleFile($oldCat, $thisCompName, $newCat);
 
+    editAllCompCommentStrings($oldCat, $newCat);
+
+
+    editAllStyleCommentStrings($oldCat, $newCat);
+
 
 
     $data['success'] = true;

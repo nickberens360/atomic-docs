@@ -4,11 +4,7 @@
         "order": 0
     },
     {
-        "category": "new",
-        "order": 2
-    },
-    {
-        "category": "test",
+        "category": "atoms",
         "order": 1
     }
 ]

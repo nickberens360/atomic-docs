@@ -1446,7 +1446,9 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     display: block;
     background: #00aff0;
     padding: 12px 20px;
-    font-size: 14px; }
+    font-size: 14px;
+    position: relative;
+    height: 45px; }
   .atomsWrap .atoms-side_show {
     background: #00aff0;
     cursor: pointer;
@@ -1754,3 +1756,17 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     color: #CD5151;
     margin-top: 20px;
     font-size: 15px; }
+  .atomsWrap .atoms-side_hide .navIcon {
+    position: absolute;
+    right: 0;
+    background: #296f89;
+    top: 0;
+    bottom: 0;
+    display: inline-block;
+    margin: 0;
+    width: 33px;
+    text-align: center;
+    padding-top: 13px;
+    font-size: 18px; }
+  .atomsWrap .atoms-side_hide .navIcon-left {
+    left: 0; }

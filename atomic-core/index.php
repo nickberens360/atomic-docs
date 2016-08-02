@@ -34,10 +34,11 @@ $settings = $settings->select(array());
         <div class="atoms-overflow">
 
             <div class="atoms-side_hide">
-                <span class="js-hideSide fa fa-arrow-left"></span>
-                <span class="js-hideTitle fa fa-header"></span>
+                <span class="js-hideSide navIcon navIcon-left fa fa-arrow-left"></span>
+                <span class="navIcon fa fa-gear aa_js-actionOpen aa_actionBtn"></span>
+                <!--<span class="js-hideTitle fa fa-header"></span>
                 <span class="js-hideNotes fa fa-paragraph"></span>
-                <span class="js-hideCode fa fa-code"></span>
+                <span class="js-hideCode fa fa-code"></span>-->
             </div>
 
             <nav>
@@ -180,10 +181,10 @@ $settings = $settings->select(array());
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="<?php echo $component['component'] ?>-markup-tab"
-                    ">
+                    <div role="tabpanel" class="tab-pane active" id="<?php echo $component['component'] ?>-markup-tab">
+
                     <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
-                          data-editorFormCat="<?php echo $cat; ?>" data-codeDest="components">
+                          data-editorFormCat="<?php echo $cat; ?>" data-codeDest="<?php echo $setting['component_directory'] ?>">
                         <div class="atomic-editorInner">
                             <div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
                             <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
@@ -203,7 +204,7 @@ $settings = $settings->select(array());
                 </div>
                 <div role="tabpanel" class="tab-pane" id="<?php echo $component['component'] ?>-styles-tab">
                     <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
-                          data-editorFormCat="<?php echo $cat; ?>" data-codeDest="scss">
+                          data-editorFormCat="<?php echo $cat; ?>" data-codeDest="<?php echo $setting['styles_directory'] ?>">
                         <div class="atomic-editorInner">
                             <div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
                             <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>

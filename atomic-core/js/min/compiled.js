@@ -8079,7 +8079,7 @@ $(".aa_fileSection").sortable({
 
 $('.atomic-editorWrap').submit(function (event) {
 
-    console.log('yo');
+ 
 
     event.preventDefault();
 
@@ -8151,6 +8151,17 @@ $('.atomic-editorWrap').submit(function (event) {
 
 $( document ).ready(function() {
     $('.partial-viewport').load(function() {
-        this.style.height = this.contentWindow.document.body.offsetHeight;
+        //this.style.height = this.contentWindow.document.body.offsetHeight;
+
+
+        var frameHeight = this.contentWindow.document.body.offsetHeight;
+
+        console.log(frameHeight);
+
+        $(this).css('height', frameHeight);
+
     });
 });
+
+
+

@@ -8,6 +8,12 @@ $compName = $_POST["compName"];
 $catName = $_POST["catName"];
 $newCode = $_POST["newCode"];
 $codeDest = $_POST["codeDest"];
+
+
+
+
+
+
 if ($newCode == ""){
     $errors['name'] = 'No change detected';
 }
@@ -27,13 +33,15 @@ if ( ! empty($errors)) {
 
         $compExt = $config[0]['component_extension'];
         $stylesExt = $config[0]['styles_extension'];
+        $stylesDir = $config[0]['styles_directory'];
+        $compDir = $config[0]['component_directory'];
 
 
 
-        if($codeDest == "components"){
+        if($codeDest == $compDir){
             $compName = $compName.'.'.$compExt.'';
         }
-        if($codeDest == "scss"){
+        if($codeDest == $stylesDir){
             $compName = '_'.$compName.'.'.$stylesExt.'';
         }
         $path = '../../'.$codeDest.'/'.$catName.'/'.$compName;

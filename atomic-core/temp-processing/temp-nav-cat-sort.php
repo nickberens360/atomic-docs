@@ -12,9 +12,7 @@ $data = array();
 
 $catName = $_POST["catName"];
 
-/*if ($newCode == ""){
-    $errors['name'] = 'No change detected';
-}*/
+
 
 if (!empty($errors)) {
 
@@ -27,6 +25,8 @@ if (!empty($errors)) {
     stylesRootOrder($catName);
 
     navCatOrder($catdb, $catName);
+
+
 
 
     $data['success'] = true;
