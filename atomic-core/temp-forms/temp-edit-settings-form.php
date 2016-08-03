@@ -19,24 +19,24 @@ $stylesDir = $settings[0]['styles_directory'];
 
 
 <div class="aa_fileFormGroup">
-    <form id="edit-settings-file" class="aa_fileForm"  method="post">
+    <form id="form-edit-settings" class="aa_fileForm"  method="post">
         <div class="inputGroup">
             <label class="aa_label">Edit style directory name</label>
-            <input type="text" class="form-control" name="compName" value="<?php echo $stylesDir ?>">
+            <input type="text" class="form-control" name="stylesDir" value="<?php echo $stylesDir ?>">
         </div>
         <div class="inputGroup">
             <label class="aa_label">Edit style file extension (no period)</label>
-            <input type="text" class="form-control" name="compName"  value="<?php echo $stylesExt ?>">
+            <input type="text" class="form-control" name="stylesExt"  value="<?php echo $stylesExt ?>">
         </div>
 
         <div class="inputGroup">
             <label class="aa_label">Edit component file directory name</label>
-            <input type="text" class="form-control" name="compName"  value="<?php echo $compDir ?>">
+            <input type="text" class="form-control" name="compDir"  value="<?php echo $compDir ?>">
         </div>
 
         <div class="inputGroup">
             <label class="aa_label">Change markup file extension (no period)</label>
-            <input type="text" class="form-control" name="compName"  value="<?php echo $compExt ?>">
+            <input type="text" class="form-control" name="compExt"  value="<?php echo $compExt ?>">
         </div>
 
 

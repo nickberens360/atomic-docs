@@ -2,9 +2,5 @@
     {
         "category": "modules",
         "order": 0
-    },
-    {
-        "category": "atoms",
-        "order": 1
     }
 ]
