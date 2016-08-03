@@ -50,3 +50,21 @@ function addCompDbItem($compName, $catName, $compNotes, $bgColor, $db){
     $newComp = array("component" => $compName, "category" => $catName, "description" => $compNotes, "backgroundColor" => $bgColor, "order" => $i);
     $db -> add($newComp);
 }
+
+
+function dbUpdateSettings($settings, $compDir, $compExt, $stylesExt, $stylesDir){
+    
+
+    $new_compDir = array("component_directory" => $compDir);
+    $settings->update(0, $new_compDir);
+
+    $new_compExt = array("component_extension" => $compExt);
+    $settings->update(0, $new_compExt);
+
+    $new_stylesExt = array("styles_extension" => $stylesExt);
+    $settings->update(0, $new_stylesExt);
+
+    $new_stylesDir = array("styles_directory" => $stylesDir);
+    $settings->update(0, $new_stylesDir);
+
+}

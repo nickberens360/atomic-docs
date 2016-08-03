@@ -8,28 +8,42 @@ $('.js-edit-settings').click(function (event) {
             $('#js_actionDrawer__content').html($(data));
 
 
+            var old_compDir = $('#form-edit-settings').find('input[name=compDir]').val();
+            var old_compExt = $('#form-edit-settings').find('input[name=compExt]').val();
+            var old_stylesExt = $('#form-edit-settings').find('input[name=stylesExt]').val();
+            var old_stylesDir = $('#form-edit-settings').find('input[name=stylesDir]').val();
 
+
+            console.log(old_compDir);
+            console.log(old_compExt);
+            console.log(old_stylesExt);
+            console.log(old_stylesDir);
 
             $('#form-edit-settings').submit(function (event) {
 
 
 
-                var compDir = $(this).find('input[name=compDir]').val();
-                var compExt = $(this).find('input[name=compExt]').val();
-                var stylesExt = $(this).find('input[name=stylesExt]').val();
-                var stylesDir = $(this).find('input[name=stylesDir]').val();
-
-                console.log(compDir);
-                console.log(compExt);
-                console.log(stylesExt);
-                console.log(stylesDir);
 
 
 
+                var formData = {
+                    'compDir': $(this).find('input[name=compDir]').val(),
+                    'compExt': $(this).find('input[name=compExt]').val(),
+                    'stylesExt': $(this).find('input[name=stylesExt]').val(),
+                    'stylesDir': $(this).find('input[name=stylesDir]').val(),
+                    'old_compDir': old_compDir,
+                    'old_compExt': old_compExt,
+                    'old_stylesExt': old_stylesExt,
+                    'old_stylesDir': old_stylesDir
+                };
 
 
 
-                /*$.ajax({
+
+
+
+
+                $.ajax({
                     type: 'POST',
                     url: 'atomic-core/temp-processing/temp-edit-settings.php',
                     data: formData,
@@ -56,12 +70,14 @@ $('.js-edit-settings').click(function (event) {
 
                         } else {
 
-                            window.location = 'atomic-core/?cat='+catName;
+                            window.location = 'atomic-core/index.php';
+
+
                         }
                     })
                     .fail(function (data) {
                         console.log(data);
-                    });*/
+                    });
                 event.preventDefault();
             });
 

@@ -1,6 +1,10 @@
 [
     {
         "category": "modules",
-        "order": 0
+        "order": 1
+    },
+    {
+        "category": "atoms",
+        "order": 2
     }
 ]

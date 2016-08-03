@@ -2,7 +2,7 @@
     {
         "styles_directory": "less",
         "styles_extension": "less",
-        "component_directory": "compDir",
+        "component_directory": "compDIr",
         "component_extension": "twig"
     }
 ]
