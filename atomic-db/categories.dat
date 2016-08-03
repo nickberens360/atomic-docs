@@ -2,5 +2,17 @@
     {
         "category": "modules",
         "order": 1
+    },
+    {
+        "category": "atoms",
+        "order": 2
+    },
+    {
+        "category": "organisims",
+        "order": 3
+    },
+    {
+        "category": "variables",
+        "order": 0
     }
 ]

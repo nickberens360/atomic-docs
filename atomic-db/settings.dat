@@ -1,8 +1,8 @@
 [
     {
-        "styles_directory": "lessDir",
-        "styles_extension": "less",
+        "styles_directory": "scss",
+        "styles_extension": "scss",
         "component_directory": "components",
-        "component_extension": "twig"
+        "component_extension": "php"
     }
 ]
