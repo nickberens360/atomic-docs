@@ -5,12 +5,5 @@
         "description": "",
         "backgroundColor": "",
         "order": 2
-    },
-    {
-        "component": "lame",
-        "category": "atoms",
-        "description": "",
-        "backgroundColor": "",
-        "order": 2
     }
 ]

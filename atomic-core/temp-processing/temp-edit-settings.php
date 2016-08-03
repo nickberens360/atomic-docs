@@ -41,42 +41,27 @@ if ( ! empty($errors)) {
 
 
     dbUpdateSettings($settings, $compDir, $compExt, $stylesExt, $stylesDir);
-
-
-    function editStyleExt($old_stylesDir, $old_stylesExt, $stylesExt){
-    
-            $path = "../../$old_stylesDir";
-            $dir = new DirectoryIterator($path);
-
-            foreach ($dir as $fileinfo) {
-                if ($fileinfo->isDir() && !$fileinfo->isDot()) {
-
-
-                    $dirs = $fileinfo->getFilename();
-
-
-                    foreach (glob("../../$old_stylesDir/$dirs/*.$old_stylesExt") as $filename) {
-
-                        $newname = basename($filename, ".$old_stylesExt").".$stylesExt";
-
-                        rename($filename, '../../'.$old_stylesDir.'/'.$dirs.'/'.$newname);
-
-                    }
-                }
-            }
-    }
-
-
+    editStylesComment($old_stylesDir, $old_stylesExt, $stylesExt, $stylesDir);
     editStyleExt($old_stylesDir, $old_stylesExt, $stylesExt);
+    renameStyleDirSettings($old_stylesDir, $stylesDir);
+    changeRootStylesExt($stylesDir, $old_stylesExt, $stylesExt);
 
 
 
 
-    //editStyleExt($old_stylesDir, $old_stylesExt, $stylesExt);
+    editCompComment($old_compDir, $old_compExt, $compExt, $compDir);
+    editCompExt($old_compDir, $old_compExt, $compExt);
+    renameCompDirSettings($old_compDir, $compDir);
 
-    //change styles dir name
+
+
+
+
+
+
+
     //change component dir name
-    //change style file exts
+
     //change markup file exts
 
 

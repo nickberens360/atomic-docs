@@ -12,4 +12,5 @@ require 'delete-component-functions.php';
 require 'edit-category-functions.php';
 require 'edit-component-functions.php';
 require 'sort-functions.php';
+require 'edit-settings-functions.php';
 require 'validation.php';
