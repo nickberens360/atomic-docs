@@ -3,6 +3,7 @@
 require "../fllat.php";
 
 
+
 $settings = new Fllat("settings", "../../atomic-db");
 
 
@@ -38,7 +39,7 @@ $stylesDir = $settings[0]['styles_directory'];
             <label class="aa_label">Change markup file extension (no period)</label>
             <input type="text" class="form-control" name="compExt"  value="<?php echo $compExt ?>">
         </div>
-
+        
 
         <button class="aa_btn aa_btn-pos" type="submit" name="update_button" value="update">Update</button>
     </form>

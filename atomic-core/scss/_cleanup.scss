@@ -165,7 +165,6 @@ textarea.textChange {
   }
 }
 
-
 .u_textUnderline {
   text-decoration: underline;
 }
@@ -183,30 +182,32 @@ textarea.textChange {
   margin-top: 20px;
   font-size: 15px;
 }
-.navIcon{
+
+.navIcon {
   color: #fff;
 }
-.navIcon-settings{
-  font-size:18px;
+
+.navIcon-settings {
+  font-size: 18px;
   position: relative;
   top: 1px;
 }
 
-
-/*.atoms-side_hide .navIcon{
+.js #loader {
+  display: block;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
-  bottom: 0;
-  display: inline-block;
-  margin: 0;
-  width: 33px;
-  text-align: center;
-  padding-top: 13px;
-  font-size: 14px;
 }
 
-.atoms-side_hide .navIcon-left{
-  left: 0;
-}*/
-
+.se-pre-con {
+  position: fixed;
+  left: 265px;
+  right: 0;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  //background: url('http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_11.gif') center no-repeat #fff;
+  background: #FCFEFA;
+}

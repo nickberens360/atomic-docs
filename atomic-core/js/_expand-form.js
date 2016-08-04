@@ -25,6 +25,15 @@ oflowHeight = sideHeight - formHeight;
 $('.atoms-overflow').css('height',oflowHeight);*/
 
 
+
+$(window).on('load', function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("slow");
+});
+
+
+
+
 $('.cat-form-group .fa').click(function() {
 	$(this).toggleClass('fa-minus-square-o fa-plus-square-o');
 

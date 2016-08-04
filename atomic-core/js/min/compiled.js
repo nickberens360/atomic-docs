@@ -7122,6 +7122,15 @@ oflowHeight = sideHeight - formHeight;
 $('.atoms-overflow').css('height',oflowHeight);*/
 
 
+
+$(window).on('load', function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("slow");
+});
+
+
+
+
 $('.cat-form-group .fa').click(function() {
 	$(this).toggleClass('fa-minus-square-o fa-plus-square-o');
 
@@ -7909,10 +7918,8 @@ $('.js-edit-settings').click(function (event) {
             var old_stylesDir = $('#form-edit-settings').find('input[name=stylesDir]').val();
 
 
-            console.log(old_compDir);
-            console.log(old_compExt);
-            console.log(old_stylesExt);
-            console.log(old_stylesDir);
+           var currentCat = $('.atomic-h1').text();
+
 
             $('#form-edit-settings').submit(function (event) {
 
@@ -7965,7 +7972,7 @@ $('.js-edit-settings').click(function (event) {
 
                         } else {
 
-                            window.location = 'atomic-core/index.php';
+                            window.location = 'atomic-core/?cat='+currentCat+'';
 
 
                         }

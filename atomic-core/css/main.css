@@ -1036,23 +1036,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   .atoms-nav{
     margin:0;
   }
-} */
-  /*.atoms-side_hide .navIcon{
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  display: inline-block;
-  margin: 0;
-  width: 33px;
-  text-align: center;
-  padding-top: 13px;
-  font-size: 14px;
-}
-
-.atoms-side_hide .navIcon-left{
-  left: 0;
-}*/ }
+} */ }
   .atomsWrap .nav {
     margin-bottom: 0;
     padding-left: 0;
@@ -1777,3 +1761,17 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     font-size: 18px;
     position: relative;
     top: 1px; }
+  .atomsWrap .js #loader {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .atomsWrap .se-pre-con {
+    position: fixed;
+    left: 265px;
+    right: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #FCFEFA; }
