@@ -164,7 +164,7 @@ $settings = $settings->select(array());
                  style="background-color:<?php echo $component['backgroundColor'] ?>">
                 <iframe class="partial-viewport"
                         src="atomic-core/partial.php?component=<?php echo $component['component'] ?>&category=<?php echo $cat; ?>"
-                        sandbox="allow-same-origin allow-scripts  allow-modals" frameborder="0" scrolling="no">
+                        sandbox="allow-same-origin" frameborder="0" scrolling="no">
 
                 </iframe>
             </div>
