@@ -32,10 +32,12 @@ $settings = $settings->select(array());
     </div>
     <aside class="atoms-side">
         <div class="atoms-overflow">
-
+            <form class="atomic-search"  method="GET">
+                <input type="text" placeholder="Search components" name="search"  />
+            </form>
             <div class="atoms-side_hide">
                 <span class="js-hideSide navIcon navIcon-left fa fa-arrow-left"></span>
-                <span class="navIcon fa fa-search "></span>
+                <span class="navIcon js_searchTrigger  fa fa-search "></span>
                 <span class="js-hideCode fa fa-code"></span>
                 <a class="js-edit-settings navIcon navIcon-settings fa fa-gear aa_js-actionOpen aa_actionBtn" href="atomic-core/temp-forms/temp-edit-settings-form.php"></a>
 
@@ -123,7 +125,7 @@ $settings = $settings->select(array());
     <div class="atoms-main">
 
         <div class="se-pre-con"></div>
-        
+
         <?php if (!empty($_GET['cat'])) { ?>
 
 
@@ -132,6 +134,10 @@ $settings = $settings->select(array());
         <h1 id="modules" class="atomic-h1"><?php echo $_GET['cat']; ?> <a class="fa fa fa-pencil-square-o js_cat-edit aa_js-actionOpen aa_actionBtn" href="atomic-core/temp-forms/temp-edit-category-form.php" data-cat="<?php echo $_GET['cat']; ?>">
 
             </a></h1>
+
+
+
+
 
 
         <?php
@@ -172,7 +178,7 @@ $settings = $settings->select(array());
                 </iframe>
             </div>
 
-            <div>
+            <div class="codeBlocks">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#<?php echo $component['component'] ?>-markup-tab"

@@ -4,6 +4,13 @@
         "category": "modules",
         "description": "This is the box component.",
         "backgroundColor": "",
+        "order": 0
+    },
+    {
+        "component": "listNav",
+        "category": "modules",
+        "description": "",
+        "backgroundColor": "",
         "order": 2
     }
 ]
