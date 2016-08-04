@@ -1,5 +1,5 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+<script>window.jQuery || document.write('<script src="atomic-core/vendor/jquery.js"><\/script>')</script>
 <script src="atomic-core/js/src-min/ace.js"></script>
 <script src="atomic-core/vendor/zero/ZeroClipboard.js"></script>
 <script src="atomic-core/vendor/newSort/jquery.fn.sortable.js"></script>

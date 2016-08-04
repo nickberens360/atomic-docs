@@ -8242,7 +8242,7 @@ $('.atomic-editorWrap').submit(function (event) {
 
 
 $( document ).ready(function() {
-    $('.partial-viewport').load(function() {
+    $('.partial-viewport').on('load', function() {
         //this.style.height = this.contentWindow.document.body.offsetHeight;
 
 
@@ -8254,6 +8254,3 @@ $( document ).ready(function() {
 
     });
 });
-
-
-
