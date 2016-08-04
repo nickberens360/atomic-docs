@@ -1,8 +1,8 @@
 [
     {
-        "component": "test",
+        "component": "box",
         "category": "modules",
-        "description": "",
+        "description": "This is the box component.",
         "backgroundColor": "",
         "order": 2
     }

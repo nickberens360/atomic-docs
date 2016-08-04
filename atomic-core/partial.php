@@ -19,7 +19,8 @@ $compDir = $settings[0]['component_directory'];
     <meta charset="UTF-8">
     <title><?php echo $_GET["comp-name"]; ?></title>
     <base href="../" >
-    <link rel="stylesheet" type="../text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
+    
 
     <style>
         body{

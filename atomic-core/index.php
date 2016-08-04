@@ -227,7 +227,7 @@ $settings = $settings->select(array());
             </div>
         </div>
 
-
+            </div>
 
         <?php } ?>
 
@@ -238,7 +238,7 @@ $settings = $settings->select(array());
 
         <?php } ?>
 
-    </div>
+
 
 
 
