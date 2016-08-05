@@ -4,13 +4,6 @@
         "category": "modules",
         "description": "This is the box component.",
         "backgroundColor": "",
-        "order": 2
-    },
-    {
-        "component": "lists",
-        "category": "atoms",
-        "description": "",
-        "backgroundColor": "",
-        "order": 2
+        "order": 0
     }
 ]
