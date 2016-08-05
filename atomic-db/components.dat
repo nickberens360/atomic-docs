@@ -7,17 +7,17 @@
         "order": 0
     },
     {
-        "component": "lists",
+        "component": "fonts",
         "category": "modules",
         "description": "",
         "backgroundColor": "",
         "order": 1
     },
     {
-        "component": "test",
-        "category": "atoms",
-        "description": "Test notes",
-        "backgroundColor": "#59e276",
+        "component": "colors",
+        "category": "variables",
+        "description": "",
+        "backgroundColor": "",
         "order": 2
     }
 ]
