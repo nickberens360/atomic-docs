@@ -278,6 +278,9 @@ $settings = $settings->select(array());
 
         <?php } else { ?>
 
+            <form id="importForm">
+                <button type="submit">Import</button>
+            </form>
 
         <?php } ?>
 

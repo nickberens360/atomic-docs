@@ -1,0 +1,18 @@
+/*scss/variables/_fonts.scss*/
+
+$font1: 'Lora', serif;
+$font2: 'Open Sans Condensed', sans-serif;
+
+
+.font1{
+	font-family: $font1; 
+}
+.font2{
+	font-family: $font2; 
+}
+
+.font{
+	span{
+		display:block;
+	}
+}

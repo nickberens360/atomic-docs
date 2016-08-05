@@ -1,0 +1,47 @@
+/*scss/variables/_colors.scss*/
+
+$color1: #00AFF0;
+$color2: #58CD6C;
+$color3: #DE4645;
+$color4: #545454;
+
+.color1{
+	background: $color1;
+}
+.color2{
+	background: $color2;
+}
+.color3{
+	background: $color3;
+}
+.color4{
+	background: $color4;
+}
+
+
+.colors{
+	@extend .grid-row;
+}
+.color{
+	width:100px;
+	height:100px;
+	float:left;
+	margin-right:10px;
+	padding:10px;
+  color:#fff;
+  font-size:12px;
+}
+
+.colorFixed{
+  position: fixed;
+  z-index: 3000;
+  right: 0;
+  top: 0; 
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.57); 
+  .color{
+    float: none; 
+    margin-right:0;
+    width:70px;
+    height:50px;
+  }
+}

@@ -1,0 +1,37 @@
+.main{
+  padding:70px 20px;
+	.main__inner{
+		@extend .wrap;
+    @extend .grid-row;
+	}
+}
+.main__content{
+	padding:$base;
+}
+
+.main__aside{
+  padding:$base;
+}
+
+.main-2col{
+	.main__content{
+		@include col($eight);
+	}
+	.main__aside{
+		@include col($four);
+		
+	}
+}
+
+.main-2col.main-right{
+	.main__content{
+		@include col($eight);
+		float:right;
+	}
+	.main__aside{
+		@include col($four);
+		float:right;
+	}
+}
+
+

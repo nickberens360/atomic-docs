@@ -1,0 +1,28 @@
+/*scss/molecules/_navMain.scss*/
+
+.navMain{
+  list-style:none;
+  padding:0;
+  display: table;
+  width: 100%;
+  >li{
+     display: table-cell;
+     text-align: center;
+     >a{
+        padding:10px;
+        display:block;
+        background:#eee;
+        border-right:2px solid #fff;
+      }
+  } 
+}
+.dropit-submenu{
+  text-align:left; 
+  width:100%;
+  a{
+    padding:10px; 
+    display:block;
+    background:#ccc;
+    border-bottom:2px solid #fff;
+  }
+}

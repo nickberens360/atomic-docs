@@ -1,0 +1,17 @@
+/*scss/organisms/_headerMain.scss*/
+
+.headerMain{
+  background: #464545; 
+}
+.headerMain__inner{
+  @extend .wrap;
+  @extend .grid-row;
+  padding:20px;
+}
+
+.headerMain__left{
+  @include col($four); 
+}
+.headerMain__right{
+  @include col($eight); 
+}

@@ -1,0 +1,35 @@
+.btns{
+	display:inline-block;
+	background:#ccc;
+	//padding:0 40px;
+	color:#fff;
+	opacity:1;
+	cursor:pointer;
+	transition: all .25s;
+	position:relative;
+	border:none;
+  font-weight:bold;
+  text-transform:uppercase;
+  font-size:16px;
+  height: 42px;
+  line-height: 42px;
+  width:150px;
+  text-align:center;
+}
+.btns:hover{
+	color:#fff;
+	text-decoration:none;
+}
+.btns:active{
+	top:1px;
+}
+.btn1{
+	background:#ccc;
+}
+.btn2{
+	background:#6A6A6A;
+}
+
+.btn3{
+	background:#414141;
+}
