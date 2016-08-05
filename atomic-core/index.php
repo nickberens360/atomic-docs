@@ -34,7 +34,7 @@ $settings = $settings->select(array());
     <aside class="atoms-side">
         <div class="atoms-overflow">
             <form class="atomic-search" method="GET">
-                <input type="text" placeholder="Search components" name="search"/>
+                <input class="searchInput" type="text" placeholder="Search components" name="search"/>
             </form>
             <div class="atoms-side_hide">
                 <span class="js-hideSide navIcon navIcon-left fa fa-arrow-left"></span>
@@ -143,12 +143,12 @@ $settings = $settings->select(array());
 
 
                 <?php if (!empty($cat)) { ?>
-                <h1 id="modules" class="atomic-h1">The <a href="atomic-core/?cat=<?php echo $cat ?>#<?php echo $_GET['search']; ?>"> <?php echo $_GET['search']; ?> </a> component was found in the
+                <h1 id="modules" class="atomic-h1">The <a href="atomic-core/?cat=<?php echo $cat ?>#<?php echo $_GET['search']; ?>"> <?php echo $_GET['search']; ?></a> component was found in the
                     <a href="atomic-core/?cat=<?php echo $cat ?>"><?php echo $cat ?></a> category.</h1>
                 <?php } ?>
 
                 <?php if (empty($cat)) { ?>
-                    <h1 id="modules" class="atomic-h1">Sorry no results for "<?php echo $_GET['search']; ?>".</h1>
+                    <h1 id="modules" class="atomic-h1">Sorry, no results found for "<?php echo $_GET['search']; ?>".</h1>
                 <?php } ?>
 
 

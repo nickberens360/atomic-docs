@@ -6,6 +6,11 @@ $('.js_add-component').click(function (event) {
     event.preventDefault();
     $.ajax(this.href, {
         success: function (data) {
+
+
+
+
+
             $('#js_actionDrawer__content').html($(data));
 
 
@@ -16,7 +21,7 @@ $('.js_add-component').click(function (event) {
                 });
 
 
-
+            $('input[name=compName]').focus();
 
 
 

@@ -1,25 +1,18 @@
 $('.js_cat-add').click(function (event) {
 
 
-
     event.preventDefault();
     $.ajax(this.href, {
         success: function (data) {
             $('#js_actionDrawer__content').html($(data));
 
-
+            $('#form-create-category').find('input').focus();
 
 
             $('#form-create-category').submit(function (event) {
 
 
                 var catName = $('input[name=catName]').val();
-
-
-
-
-
-
 
 
                 var formData = {
@@ -53,7 +46,7 @@ $('.js_cat-add').click(function (event) {
 
                         } else {
 
-                            window.location = 'atomic-core/?cat='+catName;
+                            window.location = 'atomic-core/?cat=' + catName;
                         }
                     })
                     .fail(function (data) {
@@ -61,8 +54,6 @@ $('.js_cat-add').click(function (event) {
                     });
                 event.preventDefault();
             });
-
-
 
 
         },

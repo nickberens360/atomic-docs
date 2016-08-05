@@ -12,5 +12,12 @@
         "description": "",
         "backgroundColor": "",
         "order": 1
+    },
+    {
+        "component": "test",
+        "category": "atoms",
+        "description": "Test notes",
+        "backgroundColor": "#59e276",
+        "order": 2
     }
 ]
