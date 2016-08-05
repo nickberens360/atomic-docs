@@ -7,15 +7,42 @@ require "../fllat.php";
 $settings = new Fllat("settings", "../../atomic-db");
 
 
+
+
+/*$compDir = test_input($_POST["compDir"]);
+$compExt = test_input($_POST["compExt"]);
+$stylesExt = test_input($_POST["stylesExt"]);
+$stylesDir = test_input($_POST["stylesDir"]);*/
+
+
+/*$compDir = $_POST["compDir"];
+$compExt = $_POST["compExt"];
+$stylesExt = $_POST["stylesExt"];
+$stylesDir = $_POST["stylesDir"];*/
+
+
 $compDir = $_POST["compDir"];
 $compExt = $_POST["compExt"];
 $stylesExt = $_POST["stylesExt"];
 $stylesDir = $_POST["stylesDir"];
 
+$compDir = str_replace(array('.', ','), '' , $compDir);
+$compExt = str_replace(array('.', ','), '' , $compExt);
+$stylesExt = str_replace(array('.', ','), '' , $stylesExt);
+$stylesDir = str_replace(array('.', ','), '' , $stylesDir);
+
+
+
 $old_compDir = $_POST["old_compDir"];
 $old_compExt = $_POST["old_compExt"];
 $old_stylesExt = $_POST["old_stylesExt"];
 $old_stylesDir = $_POST["old_stylesDir"];
+
+
+$old_compDir = str_replace(array('.', ','), '' , $old_compDir);
+$old_compExt = str_replace(array('.', ','), '' , $old_compExt);
+$old_stylesExt = str_replace(array('.', ','), '' , $old_stylesExt);
+$old_stylesDir = str_replace(array('.', ','), '' , $old_stylesDir);
 
 
 
@@ -38,13 +65,14 @@ if ( ! empty($errors)) {
 
 
 
+    changeRootStylesExt($stylesDir, $old_stylesExt, $stylesExt);
 
 
     dbUpdateSettings($settings, $compDir, $compExt, $stylesExt, $stylesDir);
     editStylesComment($old_stylesDir, $old_stylesExt, $stylesExt, $stylesDir);
     editStyleExt($old_stylesDir, $old_stylesExt, $stylesExt);
     renameStyleDirSettings($old_stylesDir, $stylesDir);
-    changeRootStylesExt($stylesDir, $old_stylesExt, $stylesExt);
+
 
 
 

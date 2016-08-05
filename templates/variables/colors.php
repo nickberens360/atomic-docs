@@ -1,1 +1,0 @@
-<!-- templates/variables/colors.php -->

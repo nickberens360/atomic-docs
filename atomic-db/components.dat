@@ -4,18 +4,11 @@
         "category": "modules",
         "description": "This is the box component.",
         "backgroundColor": "",
-        "order": 0
+        "order": 2
     },
     {
-        "component": "fonts",
-        "category": "modules",
-        "description": "",
-        "backgroundColor": "",
-        "order": 1
-    },
-    {
-        "component": "colors",
-        "category": "variables",
+        "component": "lists",
+        "category": "atoms",
         "description": "",
         "backgroundColor": "",
         "order": 2

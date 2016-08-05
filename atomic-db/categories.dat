@@ -6,9 +6,5 @@
     {
         "category": "atoms",
         "order": 0
-    },
-    {
-        "category": "variables",
-        "order": 2
     }
 ]

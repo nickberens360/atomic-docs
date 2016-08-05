@@ -77,14 +77,14 @@ function changeRootStylesExt($stylesDir, $old_stylesExt, $stylesExt){
 
     $filename = "$path/main.$old_stylesExt";
 
-   
+
 
     $newname = basename($filename, ".$old_stylesExt").".$stylesExt";
 
 
 
     $newname = "$path/$newname";
-    
+
 
     rename($filename, $newname);
 }
