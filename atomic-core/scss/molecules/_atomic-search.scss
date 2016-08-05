@@ -19,6 +19,11 @@
     background-repeat: no-repeat;
     background-size: 20px;
     background-position: 5px center;
+    border-radius: 100px;
+    &:focus {
+      border: none;
+      outline: none;
+    }
   }
   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     font-size: 12px;
@@ -33,6 +38,7 @@
     font-size: 12px;
   }
 }
+
 
 
 

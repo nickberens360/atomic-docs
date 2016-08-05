@@ -7,16 +7,40 @@
 
 
 
-<?php if (!empty($_GET['cat'])) { ?>
+<?php if (!empty($_GET['cat']) || !empty($_GET['search'])) { ?>
 
 <?php
-$cat = $_GET['cat'];
-global $cat;
-$i = 0;
-$components = array_filter($components, function($v) {
-    global $cat;
-    return $v['category'] == $cat;});
-foreach ($components as $component) {
+
+
+    if (!empty($_GET['cat'])) {
+        $cat = $_GET['cat'];
+        global $cat;
+        $i = 0;
+        $compSelect = array_filter($compSelect, function ($v) {
+            global $cat;
+            return $v['category'] == $cat;
+        });
+    }
+
+
+    if (!empty($_GET['search'])) {
+        $search = $_GET['search'];
+        global $search;
+
+        $cat = $components -> get("category", "component", $_GET['search']);
+        global $cat;
+
+        $i = 0;
+
+        $compSelect = array_filter($compSelect, function ($v) {
+            global $search;
+            return $v['component'] == $search;
+        });
+    }
+
+
+
+foreach ($compSelect as $component) {
     $i++
     ?>
 
@@ -61,7 +85,7 @@ foreach ($components as $component) {
 <?php } ?>
 
 <?php } else { ?>
-    index
+    <!--index-->
 <?php } ?>
 
 </body>
