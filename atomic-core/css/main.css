@@ -1684,6 +1684,17 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
       left: 0; }
     .atomsWrap .atomic-editorWrap-active .ace_scroller {
       left: 43px !important; }
+  .atomsWrap .pageContent {
+    max-width: 600px;
+    margin: auto; }
+    .atomsWrap .pageContent li {
+      margin-bottom: 12px; }
+  .atomsWrap #importForm {
+    text-align: center; }
+  .atomsWrap .pageHeader {
+    text-align: center;
+    margin-bottom: 48px;
+    margin-top: 48px; }
   .atomsWrap body {
     background: #FCFEFA;
     color: #7A7A7A;

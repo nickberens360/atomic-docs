@@ -38,4 +38,8 @@ function deleteScssImportString($catName, $fileName)
     $contents = file_get_contents('../../'.$stylesDir.'/'.$catName.'/_'.$catName.'.'.$stylesExt.'');
     $contents = str_replace($importString, "", $contents);
     file_put_contents('../../'.$stylesDir.'/'.$catName.'/_'.$catName.'.'.$stylesExt.'', $contents);
+
+    
+
+
 }

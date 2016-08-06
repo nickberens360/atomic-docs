@@ -7,13 +7,6 @@
         "order": 0
     },
     {
-        "component": "form-elements",
-        "category": "atoms",
-        "description": "",
-        "backgroundColor": "",
-        "order": 1
-    },
-    {
         "component": "headings",
         "category": "atoms",
         "description": "",
@@ -35,32 +28,11 @@
         "order": 3
     },
     {
-        "component": "matchheight",
-        "category": "layout",
-        "description": "",
-        "backgroundColor": "",
-        "order": 4
-    },
-    {
         "component": "section",
         "category": "layout",
         "description": "",
         "backgroundColor": "",
         "order": 5
-    },
-    {
-        "component": "navMain",
-        "category": "molecules",
-        "description": "",
-        "backgroundColor": "",
-        "order": "1"
-    },
-    {
-        "component": "headerMain",
-        "category": "organisms",
-        "description": "",
-        "backgroundColor": "",
-        "order": "2"
     },
     {
         "component": "col",

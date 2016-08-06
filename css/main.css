@@ -61,7 +61,7 @@ pre, table, hr, .atoms-code-example {
 }
 
 /*scss/variables/_wrap.scss*/
-.wrap, .main .main__inner, .section .section-inner, .headerMain__inner {
+.wrap, .main .main__inner, .section .section-inner {
   max-width: 1420px;
   padding-right: 20px;
   padding-left: 20px;
@@ -70,14 +70,14 @@ pre, table, hr, .atoms-code-example {
 }
 
 @media (max-width: 120px) {
-  .wrap, .main .main__inner, .section .section-inner, .headerMain__inner {
+  .wrap, .main .main__inner, .section .section-inner {
     max-width: 100%;
   }
 }
 /*@include wrap($wrapWidth, $mpad);*/
 /*scss/variables/_col.scss*/
 /*@include col($six);*/
-.gridExample .grid-row, .gridExample .colors, .gridExample .main .main__inner, .main .gridExample .main__inner, .gridExample .matchheight, .gridExample .section .section-inner, .section .gridExample .section-inner, .gridExample .headerMain__inner {
+.gridExample .grid-row, .gridExample .colors, .gridExample .main .main__inner, .main .gridExample .main__inner, .gridExample .section .section-inner, .section .gridExample .section-inner {
   margin-bottom: 10px;
 }
 .gridExample [class*='nb-'] {
@@ -127,140 +127,6 @@ pre, table, hr, .atoms-code-example {
 
 .btn3 {
   background: #414141;
-}
-
-/*scss/atoms/_form-elements.scss*/
-form {
-  font-family: "Open Sans Condensed", sans-serif;
-}
-
-.formGroup {
-  margin-bottom: 24px;
-  position: relative;
-}
-
-.formInput {
-  height: 50px;
-  border-radius: 0;
-  padding-left: 10px;
-  width: 100%;
-  background: #fff;
-  line-height: 50px;
-  border: 1px solid #ccc;
-  padding-top: 0;
-  transition: all 0.1s linear;
-}
-.formInput:focus {
-  border: none;
-}
-
-textarea.formInput {
-  height: 160px;
-  margin-bottom: -5px;
-}
-
-.formLabel {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  font-family: "Open Sans Condensed", sans-serif;
-}
-
-.formGroup-check label {
-  font-weight: normal;
-  font-family: "Lora", serif;
-  margin-bottom: 0;
-}
-
-.formInput-check {
-  display: none;
-}
-
-.formInput-check + label span {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  margin: -1px 4px 0 0;
-  vertical-align: middle;
-  background: #fff;
-  border: 1px solid #222222;
-  cursor: pointer;
-  position: relative;
-  top: -2px;
-}
-
-.formInput-check:checked + label span {
-  background: #222222;
-}
-
-.js-floatLabel {
-  position: absolute;
-  top: 10px;
-  left: 8px;
-  font-size: 12px;
-  color: #aaa;
-  transition: all 0.1s linear;
-  opacity: 0;
-  font-weight: bold;
-}
-
-.js-floatLabel.on {
-  color: #4481C4;
-}
-
-.js-floatLabel.show {
-  position: absolute;
-  top: 2px;
-  left: 8px;
-  opacity: 1;
-  width: 100%;
-}
-
-.labelOn .formInput {
-  padding-top: 10px;
-}
-
-body {
-  /* the following line fixes a blink in chrome https://code.google.com/p/chromium/issues/detail?id=108025 */
-  -webkit-backface-visibility: hidden;
-}
-
-.selectize-input {
-  overflow: inherit;
-  padding: 14px 8px;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.selectize-dropdown, .selectize-input, .selectize-input input {
-  font-family: "Open Sans Condensed", sans-serif;
-  font-size: 15px;
-  color: #35363a;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.selectBox {
-  cursor: pointer;
-}
-.selectBox .option.active {
-  background: none;
-  color: #35363a;
-}
-.selectBox .option:hover {
-  background: none;
-  color: #00aff0;
-}
-
-.selectize-control.single .selectize-input:after {
-  content: "";
-  border: none;
-  height: 10px;
-  width: 21px;
-  background-image: url(../img/chev-down.png);
-  background-position: right center;
-  background-repeat: no-repeat;
 }
 
 .h1, h1, h2, .h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 {
@@ -359,7 +225,7 @@ body {
   float: left;
 }
 
-.grid-row:after, .colors:after, .main .main__inner:after, .matchheight:after, .section .section-inner:after, .headerMain__inner:after {
+.grid-row:after, .colors:after, .main .main__inner:after, .section .section-inner:after {
   content: "";
   display: table;
   clear: both;
@@ -397,12 +263,6 @@ body {
   float: right;
 }
 
-.mh-item {
-  float: left;
-  width: 16.66667%;
-  border: 1px solid #BBBBBB;
-}
-
 .section {
   padding: 0 20px;
   border: 1px solid #B7B7B7;
@@ -437,52 +297,4 @@ body {
   float: left;
   width: 33.33333%;
   float: right;
-}
-
-/*scss/molecules/_navMain.scss*/
-.navMain {
-  list-style: none;
-  padding: 0;
-  display: table;
-  width: 100%;
-}
-.navMain > li {
-  display: table-cell;
-  text-align: center;
-}
-.navMain > li > a {
-  padding: 10px;
-  display: block;
-  background: #eee;
-  border-right: 2px solid #fff;
-}
-
-.dropit-submenu {
-  text-align: left;
-  width: 100%;
-}
-.dropit-submenu a {
-  padding: 10px;
-  display: block;
-  background: #ccc;
-  border-bottom: 2px solid #fff;
-}
-
-/*scss/organisms/_headerMain.scss*/
-.headerMain {
-  background: #464545;
-}
-
-.headerMain__inner {
-  padding: 20px;
-}
-
-.headerMain__left {
-  float: left;
-  width: 33.33333%;
-}
-
-.headerMain__right {
-  float: left;
-  width: 66.66667%;
 }
