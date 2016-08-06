@@ -1,22 +1,3 @@
 [
-    {
-        "category": "atoms",
-        "order": 1
-    },
-    {
-        "category": "layout",
-        "order": 2
-    },
-    {
-        "category": "molecules",
-        "order": 3
-    },
-    {
-        "category": "organisms",
-        "order": 4
-    },
-    {
-        "category": "variables",
-        "order": 0
-    }
+
 ]
