@@ -1,3 +1,6 @@
 [
-
+    {
+        "category": "modules",
+        "order": 1
+    }
 ]

@@ -1,3 +1,9 @@
 [
-
+    {
+        "component": "box",
+        "category": "modules",
+        "description": "This is the box component.",
+        "backgroundColor": "",
+        "order": 2
+    }
 ]
