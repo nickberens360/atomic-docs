@@ -2,8 +2,29 @@
     {
         "component": "box",
         "category": "modules",
-        "description": "This is the box component.",
+        "description": "This is the box component. It's just serves as an example. ",
         "backgroundColor": "",
+        "order": 2
+    },
+    {
+        "component": "sidebar",
+        "category": "readme",
+        "description": "You can change the order components are displayed by dragging and dropping them in the sidebar. You can also move a component to a different category by dragging and dropping it into that categories file list. All changes will also be reflected in your project files as well as the order of the @import style strings order!",
+        "backgroundColor": "",
+        "order": 1
+    },
+    {
+        "component": "settings",
+        "category": "readme",
+        "description": "By default Atomic Docs is set up for Scss component style files and PHP markup files. This however can be easily changed even after you have started your project. Clicking on the gear icon in the blue toolbar in the sidebar gives you the ability to change the style partial file extension (to .less for example) as well as the ability to change the markup component file extension (to .twig perhaps).",
+        "backgroundColor": "",
+        "order": 0
+    },
+    {
+        "component": "contextBg",
+        "category": "readme",
+        "description": "Sometimes you have a component with white text and you need a dark color for a background. No problem, Atomic Docs provides a color picker so you can set a background color if you need to.",
+        "backgroundColor": "#7cdba4",
         "order": 2
     }
 ]

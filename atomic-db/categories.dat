@@ -1,6 +1,10 @@
 [
     {
         "category": "modules",
-        "order": 1
+        "order": 2
+    },
+    {
+        "category": "readme",
+        "order": 2
     }
 ]

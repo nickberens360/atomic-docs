@@ -205,7 +205,7 @@ $settings = $settings->select(array());
                      style="background-color:<?php echo $component['backgroundColor'] ?>">
                     <iframe class="partial-viewport"
                             src="atomic-core/partial.php?component=<?php echo $component['component'] ?>&category=<?php echo $cat; ?>"
-                            sandbox="allow-same-origin allow-scripts" frameborder="0" scrolling="no">
+                            sandbox="allow-same-origin allow-scripts" frameborder="0" scrolling="no"  onload="resizeIframe(this)">
 
                     </iframe>
                 </div>
@@ -279,7 +279,9 @@ $settings = $settings->select(array());
         <?php } else { ?>
 
 
+            <div class="pageContent">
 
+            </div>
 
         <?php } ?>
 

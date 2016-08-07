@@ -8,6 +8,7 @@ $(document).ready(function() {
 
     $( ".js-close-editor" ).click(function() {
         $('.atomic-editorWrap').removeClass('atomic-editorWrap-active');
+        location.reload();
     });
 
 

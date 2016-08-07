@@ -1,6 +1,6 @@
+/*
 $( document ).ready(function() {
     $('.partial-viewport').on('load', function() {
-        //this.style.height = this.contentWindow.document.body.offsetHeight;
 
 
         var frameHeight = this.contentWindow.document.body.offsetHeight;
@@ -10,4 +10,9 @@ $( document ).ready(function() {
         $(this).css('height', frameHeight);
 
     });
-});
+});*/
+
+function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
+

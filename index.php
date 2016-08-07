@@ -52,7 +52,7 @@
     <p>By default, Atomic Docs is set up for Sass. If you are using Less or Sass check out this <a href="http://atomicdocs.io/docs/less-stylus">post</a>.</p>
 
     <p>Set up in your php local environment and configure your preprocessor and start
-        <a href="atomic-core/modules.php">here</a>.</p>
+        <a href="atomic-core/?cat=readme">here</a>.</p>
 
     <p>This GIF pretty much explains what to do after that. Otherwise you can checkout
         this <a href="https://www.youtube.com/watch?v=e8LjP6ynryQ" target="_blank">video</a>.</p><br/>

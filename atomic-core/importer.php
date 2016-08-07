@@ -11,7 +11,7 @@ include("head.php");
 <div class="pageContent">
     <ol>
         <li>In this copy of Atomic Docs remove the components and scss folders.</li>
-        <li>Copy the components and scss folders you would like to import into this compy of Atomic Docs.</li>
+        <li>Copy the components and scss folders you would like to import into this copy of Atomic Docs.</li>
         <li>Press the import button below.</li>
         <li>Compile your scss.</li>
         <li>Unfortunately the importer will not include any of your component descriptions or contextual background
@@ -22,7 +22,7 @@ include("head.php");
         <button class="aa_btn aa_btn-pos" type="submit">Import</button>
     </form>
 </div>
-
+<?php include("footer.php"); ?>
 </body>
 
 

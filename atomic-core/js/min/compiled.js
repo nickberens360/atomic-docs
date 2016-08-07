@@ -7457,6 +7457,7 @@ $(document).ready(function() {
 
     $( ".js-close-editor" ).click(function() {
         $('.atomic-editorWrap').removeClass('atomic-editorWrap-active');
+        location.reload();
     });
 
 
@@ -8333,9 +8334,9 @@ $(".js-hideSide").on('click', function(event) {
     hideSideBar();
 });
 
+/*
 $( document ).ready(function() {
     $('.partial-viewport').on('load', function() {
-        //this.style.height = this.contentWindow.document.body.offsetHeight;
 
 
         var frameHeight = this.contentWindow.document.body.offsetHeight;
@@ -8345,7 +8346,13 @@ $( document ).ready(function() {
         $(this).css('height', frameHeight);
 
     });
-});
+});*/
+
+function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
+
+
 $('.js_searchTrigger').click(function() {
     $('.atomic-search').toggleClass('atomic-search-open');
     $('.searchInput').focus();

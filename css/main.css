@@ -5,3 +5,14 @@
   padding: 20px;
   background: #eee;
 }
+
+/* scss/readme/_settings.scss */
+/* scss/readme/_sidebar.scss */
+.sidebar {
+  max-width: 150px;
+}
+
+/* scss/readme/_contextBg.scss */
+.contextBg {
+  color: #fff;
+}
