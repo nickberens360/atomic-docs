@@ -24,17 +24,17 @@ Have full documentation to hand off to other teams, internal or external.
 ##Organize
 Organize all your components under categories that you name. "Base", "Modules", "Atoms" etc...
 
-<!--<img src="atomic-core/img/organize.png"/>-->
+<img src="atomic-core/img/organize.png"/>
 
 ##Manage
 Manage all your components. Move, rename and delete with a clean GUI interface.
 
-<!--<img src="atomic-core/img/manage.gif" />-->
+<img src="atomic-core/img/manage.gif" />
 
 ##Save time
 Does all the "wiring" of your SCSS partials. Never write `@import "partial-name";` again.
 
-<!--<img width="500" src="atomic-core/img/helpful.png"/>-->
+<img width="500" src="atomic-core/img/helpful.png"/>
 
 Documentation can be found at <a href="http://atomicdocs.io/">AtomicDocs.io</a>.
 
