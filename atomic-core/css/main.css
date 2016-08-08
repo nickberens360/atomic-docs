@@ -1563,6 +1563,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     font-weight: bold; }
     .atomsWrap .aa_errorBox .fa {
       cursor: pointer; }
+  .atomsWrap .aa_errorBox.aa_errorBox-pos {
+    background: #51CD6D; }
   .atomsWrap .aa_errorBox__message {
     margin: 11px; }
   @media (max-width: 824px) {
@@ -1642,15 +1644,19 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
       left: 57px !important; }
   .atomsWrap .pageContent {
     max-width: 600px;
-    margin: auto; }
+    margin: auto;
+    margin-bottom: 100px; }
     .atomsWrap .pageContent li {
       margin-bottom: 12px; }
   .atomsWrap #importForm {
-    text-align: center; }
+    text-align: center;
+    /*background: #e3e4e3;
+  padding: 30px 40px;*/
+    margin-top: 50px; }
   .atomsWrap .pageHeader {
     text-align: center;
     margin-bottom: 48px;
-    margin-top: 48px; }
+    margin-top: 75px; }
   .atomsWrap body {
     background: #FCFEFA;
     color: #7A7A7A;

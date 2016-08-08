@@ -15,6 +15,8 @@ $compDir = $config[0]['component_directory'];
 
 
 $errors         = array();
+$success        = array();
+
 $data           = array();
 
 
@@ -41,72 +43,38 @@ if ( ! empty($errors)) {
     $data['errors']  = $errors;
 } else {
 
+
+
     $old_compDir = 'components';
     $old_compExt = 'php';
 
 
-
-
-    function importComps($old_compDir, $old_compExt, $catdb, $compdb){
-
-        $path = "../../$old_compDir";
-        $dir = new DirectoryIterator($path);
-
-        $addCats = array(array("category" => "", "order" => ""));
-        $catdb -> rw($addCats);
-        $catdb -> rm(0);
-
-        $addComps = array(array("component" => "", "category" => "", "description" => "", "backgroundColor" => "", "order" => ""));
-        $compdb -> rw($addComps);
-        $compdb -> rm(0);
-
-
-        $i=0;
-
-        foreach ($dir as $fileinfo) {
-            if ($fileinfo->isDir() && !$fileinfo->isDot()) {
-
-                $i++;
-
-                $dirs = $fileinfo->getFilename();
-
-
-
-                $addCats = array("category" => $dirs, "order" => "$i");
-                $catdb -> add($addCats);
+    $old_stylesDir = 'scss';
+    $old_stylesExt = 'scss';
 
 
 
 
 
-                $i2=0;
-                foreach (glob("../../$old_compDir/$dirs/*.$old_compExt") as $filename) {
 
-                    $i2++;
-                    $filenameBase = basename("$filename", ".$old_compExt");
+    importCompsDb($old_compDir, $old_compExt, $catdb, $compdb);
 
 
-                    $addComps = array("component" => "$filenameBase", "category" => "$dirs", "description" => "", "backgroundColor" => "", "order" => "$i2");
-                    $compdb -> add($addComps);
-
-                    //var_dump($filenameBase);
+    importCheckRootStyleString($old_stylesDir, $old_stylesExt);
 
 
-
-                }
-
-            }
-        }
-    }
-
-    importComps($old_compDir, $old_compExt, $catdb, $compdb);
+    importCheckMainRootStyleString($old_stylesDir, $old_stylesExt);
 
 
-
+    /*$data['success']  = $errors;
+    $success['imported'] = 'Import complete. Compile your scss.';*/
 
 
     $data['success'] = true;
-    $data['message'] = 'Success!';
+    $data['message'] = 'Import successful. Compile your CSS and verify everything looks as it should.';
+
+
+
 }
 
 

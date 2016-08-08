@@ -13,4 +13,5 @@ require 'edit-category-functions.php';
 require 'edit-component-functions.php';
 require 'sort-functions.php';
 require 'edit-settings-functions.php';
+require 'import-functions.php';
 require 'validation.php';
