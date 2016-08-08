@@ -13,7 +13,16 @@ function addCatDbItem($catName, $catdb){
 
 }
 
+function addCompDbItem($compName, $catName, $compNotes, $bgColor, $db){
 
+
+    $dbSelect = $db->select(array());
+    $i=count($dbSelect);
+    
+
+    $newComp = array("component" => $compName, "category" => $catName, "description" => $compNotes, "backgroundColor" => $bgColor, "order" => $i+1);
+    $db -> add($newComp);
+}
 
 
 
@@ -45,11 +54,13 @@ function dbUpdateItems($db, $key, $oldValue, $update_value){
 
 
 
-function addCompDbItem($compName, $catName, $compNotes, $bgColor, $db){
-    $i=count($db)+1;
-    $newComp = array("component" => $compName, "category" => $catName, "description" => $compNotes, "backgroundColor" => $bgColor, "order" => $i);
-    $db -> add($newComp);
-}
+
+
+
+
+
+
+
 
 
 function dbUpdateSettings($settings, $compDir, $compExt, $stylesExt, $stylesDir){

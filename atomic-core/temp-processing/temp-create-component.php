@@ -55,6 +55,9 @@ if (!empty($errors)) {
 } else {
 
 
+    
+
+
     addCompDbItem($compName, $catName, $compNotes, $bgColor, $compdb);
     createCompFile($catName, $compName);
     createCompComment($catName, $compName);

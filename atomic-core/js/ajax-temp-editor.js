@@ -48,13 +48,18 @@ $('.atomic-editorWrap').submit(function (event) {
 
             } else {
 
-                $('.aa_errorBox__message').html("");
+                /*$('.aa_errorBox__message').html("");
                 $('.atoms-main').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.message + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
-
 
                 console.log(data.message );
 
-                window.location = 'atomic-core/?cat='+catName;
+                window.location = 'atomic-core/?cat='+catName;*/
+
+                $('.atoms-main').fadeOut('slow');
+                
+                setTimeout(function() {
+                  window.location = 'atomic-core/?cat='+catName;
+                }, 2000);
             }
         })
         // using the fail promise callback
