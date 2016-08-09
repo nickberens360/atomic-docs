@@ -26,5 +26,12 @@
         "description": "",
         "backgroundColor": "",
         "order": 1
+    },
+    {
+        "component": "alertme",
+        "category": "readme",
+        "description": "",
+        "backgroundColor": "",
+        "order": 3
     }
 ]

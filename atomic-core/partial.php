@@ -20,7 +20,8 @@ $compDir = $settings[0]['component_directory'];
     <title><?php echo $_GET["comp-name"]; ?></title>
     <base href="../" >
     <link rel="stylesheet" href="css/main.css">
-    
+    <!--<script src="js/<?php /*echo $comp; */?>.js"></script>-->
+
 
     <style>
         body{
