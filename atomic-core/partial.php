@@ -19,8 +19,15 @@ $compDir = $settings[0]['component_directory'];
     <meta charset="UTF-8">
     <title><?php echo $_GET["comp-name"]; ?></title>
     <base href="../" >
-    <link rel="stylesheet" href="css/main.css">
 
+
+
+    <?php
+        $filename = '../atomic-head.php';
+        if (file_exists($filename)) {
+            include ("../atomic-head.php");
+        }
+    ?>
 
 
     <style>
@@ -40,6 +47,10 @@ $compDir = $settings[0]['component_directory'];
       <?php require ('../'.$compDir.'/'.$cat.'/'.$comp.'.'.$compExt.''); ?>
     </div>
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <?php
+        $filename = '../atomic-head.php';
+        if (file_exists($filename)) {
+            include ("../atomic-foot.php");
+        }
+    ?>
 </body>
