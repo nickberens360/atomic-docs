@@ -1,3 +1,4 @@
+
 body {
   background: #FCFEFA;
   color: #7A7A7A;
@@ -202,16 +203,34 @@ textarea.textChange {
 
 .se-pre-con {
   position: fixed;
-  left: 265px;
+  padding-left: 265px;
   right: 0;
   top: 0px;
   width: 100%;
   height: 100%;
   z-index: 9999;
-  //background: url('http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_11.gif') center no-repeat #fff;
-  background: #FCFEFA;
+
 }
 
-a{
+.se-pre-con-inner {
+  position: relative;
+  text-align: center;
+  background: #FCFEFA url('../img/squares.gif') no-repeat center center;
+  height: 100%;
+}
+
+a {
   color: #00aff0;
 }
+
+.featureHints {
+  margin-top: 40px;
+  p {
+    font-size: 14px;
+    font-style: italic;
+  }
+  p:first-of-type{
+    font-style:normal;
+  }
+}
+

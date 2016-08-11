@@ -8234,7 +8234,7 @@ $(".aa_fileSection").sortable({
 
 $('.atomic-editorWrap').submit(function (event) {
 
- 
+
 
     event.preventDefault();
 
@@ -8289,8 +8289,8 @@ $('.atomic-editorWrap').submit(function (event) {
 
                 window.location = 'atomic-core/?cat='+catName;*/
 
-                $('.atoms-main').fadeOut('slow');
-                
+                $('.se-pre-con').fadeIn('slow');
+
                 setTimeout(function() {
                   window.location = 'atomic-core/?cat='+catName;
                 }, 2000);

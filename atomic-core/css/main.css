@@ -5,7 +5,8 @@
  *    without disabling user zoom.
  */
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-y: scroll; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -1776,12 +1777,23 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     top: 0; }
   .atomsWrap .se-pre-con {
     position: fixed;
-    left: 265px;
+    padding-left: 265px;
     right: 0;
     top: 0px;
     width: 100%;
     height: 100%;
-    z-index: 9999;
-    background: #FCFEFA; }
+    z-index: 9999; }
+  .atomsWrap .se-pre-con-inner {
+    position: relative;
+    text-align: center;
+    background: #FCFEFA url("../img/squares.gif") no-repeat center center;
+    height: 100%; }
   .atomsWrap a {
     color: #00aff0; }
+  .atomsWrap .featureHints {
+    margin-top: 40px; }
+    .atomsWrap .featureHints p {
+      font-size: 14px;
+      font-style: italic; }
+    .atomsWrap .featureHints p:first-of-type {
+      font-style: normal; }

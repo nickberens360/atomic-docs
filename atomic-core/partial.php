@@ -20,12 +20,16 @@ $compDir = $settings[0]['component_directory'];
     <title><?php echo $_GET["comp-name"]; ?></title>
     <base href="../" >
     <link rel="stylesheet" href="css/main.css">
-    <!--<script src="js/<?php /*echo $comp; */?>.js"></script>-->
+
 
 
     <style>
+        html, body{
+            height:100%;
+        }
         body{
             margin:0;
+            padding:0;
         }
     </style>
 
@@ -35,4 +39,7 @@ $compDir = $settings[0]['component_directory'];
     <div class="partial">
       <?php require ('../'.$compDir.'/'.$cat.'/'.$comp.'.'.$compExt.''); ?>
     </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>

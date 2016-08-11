@@ -17,3 +17,8 @@
 <form id="delete-comp-file">
     <button class="delete-txt" type="submit" name="delete_button" value="delete"><i class="fa fa-times"></i> Delete Component</button>
 </form>
+
+<div class="featureHints">
+    <p><strong>Hint</strong></p>
+    <p>To change the order the components appear on the page you can simply drag and drop them in the sidebar. You can also move them to a different category by dragging and dropping them into the desired category's component list. All changes will also be reflected in the project's file structure as well as the @import style strings order as well!</p>
+</div>
