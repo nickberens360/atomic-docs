@@ -13,6 +13,16 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('./css/'));
 });
 
+
+/*gulp.task('styles2', function() {
+    gulp.src('../scss/!**!/!*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('../css/'));
+});*/
+
+
+
+
 var jsFiles = 'js/*.js',
     jsDest = 'js/min';
 
@@ -49,7 +59,10 @@ gulp.task('scripts', function() {
 //Watch task
 gulp.task('default',function() {
     gulp.watch('scss/**/*.scss',['styles']);
+    //gulp.watch('../scss/**/*.scss',['styles2']);
     gulp.watch('js/*.js',['scripts']);
 });
 
 gulp.task('setup', ['styles']);
+
+//gulp.task('setup', ['styles2']);

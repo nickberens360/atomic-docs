@@ -1659,7 +1659,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     margin-bottom: 48px;
     margin-top: 75px; }
   .atomsWrap body {
-    background: #FCFEFA;
     color: #7A7A7A;
     font-family: "Open Sans", sans-serif; }
   .atomsWrap :not(pre) > code[class*="language-"],

@@ -61,6 +61,8 @@ foreach ($compSelect as $component) {
         });
         editormarkup_<?php echo $i; ?>.setHighlightActiveLine(false);
         editormarkup_<?php echo $i; ?>.setShowPrintMargin(false);
+        
+
     </script>
     <script>
         var editorstyles_<?php echo $i; ?> = ace.edit("editor-styles-<?php echo $component['component'] ?>");
@@ -78,6 +80,8 @@ foreach ($compSelect as $component) {
         });
         editorstyles_<?php echo $i; ?>.setHighlightActiveLine(false);
         editorstyles_<?php echo $i; ?>.setShowPrintMargin(false);
+
+
     </script>
 
 

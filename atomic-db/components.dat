@@ -2,7 +2,7 @@
     {
         "component": "box",
         "category": "modules",
-        "description": "",
+        "description": "Box is an example component.",
         "backgroundColor": "",
         "order": "1"
     },
