@@ -312,7 +312,7 @@ $settings = $settings->select(array());
     </div>
 </div>
 
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/2.0.0/lazysizes.min.js"></script>
 <?php include("footer.php"); ?>
 
 
