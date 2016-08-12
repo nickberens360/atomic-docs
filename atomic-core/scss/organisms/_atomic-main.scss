@@ -7,13 +7,16 @@
 
 
 .atoms-main{
-
+	box-sizing: border-box;
 	padding:20px;
 	padding-left:282px;
 	width:100%;
 	padding-top: 0;
 }
 
+.compTitle, .compNotes, .nav-tabs{
+	font-family: $font1;
+}
 
 
 

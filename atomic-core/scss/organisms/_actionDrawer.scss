@@ -9,6 +9,9 @@
   height:100%;
   width:500px !important;
   box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.19);
+  font-family:$font1;
+  box-sizing: border-box;
+  color: #7a7a7a;
 }
 
 .aa_actionDrawer__wrap{
@@ -76,6 +79,8 @@
   width: 100px;
   color: #fff;
   background-color: #7A7A7A;
+  font-size:14px;
+  font-family:$font1;
 }
 
 .aa_btn-pos{
