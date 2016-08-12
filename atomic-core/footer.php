@@ -48,6 +48,7 @@ foreach ($compSelect as $component) {
     <script>
         var editormarkup_<?php echo $i; ?> = ace.edit("editor-markup-<?php echo $component['component'] ?>");
         var code = editormarkup_<?php echo $i; ?>.getValue();
+        editormarkup_<?php echo $i; ?>.getSession().setUseWorker(false);
         editormarkup_<?php echo $i; ?>.getSession().on('change', function () {
             $("input[name=new-markup-val-<?php echo $component['component'] ?>]").val(editormarkup_<?php echo $i; ?>.getSession().getValue());
         });
@@ -61,12 +62,13 @@ foreach ($compSelect as $component) {
         });
         editormarkup_<?php echo $i; ?>.setHighlightActiveLine(false);
         editormarkup_<?php echo $i; ?>.setShowPrintMargin(false);
-        
+
 
     </script>
     <script>
         var editorstyles_<?php echo $i; ?> = ace.edit("editor-styles-<?php echo $component['component'] ?>");
         var code = editorstyles_<?php echo $i; ?>.getValue();
+        editorstyles_<?php echo $i; ?>.getSession().setUseWorker(false);
         editorstyles_<?php echo $i; ?>.getSession().on('change', function () {
             $("input[name=new-styles-val-<?php echo $component['component'] ?>]").val(editorstyles_<?php echo $i; ?>.getSession().getValue());
         });
