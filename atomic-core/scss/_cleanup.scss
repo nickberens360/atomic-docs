@@ -4,12 +4,9 @@
   font-family: $font1;
 }*/
 
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+
+
+
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
