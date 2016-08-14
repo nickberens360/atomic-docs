@@ -21,11 +21,7 @@
 
        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
-	<script>
-		function resizeIframe(obj) {
-			obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-		}
-	</script>
+
 
 
 </head>
