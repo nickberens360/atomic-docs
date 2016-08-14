@@ -21,6 +21,12 @@
 
        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
+ <?php
+        $filename = '../atomic-head.php';
+        if (file_exists($filename)) {
+            include ("../atomic-head.php");
+        }
+    ?>
 
 
 
