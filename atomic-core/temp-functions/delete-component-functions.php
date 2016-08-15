@@ -13,6 +13,16 @@ function deleteCompFile($catName, $fileName)
     unlink('../../'.$compDir.'/'.$catName.'/'.$fileName.'.'.$compExt.'');
 }
 
+
+
+function deleteJsFile($catName, $fileName)
+{
+
+
+}
+
+
+
 function deleteStyleFile($catName, $fileName)
 {
     $config = getConfig('../..');
@@ -38,8 +48,6 @@ function deleteScssImportString($catName, $fileName)
     $contents = file_get_contents('../../'.$stylesDir.'/'.$catName.'/_'.$catName.'.'.$stylesExt.'');
     $contents = str_replace($importString, "", $contents);
     file_put_contents('../../'.$stylesDir.'/'.$catName.'/_'.$catName.'.'.$stylesExt.'', $contents);
-
-    
 
 
 }

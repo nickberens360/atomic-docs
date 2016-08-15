@@ -15,9 +15,9 @@ function createCompFile($catName, $compName)
 }
 
 
-function createJsFile($compName, $jsExt)
+function createJsFile($compName, $jsDir, $jsExt)
 {
-    fopen("../../js/$compName.$jsExt", "w");
+    fopen("../../$jsDir/$compName.$jsExt", "w");
 }
 
 function createCompComment($catName, $compName)

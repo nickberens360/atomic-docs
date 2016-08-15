@@ -29,6 +29,7 @@ $stylesDir = $config[0]['styles_directory'];
 $stylesExt = $config[0]['styles_extension'];
 $compDir = $config[0]['component_directory'];
 $compExt = $config[0]['component_extension'];
+$jsDir = $config[0]['js_directory'];
 $jsExt = $config[0]['js_extension'];
 
 
@@ -60,8 +61,8 @@ if (!empty($errors)) {
 
 
     if($js_file == "true"){
-        
-        createJsFile($compName, $jsExt);
+
+        createJsFile($compName, $jsDir, $jsExt);
 
     }
 

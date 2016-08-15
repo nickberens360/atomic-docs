@@ -15,9 +15,6 @@ $categories = $categories->select(array());
 $settings = $settings->select(array());
 
 
-
-
-
 ?>
 <body class="atoms" xmlns="http://www.w3.org/1999/html">
 
@@ -133,24 +130,28 @@ $settings = $settings->select(array());
             <?php if (!empty($_GET['cat'])) { ?>
                 <h1 id="modules" class="atomic-h1"><?php echo $_GET['cat']; ?> <a
                         class="fa fa fa-pencil-square-o js_cat-edit aa_js-actionOpen aa_actionBtn"
-                        href="atomic-core/temp-forms/temp-edit-category-form.php" data-cat="<?php echo $_GET['cat']; ?>">
+                        href="atomic-core/temp-forms/temp-edit-category-form.php"
+                        data-cat="<?php echo $_GET['cat']; ?>">
                     </a>
                 </h1>
             <?php } ?>
 
             <?php if (!empty($_GET['search'])) { ?>
                 <?php
-                    $cat = $components -> get("category", "component", $_GET['search']);
+                $cat = $components->get("category", "component", $_GET['search']);
                 ?>
 
 
                 <?php if (!empty($cat)) { ?>
-                <h1 id="modules" class="atomic-h1">The <a href="atomic-core/?cat=<?php echo $cat ?>#<?php echo $_GET['search']; ?>"> <?php echo $_GET['search']; ?></a> component was found in the
-                    <a href="atomic-core/?cat=<?php echo $cat ?>"><?php echo $cat ?></a> category.</h1>
+                    <h1 id="modules" class="atomic-h1">The <a
+                            href="atomic-core/?cat=<?php echo $cat ?>#<?php echo $_GET['search']; ?>"> <?php echo $_GET['search']; ?></a>
+                        component was found in the
+                        <a href="atomic-core/?cat=<?php echo $cat ?>"><?php echo $cat ?></a> category.</h1>
                 <?php } ?>
 
                 <?php if (empty($cat)) { ?>
-                    <h1 id="modules" class="atomic-h1">Sorry, no results found for "<?php echo $_GET['search']; ?>".</h1>
+                    <h1 id="modules" class="atomic-h1">Sorry, no results found for "<?php echo $_GET['search']; ?>
+                        ".</h1>
                 <?php } ?>
 
 
@@ -173,7 +174,7 @@ $settings = $settings->select(array());
                 $search = $_GET['search'];
                 global $search;
 
-                $cat = $components -> get("category", "component", $_GET['search']);
+                $cat = $components->get("category", "component", $_GET['search']);
                 global $cat;
 
                 $compSelect = array_filter($compSelect, function ($v) {
@@ -190,7 +191,7 @@ $settings = $settings->select(array());
                     ?>
 
 
-                    <div id="<?php echo $component['component'] ?>-container" class="compWrap">
+                    <div id="<?php echo $component['component'] ?>-container" class="compWrap" data-hasjs="<?php echo $component['has_js'] ?>">
                 <p id="<?php echo $component['component'] ?>"
                    class="content-editable compTitle">
                     <span><?php echo $component['component'] ?></span>&nbsp;
@@ -205,9 +206,9 @@ $settings = $settings->select(array());
                 <div class="component <?php if ($component['backgroundColor']) { ?>componentHasBg<?php } ?>"
                      data-color="<?php echo $component['backgroundColor'] ?>"
                      style="background-color:<?php echo $component['backgroundColor'] ?>">
-                    
 
-                    <?php require ('../'.$setting['component_directory'].'/'.$cat.'/'.$component['component'].'.'.$setting['component_extension'].''); ?>
+
+                    <?php require('../' . $setting['component_directory'] . '/' . $cat . '/' . $component['component'] . '.' . $setting['component_extension'] . ''); ?>
 
 
                 </div>
@@ -222,13 +223,20 @@ $settings = $settings->select(array());
                         <li role="presentation"><a href="#<?php echo $component['component'] ?>-styles-tab"
                                                    aria-controls="profile"
                                                    role="tab" data-toggle="tab">Styles</a></li>
+
+
+                <?php if ($component['has_js'] == "true") { ?>
+                        <li role="presentation"><a href="#<?php echo $component['component'] ?>-js-tab"
+                                                   aria-controls="profile"
+                                                   role="tab" data-toggle="tab">Javascript</a></li>
+                <?php } ?>
+
                     </ul>
 
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active"
                              id="<?php echo $component['component'] ?>-markup-tab">
-
                             <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
                                   data-editorFormCat="<?php echo $cat; ?>"
                                   data-codeDest="<?php echo $setting['component_directory'] ?>">
@@ -238,7 +246,6 @@ $settings = $settings->select(array());
                                     <?php $markup_file_content = file_get_contents('../' . $setting['component_directory'] . '/' . $cat . '/' . $component['component'] . '.' . $setting['component_extension'] . '', true); ?>
                                     <div class="atomic-editor"
                                          id="editor-markup-<?php echo $component['component'] ?>"><?= htmlspecialchars($markup_file_content, ENT_QUOTES); ?></div>
-
                                     <input class="new-val-input" type="hidden"
                                            name="new-markup-val-<?php echo $component['component'] ?>"
                                            value=""/>
@@ -271,6 +278,37 @@ $settings = $settings->select(array());
                                 </div>
                             </form>
                         </div>
+
+
+                <?php if ($component['has_js'] == "true") { ?>
+
+                        <div role="tabpanel" class="tab-pane" id="<?php echo $component['component'] ?>-js-tab">
+                            <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
+                                  data-editorFormCat="<?php echo $cat; ?>"
+                                  data-codeDest="<?php echo $setting['js_directory'] ?>">
+                                <div class="atomic-editorInner">
+                                    <div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
+                                    <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
+
+                                    <?php $style_file_content = file_get_contents('../' . $setting['js_directory'] . '/'. $component['component'] . '.' . $setting['js_extension'] . '', true); ?>
+
+                                    <div class="atomic-editor"
+                                         id="editor-js-<?php echo $component['component'] ?>"><?= htmlspecialchars($style_file_content, ENT_QUOTES); ?></div>
+
+                                    <input class="new-val-input" type="hidden"
+                                           name="new-js-val-<?php echo $component['component'] ?>" value=""/>
+                                </div>
+                                <div class="atomic-editor-footer">
+                                    <button type="submit" class="atomic-btns atomic-btn1">Save</button>
+                                    <span type="reset" class="js-close-editor atomic-btns atomic-btn2">Cancel</span>
+                                </div>
+                            </form>
+                        </div>
+
+                <?php } ?>
+
+
+
                     </div>
                 </div>
 

@@ -65,6 +65,7 @@ foreach ($compSelect as $component) {
 
 
     </script>
+
     <script>
         var editorstyles_<?php echo $i; ?> = ace.edit("editor-styles-<?php echo $component['component'] ?>");
         var code = editorstyles_<?php echo $i; ?>.getValue();
@@ -83,9 +84,29 @@ foreach ($compSelect as $component) {
         editorstyles_<?php echo $i; ?>.setHighlightActiveLine(false);
         editorstyles_<?php echo $i; ?>.setShowPrintMargin(false);
 
-
     </script>
 
+    <?php if ($component['has_js'] == "true") { ?>
+        <script>
+            var editorjs_<?php echo $i; ?> = ace.edit("editor-js-<?php echo $component['component'] ?>");
+            var code = editorjs_<?php echo $i; ?>.getValue();
+            editorjs_<?php echo $i; ?>.getSession().setUseWorker(false);
+            editorjs_<?php echo $i; ?>.getSession().on('change', function () {
+                $("input[name=new-js-val-<?php echo $component['component'] ?>]").val(editorjs_<?php echo $i; ?>.getSession().getValue());
+            });
+            var code = code.replace(/\/\*(.*?)\*\//g, '');
+            var code = code.trim();
+            $('#<?php echo $component['component'] ?>-container').find(".copyBtn-styles").attr('data-clipboard-text', code);
+            new ZeroClipboard($('.copyBtn-styles'));
+            editorjs_<?php echo $i; ?>.getSession().setMode("ace/mode/javascript");
+            editorjs_<?php echo $i; ?>.setOptions({
+                maxLines: Infinity
+            });
+            editorjs_<?php echo $i; ?>.setHighlightActiveLine(false);
+            editorjs_<?php echo $i; ?>.setShowPrintMargin(false);
+
+        </script>
+    <?php } ?>
 
 
 <?php } ?>

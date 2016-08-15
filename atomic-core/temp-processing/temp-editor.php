@@ -24,8 +24,8 @@ if ( ! empty($errors)) {
     $data['success'] = false;
     $data['errors']  = $errors;
 } else {
-    // if there are no errors process our form, then return a message
-    // DO ALL YOUR FORM PROCESSING HERE
+
+
     function editorCodeUpdate($compName,$catName, $newCode, $codeDest){
 
         $config = getConfig('../..');
@@ -35,6 +35,8 @@ if ( ! empty($errors)) {
         $stylesExt = $config[0]['styles_extension'];
         $stylesDir = $config[0]['styles_directory'];
         $compDir = $config[0]['component_directory'];
+        $jsDir = $config[0]['js_directory'];
+        $jsExt = $config[0]['js_extension'];
 
 
 
@@ -44,8 +46,15 @@ if ( ! empty($errors)) {
         if($codeDest == $stylesDir){
             $compName = '_'.$compName.'.'.$stylesExt.'';
         }
-        $path = '../../'.$codeDest.'/'.$catName.'/'.$compName;
-        file_put_contents($path, $newCode);
+        if($codeDest == $jsDir){
+            $path = '../../'.$codeDest.'/'.$compName.'.'.$jsExt.'';
+            file_put_contents($path, $newCode);
+        }
+
+        if($codeDest !== $jsDir) {
+            $path = '../../' . $codeDest . '/' . $catName . '/' . $compName;
+            file_put_contents($path, $newCode);
+        }
     }
     editorCodeUpdate($compName,$catName, $newCode, $codeDest);
     // show a message of success and provide a true success variable
