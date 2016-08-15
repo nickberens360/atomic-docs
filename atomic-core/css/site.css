@@ -826,16 +826,17 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     font-size: 29px;
     padding: 6px 0;
     line-height: 1.1; }
-  .atomsWrap .formGroup-check label {
-    font-weight: normal;
-    margin-bottom: 0; }
+  .atomsWrap .formGroup-check {
+    margin-bottom: 24px; }
+    .atomsWrap .formGroup-check label {
+      font-weight: normal;
+      margin-bottom: 0; }
   .atomsWrap .formInput-check {
     display: none; }
   .atomsWrap .formInput-check + label span {
     display: inline-block;
     width: 14px;
     height: 14px;
-    border-radius: 50%;
     margin: -1px 4px 0 0;
     vertical-align: middle;
     background: #fff;
@@ -854,7 +855,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     color: #B9B9B9;
     font-style: 12px; }
   .atomsWrap .inputGroup {
-    margin-bottom: 12px; }
+    margin-bottom: 22px; }
   .atomsWrap textarea.form-control {
     height: 200px;
     padding: 20px;
@@ -864,7 +865,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     border: none;
     background: #fff;
     box-shadow: none;
-    margin-bottom: 10px;
     width: 100%;
     height: 50px;
     font-size: 14px;
@@ -1187,7 +1187,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     color: #00aff0;
     font-weight: bold; }
   .atomsWrap .formInputGroup {
-    margin-bottom: 12px; }
+    margin-bottom: 24px; }
   .atomsWrap .inputBtnGroup .aa_btn {
     float: right; }
     .atomsWrap .inputBtnGroup .aa_btn:focus {

@@ -18,6 +18,8 @@ $compName = test_input($_POST["compName"]);
 $compNotes = test_input($_POST["compNotes"]);
 $bgColor = test_input($_POST["bgColor"]);
 
+$js_file = test_input($_POST["js_file"]);
+
 
 
 
@@ -27,6 +29,7 @@ $stylesDir = $config[0]['styles_directory'];
 $stylesExt = $config[0]['styles_extension'];
 $compDir = $config[0]['component_directory'];
 $compExt = $config[0]['component_extension'];
+$jsExt = $config[0]['js_extension'];
 
 
 $filename = '../../'.$compDir.'/'.$catName.'/'.$compName.'.'.$compExt.'';
@@ -55,10 +58,16 @@ if (!empty($errors)) {
 } else {
 
 
-    
+
+    if($js_file == "true"){
+        
+        createJsFile($compName, $jsExt);
+
+    }
 
 
-    addCompDbItem($compName, $catName, $compNotes, $bgColor, $compdb);
+
+    addCompDbItem($compName, $catName, $compNotes, $bgColor, $js_file, $compdb);
     createCompFile($catName, $compName);
     createCompComment($catName, $compName);
     createStylesFile($catName, $compName);

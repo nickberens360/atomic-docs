@@ -14,6 +14,12 @@ function createCompFile($catName, $compName)
     fopen("../../$compDir/$catName/$compName.$compExt", 'x+') or die("can't open file");
 }
 
+
+function createJsFile($compName, $jsExt)
+{
+    fopen("../../js/$compName.$jsExt", "w");
+}
+
 function createCompComment($catName, $compName)
 {
 

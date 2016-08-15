@@ -205,46 +205,9 @@ $settings = $settings->select(array());
                 <div class="component <?php if ($component['backgroundColor']) { ?>componentHasBg<?php } ?>"
                      data-color="<?php echo $component['backgroundColor'] ?>"
                      style="background-color:<?php echo $component['backgroundColor'] ?>">
+                    
 
-
-                    <?php
-                    /*
-                    <iframe id="iframe1_<?php echo $component['component'] ?>" class="partial-viewport lazyload"
-                            data-src="atomic-core/partial.php?component=<?php echo $component['component'] ?>&category=<?php echo $cat; ?>"
-                            sandbox="allow-same-origin allow-scripts" frameborder="0" scrolling="no"  onload="resizeIframe(this)">
-                    </iframe>
-
-
-
-                    <script>
-                        function setIframeSrc() {
-                            var s = "atomic-core/partial.php?component=<?php echo $component['component'] ?>&category=<?php echo $cat; ?>";
-                            var iframe1 = document.getElementById('iframe1_<?php echo $component['component'] ?>');
-                            if ( -1 == navigator.userAgent.indexOf("MSIE") ) {
-                                iframe1.src = s;
-                            }
-                            else {
-                                iframe1.location = s;
-                            }
-                        }
-                        setTimeout(setIframeSrc, 5);
-                    </script>
-                    */
-                    ?>
-
-
-
-
-                 
                     <?php require ('../'.$setting['component_directory'].'/'.$cat.'/'.$component['component'].'.'.$setting['component_extension'].''); ?>
-
-
-
-
-
-
-
-
 
 
                 </div>

@@ -7603,12 +7603,29 @@ $('.js_add-component').click(function (event) {
 
             //Submits create file data
             $('#form-create-file').submit(function (event) {
+
+                var cb = $("input#js_file");
+
+                if (cb.is(":checked")) {
+                    console.log('checked');
+                    js_file = "true"
+                } else {
+                    js_file = "false"
+                }
+
                 var formData = {
                     'catName': catName,
                     'compName': $('input[name=compName]').val(),
                     'compNotes': $('textarea[name=compNotes]').val(),
-                    'bgColor': $('input[name=bgColor]').val()
+                    'bgColor': $('input[name=bgColor]').val(),
+                    'js_file': js_file
                 };
+
+
+
+
+
+
 
                 $.ajax({
                         type: 'POST',

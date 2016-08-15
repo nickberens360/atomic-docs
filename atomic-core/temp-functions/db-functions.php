@@ -13,14 +13,14 @@ function addCatDbItem($catName, $catdb){
 
 }
 
-function addCompDbItem($compName, $catName, $compNotes, $bgColor, $db){
+function addCompDbItem($compName, $catName, $compNotes, $bgColor, $js_file, $db){
 
 
     $dbSelect = $db->select(array());
     $i=count($dbSelect);
-    
 
-    $newComp = array("component" => $compName, "category" => $catName, "description" => $compNotes, "backgroundColor" => $bgColor, "order" => $i+1);
+
+    $newComp = array("component" => $compName, "category" => $catName, "description" => $compNotes, "backgroundColor" => $bgColor, "order" => $i+1, "has_js" => $js_file);
     $db -> add($newComp);
 }
 
@@ -64,7 +64,7 @@ function dbUpdateItems($db, $key, $oldValue, $update_value){
 
 
 function dbUpdateSettings($settings, $compDir, $compExt, $stylesExt, $stylesDir){
-    
+
 
     $new_compDir = array("component_directory" => $compDir);
     $settings->update(0, $new_compDir);
