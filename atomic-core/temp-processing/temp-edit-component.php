@@ -13,6 +13,7 @@ $newName = $_POST["newName"];
 $catName = $_POST["catName"];
 $compNotes = $_POST["compNotes"];
 $bgColor = $_POST["bgColor"];
+$hasJs = $_POST["hasJs"];
 
 $oldName = $_POST["oldName"];
 
@@ -24,9 +25,9 @@ $data = array();
 
 
 
-if ($_POST['newName'] == "") {
+/*if ($_POST['newName'] == "") {
     $errors['name'] = 'Input is required.';
-}
+}*/
 
 
 if (!empty($errors)) {
@@ -37,16 +38,16 @@ if (!empty($errors)) {
 
 
 
+echo $hasJs;
 
 
 
-
-    dbUpdateComp($compdb, $oldName, $newName, $catName, $bgColor, $compNotes);
+    /*dbUpdateComp($compdb, $oldName, $newName, $catName, $bgColor, $compNotes);
     renameCompFile($catName, $newName, $oldName);
     editCompCommentString($catName, $oldName, $newName);
     renameStylesFile($catName, $newName, $oldName);
     editStyleCommentString($catName, $oldName, $newName);
-    editStyleRootImportString($catName, $oldName, $newName);
+    editStyleRootImportString($catName, $oldName, $newName);*/
 
 
 

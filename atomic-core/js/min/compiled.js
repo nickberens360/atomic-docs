@@ -7772,13 +7772,25 @@ $('.js_edit-component').click(function (event) {
 
 
 
-
-
             var notesVal = $('#' + compName + '-container').find('.compNotes').data('description');
             var bgColor = $('#' + compName + '-container').find('.component').data('color');
+            var hasJs = $('#' + compName + '-container').data('hasjs');
+
+
+console.log(hasJs);
+
+            if(hasJs == true){
+                $('.hasJs-checkbox').remove();
+            }
+
 
             $('input[name=compName]').val(compName);
             $('textarea[name=compNotes]').val(notesVal);
+
+            //console.log(hasJs);
+
+
+
 
             $(".bgColor").spectrum({
                 allowEmpty: true,
@@ -7798,6 +7810,7 @@ $('.js_edit-component').click(function (event) {
                     'oldName': compName,
                     'compNotes': $('textarea[name=compNotes]').val(),
                     'bgColor': $('input[name=bgColor]').val(),
+                    'hasJs': hasJs,
                     'btnValue-delete': $('.delete-txt').val()
                 };
                 $.ajax({
@@ -7823,7 +7836,7 @@ $('.js_edit-component').click(function (event) {
 
 
                         } else {
-                            window.location = 'atomic-core/?cat=' + catName + '';
+                            //window.location = 'atomic-core/?cat=' + catName + '';
                         }
                     })
                     .fail(function (data) {
@@ -8270,7 +8283,7 @@ $('.atomic-editorWrap').submit(function (event) {
         'compName': compName,
         'catName': catName,
         'newCode': newCode,
-        'codeDest': codeDest,
+        'codeDest': codeDest
     };
 
     $.ajax({
@@ -8299,12 +8312,7 @@ $('.atomic-editorWrap').submit(function (event) {
 
             } else {
 
-                /*$('.aa_errorBox__message').html("");
-                $('.atoms-main').prepend('<div class="aa_errorBox"><p class="aa_errorBox__message"><i class="fa fa-times aa_js-errorBox__close"></i> ' + data.message + '</p></div>').find('.aa_errorBox').hide().fadeIn(200);
 
-                console.log(data.message );
-
-                window.location = 'atomic-core/?cat='+catName;*/
 
                 $('.se-pre-con').fadeIn('slow');
 

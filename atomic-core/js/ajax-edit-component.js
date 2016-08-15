@@ -12,13 +12,25 @@ $('.js_edit-component').click(function (event) {
 
 
 
-
-
             var notesVal = $('#' + compName + '-container').find('.compNotes').data('description');
             var bgColor = $('#' + compName + '-container').find('.component').data('color');
+            var hasJs = $('#' + compName + '-container').data('hasjs');
+
+
+console.log(hasJs);
+
+            if(hasJs == true){
+                $('.hasJs-checkbox').remove();
+            }
+
 
             $('input[name=compName]').val(compName);
             $('textarea[name=compNotes]').val(notesVal);
+
+            //console.log(hasJs);
+
+
+
 
             $(".bgColor").spectrum({
                 allowEmpty: true,
@@ -38,6 +50,7 @@ $('.js_edit-component').click(function (event) {
                     'oldName': compName,
                     'compNotes': $('textarea[name=compNotes]').val(),
                     'bgColor': $('input[name=bgColor]').val(),
+                    'hasJs': hasJs,
                     'btnValue-delete': $('.delete-txt').val()
                 };
                 $.ajax({
@@ -63,7 +76,7 @@ $('.js_edit-component').click(function (event) {
 
 
                         } else {
-                            window.location = 'atomic-core/?cat=' + catName + '';
+                            //window.location = 'atomic-core/?cat=' + catName + '';
                         }
                     })
                     .fail(function (data) {

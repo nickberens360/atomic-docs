@@ -22,5 +22,13 @@
         "backgroundColor": "",
         "order": 2,
         "has_js": "false"
+    },
+    {
+        "component": "testcomp",
+        "category": "modules",
+        "description": "",
+        "backgroundColor": "",
+        "order": 4,
+        "has_js": "true"
     }
 ]

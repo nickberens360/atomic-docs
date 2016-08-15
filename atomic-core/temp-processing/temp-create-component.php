@@ -63,6 +63,7 @@ if (!empty($errors)) {
     if($js_file == "true"){
 
         createJsFile($compName, $jsDir, $jsExt);
+        //add comment string
 
     }
 
