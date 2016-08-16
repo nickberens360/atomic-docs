@@ -14,5 +14,13 @@
         "backgroundColor": "",
         "order": 2,
         "has_js": "false"
+    },
+    {
+        "component": "box",
+        "category": "modules",
+        "description": "The box component is an example.",
+        "backgroundColor": "",
+        "order": 3,
+        "has_js": "false"
     }
 ]

@@ -865,6 +865,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     border: none;
     background: #fff;
     box-shadow: none;
+    color: #7A7A7A;
+    font-family: "Open Sans", sans-serif;
     width: 100%;
     height: 50px;
     font-size: 14px;
