@@ -20,7 +20,7 @@
         "category": "modules",
         "description": "The box component is an example.",
         "backgroundColor": "",
-        "order": 3,
+        "order": 0,
         "has_js": "false"
     }
 ]
