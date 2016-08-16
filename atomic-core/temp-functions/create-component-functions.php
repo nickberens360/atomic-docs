@@ -19,6 +19,21 @@ function createJsFile($compName, $jsDir, $jsExt)
 {
     fopen("../../$jsDir/$compName.$jsExt", "w");
 }
+function createJsComment($compName)
+{
+
+    $config = getConfig('../..');
+
+    $jsDir = $config[0]['js_directory'];
+    $jsExt = $config[0]['js_extension'];
+
+    $commentString = '/* '.$jsDir.'/'.$compName.'.'.$jsExt.' */';
+    $commentString = "\n$commentString\n";
+    $fileHandle = fopen('../../'.$jsDir.'/'.$compName.'.'.$jsExt.'', 'w') or die("can't open file");
+    fwrite($fileHandle, $commentString);
+    fclose($fileHandle);
+    file_put_contents('../../'.$jsDir.'/'.$compName.'.'.$jsExt.'', implode(PHP_EOL, file('../../'.$jsDir.'/'.$compName.'.'.$jsExt.'', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
+}
 
 function createCompComment($catName, $compName)
 {

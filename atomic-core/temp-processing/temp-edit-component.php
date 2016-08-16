@@ -14,8 +14,12 @@ $catName = $_POST["catName"];
 $compNotes = $_POST["compNotes"];
 $bgColor = $_POST["bgColor"];
 $hasJs = $_POST["hasJs"];
-
 $oldName = $_POST["oldName"];
+
+$config = getConfig('../..');
+
+$jsDir = $config[0]['js_directory'];
+$jsExt = $config[0]['js_extension'];
 
 
 
@@ -25,9 +29,9 @@ $data = array();
 
 
 
-/*if ($_POST['newName'] == "") {
+if ($_POST['newName'] == "") {
     $errors['name'] = 'Input is required.';
-}*/
+}
 
 
 if (!empty($errors)) {
@@ -38,16 +42,30 @@ if (!empty($errors)) {
 
 
 
-echo $hasJs;
+
+
+    if($hasJs == "false"){
+        createJsFile($newName, $jsDir, $jsExt);
+        createJsComment($newName);
+
+        $hasJs = "true";
+    }
 
 
 
-    /*dbUpdateComp($compdb, $oldName, $newName, $catName, $bgColor, $compNotes);
+
+    dbUpdateComp($compdb, $oldName, $newName, $catName, $bgColor, $compNotes, $hasJs);
     renameCompFile($catName, $newName, $oldName);
     editCompCommentString($catName, $oldName, $newName);
     renameStylesFile($catName, $newName, $oldName);
     editStyleCommentString($catName, $oldName, $newName);
-    editStyleRootImportString($catName, $oldName, $newName);*/
+    editStyleRootImportString($catName, $oldName, $newName);
+
+    renameJsFile($newName, $oldName);
+    editJsCommentString($oldName, $newName);
+
+
+    
 
 
 

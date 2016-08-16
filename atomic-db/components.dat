@@ -1,13 +1,5 @@
 [
     {
-        "component": "box",
-        "category": "modules",
-        "description": "Box is an example component.",
-        "backgroundColor": "",
-        "order": 0,
-        "has_js": "false"
-    },
-    {
         "component": "settings",
         "category": "readme",
         "description": "By default Atomic Docs is set up for Scss component style files and PHP markup files. This however can be easily changed even after you have started your project. Clicking on the gear icon in the blue toolbar in the sidebar gives you the ability to change the style partial file extension (to .less for example) as well as the ability to change the markup component file extension (to .twig perhaps).\"",
@@ -22,13 +14,5 @@
         "backgroundColor": "",
         "order": 2,
         "has_js": "false"
-    },
-    {
-        "component": "testcomp",
-        "category": "modules",
-        "description": "",
-        "backgroundColor": "",
-        "order": 4,
-        "has_js": "true"
     }
 ]

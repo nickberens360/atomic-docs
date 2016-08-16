@@ -10,6 +10,7 @@ $key = "component";
 
 $catName = $_POST["catName"];
 $compName = $_POST["compName"];
+$hasJs = $_POST["hasJs"];
 
 
 $errors = array();
@@ -28,6 +29,11 @@ if (!empty($errors)) {
     deleteCompFile($catName, $compName);
     deleteStyleFile($catName, $compName);
     deleteScssImportString($catName, $compName);
+
+
+    if($hasJs == "true"){
+        deleteJsFile($compName);
+    }
 
 
 

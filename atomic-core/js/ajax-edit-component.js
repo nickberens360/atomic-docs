@@ -76,7 +76,8 @@ console.log(hasJs);
 
 
                         } else {
-                            //window.location = 'atomic-core/?cat=' + catName + '';
+                            window.location = 'atomic-core/?cat=' + catName + '';
+
                         }
                     })
                     .fail(function (data) {
@@ -100,10 +101,20 @@ console.log(hasJs);
 
 
             $('#delete-comp-file').submit(function (event) {
+
+
+
+
+
                 var formData = {
                     'catName': catName,
-                    'compName': compName
+                    'compName': compName,
+                    'hasJs': hasJs
+
                 };
+
+
+
 
 
 

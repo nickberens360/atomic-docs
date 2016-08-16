@@ -1,6 +1,6 @@
 <?php
 
-function dbUpdateComp($db, $oldName, $newName, $catName, $bgColor, $compNotes){
+function dbUpdateComp($db, $oldName, $newName, $catName, $bgColor, $compNotes, $hasJs){
 
     $selectDB = $db->select(array());
 
@@ -16,9 +16,43 @@ function dbUpdateComp($db, $oldName, $newName, $catName, $bgColor, $compNotes){
             $new_bg = array("backgroundColor" => $bgColor);
             $db->update($i, $new_bg);
 
+            $new_js = array("has_js" => $hasJs);
+            $db->update($i, $new_js);
+
         }
     }
 }
+
+function renameJsFile($newName, $oldName){
+
+    $config = getConfig('../..');
+
+    $jsDir = $config[0]['js_directory'];
+    $jsExt = $config[0]['js_extension'];
+
+    $old = "../../$jsDir/$oldName.$jsExt";
+    $new = "../../$jsDir/$newName.$jsExt";
+
+    rename($old,$new);
+}
+
+function editJsCommentString($oldName, $newName)
+{
+
+    $config = getConfig('../..');
+
+    $jsDir = $config[0]['js_directory'];
+    $jsExt = $config[0]['js_extension'];
+
+    $oldString = '/* '.$jsDir.'/'.$oldName.'.'.$jsExt.' */';
+    $newString = '/* '.$jsDir.'/'.$newName.'.'.$jsExt.' */';
+
+
+    $contents = file_get_contents('../../'.$jsDir.'/'.$newName.'.'.$jsExt.'');
+    $contents = str_replace($oldString, $newString , $contents);
+    file_put_contents('../../'.$jsDir.'/'.$newName.'.'.$jsExt.'', $contents);
+}
+
 
 function renameCompFile($catName, $newName, $oldName){
 

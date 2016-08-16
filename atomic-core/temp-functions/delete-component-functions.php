@@ -15,10 +15,16 @@ function deleteCompFile($catName, $fileName)
 
 
 
-function deleteJsFile($catName, $fileName)
+
+function deleteJsFile($fileName)
 {
 
+    $config = getConfig('../..');
 
+    $jsDir = $config[0]['js_directory'];
+    $jsExt = $config[0]['js_extension'];
+
+    unlink('../../'.$jsDir.'/'.$fileName.'.'.$jsExt.'');
 }
 
 
