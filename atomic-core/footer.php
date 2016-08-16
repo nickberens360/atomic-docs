@@ -115,12 +115,14 @@ foreach ($compSelect as $component) {
     <!--index-->
 <?php } ?>
 
+
 <?php
     $filename = '../atomic-head.php';
     if (file_exists($filename)) {
         include ("../atomic-foot.php");
     }
 ?>
+
 
 </body>
 </html>
