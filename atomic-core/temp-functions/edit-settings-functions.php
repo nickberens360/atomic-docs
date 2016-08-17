@@ -28,7 +28,10 @@ function renameStyleDirSettings($old_stylesDir, $stylesDir){
     $oldDir = "../../$old_stylesDir";
     $newDir = "../../$stylesDir";
 
+    sleep(1);
     rename($oldDir,$newDir);
+
+
 }
 
 
@@ -169,7 +172,7 @@ function renameCompDirSettings($old_compDir, $compDir){
 
     $oldDir = "../../$old_compDir";
     $newDir = "../../$compDir";
-
+    sleep(1);
     rename($oldDir,$newDir);
 }
 

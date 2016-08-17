@@ -40,7 +40,6 @@ $('.js-edit-settings').click(function (event) {
 
 
 
-
                 $.ajax({
                     type: 'POST',
                     url: 'atomic-core/temp-processing/temp-edit-settings.php',
@@ -68,9 +67,9 @@ $('.js-edit-settings').click(function (event) {
 
                         } else {
 
-                            window.location = 'atomic-core/?cat='+currentCat+'';
 
-
+                           window.location = 'atomic-core/?cat='+currentCat+'';
+                            
                         }
                     })
                     .fail(function (data) {

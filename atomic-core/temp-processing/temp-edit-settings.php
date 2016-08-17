@@ -65,11 +65,16 @@ if ( ! empty($errors)) {
 
 
 
-    changeRootStylesExt($stylesDir, $old_stylesExt, $stylesExt);
 
 
     dbUpdateSettings($settings, $compDir, $compExt, $stylesExt, $stylesDir);
+
+    changeRootStylesExt($old_stylesDir, $old_stylesExt, $stylesExt);
+
     editStylesComment($old_stylesDir, $old_stylesExt, $stylesExt, $stylesDir);
+
+
+
     editStyleExt($old_stylesDir, $old_stylesExt, $stylesExt);
     renameStyleDirSettings($old_stylesDir, $stylesDir);
 
@@ -77,7 +82,7 @@ if ( ! empty($errors)) {
 
 
 
-    editCompComment($old_compDir, $old_compExt, $compExt, $compDir);
+     editCompComment($old_compDir, $old_compExt, $compExt, $compDir);
     editCompExt($old_compDir, $old_compExt, $compExt);
     renameCompDirSettings($old_compDir, $compDir);
 
@@ -88,32 +93,6 @@ if ( ! empty($errors)) {
 
 
 
-    //change component dir name
-
-    //change markup file exts
-
-
-
-
-    /*$path = "../../less";
-    $dir = new DirectoryIterator($path);
-
-    foreach ($dir as $fileinfo) {
-        if ($fileinfo->isDir() && !$fileinfo->isDot()) {
-
-
-            $dirs = $fileinfo->getFilename();
-
-
-            foreach (glob("../../$old_stylesDir/$dirs/*.scss") as $filename) {
-
-                $newname = basename($filename, ".scss").".less";
-
-                rename($filename, '../../less/'.$dirs.'/'.$newname);
-
-            }
-        }
-    }*/
 
 
 
