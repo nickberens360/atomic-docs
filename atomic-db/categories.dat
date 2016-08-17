@@ -2,5 +2,9 @@
     {
         "category": "modules",
         "order": 1
+    },
+    {
+        "category": "readme",
+        "order": 0
     }
 ]
