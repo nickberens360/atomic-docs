@@ -31,9 +31,10 @@ $('.js_add-component').click(function (event) {
                 var cb = $("input#js_file");
 
                 if (cb.is(":checked")) {
-                    console.log('checked');
+                    console.log('js true');
                     js_file = "true"
                 } else {
+                    console.log('js false');
                     js_file = "false"
                 }
 

@@ -88,6 +88,3 @@ if (!empty($errors)) {
 echo json_encode($data);
 
 
-?>
-
-

@@ -7607,9 +7607,10 @@ $('.js_add-component').click(function (event) {
                 var cb = $("input#js_file");
 
                 if (cb.is(":checked")) {
-                    console.log('checked');
+                    console.log('js true');
                     js_file = "true"
                 } else {
+                    console.log('js false');
                     js_file = "false"
                 }
 
@@ -7718,6 +7719,11 @@ $('.js_cat-edit').click(function (event) {
 
 
             $('#form-edit-category').submit(function (event) {
+
+
+
+
+
                 var catName = $(this).find('input[name=catName]').val();
                 var formData = {
                     'catName': catName,
@@ -7777,7 +7783,6 @@ $('.js_edit-component').click(function (event) {
             var hasJs = $('#' + compName + '-container').data('hasjs');
 
 
-console.log(hasJs);
 
             if(hasJs == true){
                 $('.hasJs-checkbox').remove();
@@ -7804,15 +7809,35 @@ console.log(hasJs);
 
 
             $('#edit-comp-file').submit(function (event) {
+
+                var hasJs = $('#' + compName + '-container').data('hasjs');
+
+
+                //console.log(hasJs);
+
+                var cb = $("input#js_file");
+
+                if (cb.is(":checked")) {
+                    //console.log('create js file');
+                    js_file = "true"
+                } else {
+                    //console.log('dont create js file');
+                    js_file = "false"
+                }
+
+
                 var formData = {
                     'catName': catName,
                     'newName': $('input[name=compName]').val(),
                     'oldName': compName,
                     'compNotes': $('textarea[name=compNotes]').val(),
                     'bgColor': $('input[name=bgColor]').val(),
+                    'js_file': js_file,
                     'hasJs': hasJs,
                     'btnValue-delete': $('.delete-txt').val()
                 };
+
+
                 $.ajax({
                         type: 'POST',
                         url: 'atomic-core/temp-processing/temp-edit-component.php',

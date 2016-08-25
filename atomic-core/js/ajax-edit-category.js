@@ -48,6 +48,11 @@ $('.js_cat-edit').click(function (event) {
 
 
             $('#form-edit-category').submit(function (event) {
+
+
+
+
+
                 var catName = $(this).find('input[name=catName]').val();
                 var formData = {
                     'catName': catName,

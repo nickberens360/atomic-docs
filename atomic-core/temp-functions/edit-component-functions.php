@@ -30,10 +30,17 @@ function renameJsFile($newName, $oldName){
     $jsDir = $config[0]['js_directory'];
     $jsExt = $config[0]['js_extension'];
 
+
+
     $old = "../../$jsDir/$oldName.$jsExt";
     $new = "../../$jsDir/$newName.$jsExt";
 
-    rename($old,$new);
+        rename($old,$new);
+
+
+
+
+
 }
 
 function editJsCommentString($oldName, $newName)
@@ -44,13 +51,17 @@ function editJsCommentString($oldName, $newName)
     $jsDir = $config[0]['js_directory'];
     $jsExt = $config[0]['js_extension'];
 
-    $oldString = '/* '.$jsDir.'/'.$oldName.'.'.$jsExt.' */';
-    $newString = '/* '.$jsDir.'/'.$newName.'.'.$jsExt.' */';
+  
 
 
-    $contents = file_get_contents('../../'.$jsDir.'/'.$newName.'.'.$jsExt.'');
-    $contents = str_replace($oldString, $newString , $contents);
-    file_put_contents('../../'.$jsDir.'/'.$newName.'.'.$jsExt.'', $contents);
+        $oldString = '/* '.$jsDir.'/'.$oldName.'.'.$jsExt.' */';
+        $newString = '/* '.$jsDir.'/'.$newName.'.'.$jsExt.' */';
+        $contents = file_get_contents('../../'.$jsDir.'/'.$newName.'.'.$jsExt.'');
+        $contents = str_replace($oldString, $newString , $contents);
+        file_put_contents('../../'.$jsDir.'/'.$newName.'.'.$jsExt.'', $contents);
+
+
+
 }
 
 

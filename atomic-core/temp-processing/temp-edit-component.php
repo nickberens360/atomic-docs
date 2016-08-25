@@ -9,10 +9,13 @@ $compdb = new Fllat("components", "../../atomic-db");
 
 
 
+
+
 $newName = $_POST["newName"];
 $catName = $_POST["catName"];
 $compNotes = $_POST["compNotes"];
 $bgColor = $_POST["bgColor"];
+$create_js_file = $_POST["js_file"];
 $hasJs = $_POST["hasJs"];
 $oldName = $_POST["oldName"];
 
@@ -41,16 +44,23 @@ if (!empty($errors)) {
 
 
 
+//echo $create_js_file;
 
 
-
-    if($hasJs == "false"){
+    if($create_js_file == "true"){
         createJsFile($newName, $jsDir, $jsExt);
         createJsComment($newName);
+
+        $create_js_file = "true";
 
         $hasJs = "true";
     }
 
+
+    if($hasJs == "true"){
+        renameJsFile($newName, $oldName);
+        editJsCommentString($oldName, $newName);
+    }
 
 
 
@@ -61,11 +71,16 @@ if (!empty($errors)) {
     editStyleCommentString($catName, $oldName, $newName);
     editStyleRootImportString($catName, $oldName, $newName);
 
-    renameJsFile($newName, $oldName);
-    editJsCommentString($oldName, $newName);
 
 
-    
+
+
+
+
+
+
+
+
 
 
 
