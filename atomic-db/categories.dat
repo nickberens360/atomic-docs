@@ -6,5 +6,9 @@
     {
         "category": "readme",
         "order": 0
+    },
+    {
+        "category": "jsExample",
+        "order": 3
     }
 ]

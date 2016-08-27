@@ -7,9 +7,7 @@ $('.js_add-component').click(function (event) {
     $.ajax(this.href, {
         success: function (data) {
 
-
-
-
+            
 
             $('#js_actionDrawer__content').html($(data));
 

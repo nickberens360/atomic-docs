@@ -4,7 +4,7 @@
         "category": "modules",
         "description": "Box is an example component.",
         "backgroundColor": "",
-        "order": 1,
+        "order": 0,
         "has_js": "false"
     },
     {
@@ -22,5 +22,13 @@
         "backgroundColor": "",
         "order": 3,
         "has_js": "false"
+    },
+    {
+        "component": "clickme",
+        "category": "jsExample",
+        "description": "You also have the option of adding a javascript file when you are creating and editing components. At the moment Atomic Docs expects the directory that your javascript files are located to be named \"js\". As is the case with the Scss files you will need to configure your build tool to compile the partial js files.",
+        "backgroundColor": "",
+        "order": 0,
+        "has_js": "true"
     }
 ]

@@ -1,3 +1,15 @@
 /* scss/readme/_sidebar.scss */
 /* scss/readme/_settings.scss */
 /* scss/modules/_box.scss */
+/* scss/jsExample/_clickme.scss */
+.click {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  transition: left .25s;
+  background: #eee;
+  padding: 20px 40px;
+  display: inline-block; }
+
+.clickAnimate {
+  left: 80%; }

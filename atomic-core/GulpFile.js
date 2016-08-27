@@ -23,8 +23,7 @@ gulp.task('styles2', function() {
 
 
 
-var jsFiles = 'js/*.js',
-    jsDest = 'js/min';
+var jsDest = 'js/min';
 
 gulp.task('scripts', function() {
     return gulp.src('js/*.js')
@@ -56,11 +55,29 @@ gulp.task('scripts', function() {
 });
 
 
+
+
+var jsDest2 = '../js/min';
+
+gulp.task('scripts2', function() {
+    return gulp.src('../js/*.js')
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest(jsDest2))
+        .pipe(uglify())
+        .pipe(gulp.dest(jsDest2));
+});
+
+
+
+
+
+
 //Watch task
 gulp.task('default',function() {
     gulp.watch('scss/**/*.scss',['styles']);
     gulp.watch('../scss/**/*.scss',['styles2']);
     gulp.watch('js/*.js',['scripts']);
+    gulp.watch('../js/*.js',['scripts2']);
 });
 
 gulp.task('setup', ['styles']);
