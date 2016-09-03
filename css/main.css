@@ -1,6 +1,12 @@
 /* scss/readme/_sidebar.scss */
 /* scss/readme/_settings.scss */
 /* scss/modules/_box.scss */
+.box {
+  width: 300px;
+  height: 150px;
+  background: #eee;
+  padding: 20px; }
+
 /* scss/jsExample/_clickme.scss */
 .click {
   cursor: pointer;
