@@ -220,6 +220,15 @@ $settings = $settings->select(array());
                                 href="#<?php echo $component['component'] ?>-markup-tab"
                                 aria-controls="home" role="tab"
                                 data-toggle="tab">Markup</a></li>
+
+
+                        <li role="presentation"><a
+                                href="#<?php echo $component['component'] ?>-output-tab"
+                                aria-controls="home" role="tab"
+                                data-toggle="tab">Output</a></li>
+
+
+
                         <li role="presentation"><a href="#<?php echo $component['component'] ?>-styles-tab"
                                                    aria-controls="profile"
                                                    role="tab" data-toggle="tab">Styles</a></li>
@@ -235,6 +244,8 @@ $settings = $settings->select(array());
 
                     <!-- Tab panes -->
                     <div class="tab-content">
+
+
                         <div role="tabpanel" class="tab-pane active"
                              id="<?php echo $component['component'] ?>-markup-tab">
                             <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
@@ -256,6 +267,32 @@ $settings = $settings->select(array());
                                 </div>
                             </form>
                         </div>
+
+
+
+
+
+
+                        <div role="tabpanel" class="tab-pane"
+                             id="<?php echo $component['component'] ?>-output-tab">
+                            <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
+                                  data-editorFormCat="<?php echo $cat; ?>"
+                                  data-codeDest="<?php echo $setting['component_directory'] ?>">
+                                <div class="atomic-editorInner">
+                                    <div class="copyBtn copyBtn-output" data-clipboard-text="">Copy</div><div class="atomic-editor atomic-editor-output" id="editor-output-<?php echo $component['component'] ?>"></div>
+                                </div>
+                            </form>
+                        </div>
+
+
+
+
+
+
+
+
+
+
                         <div role="tabpanel" class="tab-pane" id="<?php echo $component['component'] ?>-styles-tab">
                             <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
                                   data-editorFormCat="<?php echo $cat; ?>"
@@ -287,7 +324,7 @@ $settings = $settings->select(array());
                                   data-editorFormCat="<?php echo $cat; ?>"
                                   data-codeDest="<?php echo $setting['js_directory'] ?>">
                                 <div class="atomic-editorInner">
-                                    <div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
+                                    <div class="copyBtn copyBtn-js" data-clipboard-text="">Copy</div>
                                     <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
 
                                     <?php $style_file_content = file_get_contents('../' . $setting['js_directory'] . '/'. $component['component'] . '.' . $setting['js_extension'] . '', true); ?>

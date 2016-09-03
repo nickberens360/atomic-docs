@@ -63,8 +63,35 @@ foreach ($compSelect as $component) {
         editormarkup_<?php echo $i; ?>.setHighlightActiveLine(false);
         editormarkup_<?php echo $i; ?>.setShowPrintMargin(false);
 
+    </script>
+
+
+
+    <script>
+        var editoroutput_<?php echo $i; ?> = ace.edit("editor-output-<?php echo $component['component'] ?>");
+        var code = editoroutput_<?php echo $i; ?>.getValue();
+        editoroutput_<?php echo $i; ?>.getSession().setUseWorker(false);
+        editoroutput_<?php echo $i; ?>.getSession().on('change', function () {
+            $("input[name=new-markup-val-<?php echo $component['component'] ?>]").val(editoroutput_<?php echo $i; ?>.getSession().getValue());
+        });
+        var code = code.replace(/<!--(.*?)-->/g, '');
+        var code = code.trim();
+        $('#<?php echo $component['component'] ?>-container').find(".copyBtn-output").attr('data-clipboard-text', code);
+        new ZeroClipboard($('.copyBtn-output'));
+        editoroutput_<?php echo $i; ?>.getSession().setMode("ace/mode/html");
+        editoroutput_<?php echo $i; ?>.setOptions({
+            maxLines: Infinity
+        });
+        editoroutput_<?php echo $i; ?>.setHighlightActiveLine(false);
+        editoroutput_<?php echo $i; ?>.setShowPrintMargin(false);
 
     </script>
+
+
+
+
+
+
 
     <script>
         var editorstyles_<?php echo $i; ?> = ace.edit("editor-styles-<?php echo $component['component'] ?>");
@@ -96,8 +123,8 @@ foreach ($compSelect as $component) {
             });
             var code = code.replace(/\/\*(.*?)\*\//g, '');
             var code = code.trim();
-            $('#<?php echo $component['component'] ?>-container').find(".copyBtn-styles").attr('data-clipboard-text', code);
-            new ZeroClipboard($('.copyBtn-styles'));
+            $('#<?php echo $component['component'] ?>-container').find(".copyBtn-js").attr('data-clipboard-text', code);
+            new ZeroClipboard($('.copyBtn-js       '));
             editorjs_<?php echo $i; ?>.getSession().setMode("ace/mode/javascript");
             editorjs_<?php echo $i; ?>.setOptions({
                 maxLines: Infinity
