@@ -12,7 +12,7 @@ $('.js_cat-add').click(function (event) {
             $('#form-create-category').submit(function (event) {
 
 
-                var catName = $('input[name=catName]').val();
+                var catName = $('input[name=catName]').val().replace(/\s+/g, '');
 
 
                 var formData = {

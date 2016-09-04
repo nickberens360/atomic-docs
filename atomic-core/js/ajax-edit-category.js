@@ -9,7 +9,7 @@ $('.js_cat-edit').click(function (event) {
 
 
             $('#form-delete-category').submit(function (event) {
-                var catName = $(this).find('input[name=catName]').val();
+                var catName = $(this).find('input[name=catName]').val().replace(/\s+/g, '');
                 var formData = {
                     'catName': catName,
                     'thisCat': thisCat
@@ -53,7 +53,7 @@ $('.js_cat-edit').click(function (event) {
 
 
 
-                var catName = $(this).find('input[name=catName]').val();
+                var catName = $(this).find('input[name=catName]').val().replace(/\s+/g, '');
                 var formData = {
                     'catName': catName,
                     'thisCat': thisCat

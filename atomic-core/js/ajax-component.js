@@ -38,14 +38,13 @@ $('.js_add-component').click(function (event) {
 
                 var formData = {
                     'catName': catName,
-                    'compName': $('input[name=compName]').val(),
+                    'compName': $('input[name=compName]').val().replace(/\s+/g, ''),
                     'compNotes': $('textarea[name=compNotes]').val(),
                     'bgColor': $('input[name=bgColor]').val(),
                     'js_file': js_file
                 };
 
-
-
+                
 
 
 

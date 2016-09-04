@@ -60,7 +60,7 @@ $('.js_edit-component').click(function (event) {
 
                 var formData = {
                     'catName': catName,
-                    'newName': $('input[name=compName]').val(),
+                    'newName': $('input[name=compName]').val().replace(/\s+/g, ''),
                     'oldName': compName,
                     'compNotes': $('textarea[name=compNotes]').val(),
                     'bgColor': $('input[name=bgColor]').val(),

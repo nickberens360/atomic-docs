@@ -7506,7 +7506,7 @@ $('.js_cat-add').click(function (event) {
             $('#form-create-category').submit(function (event) {
 
 
-                var catName = $('input[name=catName]').val();
+                var catName = $('input[name=catName]').val().replace(/\s+/g, '');
 
 
                 var formData = {
@@ -7596,14 +7596,13 @@ $('.js_add-component').click(function (event) {
 
                 var formData = {
                     'catName': catName,
-                    'compName': $('input[name=compName]').val(),
+                    'compName': $('input[name=compName]').val().replace(/\s+/g, ''),
                     'compNotes': $('textarea[name=compNotes]').val(),
                     'bgColor': $('input[name=bgColor]').val(),
                     'js_file': js_file
                 };
 
-
-
+                
 
 
 
@@ -7660,7 +7659,7 @@ $('.js_cat-edit').click(function (event) {
 
 
             $('#form-delete-category').submit(function (event) {
-                var catName = $(this).find('input[name=catName]').val();
+                var catName = $(this).find('input[name=catName]').val().replace(/\s+/g, '');
                 var formData = {
                     'catName': catName,
                     'thisCat': thisCat
@@ -7704,7 +7703,7 @@ $('.js_cat-edit').click(function (event) {
 
 
 
-                var catName = $(this).find('input[name=catName]').val();
+                var catName = $(this).find('input[name=catName]').val().replace(/\s+/g, '');
                 var formData = {
                     'catName': catName,
                     'thisCat': thisCat
@@ -7806,7 +7805,7 @@ $('.js_edit-component').click(function (event) {
 
                 var formData = {
                     'catName': catName,
-                    'newName': $('input[name=compName]').val(),
+                    'newName': $('input[name=compName]').val().replace(/\s+/g, ''),
                     'oldName': compName,
                     'compNotes': $('textarea[name=compNotes]').val(),
                     'bgColor': $('input[name=bgColor]').val(),

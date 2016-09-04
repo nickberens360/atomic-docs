@@ -1159,23 +1159,24 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     background: #e3e4e3;
     z-index: 6000;
     padding: 50px;
+    padding-top: 100px;
     height: 100%;
     width: 500px !important;
     box-shadow: -4px 0px 5px 0px rgba(0, 0, 0, 0.19);
     font-family: "Open Sans", sans-serif;
     box-sizing: border-box;
-    color: #7a7a7a; }
+    color: #7a7a7a;
+    overflow: auto; }
   .atomsWrap .aa_actionDrawer__wrap {
     max-width: 500px;
     margin: auto;
     position: relative;
-    top: 30%;
-    transform: translateY(-30%); }
+    /*top: 30%;
+  transform: translateY(-30%);*/ }
     .atomsWrap .aa_actionDrawer__wrap h1 {
       color: #7A7A7A; }
   .atomsWrap .aa_actionDrawer__close {
     cursor: pointer;
-    /* color: #F94B4B; */
     color: #B5B4B4;
     position: absolute;
     right: 0;
@@ -1442,8 +1443,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     text-align: center;
     background: #FCFEFA url("../img/squares.gif") no-repeat center center;
     height: 100%; }
-  .atomsWrap a {
-    color: #00aff0; }
   .atomsWrap .featureHints {
     margin-top: 40px; }
     .atomsWrap .featureHints p {

@@ -6,33 +6,36 @@
   background: rgba(227, 228, 227, 1);
   z-index: 6000;
   padding: 50px;
+  padding-top: 100px;
   height: 100%;
   width: 500px !important;
   box-shadow: -4px 0px 5px 0px rgba(0, 0, 0, 0.19);
   font-family: $font1;
   box-sizing: border-box;
   color: #7a7a7a;
+  overflow: auto;
 }
+
 
 .aa_actionDrawer__wrap {
   max-width: 500px;
   margin: auto;
   position: relative;
-  top: 30%;
-  transform: translateY(-30%);
+  /*top: 30%;
+  transform: translateY(-30%);*/
   h1 {
     color: #7A7A7A;
   }
 }
+
+
 
 .actionDrawer__content {
 
 }
 
 .aa_actionDrawer__close {
-  //position:absolute;
   cursor: pointer;
-  /* color: #F94B4B; */
   color: #B5B4B4;
   position: absolute;
   right: 0;
