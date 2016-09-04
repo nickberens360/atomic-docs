@@ -12,8 +12,11 @@ $('.js_edit-component').click(function (event) {
 
 
 
+            var bgColor = $('input[name=bgColor]').val()
+
+
             var notesVal = $('#' + compName + '-container').find('.compNotes').data('description');
-            var bgColor = $('#' + compName + '-container').find('.component').data('color');
+            var dataColor = $('#' + compName + '-container').find('.component').data('color');
             var hasJs = $('#' + compName + '-container').data('hasjs');
 
 
@@ -35,7 +38,7 @@ $('.js_edit-component').click(function (event) {
                 allowEmpty: true,
                 preferredFormat: "hex",
                 showInput: true,
-                color: bgColor
+                color: dataColor
             });
 
 
@@ -46,16 +49,11 @@ $('.js_edit-component').click(function (event) {
 
                 var hasJs = $('#' + compName + '-container').data('hasjs');
 
-
-                //console.log(hasJs);
-
                 var cb = $("input#js_file");
 
                 if (cb.is(":checked")) {
-                    //console.log('create js file');
                     js_file = "true"
                 } else {
-                    //console.log('dont create js file');
                     js_file = "false"
                 }
 
@@ -66,6 +64,7 @@ $('.js_edit-component').click(function (event) {
                     'oldName': compName,
                     'compNotes': $('textarea[name=compNotes]').val(),
                     'bgColor': $('input[name=bgColor]').val(),
+                    'dataColor': dataColor,
                     'js_file': js_file,
                     'hasJs': hasJs,
                     'btnValue-delete': $('.delete-txt').val()

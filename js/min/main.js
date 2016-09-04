@@ -1,1 +1,1 @@
-$(".click").click(function(){$(this).toggleClass("clickAnimate")});
+$(".click").click(function(){$(this).toggleClass("clickAnimate")}),$(".newComp").click(function(){alert("yo")});

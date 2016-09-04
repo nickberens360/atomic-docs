@@ -15,6 +15,7 @@ $newName = $_POST["newName"];
 $catName = $_POST["catName"];
 $compNotes = $_POST["compNotes"];
 $bgColor = $_POST["bgColor"];
+$dataColor = $_POST["dataColor"];
 $create_js_file = $_POST["js_file"];
 $hasJs = $_POST["hasJs"];
 $oldName = $_POST["oldName"];
@@ -43,8 +44,13 @@ if (!empty($errors)) {
 } else {
 
 
+    if( empty($bgColor) ){
+        $bgColor = $dataColor;
+    }
+    else{
+        $bgColor = $bgColor;
+    }
 
-//echo $create_js_file;
 
 
     if($create_js_file == "true"){
@@ -65,6 +71,8 @@ if (!empty($errors)) {
 
 
     dbUpdateComp($compdb, $oldName, $newName, $catName, $bgColor, $compNotes, $hasJs);
+    
+    
     renameCompFile($catName, $newName, $oldName);
     editCompCommentString($catName, $oldName, $newName);
     renameStylesFile($catName, $newName, $oldName);
