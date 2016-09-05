@@ -20,7 +20,7 @@
         "category": "readme",
         "description": "By default Atomic Docs is set up for Scss component style files and PHP markup files. This however can be easily changed even after you have started your project. Clicking on the gear icon in the blue toolbar in the sidebar gives you the ability to change the style partial file extension (to .less for example) as well as the ability to change the markup component file extension (to .twig perhaps).",
         "backgroundColor": "",
-        "order": 3,
+        "order": 1,
         "has_js": "false"
     },
     {
