@@ -57,3 +57,27 @@ function deleteScssImportString($catName, $fileName)
 
 
 }
+
+
+function deleteCatJsFile($jsDir, $jsExt, $compDir, $thisCat){
+
+
+    $dir = '../../'.$compDir.'/'.$thisCat.'';
+
+    foreach(glob($dir.'/*.*') as $file) {
+
+        $basename = pathinfo($file, PATHINFO_FILENAME);
+
+        $jsFile = $basename.'.'.$jsExt;
+
+
+        $jsPath = "../../$jsDir/$jsFile";
+
+
+        if(file_exists($jsPath)){
+
+            unlink($jsPath);
+        }
+
+    }
+}

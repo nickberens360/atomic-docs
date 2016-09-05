@@ -11,7 +11,9 @@ function createCompFile($catName, $compName)
     $compExt = $config[0]['component_extension'];
 
 
-    fopen("../../$compDir/$catName/$compName.$compExt", 'x+') or die("can't open file");
+    $myFile = fopen("../../$compDir/$catName/$compName.$compExt", 'x+') or die("can't open file");
+
+    fclose($myFile);
 }
 
 

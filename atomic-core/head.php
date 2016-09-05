@@ -6,7 +6,7 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js atomsWrap"> <!--<![endif]-->
+<html class="no-js"> <!--<![endif]-->
 <head>
     <base href="../">
     <meta charset="utf-8">

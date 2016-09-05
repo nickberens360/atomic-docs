@@ -16,7 +16,7 @@ $settings = $settings->select(array());
 
 
 ?>
-<body class="atoms" xmlns="http://www.w3.org/1999/html">
+<body id="atomsWrap" class="atoms" xmlns="http://www.w3.org/1999/html">
 
 
 <div class="grid-row atoms-container">
@@ -213,7 +213,7 @@ $settings = $settings->select(array());
 
                 </div>
 
-                <div class="codeBlocks">
+                <div class="codeBlocks grid-row">
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a
