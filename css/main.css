@@ -1,11 +1,11 @@
-/* scss/readme/_sidebar.scss */
 /* scss/readme/_settings.scss */
+/* scss/readme/_sidebar.scss */
 /* scss/modules/_box.scss */
 .box {
-  width: 300px;
-  height: 150px;
   background: #eee;
-  padding: 20px; }
+  padding: 20px;
+  width: 300px;
+  height: 150px; }
 
 /* scss/jsExample/_clickme.scss */
 .click {

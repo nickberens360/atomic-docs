@@ -28,6 +28,7 @@ var jsDest = 'js/min';
 gulp.task('scripts', function() {
     return gulp.src('js/*.js')
         .pipe(order([
+            'js/enquire.js',
             'js/bootstrap.min.js',
             'js/prism.js',
             'js/spectrum-picker.js',

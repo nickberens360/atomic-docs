@@ -48,6 +48,7 @@ foreach ($compSelect as $component) {
     <script>
         var editormarkup_<?php echo $i; ?> = ace.edit("editor-markup-<?php echo $component['component'] ?>");
         var code = editormarkup_<?php echo $i; ?>.getValue();
+        $("input[name=new-markup-val-<?php echo $component['component'] ?>]").val(code);
         editormarkup_<?php echo $i; ?>.getSession().setUseWorker(false);
         editormarkup_<?php echo $i; ?>.getSession().on('change', function () {
             $("input[name=new-markup-val-<?php echo $component['component'] ?>]").val(editormarkup_<?php echo $i; ?>.getSession().getValue());
@@ -96,6 +97,7 @@ foreach ($compSelect as $component) {
     <script>
         var editorstyles_<?php echo $i; ?> = ace.edit("editor-styles-<?php echo $component['component'] ?>");
         var code = editorstyles_<?php echo $i; ?>.getValue();
+        $("input[name=new-styles-val-<?php echo $component['component'] ?>]").val(code);
         editorstyles_<?php echo $i; ?>.getSession().setUseWorker(false);
         editorstyles_<?php echo $i; ?>.getSession().on('change', function () {
             $("input[name=new-styles-val-<?php echo $component['component'] ?>]").val(editorstyles_<?php echo $i; ?>.getSession().getValue());
@@ -117,6 +119,7 @@ foreach ($compSelect as $component) {
         <script>
             var editorjs_<?php echo $i; ?> = ace.edit("editor-js-<?php echo $component['component'] ?>");
             var code = editorjs_<?php echo $i; ?>.getValue();
+            $("input[name=new-js-val-<?php echo $component['component'] ?>]").val(code);
             editorjs_<?php echo $i; ?>.getSession().setUseWorker(false);
             editorjs_<?php echo $i; ?>.getSession().on('change', function () {
                 $("input[name=new-js-val-<?php echo $component['component'] ?>]").val(editorjs_<?php echo $i; ?>.getSession().getValue());

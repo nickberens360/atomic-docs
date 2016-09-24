@@ -7,10 +7,24 @@ $('.atomic-editorWrap').submit(function (event) {
 
     var compName = $(this).data('editorformcomp');
     var catName = $(this).data('editorformcat');
-    var codeDest = $(this).data('codedest');
+    var hasjs = $(this).closest('.compWrap').data('hasjs');
 
 
-    var newCode = $(this).find('.new-val-input').val();
+    var newMarkupCode = $(this).closest('.tab-content').find("input[name=new-markup-val-"+compName+"]").val();
+    var newStylesCode = $(this).closest('.tab-content').find("input[name=new-styles-val-"+compName+"]").val();
+
+
+
+    if(hasjs == true){
+        var newJsCode = $(this).closest('.tab-content').find("input[name=new-js-val-"+compName+"]").val();
+    }
+    if(hasjs == false){
+        var newJsCode = "noJs";
+    }
+
+
+
+
 
 
 
@@ -18,8 +32,9 @@ $('.atomic-editorWrap').submit(function (event) {
     var formData = {
         'compName': compName,
         'catName': catName,
-        'newCode': newCode,
-        'codeDest': codeDest
+        'newMarkupCode': newMarkupCode,
+        'newStylesCode': newStylesCode,
+        'newJsCode': newJsCode
     };
 
     $.ajax({
@@ -29,11 +44,8 @@ $('.atomic-editorWrap').submit(function (event) {
             dataType: 'json',
             encode: true
         })
-        // using the done promise callback
         .done(function (data) {
-            // log data to the console so we can see
             console.log(data);
-            // here we will handle errors and validation messages
             if (!data.success) {
 
 
@@ -57,13 +69,10 @@ $('.atomic-editorWrap').submit(function (event) {
                 }, 2000);
             }
         })
-        // using the fail promise callback
         .fail(function (data) {
-            // show any errors
-            // best to remove for production
             console.log('failed');
             console.log(data);
         });
-    // stop the form from submitting the normal way and refreshing the page
     event.preventDefault();
 });
+

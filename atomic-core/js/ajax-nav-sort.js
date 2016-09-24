@@ -181,3 +181,48 @@ $(".aa_fileSection").sortable({
      }
 
 });
+
+
+
+
+enquire.register("screen and (max-width:500px)", {
+
+
+
+
+
+
+
+    match : function() {
+
+
+
+
+        $(".aa_fileSection").sortable({
+
+            disabled: true
+
+        });
+
+
+
+        $(".atoms-nav ").sortable({
+
+            disabled: true
+
+        });
+
+
+
+    }
+
+
+
+});
+
+
+
+
+
+
+

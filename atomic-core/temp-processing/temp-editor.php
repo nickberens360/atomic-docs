@@ -6,17 +6,19 @@ $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
 $compName = $_POST["compName"];
 $catName = $_POST["catName"];
-$newCode = $_POST["newCode"];
-$codeDest = $_POST["codeDest"];
+$newMarkupCode = $_POST["newMarkupCode"];
+$newStylesCode = $_POST["newStylesCode"];
+$newJsCode = $_POST["newJsCode"];
 
 
 
 
 
 
+/*
 if ($newCode == ""){
     $errors['name'] = 'No change detected';
-}
+}*/
 // return a response ===========================================================
 // if there are any errors in our errors array, return a success boolean of false
 if ( ! empty($errors)) {
@@ -26,7 +28,7 @@ if ( ! empty($errors)) {
 } else {
 
 
-    function editorCodeUpdate($compName,$catName, $newCode, $codeDest){
+    function editorCodeUpdate($compName,$catName,$newMarkupCode, $newStylesCode, $newJsCode){
 
         $config = getConfig('../..');
 
@@ -40,7 +42,26 @@ if ( ! empty($errors)) {
 
 
 
-        if($codeDest == $compDir){
+        $compPath = '../../' . $compDir . '/' . $catName . '/'.$compName.'.'. $compExt .'';
+        file_put_contents($compPath, $newMarkupCode);
+
+        $stylesPath = '../../' . $stylesDir . '/' . $catName . '/_'.$compName.'.'. $stylesExt .'';
+        file_put_contents($stylesPath, $newStylesCode);
+
+
+        if($newJsCode == "noJs"){
+
+        }
+        else{
+            $jsPath = '../../'.$jsDir.'/'.$compName.'.'.$jsExt.'';
+            file_put_contents($jsPath, $newJsCode);
+        }
+
+
+
+
+
+/*        if($codeDest == $compDir){
             $compName = $compName.'.'.$compExt.'';
         }
         if($codeDest == $stylesDir){
@@ -52,11 +73,13 @@ if ( ! empty($errors)) {
         }
 
         if($codeDest !== $jsDir) {
-            $path = '../../' . $codeDest . '/' . $catName . '/' . $compName;
+            $path = '../../' . $codeDest . '/' . $catName . '/' . $compName.'';
             file_put_contents($path, $newCode);
-        }
+        }*/
+
+
     }
-    editorCodeUpdate($compName,$catName, $newCode, $codeDest);
+    editorCodeUpdate($compName,$catName,$newMarkupCode, $newStylesCode, $newJsCode);
     // show a message of success and provide a true success variable
     $data['success'] = true;
     $data['message'] = 'Success!';
