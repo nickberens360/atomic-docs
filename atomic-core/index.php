@@ -59,8 +59,18 @@ $settings = $settings->select(array());
                         ?>
 
 
-                        <li class="aa_dir <?php if ($category['category'] == $_GET['cat']) { ?>active<?php } ?>"
-                            data-navitem="<?php echo $category['category'] ?>">
+                        <?php if (isset($_GET['cat'])) { ?>
+                            <li class="aa_dir <?php if ($category['category'] == $_GET['cat']) { ?>active<?php } ?>" data-navitem="<?php echo $category['category'] ?>">
+                        <?php } else { ?>
+                            <li class="aa_dir" data-navitem="<?php echo $category['category'] ?>">
+                        <?php } ?>
+
+
+
+
+
+
+
                             <div class="aa_dir__dirNameGroup">
                                 <i class="aa_dir__dirNameGroup__icon  fa fa-folder-o"></i>
                                 <a class="aa_dir__dirNameGroup__name"
