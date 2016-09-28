@@ -58,8 +58,11 @@ foreach ($compSelect as $component) {
         $('#<?php echo $component['component'] ?>-container').find(".copyBtn-markup").attr('data-clipboard-text', code);
         new ZeroClipboard($('.copyBtn-markup'));
         editormarkup_<?php echo $i; ?>.getSession().setMode("ace/mode/html");
+
+
         editormarkup_<?php echo $i; ?>.setOptions({
-            maxLines: Infinity
+            maxLines: Infinity,
+            readOnly: true //REMOVE THIS LINE TO ENABLE EDITOR MODE
         });
         editormarkup_<?php echo $i; ?>.setHighlightActiveLine(false);
         editormarkup_<?php echo $i; ?>.setShowPrintMargin(false);
@@ -81,7 +84,8 @@ foreach ($compSelect as $component) {
         new ZeroClipboard($('.copyBtn-output'));
         editoroutput_<?php echo $i; ?>.getSession().setMode("ace/mode/html");
         editoroutput_<?php echo $i; ?>.setOptions({
-            maxLines: Infinity
+            maxLines: Infinity,
+            readOnly: true //REMOVE THIS LINE TO ENABLE EDITOR MODE
         });
         editoroutput_<?php echo $i; ?>.setHighlightActiveLine(false);
         editoroutput_<?php echo $i; ?>.setShowPrintMargin(false);
@@ -108,7 +112,8 @@ foreach ($compSelect as $component) {
         new ZeroClipboard($('.copyBtn-styles'));
         editorstyles_<?php echo $i; ?>.getSession().setMode("ace/mode/scss");
         editorstyles_<?php echo $i; ?>.setOptions({
-            maxLines: Infinity
+            maxLines: Infinity,
+            readOnly: true //REMOVE THIS LINE TO ENABLE EDITOR MODE
         });
         editorstyles_<?php echo $i; ?>.setHighlightActiveLine(false);
         editorstyles_<?php echo $i; ?>.setShowPrintMargin(false);
@@ -130,7 +135,8 @@ foreach ($compSelect as $component) {
             new ZeroClipboard($('.copyBtn-js       '));
             editorjs_<?php echo $i; ?>.getSession().setMode("ace/mode/javascript");
             editorjs_<?php echo $i; ?>.setOptions({
-                maxLines: Infinity
+                maxLines: Infinity,
+                readOnly: true //REMOVE THIS LINE TO ENABLE EDITOR MODE
             });
             editorjs_<?php echo $i; ?>.setHighlightActiveLine(false);
             editorjs_<?php echo $i; ?>.setShowPrintMargin(false);
@@ -152,6 +158,58 @@ foreach ($compSelect as $component) {
         include ("../atomic-foot.php");
     }
 ?>
+
+
+<!--
+
+//////////////////////////////////////////
+UNCOMMENT THIS BLOCK TO ENABLE EDITOR MODE
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+<style>
+    .copyBtn-edit, .atomic-editor-footer{
+        display: none !important;
+    }
+</style>
+
+
+<script>
+
+
+
+    $(document).ready(function() {
+
+
+        $( ".ace_content" ).click(function() {
+            $('.atomic-editorWrap').removeClass('atomic-editorWrap-active');
+            $(this).closest('.atomic-editorWrap').addClass('atomic-editorWrap-active');
+        });
+
+        $( ".js-close-editor" ).click(function() {
+            $('.atomic-editorWrap').removeClass('atomic-editorWrap-active');
+            location.reload();
+        });
+
+
+        $( ".js-copyBtn-edit" ).click(function() {
+            $('.atomic-editorWrap').removeClass('atomic-editorWrap-active');
+            $(this).closest('.atomic-editorWrap').addClass('atomic-editorWrap-active');
+        });
+
+    });
+
+    $(document).mouseup(function (e)
+    {
+        var container = $('.atomic-editorWrap');
+
+        if (!container.is(e.target)
+            && container.has(e.target).length === 0)
+        {
+            container.removeClass('atomic-editorWrap-active');
+        }
+    });
+</script>-->
+
+
 
 
 </body>
