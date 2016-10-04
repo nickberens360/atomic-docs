@@ -29,10 +29,5 @@
         }
     ?>
 
-    <style>
-        .codeBlocks{
-            clear: both;
-        }
-    </style>
 
 </head>
