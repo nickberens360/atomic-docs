@@ -1,8 +1,12 @@
 version: '2'
 services:
    php:
-     image: "php:7.0-apache"
-     ports:
-      - "8002:80"
-     volumes:
-      - .:/var/www/html
+      build: .
+      ports:
+        - "8002:80"
+      environment:
+         CSSCOMPILER: "SASS"
+      volumes:
+        - .:/var/www/html
+      entrypoint: "/entrypoint.sh"
+      command: "apache2-foreground"
