@@ -7,6 +7,7 @@ permalink: /docs/project-structure
   <li><span class="ascii__mainDir">atomic-docs/</span>
     <ul>
       <li>atomic-core/</li>
+      <li>atomic-db/</li>
       <li>components/</li>
       <li>css/
         <ul>
@@ -19,7 +20,6 @@ permalink: /docs/project-structure
         </ul>
       </li>
       <li>.htaccess</li>
-      <li>config.php</li>
       <li>index.php</li>
       <li>atomic-head.php</li>
       <li>atomic-foot.php</li>
@@ -31,6 +31,8 @@ permalink: /docs/project-structure
   <dd>The root project directory. Change to whatever the name of your project is.</dd>
   <dt>atomic-core/</dt>
   <dd>The directory that holds the atomic-docs application logic. (I'm stricly a front-end programmer, view my janky backend code at your own risk)</dd>
+  <dt>atomic-db/</dt>
+  <dd>The flat file database that stores the information for your components, categories and settings.</dd>
   <dt>components/</dt>
   <dd>This directory holds the component files where you will be authoring your html. For example, if you create a component named "box", you would find box.html in this directory.</dd>
   <dt>css/</dt>
