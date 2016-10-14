@@ -15,24 +15,23 @@ permalink: /docs/less-stylus
 <p>The following are the steps for setting up Atomic Docs to work with Less. For stylus use the <span class="highLight">styl</span>
     extension instead of <span class="highLight">less</span> as shown in the example.</p>
 
-<ul>
-    <li>The first thing you'll need to do is go to <span class="highLight">http://localhost/atomic-docs/atomic-core/</span> and use the <span class="highLight">+ Add / Delete Category</span> link to remove the modules and box component example. Since the example is in Sass you will encounter issues later if you are working with Less or Stylus.</li>
-    <li> Open up atomic-config.php in the root and change <span class="highLight">$config['preCssDir']</span> to equal <span
-            class="highLight">less</span>. Also change <span class="highLight">$config['preCssExt']</span> to equal <span
-            class="highLight">less</span> (you can name this whatever you want actually).
-<pre><code class="language-php"><script>
-function getConfig() {
-    $config = array();
-    $config['dir'] = dirname(__FILE__);
-    //user defined varibales
-    $config['preCssDir'] = 'less'; //Scss preprocessor directory name. E.G sass, less
-    $config['preCssExt'] = 'less'; //prerocessed file ext. E.G. scss, sass, less
-    $config['compExt'] = 'php'; //markup file ext. E.G. html, twig, etc...
-    return $config;
-}
-</script>
-</code></pre>
+
+<ol>
+    <li>Click the gear icon in the blue toolbar in the upper left.
+        <br/>
+        <br/>
+        <div><img src="../../img/settings-toolbar.png"/></div>
     </li>
+    <li>In the "Edit style directory name" field you change it to whatever you'd like. We will go ahead and change it to <span class="highLight">less</span>
+    <li>In the "Edit style file extension" field enter <span class="highLight">.less</span>
+        <br/>
+        <br/>
+        <div><img src="../../img/settings2.png"/></div>
+    </li>
+</ol>
+
+<ul>
+
     <li>Set up your pre-processor and start creating your categories and components at <span class="highLight">http://localhost/atomic-docs/atomic-core/</span>.</li>
 </ul>
 
