@@ -22,7 +22,7 @@ $settings = $settings->select(array());
 <div id="search-list" class="searchWindow">
 
 
-
+    <div class="atoms-overflow">
 
 
 
@@ -79,7 +79,7 @@ $settings = $settings->select(array());
 
     </div>
 
-
+    </div>
 </div>
 
 

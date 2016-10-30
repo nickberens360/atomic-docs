@@ -1016,10 +1016,9 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   #atomsWrap .docBlock-img__big {
     max-width: 100%; }
   #atomsWrap .searchWindow {
-    position: absolute;
+    position: fixed;
     background: rgba(0, 121, 191, 0.77);
     color: #fff;
-    padding: 100px 20px;
     font-family: "Open Sans", sans-serif;
     opacity: 0;
     transition: opacity .25s; }
@@ -1031,13 +1030,15 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     opacity: 1; }
   #atomsWrap .searchWindow__close {
     cursor: pointer; }
   #atomsWrap .SearchContent {
     max-width: 500px;
     margin: auto;
-    position: relative; }
+    position: relative;
+    padding: 100px 20px; }
   #atomsWrap .searchInputWrap {
     height: 60px;
     position: relative;

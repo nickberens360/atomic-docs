@@ -25,12 +25,12 @@
 
 
 
+
 .searchWindow{
-	position: absolute;
+	position: fixed;
 	background: rgba(0, 121, 191, 0.77);
 	color: #fff;
 
-	padding: 100px 20px;
 	font-family: $font1;
 	opacity: 0;
 	transition: opacity .25s;
@@ -45,6 +45,7 @@
 		bottom: 0;
 		left: 0;
 		width: 100%;
+	    height: 100%;
 		opacity: 1;
 }
 
@@ -69,6 +70,7 @@
 	max-width: 500px;
 	margin: auto;
 	position: relative;
+	padding: 100px 20px;
 
 }
 
