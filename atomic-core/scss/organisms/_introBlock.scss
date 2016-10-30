@@ -49,10 +49,11 @@
 	a{
 		color: #fff;
 	}
-	::-webkit-input-placeholder { 
+	::-webkit-input-placeholder {
 		color: #fff;
 		font-size: 30px;
 		font-style: italic;
+		text-indent: 5px;
 	}
 	::-moz-placeholder {
 		color: #fff;

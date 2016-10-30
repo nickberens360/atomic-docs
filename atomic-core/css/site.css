@@ -1024,7 +1024,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     #atomsWrap .searchWindow ::-webkit-input-placeholder {
       color: #fff;
       font-size: 30px;
-      font-style: italic; }
+      font-style: italic;
+      text-indent: 5px; }
     #atomsWrap .searchWindow ::-moz-placeholder {
       color: #fff;
       font-size: 30px; }

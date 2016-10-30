@@ -9621,6 +9621,11 @@ $('.js_searchTrigger').click(function() {
 });
 
 
+$('.searchList .name').click(function() {
+    $('.searchWindow').fadeOut(250);
+});
+
+
 $('.js_searchWindow__close').click(function() {
     $('.searchWindow').fadeOut(250);
 });
