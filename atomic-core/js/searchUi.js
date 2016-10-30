@@ -1,12 +1,12 @@
 
 $('.js_searchTrigger').click(function() {
-    $('.searchWindow').fadeIn();
+    $('.searchWindow').fadeIn(250);
     $('.searchInput').focus();
 });
 
 
 $('.js_searchWindow__close').click(function() {
-    $('.searchWindow').fadeOut();
+    $('.searchWindow').fadeOut(250);
 });
 
 

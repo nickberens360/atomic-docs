@@ -1062,14 +1062,12 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
       display: inline-block;
       display: inline-block;
       font: normal normal normal 14px/1 FontAwesome;
-      font-size: inherit;
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      top: 50%;
       transform: translateY(-50%);
-      font-size: 34px;
-      top: 21px; }
+      font-size: 31px;
+      top: 28px; }
   #atomsWrap .searchInput {
     width: 100%;
     height: 60px;
