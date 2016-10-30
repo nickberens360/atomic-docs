@@ -1,4 +1,16 @@
+
 $('.js_searchTrigger').click(function() {
+    $('.searchWindow').fadeIn();
+    $('.searchInput').focus();
+});
+
+
+$('.js_searchWindow__close').click(function() {
+    $('.searchWindow').fadeOut();
+});
+
+
+/*$('.js_searchTrigger').click(function() {
     $('.searchWindow').addClass('searchWindow-open');
     $('.searchInput').focus();
 });
@@ -6,7 +18,7 @@ $('.js_searchTrigger').click(function() {
 
 $('.js_searchWindow__close').click(function() {
     $('.searchWindow').removeClass('searchWindow-open');
-});
+});*/
 
 
 $(document).mouseup(function (e)

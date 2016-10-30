@@ -627,16 +627,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 	display:none;
 } */
   /* CSS Document */
-  /*.searchWindow-open{
-	border: 5px solid red;
-	.searchWindow{
-		top: 0;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		opacity: 1;
-	}
-}*/
   /*.atoms-overflow{
     overflow: auto;
     height: 100%;
@@ -1021,25 +1011,27 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     color: #fff;
     font-family: "Open Sans", sans-serif;
     opacity: 0;
-    transition: opacity .25s;
-    z-index: -1; }
+    display: none;
+    z-index: 6000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1; }
     #atomsWrap .searchWindow a {
       color: #fff; }
     #atomsWrap .searchWindow ::-webkit-input-placeholder {
-      /* Chrome/Opera/Safari */
       color: #fff;
       font-size: 30px;
       font-style: italic; }
     #atomsWrap .searchWindow ::-moz-placeholder {
-      /* Firefox 19+ */
       color: #fff;
       font-size: 30px; }
     #atomsWrap .searchWindow :-ms-input-placeholder {
-      /* IE 10+ */
       color: #fff;
       font-size: 30px; }
     #atomsWrap .searchWindow :-moz-placeholder {
-      /* Firefox 18- */
       color: #fff;
       font-size: 30px; }
   #atomsWrap .searchWindow.searchWindow-open {

@@ -31,25 +31,38 @@
 	color: #fff;
 	font-family: $font1;
 	opacity: 0;
-	transition: opacity .25s;
-	z-index: -1;
+	//transition: opacity .25s;
+	//z-index: -1;
+
+	display: none;
+
+
+	z-index: 6000;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	
+	
 	a{
 		color: #fff;
 	}
-	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	::-webkit-input-placeholder { 
 		color: #fff;
 		font-size: 30px;
 		font-style: italic;
 	}
-	::-moz-placeholder { /* Firefox 19+ */
+	::-moz-placeholder {
 		color: #fff;
 		font-size: 30px;
 	}
-	:-ms-input-placeholder { /* IE 10+ */
+	:-ms-input-placeholder {
 		color: #fff;
 		font-size: 30px;
 	}
-	:-moz-placeholder { /* Firefox 18- */
+	:-moz-placeholder {
 		color: #fff;
 		font-size: 30px;
 	}
@@ -71,17 +84,6 @@
 .searchWindow__close{
 	cursor: pointer;
 }
-
-/*.searchWindow-open{
-	border: 5px solid red;
-	.searchWindow{
-		top: 0;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		opacity: 1;
-	}
-}*/
 
 
 
