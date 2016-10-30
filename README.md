@@ -19,6 +19,12 @@ Have full documentation to hand off to other teams, internal or external.
 
 <img src="atomic-core/img/document.png" />
 
+##Edit in the Browser
+Edit your components directly in the browser using the Ace.js editor.
+
+<img src="atomic-core/img/editor-gif.gif" />
+
+
 ##Organize
 Organize all your components under categories that you name. "Base", "Modules", "Atoms" etc...
 
