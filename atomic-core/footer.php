@@ -9,7 +9,19 @@
 
 <script src="atomic-core/vendor/zero/ZeroClipboard.js"></script>
 <script src="atomic-core/vendor/newSort/jquery.fn.sortable.js"></script>
+
+<script src="http://listjs.com/assets/javascripts/list.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.fuzzysearch.js/0.1.0/list.fuzzysearch.js"></script>
+
+
 <script src="atomic-core/js/min/compiled.min.js"></script>
+
+<script>
+    var monkeyList = new List('search-list', {
+        valueNames: ['name'],
+        plugins: [ ListFuzzySearch() ]
+    });
+</script>
 
 
 

@@ -8744,9 +8744,15 @@ $(".js-hideSide").on('click', function(event) {
 
 
 $('.js_searchTrigger').click(function() {
-    $('.atomic-search').toggleClass('atomic-search-open');
+    $('.searchWindow').addClass('searchWindow-open');
     $('.searchInput').focus();
 });
+
+
+$('.js_searchWindow__close').click(function() {
+    $('.searchWindow').removeClass('searchWindow-open');
+});
+
 
 $(document).mouseup(function (e)
 {
