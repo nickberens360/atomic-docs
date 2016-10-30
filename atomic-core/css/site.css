@@ -1021,9 +1021,27 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     color: #fff;
     font-family: "Open Sans", sans-serif;
     opacity: 0;
-    transition: opacity .25s; }
+    transition: opacity .25s;
+    z-index: -1; }
     #atomsWrap .searchWindow a {
       color: #fff; }
+    #atomsWrap .searchWindow ::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #fff;
+      font-size: 30px;
+      font-style: italic; }
+    #atomsWrap .searchWindow ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #fff;
+      font-size: 30px; }
+    #atomsWrap .searchWindow :-ms-input-placeholder {
+      /* IE 10+ */
+      color: #fff;
+      font-size: 30px; }
+    #atomsWrap .searchWindow :-moz-placeholder {
+      /* Firefox 18- */
+      color: #fff;
+      font-size: 30px; }
   #atomsWrap .searchWindow.searchWindow-open {
     z-index: 6000;
     top: 0;
@@ -1081,23 +1099,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     position: absolute;
     right: 50px;
     top: 25px; }
-  #atomsWrap ::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: #fff;
-    font-size: 30px;
-    font-style: italic; }
-  #atomsWrap ::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #fff;
-    font-size: 30px; }
-  #atomsWrap :-ms-input-placeholder {
-    /* IE 10+ */
-    color: #fff;
-    font-size: 30px; }
-  #atomsWrap :-moz-placeholder {
-    /* Firefox 18- */
-    color: #fff;
-    font-size: 30px; }
   #atomsWrap .atoms-container {
     height: 100%;
     opacity: 1;
