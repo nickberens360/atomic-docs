@@ -1,7 +1,30 @@
+
 $('.js_searchTrigger').click(function() {
-    $('.atomic-search').toggleClass('atomic-search-open');
+    $('.searchWindow').fadeIn(250);
     $('.searchInput').focus();
 });
+
+
+$('.searchList .name').click(function() {
+    $('.searchWindow').fadeOut(250);
+});
+
+
+$('.js_searchWindow__close').click(function() {
+    $('.searchWindow').fadeOut(250);
+});
+
+
+/*$('.js_searchTrigger').click(function() {
+    $('.searchWindow').addClass('searchWindow-open');
+    $('.searchInput').focus();
+});
+
+
+$('.js_searchWindow__close').click(function() {
+    $('.searchWindow').removeClass('searchWindow-open');
+});*/
+
 
 $(document).mouseup(function (e)
 {

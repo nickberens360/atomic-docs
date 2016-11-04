@@ -1,6 +1,7 @@
 $('.js_cat-add').click(function (event) {
 
 
+    
     event.preventDefault();
     $.ajax(this.href, {
         success: function (data) {

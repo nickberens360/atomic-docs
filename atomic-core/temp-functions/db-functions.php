@@ -20,7 +20,7 @@ function addCompDbItem($compName, $catName, $compNotes, $bgColor, $js_file, $db)
     $i=count($dbSelect);
 
 
-    $newComp = array("component" => $compName, "category" => $catName, "description" => $compNotes, "backgroundColor" => $bgColor, "order" => $i+1, "has_js" => $js_file);
+    $newComp = array("component" => $compName, "category" => $catName, "description" => $compNotes, "backgroundColor" => $bgColor, "order" => -$i+1, "has_js" => $js_file);
     $db -> add($newComp);
 }
 
