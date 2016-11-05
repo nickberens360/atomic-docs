@@ -17,12 +17,7 @@
 
 
 
-<script>
-    var monkeyList = new List('search-list', {
-        valueNames: ['name'],
-        plugins: [ ListFuzzySearch() ]
-    });
-</script>
+
 
 
 
@@ -192,6 +187,13 @@ if (file_exists($filename)) {
 
 
 <script src="atomic-core/js/min/compiled.min.js"></script>
+
+<script>
+    var monkeyList = new List('search-list', {
+        valueNames: ['name'],
+        plugins: [ ListFuzzySearch() ]
+    });
+</script>
 
 </body>
 </html>
