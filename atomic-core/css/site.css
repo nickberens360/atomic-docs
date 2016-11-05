@@ -1385,6 +1385,12 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
       left: 0; }
     #atomsWrap .atomic-editorWrap-active .ace_scroller {
       left: 57px !important; }
+  #atomsWrap .clientMode .atomic-editorWrap-active {
+    margin-bottom: 0; }
+    #atomsWrap .clientMode .atomic-editorWrap-active .ace-tm .ace_gutter {
+      left: -100% !important; }
+    #atomsWrap .clientMode .atomic-editorWrap-active .ace_scroller {
+      left: 20px !important; }
   #atomsWrap .pageContent {
     max-width: 600px;
     margin: auto;
@@ -1537,6 +1543,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
       font-style: italic; }
     #atomsWrap .featureHints p:first-of-type {
       font-style: normal; }
+  #atomsWrap .clientMode .aa_actionDrawer, #atomsWrap .clientMode .fa-pencil-square-o, #atomsWrap .clientMode .atomic-editor-footer, #atomsWrap .clientMode .copyBtn-edit, #atomsWrap .clientMode .aa_addFile, #atomsWrap .clientMode .catAdd {
+    display: none !important; }
 
 html {
   box-sizing: border-box; }

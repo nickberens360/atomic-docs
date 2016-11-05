@@ -1,12 +1,5 @@
 /* scss/readme/_settings.scss */
-/* scss/readme/_sidebar.scss */
-/* scss/modules/_box.scss */
-.box {
-  background: #eee;
-  padding: 20px;
-  width: 300px;
-  height: 150px; }
-
+/* scss/readme/_sidebars.scss */
 /* scss/jsExample/_clickme.scss */
 .click {
   cursor: pointer;
@@ -19,3 +12,10 @@
 
 .clickAnimate {
   left: 80%; }
+
+/* scss/modules/_box.scss */
+.box {
+  background: #eee;
+  padding: 20px;
+  width: 300px;
+  height: 150px; }

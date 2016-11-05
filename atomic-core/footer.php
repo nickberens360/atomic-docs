@@ -15,7 +15,7 @@
 
 
 
-<script src="atomic-core/js/min/compiled.min.js"></script>
+
 
 <script>
     var monkeyList = new List('search-list', {
@@ -113,11 +113,6 @@
         </script>
 
 
-
-
-
-
-
         <script>
             var editorstyles_<?php echo $i; ?> = ace.edit("editor-styles-<?php echo $component['component'] ?>");
             var code = editorstyles_<?php echo $i; ?>.getValue();
@@ -177,6 +172,26 @@ if (file_exists($filename)) {
 }
 ?>
 
+
+
+
+
+
+
+
+
+
+<?php 
+  //Uncomment the following include to enable client mode.
+  //include "clientmode.php" 
+?>
+
+
+
+
+
+
+<script src="atomic-core/js/min/compiled.min.js"></script>
 
 </body>
 </html>

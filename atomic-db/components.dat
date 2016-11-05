@@ -1,6 +1,6 @@
 [
     {
-        "component": "sidebar",
+        "component": "sidebars",
         "category": "readme",
         "description": "You can change the order components are displayed by dragging and dropping them in the sidebar. You can also move a component to a different category by dragging and dropping it into that categories file list. All changes will also be reflected in your project files as well as the order of the @import style strings order!",
         "backgroundColor": "",
@@ -28,7 +28,7 @@
         "category": "modules",
         "description": "This is the box component!",
         "backgroundColor": "",
-        "order": 4,
+        "order": 0,
         "has_js": "false"
     }
 ]

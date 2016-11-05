@@ -83,7 +83,7 @@ $settings = $settings->select(array());
 </div>
 
 
-<div class="grid-row atoms-container">
+<div class="grid-row atoms-container editorMode">
     <div class="atoms-side_show-small ">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -155,7 +155,7 @@ $settings = $settings->select(array());
                             <?php foreach ($filtered as $component) { ?>
 
                                 <li class="aa_fileSection__file" data-comp="<?php echo $component['component'] ?>"
-                                    data-cat="<?php echo $category['category'] ?>">
+                                    data-cat="<?php echo $category['category'] ?>" draggable="false">
                                     <a href="atomic-core/?cat=<?php echo $category['category'] ?>#<?php echo $component['component'] ?>"><?php echo $component['component'] ?></a>
                                 </li>
 

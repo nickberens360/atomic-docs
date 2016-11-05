@@ -1,7 +1,7 @@
 [
     {
         "category": "modules",
-        "order": 1
+        "order": 2
     },
     {
         "category": "readme",
@@ -9,6 +9,6 @@
     },
     {
         "category": "jsExample",
-        "order": 2
+        "order": 1
     }
 ]

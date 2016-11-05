@@ -238,3 +238,9 @@ textarea.textChange {
   }
 }
 
+
+.clientMode{
+  .aa_actionDrawer, .fa-pencil-square-o, .atomic-editor-footer, .copyBtn-edit, .aa_addFile, .catAdd{
+    display: none !important;
+  }
+}

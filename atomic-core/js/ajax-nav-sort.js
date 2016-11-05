@@ -1,4 +1,4 @@
-$(".atoms-nav ").sortable({
+$('.editorMode').find(".atoms-nav ").sortable({
     group: ".aa_dir ",
     handle: ".aa_dir__dirNameGroup__name",
     onEnd: function (evt) {
@@ -45,7 +45,7 @@ $(".atoms-nav ").sortable({
 
 
 
-$(".aa_fileSection").sortable({
+$('.editorMode').find(".aa_fileSection").sortable({
     group: ".aa_fileSection ",
     filter: ".aa_addFileItem",
 
@@ -181,45 +181,6 @@ $(".aa_fileSection").sortable({
      }
 
 });
-
-
-
-
-enquire.register("screen and (max-width:500px)", {
-
-
-
-
-
-
-
-    match : function() {
-
-
-
-
-        $(".aa_fileSection").sortable({
-
-            disabled: true
-
-        });
-
-
-
-        $(".atoms-nav ").sortable({
-
-            disabled: true
-
-        });
-
-
-
-    }
-
-
-
-});
-
 
 
 

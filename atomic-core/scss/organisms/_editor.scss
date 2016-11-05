@@ -101,6 +101,21 @@
 	}
 }
 
+.clientMode{
+	.atomic-editorWrap-active{
+		margin-bottom: 0;
+
+		.ace-tm .ace_gutter {
+			left: -100% !important;
+		}
+		.ace_scroller {
+			left: 20px !important;
+		}
+	}
+}
+
+
+
 
 
 
