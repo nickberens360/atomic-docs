@@ -10,12 +10,14 @@
 }
 
 
+
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #E2F3F5;
   border: none;
   margin-top: 0;
 }
+
 
 .compTitle {
   display: block;
@@ -50,7 +52,7 @@ pre[class*="language-"] {
 
 .atoms-side_hide {
   .fa {
-    margin: 0 16px;
+    margin: 0 9px;
     display: inline-block;
   }
   .fa-code {
@@ -59,12 +61,10 @@ pre[class*="language-"] {
 }
 
 .component {
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
-.compWrap .nav-tabs > li > a {
-  color: #00AFF0;
-}
+
 
 .component-bg {
   padding: 20px;
@@ -190,9 +190,7 @@ textarea.textChange {
   font-size: 15px;
 }
 
-.navIcon {
-  color: #fff;
-}
+
 
 .navIcon-settings {
   font-size: 18px;
@@ -209,7 +207,7 @@ textarea.textChange {
 
 .se-pre-con {
   position: fixed;
-  padding-left: 265px;
+  padding-left: 200px;
   right: 0;
   top: 0px;
   width: 100%;
@@ -222,9 +220,11 @@ textarea.textChange {
 .se-pre-con-inner {
   position: relative;
   text-align: center;
-  background: #FCFEFA url('../img/squares.gif') no-repeat center center;
+  background: #fff url('../img/circle.gif') no-repeat center center;
   height: 100%;
 }
+
+
 
 
 .featureHints {
@@ -242,5 +242,16 @@ textarea.textChange {
 .clientMode{
   .aa_actionDrawer, .fa-pencil-square-o, .atomic-editor-footer, .copyBtn-edit, .aa_addFile, .catAdd{
     display: none !important;
+  }
+}
+
+.logo{
+  text-align: center;
+  padding: 30px;
+  padding-bottom: 0;
+  padding-top: 20px;
+  //background: #eee;
+  img{
+    max-width: 100%;
   }
 }

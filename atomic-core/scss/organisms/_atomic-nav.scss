@@ -1,22 +1,25 @@
 .atoms-side {
-  //float:left;
   height: 100%;
-  //background: #F2F5F0 url('../img/logo.png') center 98% no-repeat;
-  background: #F2F5F0;
   background-size: 200px;
+  background: #f7f7f7;
   color: #fff;
   position: fixed;
   left: 0;
   top: 0;
-  //transition: all .25s;
   z-index: 5000;
-  width: 262px;
-  border-right: 1px solid #E3E3E3;
+  width: 200px;
   font-family: $font1;
+  font-weight: 300;
+  nav{
+    margin-left: 24px;
+    margin-left: 24px;
+  }
   a {
     text-decoration: none;
   }
 }
+
+
 
 /*.atoms-overflow{
     overflow: auto;
@@ -24,7 +27,7 @@
 }*/
 
 .aa_dir {
-  border-bottom: 1px solid #E3E3E3;
+  //border-bottom: 1px solid #E3E3E3;
 }
 
 .atoms-nav {
@@ -35,12 +38,12 @@
 
 .aa_dir__dirNameGroup__name {
   display: block;
-  padding: 10px 38px;
+  padding: 6px 38px;
   padding-left: 0;
   margin-left: 38px;
   //text-transform:uppercase;
   color: #7a7a7a;
-  font-size: 16px;
+  font-size: 15px;
   //cursor: move;
 }
 
@@ -53,8 +56,7 @@
   padding-left: 39px;
   margin-bottom: 10px;
   display: block;
-  font-size: 12px;
-  font-style: italic;
+  font-size: 10px;
 }
 
 .aa_fileSection__file {
@@ -104,14 +106,18 @@
 .atoms-side_hide {
   cursor: pointer;
   display: block;
-  background: #00aff0;
+  background: none;
   padding: 12px 20px;
   font-size: 14px;
   text-align: center;
 
 }
+.navIcon {
+  color: #00aff0;
+}
 
 .atoms-side_show {
+  display: none;
   background: #00aff0;
   cursor: pointer;
   position: fixed;
@@ -166,12 +172,11 @@
 
 .catAdd {
   a {
-    padding: 10px 38px;
+    padding: 0px 18px;
     display: block;
     color: #9DA0A0;
     display: block;
-    font-size: 12px;
-    font-style: italic;
+    font-size: 10px;
   }
 }
 

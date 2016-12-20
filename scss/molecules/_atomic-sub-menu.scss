@@ -1,0 +1,14 @@
+.aa_fileSection {
+	display:none;
+	padding-bottom:1px;
+	li{
+		list-style:none;
+	}
+}
+
+.active{
+	.aa_fileSection{
+		display: block;
+	}
+}
+

@@ -28,7 +28,15 @@
         "category": "modules",
         "description": "This is the box component!",
         "backgroundColor": "",
-        "order": 0,
+        "order": 1,
         "has_js": "false"
+    },
+    {
+        "component": "new",
+        "category": "test",
+        "description": "",
+        "backgroundColor": "",
+        "order": -3,
+        "has_js": "true"
     }
 ]

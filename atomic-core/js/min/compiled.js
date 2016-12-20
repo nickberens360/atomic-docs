@@ -2699,28 +2699,8 @@ jQuery.fn.comments = function( blnDeep ){
 	// Return the jQuery comments collection.
 	return( jComments );
 }
-var $comp = $('.component');
-
-$comp.wrapInner( '<div class="source"></div>');
 
 
-$('.markup-display').append( '<div class="atoms-code-example"><pre><code class="dest language-markup"></code></pre></div>' );
-
-var ls = $('.compWrap');
-ls.each(function() {
-
-var source =	$(this).find('.source').html().replace(/<!--(.*?)-->/g, '').trim();
-    
-
-
-var dest = 		$(this).find('.atomic-editor-output')
-
-dest.text(source);
-
-
-
-
-});
 
 
 
@@ -7729,26 +7709,26 @@ $(document).ready(function() {
 
 
     $( ".ace_content" ).click(function() {
-        $('.atomic-editorWrap').removeClass('atomic-editorWrap-active');
-        $(this).closest('.atomic-editorWrap').addClass('atomic-editorWrap-active');
+        $('.codeBlocks').removeClass('atomic-editorWrap-active');
+        $(this).closest('.codeBlocks').addClass('atomic-editorWrap-active');
     });
 
     $( ".js-close-editor" ).click(function() {
-        $('.atomic-editorWrap').removeClass('atomic-editorWrap-active');
+        $('.codeBlocks').removeClass('atomic-editorWrap-active');
         location.reload();
     });
 
 
     $( ".js-copyBtn-edit" ).click(function() {
-        $('.atomic-editorWrap').removeClass('atomic-editorWrap-active');
-        $(this).closest('.atomic-editorWrap').addClass('atomic-editorWrap-active');
+        $('.codeBlocks').removeClass('atomic-editorWrap-active');
+        $(this).closest('.codeBlocks').addClass('atomic-editorWrap-active');
     });
 
 });
 
 $(document).mouseup(function (e)
 {
-    var container = $('.atomic-editorWrap');
+    var container = $('.codeBlocks');
 
     if (!container.is(e.target) // if the target of the click isn't the container...
         && container.has(e.target).length === 0) // ... nor a descendant of the container

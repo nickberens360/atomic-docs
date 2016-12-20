@@ -1,0 +1,127 @@
+.atomic-editorWrap{
+  //padding:20px 0;
+  //padding-top:20px;
+  
+  font-size:16px;
+  position: relative;
+  margin-bottom: 0;
+  transition:all .25s;
+}
+.atomic-editorInner{
+	padding: 30px 0;
+	position: relative;
+	z-index: 2;
+	background-color: #e2f3f5;
+}
+.ace-tm {
+  background-color: #e2f3f5;
+  font-size: 15px;
+  color: #4a4a4a;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
+
+
+
+.ace-tm .ace_gutter {
+  background: #e2f3f5;
+  color: #8e8e8e;
+  left:-100%;
+  transition:all .25s;
+}
+
+
+.ace_scroller {
+    left: 20px !important;
+    transition:all .25s;
+
+}
+
+.ace_hidden-cursors {opacity:0} 
+
+
+
+
+
+
+
+
+
+
+.ace-tm .ace_comment {
+    color: rgb(160, 160, 160);
+}
+
+//tag
+.ace-tm .ace_meta.ace_tag {
+   color: #a04a64;
+}
+//class name
+.ace-tm .ace_string, .ace-tm .ace_variable {
+    color: #690;
+}
+
+//style property
+.ace-tm .ace_support.ace_type, .ace-tm .ace_support.ace_class {
+    color: #a04a64;
+}
+
+//style value
+.ace-tm .ace_constant.ace_numeric {
+    color: #4a4a4a;
+}
+
+
+
+.atomic-editor-footer{
+	background: #a6d4da;
+
+	padding: 15px 30px;
+	text-align: right;
+	position: absolute;
+	width: 100%;
+	transition:all .25s;
+	top: 10%;
+	z-index: -1;
+}
+
+
+.atomic-editorWrap-active{
+	margin-bottom: 95px;
+	.atomic-editor-footer{
+		top:100%;
+		z-index: 1;
+	}
+	.ace-tm .ace_gutter {
+	  left:0;
+	}
+	.ace_scroller {
+	    left: 57px !important;
+	}
+}
+
+.clientMode{
+	.atomic-editorWrap-active{
+		margin-bottom: 0;
+
+		.ace-tm .ace_gutter {
+			left: -100% !important;
+		}
+		.ace_scroller {
+			left: 20px !important;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

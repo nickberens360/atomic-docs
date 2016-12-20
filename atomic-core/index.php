@@ -94,10 +94,15 @@ $settings = $settings->select(array());
     </div>
     <aside class="atoms-side">
         <div class="atoms-overflow">
+
+            <div class="logo">
+                <img src="http://atomicdocs.io/img/atomic-logo.svg">
+            </div>
+
             <div class="atoms-side_hide">
                 <span class="js-hideSide navIcon navIcon-left fa fa-arrow-left"></span>
                 <span class="navIcon js_searchTrigger  fa fa-search "></span>
-                <span class="js-hideCode fa fa-code"></span>
+                <span class="js-hideCode navIcon fa fa-code"></span>
                 <a class="js-edit-settings navIcon navIcon-settings fa fa-gear aa_js-actionOpen aa_actionBtn"
                    href="atomic-core/temp-forms/temp-edit-settings-form.php"></a>
 
@@ -286,24 +291,24 @@ $settings = $settings->select(array());
                         <li role="presentation" class="active"><a
                                 href="#<?php echo $component['component'] ?>-markup-tab"
                                 aria-controls="home" role="tab"
-                                data-toggle="tab">Markup</a></li>
+                                data-toggle="tab"><i class="fa fa-code" aria-hidden="true"></i> Markup</a></li>
 
 
                         <li role="presentation"><a
                                 href="#<?php echo $component['component'] ?>-output-tab"
                                 aria-controls="home" role="tab"
-                                data-toggle="tab">Output</a></li>
+                                data-toggle="tab"><i class="fa fa-eye" aria-hidden="true"></i> Output</a></li>
 
 
                         <li role="presentation"><a href="#<?php echo $component['component'] ?>-styles-tab"
                                                    aria-controls="profile"
-                                                   role="tab" data-toggle="tab">Styles</a></li>
+                                                   role="tab" data-toggle="tab">{ } Styles</a></li>
 
 
                         <?php if ($component['has_js'] == "true") { ?>
                             <li role="presentation"><a href="#<?php echo $component['component'] ?>-js-tab"
                                                        aria-controls="profile"
-                                                       role="tab" data-toggle="tab">Javascript</a></li>
+                                                       role="tab" data-toggle="tab">( ) Javascript</a></li>
                         <?php } ?>
 
                     </ul>
@@ -318,7 +323,7 @@ $settings = $settings->select(array());
                                   data-editorFormCat="<?php echo $cat; ?>"
                                   data-codeDest="<?php echo $setting['component_directory'] ?>">
                                 <div class="atomic-editorInner">
-                                    <div class="copyBtn copyBtn-markup" data-clipboard-text="">Copy</div>
+                                    <div class="copyBtn copyBtn-markup" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
                                     <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
                                     <?php $markup_file_content = file_get_contents('../' . $setting['component_directory'] . '/' . $cat . '/' . $component['component'] . '.' . $setting['component_extension'] . '', true); ?>
                                     <div class="atomic-editor"
@@ -328,8 +333,8 @@ $settings = $settings->select(array());
                                            value=""/>
                                 </div>
                                 <div class="atomic-editor-footer">
-                                    <button type="submit" class="atomic-btns atomic-btn1">Save</button>
-                                    <span type="reset" class="js-close-editor atomic-btns atomic-btn2">Cancel</span>
+                                    <button type="submit" class="atomic-btns atomic-btn1"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+                                    <span type="reset" class="js-close-editor atomic-btns atomic-btn2"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</span>
                                 </div>
                             </form>
                         </div>
@@ -341,7 +346,7 @@ $settings = $settings->select(array());
                                   data-editorFormCat="<?php echo $cat; ?>"
                                   data-codeDest="<?php echo $setting['component_directory'] ?>">
                                 <div class="atomic-editorInner">
-                                    <div class="copyBtn copyBtn-output" data-clipboard-text="">Copy</div>
+                                    <div class="copyBtn copyBtn-output" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
                                     <div class="atomic-editor atomic-editor-output"
                                          id="editor-output-<?php echo $component['component'] ?>"></div>
                                 </div>
@@ -354,7 +359,7 @@ $settings = $settings->select(array());
                                   data-editorFormCat="<?php echo $cat; ?>"
                                   data-codeDest="<?php echo $setting['styles_directory'] ?>">
                                 <div class="atomic-editorInner">
-                                    <div class="copyBtn copyBtn-styles" data-clipboard-text="">Copy</div>
+                                    <div class="copyBtn copyBtn-styles" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
                                     <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
 
                                     <?php $style_file_content = file_get_contents('../' . $setting['styles_directory'] . '/' . $cat . '/_' . $component['component'] . '.' . $setting['styles_extension'] . '', true); ?>
@@ -366,8 +371,8 @@ $settings = $settings->select(array());
                                            name="new-styles-val-<?php echo $component['component'] ?>" value=""/>
                                 </div>
                                 <div class="atomic-editor-footer">
-                                    <button type="submit" class="atomic-btns atomic-btn1">Save</button>
-                                    <span type="reset" class="js-close-editor atomic-btns atomic-btn2">Cancel</span>
+                                    <button type="submit" class="atomic-btns atomic-btn1"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+                                    <span type="reset" class="js-close-editor atomic-btns atomic-btn2"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</span>
                                 </div>
                             </form>
                         </div>
@@ -381,7 +386,7 @@ $settings = $settings->select(array());
                                       data-editorFormCat="<?php echo $cat; ?>"
                                       data-codeDest="<?php echo $setting['js_directory'] ?>">
                                     <div class="atomic-editorInner">
-                                        <div class="copyBtn copyBtn-js" data-clipboard-text="">Copy</div>
+                                        <div class="copyBtn copyBtn-js" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
                                         <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
 
                                         <?php $style_file_content = file_get_contents('../' . $setting['js_directory'] . '/' . $component['component'] . '.' . $setting['js_extension'] . '', true); ?>
@@ -393,8 +398,8 @@ $settings = $settings->select(array());
                                                name="new-js-val-<?php echo $component['component'] ?>" value=""/>
                                     </div>
                                     <div class="atomic-editor-footer">
-                                        <button type="submit" class="atomic-btns atomic-btn1">Save</button>
-                                        <span type="reset" class="js-close-editor atomic-btns atomic-btn2">Cancel</span>
+                                        <button type="submit" class="atomic-btns atomic-btn1"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+                                        <span type="reset" class="js-close-editor atomic-btns atomic-btn2"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</span>
                                     </div>
                                 </form>
                             </div>
