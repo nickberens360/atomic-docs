@@ -45,6 +45,10 @@
 </head>
 
 <body>
+
+<span class="click">Click me!!!</span>
+
+
 <div class="indexBlock">
 
     <img class="logo" src="http://atomicdocs.io/img/atomic-logo.svg">
