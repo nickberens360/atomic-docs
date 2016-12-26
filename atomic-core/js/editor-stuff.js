@@ -1,6 +1,29 @@
 $(document).ready(function() {
 
 
+    /*var editorHeight = $('.ace_content').outerHeight();
+
+     console.log(editorHeight);
+
+     if(editorHeight < 166){
+     $( ".js-expand" ).remove();
+     }*/
+
+
+    $( ".js-expand" ).click(function(e) {
+        e.preventDefault();
+
+        //$('.codeBlocks').removeClass('codeBlocks-open');
+        $(this).closest('.codeBlocks').toggleClass('codeBlocks-open');
+    });
+
+
+
+
+    
+
+
+
     $( ".ace_content" ).click(function() {
         $('.codeBlocks').removeClass('atomic-editorWrap-active');
         $(this).closest('.codeBlocks').addClass('atomic-editorWrap-active');

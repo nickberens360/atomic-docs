@@ -229,12 +229,16 @@ textarea.textChange {
 
 .featureHints {
   margin-top: 40px;
+  padding: 10px 20px;
+  background: #ececec;
+  border-left: 5px solid #00aff0;
   p {
-    font-size: 14px;
-    font-style: italic;
+    font-size: 13px;
+    font-weight: 300;
   }
   p:first-of-type{
     font-style:normal;
+    margin-top: 10px;
   }
 }
 

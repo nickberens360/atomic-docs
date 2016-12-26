@@ -53,10 +53,14 @@
 
 .aa_addFile {
   color: #9DA0A0;
-  padding-left: 39px;
   margin-bottom: 10px;
-  display: block;
   font-size: 10px;
+  //background: #eee;
+  padding: 4px 9px;
+  display: inline-block;
+  border-radius: 4px;
+  margin-left: 25px;
+
 }
 
 .aa_fileSection__file {
@@ -172,13 +176,31 @@
 
 .catAdd {
   a {
-    padding: 0px 18px;
-    display: block;
     color: #9DA0A0;
-    display: block;
     font-size: 10px;
+    //background: #eee;
+    padding: 4px 9px;
+    display: inline-block;
+    border-radius: 4px;
+    margin-left: 15px;
+    position: relative;
+    //top: -14px;
+
+    border: 1px dashed;
+  }
+  .fa{
+    font-size: 12px;
+    margin-right: 4px;
   }
 }
+
+
+
+
+
+
+
+
 
 @media (max-width: 824px) {
   .atoms-side {

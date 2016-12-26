@@ -20,6 +20,8 @@
 
     <link rel="stylesheet" href="atomic-core/font-awesome/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
     <?php

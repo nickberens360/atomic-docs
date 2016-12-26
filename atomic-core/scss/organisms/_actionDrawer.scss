@@ -3,13 +3,12 @@
   top: 0;
   right: -100%;
   bottom: 0;
-  background: rgba(227, 228, 227, 1);
+  background: #f1f1f1;
   z-index: 6000;
   padding: 50px;
-  padding-top: 100px;
   height: 100%;
   width: 500px !important;
-  box-shadow: -4px 0px 5px 0px rgba(0, 0, 0, 0.19);
+  box-shadow: -4px 0px 5px 0px rgba(0, 0, 0, 0.10);
   font-family: $font1;
   box-sizing: border-box;
   color: #7a7a7a;
@@ -36,10 +35,11 @@
 
 .aa_actionDrawer__close {
   cursor: pointer;
-  color: #B5B4B4;
+  color: #3d4a57;
   position: absolute;
-  right: 0;
-  top: -53px;
+  right: -38px;
+  top: -46px;
+  font-size: 11px;
 }
 
 .aa_label {
@@ -83,13 +83,25 @@
   font-family: $font1;
 }
 
+
+
 .aa_btn-pos {
-  background-color: #51CD6D;
+  background-color: #00AFF0;
 }
 
 .aa_btn-neg {
-  background-color: #CD5151;
+  background-color: #3d4a57;
 }
+
+.aa_btn-full{
+  width: 100%;
+  display: block;
+  margin-bottom: 12px;
+}
+
+
+
+
 
 .aa_errorBox {
   position: absolute;

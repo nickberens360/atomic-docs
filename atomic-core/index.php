@@ -25,59 +25,56 @@ $settings = $settings->select(array());
     <div class="atoms-overflow">
 
 
+        <i class="fa fa-times fa-3x js_searchWindow__close searchWindow__close"></i>
+
+        <div class="SearchContent">
+
+            <div class="searchInputWrap">
+                <input type="text" class="fuzzy-search searchInput" placeholder="Search Components"/>
+            </div>
 
 
-
-    <i class="fa fa-times fa-3x js_searchWindow__close searchWindow__close"></i>
-
-    <div class="SearchContent">
-
-        <div class="searchInputWrap">
-            <input type="text" class="fuzzy-search searchInput" placeholder="Search Components"/>
-        </div>
-
-
-        <ul class="list searchList">
-
-
-            <?php
-
-            usort($categories, function ($a, $b) {
-                return $a['order'] - $b['order'];
-            });
-            foreach ($categories as $category) {
-                global $category
-                ?>
-
-
-                <!--<h2 data-searchcat="<?php /*echo $category['category'] */ ?>"><?php /*echo $category['category'] */ ?></h2>-->
+            <ul class="list searchList">
 
 
                 <?php
 
-                $filtered = array_filter($compSelect, function ($v) {
-                    global $category;
-                    return $v['category'] == $category['category'];
-                });
-                usort($filtered, function ($a, $b) {
+                usort($categories, function ($a, $b) {
                     return $a['order'] - $b['order'];
                 });
-                ?>
-                <?php foreach ($filtered as $component) { ?>
+                foreach ($categories as $category) {
+                    global $category
+                    ?>
 
-                    <li>
-                        <a class="name"
-                           href="atomic-core/?cat=<?php echo $category['category'] ?>#<?php echo $component['component'] ?>"><?php echo $component['component'] ?></a>
-                    </li>
+
+                    <!--<h2 data-searchcat="<?php /*echo $category['category'] */ ?>"><?php /*echo $category['category'] */ ?></h2>-->
+
+
+                    <?php
+
+                    $filtered = array_filter($compSelect, function ($v) {
+                        global $category;
+                        return $v['category'] == $category['category'];
+                    });
+                    usort($filtered, function ($a, $b) {
+                        return $a['order'] - $b['order'];
+                    });
+                    ?>
+                    <?php foreach ($filtered as $component) { ?>
+
+                        <li>
+                            <a class="name"
+                               href="atomic-core/?cat=<?php echo $category['category'] ?>#<?php echo $component['component'] ?>"><?php echo $component['component'] ?></a>
+                        </li>
+
+
+                    <?php } ?>
 
 
                 <?php } ?>
+            </ul>
 
-
-            <?php } ?>
-        </ul>
-
-    </div>
+        </div>
 
     </div>
 </div>
@@ -138,6 +135,25 @@ $settings = $settings->select(array());
                                data-cat="<?php echo $category['category'] ?>"
                                href="atomic-core/?cat=<?php echo $category['category'] ?>"><?php echo $category['category'] ?></a>
                         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <ul class="aa_fileSection fileSection-<?php echo $category['category'] ?>">
                             <li class="aa_addFileItem">
                                 <a class="aa_addFile js_add-component aa_js-actionOpen aa_actionBtn"
@@ -177,7 +193,7 @@ $settings = $settings->select(array());
                 </ul>
                 <div class="catAdd"><a class="js_cat-add aa_js-actionOpen aa_actionBtn"
                                        href="atomic-core/temp-forms/temp-category-form.php"><span
-                            class="fa fa-plus"></span> Add Category</a></div>
+                            class="fa fa-folder-o"></span> Add Category</a></div>
             </nav>
 
 
@@ -311,6 +327,11 @@ $settings = $settings->select(array());
                                                        role="tab" data-toggle="tab">( ) Javascript</a></li>
                         <?php } ?>
 
+                        <li class="expandItem">
+                            <a href="#" class="js-expand"><i class="fa fa-arrows-v" aria-hidden="true"></i> Expand</a>
+                        </li>
+
+
                     </ul>
 
                     <!-- Tab panes -->
@@ -322,8 +343,9 @@ $settings = $settings->select(array());
                             <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
                                   data-editorFormCat="<?php echo $cat; ?>"
                                   data-codeDest="<?php echo $setting['component_directory'] ?>">
+                                <div class="copyBtn copyBtn-markup" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
                                 <div class="atomic-editorInner">
-                                    <div class="copyBtn copyBtn-markup" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
+
                                     <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
                                     <?php $markup_file_content = file_get_contents('../' . $setting['component_directory'] . '/' . $cat . '/' . $component['component'] . '.' . $setting['component_extension'] . '', true); ?>
                                     <div class="atomic-editor"
@@ -345,8 +367,9 @@ $settings = $settings->select(array());
                             <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
                                   data-editorFormCat="<?php echo $cat; ?>"
                                   data-codeDest="<?php echo $setting['component_directory'] ?>">
+                                <div class="copyBtn copyBtn-output" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
                                 <div class="atomic-editorInner">
-                                    <div class="copyBtn copyBtn-output" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
+
                                     <div class="atomic-editor atomic-editor-output"
                                          id="editor-output-<?php echo $component['component'] ?>"></div>
                                 </div>
@@ -358,8 +381,9 @@ $settings = $settings->select(array());
                             <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
                                   data-editorFormCat="<?php echo $cat; ?>"
                                   data-codeDest="<?php echo $setting['styles_directory'] ?>">
+                                <div class="copyBtn copyBtn-styles" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
                                 <div class="atomic-editorInner">
-                                    <div class="copyBtn copyBtn-styles" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
+
                                     <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
 
                                     <?php $style_file_content = file_get_contents('../' . $setting['styles_directory'] . '/' . $cat . '/_' . $component['component'] . '.' . $setting['styles_extension'] . '', true); ?>
@@ -385,8 +409,9 @@ $settings = $settings->select(array());
                                       data-editorFormComp="<?php echo $component['component'] ?>"
                                       data-editorFormCat="<?php echo $cat; ?>"
                                       data-codeDest="<?php echo $setting['js_directory'] ?>">
+                                    <div class="copyBtn copyBtn-js" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
                                     <div class="atomic-editorInner">
-                                        <div class="copyBtn copyBtn-js" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
+
                                         <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
 
                                         <?php $style_file_content = file_get_contents('../' . $setting['js_directory'] . '/' . $component['component'] . '.' . $setting['js_extension'] . '', true); ?>

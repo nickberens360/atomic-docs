@@ -41,7 +41,7 @@ $stylesDir = $settings[0]['styles_directory'];
         </div>
 
 
-        <button class="aa_btn aa_btn-pos" type="submit" name="update_button" value="update">Update</button>
+        <button class="aa_btn aa_btn-full aa_btn-pos" type="submit" name="update_button" value="update">Update</button>
     </form>
 </div>
 

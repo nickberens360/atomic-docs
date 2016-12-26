@@ -12,6 +12,28 @@
 <script src="atomic-core/vendor/output-tab.js"></script>
 
 
+<script src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+<script>
+    (function($){
+        $(window).on("load",function(){
+            $(".atoms-overflow").mCustomScrollbar({
+                theme:"minimal-dark"
+            });
+        });
+    })(jQuery);
+    /*(function($){
+        $(window).on("load",function(){
+            $(".atomic-editorInner").mCustomScrollbar({
+                theme:"dark"
+            });
+        });
+    })(jQuery);*/
+
+
+</script>
+
 
 
 

@@ -19,12 +19,12 @@
             <input class="formInput-check" type="checkbox" id="js_file" name="js_file" value="true">
             <label for="js_file"><span></span>Add a javascript file</label>
         </div>
-        <button class="aa_btn aa_btn-pos" type="submit" name="update_button" value="update">Update</button>
+        <button class="aa_btn aa_btn-full aa_btn-pos" type="submit" name="update_button" value="update">Update</button>
     </form>
 </div>
 
 <form id="delete-comp-file">
-    <button class="delete-txt" type="submit" name="delete_button" value="delete"><i class="fa fa-times"></i> Delete
+    <button class="aa_btn aa_btn-full aa_btn-neg" type="submit" name="delete_button" value="delete">Delete
         Component
     </button>
 </form>
