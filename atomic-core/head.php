@@ -30,6 +30,18 @@
             include("../atomic-head.php");
         }
     ?>
+    
+    <?php
+    
+        $parse_uri = explode( 'wp-content', $_SERVER['SCRIPT_FILENAME'] );
+
+        $file_name =  $parse_uri[0] . 'wp-load.php';
+
+        if (file_exists($file_name)) {
+        require_once( $parse_uri[0] . 'wp-load.php' );
+        }
+
+    ?>
 
     
 
