@@ -47,10 +47,5 @@ $compDir = $settings[0]['component_directory'];
       <?php require ('../'.$compDir.'/'.$cat.'/'.$comp.'.'.$compExt.''); ?>
     </div>
 
-    <?php
-        $filename = '../atomic-head.php';
-        if (file_exists($filename)) {
-            include ("../atomic-foot.php");
-        }
-    ?>
+    <script src="tmp/<?= session_id() ?>/js/min/main.js"></script>
 </body>

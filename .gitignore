@@ -1,2 +1,4 @@
 .idea/
 atomic-core/node_modules/
+tmp/
+.DS_Store
