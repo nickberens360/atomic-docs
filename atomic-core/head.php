@@ -17,6 +17,8 @@
 
 
     <link rel="stylesheet" type="text/css" href="atomic-core/css/site.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <link rel="stylesheet" href="atomic-core/font-awesome/css/font-awesome.min.css">
 
