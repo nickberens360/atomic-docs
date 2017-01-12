@@ -2,11 +2,11 @@
     <form id="form-create-file" class="aa_fileForm"  method="post">
         <div class="inputGroup">
             <label class="aa_label">What's your component's name?</label>
-            <input type="text" class="form-control" name="compName">
+            <input type="text" class="formInput" name="compName">
         </div>
         <div class="inputGroup">
             <label class="aa_label">Component description.</label>
-            <textarea class="form-control" name="compNotes"></textarea>
+            <textarea class="formInput" name="compNotes"></textarea>
         </div>
         <label class="aa_label">Contextual background color.</label>
         <div class="inputGroup">

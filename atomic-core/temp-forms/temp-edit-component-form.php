@@ -2,11 +2,11 @@
     <form id="edit-comp-file" class="aa_fileForm" method="post">
         <div class="inputGroup">
             <label class="aa_label">Change name</label>
-            <input type="text" class="form-control" name="compName">
+            <input type="text" class="formInput" name="compName">
         </div>
         <div class="inputGroup">
             <label class="aa_label">Change description.</label>
-            <textarea class="form-control" name="compNotes"></textarea>
+            <textarea class="formInput" name="compNotes"></textarea>
         </div>
         <div class="inputGroup">
             <label class="aa_label">Change contextual background color.</label>

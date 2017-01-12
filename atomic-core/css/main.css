@@ -796,9 +796,9 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     clear: both; }
   .atomsWrap .showHide {
     display: none; }
-    .atomsWrap .showHide .form-control, .atomsWrap .showHide .formInputGroup {
+    .atomsWrap .showHide .formInput, .atomsWrap .showHide .formInputGroup {
       margin-bottom: 0; }
-    .atomsWrap .showHide textarea.form-control {
+    .atomsWrap .showHide textarea.formInput {
       margin-bottom: 12px; }
   .atomsWrap .aa_label.js-showHide-trigger {
     margin-bottom: 24px;
@@ -853,11 +853,11 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     font-style: 12px; }
   .atomsWrap .inputGroup {
     margin-bottom: 12px; }
-  .atomsWrap textarea.form-control {
+  .atomsWrap textarea.formInput {
     height: 200px;
     padding: 20px;
     text-indent: 0; }
-  .atomsWrap .form-control {
+  .atomsWrap .formInput {
     border-radius: 0;
     border: none;
     background: #fff;
@@ -869,7 +869,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     text-indent: 20px;
     box-shadow: none;
     padding: 0; }
-    .atomsWrap .form-control:focus {
+    .atomsWrap .formInput:focus {
       outline: none;
       border: none;
       box-shadow: none; }
@@ -913,13 +913,13 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     padding: 15px 0;
     z-index: 100;
     transition: all .5s; }
-    .atomsWrap .cat-form-group .aa_fileForm .form-control {
+    .atomsWrap .cat-form-group .aa_fileForm .formInput {
       background: #3F434E;
       margin-bottom: 7px;
       height: 40px; }
     .atomsWrap .cat-form-group ::-webkit-input-placeholder {
       color: #626673; }
-    .atomsWrap .cat-form-group .form-control {
+    .atomsWrap .cat-form-group .formInput {
       color: #B9B9B9; }
     .atomsWrap .cat-form-group .fa {
       position: absolute;

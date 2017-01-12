@@ -3,7 +3,7 @@
         <label class="aa_label">Edit Name</label>
         <div class="inputBtnGroup">
             <button class="aa_btn aa_btn-pos" type="submit">Add</button>
-            <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="catName"></div>
+            <div class="inputBtnGroup__inputWrap"><input type="text" class="formInput" name="catName"></div>
         </div>
     </div>
 </form>
@@ -14,7 +14,7 @@
         <div class="inputBtnGroup">
             <label class="aa_label">Delete Category</label>
             <button class="aa_btn aa_btn-neg" type="submit">Delete</button>
-            <div class="inputBtnGroup__inputWrap"><input type="text" class="form-control" name="catName" placeholder="Must type category name"></div>
+            <div class="inputBtnGroup__inputWrap"><input type="text" class="formInput" name="catName" placeholder="Must type category name"></div>
         </div>
     </div>
 </form>

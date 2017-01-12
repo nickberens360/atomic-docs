@@ -27,7 +27,7 @@
   background: #222222;
 }
 
-.form-control {
+.formInput {
   box-sizing: border-box;
 }
 
@@ -50,13 +50,13 @@
   margin-bottom: 22px;
 }
 
-textarea.form-control {
+textarea.formInput {
   height: 150px;
   padding: 20px;
   text-indent: 0;
 }
 
-.form-control {
+.formInput {
   border-radius: 0;
   border: none;
   background: #fff;
@@ -77,3 +77,4 @@ textarea.form-control {
     box-shadow: none;
   }
 }
+
