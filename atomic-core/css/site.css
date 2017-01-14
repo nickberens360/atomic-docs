@@ -636,106 +636,76 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   color: #7A7A7A;
   font-family: $font1;
 }*/ }
-  #atomsWrap .nav {
+  #atomsWrap .nav-atomic {
     margin-bottom: 0;
     padding-left: 0;
     list-style: none; }
-    #atomsWrap .nav:before, #atomsWrap .nav:after {
+    #atomsWrap .nav-atomic:before, #atomsWrap .nav-atomic:after {
       content: " ";
       display: table; }
-    #atomsWrap .nav:after {
+    #atomsWrap .nav-atomic:after {
       clear: both; }
-    #atomsWrap .nav > li {
+    #atomsWrap .nav-atomic > li {
       position: relative;
       display: block; }
-      #atomsWrap .nav > li > a {
+      #atomsWrap .nav-atomic > li > a {
         position: relative;
         display: block;
         padding: 10px 15px; }
-        #atomsWrap .nav > li > a:hover, #atomsWrap .nav > li > a:focus {
+        #atomsWrap .nav-atomic > li > a:hover, #atomsWrap .nav-atomic > li > a:focus {
           text-decoration: none;
           background-color: #eeeeee; }
-      #atomsWrap .nav > li.disabled > a {
+      #atomsWrap .nav-atomic > li.disabled > a {
         color: #777777; }
-        #atomsWrap .nav > li.disabled > a:hover, #atomsWrap .nav > li.disabled > a:focus {
+        #atomsWrap .nav-atomic > li.disabled > a:hover, #atomsWrap .nav-atomic > li.disabled > a:focus {
           color: #777777;
           text-decoration: none;
           background-color: transparent;
           cursor: not-allowed; }
-    #atomsWrap .nav .open > a, #atomsWrap .nav .open > a:hover, #atomsWrap .nav .open > a:focus {
+    #atomsWrap .nav-atomic .open > a, #atomsWrap .nav-atomic .open > a:hover, #atomsWrap .nav-atomic .open > a:focus {
       background-color: #eeeeee;
       border-color: #337ab7; }
-    #atomsWrap .nav .nav-divider {
+    #atomsWrap .nav-atomic .nav-divider {
       height: 1px;
       margin: 9px 0;
       overflow: hidden;
       background-color: #e5e5e5; }
-    #atomsWrap .nav > li > a > img {
+    #atomsWrap .nav-atomic > li > a > img {
       max-width: none; }
-  #atomsWrap .nav-tabs {
+  #atomsWrap .nav-tabs-atomic {
     border-bottom: 1px solid #ddd; }
-    #atomsWrap .nav-tabs > li {
+    #atomsWrap .nav-tabs-atomic > li {
       float: left;
       margin-bottom: -1px; }
-      #atomsWrap .nav-tabs > li > a {
+      #atomsWrap .nav-tabs-atomic > li > a {
         margin-right: 2px;
         line-height: 1.42857;
         border: 1px solid transparent;
         border-radius: 4px 4px 0 0; }
-        #atomsWrap .nav-tabs > li > a:hover {
+        #atomsWrap .nav-tabs-atomic > li > a:hover {
           border-color: #eeeeee #eeeeee #ddd; }
-      #atomsWrap .nav-tabs > li.active > a, #atomsWrap .nav-tabs > li.active > a:hover, #atomsWrap .nav-tabs > li.active > a:focus {
+      #atomsWrap .nav-tabs-atomic > li.active > a, #atomsWrap .nav-tabs-atomic > li.active > a:hover, #atomsWrap .nav-tabs-atomic > li.active > a:focus {
         color: #555555;
         background-color: #fff;
         border: 1px solid #ddd;
         border-bottom-color: transparent;
         cursor: default; }
-  #atomsWrap .nav-pills > li {
-    float: left; }
-    #atomsWrap .nav-pills > li > a {
-      border-radius: 4px; }
-    #atomsWrap .nav-pills > li + li {
-      margin-left: 2px; }
-    #atomsWrap .nav-pills > li.active > a, #atomsWrap .nav-pills > li.active > a:hover, #atomsWrap .nav-pills > li.active > a:focus {
-      color: #fff;
-      background-color: #337ab7; }
-  #atomsWrap .nav-stacked > li {
-    float: none; }
-    #atomsWrap .nav-stacked > li + li {
-      margin-top: 2px;
-      margin-left: 0; }
-  #atomsWrap .nav-justified, #atomsWrap .nav-tabs.nav-justified {
-    width: 100%; }
-    #atomsWrap .nav-justified > li, #atomsWrap .nav-tabs.nav-justified > li {
-      float: none; }
-      #atomsWrap .nav-justified > li > a, #atomsWrap .nav-tabs.nav-justified > li > a {
-        text-align: center;
-        margin-bottom: 5px; }
-    #atomsWrap .nav-justified > .dropdown .dropdown-menu {
-      top: auto;
-      left: auto; }
-    @media (min-width: 768px) {
-      #atomsWrap .nav-justified > li, #atomsWrap .nav-tabs.nav-justified > li {
-        display: table-cell;
-        width: 1%; }
-        #atomsWrap .nav-justified > li > a, #atomsWrap .nav-tabs.nav-justified > li > a {
-          margin-bottom: 0; } }
-  #atomsWrap .nav-tabs-justified, #atomsWrap .nav-tabs.nav-justified {
+  #atomsWrap .nav-tabs-justified, #atomsWrap .nav-tabs-atomic.nav-justified {
     border-bottom: 0; }
-    #atomsWrap .nav-tabs-justified > li > a, #atomsWrap .nav-tabs.nav-justified > li > a {
+    #atomsWrap .nav-tabs-justified > li > a, #atomsWrap .nav-tabs-atomic.nav-justified > li > a {
       margin-right: 0;
       border-radius: 4px; }
-    #atomsWrap .nav-tabs-justified > .active > a, #atomsWrap .nav-tabs.nav-justified > .active > a,
-    #atomsWrap .nav-tabs-justified > .active > a:hover, #atomsWrap .nav-tabs.nav-justified > .active > a:hover,
-    #atomsWrap .nav-tabs-justified > .active > a:focus, #atomsWrap .nav-tabs.nav-justified > .active > a:focus {
+    #atomsWrap .nav-tabs-justified > .active > a, #atomsWrap .nav-tabs-atomic.nav-justified > .active > a,
+    #atomsWrap .nav-tabs-justified > .active > a:hover, #atomsWrap .nav-tabs-atomic.nav-justified > .active > a:hover,
+    #atomsWrap .nav-tabs-justified > .active > a:focus, #atomsWrap .nav-tabs-atomic.nav-justified > .active > a:focus {
       border: 1px solid #ddd; }
     @media (min-width: 768px) {
-      #atomsWrap .nav-tabs-justified > li > a, #atomsWrap .nav-tabs.nav-justified > li > a {
+      #atomsWrap .nav-tabs-justified > li > a, #atomsWrap .nav-tabs-atomic.nav-justified > li > a {
         border-bottom: 1px solid #ddd;
         border-radius: 4px 4px 0 0; }
-      #atomsWrap .nav-tabs-justified > .active > a, #atomsWrap .nav-tabs.nav-justified > .active > a,
-      #atomsWrap .nav-tabs-justified > .active > a:hover, #atomsWrap .nav-tabs.nav-justified > .active > a:hover,
-      #atomsWrap .nav-tabs-justified > .active > a:focus, #atomsWrap .nav-tabs.nav-justified > .active > a:focus {
+      #atomsWrap .nav-tabs-justified > .active > a, #atomsWrap .nav-tabs-atomic.nav-justified > .active > a,
+      #atomsWrap .nav-tabs-justified > .active > a:hover, #atomsWrap .nav-tabs-atomic.nav-justified > .active > a:hover,
+      #atomsWrap .nav-tabs-justified > .active > a:focus, #atomsWrap .nav-tabs-atomic.nav-justified > .active > a:focus {
         border-bottom-color: #fff; } }
   #atomsWrap .tab-content > .tab-pane {
     display: none;
@@ -743,10 +713,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   #atomsWrap .tab-content > .active {
     display: block;
     visibility: visible; }
-  #atomsWrap .nav-tabs .dropdown-menu {
-    margin-top: -1px;
-    border-top-right-radius: 0;
-    border-top-left-radius: 0; }
   #atomsWrap [class*='nb-'] {
     position: relative;
     -moz-box-sizing: border-box;
@@ -949,7 +915,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   #atomsWrap .copyBtn-edit {
     right: 45px;
     display: none; }
-  #atomsWrap .nav-tabs > li.expandItem {
+  #atomsWrap .nav-tabs-atomic > li.expandItem {
     float: right;
     position: relative;
     right: 68px; }
@@ -1112,7 +1078,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     padding-left: 240px;
     width: 100%;
     padding-top: 0; }
-  #atomsWrap .compTitle, #atomsWrap .compNotes, #atomsWrap .nav-tabs {
+  #atomsWrap .compTitle, #atomsWrap .compNotes, #atomsWrap .nav-tabs-atomic {
     font-family: "Open Sans", sans-serif; }
   #atomsWrap code, #atomsWrap kbd, #atomsWrap pre, #atomsWrap samp {
     font-size: 14px; }
@@ -1340,18 +1306,18 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     #atomsWrap .aa_actionDrawer {
       width: 100% !important;
       padding: 25px; } }
-  #atomsWrap .codeBlocks .nav-tabs {
+  #atomsWrap .codeBlocks .nav-tabs-atomic {
     border: 1px solid #dadada;
     margin-top: 0;
     background: #fff; }
-  #atomsWrap .codeBlocks .nav-tabs > li.active > a, #atomsWrap .codeBlocks .nav-tabs > li.active > a:focus, #atomsWrap .codeBlocks .nav-tabs > li.active > a:hover {
+  #atomsWrap .codeBlocks .nav-tabs-atomic > li.active > a, #atomsWrap .codeBlocks .nav-tabs-atomic > li.active > a:focus, #atomsWrap .codeBlocks .nav-tabs-atomic > li.active > a:hover {
     border: none;
     border-bottom: 3px solid #00aff0;
     color: inherit; }
-  #atomsWrap .codeBlocks .nav > li > a:focus, #atomsWrap .codeBlocks .nav > li > a:hover {
+  #atomsWrap .codeBlocks .nav-atomic > li > a:focus, #atomsWrap .codeBlocks .nav-atomic > li > a:hover {
     background: none;
     border: none; }
-  #atomsWrap .codeBlocks .nav-tabs > li > a {
+  #atomsWrap .codeBlocks .nav-tabs-atomic > li > a {
     margin-right: 0;
     line-height: 1;
     border: none;

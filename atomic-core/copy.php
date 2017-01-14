@@ -156,7 +156,7 @@ foreach ($cat_data as $cat_value) {
 
             <div>
                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
+                <ul class="nav-atomic nav-tabs-atomic" role="tablist">
                     <li role="presentation" class="active"><a href="#<?php echo $comp_value['comp_name'] ?>-markup-tab"
                                                               aria-controls="home" role="tab"
                                                               data-toggle="tab">Markup</a></li>

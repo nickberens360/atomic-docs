@@ -23,13 +23,6 @@
             });
         });
     })(jQuery);
-    /*(function($){
-        $(window).on("load",function(){
-            $(".atomic-editorInner").mCustomScrollbar({
-                theme:"dark"
-            });
-        });
-    })(jQuery);*/
 
 
 </script>

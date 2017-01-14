@@ -303,7 +303,7 @@ $settings = $settings->select(array());
 
                 <div class="codeBlocks grid-row">
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist">
+                    <ul class="nav-atomic nav-tabs-atomic" role="tablist">
                         <li role="presentation" class="active"><a
                                 href="#<?php echo $component['component'] ?>-markup-tab"
                                 aria-controls="home" role="tab"
