@@ -10,5 +10,9 @@
     {
         "category": "jsExample",
         "order": 3
+    },
+    {
+        "category": "news",
+        "order": 4
     }
 ]
