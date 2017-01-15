@@ -1,12 +1,10 @@
 <?php
 require '../temp-functions/functions.php';
 
-global $catdb;
-global $compdb;
-require "../fllat.php";
+include '../db-inc/dbinc.php';
 
-$catdb = new Fllat("categories", "../../atomic-db");
-$compdb = new Fllat("components", "../../atomic-db");
+
+
 $catName = $_POST["catName"];
 $thisCat = $_POST["thisCat"];
 $key = "category";

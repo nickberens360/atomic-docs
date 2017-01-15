@@ -1,12 +1,9 @@
 <?php
 require '../temp-functions/functions.php';
 
-global $compdb;
-require "../fllat.php";
-
-$compdb = new Fllat("components", "../../atomic-db");
 
 
+include '../db-inc/dbinc.php';
 
 
 $errors = array();      // array to hold validation errors

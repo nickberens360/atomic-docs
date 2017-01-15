@@ -2,10 +2,9 @@
 require '../temp-functions/functions.php';
 
 
-global $compdb;
-require "../fllat.php";
+include '../db-inc/dbinc.php';
 
-$compdb = new Fllat("components", "../../atomic-db");
+
 $key = "component";
 
 $catName = $_POST["catName"];

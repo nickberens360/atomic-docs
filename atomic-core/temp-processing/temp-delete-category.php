@@ -2,21 +2,15 @@
 require '../temp-functions/functions.php';
 
 
-require "../fllat.php";
+include '../db-inc/dbinc.php';
 
-$catdb = new Fllat("categories", "../../atomic-db");
-$compdb = new Fllat("components", "../../atomic-db");
-$settingsdb = new Fllat("settings", "../../atomic-db");
+
 
 $catName = $_POST["catName"];
 $thisCat = $_POST["thisCat"];
 $key = "category";
 
 
-/*$config = getConfig('../..');
-
-$jsDir = $config[0]['js_directory'];
-$jsExt = $config[0]['js_extension'];*/
 
 
 $settingsdb = $settingsdb->select(array());
