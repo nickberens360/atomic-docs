@@ -2,10 +2,11 @@
 /* scss/readme/_sidebars.scss */
 /* scss/modules/_box.scss */
 .box {
-  background: #eee;
+  background: #eeeeee;
   padding: 20px;
   width: 300px;
-  height: 150px; }
+  height: 150px;
+}
 
 /* scss/jsExample/_clickme.scss */
 .click {
@@ -15,7 +16,9 @@
   transition: left .25s;
   background: #ccf9bf;
   padding: 20px 40px;
-  display: inline-block; }
+  display: inline-block;
+}
 
 .clickAnimate {
-  left: 80%; }
+  left: 80%;
+}
