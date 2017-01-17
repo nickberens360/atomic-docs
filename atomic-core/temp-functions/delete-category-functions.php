@@ -2,10 +2,10 @@
 
 
 
-function deleteCompDir($catName) {
+function deleteCompDir($catName, $settingsArr) {
 
-    $config = getConfig('../..');
-    $compDir = $config[0]['component_directory'];
+
+    $compDir = $settingsArr[0]['component_directory'];
 
     $catName = '../../'.$compDir.'/'.$catName;
 
@@ -13,7 +13,7 @@ function deleteCompDir($catName) {
         $objects = scandir($catName);
         foreach ($objects as $object) {
             if ($object != "." && $object != "..") {
-                if (filetype($catName."/".$object) == "dir") deleteCompDir($catName."/".$object); else unlink($catName."/".$object);
+                if (filetype($catName."/".$object) == "dir") deleteCompDir($catName."/".$object, $settingsArr); else unlink($catName."/".$object);
             }
         }
         reset($objects);
@@ -23,10 +23,10 @@ function deleteCompDir($catName) {
 
 
 
-function deleteScssDir($catName) {
+function deleteScssDir($catName, $settingsArr) {
 
-    $config = getConfig('../..');
-    $stylesDir = $config[0]['styles_directory'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
 
     $catName = '../../'.$stylesDir.'/'.$catName;
 
@@ -34,7 +34,7 @@ function deleteScssDir($catName) {
         $objects = scandir($catName);
         foreach ($objects as $object) {
             if ($object != "." && $object != "..") {
-                if (filetype($catName."/".$object) == "dir") deleteCompDir($catName."/".$object); else unlink($catName."/".$object);
+                if (filetype($catName."/".$object) == "dir") deleteCompDir($catName."/".$object, $settingsArr); else unlink($catName."/".$object);
             }
         }
         reset($objects);
@@ -44,12 +44,12 @@ function deleteScssDir($catName) {
 
 
 
-function deleteCatStylesImportString($catName)
+function deleteCatStylesImportString($catName, $settingsArr)
 {
 
-    $config = getConfig('../..');
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+   
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     $importString ='@import "'.$catName.'/_'.$catName.'";';
 

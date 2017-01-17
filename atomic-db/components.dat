@@ -28,7 +28,7 @@
         "category": "modules",
         "description": "This is the box component!",
         "backgroundColor": "",
-        "order": 1,
+        "order": 2,
         "has_js": "false"
     }
 ]

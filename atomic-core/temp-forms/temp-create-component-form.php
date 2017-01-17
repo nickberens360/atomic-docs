@@ -14,10 +14,10 @@
         </div>
 
 
-        <div class="formGroup-check">
+        <!--<div class="formGroup-check">
             <input class="formInput-check" type="checkbox" id="js_file" name="js_file" value="true">
             <label for="js_file"><span></span>Add a javascript file</label>
-        </div>
+        </div>-->
 
 
 

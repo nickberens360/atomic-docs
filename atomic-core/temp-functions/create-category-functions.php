@@ -3,13 +3,12 @@
 
 
 
-function createScssCatDirAndFile($catName)
+function createScssCatDirAndFile($catName, $settingsArr)
 {
 
-    $config = getConfig('../..');
     
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
 
 
@@ -21,14 +20,13 @@ function createScssCatDirAndFile($catName)
 
 
 
-function createStringForMainScssFile($catName)
+function createStringForMainScssFile($catName, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
     
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     $includeString ='@import "'.$catName.'/_'.$catName.'";';
 
@@ -44,11 +42,11 @@ function createStringForMainScssFile($catName)
 
 
 
-function createCompCatDir($catName)
+function createCompCatDir($catName, $settingsArr)
 {
-    $config = getConfig('../..');
 
-    $compDir = $config[0]['component_directory'];
+
+    $compDir = $settingsArr[0]['component_directory'];
 
     mkdir("../../$compDir/$catName");
 }

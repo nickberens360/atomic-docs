@@ -15,10 +15,10 @@
             </div>
         </div>
 
-        <div class="formGroup-check hasJs-checkbox">
+        <!--<div class="formGroup-check hasJs-checkbox">
             <input class="formInput-check" type="checkbox" id="js_file" name="js_file" value="true">
             <label for="js_file"><span></span>Add a javascript file</label>
-        </div>
+        </div>-->
         <button class="aa_btn aa_btn-full aa_btn-pos" type="submit" name="update_button" value="update">Update</button>
     </form>
 </div>

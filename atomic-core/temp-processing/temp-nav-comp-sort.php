@@ -2,11 +2,7 @@
 
 require '../temp-functions/functions.php';
 
-global $compdb;
-require "../fllat.php";
-
-
-$compdb = new Fllat("components", "../../atomic-db");
+include '../db-inc/dbinc.php';
 
 $errors = array();
 $data = array();
@@ -16,9 +12,7 @@ $catName = $_POST["currentCat"];
 
 
 
-/*if ($newCode == ""){
-    $errors['name'] = 'No change detected';
-}*/
+
 
 if (!empty($errors)) {
 
@@ -28,7 +22,7 @@ if (!empty($errors)) {
 
 
 
-    stylesCompRootOrder($compName, $catName);
+    stylesCompRootOrder($compName, $catName, $settingsArr);
 
     navCompOrder($compdb, $compName);
 

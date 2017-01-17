@@ -1,9 +1,9 @@
 <?php
-function renameCompDir($oldDir, $newDir){
+function renameCompDir($oldDir, $newDir, $settingsArr){
 
-    $config = getConfig('../..');
 
-    $compDir = $config[0]['component_directory'];
+
+    $compDir = $settingsArr[0]['component_directory'];
 
     $oldDir = "../../$compDir/$oldDir";
     $newDir = "../../$compDir/$newDir";
@@ -12,11 +12,11 @@ function renameCompDir($oldDir, $newDir){
 }
 
 
-function renameStyleDir($oldDir, $newDir){
+function renameStyleDir($oldDir, $newDir, $settingsArr){
 
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
 
     $oldDir = "../../$stylesDir/$oldDir";
     $newDir = "../../$stylesDir/$newDir";
@@ -24,13 +24,13 @@ function renameStyleDir($oldDir, $newDir){
     rename($oldDir,$newDir);
 }
 
-function changeRootStylesImportString($catName, $oldName)
+function changeRootStylesImportString($catName, $oldName, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     $oldString = '@import "'.$oldName.'/_'.$oldName.'";';
     $newString = '@import "'.$catName.'/_'.$catName.'";';
@@ -43,12 +43,11 @@ function changeRootStylesImportString($catName, $oldName)
 
 
 
-function renameStylesRoot( $newName, $oldName){
+function renameStylesRoot( $newName, $oldName, $settingsArr){
+    
 
-    $config = getConfig('../..');
-
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     $old = "../../$stylesDir/$newName/_$oldName.$stylesExt";
     $new = "../../$stylesDir/$newName/_$newName.$stylesExt";
@@ -57,12 +56,11 @@ function renameStylesRoot( $newName, $oldName){
 }
 
 
-function editAllCompCommentStrings($oldCat, $newCat)
+function editAllCompCommentStrings($oldCat, $newCat, $settingsArr)
 {
-    $config = getConfig('../..');
 
-    $compDir = $config[0]['component_directory'];
-    $compExt = $config[0]['component_extension'];
+    $compDir = $settingsArr[0]['component_directory'];
+    $compExt = $settingsArr[0]['component_extension'];
 
     foreach (glob("../../$compDir/$newCat/*.$compExt") as $filename) {
 
@@ -78,13 +76,13 @@ function editAllCompCommentStrings($oldCat, $newCat)
     }
 }
 
-function editAllStyleCommentStrings($oldCat, $newCat)
+function editAllStyleCommentStrings($oldCat, $newCat, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     foreach (glob("../../$stylesDir/$newCat/*.$stylesExt") as $filename) {
 

@@ -53,9 +53,9 @@ if ( ! empty($errors)) {
 
     deleteCatJsFile($jsDir, $jsExt, $compDir, $thisCat);
 
-    deleteCompDir($catName);
-    deleteScssDir($catName);
-    deleteCatStylesImportString($catName);
+    deleteCompDir($catName, $settingsArr);
+    deleteScssDir($catName, $settingsArr);
+    deleteCatStylesImportString($catName, $settingsArr);
     deleteDbRowByVal($compdb, $key, $catName);
     deleteDbRowByVal($catdb, $key, $catName);
 

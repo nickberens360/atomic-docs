@@ -39,9 +39,9 @@ if ( ! empty($errors)) {
 
 
     addCatDbItem($catName, $catdb);
-    createScssCatDirAndFile($catName);
-    createStringForMainScssFile($catName);
-    createCompCatDir($catName);
+    createScssCatDirAndFile($catName, $settingsArr);
+    createStringForMainScssFile($catName, $settingsArr);
+    createCompCatDir($catName, $settingsArr);
 
 
 

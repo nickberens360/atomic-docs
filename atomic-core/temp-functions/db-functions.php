@@ -55,7 +55,20 @@ function dbUpdateItems($db, $key, $oldValue, $update_value){
 
 
 
+function dbUpdateCompJs($db, $compName, $hasJs){
 
+    $selectDB = $db->select(array());
+
+    for($i=count($selectDB)-1; $i>=0; $i--){
+
+        if ($selectDB[$i]["component"] == $compName) {
+
+            $new_js = array("has_js" => $hasJs);
+            $db->update($i, $new_js);
+
+        }
+    }
+}
 
 
 

@@ -25,13 +25,13 @@ if (!empty($errors)) {
 
 
     deleteDbRowByVal($compdb, $key, $compName);
-    deleteCompFile($catName, $compName);
-    deleteStyleFile($catName, $compName);
-    deleteScssImportString($catName, $compName);
+    deleteCompFile($catName, $compName, $settingsArr);
+    deleteStyleFile($catName, $compName, $settingsArr);
+    deleteScssImportString($catName, $compName, $settingsArr);
 
 
     if($hasJs == "true"){
-        deleteJsFile($compName);
+        deleteJsFile($compName, $settingsArr);
     }
 
 

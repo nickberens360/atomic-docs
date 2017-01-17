@@ -3,12 +3,12 @@
 
 
 
-function createCompFile($catName, $compName)
+function createCompFile($catName, $compName, $settingsArr)
 {
-    $config = getConfig('../..');
 
-    $compDir = $config[0]['component_directory'];
-    $compExt = $config[0]['component_extension'];
+
+    $compDir = $settingsArr[0]['component_directory'];
+    $compExt = $settingsArr[0]['component_extension'];
 
 
     $myFile = fopen("../../$compDir/$catName/$compName.$compExt", 'x+') or die("can't open file");
@@ -21,13 +21,13 @@ function createJsFile($compName, $jsDir, $jsExt)
 {
     fopen("../../$jsDir/$compName.$jsExt", "w");
 }
-function createJsComment($compName)
+function createJsComment($compName, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $jsDir = $config[0]['js_directory'];
-    $jsExt = $config[0]['js_extension'];
+
+    $jsDir = $settingsArr[0]['js_directory'];
+    $jsExt = $settingsArr[0]['js_extension'];
 
     $commentString = '/* '.$jsDir.'/'.$compName.'.'.$jsExt.' */';
     $commentString = "\n$commentString\n";
@@ -37,13 +37,13 @@ function createJsComment($compName)
     file_put_contents('../../'.$jsDir.'/'.$compName.'.'.$jsExt.'', implode(PHP_EOL, file('../../'.$jsDir.'/'.$compName.'.'.$jsExt.'', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)));
 }
 
-function createCompComment($catName, $compName)
+function createCompComment($catName, $compName, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $compDir = $config[0]['component_directory'];
-    $compExt = $config[0]['component_extension'];
+
+    $compDir = $settingsArr[0]['component_directory'];
+    $compExt = $settingsArr[0]['component_extension'];
 
     $commentString = '<!-- '.$compDir.'/'.$catName.'/'.$compName.'.'.$compExt.' -->';
     $commentString = "\n$commentString\n";
@@ -55,23 +55,23 @@ function createCompComment($catName, $compName)
 
 
 
-function createStylesFile($catName, $compName)
+function createStylesFile($catName, $compName, $settingsArr)
 {
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     fopen("../../$stylesDir/$catName/_$compName.$stylesExt", 'x+') or die("can't open file");
 }
 
-function createStyleComment($catName, $compName)
+function createStyleComment($catName, $compName, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
 
     $commentString = '/* '.$stylesDir.'/'.$catName.'/_'.$compName.'.'.$stylesExt.' */';
@@ -84,13 +84,13 @@ function createStyleComment($catName, $compName)
 
 
 
-function writeStylesImport($catName, $compName)
+function writeStylesImport($catName, $compName, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     //create @import string
     $importString = "@import " . '"_'.$compName.'";' ;
