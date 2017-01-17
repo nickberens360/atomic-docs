@@ -9,10 +9,6 @@
     },
     {
         "category": "jsExample",
-        "order": 3
-    },
-    {
-        "category": "news",
-        "order": 4
+        "order": 2
     }
 ]

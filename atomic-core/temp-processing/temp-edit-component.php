@@ -2,10 +2,7 @@
 require '../temp-functions/functions.php';
 
 
-global $compdb;
-require "../fllat.php";
-
-$compdb = new Fllat("components", "../../atomic-db");
+include '../db-inc/dbinc.php';
 
 
 
@@ -20,10 +17,9 @@ $create_js_file = $_POST["js_file"];
 $hasJs = $_POST["hasJs"];
 $oldName = $_POST["oldName"];
 
-$config = getConfig('../..');
 
-$jsDir = $config[0]['js_directory'];
-$jsExt = $config[0]['js_extension'];
+$jsDir = $settingsArr[0]['js_directory'];
+$jsExt = $settingsArr[0]['js_extension'];
 
 
 
@@ -55,7 +51,7 @@ if (!empty($errors)) {
 
     if($create_js_file == "true"){
         createJsFile($newName, $jsDir, $jsExt);
-        createJsComment($newName);
+        createJsComment($newName, $settingsArr);
 
         $create_js_file = "true";
 
@@ -64,8 +60,8 @@ if (!empty($errors)) {
 
 
     if($hasJs == "true"){
-        renameJsFile($newName, $oldName);
-        editJsCommentString($oldName, $newName);
+        renameJsFile($newName, $oldName, $settingsArr);
+        editJsCommentString($oldName, $newName, $settingsArr);
     }
 
 
@@ -73,11 +69,11 @@ if (!empty($errors)) {
     dbUpdateComp($compdb, $oldName, $newName, $catName, $bgColor, $compNotes, $hasJs);
     
     
-    renameCompFile($catName, $newName, $oldName);
-    editCompCommentString($catName, $oldName, $newName);
-    renameStylesFile($catName, $newName, $oldName);
-    editStyleCommentString($catName, $oldName, $newName);
-    editStyleRootImportString($catName, $oldName, $newName);
+    renameCompFile($catName, $newName, $oldName, $settingsArr);
+    editCompCommentString($catName, $oldName, $newName, $settingsArr);
+    renameStylesFile($catName, $newName, $oldName, $settingsArr);
+    editStyleCommentString($catName, $oldName, $newName, $settingsArr);
+    editStyleRootImportString($catName, $oldName, $newName, $settingsArr);
 
 
 

@@ -2,11 +2,7 @@
 
 require '../temp-functions/functions.php';
 
-global $compdb;
-require "../fllat.php";
-
-
-$compdb = new Fllat("components", "../../atomic-db");
+include '../db-inc/dbinc.php';
 
 $errors = array();
 $data = array();
@@ -17,12 +13,11 @@ $oldCat = $_POST["oldCat"];
 $thisCompName = $_POST["thisCompName"];
 
 
-$config = getConfig('../..');
 
-$stylesDir = $config[0]['styles_directory'];
-$stylesExt = $config[0]['styles_extension'];
-$compDir = $config[0]['component_directory'];
-$compExt = $config[0]['component_extension'];
+$stylesDir = $settingsArr[0]['styles_directory'];
+$stylesExt = $settingsArr[0]['styles_extension'];
+$compDir = $settingsArr[0]['component_directory'];
+$compExt = $settingsArr[0]['component_extension'];
 
 
 $filename = '../../'.$compDir.'/'.$newCat.'/'.$thisCompName.'.'.$compExt.'';
@@ -49,15 +44,15 @@ if (!empty($errors)) {
 
 
     navCatCompOrder($compdb, $compName, $newCat);
-    stylesCompRootOrder($compName, $newCat);
-    deleteStylesImportString($thisCompName, $oldCat);
-    moveCompFile($oldCat, $thisCompName, $newCat);
-    moveStyleFile($oldCat, $thisCompName, $newCat);
+    stylesCompRootOrder($compName, $newCat, $settingsArr);
+    deleteStylesImportString($thisCompName, $oldCat, $settingsArr);
+    moveCompFile($oldCat, $thisCompName, $newCat, $settingsArr);
+    moveStyleFile($oldCat, $thisCompName, $newCat, $settingsArr);
 
-    editAllCompCommentStrings($oldCat, $newCat);
+    editAllCompCommentStrings($oldCat, $newCat, $settingsArr);
 
 
-    editAllStyleCommentStrings($oldCat, $newCat);
+    editAllStyleCommentStrings($oldCat, $newCat, $settingsArr);
 
 
 

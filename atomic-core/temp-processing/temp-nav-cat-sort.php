@@ -2,10 +2,10 @@
 
 require '../temp-functions/functions.php';
 
-global $catdb;
-require "../fllat.php";
+include '../db-inc/dbinc.php';
 
-$catdb = new Fllat("categories", "../../atomic-db");
+
+
 
 $errors = array();
 $data = array();
@@ -22,7 +22,7 @@ if (!empty($errors)) {
 
 
 
-    stylesRootOrder($catName);
+    stylesRootOrder($catName, $settingsArr);
 
     navCatOrder($catdb, $catName);
 

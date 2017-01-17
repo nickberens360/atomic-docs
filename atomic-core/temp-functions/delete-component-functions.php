@@ -2,13 +2,13 @@
 
 
 
-function deleteCompFile($catName, $fileName)
+function deleteCompFile($catName, $fileName, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $compDir = $config[0]['component_directory'];
-    $compExt = $config[0]['component_extension'];
+
+    $compDir = $settingsArr[0]['component_directory'];
+    $compExt = $settingsArr[0]['component_extension'];
 
     unlink('../../'.$compDir.'/'.$catName.'/'.$fileName.'.'.$compExt.'');
 }
@@ -16,38 +16,38 @@ function deleteCompFile($catName, $fileName)
 
 
 
-function deleteJsFile($fileName)
+function deleteJsFile($fileName, $settingsArr)
 {
 
-    $config = getConfig('../..');
+  
 
-    $jsDir = $config[0]['js_directory'];
-    $jsExt = $config[0]['js_extension'];
+    $jsDir = $settingsArr[0]['js_directory'];
+    $jsExt = $settingsArr[0]['js_extension'];
 
     unlink('../../'.$jsDir.'/'.$fileName.'.'.$jsExt.'');
 }
 
 
 
-function deleteStyleFile($catName, $fileName)
+function deleteStyleFile($catName, $fileName, $settingsArr)
 {
-    $config = getConfig('../..');
+    
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     unlink('../../'.$stylesDir.'/'.$catName.'/_'.$fileName.'.'.$stylesExt.'');
 }
 
 
 
-function deleteScssImportString($catName, $fileName)
+function deleteScssImportString($catName, $fileName, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     $importString = "@import " . '"_'.$fileName.'";' ;
 

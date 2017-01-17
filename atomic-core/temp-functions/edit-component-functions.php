@@ -23,12 +23,11 @@ function dbUpdateComp($db, $oldName, $newName, $catName, $bgColor, $compNotes, $
     }
 }
 
-function renameJsFile($newName, $oldName){
+function renameJsFile($newName, $oldName, $settingsArr){
 
-    $config = getConfig('../..');
 
-    $jsDir = $config[0]['js_directory'];
-    $jsExt = $config[0]['js_extension'];
+    $jsDir = $settingsArr[0]['js_directory'];
+    $jsExt = $settingsArr[0]['js_extension'];
 
 
 
@@ -43,13 +42,13 @@ function renameJsFile($newName, $oldName){
 
 }
 
-function editJsCommentString($oldName, $newName)
+function editJsCommentString($oldName, $newName, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $jsDir = $config[0]['js_directory'];
-    $jsExt = $config[0]['js_extension'];
+
+    $jsDir = $settingsArr[0]['js_directory'];
+    $jsExt = $settingsArr[0]['js_extension'];
 
   
 
@@ -65,12 +64,11 @@ function editJsCommentString($oldName, $newName)
 }
 
 
-function renameCompFile($catName, $newName, $oldName){
+function renameCompFile($catName, $newName, $oldName, $settingsArr){
 
-    $config = getConfig('../..');
 
-    $compDir = $config[0]['component_directory'];
-    $compExt = $config[0]['component_extension'];
+    $compDir = $settingsArr[0]['component_directory'];
+    $compExt = $settingsArr[0]['component_extension'];
 
     $old = "../../$compDir/$catName/$oldName.$compExt";
     $new = "../../$compDir/$catName/$newName.$compExt";
@@ -84,13 +82,13 @@ function renameCompFile($catName, $newName, $oldName){
 
 
 
-function editCompCommentString($catName, $oldName, $newName)
+function editCompCommentString($catName, $oldName, $newName, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $compDir = $config[0]['component_directory'];
-    $compExt = $config[0]['component_extension'];
+
+    $compDir = $settingsArr[0]['component_directory'];
+    $compExt = $settingsArr[0]['component_extension'];
 
     $oldString = '<!-- '.$compDir.'/'.$catName.'/'.$oldName.'.'.$compExt.' -->';
     $newString = '<!-- '.$compDir.'/'.$catName.'/'.$newName.'.'.$compExt.' -->';
@@ -110,12 +108,12 @@ function editCompCommentString($catName, $oldName, $newName)
 
 
 
-function renameStylesFile($catName, $newName, $oldName){
+function renameStylesFile($catName, $newName, $oldName, $settingsArr){
 
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     $old = "../../$stylesDir/$catName/_$oldName.$stylesExt";
     $new = "../../$stylesDir/$catName/_$newName.$stylesExt";
@@ -123,13 +121,13 @@ function renameStylesFile($catName, $newName, $oldName){
     rename($old,$new);
 }
 
-function editStyleCommentString($catName, $oldName, $newName)
+function editStyleCommentString($catName, $oldName, $newName, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     $oldString = '/* '.$stylesDir.'/'.$catName.'/_'.$oldName.'.'.$stylesExt.' */';
     $newString = '/* '.$stylesDir.'/'.$catName.'/_'.$newName.'.'.$stylesExt.' */';
@@ -143,13 +141,13 @@ function editStyleCommentString($catName, $oldName, $newName)
 
 
 
-function editStyleRootImportString($catName, $oldName, $newName)
+function editStyleRootImportString($catName, $oldName, $newName, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     $oldString = '@import "_'.$oldName.'";';
     $newString = '@import "_'.$newName.'";';

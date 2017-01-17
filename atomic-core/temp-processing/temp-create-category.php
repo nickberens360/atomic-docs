@@ -3,14 +3,7 @@ require '../temp-functions/functions.php';
 
 
 
-require "../fllat.php";
-
-$catdb = new Fllat("categories", "../../atomic-db");
-
-
-$config = getConfig('../..');
-$stylesDir = $config[0]['styles_directory'];
-$compDir = $config[0]['component_directory'];
+include '../db-inc/dbinc.php';
 
 
 $errors         = array();
@@ -46,9 +39,9 @@ if ( ! empty($errors)) {
 
 
     addCatDbItem($catName, $catdb);
-    createScssCatDirAndFile($catName);
-    createStringForMainScssFile($catName);
-    createCompCatDir($catName);
+    createScssCatDirAndFile($catName, $settingsArr);
+    createStringForMainScssFile($catName, $settingsArr);
+    createCompCatDir($catName, $settingsArr);
 
 
 

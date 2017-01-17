@@ -1,6 +1,7 @@
 <?php
 require '../temp-functions/functions.php';
-require "../fllat.php";
+
+include '../db-inc/dbinc.php';
 
 $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
@@ -28,17 +29,16 @@ if ( ! empty($errors)) {
 } else {
 
 
-    function editorCodeUpdate($compName,$catName,$newMarkupCode, $newStylesCode, $newJsCode){
-
-        $config = getConfig('../..');
+    function editorCodeUpdate($compName,$catName,$newMarkupCode, $newStylesCode, $newJsCode, $settingsArr){
 
 
-        $compExt = $config[0]['component_extension'];
-        $stylesExt = $config[0]['styles_extension'];
-        $stylesDir = $config[0]['styles_directory'];
-        $compDir = $config[0]['component_directory'];
-        $jsDir = $config[0]['js_directory'];
-        $jsExt = $config[0]['js_extension'];
+
+        $compExt = $settingsArr[0]['component_extension'];
+        $stylesExt = $settingsArr[0]['styles_extension'];
+        $stylesDir = $settingsArr[0]['styles_directory'];
+        $compDir = $settingsArr[0]['component_directory'];
+        $jsDir = $settingsArr[0]['js_directory'];
+        $jsExt = $settingsArr[0]['js_extension'];
 
 
 
@@ -61,25 +61,10 @@ if ( ! empty($errors)) {
 
 
 
-/*        if($codeDest == $compDir){
-            $compName = $compName.'.'.$compExt.'';
-        }
-        if($codeDest == $stylesDir){
-            $compName = '_'.$compName.'.'.$stylesExt.'';
-        }
-        if($codeDest == $jsDir){
-            $path = '../../'.$codeDest.'/'.$compName.'.'.$jsExt.'';
-            file_put_contents($path, $newCode);
-        }
-
-        if($codeDest !== $jsDir) {
-            $path = '../../' . $codeDest . '/' . $catName . '/' . $compName.'';
-            file_put_contents($path, $newCode);
-        }*/
 
 
     }
-    editorCodeUpdate($compName,$catName,$newMarkupCode, $newStylesCode, $newJsCode);
+    editorCodeUpdate($compName,$catName,$newMarkupCode, $newStylesCode, $newJsCode, $settingsArr);
     // show a message of success and provide a true success variable
     $data['success'] = true;
     $data['message'] = 'Success!';

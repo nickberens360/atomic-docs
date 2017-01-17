@@ -325,7 +325,21 @@ $settings = $settings->select(array());
                             <li role="presentation"><a href="#<?php echo $component['component'] ?>-js-tab"
                                                        aria-controls="profile"
                                                        role="tab" data-toggle="tab">( ) Javascript</a></li>
+                        <?php } else { ?>
+
+                            <form method="post" class="formGroup-check tabForm form-create-jsfile" action="atomic-core/temp-processing/temp-create-jsfile.php">
+                                <input class="formInput-check js-input" name="jsName" value="<?php echo $component['component'] ?>" type="checkbox"  id="js_file-<?php echo $component['component'] ?>" name="<?php echo $component['component'] ?>">
+                                <label for="js_file-<?php echo $component['component'] ?>"><span></span>Add a javascript file</label>
+                                <input type="hidden" name="catVal" value="<?php echo $_GET['cat']; ?>">
+                            </form>
+
+
+
+
                         <?php } ?>
+
+
+
 
                         <li class="expandItem">
                             <a href="#" class="js-expand"><i class="fa fa-arrows-v" aria-hidden="true"></i> Expand</a>

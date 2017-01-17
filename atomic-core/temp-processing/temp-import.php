@@ -9,9 +9,9 @@ $catdb = new Fllat("categories", "../../atomic-db");
 $compdb = new Fllat("components", "../../atomic-db");
 
 
-$config = getConfig('../..');
-$stylesDir = $config[0]['styles_directory'];
-$compDir = $config[0]['component_directory'];
+
+$stylesDir = $settingsArr[0]['styles_directory'];
+$compDir = $settingsArr[0]['component_directory'];
 
 
 $errors         = array();

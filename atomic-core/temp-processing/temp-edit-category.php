@@ -1,12 +1,10 @@
 <?php
 require '../temp-functions/functions.php';
 
-global $catdb;
-global $compdb;
-require "../fllat.php";
+include '../db-inc/dbinc.php';
 
-$catdb = new Fllat("categories", "../../atomic-db");
-$compdb = new Fllat("components", "../../atomic-db");
+
+
 $catName = $_POST["catName"];
 $thisCat = $_POST["thisCat"];
 $key = "category";
@@ -15,9 +13,7 @@ $errors         = array();
 $data           = array();
 
 
-/*if ($catName == $thisCat){
-    $errors['different'] = ' <span class="u_textUnderline">'.$thisCat .' </span>correctly.';
-}*/
+
 
 
 
@@ -37,25 +33,25 @@ if ( ! empty($errors)) {
 
     dbUpdateItems($catdb, $key, $thisCat, $catName);
     dbUpdateItems($compdb, $key, $thisCat, $catName);
-    renameCompDir($thisCat, $catName);
+    renameCompDir($thisCat, $catName, $settingsArr);
     //update all comp file comment strings
-    renameStyleDir($thisCat, $catName);
-    renameStylesRoot($catName, $thisCat );
+    renameStyleDir($thisCat, $catName, $settingsArr);
+    renameStylesRoot($catName, $thisCat, $settingsArr);
     //update all style file comment stings
-    changeRootStylesImportString($catName, $thisCat);
+    changeRootStylesImportString($catName, $thisCat, $settingsArr);
 
 
 
 
 
 
-    editAllCompCommentStrings($thisCat, $catName);
+    editAllCompCommentStrings($thisCat, $catName, $settingsArr);
 
 
 
 
 
-    editAllStyleCommentStrings($thisCat, $catName);
+    editAllStyleCommentStrings($thisCat, $catName, $settingsArr);
 
 
 

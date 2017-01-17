@@ -2,23 +2,14 @@
 require '../temp-functions/functions.php';
 
 
-require "../fllat.php";
 
-$settings = new Fllat("settings", "../../atomic-db");
-
+include '../db-inc/dbinc.php';
 
 
 
-/*$compDir = test_input($_POST["compDir"]);
-$compExt = test_input($_POST["compExt"]);
-$stylesExt = test_input($_POST["stylesExt"]);
-$stylesDir = test_input($_POST["stylesDir"]);*/
 
 
-/*$compDir = $_POST["compDir"];
-$compExt = $_POST["compExt"];
-$stylesExt = $_POST["stylesExt"];
-$stylesDir = $_POST["stylesDir"];*/
+
 
 
 $compDir = $_POST["compDir"];
@@ -67,7 +58,7 @@ if ( ! empty($errors)) {
 
 
 
-    dbUpdateSettings($settings, $compDir, $compExt, $stylesExt, $stylesDir);
+    dbUpdateSettings($settingsdb, $compDir, $compExt, $stylesExt, $stylesDir);
 
     changeRootStylesExt($old_stylesDir, $old_stylesExt, $stylesExt);
 

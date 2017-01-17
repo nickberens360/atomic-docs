@@ -21,12 +21,12 @@ function navCatOrder($db, $catName)
 }
 
 
-function stylesRootOrder($catName)
+function stylesRootOrder($catName, $settingsArr)
 {
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
 
     $string = "";
@@ -87,13 +87,13 @@ function navCatCompOrder($db, $compName, $newCat)
 
 
 
-function stylesCompRootOrder($compName, $catName)
+function stylesCompRootOrder($compName, $catName, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     $string = "";
     foreach ($compName as $cn) {
@@ -107,13 +107,12 @@ function stylesCompRootOrder($compName, $catName)
 
 
 
-function deleteStylesImportString($thisCompName, $oldCat)
+function deleteStylesImportString($thisCompName, $oldCat, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     $importString = '@import "_'.$thisCompName.'";';
 
@@ -127,24 +126,23 @@ function deleteStylesImportString($thisCompName, $oldCat)
 
 
 
-function moveCompFile($oldCat, $thisCompName, $newCat)
+function moveCompFile($oldCat, $thisCompName, $newCat, $settingsArr)
 {
 
-    $config = getConfig('../..');
 
-    $compsDir = $config[0]['component_directory'];
-    $compExt = $config[0]['component_extension'];
+    $compsDir = $settingsArr[0]['component_directory'];
+    $compExt = $settingsArr[0]['component_extension'];
 
     rename ("../../$compsDir/$oldCat/$thisCompName.$compExt", "../../$compsDir/$newCat/$thisCompName.$compExt");
 }
 
 
-function moveStyleFile($oldCat, $thisCompName, $newCat)
+function moveStyleFile($oldCat, $thisCompName, $newCat, $settingsArr)
 {
-    $config = getConfig('../..');
 
-    $stylesDir = $config[0]['styles_directory'];
-    $stylesExt = $config[0]['styles_extension'];
+
+    $stylesDir = $settingsArr[0]['styles_directory'];
+    $stylesExt = $settingsArr[0]['styles_extension'];
 
     rename ("../../$stylesDir/$oldCat/_$thisCompName.$stylesExt", "../../$stylesDir/$newCat/_$thisCompName.$stylesExt");
 }

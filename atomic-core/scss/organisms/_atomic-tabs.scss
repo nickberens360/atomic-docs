@@ -25,4 +25,27 @@
   }
 }
 
+.tabForm{
+  display: inline-block;
+  margin-bottom: 0;
+  label{
+    margin-right: 0;
+    line-height: 1;
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
+    font-size: 12px;
+    color: #929292;
+    font-weight: 300;
+    padding: 10px 15px;
+    display: block;
+  }
+  .formInput-check + label span {
+    width: 10px;
+    height: 10px;
+    top: 0;
+    border: 1px solid;
+  }
+}
+
 
