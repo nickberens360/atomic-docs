@@ -328,9 +328,11 @@ $settings = $settings->select(array());
                         <?php } else { ?>
 
                             <form method="post" class="formGroup-check tabForm form-create-jsfile" action="atomic-core/temp-processing/temp-create-jsfile.php">
-                                <input class="formInput-check js-input" name="jsName" value="<?php echo $component['component'] ?>" type="checkbox"  id="js_file-<?php echo $component['component'] ?>" name="<?php echo $component['component'] ?>">
+                                <input class="formInput-check js-input" type="checkbox"  id="js_file-<?php echo $component['component'] ?>">
                                 <label for="js_file-<?php echo $component['component'] ?>"><span></span>Add a javascript file</label>
                                 <input type="hidden" name="catVal" value="<?php echo $_GET['cat']; ?>">
+                                <input type="hidden" name="jsName" value="<?php echo $component['component'] ?>">
+
                             </form>
 
 
