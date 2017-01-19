@@ -1,2 +1,9 @@
 .idea/
+.gitignore
+error.log
+prepros.cfg
+components/
+scss/
+
 atomic-core/node_modules/
+atomic-core/db/

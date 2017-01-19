@@ -138,22 +138,6 @@ $settings = $settings->select(array());
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         <ul class="aa_fileSection fileSection-<?php echo $category['category'] ?>">
                             <li class="aa_addFileItem">
                                 <a class="aa_addFile js_add-component aa_js-actionOpen aa_actionBtn"
@@ -295,8 +279,9 @@ $settings = $settings->select(array());
                      data-color="<?php echo $component['backgroundColor'] ?>"
                      style="background-color:<?php echo $component['backgroundColor'] ?>">
 
-
-                    <?php require('../' . $setting['component_directory'] . '/' . $cat . '/' . $component['component'] . '.' . $setting['component_extension'] . ''); ?>
+	                <iframe class="lazy-load" data-src="<?= '../' . $setting['component_directory'] . '/' . $cat . '/' . $component['component'] . '.' . $setting['component_extension']; ?>" src=""></iframe>
+        
+                    <?php //require('../' . $setting['component_directory'] . '/' . $cat . '/' . $component['component'] . '.' . $setting['component_extension']); ?>
 
 
                 </div>

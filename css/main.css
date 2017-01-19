@@ -1,12 +1,17 @@
 /* scss/readme/_settings.scss */
 /* scss/readme/_sidebars.scss */
+/* scss/readme/_slow-load.scss */
+.box {
+  border: 10px dotted red;
+  height: 100px;
+  width: 100px; }
+
 /* scss/modules/_box.scss */
 .box {
-  background: #eeeeee;
+  background: #eee;
   padding: 20px;
   width: 300px;
-  height: 150px;
-}
+  height: 150px; }
 
 /* scss/jsExample/_clickme.scss */
 .click {
@@ -16,9 +21,7 @@
   transition: left .25s;
   background: #ccf9bf;
   padding: 20px 40px;
-  display: inline-block;
-}
+  display: inline-block; }
 
 .clickAnimate {
-  left: 80%;
-}
+  left: 80%; }

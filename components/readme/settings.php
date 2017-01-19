@@ -1,3 +1,3 @@
 <!-- components/readme/settings.php -->
-
-<img src="atomic-core/img/settings.png" />
+<?= __DIR__; ?>
+<img src="../../../img/settings.png" />
