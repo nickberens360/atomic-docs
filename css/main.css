@@ -1,10 +1,11 @@
 /* scss/readme/_settings.scss */
 /* scss/readme/_sidebars.scss */
 /* scss/readme/_slow-load.scss */
-.box {
+.tall-box {
+  display: inline-block;
   border: 10px dotted red;
-  height: 100px;
-  width: 100px; }
+  height: 1000px;
+  width: 1000px; }
 
 /* scss/modules/_box.scss */
 .box {

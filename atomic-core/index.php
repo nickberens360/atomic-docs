@@ -279,9 +279,9 @@ $settings = $settings->select(array());
                      data-color="<?php echo $component['backgroundColor'] ?>"
                      style="background-color:<?php echo $component['backgroundColor'] ?>">
 
-	                <iframe class="lazy-load" data-src="<?= '../' . $setting['component_directory'] . '/' . $cat . '/' . $component['component'] . '.' . $setting['component_extension']; ?>" src=""></iframe>
-        
-                    <?php //require('../' . $setting['component_directory'] . '/' . $cat . '/' . $component['component'] . '.' . $setting['component_extension']); ?>
+	                <iframe class="partial-viewport component-<?php echo $component['component'] ?>"
+	                        data-src="atomic-core/partial.php?component=<?php echo $component['component'] ?>&category=<?php echo $cat; ?>"
+	                        sandbox="allow-same-origin allow-scripts  allow-modals" frameborder="0" scrolling="no"></iframe>
 
 
                 </div>
@@ -465,6 +465,19 @@ $settings = $settings->select(array());
         </div>
     </div>
 </div>
+
+
+<script>
+	var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+	var eventer = window[eventMethod];
+	var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+	
+	// Listen to message from child window
+	eventer(messageEvent,function(e) {
+		var thisEl = '.' + e.data.element;
+		$(thisEl).height(e.data.elementHeight);
+	},false)
+</script>
 
 <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/2.0.0/lazysizes.min.js"></script>-->
 <?php include("footer.php"); ?>
