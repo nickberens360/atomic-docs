@@ -30,13 +30,5 @@
         "backgroundColor": "",
         "order": 2,
         "has_js": "false"
-    },
-    {
-        "component": "slow-load",
-        "category": "readme",
-        "description": "",
-        "backgroundColor": "",
-        "order": -3,
-        "has_js": "false"
     }
 ]
