@@ -1,8 +1,8 @@
 //@import "normalize";
 @import "prism";
 @import "spectrum-picker";
+@import "bootstrap/bootstrap";
 #atomsWrap{
-  @import "bootstrap/bootstrap";
   @import "utilities/utilities";
   @import "atoms/atoms";
   @import "molecules/molecules";

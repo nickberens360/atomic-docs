@@ -46,7 +46,6 @@
 
 <body>
 
-<span class="click">Click me!!!</span>
 
 
 <div class="indexBlock">
