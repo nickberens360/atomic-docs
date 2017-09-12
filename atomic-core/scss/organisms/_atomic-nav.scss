@@ -156,7 +156,6 @@
   background: #00aff0;
   cursor: pointer;
   position: fixed;
-  z-index: 5000;
   color: #fff;
   height: 30px;
   width: 30px;
@@ -166,13 +165,15 @@
   box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 5px 2px;
   opacity: .4;
   top: 7px;
-  right: -100%;
+  left: -100%;
   z-index: 7000;
   &:hover {
     opacity: 1;
   }
 
 }
+
+
 
 .catAdd {
   a {
@@ -202,7 +203,7 @@
 
 
 
-@media (max-width: 824px) {
+/*@media (max-width: 824px) {
   .atoms-side {
     transition: all .25s;
     transform: translateX(-100%);
@@ -211,7 +212,7 @@
   .atomic-h1 {
     margin-left: 24px;
   }
-}
+}*/
 
 
 

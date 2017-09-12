@@ -714,6 +714,16 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     height: 100%;
 }*/
   /****************************/
+  /*@media (max-width: 824px) {
+  .atoms-side {
+    transition: all .25s;
+    transform: translateX(-100%);
+    width: 100%;
+  }
+  .atomic-h1 {
+    margin-left: 24px;
+  }
+}*/
   /*body {
   color: #7A7A7A;
   font-family: $font1;
@@ -1192,7 +1202,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     background: #00aff0;
     cursor: pointer;
     position: fixed;
-    z-index: 5000;
     color: #fff;
     height: 30px;
     width: 30px;
@@ -1202,7 +1211,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 5px 2px;
     opacity: .4;
     top: 7px;
-    right: -100%;
+    left: -100%;
     z-index: 7000; }
     #atomsWrap .atoms-side_show-small:hover, #atomsWrap .smallOpen:hover {
       opacity: 1; }
@@ -1218,13 +1227,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   #atomsWrap .catAdd .fa {
     font-size: 12px;
     margin-right: 4px; }
-  @media (max-width: 824px) {
-    #atomsWrap .atoms-side {
-      transition: all .25s;
-      transform: translateX(-100%);
-      width: 100%; }
-    #atomsWrap .atomic-h1 {
-      margin-left: 24px; } }
   #atomsWrap .aa_dir .fa-pencil-square-o {
     display: none; }
   #atomsWrap .aa_dir.active .fa-pencil-square-o {
