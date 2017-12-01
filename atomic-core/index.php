@@ -296,7 +296,16 @@ $settings = $settings->select(array());
                      style="background-color:<?php echo $component['backgroundColor'] ?>">
 
 
-                    <?php require('../' . $setting['component_directory'] . '/' . $cat . '/' . $component['component'] . '.' . $setting['component_extension'] . ''); ?>
+                    <?php
+                    $componentFile = '../' . $setting['component_directory'] . '/' . $cat . '/' . $component['component'] . '.' . $setting['component_extension'];
+
+                    if(file_exists($componentFile)){
+                        require($componentFile);
+                    }
+                    else {
+                        echo 'Component does not exist';
+                    }
+                    ?>
 
 
                 </div>
