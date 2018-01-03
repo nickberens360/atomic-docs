@@ -24,7 +24,7 @@
 </div>
 
 <form id="delete-comp-file">
-    <button class="aa_btn aa_btn-full aa_btn-neg" type="submit" name="delete_button" value="delete">Delete
+    <button class="aa_btn aa_btn-full aa_btn-neg" type="submit" name="delete_button" value="delete" onclick="return confirm('Are you sure?')">Delete
         Component
     </button>
 </form>
