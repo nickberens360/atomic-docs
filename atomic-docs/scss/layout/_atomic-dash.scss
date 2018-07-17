@@ -1,0 +1,130 @@
+/* scss/layout/_atomic-dash.scss */
+
+html, body, .atomic-dash, .atomic-dash__item{
+  height: 100%;
+}
+
+
+$atomicSideWidth: 225px;
+
+.atomic-dash{
+  @extend .grid-row;
+}
+
+.atomic-dash__side{
+  float: left;
+  width: $atomicSideWidth;
+  //transform: translate(0);
+  transition: width .25s;
+  position: relative;
+  z-index: 10;
+  overflow: auto;
+  background: $color3;
+  //background: #e3e3e3;
+  font-family: $font1;
+  ul{
+    margin-top: 0;
+  }
+
+
+}
+
+.atomic-dirBoxGroup{
+
+  //padding-top: 30px;
+}
+
+
+
+.atomic-dash__main{
+  overflow: auto;
+  position: relative;
+  z-index: 20;
+}
+
+.atomic-dash__content{
+  padding: $base;
+}
+
+
+
+.atomic-dash-is-active{
+  .atomic-dash__side{
+    width: 50px;
+    overflow: hidden;
+  }
+
+
+
+
+
+  .atomic-sideBar{
+    width: 50px;
+    padding: 0;
+  }
+
+  .atomic-actions {
+    top: auto;
+    transform: none;
+  }
+  .atomic-controlBar{
+    height: auto;
+  }
+
+
+
+
+
+  .atomic-dirBoxGroup{
+    display: none;
+  }
+
+  .atomic-controlBar{
+    padding: 0;
+  }
+
+  .atomic-actions{
+    li{
+      display: block;
+    }
+    a{
+      padding: 6px 0px;
+    }
+  }
+
+  .atomic-logoBox{
+    display: none;
+    /*margin-bottom: 12px;
+    height: 36px;
+    overflow: hidden;
+    padding: 0;
+    img{
+      max-width: 100%;
+      min-width: 67px;
+      margin: auto;
+      position: relative;
+      left: -11px;
+      top: 6px;
+    }*/
+  }
+
+
+  .atomic-dash__hide{
+    .fa{
+      &:before{
+        content: "\f061";
+      }
+    }
+  }
+}
+
+
+
+/*.atomic-dash-is-open{
+  .atomic-dash__side{
+    width: $atomicSideWidth;
+  }
+}*/
+
+
+

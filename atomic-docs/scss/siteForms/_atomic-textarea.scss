@@ -1,0 +1,8 @@
+/* scss/siteForms/_atomic-textarea.scss */
+
+.atomic-textarea{
+  @extend .atomic-input;
+  height: 150px;
+  padding: 20px;
+  text-indent: 0;
+}

@@ -1,0 +1,42 @@
+/*scss/variables/_col.scss*/
+
+$one: 100%;
+$two:	16.6666666667%;
+$three: 25%;
+$four: 33.3333333333%;
+$five: 41.6666666667%;
+$six: 50%;
+$seven: 58.3333333333%;
+$eight: 66.6666666667%;
+$nine: 75%;
+$ten: 83.3333333333%;
+$eleven: 91.6666666667%;
+$twelve: 100%;
+
+
+@mixin col($width) {
+  float:left;
+	width: $width;
+}
+/*@include col($six);*/
+
+@mixin row() {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.gridExample{
+  .grid-row{
+    margin-bottom:10px; 
+  }
+  [class*='nb-']{
+    padding-right:10px;
+  }
+  span{
+    background:#E4E4E4; 
+    padding:10px;
+    font-size:11px;
+    display:block;
+  }
+}

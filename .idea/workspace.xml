@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0898b0db-3be7-48c5-ab39-72b8d4f4defd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/GulpFile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/clientmode.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/copy.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/css/main.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/css/site.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/db-inc/dbinc.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/fllat.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/HELP-US-OUT.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/css/font-awesome.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/css/font-awesome.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/fonts/FontAwesome.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/less/animated.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/less/bordered-pulled.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/less/core.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/less/fixed-width.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/less/font-awesome.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/less/icons.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/less/larger.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/less/list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/less/mixins.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/less/path.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/less/rotated-flipped.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/less/stacked.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/less/variables.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/scss/_animated.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/scss/_bordered-pulled.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/scss/_core.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/scss/_fixed-width.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/scss/_icons.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/scss/_larger.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/scss/_list.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/scss/_mixins.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/scss/_path.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/scss/_rotated-flipped.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/scss/_stacked.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/scss/_variables.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/font-awesome/scss/font-awesome.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/footer.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/head.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/circle.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/demo1.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/doc1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/doc2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/doc3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/doc4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/doc5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/document.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/drag-demo.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/editor-gif.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/helpful.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/manage.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/organize.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/img/settings.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/importer.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/index-bu.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/index.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/_expand-form.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/ajax-category.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/ajax-component.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/ajax-edit-category.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/ajax-edit-component.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/ajax-edit-settings.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/ajax-import.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/ajax-jsfile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/ajax-nav-sort.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/ajax-temp-editor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/animateHeight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/drag-drop.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/editable-content.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/editor-stuff.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/enquire.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/formShowHide.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/fuzzysearch.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/hideAll.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/hideCode.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/hideNave.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/hideNotes.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/hideTitle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/lazysizes.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/ajax-category.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/ajax-component.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/ajax-delete-category.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/ajax-edit-category.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/ajax-edit-component.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/ajax-edit-settings.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/ajax-import.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/ajax-nav-sort.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/ajax-temp-editor.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/animateHeight.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/compiled.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/compiled.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/drag-drop.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/editable-content.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/editor-stuff.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/hideAll.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/hideCode.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/hideNotes.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/iframe-sizer.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/main.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/min/compiled.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/min/slideAnimation.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/navSmall.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/prism-builder.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/prism.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/searchUi.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/slideAnimation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/spectrum-picker.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ace.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-beautify.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-chromevox.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-elastic_tabstops_lite.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-emmet.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-error_marker.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-keybinding_menu.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-language_tools.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-linking.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-modelist.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-old_ie.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-searchbox.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-settings_menu.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-spellcheck.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-split.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-static_highlight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-statusbar.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-textarea.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-themelist.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/ext-whitespace.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/keybinding-emacs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/keybinding-vim.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-abap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-abc.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-actionscript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-ada.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-apache_conf.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-applescript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-asciidoc.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-assembly_x86.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-autohotkey.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-batchfile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-c9search.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-c_cpp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-cirru.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-clojure.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-cobol.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-coffee.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-coldfusion.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-csharp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-css.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-curly.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-d.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-dart.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-diff.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-django.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-dockerfile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-dot.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-eiffel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-ejs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-elixir.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-elm.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-erlang.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-forth.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-fortran.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-ftl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-gcode.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-gherkin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-gitignore.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-glsl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-gobstones.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-golang.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-groovy.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-haml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-handlebars.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-haskell.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-haxe.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-html.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-html_elixir.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-html_ruby.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-ini.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-io.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-jack.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-jade.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-java.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-javascript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-json.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-jsoniq.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-jsp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-jsx.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-julia.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-latex.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-lean.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-less.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-liquid.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-lisp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-live_script.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-livescript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-logiql.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-lsl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-lua.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-luapage.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-lucene.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-makefile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-markdown.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-mask.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-matlab.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-maze.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-mel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-mips_assembler.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-mipsassembler.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-mushcode.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-mysql.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-nix.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-nsis.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-objectivec.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-ocaml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-pascal.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-perl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-pgsql.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-php.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-plain_text.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-powershell.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-praat.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-prolog.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-properties.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-protobuf.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-python.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-r.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-razor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-rdoc.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-rhtml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-rst.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-ruby.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-rust.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-sass.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-scad.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-scala.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-scheme.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-scss.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-sh.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-sjs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-smarty.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-snippets.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-soy_template.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-space.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-sql.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-sqlserver.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-stylus.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-svg.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-swift.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-swig.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-tcl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-tex.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-text.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-textile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-toml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-twig.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-typescript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-vala.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-vbscript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-velocity.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-verilog.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-vhdl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-wollok.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-xml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-xquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/mode-yaml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/abap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/abc.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/actionscript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/ada.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/apache_conf.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/applescript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/asciidoc.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/assembly_x86.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/autohotkey.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/batchfile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/c9search.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/c_cpp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/cirru.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/clojure.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/cobol.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/coffee.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/coldfusion.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/csharp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/css.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/curly.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/d.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/dart.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/diff.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/django.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/dockerfile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/dot.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/eiffel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/ejs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/elixir.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/elm.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/erlang.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/forth.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/fortran.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/ftl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/gcode.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/gherkin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/gitignore.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/glsl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/gobstones.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/golang.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/groovy.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/haml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/handlebars.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/haskell.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/haxe.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/html.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/html_elixir.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/html_ruby.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/ini.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/io.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/jack.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/jade.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/java.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/javascript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/json.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/jsoniq.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/jsp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/jsx.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/julia.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/latex.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/lean.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/less.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/liquid.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/lisp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/live_script.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/livescript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/logiql.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/lsl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/lua.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/luapage.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/lucene.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/makefile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/markdown.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/mask.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/matlab.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/maze.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/mel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/mips_assembler.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/mipsassembler.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/mushcode.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/mysql.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/nix.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/nsis.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/objectivec.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/ocaml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/pascal.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/perl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/pgsql.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/php.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/plain_text.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/powershell.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/praat.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/prolog.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/properties.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/protobuf.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/python.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/r.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/razor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/rdoc.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/rhtml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/rst.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/ruby.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/rust.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/sass.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/scad.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/scala.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/scheme.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/scss.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/sh.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/sjs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/smarty.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/snippets.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/soy_template.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/space.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/sql.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/sqlserver.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/stylus.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/svg.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/swift.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/swig.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/tcl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/tex.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/text.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/textile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/toml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/twig.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/typescript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/vala.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/vbscript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/velocity.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/verilog.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/vhdl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/wollok.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/xml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/xquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/snippets/yaml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-ambiance.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-chaos.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-chrome.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-clouds.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-clouds_midnight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-cobalt.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-crimson_editor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-dawn.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-dreamweaver.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-eclipse.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-github.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-idle_fingers.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-iplastic.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-katzenmilch.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-kr_theme.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-kuroir.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-merbivore.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-merbivore_soft.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-mono_industrial.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-monokai.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-pastel_on_dark.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-solarized_dark.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-solarized_light.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-sqlserver.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-terminal.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-textmate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-tomorrow.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-tomorrow_night.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-tomorrow_night_blue.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-tomorrow_night_bright.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-tomorrow_night_eighties.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-twilight.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-vibrant_ink.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/theme-xcode.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/worker-coffee.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/worker-css.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/worker-html.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/worker-javascript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/worker-json.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/worker-lua.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/worker-php.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/worker-xml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/src-min/worker-xquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/uncomment.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/velocity-ui.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/js/velocity.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/min/GulpFile.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/partial.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/_cleanup.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/_main-bu.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/_normalize.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/_prism.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/_spectrum-picker.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/atoms/_atomic-h1.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/atoms/_atoms.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/atoms/_error-msg.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/atoms/_form-elements.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/_bootstrap-compass.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/_bootstrap-mincer.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/_bootstrap-sprockets.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/_bootstrap.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_alerts.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_badges.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_breadcrumbs.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_button-groups.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_buttons.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_carousel.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_close.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_code.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_component-animations.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_dropdowns.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_forms.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_glyphicons.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_grid.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_input-groups.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_jumbotron.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_labels.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_list-group.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_media.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_mixins.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_modals.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_navbar.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_navs.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_normalize.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_pager.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_pagination.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_panels.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_popovers.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_print.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_progress-bars.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_responsive-embed.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_responsive-utilities.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_scaffolding.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_tables.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_theme.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_thumbnails.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_tooltip.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_type.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_utilities.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_variables.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/_wells.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_alerts.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_background-variant.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_border-radius.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_buttons.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_center-block.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_clearfix.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_forms.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_gradients.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_grid-framework.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_grid.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_hide-text.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_image.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_labels.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_list-group.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_nav-divider.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_nav-vertical-align.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_opacity.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_pagination.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_panels.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_progress-bar.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_reset-filter.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_resize.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_responsive-visibility.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_size.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_tab-focus.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_table-row.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_text-emphasis.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_text-overflow.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/bootstrap/bootstrap/mixins/_vendor-prefixes.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/molecules/_atomic-link-group.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/molecules/_atomic-search.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/molecules/_atomic-sub-menu.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/molecules/_cat-form.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/molecules/_compNotes.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/molecules/_copyBtn.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/molecules/_molecules.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/organisms/_actionDrawer.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/organisms/_atomic-main.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/organisms/_atomic-nav.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/organisms/_atomic-tabs.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/organisms/_editor.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/organisms/_importPage.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/organisms/_introBlock.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/organisms/_organisms.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/site.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/utilities/_grid.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/utilities/_showHide.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/utilities/_utilities.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/scss/utilities/_variables.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/sidebar.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-forms/temp-category-form.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-forms/temp-create-component-form.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-forms/temp-edit-category-form.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-forms/temp-edit-component-form.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-forms/temp-edit-settings-form.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-functions/create-category-functions.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-functions/create-component-functions.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-functions/db-functions.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-functions/delete-category-functions.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-functions/delete-component-functions.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-functions/edit-category-functions.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-functions/edit-component-functions.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-functions/edit-settings-functions.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-functions/functions.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-functions/import-functions.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-functions/sort-functions.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-functions/validation.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-processing/temp-create-category.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-processing/temp-create-component.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-processing/temp-create-jsfile.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-processing/temp-delete-category.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-processing/temp-delete-component.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-processing/temp-edit-category.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-processing/temp-edit-component.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-processing/temp-edit-settings.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-processing/temp-editor.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-processing/temp-import.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-processing/temp-nav-cat-sort.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-processing/temp-nav-comp-sort.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/temp-processing/temp-nav-compCat-sort.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/user_config.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/emmet/emmet.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/leafo/scssphp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/min/jquery.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/netzmacht/assetic-autoprefixer" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/newSort/Sortable.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/newSort/Sortable.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/newSort/jquery.binding.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/newSort/jquery.fn.sortable.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/output-tab.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/prequel.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/zero/.jshintrc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/zero/ZeroClipboard.Core.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/zero/ZeroClipboard.Core.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/zero/ZeroClipboard.Core.min.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/zero/ZeroClipboard.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/zero/ZeroClipboard.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/zero/ZeroClipboard.min.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-core/vendor/zero/ZeroClipboard.swf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-db/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-db/categories.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-db/components.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-db/settings.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-foot.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atomic-head.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/components/.keep" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/components/jsExample/clickme.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/components/jsExample/test.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/components/modules/box.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/components/readme/settings.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/components/readme/sidebars.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/components/uwdemo/row.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change beforePath="$PROJECT_DIR$/css/site.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change beforePath="$PROJECT_DIR$/js/clickme.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/js/min/clickme.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/js/min/main.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/js/row.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/scss/jsExample/_clickme.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/scss/jsExample/_jsExample.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/scss/jsExample/_test.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/scss/main.scss" afterPath="$PROJECT_DIR$/scss/main.scss" />
+      <change beforePath="$PROJECT_DIR$/scss/modules/_box.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/scss/modules/_modules.scss" afterPath="$PROJECT_DIR$/scss/modules/_modules.scss" />
+      <change beforePath="$PROJECT_DIR$/scss/readme/_readme.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/scss/readme/_settings.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/scss/readme/_sidebars.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/scss/uwdemo/_row.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/scss/uwdemo/_uwdemo.scss" afterPath="" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>add a</find>
+      <find>fontaw</find>
+      <find>&quot;atomic-pageBar</find>
+      <find>functions.php</find>
+      <find>require_once 'func</find>
+      <find>cat</find>
+      <find>inc</find>
+      <find>nkeys</find>
+      <find>js-atomic-add-component</find>
+      <find>ajaxWorking</find>
+      <find>styles</find>
+      <find>targ</find>
+      <find>1</find>
+      <find>.atomic-copy-target</find>
+      <find>.ajax-form</find>
+      <find>const</find>
+      <find>$component</find>
+      <find>wisnet.</find>
+      <find>.atomic-catTitle</find>
+      <find>id=&quot;atomic-search&quot;</find>
+      <find>atomic-edit-category</find>
+      <find>testee</find>
+      <find>$categpry</find>
+      <find>catName</find>
+      <find>alias</find>
+      <find>add cat</find>
+      <find>&lt;?= $f3-&gt;PATH; ?&gt;</find>
+      <find>dirP</find>
+      <find>echo</find>
+      <find>$catName</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>$font1</replace>
+      <replace>.atomic-editor__inner</replace>
+      <replace>editormarkup</replace>
+      <replace>editorstyles</replace>
+      <replace>pageBar</replace>
+      <replace>component__compeBar</replace>
+      <replace>component__compBar</replace>
+      <replace>compBar</replace>
+      <replace>atomic-search</replace>
+      <replace>$color1</replace>
+      <replace>$color3</replace>
+      <replace>fa-folder</replace>
+      <replace>@component</replace>
+      <replace>&lt;?= $comp-&gt;componentId ?&gt;</replace>
+      <replace>=</replace>
+      <replace>comp</replace>
+      <replace>js</replace>
+      <replace>var</replace>
+      <replace>$categpry</replace>
+      <replace>$category</replace>
+      <replace>$folderPath</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\xampp\htdocs\atomic-docs4\atomic-core</dir>
+      <dir>C:\xampp\htdocs\atomic-docs4\atomic-core\scss</dir>
+      <dir>C:\xampp\htdocs\atomic-docs4\scss</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/atomic-docs/app/views/home/search.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/scss/organisms/_atomic-search.scss" />
+        <option value="$PROJECT_DIR$/components/something/colorTest.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/scss/molecules/_atomic-component.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/views/category/edit.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/views/component/edit.php" />
+        <option value="$PROJECT_DIR$/js/editTesterlingsss.js" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/views/component/edit-color.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/scss/molecules/_atomic-compBar.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/js/atomic-compWrap.js" />
+        <option value="$PROJECT_DIR$/scss/organisms/_banner.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/js/atomic-category.js" />
+        <option value="$PROJECT_DIR$/atomic-docs/js/main.js" />
+        <option value="$PROJECT_DIR$/atomic-docs/js/atomic-component.js" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/views/component/view-BAK.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/scss/siteButtons/_atomic-btnGroup.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/scss/siteButtons/_atomic-btn.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/views/component/add.php" />
+        <option value="$PROJECT_DIR$/scss/atoms/_atoms.scss" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/functions.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/views/category/add.php" />
+        <option value="$PROJECT_DIR$/scss/stuff/_stuff.scss" />
+        <option value="$PROJECT_DIR$/scss/test/_test.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/views/component/view.php" />
+        <option value="$PROJECT_DIR$/scss/test/sub-test-2/_sub-test-2.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/views/common/footer.php" />
+        <option value="$PROJECT_DIR$/scss/testsss/sub-test-2/_sub-test-2.scss" />
+        <option value="$PROJECT_DIR$/scss/testsss/_testsss.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/views/common/pageBar.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/routes.ini" />
+        <option value="$PROJECT_DIR$/scss/base/_base.scss" />
+        <option value="$PROJECT_DIR$/components/organisms/sub-3/file.php" />
+        <option value="$PROJECT_DIR$/scss/organisms/_box.scss" />
+        <option value="$PROJECT_DIR$/scss/testing/sub/_sub.scss" />
+        <option value="$PROJECT_DIR$/scss/testing/_testing.scss" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/services/FileSystemService.php" />
+        <option value="$PROJECT_DIR$/scss/common/_common.scss" />
+        <option value="$PROJECT_DIR$/GulpFile.js" />
+        <option value="$PROJECT_DIR$/scss/main.scss" />
+        <option value="$PROJECT_DIR$/scss/global/mast/_mast.scss" />
+        <option value="$PROJECT_DIR$/scss/global/mast/_masthead-3.scss" />
+        <option value="$PROJECT_DIR$/components/global/mast/masthead-3.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/controllers/ComponentController.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/views/common/header.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/controllers/Controller.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/controllers/CategoryController.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/views/common/sideBar.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/scss/molecules/_atomic-dirBox.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/js/atomic-dirBox.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/atomic-docs/package.json" />
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1920" />
+    <option name="y" value="-49" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="atomicdocs-git.dev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atomicdocs-git.dev" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="DockerRegistry" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="PHP&#10;CSS&#10;SCSS&#10;HTML" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/atomic-docs/app/controllers" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/atomic-docs/app/views/component" />
+      <recent name="$PROJECT_DIR$/js" />
+      <recent name="$PROJECT_DIR$/atomic-docs/app/models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/atomic-docs/app/views/home" />
+      <recent name="$PROJECT_DIR$/atomic-docs/app/views/common" />
+      <recent name="$PROJECT_DIR$/atomic-docs/app/views/component" />
+      <recent name="$PROJECT_DIR$/atomic-docs/app/views/category" />
+      <recent name="C:\xampp\htdocs\atomic-docs4" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0898b0db-3be7-48c5-ab39-72b8d4f4defd" name="Default" comment="" />
+      <created>1502464015251</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1502464015251</updated>
+      <workItem from="1502464016518" duration="2046000" />
+      <workItem from="1505500158021" duration="15817000" />
+      <workItem from="1505759164429" duration="93594000" />
+      <workItem from="1506711818568" duration="55848000" />
+      <workItem from="1507665211670" duration="24233000" />
+      <workItem from="1508527810581" duration="31387000" />
+      <workItem from="1509111073511" duration="4742000" />
+      <workItem from="1509541205525" duration="684000" />
+      <workItem from="1509739900382" duration="4143000" />
+      <workItem from="1510004775406" duration="2395000" />
+      <workItem from="1510259244998" duration="4462000" />
+      <workItem from="1511382952570" duration="9987000" />
+      <workItem from="1512154179924" duration="2550000" />
+      <workItem from="1516215655937" duration="4103000" />
+      <workItem from="1516220135535" duration="12555000" />
+      <workItem from="1516374002710" duration="5005000" />
+      <workItem from="1517495857836" duration="105720000" />
+      <workItem from="1519741230424" duration="106241000" />
+      <workItem from="1520861219514" duration="58283000" />
+      <workItem from="1521464606193" duration="15661000" />
+      <workItem from="1522166585831" duration="160000" />
+      <workItem from="1522181403553" duration="1177000" />
+      <workItem from="1522248414327" duration="3395000" />
+      <workItem from="1524073940488" duration="3926000" />
+      <workItem from="1524674669158" duration="1277000" />
+      <workItem from="1524681698424" duration="573000" />
+      <workItem from="1524709404898" duration="515000" />
+      <workItem from="1531830106327" duration="979000" />
+      <workItem from="1531831342994" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="571531000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1920" y="-49" width="1920" height="1057" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19062833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27027026" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/scss/test/sub-test-2/_sub-test-2.scss" />
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/controllers/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/testsss/_testsss.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/testsss/sub-test-2/_sub-test-2.scss" />
+    <entry file="file://$PROJECT_DIR$/components/testsss/sub-test-2/bloops.php" />
+    <entry file="file://$PROJECT_DIR$/scss/molecules/sub/_sub.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/molecules/_molecules.scss" />
+    <entry file="file://$PROJECT_DIR$/components/molecules/sub-3/file.php" />
+    <entry file="file://$PROJECT_DIR$/components/organisms/box.php" />
+    <entry file="file://$PROJECT_DIR$/scss/organisms/new-sub/_new-sub.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/organisms/sub-3/_file.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/base/sub/_sub.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/base/sub/_subfile.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/base/_base.scss" />
+    <entry file="file://$PROJECT_DIR$/components/organisms/sub-3/file.php" />
+    <entry file="file://$PROJECT_DIR$/scss/organisms/_box.scss" />
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="47" lean-forward="false" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/views/common/pageBar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="23" column="94" lean-forward="false" selection-start-line="23" selection-start-column="94" selection-end-line="23" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/routes.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="90" lean-forward="false" selection-start-line="25" selection-start-column="90" selection-end-line="25" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/testing/sub/_sub.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/testing/_testing.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/common/headers/_headers.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/common/headers/_headerMain.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/common/_footer.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/common/_common.scss" />
+    <entry file="file://$PROJECT_DIR$/atomic-docs/atomic-core/temp-functions/sort-functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2085">
+          <caret line="139" column="9" lean-forward="false" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/atomic-core/temp-processing/temp-nav-compCat-sort.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="49" column="11" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/atomic-core/temp-processing/temp-nav-cat-sort.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GulpFile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/services/FileService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/global/mast/_headerMain.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/global/_global.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/global/mast/_mast.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/masthead-3.js" />
+    <entry file="file://$PROJECT_DIR$/scss/global/mast/_masthead-3.scss" />
+    <entry file="file://$PROJECT_DIR$/components/global/mast/masthead-3.php" />
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/views/common/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/controllers/ComponentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="617" column="16" lean-forward="false" selection-start-line="617" selection-start-column="16" selection-end-line="617" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="160" column="36" lean-forward="false" selection-start-line="160" selection-start-column="36" selection-end-line="160" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/js/atomic-compWrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="26" lean-forward="true" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/views/common/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="65" lean-forward="false" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/services/FileSystemService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/controllers/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="181" column="42" lean-forward="true" selection-start-line="181" selection-start-column="42" selection-end-line="181" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/scss/molecules/_atomic-dirBox.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="132" column="3" lean-forward="false" selection-start-line="132" selection-start-column="3" selection-end-line="132" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/views/common/sideBar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="113" lean-forward="false" selection-start-line="53" selection-start-column="113" selection-end-line="53" selection-end-column="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/js/atomic-dirBox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

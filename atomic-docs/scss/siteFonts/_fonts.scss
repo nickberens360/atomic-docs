@@ -1,0 +1,18 @@
+/* scss/siteFonts/_fonts.scss */
+
+$font1: 'Open Sans', sans-serif;
+$font2: 'Open Sans', sans-serif;
+
+.font1{
+	font-family: $font1;
+}
+.font2{
+	font-family: $font2;
+}
+
+.font{
+    font-weight: 400;
+	span{
+		display:block;
+	}
+}

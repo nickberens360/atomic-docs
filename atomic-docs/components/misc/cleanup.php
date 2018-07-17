@@ -1,0 +1,1 @@
+<!-- components/misc/cleanup.php -->

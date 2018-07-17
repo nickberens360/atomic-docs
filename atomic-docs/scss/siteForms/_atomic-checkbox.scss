@@ -1,0 +1,35 @@
+/* scss/siteForms/_atomic-checkbox.scss */
+
+.atomic-formGroup-check {
+  margin-bottom: 0;
+  display: inline-block;
+  //vertical-align: middle;
+  label {
+    font-weight: 300;
+    margin-bottom: 0;
+    color: $color1 !important;
+    font-size: 12px;
+  }
+}
+
+
+.atomic-formInput-check {
+  display: none;
+}
+
+.atomic-formInput-check + label span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  border: 1px solid $color1;
+  cursor: pointer;
+  position: relative;
+  //top: -1px;
+  border-radius: 2px;
+}
+
+.atomic-formInput-check:checked + label span {
+  background: $color1;
+}

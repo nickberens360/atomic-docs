@@ -1,0 +1,106 @@
+/* scss/molecules/_atomic-compBar.scss */
+
+
+.atomic-compBar{
+  @extend .grid-row;
+  /*background: $color3;
+  padding: 10px;
+  margin-bottom: $base;
+  border-left: 4px solid $color1;*/
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  background: #f7f7f7;
+  border-left: 5px solid #03aff0;
+  font-family: $font1;
+}
+
+.atomic-compBarLeft{
+  @include col($six);
+}
+
+.atomic-compBarRight{
+  @include col($six);
+  .atomic-dashControls{
+    float: right;
+    i{
+      font-size: 17px;
+      vertical-align: middle;
+      color: $textColor;
+    }
+  }
+}
+
+
+.atomic-component__title{
+
+  font-weight: bold;
+  color: #3a424c;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 17px;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.atomic-component__actions{
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  i, a, form {
+    margin-right: 5px;
+    font-size: 19px;
+    color: $textColor;
+    vertical-align: middle;
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+.atomic-compDim-val{
+  border: none;
+  text-align: right;
+  width: 75px;
+  padding: 0 10px;
+  height: 25px;
+  border-radius: 2px;
+  &:focus{
+    outline: none;
+  }
+  &:last-of-type{
+    margin-right: 10px;
+  }
+}
+
+.atomic-dimDivider{
+  display: inline-block;
+  vertical-align: middle;
+  color: $textColor;
+  position: relative;
+  left: 9px;
+}
+
+.atomic-dimLabel{
+  font-size: 12px;
+  color: $textColor;
+  position: relative;
+  left: 21px;
+  &:first-of-type{
+    left: 24px;
+  }
+}
+
+.atomic-pageBar{
+  .atomic-compDim-val{
+    background: #0fbafb;
+    color: #fff;
+  }
+  .atomic-dimLabel{
+    color: #fff;
+  }
+  .atomic-dimDivider{
+    color: #fff;
+  }
+}

@@ -1,0 +1,394 @@
+[
+    {
+        "component": "block-grid",
+        "category": "layout",
+        "description": "",
+        "backgroundColor": "",
+        "order": "1",
+        "has_js": "false"
+    },
+    {
+        "component": "grid",
+        "category": "layout",
+        "description": "",
+        "backgroundColor": "",
+        "order": "2",
+        "has_js": "false"
+    },
+    {
+        "component": "main",
+        "category": "layout",
+        "description": "",
+        "backgroundColor": "",
+        "order": "3",
+        "has_js": "false"
+    },
+    {
+        "component": "matchheight",
+        "category": "layout",
+        "description": "",
+        "backgroundColor": "",
+        "order": "4",
+        "has_js": "false"
+    },
+    {
+        "component": "section",
+        "category": "layout",
+        "description": "",
+        "backgroundColor": "",
+        "order": "5",
+        "has_js": "false"
+    },
+    {
+        "component": "navMain",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": 0,
+        "has_js": "true"
+    },
+    {
+        "component": "footerMain",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": 1,
+        "has_js": "false"
+    },
+    {
+        "component": "headerMain",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": 0,
+        "has_js": "false"
+    },
+    {
+        "component": "recentPosts",
+        "category": "sideBars",
+        "description": "",
+        "backgroundColor": "",
+        "order": "1",
+        "has_js": "false"
+    },
+    {
+        "component": "col",
+        "category": "variables",
+        "description": "",
+        "backgroundColor": "",
+        "order": 1,
+        "has_js": "false"
+    },
+    {
+        "component": "colors",
+        "category": "siteColors",
+        "description": "",
+        "backgroundColor": "",
+        "order": 0,
+        "has_js": "false"
+    },
+    {
+        "component": "vertical-rhythm",
+        "category": "variables",
+        "description": "",
+        "backgroundColor": "",
+        "order": 3,
+        "has_js": "false"
+    },
+    {
+        "component": "wrap",
+        "category": "variables",
+        "description": "",
+        "backgroundColor": "",
+        "order": 4,
+        "has_js": "false"
+    },
+    {
+        "component": "cleanup",
+        "category": "misc",
+        "description": "",
+        "backgroundColor": "",
+        "order": -18,
+        "has_js": "false"
+    },
+    {
+        "component": "appImg",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": 1,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-head",
+        "category": "atomicHead",
+        "description": "",
+        "backgroundColor": "",
+        "order": -22,
+        "has_js": "false"
+    },
+    {
+        "component": "fonts",
+        "category": "siteFonts",
+        "description": "",
+        "backgroundColor": "",
+        "order": 0,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-dash",
+        "category": "layout",
+        "description": "",
+        "backgroundColor": "",
+        "order": -27,
+        "has_js": "true"
+    },
+    {
+        "component": "atomic-logoBox",
+        "category": "layout",
+        "description": "",
+        "backgroundColor": "",
+        "order": -28,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-actions",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -29,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-dirBox",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -30,
+        "has_js": "true"
+    },
+    {
+        "component": "atomic-pageBar",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -31,
+        "has_js": "true"
+    },
+    {
+        "component": "atomic-search",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -32,
+        "has_js": "true"
+    },
+    {
+        "component": "atomic-compWrap",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -33,
+        "has_js": "true"
+    },
+    {
+        "component": "atomic-tabs",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -34,
+        "has_js": "true"
+    },
+    {
+        "component": "atomic-editor",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -35,
+        "has_js": "true"
+    },
+    {
+        "component": "atomic-editPanel",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -36,
+        "has_js": "true"
+    },
+    {
+        "component": "atomic-compBar",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -37,
+        "has_js": "true"
+    },
+    {
+        "component": "atomic-compDescription",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -38,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-component",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -39,
+        "has_js": "false"
+    },
+    {
+        "component": "box",
+        "category": "misc",
+        "description": "",
+        "backgroundColor": "",
+        "order": -39,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-sideBar",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -40,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-controlBar",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -41,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-input",
+        "category": "siteForms",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "order": -36,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-label",
+        "category": "siteForms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -37,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-textarea",
+        "category": "siteForms",
+        "description": "",
+        "backgroundColor": "#ececec",
+        "order": -38,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-btn",
+        "category": "siteButtons",
+        "description": "",
+        "backgroundColor": "",
+        "order": -37,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-btnGroup",
+        "category": "siteButtons",
+        "description": "",
+        "backgroundColor": "",
+        "order": -38,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-hint",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -39,
+        "has_js": "false"
+    },
+    {
+        "component": "spectrum-picker",
+        "category": "vendor",
+        "description": "",
+        "backgroundColor": "",
+        "order": -39,
+        "has_js": "true"
+    },
+    {
+        "component": "atomic-formGroup",
+        "category": "siteForms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -39,
+        "has_js": "false"
+    },
+    {
+        "component": "js-atomic-toggle",
+        "category": "js-stuff",
+        "description": "",
+        "backgroundColor": "",
+        "order": -40,
+        "has_js": "true"
+    },
+    {
+        "component": "atomic-editorFooter",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -41,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-tabs2",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -42,
+        "has_js": "true"
+    },
+    {
+        "component": "atomic-checkbox",
+        "category": "siteForms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -43,
+        "has_js": "false"
+    },
+    {
+        "component": "dataBind",
+        "category": "vendor",
+        "description": "",
+        "backgroundColor": "",
+        "order": -44,
+        "has_js": "true"
+    },
+    {
+        "component": "atomic-picker",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -45,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-add-comp-form",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -46,
+        "has_js": "false"
+    },
+    {
+        "component": "atomic-file-add-open",
+        "category": "states",
+        "description": "",
+        "backgroundColor": "",
+        "order": -47,
+        "has_js": "false"
+    }
+]

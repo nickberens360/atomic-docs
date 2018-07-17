@@ -1,0 +1,35 @@
+/*scss/variables/_wrap.scss*/
+
+$wrap: 1165px;
+$pad: 20px;
+$break: 100px+$pad;
+.wrap{
+	max-width:$wrap+$pad ;
+  padding-right:20px;
+  padding-left:20px;
+	margin-right:auto;
+	margin-left:auto;
+}
+@media (max-width: $break){ 
+  .wrap{
+    max-width:100%;
+  }
+}
+
+
+
+
+
+@mixin wrap($wrapWidth, $mpad) {
+	max-width:$wrapWidth + $mpad*2;
+	margin-right:auto;
+	margin-left:auto;
+  padding-right:$mpad;
+  padding-left:$mpad;
+	@media (max-width: $wrapWidth + 100){ 
+		&{
+			max-width:100%;
+		}
+	}
+}
+/*@include wrap($wrapWidth, $mpad);*/

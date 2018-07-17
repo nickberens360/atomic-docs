@@ -1,0 +1,50 @@
+/* scss/siteButtons/_atomic-btn.scss */
+
+.atomic-btn{
+  border: none;
+  color: #fff;
+  background-color: #7A7A7A;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  padding: 11px 10px;
+  border-radius: 3px;
+}
+
+.atomic-btn-1{
+  background: $color1;
+}
+
+.atomic-btn-2{
+  background: $color2;
+}
+
+
+.atomic-btn-3{
+  //background: #fa5d5d;
+  background: $color1;
+  width: auto;
+}
+
+.atomic-btn-4{
+  background: #fa5d5d;
+}
+
+
+.atomic-btn-simple{
+  background: none;
+  color: #fa5d5d;
+  font-weight: bold;
+  //text-decoration: underline;
+}
+
+.atomic-btn-icon{
+  @extend .atomic-tabs__item;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
