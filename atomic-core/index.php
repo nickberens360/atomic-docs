@@ -368,14 +368,15 @@ $settings = $settings->select(array());
                             <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
                                   data-editorFormCat="<?php echo $cat; ?>"
                                   data-codeDest="<?php echo $setting['component_directory'] ?>">
-                                <div class="copyBtn copyBtn-markup" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
-                                <div class="atomic-editorInner">
+                                <div  class="js-copyBtn copyBtn copyBtn-markup" data-clipboard-text="" data-copy-target="<?php echo $component['component'] ?>-markup-val"><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
+                                
+                                <div class="atomic-editorInner" id="<?php echo $component['component'] ?>-editorInner" >
 
                                     <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
                                     <?php $markup_file_content = file_get_contents('../' . $setting['component_directory'] . '/' . $cat . '/' . $component['component'] . '.' . $setting['component_extension'] . '', true); ?>
                                     <div class="atomic-editor"
                                          id="editor-markup-<?php echo $component['component'] ?>"><?= htmlspecialchars($markup_file_content, ENT_QUOTES); ?></div>
-                                    <input class="new-val-input" type="hidden"
+                                    <input id="<?php echo $component['component'] ?>-markup-val" class="new-val-input" type="hidden"
                                            name="new-markup-val-<?php echo $component['component'] ?>"
                                            value=""/>
                                 </div>
@@ -392,7 +393,7 @@ $settings = $settings->select(array());
                             <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
                                   data-editorFormCat="<?php echo $cat; ?>"
                                   data-codeDest="<?php echo $setting['component_directory'] ?>">
-                                <div class="copyBtn copyBtn-output" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
+                                <div class="js-copyBtn copyBtn copyBtn-output" data-clipboard-text="" data-copy-target="<?php echo $component['component'] ?>-new-val"><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
                                 <div class="atomic-editorInner">
 
                                     <div class="atomic-editor atomic-editor-output"
@@ -406,7 +407,7 @@ $settings = $settings->select(array());
                             <form class="atomic-editorWrap" data-editorFormComp="<?php echo $component['component'] ?>"
                                   data-editorFormCat="<?php echo $cat; ?>"
                                   data-codeDest="<?php echo $setting['styles_directory'] ?>">
-                                <div class="copyBtn copyBtn-styles" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
+                                <div class="js-copyBtn copyBtn copyBtn-styles" data-clipboard-text="" data-copy-target="<?php echo $component['component'] ?>-style-val"><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
                                 <div class="atomic-editorInner">
 
                                     <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
@@ -416,7 +417,7 @@ $settings = $settings->select(array());
                                     <div class="atomic-editor"
                                          id="editor-styles-<?php echo $component['component'] ?>"><?= htmlspecialchars($style_file_content, ENT_QUOTES); ?></div>
 
-                                    <input class="new-val-input" type="hidden"
+                                    <input id="<?php echo $component['component'] ?>-style-val" class="new-val-input" type="hidden"
                                            name="new-styles-val-<?php echo $component['component'] ?>" value=""/>
                                 </div>
                                 <div class="atomic-editor-footer">
@@ -434,7 +435,7 @@ $settings = $settings->select(array());
                                       data-editorFormComp="<?php echo $component['component'] ?>"
                                       data-editorFormCat="<?php echo $cat; ?>"
                                       data-codeDest="<?php echo $setting['js_directory'] ?>">
-                                    <div class="copyBtn copyBtn-js" data-clipboard-text=""><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
+                                    <div class="js-copyBtn copyBtn copyBtn-js" data-clipboard-text="" data-copy-target="<?php echo $component['component'] ?>-js-val"><i class="fa fa-clone" aria-hidden="true"></i> Copy</div>
                                     <div class="atomic-editorInner">
 
                                         <div class="copyBtn copyBtn-edit js-copyBtn-edit">Edit</div>
@@ -444,7 +445,7 @@ $settings = $settings->select(array());
                                         <div class="atomic-editor"
                                              id="editor-js-<?php echo $component['component'] ?>"><?= htmlspecialchars($style_file_content, ENT_QUOTES); ?></div>
 
-                                        <input class="new-val-input" type="hidden"
+                                        <input id="<?php echo $component['component'] ?>-js-val" class="new-val-input" type="hidden"
                                                name="new-js-val-<?php echo $component['component'] ?>" value=""/>
                                     </div>
                                     <div class="atomic-editor-footer">
