@@ -95,7 +95,7 @@ class Session {
 				'agent'=>$this->_agent,
 				'stamp'=>time()
 			],
-			$jar['expire']?($jar['expire']-time()):0
+			$jar['expire']
 		);
 		return TRUE;
 	}
@@ -182,7 +182,11 @@ class Session {
 		register_shutdown_function('session_commit');
 		$fw=\Base::instance();
 		$headers=$fw->HEADERS;
-		$this->_csrf=$fw->SEED.'.'.$fw->hash(mt_rand());
+		$this->_csrf=$fw->hash($fw->SEED.
+			extension_loaded('openssl')?
+				implode(unpack('L',openssl_random_pseudo_bytes(4))):
+				mt_rand()
+			);
 		if ($key)
 			$fw->$key=$this->_csrf;
 		$this->_agent=isset($headers['User-Agent'])?$headers['User-Agent']:'';

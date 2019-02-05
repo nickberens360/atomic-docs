@@ -170,8 +170,9 @@ class Session extends Mapper {
 		if ($force) {
 			$eol="\n";
 			$tab="\t";
+			$sqlsrv=preg_match('/mssql|sqlsrv|sybase/',$db->driver());
 			$db->exec(
-				(preg_match('/mssql|sqlsrv|sybase/',$db->driver())?
+				($sqlsrv?
 					('IF NOT EXISTS (SELECT * FROM sysobjects WHERE '.
 						'name='.$db->quote($table).' AND xtype=\'U\') '.
 						'CREATE TABLE dbo.'):
@@ -179,12 +180,14 @@ class Session extends Mapper {
 						((($name=$db->name())&&$db->driver()!='pgsql')?
 							($db->quotekey($name,FALSE).'.'):''))).
 				$db->quotekey($table,FALSE).' ('.$eol.
+					($sqlsrv?$tab.$db->quotekey('id').' INT IDENTITY,'.$eol:'').
 					$tab.$db->quotekey('session_id').' VARCHAR(255),'.$eol.
 					$tab.$db->quotekey('data').' TEXT,'.$eol.
 					$tab.$db->quotekey('ip').' VARCHAR(45),'.$eol.
 					$tab.$db->quotekey('agent').' VARCHAR(300),'.$eol.
 					$tab.$db->quotekey('stamp').' INTEGER,'.$eol.
-					$tab.'PRIMARY KEY ('.$db->quotekey('session_id').')'.$eol.
+					$tab.'PRIMARY KEY ('.$db->quotekey($sqlsrv?'id':'session_id').')'.$eol.
+				($sqlsrv?',CONSTRAINT [UK_session_id] UNIQUE(session_id)':'').
 				');'
 			);
 		}
@@ -201,10 +204,17 @@ class Session extends Mapper {
 		register_shutdown_function('session_commit');
 		$fw=\Base::instance();
 		$headers=$fw->HEADERS;
-		$this->_csrf=$fw->SEED.'.'.$fw->hash(mt_rand());
+		$this->_csrf=$fw->hash($fw->SEED.
+			extension_loaded('openssl')?
+				implode(unpack('L',openssl_random_pseudo_bytes(4))):
+				mt_rand()
+			);
 		if ($key)
 			$fw->$key=$this->_csrf;
 		$this->_agent=isset($headers['User-Agent'])?$headers['User-Agent']:'';
+		if (strlen($this->_agent) > 300) {
+			$this->_agent = substr($this->_agent, 0, 300);
+		}
 		$this->_ip=$fw->IP;
 	}
 
