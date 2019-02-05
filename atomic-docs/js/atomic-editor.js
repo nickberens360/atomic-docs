@@ -24,7 +24,6 @@ jQuery(document).ready(function ($) {
     });
 
 
-
     function initializeComponent($comp) {
         var compId = $comp.data('id');
         var hasJs = $comp.data('js');
