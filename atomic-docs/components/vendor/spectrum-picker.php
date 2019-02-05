@@ -1,0 +1,1 @@
+<!-- components/vendor/spectrum-picker.php -->

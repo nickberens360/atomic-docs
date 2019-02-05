@@ -1,0 +1,97 @@
+/* scss/molecules/_atomic-pageBar.scss */
+
+.atomic-pageBarWrap{
+  padding: 0 20px;
+  //background: #fa5d5d;
+  background: $color1;
+}
+
+.atomic-pageBar{
+  @extend .grid-row;
+  position: relative;
+  height: 64px;
+  font-family: $bodyFont;
+}
+
+.atomic-pageBar__item{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.atomic-pageBar__left{
+  float: left;
+}
+
+.atomic-pageBar__right{
+  float: right;
+}
+
+
+.atomic-catTitle{
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 0;
+  font-family: $font1;
+  margin-top: 0;
+  line-height: 1;
+  display: inline-block;
+  i, a{
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  a{
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.atomic-catSearch{
+  display: inline-block;
+}
+
+
+
+.atomic-dashControls{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  a{
+    padding: 0 4px;
+  }
+  .fa{
+    color: #ffffff;
+    font-size: 23px;
+  }
+}
+
+.atomic-dashSizes{
+  margin-right: 20px;
+  font-family: $font1;
+  span{
+    font-weight: bold;
+  }
+  input{
+    border: none;
+    height: 30px;
+    max-width: 75px;
+    text-align: center;
+  }
+}
+
+.atomic-catDescription{
+  color: $textColor;
+  //color: #fff;
+  font-family: $font1;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 20px 0;
+  //margin-bottom: 36px;
+  max-width: 800px;
+  padding: 0 20px;
+}

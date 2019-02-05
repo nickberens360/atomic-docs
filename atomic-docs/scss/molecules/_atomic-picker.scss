@@ -1,0 +1,62 @@
+/* scss/molecules/_atomic-picker.scss */
+
+.sp-preview {
+  width: 17px;
+  height: 16px;
+   border: none;
+  background-size: 47%;
+}
+
+.sp-dd {
+  color: $textColor;
+}
+
+
+
+.sp-replacer {
+  border: none;
+  background: #f7f7f7;
+}
+
+.sp-clear-display{
+  background:  none;
+}
+
+.sp-container {
+  border-radius: 0;
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.18);
+  border-top: 4px solid #03aff0;
+}
+
+.sp-container button{
+  @extend .atomic-btn;
+  @extend .atomic-btn-1;
+  font-family: $font1;
+  font-weight: normal !important;
+  padding: 7px 10px;
+  text-shadow: none;
+  &:hover{
+    @extend .atomic-btn;
+    @extend .atomic-btn-1;
+    font-weight: normal;
+    padding: 7px 10px;
+    text-shadow: none;
+  }
+}
+
+.sp-clear{
+  border: 1px solid #b3b3b3;
+}
+
+.sp-color, .sp-hue {
+  border: none;
+}
+
+
+.sp-input {
+  background: none;
+  border: 1px solid #b3b3b3;
+}

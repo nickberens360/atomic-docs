@@ -1,0 +1,39 @@
+.section{
+  padding:0 20px;
+  border:1px solid #B7B7B7;
+  margin-bottom: 1px;
+	.section-inner{
+		@extend .wrap;
+    @extend .grid-row;
+	}
+}
+.section-content{
+	padding:$base;
+  background:#DADADA; 
+}
+
+.section-aside{
+  background:#E7E3E3; 
+  padding:$base;
+}
+
+.section-2col{
+	.section-content{
+		@include col($eight);
+	}
+	.section-aside{
+		@include col($four);
+		
+	}
+}
+
+.section-2col.section-right{
+	.section-content{
+		@include col($eight);
+		float:right;
+	}
+	.section-aside{
+		@include col($four);
+		float:right;
+	}
+}

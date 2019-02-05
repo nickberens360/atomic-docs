@@ -1,0 +1,66 @@
+[
+    {
+        "category": "layout",
+        "order": 6
+    },
+    {
+        "category": "molecules",
+        "order": 10
+    },
+    {
+        "category": "organisms",
+        "order": 11
+    },
+    {
+        "category": "sideBars",
+        "order": 12
+    },
+    {
+        "category": "variables",
+        "order": 3
+    },
+    {
+        "category": "bootstrap",
+        "order": 2
+    },
+    {
+        "category": "vendor",
+        "order": 0
+    },
+    {
+        "category": "misc",
+        "order": 13
+    },
+    {
+        "category": "atomicHead",
+        "order": 1
+    },
+    {
+        "category": "siteHeadings",
+        "order": 7
+    },
+    {
+        "category": "siteButtons",
+        "order": 8
+    },
+    {
+        "category": "siteForms",
+        "order": 9
+    },
+    {
+        "category": "siteFonts",
+        "order": 4
+    },
+    {
+        "category": "siteColors",
+        "order": 5
+    },
+    {
+        "category": "js-stuff",
+        "order": 15
+    },
+    {
+        "category": "states",
+        "order": 16
+    }
+]

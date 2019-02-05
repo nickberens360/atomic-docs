@@ -1,0 +1,18 @@
+/* scss/molecules/_atomic-hint.scss */
+
+.atomic-hint{
+  margin-top: 40px;
+  padding: 10px 20px;
+  background: #ececec;
+  border-left: 5px solid #00aff0;
+  font-family: $font1;
+  color: $textColor;
+  p{
+    font-size: 13px;
+    font-weight: 300;
+  }
+}
+
+.atomic-hint__title{
+  margin-bottom: $base/2;
+}

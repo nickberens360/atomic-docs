@@ -1,21 +1,2 @@
-/* scss/readme/_settings.scss */
-/* scss/readme/_sidebars.scss */
-/* scss/modules/_box.scss */
-.box {
-  background: #eee;
-  padding: 20px;
-  width: 300px;
-  height: 150px; }
 
-/* scss/jsExample/_clickme.scss */
-.click {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  transition: left .25s;
-  background: #ccf9bf;
-  padding: 20px 40px;
-  display: inline-block; }
-
-.clickAnimate {
-  left: 80%; }
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJtYWluLmNzcyIsInNvdXJjZXNDb250ZW50IjpbXX0= */

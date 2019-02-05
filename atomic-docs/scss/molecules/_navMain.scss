@@ -1,0 +1,110 @@
+/*scss/molecules/_navMain.scss*/
+
+/*
+.navMain{
+  list-style:none;
+  padding:0;
+  width: 100%;
+  >li{
+     display: inline-block;
+     text-align: center;
+     >a{
+        padding:13px 20px;
+        display:block;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: $color4;
+      }
+  }
+}
+.dropit-submenu{
+  text-align:left;
+  width:100%;
+  a{
+    padding:10px;
+    display:block;
+    background:#ccc;
+    border-bottom:2px solid #fff;
+  }
+}*/
+
+
+/*scss/molecules/_navMain.scss*/
+
+
+.navMain {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  float: right;
+  > li {
+    display: inline-block;
+    text-align: center;
+    > a {
+      padding: 13px 20px;
+      display: block;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: #000;
+    }
+  }
+}
+
+
+
+.navMain_trigger{
+  background: #f59618;
+  color: white;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px !important;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none !important;
+  z-index: 2000;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+
+
+@media only screen and (max-width: 1044px) {
+  .navMain_trigger{
+    display: inline-block !important;
+  }
+  .navMain {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 400px;
+    min-width: 300px;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: -5px 0px 8px 0px rgba(0,0,0,0.09);
+    padding-top: 75px;
+    transform: translate(110%, 0);
+    transition: transform .25s;
+    > li {
+      display: block;
+      text-align: right;
+    }
+  }
+
+  .navMain-open{
+    .navMain {
+      transform: translate(0, 0);
+      transition: transform .25s;
+    }
+  }
+
+}
+
+
+
+
+
+

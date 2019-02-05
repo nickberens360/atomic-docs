@@ -1,0 +1,226 @@
+/* scss/molecules/_atomic-dirBox.scss */
+
+.atomic-nav{
+  list-style: none;
+  padding: 0;
+  a{
+    color: $textColor;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  i{
+    color: $color1;
+    font-size: 14px;
+  }
+  ul{
+    list-style: none;
+    padding-left: 16px;
+    margin-bottom: 0;
+    border-left: 1px solid #dedede;
+
+  }
+  li{
+    margin-bottom: 4px;
+  }
+  [data-type="cat"] {
+    >a{
+      font-weight: 500;
+    }
+  }
+}
+
+
+.atomic-sub{
+  display: none;
+}
+
+
+.atomic-active{
+  > .atomic-sub{
+    display: block;
+  }
+  > .js-atomic-catContent-trigger{
+    &:before{
+      content: "\f07c" !important;
+    }
+  }
+}
+
+.js-atomic-catContent-trigger{
+  cursor: pointer;
+  position: relative;
+}
+
+
+/*
+$folderMargin: 5px;
+
+.atomic-dirBox{
+  font-weight: 300;
+  position: relative;
+  a{
+    text-decoration: none;
+    color: $textColor;
+  }
+}
+
+.atomic-dirBox__dir, .atomic-dirBox__add{
+  display: block;
+  font-weight: bold;
+}
+
+.atomic-dirBox__add{
+  color: #fa5d5d !important;
+
+}
+
+
+
+.atomic-dirBox__dir{
+  margin-bottom: $base/2;
+  font-size: 15px;
+  .fa{
+    color: $color1;
+    margin-right: $folderMargin;
+  }
+}
+
+.atomic-dirBox-is-active{
+  .atomic-dirBox__dir{
+    .fa{
+      margin-right: $folderMargin - 2px;
+      &:before{
+        content: "\f07c";
+      }
+    }
+  }
+}
+
+
+
+.atomic-dirBox__add{
+  margin-bottom: $base/2;
+  font-size: 11px;
+  //margin-left: 20px + $folderMargin;
+}
+
+.atomic-dirBox__content{
+  display: none;
+}
+
+.atomic-dirBox__list{
+  list-style: none;
+  padding: 0;
+  //margin-left: 20px + $folderMargin;
+  margin-bottom: $base/2;
+  a{
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+
+
+
+.atomic-dirBoxSub__content{
+  display: none;
+}
+
+
+.atomic-dirBoxSub{
+  background: #c3d1ee;
+}
+
+
+.atomic-dirBox{
+  .atomic-dirBoxSub{
+    background: #eee;
+  }
+}*/
+
+
+
+
+
+
+.atomic-fileSystem{
+  padding: 35px;
+}
+
+.atomic-sideContent{
+  width: 225px;
+}
+
+
+
+
+
+.atomic-catItem{
+  font-weight: 300;
+  position: relative;
+  a{
+    text-decoration: none;
+    color: $textColor;
+    display: block;
+    padding: 2px 0;
+  }
+  .fa{
+    color: $color1;
+    //margin-right: $folderMargin;
+  }
+  .atomic-catItem{
+    padding-top: 0;
+    padding-left: 20px;
+  }
+}
+
+.atomic-catItem-active{
+  >.atomic-catContent{
+    display: block;
+  }
+  .js-atomic-catContent-trigger{
+    &:before{
+      content: "\f07c" !important;
+    }
+  }
+}
+
+
+
+.atomic-file{
+  font-size: 14px;
+}
+
+
+/*.atomic-folder-active{
+  margin-right: -2px;
+  &:before{
+    content: "\f07c" !important;
+  }
+}*/
+
+
+
+.atomic-catContent{
+  //display: none;
+  border-left: 1px solid #dedede;
+}
+
+.atomic-fileDrop{
+  padding-left: 20px;
+  padding-bottom: 4px;
+}
+
+.atomic-dirBoxGroup__footer{
+  padding-left: 35px;
+}
+
+
+.atomic-dash-is-active{
+  .atomic-fileSystem{
+    display: none;
+  }
+}
+
+

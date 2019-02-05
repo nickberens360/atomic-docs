@@ -1,0 +1,18 @@
+/*scss/variables/_fonts.scss*/
+
+$bodyFont: 'Montserrat', sans-serif;
+$secondaryFont: 'Open Sans', sans-serif;
+
+.font1{
+	font-family: $bodyFont;
+}
+.font2{
+	font-family: $secondaryFont;
+	font-weight: 300;
+}
+
+.font{
+	span{
+		display:block;
+	}
+}

@@ -1,0 +1,21 @@
+/* scss/molecules/_atomic-editorFooter.scss */
+
+.atomic-editorFooter{
+  position: absolute;
+  border: 1px solid #dadada;
+  width: 100%;
+
+  border-top: none;
+  text-align: right;
+  bottom: 42px;
+  transition: bottom .25s;
+  z-index: 5;
+  background: #fff;
+}
+
+
+.atomic-tabs-active{
+  .atomic-editorFooter{
+    bottom: -38px;
+  }
+}

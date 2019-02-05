@@ -1,0 +1,41 @@
+/* scss/organisms/_atomic-editPanel.scss */
+
+.atomic-editPanel{
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translate(100%, 0);
+  bottom: 0;
+  background: $color4;
+  z-index: 6000;
+  padding: 50px;
+  height: 100%;
+  width: 500px !important;
+  box-shadow: -4px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  color: #7a7a7a;
+  overflow: auto;
+  transition: transform .25s;
+}
+
+
+.atomic-editPanel__inner{
+  position: relative;
+}
+
+.atomic-editPanel__close{
+  cursor: pointer;
+  color: $color2;
+  position: absolute;
+  right: -38px;
+  top: -46px;
+  font-size: 11px;
+}
+
+.atomic-editPane-open{
+  .atomic-editPanel{
+    //right: 0;
+    transform: translate(0);
+  }
+}

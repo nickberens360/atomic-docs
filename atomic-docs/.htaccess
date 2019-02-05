@@ -1,0 +1,10 @@
+#php_value output_buffering On
+#php_value output_handler mb_output_handler
+
+# Enable rewrite engine and route requests to framework
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule .* index.php [L,QSA]

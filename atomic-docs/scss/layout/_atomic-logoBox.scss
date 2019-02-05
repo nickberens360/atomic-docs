@@ -1,0 +1,11 @@
+/* scss/layout/_atomic-logoBox.scss */
+
+.atomic-logoBox{
+  padding: 20px;
+  background: #dcf5ff;
+  img{
+    max-width: 175px;
+    display: block;
+    margin: auto;
+  }
+}

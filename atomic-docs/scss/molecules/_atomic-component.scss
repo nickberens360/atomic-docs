@@ -1,0 +1,34 @@
+/* scss/molecules/_atomic-component.scss */
+
+
+.atomic-component {
+
+  border: 1px silver;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-right: 20px;
+  margin: auto;
+  margin-bottom: $base;
+  transition: width .25s, height .25s;
+  &.atomic-component-bg{
+    padding: 20px;
+  }
+}
+
+
+
+
+
+.win-size-grip {
+  position: absolute;
+  width: 16px;
+  height: 100%;
+  padding: 4px;
+  bottom: 0;
+  right: 0;
+  cursor: nwse-resize;
+  background: #efefef url(../img/wingrip.png) bottom no-repeat;
+  //background: #efefef url(../img/wingrip.png) bottom no-repeat;
+}

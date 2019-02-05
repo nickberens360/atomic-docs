@@ -1,0 +1,19 @@
+/*scss/organisms/_footerMain.scss*/
+
+.footerMain{
+  background:#464545; 
+  color:#fff;
+  padding:40px 0;
+}
+.footerMain__inner{
+  @extend .wrap;
+  @extend .grid-row;
+  height:300px;
+}
+.footerMain__item{
+  @include col($four);
+  height:100%;
+  border-right:1px solid #716D6D;
+  border-left:1px solid #716D6D;
+  text-align:center;
+}

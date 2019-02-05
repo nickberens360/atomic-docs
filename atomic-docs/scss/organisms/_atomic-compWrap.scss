@@ -1,0 +1,48 @@
+/* scss/organisms/_atomic-compWrap.scss */
+
+
+.atomic-compWrap{
+  margin-bottom: $base*2;
+  background: #fff;
+  position: relative;
+  opacity: 0;
+  transition: opacity .25s;
+  .atomic-component{
+    height: 18px;
+    overflow: hidden;
+  }
+
+  &.atomic-compWrap-full{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 9999999;
+    background: white;
+    height: 100%;
+    /*.fa-window-maximize{
+      &:before{
+        content: '\f2d1';
+      }
+    }*/
+  }
+  &.atomic-compWrap-active{
+    opacity: 1;
+    .atomic-component{
+      height: auto;
+      overflow: auto;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

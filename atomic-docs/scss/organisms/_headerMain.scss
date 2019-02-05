@@ -1,0 +1,26 @@
+/*scss/organisms/_headerMain.scss*/
+
+.headerMain{
+    height: 150px;
+}
+.headerMain__inner{
+  @extend .wrap;
+  @extend .grid-row;
+  padding:20px;
+  height: 100%;
+}
+.headerMain__item{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.headerMain__left{
+  @include col($four); 
+}
+.headerMain__right{
+  @include col($eight); 
+  text-align: right;
+  .navMain{
+      display: inline-block;
+  }
+}

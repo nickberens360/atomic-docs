@@ -1,0 +1,22 @@
+/* scss/siteButtons/_atomic-btnGroup.scss */
+
+.atomic-btnGroup{
+  .atomic-btn{
+    width: 100%;
+    //margin-bottom: $base/2;
+  }
+  .atomic-btn-simple{
+    width: auto;
+    padding-left: 0;
+  }
+  .atomic-btnRow{
+    .nb-6{
+      &:first-of-type{
+        padding-right: 10px;
+      }
+      &:last-of-type{
+        padding-left: 10px;
+      }
+    }
+  }
+}
