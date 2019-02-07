@@ -131,6 +131,13 @@ class CategoryController extends Controller
 	    //Add component link
 	    $addCompLink = baseAlias('addComponent', $catID);
 	    $f3->set('addCompLink', $addCompLink);
+
+	    //Delete category link
+
+	    $deleteCatLink = baseAlias('deleteCategory', $catID);
+	    $f3->set('deleteCategory', $deleteCatLink);
+
+
     }
 
 
@@ -148,6 +155,10 @@ class CategoryController extends Controller
 
 
         $filter = ['categoryId= ?', $params['catSubId']];
+
+        $subId = $params['catSubId'];
+
+        //echo $subId;
 
 
         $category->load($filter);
@@ -231,26 +242,9 @@ class CategoryController extends Controller
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         $isSubCat = true;
 
         $f3->set('isSubCat', $isSubCat);
-
-
-
-
-
 
 
 
@@ -275,6 +269,11 @@ class CategoryController extends Controller
 	    //Add component link
 	    $addCompLink = baseAlias('addSubComponent', array('parentId'=>$parentID, 'catId'=>$catID));
 	    $f3->set('addCompLink', $addCompLink);
+
+	   /* $deleteCatLink = baseAlias('deleteCategory', $subId);
+	    $f3->set('deleteCategory', $deleteCatLink);
+
+	    echo $deleteCatLink;*/
 
 
 
@@ -788,27 +787,128 @@ class CategoryController extends Controller
     function deleteAction($f3, $params)
     {
 
+	    $passThrough = [];
+
         $category = new CategoryModel($this->db);
-
         $filter = ['categoryId= ?', $params['catId']];
-
-        $category->load($filter);
-
-
-        $f3->set('category', $category);
+	    $subCatFilter = ['parentCatId= ?', $params['catId']];
+        $subCats = $category->find($subCatFilter);
+	    $category->load($filter);
 
 
-        $catSlug = $f3->get('category');
+	    $component = new ComponentModel($this->db);
+	    $compFilter = ['categoryId= ?', $params['catId']];
+	    $comps = $component->find($compFilter);
+
+	    $subCatIds = [];
+	    foreach ($subCats as $sc){
+
+	    }
 
 
-        $f3->set('catName', $catSlug->name);
 
 
-        $f3->set('action', 'DELETE');
+        $catSlug = $category->slug;
+
+	    $stylesDir = OptionService::getOption( 'stylesDir' );
+	    $stylesExt = OptionService::getOption( 'stylesExt' );
+
+        $fileSystemService = new FileSystemService();
+
+        $fileService = new FileService();
 
 
-        $template = \View::instance();
-        echo $template->render('category/delete.php');
+	    //Delete component comps and sub cats
+	    $fileSystemService->deleteCat('markup', $catSlug);
+
+	    //Delete import strings
+	    $importString = $fileService->stringBuilder('styleImport', $catSlug, $catSlug);
+
+
+	    $fileService->stringReplace(
+		    FRONT.'/'.$stylesDir.'/main.'.$stylesExt,
+		    $importString,
+		    ''
+	    );
+
+	    //Delete styles comps and sub cats
+	    $fileSystemService->deleteCat('styles', $catSlug);
+
+
+
+
+
+	    if ( $category->categoryId !== null ) {
+		    $passThrough['status']  = true;
+		    $passThrough['message'] = 'Yayy!!!';
+
+
+		    if(!empty($comps)){
+			    foreach ( $comps as $c ) {
+				    $c->erase();
+			    }
+		    }
+
+		    if (!empty($subCats)){
+			    foreach ( $subCats as $sc ) {
+				    $sc->erase();
+			    }
+		    }
+
+		    if(!empty($category)){
+		    	$category->erase();
+		    }
+
+
+
+
+		    /*ob_start();
+		    echo \Template::instance()->render( 'component/view.htm' );
+		    $content               = ob_get_clean();
+
+		    $navItems = new ItemsService();
+		    $navItems->prepareItems();
+
+		    $f3->set('currentSubId',$compCatID);
+		    $f3->set('currentId',$compCatID);
+
+		    ob_start();
+		    echo \Template::instance()->render( 'common/nav.htm' );
+		    $navbar               = ob_get_clean();
+
+		    $passThrough['html']   = [
+			    [
+				    'html'      => $content,
+				    'target'    => '.atomic-dash__content',
+				    'placement' => 'prepend',
+			    ],
+			    [
+				    'html' => $navbar,
+				    'target'    => '.atomic-fileSystem',
+				    'placement' => 'replace',
+			    ],
+
+		    ];
+
+
+		    $passThrough['compId']    = $compId;
+		    $passThrough['hasJs']     = $hasJs;
+
+		    return $this->renderJSON( $passThrough );*/
+
+
+	    } else {
+		    $passThrough['status']  = false;
+		    $passThrough['message'] = 'shit didn\'t work';
+	    }
+
+
+
+
+
+
+
+
 
     }
 

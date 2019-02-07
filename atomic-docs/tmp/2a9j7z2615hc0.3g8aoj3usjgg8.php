@@ -8,9 +8,8 @@
 
 
 
-
             <div class="atomic-component__actions">
-
+                <a href="<?= baseAlias('deleteComponent', ['compId' => $comp->componentId()]) ?>" class="material-icons ajax-link" data-action="delete-component" onclick="return confirm('Delete Component?');">delete</a>
 
                 <a href="<?= baseAlias('editComponent', ['compId' => $comp->componentId()]) ?>" class="material-icons ajax-link" data-target="panel">settings</a>
 
@@ -25,7 +24,7 @@
                 </form>
 
 
-                <a href="<?= baseAlias('deleteComponent', ['compId' => $comp->componentId()]) ?>" class="material-icons ajax-link" data-action="delete-component" onclick="return confirm('Delete Component?');">delete</a>
+
 
 
 
@@ -47,9 +46,7 @@
             </div>
         </div>
     </div>
-    <!--<textarea class="atomic-compDescription"><?= $comp->description() ?></textarea>-->
 
-    <!--<?= $comp->description() ?>-->
 
 
 

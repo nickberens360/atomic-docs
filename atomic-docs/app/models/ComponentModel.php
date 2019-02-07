@@ -5,6 +5,12 @@
 /**
  * Class ComponentModel
  * @property int $categoryId
+ * @property int $name
+ * @property int $hasJs
+ * @property int $slug
+ * @property int $sort
+ * @property int $backgroundColor
+ * @property int $componentId
  */
 class ComponentModel extends DB\SQL\Mapper{
 

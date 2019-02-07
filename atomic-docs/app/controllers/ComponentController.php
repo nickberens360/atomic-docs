@@ -103,10 +103,12 @@ class ComponentController extends Controller {
 
 
 			//Create style import string
-			$importSting = '@import "_' . $compName . '";';
+			//$importSting = '@import "_' . $compName . '";';
+
+			$importString = $FileService->stringBuilder('styleImport', $dirPath, $compSlug);
 
 			//Write style import string to root file
-			$FileService->write( FRONT . '/' . $stylesDir . '/' . $folderPath . '/_' . $compCatName . '.scss', $importSting );
+			$FileService->write( FRONT . '/' . $stylesDir . '/' . $folderPath . '/_' . $compCatName . '.scss', $importString );
 
 
 			//Create style file location comment string

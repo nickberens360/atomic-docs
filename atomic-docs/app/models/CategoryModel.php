@@ -6,6 +6,7 @@
  *
  * @property int $categoryId
  * @property string name;
+ * @property string slug;
  * @property int sort;
  * @property string description;
  * @property int parentCatId

@@ -5,14 +5,7 @@ class FileSystemService {
 
     public function createCategory($catSlug){
 
-/*
-        $option = OptionService::get();
 
-        $stylesDir = $option->stylesDir;
-        $stylesExt = $option->stylesExt;
-        $markupDir = $option->markupDir;
-
-        */
 
 	    $stylesDir = OptionService::getOption('stylesDir');
 	    $stylesExt = OptionService::getOption('stylesExt');
@@ -64,6 +57,7 @@ class FileSystemService {
     }
 
     public function rrmdir($dir) {
+
         if (is_dir($dir)) {
             $objects = scandir($dir);
             foreach ($objects as $object) {
@@ -76,6 +70,22 @@ class FileSystemService {
             }
             rmdir($dir);
         }
+
+    }
+
+
+    public function deleteCat($type, $catSlug) {
+	    $markupDir = OptionService::getOption('markupDir');
+	    $stylesDir = OptionService::getOption('stylesDir');
+		if($type == 'markup' && !empty($catSlug)){
+			$dir = FRONT . '/' .$markupDir. '/' .$catSlug;
+			$this->rrmdir($dir);
+		}
+		if($type == 'styles' && !empty($catSlug)){
+			$dir = FRONT . '/' .$stylesDir. '/' .$catSlug;
+			$this->rrmdir($dir);
+		}
+
     }
 
 

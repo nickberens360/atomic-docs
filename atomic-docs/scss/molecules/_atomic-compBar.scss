@@ -24,6 +24,15 @@
 
 }
 
+
+
+
+.atomic-hidden{
+  display: none !important;
+}
+
+
+
 .atomic-compBarLeft{
   @include col($six);
 }

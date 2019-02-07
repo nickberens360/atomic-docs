@@ -54,19 +54,12 @@ $('body')
 
             if ($self.attr('data-target') === 'panel') {
                 $('.atomic-editPanel__form').html(data.response.html[0].html);
-
-                //var $panel = $('.atomic-editPanel');
-                //var $color = $panel.find('.atomic-colorPicker');
-                //var $summer = $panel.find('.summernote');
-
-
                 $('.atomic-input').focus();
-
-                //initializeSummerNote($summer);
-                //initializeColorPicker($color);
 
 
             } else if ($self.data('show-load')) {
+                // $('#me-popup').popup('hide');
+            } else if ($self.data('inline')) {
                 // $('#me-popup').popup('hide');
             }
             if ($self.attr('data-target') === 'slideout') {

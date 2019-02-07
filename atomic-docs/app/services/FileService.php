@@ -57,7 +57,18 @@ class FileService {
 	}
 
 
-	public function stringBuilder($type, $dirPath, $file){
+
+
+
+
+
+
+
+
+
+
+
+	public function stringBuilder($type, $dirPath, $name){
 
 
 		$stylesDir = OptionService::getOption( 'stylesDir' );
@@ -69,8 +80,16 @@ class FileService {
 
 
 
+
+
     	if($type == "styleImport"){
-		    $string = '@import "_'.$file.'";';
+    		if($dirPath == null){
+			    $string = '@import "_'.$name.'";';
+		    }
+    		else{
+			    $string = '@import "'.$dirPath.'/_'.$name.'";';
+		    }
+
 	    }
 
     	return $string;
