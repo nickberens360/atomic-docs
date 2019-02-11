@@ -124,7 +124,7 @@ class SQL {
 					$val=str_replace(',','.',$val);
 				return $val;
 			case \PDO::PARAM_NULL:
-				return (unset)$val;
+				return NULL;
 			case \PDO::PARAM_INT:
 				return (int)$val;
 			case \PDO::PARAM_BOOL:
@@ -220,7 +220,7 @@ class SQL {
 						'/';
 				}
 				if ($log)
-					$this->log.=($stamp?(date('r').' '):'').' (-0ms) '.
+					$this->log.=($stamp?(date('r').' '):'').'(-0ms) '.
 						preg_replace($keys,$vals,
 							str_replace('?',chr(0).'?',$cmd),1).PHP_EOL;
 				$query->execute();
@@ -228,15 +228,14 @@ class SQL {
 					$this->log=str_replace('(-0ms)',
 						'('.sprintf('%.1f',1e3*(microtime(TRUE)-$now)).'ms)',
 						$this->log);
-				$error=$query->errorinfo();
-				if ($error[0]!=\PDO::ERR_NONE) {
+				if (($error=$query->errorinfo()) && $error[0]!=\PDO::ERR_NONE) {
 					// Statement-level error occurred
 					if ($this->trans)
 						$this->rollback();
 					user_error('PDOStatement: '.$error[2],E_USER_ERROR);
 				}
 				if (preg_match('/(?:^[\s\(]*'.
-					'(?:EXPLAIN|SELECT|PRAGMA|SHOW)|RETURNING)\b/is',$cmd) ||
+					'(?:WITH|EXPLAIN|SELECT|PRAGMA|SHOW)|RETURNING)\b/is',$cmd) ||
 					(preg_match('/^\s*(?:CALL|EXEC)\b/is',$cmd) &&
 						$query->columnCount())) {
 					$result=$query->fetchall(\PDO::FETCH_ASSOC);
@@ -258,15 +257,13 @@ class SQL {
 				$query->closecursor();
 				unset($query);
 			}
-			else {
-				$error=$this->errorinfo();
-				if ($error[0]!=\PDO::ERR_NONE) {
-					// PDO-level error occurred
-					if ($this->trans)
-						$this->rollback();
-					user_error('PDO: '.$error[2],E_USER_ERROR);
-				}
+			elseif (($error=$this->errorinfo()) && $error[0]!=\PDO::ERR_NONE) {
+				// PDO-level error occurred
+				if ($this->trans)
+					$this->rollback();
+				user_error('PDO: '.$error[2],E_USER_ERROR);
 			}
+
 		}
 		if ($this->trans && $auto)
 			$this->commit();

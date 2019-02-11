@@ -52,7 +52,7 @@ class Web extends Prefab {
 				'hqx'=>'application/mac-binhex40',
 				'html?'=>'text/html',
 				'jar'=>'application/java-archive',
-				'jpe?g'=>'image/jpeg',
+				'jpe?g|jfif?'=>'image/jpeg',
 				'js'=>'application/x-javascript',
 				'midi'=>'audio/x-midi',
 				'mp3'=>'audio/mpeg',
@@ -269,7 +269,7 @@ class Web extends Prefab {
 	**/
 	protected function _curl($url,$options) {
 		$curl=curl_init($url);
-		if (!ini_get('open_basedir'))
+		if (!$open_basedir=ini_get('open_basedir'))
 			curl_setopt($curl,CURLOPT_FOLLOWLOCATION,
 				$options['follow_location']);
 		curl_setopt($curl,CURLOPT_MAXREDIRS,
@@ -281,6 +281,8 @@ class Web extends Prefab {
 			curl_setopt($curl,CURLOPT_HTTPHEADER,$options['header']);
 		if (isset($options['content']))
 			curl_setopt($curl,CURLOPT_POSTFIELDS,$options['content']);
+		if (isset($options['proxy']))
+			curl_setopt($curl,CURLOPT_PROXY,$options['proxy']);
 		curl_setopt($curl,CURLOPT_ENCODING,'gzip,deflate');
 		$timeout=isset($options['timeout'])?
 			$options['timeout']:
@@ -304,7 +306,8 @@ class Web extends Prefab {
 		curl_close($curl);
 		$body=ob_get_clean();
 		if (!$err &&
-			$options['follow_location'] &&
+			$options['follow_location'] && $open_basedir &&
+			preg_grep('/HTTP\/1\.\d 3\d{2}/',$headers) &&
 			preg_match('/^Location: (.+)$/m',implode(PHP_EOL,$headers),$loc)) {
 			$options['max_redirects']--;
 			if($loc[1][0] == '/') {
@@ -332,6 +335,12 @@ class Web extends Prefab {
 	**/
 	protected function _stream($url,$options) {
 		$eol="\r\n";
+		if (isset($options['proxy'])) {
+			$options['proxy']=preg_replace('/https?/i','tcp',$options['proxy']);
+			$options['request_fulluri']=true;
+			if (preg_match('/socks4?/i',$options['proxy']))
+				return $this->_socket($url,$options);
+		}
 		$options['header']=implode($eol,$options['header']);
 		$body=@file_get_contents($url,FALSE,
 			stream_context_create(['http'=>$options]));
@@ -341,7 +350,7 @@ class Web extends Prefab {
 		if (is_string($body)) {
 			$match=NULL;
 			foreach ($headers as $header)
-				if (preg_match('/Content-Encoding: (.+)/',$header,$match))
+				if (preg_match('/Content-Encoding: (.+)/i',$header,$match))
 					break;
 			if ($match)
 				switch ($match[1]) {
@@ -377,25 +386,46 @@ class Web extends Prefab {
 		$headers=[];
 		$body='';
 		$parts=parse_url($url);
-		$empty=empty($parts['port']);
-		if ($parts['scheme']=='https') {
+		$hostname=$parts['host'];
+		$proxy=false;
+		if ($parts['scheme']=='https')
 			$parts['host']='ssl://'.$parts['host'];
-			if ($empty)
-				$parts['port']=443;
-		}
-		elseif ($empty)
-			$parts['port']=80;
+		if (empty($parts['port']))
+			$parts['port']=$parts['scheme']=='https'?443:80;
 		if (empty($parts['path']))
 			$parts['path']='/';
 		if (empty($parts['query']))
 			$parts['query']='';
-		if ($socket=@fsockopen($parts['host'],$parts['port'],$code,$err)) {
+		if (isset($options['proxy'])) {
+			$req=$url;
+			$pp=parse_url($options['proxy']);
+			$proxy=$pp['scheme'];
+			if ($pp['scheme']=='https')
+				$pp['host']='ssl://'.$pp['host'];
+			if (empty($pp['port']))
+				$pp['port']=$pp['scheme']=='https'?443:80;
+			$socket=@fsockopen($pp['host'],$pp['port'],$code,$err);
+		} else {
+			$req=$parts['path'].($parts['query']?('?'.$parts['query']):'');
+			$socket=@fsockopen($parts['host'],$parts['port'],$code,$err);
+		}
+		if ($socket) {
 			stream_set_blocking($socket,TRUE);
 			stream_set_timeout($socket,isset($options['timeout'])?
 				$options['timeout']:ini_get('default_socket_timeout'));
-			fputs($socket,$options['method'].' '.$parts['path'].
-				($parts['query']?('?'.$parts['query']):'').' HTTP/1.0'.$eol
-			);
+			if ($proxy=='socks4') {
+				// SOCKS4; http://en.wikipedia.org/wiki/SOCKS#Protocol
+				$packet="\x04\x01".pack("n", $parts['port']).
+					pack("H*",dechex(ip2long(gethostbyname($hostname))))."\0";
+				fputs($socket, $packet, strlen($packet));
+				$response=fread($socket, 9);
+				if (strlen($response)==8 && (ord($response[0])==0 || ord($response[0])==4)
+					&& ord($response[1])==90) {
+					$options['header'][]='Host: '.$hostname;
+				} else
+					$err='Socket Status '.ord($response[1]);
+			}
+			fputs($socket,$options['method'].' '.$req.' HTTP/1.0'.$eol);
 			fputs($socket,implode($eol,$options['header']).$eol.$eol);
 			if (isset($options['content']))
 				fputs($socket,$options['content'].$eol);
@@ -412,7 +442,7 @@ class Web extends Prefab {
 			$headers=array_merge($headers,$current=explode($eol,$html[0]));
 			$match=NULL;
 			foreach ($current as $header)
-				if (preg_match('/Content-Encoding: (.+)/',$header,$match))
+				if (preg_match('/Content-Encoding: (.+)/i',$header,$match))
 					break;
 			if ($match)
 				switch ($match[1]) {
@@ -424,6 +454,7 @@ class Web extends Prefab {
 						break;
 				}
 			if ($options['follow_location'] &&
+				preg_grep('/HTTP\/1\.\d 3\d{2}/',$headers) &&
 				preg_match('/Location: (.+?)'.preg_quote($eol).'/',
 				$html[0],$loc)) {
 				$options['max_redirects']--;
@@ -506,12 +537,6 @@ class Web extends Prefab {
 			$this->engine();
 		if ($this->wrapper!='stream') {
 			// PHP streams can't cope with redirects when Host header is set
-			foreach ($options['header'] as &$header)
-				if (preg_match('/^Host:/',$header)) {
-					$header='Host: '.$parts['host'];
-					unset($header);
-					break;
-				}
 			$this->subst($options['header'],'Host: '.$parts['host']);
 		}
 		$this->subst($options['header'],
@@ -525,7 +550,7 @@ class Web extends Prefab {
 		);
 		if (isset($options['content']) && is_string($options['content'])) {
 			if ($options['method']=='POST' &&
-				!preg_grep('/^Content-Type:/',$options['header']))
+				!preg_grep('/^Content-Type:/i',$options['header']))
 				$this->subst($options['header'],
 					'Content-Type: application/x-www-form-urlencoded');
 			$this->subst($options['header'],
@@ -563,7 +588,7 @@ class Web extends Prefab {
 				$result['cached']=TRUE;
 			}
 			elseif (preg_match('/Cache-Control:(?:.*)max-age=(\d+)(?:,?.*'.
-				preg_quote($eol).')/',implode($eol,$result['headers']),$exp))
+				preg_quote($eol).')/i',implode($eol,$result['headers']),$exp))
 				$cache->set($hash,$result,$exp[1]);
 		}
 		$req=[$options['method'].' '.$url];
@@ -878,7 +903,7 @@ class Web extends Prefab {
 		for ($i=0,$add=$count-(int)$std;$i<$add;$i++) {
 			shuffle($rnd);
 			$words=array_slice($rnd,0,mt_rand(3,$max));
-			$out.=' '.ucfirst(implode(' ',$words)).'.';
+			$out.=(!$std&&$i==0?'':' ').ucfirst(implode(' ',$words)).'.';
 		}
 		return $out;
 	}

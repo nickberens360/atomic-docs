@@ -33,7 +33,9 @@ class Mapper extends \DB\Cursor {
 		//! Document identifier
 		$id,
 		//! Document contents
-		$document=[];
+		$document=[],
+		//! field map-reduce handlers
+		$_reduce;
 
 	/**
 	*	Return database type
@@ -91,7 +93,7 @@ class Mapper extends \DB\Cursor {
 	*	@param $id string
 	*	@param $row array
 	**/
-	protected function factory($id,$row) {
+	function factory($id,$row) {
 		$mapper=clone($this);
 		$mapper->reset();
 		$mapper->id=$id;
@@ -151,7 +153,7 @@ class Mapper extends \DB\Cursor {
 	*	@return static[]|FALSE
 	*	@param $filter array
 	*	@param $options array
-	*	@param $ttl int
+	*	@param $ttl int|array
 	*	@param $log bool
 	**/
 	function find($filter=NULL,array $options=NULL,$ttl=0,$log=TRUE) {
@@ -160,16 +162,20 @@ class Mapper extends \DB\Cursor {
 		$options+=[
 			'order'=>NULL,
 			'limit'=>0,
-			'offset'=>0
+			'offset'=>0,
+			'group'=>NULL,
 		];
 		$fw=\Base::instance();
 		$cache=\Cache::instance();
 		$db=$this->db;
 		$now=microtime(TRUE);
 		$data=[];
+		$tag='';
+		if (is_array($ttl))
+			list($ttl,$tag)=$ttl;
 		if (!$fw->CACHE || !$ttl || !($cached=$cache->exists(
 			$hash=$fw->hash($this->db->dir().
-				$fw->stringify([$filter,$options])).'.jig',$data)) ||
+				$fw->stringify([$filter,$options])).($tag?'.'.$tag:'').'.jig',$data)) ||
 			$cached[0]+$ttl<microtime(TRUE)) {
 			$data=$db->read($this->file);
 			if (is_null($data))
@@ -232,30 +238,46 @@ class Mapper extends \DB\Cursor {
 					}
 				);
 			}
-			if (isset($options['order'])) {
-				$cols=$fw->split($options['order']);
-				uasort(
-					$data,
-					function($val1,$val2) use($cols) {
-						foreach ($cols as $col) {
-							$parts=explode(' ',$col,2);
-							$order=empty($parts[1])?
-								SORT_ASC:
-								constant($parts[1]);
-							$col=$parts[0];
-							if (!array_key_exists($col,$val1))
-								$val1[$col]=NULL;
-							if (!array_key_exists($col,$val2))
-								$val2[$col]=NULL;
-							list($v1,$v2)=[$val1[$col],$val2[$col]];
-							if ($out=strnatcmp($v1,$v2)*
-								(($order==SORT_ASC)*2-1))
-								return $out;
-						}
-						return 0;
+			if (isset($options['group'])) {
+				$cols=array_reverse($fw->split($options['group']));
+				// sort into groups
+				$data=$this->sort($data,$options['group']);
+				foreach($data as $i=>&$row) {
+					if (!isset($prev)) {
+						$prev=$row;
+						$prev_i=$i;
 					}
-				);
+					$drop=false;
+					foreach ($cols as $col)
+						if ($prev_i!=$i && array_key_exists($col,$row) &&
+							array_key_exists($col,$prev) && $row[$col]==$prev[$col])
+							// reduce/modify
+							$drop=!isset($this->_reduce[$col]) || call_user_func_array(
+								$this->_reduce[$col][0],[&$prev,&$row])!==FALSE;
+						elseif (isset($this->_reduce[$col])) {
+							$null=null;
+							// initial
+							call_user_func_array($this->_reduce[$col][0],[&$row,&$null]);
+						}
+					if ($drop)
+						unset($data[$i]);
+					else {
+						$prev=&$row;
+						$prev_i=$i;
+					}
+					unset($row);
+				}
+				// finalize
+				if ($this->_reduce[$col][1])
+					foreach($data as $i=>&$row) {
+						$row=call_user_func($this->_reduce[$col][1],$row);
+						if (!$row)
+							unset($data[$i]);
+						unset($row);
+					}
 			}
+			if (isset($options['order']))
+				$data=$this->sort($data,$options['order']);
 			$data=array_slice($data,
 				$options['offset'],$options['limit']?:NULL,TRUE);
 			if ($fw->CACHE && $ttl)
@@ -282,11 +304,53 @@ class Mapper extends \DB\Cursor {
 	}
 
 	/**
+	*	Sort a collection
+	*	@param $data
+	*	@param $cond
+	*	@return mixed
+	*/
+	protected function sort($data,$cond) {
+		$cols=\Base::instance()->split($cond);
+		uasort(
+			$data,
+			function($val1,$val2) use($cols) {
+				foreach ($cols as $col) {
+					$parts=explode(' ',$col,2);
+					$order=empty($parts[1])?
+						SORT_ASC:
+						constant($parts[1]);
+					$col=$parts[0];
+					if (!array_key_exists($col,$val1))
+						$val1[$col]=NULL;
+					if (!array_key_exists($col,$val2))
+						$val2[$col]=NULL;
+					list($v1,$v2)=[$val1[$col],$val2[$col]];
+					if ($out=strnatcmp($v1,$v2)*
+						(($order==SORT_ASC)*2-1))
+						return $out;
+				}
+				return 0;
+			}
+		);
+		return $data;
+	}
+
+	/**
+	*	Add reduce handler for grouped fields
+	*	@param $key string
+	*	@param $handler callback
+	*	@param $finalize callback
+	*/
+	function reduce($key,$handler,$finalize=null){
+		$this->_reduce[$key]=[$handler,$finalize];
+	}
+
+	/**
 	*	Count records that match criteria
 	*	@return int
 	*	@param $filter array
 	*	@param $options array
-	*	@param $ttl int
+	*	@param $ttl int|array
 	**/
 	function count($filter=NULL,array $options=NULL,$ttl=0) {
 		$now=microtime(TRUE);

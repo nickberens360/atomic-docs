@@ -38,8 +38,6 @@ The philosophy behind the framework and its approach to software architecture is
 
 [![Paypal](ui/images/paypal.png)](https://www.paypal.me/fatfree)
 
-![Bitcoin](ui/images/bitcoin.png)
-
 ## Table of Contents
 
 * [Getting Started](#getting-started)
@@ -295,11 +293,22 @@ The above command will start routing all requests to the Web root `/var/www`. If
 If you're using Apache, make sure you activate the URL rewriting module (mod_rewrite) in your apache.conf (or httpd.conf) file. You should also create a .htaccess file containing the following:-
 
 ``` apache
+# Enable rewrite engine and route requests to framework
 RewriteEngine On
+
+# Some servers require you to specify the `RewriteBase` directive
+# In such cases, it should be the path (relative to the document root)
+# containing this .htaccess file
+#
+# RewriteBase /
+
+RewriteRule ^(tmp)\/|\.ini$ - [R=404]
+
+RewriteCond %{REQUEST_FILENAME} !-l
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule .* index.php [L,QSA]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
 ```
 
 The script tells Apache that whenever an HTTP request arrives and if no physical file (`!-f`) or path (`!-d`) or symbolic link (`!-l`) can be found, it should transfer control to `index.php`, which contains our main/front controller, and which in turn, invokes the framework.
@@ -1488,7 +1497,7 @@ $user=new DB\SQL\Mapper($db,'users');
 // or $user=new DB\Mongo\Mapper($db,'users');
 // or $user=new DB\Jig\Mapper($db,'users');
 $user->userID='jane';
-$user->password=md5('secret');
+$user->password=password_hash('secret', PASSWORD_BCRYPT, [ 'cost' => 12 ]);
 $user->visits=0;
 $user->save();
 ```
@@ -1500,7 +1509,7 @@ A mapper object will not be empty after a `save()`. If you wish to add a new rec
 ``` php
 $user->reset();
 $user->userID='cheetah';
-$user->password=md5('unknown');
+$user->password=password_hash('unknown', PASSWORD_BCRYPT, [ 'cost' => 12 ]);
 $user->save();
 ```
 
@@ -2589,8 +2598,6 @@ The Fat-Free Framework is community-driven software. It can't be what it is toda
 Special thanks to the selfless others who expressed their desire to remain anonymous, yet share their time, contribute code, send donations, promote the framework to a wider audience, as well as provide encouragement and regular financial assistance. Their generosity is F3's prime motivation.
 
 [![Paypal](ui/images/paypal.png)](https://www.paypal.me/fatfree)
-
-![Bitcoin](ui/images/bitcoin.png)
 
 ### Legal notice
 
