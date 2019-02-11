@@ -18,17 +18,61 @@
   */
 
   .atomic-compDim-val{
-    border: 1px solid #ccc;
+    //border: 1px solid #ccc;
+  }
+
+  .sp-replacer{
+    margin-left: 18px;
   }
 
 
 }
 
+.delete-comp{
+  color: #f16161 !important;
+}
 
 
+.atomic-compBar__label{
+  font-size: 14px;
+  color: $textColor;
+  margin: 0 18px;
+}
+
+
+.atomic-comp-edit-title{
+  font-weight: bold;
+  color: #3a424c;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 17px;
+  display: inline-block;
+  vertical-align: middle;
+  text-indent: 8px;
+  border: none;
+  border-radius: 2px;
+  background: #fff;
+  &:focus{
+    outline: none;
+  }
+}
+
+
+.atomic-inline-block{
+  display: inline-block;
+}
 
 .atomic-hidden{
   display: none !important;
+}
+
+.atomic-compWrap-inliner{
+  .atomic-hidden{
+    display: inline-block !important;
+  }
+  .atomic-component__title{
+    display: none;
+  }
 }
 
 
@@ -51,14 +95,19 @@
 
 
 .atomic-component__title{
-
+  display: inline-block;
   font-weight: bold;
-  color: #3a424c;
+  //color: #3a424c;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 17px;
-  display: inline-block;
   vertical-align: middle;
+
+a{
+  color: #3a424c;
+  text-decoration: none;
+}
+
 
 }
 
@@ -67,7 +116,8 @@
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  top: -2px;
+  border-left: 2px solid #ccc;
+  padding-left: 8px;
   i, a, form {
     margin-right: 5px;
     font-size: 19px;
@@ -77,6 +127,16 @@
     display: inline-block;
   }
 }
+.delete-comp{
+  margin-right: 5px;
+  font-size: 19px;
+  color: $textColor;
+  vertical-align: middle;
+  text-decoration: none;
+  display: inline-block;
+
+}
+
 
 .atomic-compDim-val{
   border: none;

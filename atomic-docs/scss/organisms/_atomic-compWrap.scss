@@ -38,11 +38,36 @@
 }
 
 
+.add-comp-form{
+  margin-bottom: $base;
+  .atomic-compBar{
+    margin-bottom: 0;
+  }
+}
+
+.atomic-add-form__plc{
+  background: #ececec;
+  height: 163px;
+}
 
 
 
 
+.singleComp{
+  padding: 20px;
+}
+
+#disqus_thread{
+  max-width: 700px;
+  margin: auto;
+}
 
 
+.backLink{
+  color: $color1;
+  display: block;
+  margin-bottom: $base;
+  font-weight: bold;
+  text-decoration: none;
 
-
+}

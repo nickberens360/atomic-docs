@@ -112,6 +112,11 @@ class Controller {
 			$f3->set( 'compView', 'component/view.htm' );
 
 
+			$f3->set( 'compBar', 'component/comp-bar.htm' );
+
+
+
+
 
 
 

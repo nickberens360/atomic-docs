@@ -81,11 +81,13 @@ function initializeColorPicker(el) {
         allowEmpty: true,
         preferredFormat: "hex",
         showInput: true,
-        change: function (color) {
+        /*change: function (color) {
             $(this).closest('form').trigger('submit');
-        }
+        }*/
     });
 }
+
+
 
 
 function initializeResizeHandle(el) {
@@ -212,10 +214,10 @@ function resizeIframe(el) {
 
 function initializeJsCheck(el) {
 
-    el.change(function() {
+    /*el.change(function() {
         if(this.checked) {
             $(this).closest('form').trigger('submit');
             return;
         }
-    });
+    });*/
 }

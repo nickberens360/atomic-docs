@@ -41,6 +41,9 @@ $('body')
             $('.atomic-editPanel__form').empty();
         }
 
+
+
+
         App.ajax({
             type: ($self.attr('data-method') ? $self.attr('data-method') : 'GET'),
             url: $self.attr('href'),
@@ -52,15 +55,20 @@ $('body')
                 return false;
             }
 
+
             if ($self.attr('data-target') === 'panel') {
+
                 $('.atomic-editPanel__form').html(data.response.html[0].html);
                 $('.atomic-input').focus();
 
 
             } else if ($self.data('show-load')) {
                 // $('#me-popup').popup('hide');
-            } else if ($self.data('inline')) {
-                // $('#me-popup').popup('hide');
+            }
+            else if ($self.attr('data-target') === 'onpage') {
+                $('.atomic-dash__content').prepend(data.response.html[0].html);
+                $('.add-comp-form').find('.atomic-comp-edit-title').focus();
+                initializeColorPicker($('.atomic-colorPicker'));
             }
             if ($self.attr('data-target') === 'slideout') {
                 App.fn.slideout.setContent(data.response.html[0].html);

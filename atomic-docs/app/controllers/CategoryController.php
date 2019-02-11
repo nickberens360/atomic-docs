@@ -445,22 +445,20 @@ class CategoryController extends Controller
 
 
 
-    function editAction($f3, $params)
-    {
+	function editAction($f3, $params)
+	{
 
-        $passThrough = [];
-        $category = new CategoryModel($this->db);
-        $category->load(['categoryId = :category', ':category' => $params['catId']]);
-
-
+		$passThrough = [];
+		$category = new CategoryModel($this->db);
+		$category->load(['categoryId = :category', ':category' => $params['catId']]);
 
 
 
 
-        $oldCatName = $category->slug;
-        $catId = $category->categoryId;
 
 
+		$oldCatName = $category->slug;
+		$catId = $category->categoryId;
 
 
 
@@ -468,29 +466,31 @@ class CategoryController extends Controller
 
 
 
-        if (isFormRequest('POST')) {
-
-            $catName = $f3->get('POST.atomic-cat-name');
-            $catDescription = $f3->get('POST.atomic-cat-description');
-
-	        $catSlug = slugify($catName);
-
-            $category->name = filter_var($catName, FILTER_SANITIZE_STRING);
-            $category->slug = filter_var($catSlug, FILTER_SANITIZE_STRING);
-
-            $category->description = filter_var($catDescription, FILTER_SANITIZE_STRING);
 
 
-            $category->save();
+		if (isFormRequest('POST')) {
 
-	        $catName = $category->name;
+			$catName = $f3->get('POST.atomic-cat-name');
+			$catDescription = $f3->get('POST.atomic-cat-description');
+
+			$catSlug = slugify($catName);
+
+			$category->name = filter_var($catName, FILTER_SANITIZE_STRING);
+			$category->slug = filter_var($catSlug, FILTER_SANITIZE_STRING);
+
+			$category->description = filter_var($catDescription, FILTER_SANITIZE_STRING);
+
+
+			$category->save();
+
+			$catName = $category->name;
 
 
 
-	        $stylesDir = OptionService::getOption('stylesDir');
-	        $stylesExt = OptionService::getOption('stylesExt');
-	        $markupDir = OptionService::getOption('markupDir');
-	        $markupExt = OptionService::getOption('markupExt');
+			$stylesDir = OptionService::getOption('stylesDir');
+			$stylesExt = OptionService::getOption('stylesExt');
+			$markupDir = OptionService::getOption('markupDir');
+			$markupExt = OptionService::getOption('markupExt');
 
 
 
@@ -501,122 +501,128 @@ class CategoryController extends Controller
 
 
 
-            //Change directory name - WORKING
-            $FileService->editName(
-                FRONT . '/'.$stylesDir.'/' . $oldCatName,
-                FRONT . '/'.$stylesDir.'/' . $catSlug
-            );
+			//Change directory name - WORKING
+			$FileService->editName(
+				FRONT . '/'.$stylesDir.'/' . $oldCatName,
+				FRONT . '/'.$stylesDir.'/' . $catSlug
+			);
 
-            //Change root style file name
-            $FileService->editName(
-                FRONT . '/'.$stylesDir.'/' . $catSlug . '/_' .$oldCatName.'.'.$stylesExt,
-                FRONT . '/'.$stylesDir.'/' . $catSlug . '/_' .$catSlug.'.'.$stylesExt
-            );
+			//Change root style file name
+			$FileService->editName(
+				FRONT . '/'.$stylesDir.'/' . $catSlug . '/_' .$oldCatName.'.'.$stylesExt,
+				FRONT . '/'.$stylesDir.'/' . $catSlug . '/_' .$catSlug.'.'.$stylesExt
+			);
 
-            //Change style root import string
-            $FileService->stringReplace(
-                FRONT . '/'.$stylesDir.'/main.scss',
-                '@import "'.$oldCatName.'/_'.$oldCatName.'";',
-                '@import "'.$catSlug.'/_'.$catSlug.'";'
-            );
+			//Change style root import string
+			$FileService->stringReplace(
+				FRONT . '/'.$stylesDir.'/main.scss',
+				'@import "'.$oldCatName.'/_'.$oldCatName.'";',
+				'@import "'.$catSlug.'/_'.$catSlug.'";'
+			);
 
-            //Change each file's comment string
-            $FileService->globFindReplace(
-                FRONT . '/'.$stylesDir.'/'.$catSlug.'/_*.'.$stylesExt,
-                '/* '.$stylesDir.'/'.$oldCatName.'/',
-                '/* '.$stylesDir.'/'.$catSlug.'/'
-            );
-
-
-
-            //Change markup directory name
-            $FileService->editName(
-                FRONT . '/'.$markupDir.'/' . $oldCatName ,
-                FRONT . '/'.$markupDir.'/' . $catSlug
-            );
-
-            //Change each file's comment string
-            $FileService->globFindReplace(
-                FRONT . '/'.$markupDir.'/'.$catSlug.'/*.'.$markupExt,
-                '<!-- '.$markupDir.'/'.$oldCatName.'/',
-                '<!-- '.$markupDir.'/'.$catSlug.'/'
-            );
-
-            //Change each file's comment string
-            $FileService->globFindReplace(
-                FRONT . '/'.$markupDir.'/'.$catSlug.'/*/*.'.$markupExt,
-                '<!-- '.$markupDir.'/'.$oldCatName.'/',
-                '<!-- '.$markupDir.'/'.$catSlug.'/'
-            );
+			//Change each file's comment string
+			$FileService->globFindReplace(
+				FRONT . '/'.$stylesDir.'/'.$catSlug.'/_*.'.$stylesExt,
+				'/* '.$stylesDir.'/'.$oldCatName.'/',
+				'/* '.$stylesDir.'/'.$catSlug.'/'
+			);
 
 
 
+			//Change markup directory name
+			$FileService->editName(
+				FRONT . '/'.$markupDir.'/' . $oldCatName ,
+				FRONT . '/'.$markupDir.'/' . $catSlug
+			);
 
-            if ($category->categoryId !== null) {
-	            $passThrough['status']  = true;
-	            $passThrough['message'] = 'Yayy!!!';
+			//Change each file's comment string
+			$FileService->globFindReplace(
+				FRONT . '/'.$markupDir.'/'.$catSlug.'/*.'.$markupExt,
+				'<!-- '.$markupDir.'/'.$oldCatName.'/',
+				'<!-- '.$markupDir.'/'.$catSlug.'/'
+			);
 
-
-
-	            $navItems = new ItemsService();
-	            $navItems->prepareItems();
-
-
-	            $f3->set('currentId',$catId);
-	            $f3->set('dirPath',$catName);
-	            $this->preparePageBarLinks($f3, $catId);
+			//Change each file's comment string
+			$FileService->globFindReplace(
+				FRONT . '/'.$markupDir.'/'.$catSlug.'/*/*.'.$markupExt,
+				'<!-- '.$markupDir.'/'.$oldCatName.'/',
+				'<!-- '.$markupDir.'/'.$catSlug.'/'
+			);
 
 
 
 
-
-	            ob_start();
-	            echo \Template::instance()->render( 'common/pageBar.htm' );
-	            $pageBar               = ob_get_clean();
-
-
-	            ob_start();
-	            echo \Template::instance()->render( 'common/nav.htm' );
-	            $navbar               = ob_get_clean();
-
-	            $passThrough['html']   = [
-		            [
-			            'html'      => $pageBar,
-			            'target'    => '.atomic-pageBarWrap',
-			            'placement' => 'replace',
-		            ],
-		            [
-			            'html' => $navbar,
-			            'target'    => '.atomic-fileSystem',
-			            'placement' => 'replace',
-		            ],
-
-	            ];
-
-	            return $this->renderJSON( $passThrough );
+			if ($category->categoryId !== null) {
+				$passThrough['status']  = true;
+				$passThrough['message'] = 'Yayy!!!';
 
 
+
+				$navItems = new ItemsService();
+				$navItems->prepareItems();
+
+
+				$f3->set('currentId',$catId);
+				$f3->set('dirPath',$catName);
+				$this->preparePageBarLinks($f3, $catId);
+
+
+
+
+
+				ob_start();
+				echo \Template::instance()->render( 'common/pageBar.htm' );
+				$pageBar               = ob_get_clean();
+
+
+				ob_start();
+				echo \Template::instance()->render( 'common/nav.htm' );
+				$navbar               = ob_get_clean();
+
+				$passThrough['html']   = [
+					[
+						'html'      => $pageBar,
+						'target'    => '.atomic-pageBarWrap',
+						'placement' => 'replace',
+					],
+					[
+						'html' => $navbar,
+						'target'    => '.atomic-fileSystem',
+						'placement' => 'replace',
+					],
+
+				];
+
+				return $this->renderJSON( $passThrough );
 
 
 
 
 
 
-            } else {
-                $passThrough['status'] = false;
-                $passThrough['message'] = 'shit didn\'t work';
-            }
-        }
+
+
+			} else {
+				$passThrough['status'] = false;
+				$passThrough['message'] = 'shit didn\'t work';
+			}
+		}
 
 
 
 
-        $f3->set('category', $category);
+		$f3->set('category', $category);
 
 
-        $this->render('category/edit.php', $passThrough);
+		$this->render('category/edit.php', $passThrough);
 
-    }
+	}
+
+
+
+
+
+
 
 
 

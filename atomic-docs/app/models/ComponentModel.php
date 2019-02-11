@@ -11,6 +11,7 @@
  * @property int $sort
  * @property int $backgroundColor
  * @property int $componentId
+ * @property int $fullScreen
  */
 class ComponentModel extends DB\SQL\Mapper{
 

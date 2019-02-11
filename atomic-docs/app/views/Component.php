@@ -30,6 +30,10 @@ class Component {
 		return $this->model->hasJs;
 	}
 
+	public function fullScreen() {
+		return $this->model->fullScreen;
+	}
+
 	public function backgroundColor() {
 		return $this->model->backgroundColor;
 	}

@@ -13,11 +13,15 @@ jQuery(document).ready(function ($) {
 
 
 
-    $('.js-atomic-fullscreen-trigger').click(function (e) {
-        e.preventDefault;
+
+
+
+
+    $('body').on('click', '.js-atomic-fullscreen-trigger', function() {
+
         $(this).closest('.atomic-compWrap').toggleClass('atomic-compWrap-full');
 
-       $(this).text($(this).text() === "fullscreen_exit" ? "fullscreen" : "fullscreen_exit");
+       $(this).find('i').text($(this).text() === "fullscreen_exit" ? "fullscreen" : "fullscreen_exit");
 
 
 

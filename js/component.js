@@ -1,0 +1,3 @@
+/* js/component.js */
+
+//test

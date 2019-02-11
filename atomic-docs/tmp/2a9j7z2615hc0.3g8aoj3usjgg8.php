@@ -1,32 +1,58 @@
 
 
+
 <div id="<?= $comp->slug() ?>" class="atomic-compWrap" data-id="<?= $comp->componentId() ?>" data-js="<?= $comp->hasJs() ?>">
 
-    <div class="atomic-compBar">
+
+
+    <form action="<?= baseAlias('editComponentSource', ['compId' => $comp->componentId()]) ?>" class="ajax-form">
+
+        <input type="hidden" name="action" value="srcEdit">
+
+         <div class="atomic-compBar">
         <div class="atomic-compBarLeft">
-            <h2 class="atomic-component__title"><?= $comp->name() ?></h2>
 
+            <h2 class="atomic-component__title"><a href="<?= baseAlias('componentSingle', ['compId' => $comp->componentId()]) ?>"  title="Single View" target="_blank"><?= $comp->name() ?></a></h2>
 
+            <div class="atomic-hidden atomic-inline-block">
+                <input type="hidden" name="action" value="srcEdit">
+                <a href="<?= baseAlias('deleteComponent', ['compId' => $comp->componentId()]) ?>" class="material-icons ajax-link delete-comp" data-action="delete-component" onclick="return confirm('Delete Component?');">delete</a>
+                <div class="atomic-inline-block">
+                    <input class="atomic-comp-edit-title" type="text" name="atomic-component-name" value="<?= $comp->name() ?>">
 
-            <div class="atomic-component__actions">
-                <a href="<?= baseAlias('deleteComponent', ['compId' => $comp->componentId()]) ?>" class="material-icons ajax-link" data-action="delete-component" onclick="return confirm('Delete Component?');">delete</a>
+                    <select class="atomic-input-alt u-mlx1" name="" id="">
+                        <option value="">Move to Category</option>
+                        <option value="">Item</option>
+                        <option value="">Item</option>
+                        <option value="">Item</option>
+                        <option value="">Item</option>
+                        <option value="">Item</option>
+                        <option value="">Item</option>
+                    </select>
 
-                <a href="<?= baseAlias('editComponent', ['compId' => $comp->componentId()]) ?>" class="material-icons ajax-link" data-target="panel">settings</a>
-
-                <a href="#" title="Full Screen Mode"><i class="material-icons js-atomic-fullscreen-trigger">fullscreen</i></a>
-
-
-                <form class="ajax-form" action="<?= baseAlias('editColorComponent', ['component' => $comp->componentId()]) ?>">
 
                     <input class="atomic-colorPicker" type="text" name="atomic-bgColor" value="<?= $comp->backgroundColor() ?>">
 
-                    <input type="hidden" name="action" value="atomic-edit-color">
-                </form>
+                    <?php if ($comp->hasJs() != 1): ?>
+                        <label class="atomic-compBar__label"><input class="atomic-js-input" type="checkbox" name="atomic-add-js"> Add JS File</label>
+                    <?php endif; ?>
+
+                    <button type="submit" class="btnSimple">save</button>
+                    <button type="reset" class="btnSimple-alt btnSimple js-atomic-inline-cancel">cancel</button>
+                </div>
+
+            </div>
+
+
+            <div class="atomic-component__actions">
+
+
+                <a href="#" class="material-icons js-inline-trigger">chevron_right</a>
 
 
 
 
-
+                <a href="<?= baseAlias('componentSingle', ['compId' => $comp->componentId()]) ?>"  title="Single View"><i class="material-icons">exit_to_app</i></a>
 
 
 
@@ -60,7 +86,6 @@
     <?php endif; ?>
 
 
-
     <div class="atomic-placeholder" data-src="<?= baseAlias('viewComponent', ['component' => $comp->componentId()]) ?>" data-class="partial-viewport component-<?= $comp->slug() ?>">
         Loading...
     </div>
@@ -69,6 +94,11 @@
 
     <div class="win-size-grip"></div>
 </div>
+
+
+
+
+
 <div class="atomic-tabs">
     <ul class="tabs atomic-tabs__tabs">
         <li class="atomic-tabs__item atomic-tabs__current" data-tab="atomic-markup-tab"><i class="fa fa-code" aria-hidden="true"></i> Markup</li>
@@ -77,17 +107,7 @@
 
 
         <?php if ($comp->hasJs()): ?>
-            
                 <li class="atomic-tabs__item" data-tab="atomic-js-tab">{ } javascript</li>
-            
-            <?php else: ?>
-                <li class="atomic-js-tab">
-                    <form class="ajax-form" action="<?= baseAlias('addJsComponent', ['component' => $comp->componentId()]) ?>">
-                        <label><input class="atomic-js-input" type="checkbox" name="atomic-add-js"> Add javascript file</label>
-                        <input type="hidden" name="action" value="add-js-file">
-                    </form>
-                </li>
-            
         <?php endif; ?>
 
         <li class="atomic-tabs__item" data-tab="atomic-notes-tab"><i class="fa fa-comment" aria-hidden="true"></i> Notes</li>
@@ -122,8 +142,7 @@
 
 
 
-    <form action="<?= baseAlias('editComponentSource', ['compId' => $comp->componentId()]) ?>" class="atomic-editorForm ajax-form">
-        <input type="hidden" name="action" value="srcEdit">
+    <div class="atomic-editorForm">
         <div class="atomic-tabs__main">
             <div id="atomic-markup-tab" class="atomic-tabs__content atomic-tabs__current">
                 <div class="atomic-editor__wrap">
@@ -187,15 +206,18 @@
 
         </div>
 
-        <div class="atomic-editorFooter">
+        <!--<div class="atomic-editorFooter">
             <button type="submit" class="atomic-btn-icon"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
             <span type="reset" class="atomic-btn-icon js-atomic-editorFooter__cancel"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</span>
-        </div>
+        </div>-->
 
-    </form>
+    </div>
 
 
 
 
 </div>
+
+</form>
+
 </div>

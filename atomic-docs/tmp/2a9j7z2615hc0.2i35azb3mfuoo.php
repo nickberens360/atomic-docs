@@ -10,7 +10,7 @@
                 <?php if ($isSubCat==false): ?>
                     <a href="<?= $addSubCatLink ?>" class="material-icons ajax-link" data-target="panel">create_new_folder</a>
                 <?php endif; ?>
-                <a href="<?= $addCompLink ?>" class="material-icons ajax-link" data-target="panel">note_add</a>
+                <a href="<?= $addCompLink ?>" class="material-icons ajax-link" data-target="onpage">note_add</a>
 
                 <a href="<?= $deleteCategory ?>" class="material-icons ajax-link" data-action="delete-category">delete</a>
 

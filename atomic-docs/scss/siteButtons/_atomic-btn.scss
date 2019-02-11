@@ -48,3 +48,16 @@
   cursor: pointer;
 }
 
+.btnSimple{
+  border: none;
+  background: none;
+  font-weight: bold;
+  color: $color1;
+  font-size: 16px;
+  cursor: pointer;
+  &.btnSimple-alt{
+    font-weight: normal;
+    color: $textColor;
+    font-size: 14px;
+  }
+}

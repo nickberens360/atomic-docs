@@ -36,7 +36,7 @@ class FileService {
 
     public function stringReplace($path, $oldString, $newString){
         $contents = file_get_contents($path);
-        $contents = str_replace($oldString, $newString , $contents);
+        $contents = str_replace($oldString, $newString, $contents);
         file_put_contents($path, $contents);
     }
 

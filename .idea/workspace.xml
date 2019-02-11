@@ -6,22 +6,56 @@
       <change beforePath="$PROJECT_DIR$/atomic-db/db/atomicdocs.db" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-db/db/atomicdocs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atomic-docs/app/controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/app/controllers/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atomic-docs/app/controllers/ComponentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/app/controllers/ComponentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atomic-docs/app/models/CategoryModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/app/models/CategoryModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/app/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/app/controllers/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atomic-docs/app/models/ComponentModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/app/models/ComponentModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atomic-docs/app/services/FileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/app/services/FileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atomic-docs/app/services/FileSystemService.php" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/app/services/FileSystemService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atomic-docs/app/templates/common/pageBar.htm" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/app/templates/common/pageBar.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/app/templates/component/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/app/templates/component/add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atomic-docs/app/templates/component/view.htm" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/app/templates/component/view.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/app/views/Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/app/views/Component.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atomic-docs/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/js/atomic-compWrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/js/atomic-compWrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/js/atomic-editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/js/atomic-editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/js/initialize-comp.js" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/js/initialize-comp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atomic-docs/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/js/min/maps/site.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/js/min/maps/site.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/js/min/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/js/min/site.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/js/min/site.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/js/min/site.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atomic-docs/routes.ini" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/routes.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/scss/misc/_cleanup.scss" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/scss/misc/_cleanup.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atomic-docs/scss/molecules/_atomic-compBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/scss/molecules/_atomic-compBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.2i35azb3mfuoo.php" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.2i35azb3mfuoo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.3g8aoj3usjgg8.php" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.3g8aoj3usjgg8.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/molecules/box.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/scss/organisms/_atomic-compWrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/scss/organisms/_atomic-compWrap.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/scss/siteButtons/_atomic-btn.scss" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/scss/siteButtons/_atomic-btn.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/scss/siteForms/_atomic-input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/atomic-docs/scss/siteForms/_atomic-input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.1q90ap4kf3a0a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.1ypmxkwz9y4g0.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.25994p6rif0g8.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.2g0ri34rxlogg.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.2i35azb3mfuoo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.2l7tzu88ddmow.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.2uacuz687yw4w.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.2ufb60btmeuc8.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.3g8aoj3usjgg8.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.m9jcn4c85qf5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/2a9j7z2615hc0.oar8wnenas8p.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/3717le4qzyyo4.1q90ap4kf3a0a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/3717le4qzyyo4.1ypmxkwz9y4g0.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/3717le4qzyyo4.25994p6rif0g8.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/3717le4qzyyo4.2g0ri34rxlogg.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/3717le4qzyyo4.2i35azb3mfuoo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/3717le4qzyyo4.2l7tzu88ddmow.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/3717le4qzyyo4.2uacuz687yw4w.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/3717le4qzyyo4.2ufb60btmeuc8.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/3717le4qzyyo4.3g8aoj3usjgg8.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/3717le4qzyyo4.m9jcn4c85qf5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic-docs/tmp/3717le4qzyyo4.oar8wnenas8p.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/test/sdfsdffsd.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/test/sub-test/sdfsdf.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/molecules/_box.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/molecules/_molecules.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/test/_sdfsdffsd.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/test/_test.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/test/sub-test/_sdfsdf.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/test/sub-test/_sub-test.scss" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,39 +64,111 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/atomic-docs/app/controllers/ComponentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2852">
-              <caret line="347" column="19" selection-start-line="347" selection-start-column="13" selection-end-line="347" selection-end-column="19" />
+            <state relative-caret-position="6165">
+              <caret line="1239" column="57" selection-start-line="1239" selection-start-column="57" selection-end-line="1239" selection-end-column="57" />
+              <folding>
+                <element signature="n#addAction#0;n#ComponentController#0;n#!!top" />
+                <element signature="n#addSubAction#0;n#ComponentController#0;n#!!top" />
+                <element signature="n#editAction#0;n#ComponentController#0;n#!!top" />
+                <element signature="n#addJsAction#0;n#ComponentController#0;n#!!top" />
+                <element signature="n#editColorAction#0;n#ComponentController#0;n#!!top" />
+                <element signature="n#deleteAction#0;n#ComponentController#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/component/single.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/category/index.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atomic-docs/scss/organisms/_atomic-compWrap.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1065">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atomic-docs/scss/misc/_cleanup.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="24" column="15" lean-forward="true" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atomic-docs/routes.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/component/view.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="780">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#true#0;n#check#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/atomic-docs/js/main.js">
+        <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/common/sideBar.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
+            <state relative-caret-position="105">
+              <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/atomic-docs/scss/molecules/_atomic-compBar.scss">
+        <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/common/nav.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atomic-docs/app/controllers/CategoryController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2610">
+              <caret line="312" column="12" selection-start-line="312" selection-start-column="12" selection-end-line="312" selection-end-column="64" />
+              <folding>
+                <element signature="n#indexSubAction#0;n#CategoryController#0;n#!!top" />
+                <element signature="n#addSubAction#0;n#CategoryController#0;n#!!top" />
+                <element signature="n#editAction#0;n#CategoryController#0;n#!!top" />
+                <element signature="n#editSubAction#0;n#CategoryController#0;n#!!top" />
+                <element signature="n#deleteAction#0;n#CategoryController#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,13 +177,40 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>editLink</find>
-      <find>FRONT</find>
-      <find>builder</find>
-      <find>ddd</find>
-      <find>[]</find>
-      <find>editac</find>
+      <find>hidden</find>
+      <find>edits</find>
+      <find>function slug</find>
+      <find>slugif</find>
+      <find>/* scss/test/_news.scss */</find>
+      <find>e</find>
+      <find>srcEdit</find>
+      <find>slugi</find>
+      <find>editS</find>
+      <find>slugigy</find>
+      <find>atomic-colorPicker</find>
+      <find>.atomic-input</find>
+      <find>canc</find>
+      <find>addActio</find>
+      <find>pane</find>
+      <find>componentN</find>
+      <find>panel</find>
+      <find>addA</find>
+      <find>fulls</find>
+      <find>updateSidebar</find>
+      <find>$result = 1;</find>
+      <find>preven</find>
+      <find>full</find>
+      <find>.js-atomic-fullscreen-trigger</find>
+      <find>catLoop</find>
+      <find>catLink'</find>
+      <find>catLink</find>
+      <find>editSr</find>
+      <find>blank</find>
+      <find>placeholder</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/atomic-docs/app/controllers</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,23 +219,50 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/atomic-docs/js/atomic-editor.js" />
         <option value="$PROJECT_DIR$/atomic-docs/scss/main.scss" />
-        <option value="$PROJECT_DIR$/atomic-docs/app/controllers/ComponentController.php" />
         <option value="$PROJECT_DIR$/scss/molecules/_molecules.scss" />
-        <option value="$PROJECT_DIR$/atomic-docs/app/templates/common/pageBar.htm" />
-        <option value="$PROJECT_DIR$/atomic-docs/routes.ini" />
         <option value="$PROJECT_DIR$/atomic-docs/app/models/CategoryModel.php" />
         <option value="$PROJECT_DIR$/atomic-docs/app/services/FileSystemService.php" />
-        <option value="$PROJECT_DIR$/atomic-docs/app/services/FileService.php" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_22.php" />
         <option value="$PROJECT_DIR$/scss/category-one/_category-one.scss" />
-        <option value="$PROJECT_DIR$/scss/main.scss" />
-        <option value="$PROJECT_DIR$/atomic-docs/app/models/ComponentModel.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/scss/siteButtons/_atomic-btn.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/js/min/site.js" />
+        <option value="$PROJECT_DIR$/atomic-docs/js/initialize-comp.js" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/controllers/Controller.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/templates/component/comp-bar.htm" />
         <option value="$PROJECT_DIR$/atomic-docs/app/controllers/CategoryController.php" />
-        <option value="$PROJECT_DIR$/atomic-docs/scss/molecules/_atomic-compBar.scss" />
+        <option value="$PROJECT_DIR$/components/new-cat/comp-newss.php" />
+        <option value="$PROJECT_DIR$/scss/new-cat/_comp-newss.scss" />
+        <option value="$PROJECT_DIR$/components/test/news.php" />
+        <option value="$PROJECT_DIR$/scss/test/_news.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/services/FileService.php" />
+        <option value="$PROJECT_DIR$/scss/test/_fart-tart.scss" />
+        <option value="$PROJECT_DIR$/components/test/fart-tart.php" />
+        <option value="$PROJECT_DIR$/scss/test/_fart-tarts.scss" />
+        <option value="$PROJECT_DIR$/components/test/fart-tarts.php" />
+        <option value="$PROJECT_DIR$/scss/category/_category.scss" />
+        <option value="$PROJECT_DIR$/js/newtestingss.js" />
+        <option value="$PROJECT_DIR$/js/ceeeds.js" />
+        <option value="$PROJECT_DIR$/js/ceeed-test.js" />
+        <option value="$PROJECT_DIR$/js/ceeed.js" />
+        <option value="$PROJECT_DIR$/js/ceeedss.js" />
+        <option value="$PROJECT_DIR$/atomic-docs/scss/siteForms/_atomic-input.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/templates/common/pageBar.htm" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/templates/component/add.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/models/ComponentModel.php" />
+        <option value="$PROJECT_DIR$/atomic-docs/js/atomic-editor.js" />
         <option value="$PROJECT_DIR$/atomic-docs/js/main.js" />
+        <option value="$PROJECT_DIR$/atomic-docs/js/atomic-compWrap.js" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/views/Component.php" />
+        <option value="$PROJECT_DIR$/scss/main.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/routes.ini" />
+        <option value="$PROJECT_DIR$/atomic-docs/scss/molecules/_atomic-compBar.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/controllers/ComponentController.php" />
         <option value="$PROJECT_DIR$/atomic-docs/app/templates/component/view.htm" />
+        <option value="$PROJECT_DIR$/atomic-docs/scss/organisms/_atomic-compWrap.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/templates/component/single.htm" />
+        <option value="$PROJECT_DIR$/atomic-docs/scss/misc/_cleanup.scss" />
+        <option value="$PROJECT_DIR$/atomic-docs/app/templates/category/index.htm" />
       </list>
     </option>
   </component>
@@ -115,13 +275,14 @@
     <option name="width" value="1920" />
     <option name="height" value="1057" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -151,28 +312,31 @@
               <item name="atomic-docs" type="b2602c69:ProjectViewProjectNode" />
               <item name="atomic-docs" type="462c0819:PsiDirectoryNode" />
               <item name="atomic-docs" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="category" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atomic-docs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atomic-docs" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="atomic-docs" type="b2602c69:ProjectViewProjectNode" />
               <item name="atomic-docs" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atomic-docs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atomic-docs" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -203,18 +367,20 @@
       <updated>1549398091821</updated>
       <workItem from="1549398093199" duration="1614000" />
       <workItem from="1549399782979" duration="16373000" />
-      <workItem from="1549570538616" duration="268000" />
+      <workItem from="1549570538616" duration="4644000" />
+      <workItem from="1549576419912" duration="42398000" />
+      <workItem from="1549821635293" duration="1710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18255000" />
+    <option name="totallyTimeSpent" value="66739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26091588" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -227,7 +393,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.35440415" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.35440415" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -239,147 +405,266 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/atomic-docs/js/atomic-compWrap.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-docs/scss/main.scss">
+    <entry file="file://$PROJECT_DIR$/scss/new-cat/_comp-newss.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/newone/_newone.scss" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_5.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="199">
+          <caret line="1057" column="9" selection-start-line="1057" selection-start-column="9" selection-end-line="1057" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/components/test/news.php" />
+    <entry file="file://$PROJECT_DIR$/scss/test/_news.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/test/_new.scss" />
+    <entry file="file://$PROJECT_DIR$/components/test/fuck.php" />
+    <entry file="file://$PROJECT_DIR$/scss/test/_fuck.scss" />
+    <entry file="file://$PROJECT_DIR$/atomic-docs/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        <state relative-caret-position="203">
+          <caret line="124" column="14" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-docs/js/atomic-editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/molecules/_test.scss" />
-    <entry file="file://$PROJECT_DIR$/scss/molecules/_molecules.scss" />
-    <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/common/pageBar.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="14" column="110" selection-start-line="14" selection-start-column="110" selection-end-line="14" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-docs/routes.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-docs/atomic-core/temp-processing/temp-delete-category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-docs/atomic-core/temp-functions/delete-category-functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_22.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/category-one/_category-one.scss" />
+    <entry file="file://$PROJECT_DIR$/scss/test/_fart-tart.scss" />
+    <entry file="file://$PROJECT_DIR$/components/test/fart-tart.php" />
+    <entry file="file://$PROJECT_DIR$/scss/test/_fart-tarts.scss" />
+    <entry file="file://$PROJECT_DIR$/components/test/fart-tarts.php" />
     <entry file="file://$PROJECT_DIR$/atomic-docs/app/services/FileService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="89" column="63" selection-start-line="89" selection-start-column="63" selection-end-line="89" selection-end-column="63" />
+        <state relative-caret-position="252">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-docs/app/models/ComponentModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/main.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-docs/app/services/FileSystemService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-318">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-docs/app/models/CategoryModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/test/_sdfsdffsd.scss">
+    <entry file="file://$PROJECT_DIR$/scss/category/_category.scss" />
+    <entry file="file://$PROJECT_DIR$/css/newer_file.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/test/_test.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-docs/app/controllers/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="643" lean-forward="true" selection-start-line="643" selection-end-line="643" />
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ceeeds.js" />
+    <entry file="file://$PROJECT_DIR$/js/newtestingss.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
-            <element signature="n#addAction#0;n#CategoryController#0;n#!!top" />
-            <element signature="n#editAction#0;n#CategoryController#0;n#!!top" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-docs/js/app.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-docs/js/matchheight.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-docs/scss/molecules/_atomic-compBar.scss">
+    <entry file="file://$PROJECT_DIR$/js/ceeed-test.js" />
+    <entry file="file://$PROJECT_DIR$/js/ceeed.js" />
+    <entry file="file://$PROJECT_DIR$/js/ceeedss.js" />
+    <entry file="file://$PROJECT_DIR$/atomic-docs/scss/siteForms/_atomic-input.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+        <state relative-caret-position="390">
+          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/fatfree/lib/auth.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/js/initialize-comp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/common/pageBar.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="107" selection-start-line="12" selection-start-column="107" selection-end-line="12" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/blue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/component/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="13" column="122" selection-start-line="13" selection-start-column="122" selection-end-line="13" selection-end-column="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/services/OptionService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/atomic-docs/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
+        <state relative-caret-position="332">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atomic-docs/app/controllers/ComponentController.php">
+    <entry file="file://$PROJECT_DIR$/atomic-docs/js/atomic-compWrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2852">
-          <caret line="347" column="19" selection-start-line="347" selection-start-column="13" selection-end-line="347" selection-end-column="19" />
+        <state relative-caret-position="201">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/models/ComponentModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/controllers/OptionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/views/Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/component/index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/common/header.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-258" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/main.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1244">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/js/atomic-editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/scss/molecules/_atomic-compBar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="107" column="24" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/controllers/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2610">
+          <caret line="312" column="12" selection-start-line="312" selection-start-column="12" selection-end-line="312" selection-end-column="64" />
+          <folding>
+            <element signature="n#indexSubAction#0;n#CategoryController#0;n#!!top" />
+            <element signature="n#addSubAction#0;n#CategoryController#0;n#!!top" />
+            <element signature="n#editAction#0;n#CategoryController#0;n#!!top" />
+            <element signature="n#editSubAction#0;n#CategoryController#0;n#!!top" />
+            <element signature="n#deleteAction#0;n#CategoryController#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/common/nav.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/common/sideBar.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/component/view.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="780">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#true#0;n#check#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/routes.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/scss/organisms/_atomic-compWrap.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/controllers/ComponentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6165">
+          <caret line="1239" column="57" selection-start-line="1239" selection-start-column="57" selection-end-line="1239" selection-end-column="57" />
+          <folding>
+            <element signature="n#addAction#0;n#ComponentController#0;n#!!top" />
+            <element signature="n#addSubAction#0;n#ComponentController#0;n#!!top" />
+            <element signature="n#editAction#0;n#ComponentController#0;n#!!top" />
+            <element signature="n#addJsAction#0;n#ComponentController#0;n#!!top" />
+            <element signature="n#editColorAction#0;n#ComponentController#0;n#!!top" />
+            <element signature="n#deleteAction#0;n#ComponentController#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/component/single.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/scss/misc/_cleanup.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="24" column="15" lean-forward="true" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic-docs/app/templates/category/index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>

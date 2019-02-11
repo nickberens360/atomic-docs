@@ -10,6 +10,7 @@ html {
 body{
   padding: 0;
   margin: 0;
+  font-family: $font1;
 }
 img{
   max-width:100%;
@@ -23,5 +24,77 @@ img{
   width: 100%;
   border: none;
   box-shadow: none;
+}
+
+::placeholder{
+  color: #ccc;
+  font-weight: normal;
+}
+
+
+$max: 10;
+$baseUnit: 8px;
+
+@for $i from 1 through ceil($max) {
+  $value: ($i - 1) + 1;
+  $newVal: $i * $baseUnit;
+  .u-mtx#{$i}{
+    margin-top: $newVal !important;
+  }
+  .u-mrx#{$i}{
+    margin-right: $newVal !important;
+  }
+  .u-mbx#{$i}{
+    margin-bottom: $newVal !important;
+  }
+  .u-mlx#{$i}{
+    margin-left: $newVal !important;
+  }
+
+  .u-ptx#{$i}{
+    padding-top: $newVal !important;
+  }
+  .u-prx#{$i}{
+    padding-right: $newVal !important;
+  }
+  .u-pbx#{$i}{
+    padding-bottom: $newVal !important;
+  }
+  .u-plx#{$i}{
+    padding-left: $newVal !important;
+  }
+}
+
+
+.u-mt0{
+  margin-top: 0 !important;
+}
+.u-mr0{
+  margin-right: 0 !important;
+}
+.u-mb0{
+  margin-bottom: 0 !important;
+}
+
+.u-ml0{
+  margin-left: 0 !important;
+}
+
+
+.u-pt0 {
+  padding-top: 0 !important;
+}
+.u-pr0 {
+  padding-right: 0 !important;
+}
+.u-pb0 {
+  padding-bottom: 0 !important;
+}
+.u-pl0{
+  padding-left: 0 !important;
+}
+
+.u-plx0{
+  padding-left: 0 !important;
 }
 
