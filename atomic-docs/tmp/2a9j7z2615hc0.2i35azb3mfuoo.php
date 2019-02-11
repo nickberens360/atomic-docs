@@ -2,17 +2,24 @@
     <div class="atomic-pageBar">
         <div class="atomic-pageBar__item atomic-pageBar__left">
 
-            <h1 class="atomic-catTitle"><?= $dirPath.PHP_EOL ?>
+            <h1 class="atomic-catTitle"><?= ($dirPath)."
+" ?>
 
 
+                <?php if ($isSingle == false): ?>
 
-                <a href="<?= $editLink ?>" class="material-icons ajax-link" data-target="panel">settings</a>
+                <a href="<?= ($editLink) ?>" class="material-icons ajax-link" data-target="panel">settings</a>
                 <?php if ($isSubCat==false): ?>
-                    <a href="<?= $addSubCatLink ?>" class="material-icons ajax-link" data-target="panel">create_new_folder</a>
+                    <a href="<?= ($addSubCatLink) ?>" class="material-icons ajax-link" data-target="panel">create_new_folder</a>
                 <?php endif; ?>
-                <a href="<?= $addCompLink ?>" class="material-icons ajax-link" data-target="onpage">note_add</a>
+                <a href="<?= ($addCompLink) ?>" class="material-icons ajax-link" data-target="onpage">note_add</a>
 
-                <a href="<?= $deleteCategory ?>" class="material-icons ajax-link" data-action="delete-category">delete</a>
+                <a href="<?= ($deleteCategory) ?>" class="material-icons ajax-link" data-action="delete-category">delete</a>
+
+                <?php endif; ?>
+
+
+
 
             </h1>
 
@@ -21,6 +28,7 @@
 
 
         </div>
+        <?php if ($isSingle == ''): ?>
         <div class="atomic-pageBar__item atomic-pageBar__right">
             <ul class="atomic-dashControls">
                 <li>
@@ -33,6 +41,8 @@
                 <li><a href="#" class="js-atomic-dashControl" data-atomicwidth="375px"><i class="fa fa-mobile" aria-hidden="true"></i></a></li>
             </ul>
         </div>
+        <?php endif; ?>
+
 
     </div>
 

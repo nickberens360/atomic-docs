@@ -21,7 +21,7 @@ class ComponentController extends Controller {
 
 
 		echo \Template::instance()->render( 'component/iframe.htm' );
-		echo \Template::instance()->render( 'component/comp-bar.htm' );
+
 
 	}
 
@@ -628,12 +628,6 @@ class ComponentController extends Controller {
 
 
 
-			/*echo 'Color: '.$bgColor. '<br>';
-			echo 'Has Js: '.$js. '<br>';
-			echo 'New Name: '.$name. '<br>';
-			echo 'Old Name: '.$oldCompName. '<br>';
-			die;*/
-
 
 
 			$component->description = $description;
@@ -1219,17 +1213,10 @@ class ComponentController extends Controller {
 
 		$model = new ComponentModel( \Base::instance()->get( 'db' ) );
 
+		$category  = new CategoryModel( $this->db );
+
 
 		$filter = [ 'componentId = :component', ':component' => $params['compId'] ];
-
-
-
-
-
-
-
-
-
 
 
 		$model->load( $filter );
@@ -1237,16 +1224,79 @@ class ComponentController extends Controller {
 		$catId = $model->categoryId;
 
 
-		$catLink = baseAlias('category', ['catId'=>$catId]);
+		$activeCompId = $model->componentId;
 
 
+		$category->load( [ 'categoryId = :category', ':category' => $catId ] );
 
+		$compCatParentId = $category->parentCatId;
+
+		//Get Parent Category Name
+		$categoryParent = new CategoryModel( $this->db );
+
+		$filter = [ 'categoryId= ?', $compCatParentId ];
+
+		$categoryParent->load( $filter );
+
+
+		$markupExt = OptionService::getOption( 'markupExt' );
+
+
+		if(!empty($compCatParentId)){
+			$dirPath = $categoryParent->name. ' / ' .$category->name;
+		}
+		else{
+			$dirPath = $category->name. ' / ' .$model->name. '.' .$markupExt;
+		}
+
+
+		/*$catLink = baseAlias('category', ['catId'=>$catId]);
+
+		$f3->set( 'catLink', $catLink );*/
 
 
 		$view = new Component( $model );
 
 		$f3->set( 'comp', $view );
-		$f3->set( 'catLink', $catLink );
+
+
+
+		$f3->set( 'dirPath', $dirPath );
+
+		$f3->set( 'isSingle', true );
+
+
+		$f3->set( 'activeCompId', $activeCompId );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		$navItems = new ItemsService();
+		$navItems->prepareItems();
+
+		if(!empty($compCatParentId)){
+			$f3->set('currentSubId',$catId);
+			$f3->set('currentId',$compCatParentId);
+		}
+		else{
+			$f3->set('currentId',$catId);
+		}
 
 
 

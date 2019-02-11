@@ -1,24 +1,24 @@
 
 
 
-<div id="<?= $comp->slug() ?>" class="atomic-compWrap" data-id="<?= $comp->componentId() ?>" data-js="<?= $comp->hasJs() ?>">
+<div id="<?= ($comp->slug()) ?>" class="atomic-compWrap" data-id="<?= ($comp->componentId()) ?>" data-js="<?= ($comp->hasJs()) ?>">
 
 
 
-    <form action="<?= baseAlias('editComponentSource', ['compId' => $comp->componentId()]) ?>" class="ajax-form">
+    <form action="<?= (baseAlias('editComponentSource', ['compId' => $comp->componentId()])) ?>" class="ajax-form">
 
         <input type="hidden" name="action" value="srcEdit">
 
          <div class="atomic-compBar">
         <div class="atomic-compBarLeft">
 
-            <h2 class="atomic-component__title"><a href="<?= baseAlias('componentSingle', ['compId' => $comp->componentId()]) ?>"  title="Single View" target="_blank"><?= $comp->name() ?></a></h2>
+            <h2 class="atomic-component__title"><a href="<?= (baseAlias('componentSingle', ['compId' => $comp->componentId()])) ?>"  title="Single View" target="_blank"><?= ($comp->name()) ?></a></h2>
 
             <div class="atomic-hidden atomic-inline-block">
                 <input type="hidden" name="action" value="srcEdit">
-                <a href="<?= baseAlias('deleteComponent', ['compId' => $comp->componentId()]) ?>" class="material-icons ajax-link delete-comp" data-action="delete-component" onclick="return confirm('Delete Component?');">delete</a>
+                <a href="<?= (baseAlias('deleteComponent', ['compId' => $comp->componentId()])) ?>" class="material-icons ajax-link delete-comp" data-action="delete-component" onclick="return confirm('Delete Component?');">delete</a>
                 <div class="atomic-inline-block">
-                    <input class="atomic-comp-edit-title" type="text" name="atomic-component-name" value="<?= $comp->name() ?>">
+                    <input class="atomic-comp-edit-title" type="text" name="atomic-component-name" value="<?= ($comp->name()) ?>">
 
                     <select class="atomic-input-alt u-mlx1" name="" id="">
                         <option value="">Move to Category</option>
@@ -31,7 +31,7 @@
                     </select>
 
 
-                    <input class="atomic-colorPicker" type="text" name="atomic-bgColor" value="<?= $comp->backgroundColor() ?>">
+                    <input class="atomic-colorPicker" type="text" name="atomic-bgColor" value="<?= ($comp->backgroundColor()) ?>">
 
                     <?php if ($comp->hasJs() != 1): ?>
                         <label class="atomic-compBar__label"><input class="atomic-js-input" type="checkbox" name="atomic-add-js"> Add JS File</label>
@@ -51,8 +51,9 @@
 
 
 
-
-                <a href="<?= baseAlias('componentSingle', ['compId' => $comp->componentId()]) ?>"  title="Single View"><i class="material-icons">exit_to_app</i></a>
+                <?php if ($isSingle == false): ?>
+                <a href="<?= (baseAlias('componentSingle', ['compId' => $comp->componentId()])) ?>"  title="Single View"><i class="material-icons">exit_to_app</i></a>
+                <?php endif; ?>
 
 
 
@@ -78,7 +79,7 @@
 
     <?php if ($comp->backgroundColor()): ?>
         
-            <div class="atomic-component js-atomic-component atomic-component-bg" style="background-color: <?= $comp->backgroundColor() ?>">
+            <div class="atomic-component js-atomic-component atomic-component-bg" style="background-color: <?= ($comp->backgroundColor()) ?>">
         
         <?php else: ?>
             <div class="atomic-component js-atomic-component">
@@ -86,7 +87,7 @@
     <?php endif; ?>
 
 
-    <div class="atomic-placeholder" data-src="<?= baseAlias('viewComponent', ['component' => $comp->componentId()]) ?>" data-class="partial-viewport component-<?= $comp->slug() ?>">
+    <div class="atomic-placeholder" data-src="<?= (baseAlias('viewComponent', ['component' => $comp->componentId()])) ?>" data-class="partial-viewport component-<?= ($comp->slug()) ?>">
         Loading...
     </div>
 
@@ -115,14 +116,14 @@
 
 
         <li class="atomic-tabs__copy">
-            <button class="atomic-copyBtn atomic-markup-copyBtn" data-clipboard-target="#atomic-copy-target-markup-<?= $comp->componentId() ?>">
+            <button class="atomic-copyBtn atomic-markup-copyBtn" data-clipboard-target="#atomic-copy-target-markup-<?= ($comp->componentId()) ?>">
                 <i class="fa fa-clone" aria-hidden="true"></i> Copy Markup
             </button>
-            <button class="atomic-copyBtn  atomic-styles-copyBtn" data-clipboard-target="#atomic-copy-target-styles-<?= $comp->componentId() ?>">
+            <button class="atomic-copyBtn  atomic-styles-copyBtn" data-clipboard-target="#atomic-copy-target-styles-<?= ($comp->componentId()) ?>">
                 <i class="fa fa-clone" aria-hidden="true"></i> Copy Styles
             </button>
             <?php if ($comp->hasJs()): ?>
-                <button class="atomic-copyBtn  atomic-js-copyBtn" data-clipboard-target="#atomic-copy-target-js-<?= $comp->componentId() ?>">
+                <button class="atomic-copyBtn  atomic-js-copyBtn" data-clipboard-target="#atomic-copy-target-js-<?= ($comp->componentId()) ?>">
                     <i class="fa fa-clone" aria-hidden="true"></i> Copy Javascript
                 </button>
             <?php endif; ?>
@@ -148,10 +149,10 @@
                 <div class="atomic-editor__wrap">
                     <div class="atomic-editor__inner">
 
-                        <div class="atomic-editor" id="atomic-editor-markup-<?= $comp->componentId() ?>"><textarea><?= incFilter($comp->compFile($comp, 'markup')) ?></textarea></div>
+                        <div class="atomic-editor" id="atomic-editor-markup-<?= ($comp->componentId()) ?>"><textarea><?= (incFilter($comp->compFile($comp, 'markup'))) ?></textarea></div>
 
                     </div>
-                    <textarea name="atomic-markup-field" id="atomic-copy-target-markup-<?= $comp->componentId() ?>" class="atomic-copy-target"><?= incFilter($comp->compFile($comp, 'markup')) ?></textarea>
+                    <textarea name="atomic-markup-field" id="atomic-copy-target-markup-<?= ($comp->componentId()) ?>" class="atomic-copy-target"><?= (incFilter($comp->compFile($comp, 'markup'))) ?></textarea>
                 </div>
             </div>
 
@@ -166,9 +167,9 @@
                 <div class="atomic-editor__wrap">
                     <div class="atomic-editor__inner">
 
-                        <div class="atomic-editor" id="atomic-editor-styles-<?= $comp->componentId() ?>"><textarea><?= incFilter($comp->compFile($comp, 'styles')) ?></textarea></div>
+                        <div class="atomic-editor" id="atomic-editor-styles-<?= ($comp->componentId()) ?>"><textarea><?= (incFilter($comp->compFile($comp, 'styles'))) ?></textarea></div>
                     </div>
-                    <textarea name="atomic-styles-field" id="atomic-copy-target-styles-<?= $comp->componentId() ?>" class="atomic-copy-target"><?= incFilter($comp->compFile($comp, 'styles')) ?></textarea>
+                    <textarea name="atomic-styles-field" id="atomic-copy-target-styles-<?= ($comp->componentId()) ?>" class="atomic-copy-target"><?= (incFilter($comp->compFile($comp, 'styles'))) ?></textarea>
                 </div>
             </div>
 
@@ -181,9 +182,9 @@
                     <div class="atomic-editor__wrap">
                         <div class="atomic-editor__inner">
 
-                            <div class="atomic-editor" id="atomic-editor-js-<?= $comp->componentId() ?>"><textarea><?= incFilter($comp->compFile($comp, 'js')) ?></textarea></div>
+                            <div class="atomic-editor" id="atomic-editor-js-<?= ($comp->componentId()) ?>"><textarea><?= (incFilter($comp->compFile($comp, 'js'))) ?></textarea></div>
                         </div>
-                        <textarea name="atomic-js-field" id="atomic-copy-target-js-<?= $comp->componentId() ?>" class="atomic-copy-target"><?= incFilter($comp->compFile($comp, 'js')) ?></textarea>
+                        <textarea name="atomic-js-field" id="atomic-copy-target-js-<?= ($comp->componentId()) ?>" class="atomic-copy-target"><?= (incFilter($comp->compFile($comp, 'js'))) ?></textarea>
                     </div>
                 </div>
             <?php endif; ?>
@@ -194,7 +195,7 @@
             <div id="atomic-notes-tab" class="atomic-tabs__content">
                 <div class="atomic-editor__wrap">
                     <div class="atomic-editor__inner atomic-editor__inner-note">
-                        <textarea class="summernote" name="atomic-description-field"><?= $comp->description() ?></textarea>
+                        <textarea class="summernote" name="atomic-description-field"><?= ($comp->description()) ?></textarea>
                     </div>
 
 

@@ -11,10 +11,10 @@
 
                 <?php if ($currentId  ==  $cat['category']->categoryId): ?>
                     
-                        <li class="atomic-active" data-type="cat" data-slug="<?= $cat['category']->slug ?>"><i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i>
+                        <li class="atomic-active" data-type="cat" data-slug="<?= ($cat['category']->slug) ?>"><i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i>
                     
                     <?php else: ?>
-                        <li data-type="cat" data-slug="<?= $cat['category']->slug ?>"><i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i>
+                        <li data-type="cat" data-slug="<?= ($cat['category']->slug) ?>"><i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i>
                     
 
                 <?php endif; ?>
@@ -23,8 +23,8 @@
 
 
 
-                <a href="<?= $cat['catLink'] ?>"><?= $cat['category']->name ?></a>
-                <ul class="atomic-sub atomic-dropable" data-cat="<?= $cat['category']->slug ?>">
+                <a href="<?= ($cat['catLink']) ?>"><?= ($cat['category']->name) ?></a>
+                <ul class="atomic-sub atomic-dropable" data-cat="<?= ($cat['category']->slug) ?>">
                     <?php if ($cat['subcategories']): ?>
                         <?php foreach (($cat['subcategories']?:[]) as $subCat): ?>
 
@@ -34,10 +34,10 @@
 
                             <?php if ($currentSubId  ==  $subCat['category']->categoryId): ?>
                                 
-                                    <li class="atomic-active" data-type="cat" data-slug="<?= $subCat['category']->slug ?>"><i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i> <a href="<?= $subCat['childCatLink'] ?>"><?= $subCat['category']->name ?></a>
+                                    <li class="atomic-active" data-type="cat" data-slug="<?= ($subCat['category']->slug) ?>"><i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i> <a href="<?= ($subCat['childCatLink']) ?>"><?= ($subCat['category']->name) ?></a>
                                 
                                 <?php else: ?>
-                                    <li data-type="cat" data-slug="<?= $subCat['category']->slug ?>"><i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i> <a href="<?= $subCat['childCatLink'] ?>"><?= $subCat['category']->name ?></a>
+                                    <li data-type="cat" data-slug="<?= ($subCat['category']->slug) ?>"><i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i> <a href="<?= ($subCat['childCatLink']) ?>"><?= ($subCat['category']->name) ?></a>
                                 
 
                             <?php endif; ?>
@@ -51,9 +51,9 @@
 
 
 
-                            <ul class="atomic-sub atomic-dropable" data-cat="<?= $subCat['category']->slug ?>">
+                            <ul class="atomic-sub atomic-dropable" data-cat="<?= ($subCat['category']->slug) ?>">
                                 <?php foreach (($subCat['components']?:[]) as $subComp): ?>
-                                    <li data-type="comp" data-slug="<?= $subComp->slug ?>"><i class="fa fa-file-o"></i> <a href="#"><?= $subComp->name ?></a></li>
+                                    <li data-type="comp" data-slug="<?= ($subComp->slug) ?>"><i class="fa fa-file-o"></i> <a href="#"><?= ($subComp->name) ?></a></li>
                                 <?php endforeach; ?>
                             </ul>
 
@@ -63,7 +63,16 @@
                     <?php endif; ?>
 
                     <?php foreach (($cat['components']?:[]) as $comp): ?>
-                        <li data-type="comp" data-slug="<?= $comp->slug ?>"><i class="fa fa-file-o"></i> <a href="#"><?= $comp->name ?></a></li>
+                        <?php if ($activeCompId == $comp->componentId): ?>
+                            
+                                <li class="atomic-active-item" data-type="comp" data-slug="<?= ($comp->slug) ?>"><i class="fa fa-file-o"></i> <a href="<?= ($comp->compLink) ?>"><?= ($comp->name) ?></a></li>
+                            
+                            <?php else: ?>
+                                <li data-type="comp" data-slug="<?= ($comp->slug) ?>"><i class="fa fa-file-o"></i> <a href="<?= ($comp->compLink) ?>"><?= ($comp->name) ?></a></li>
+                            
+                        <?php endif; ?>
+
+
                     <?php endforeach; ?>
 
                 </ul>

@@ -26,6 +26,16 @@ class ItemsService {
 			$cc      = $category->find( [ 'parentCatId = ?', $cat->categoryId ], [ 'order' => 'sort ASC' ] );
 			$comp    = $components->find( [ 'categoryId = ?', $cat->categoryId ], [ 'order' => 'sort ASC' ] );
 
+
+			foreach ($comp as &$c){
+
+				$c->compLink = '';
+
+				$c->compLink = baseAlias('componentSingle', ['compId' => $c->componentId]);
+
+			}
+
+
 			$catLink = baseAlias('category', ['catId' => $cat->categoryId]);
 
 
@@ -36,6 +46,7 @@ class ItemsService {
 
 				$childCatLink = baseAlias('categorySub', ['catId' => $cat->categoryId, 'catSubId' => $childCat->categoryId]);
 
+				//{{'componentSingle', ['compId' => $comp->componentId()] | baseAlias}}
 
 				$subCats[ $childCat->categoryId ] = [
 					'category'   => $childCat,
@@ -48,7 +59,7 @@ class ItemsService {
 				'category'      => $cat,
 				'subcategories' => $subCats,
 				'components'    => $comp,
-				'catLink'    => $catLink,
+				'catLink'       => $catLink,
 			];
 		}
 

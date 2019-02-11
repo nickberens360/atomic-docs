@@ -28,6 +28,12 @@
       font-weight: 500;
     }
   }
+  .atomic-active-item{
+    a{
+      color: $color1;
+      font-weight: bold;
+    }
+  }
 }
 
 
@@ -146,11 +152,13 @@ $folderMargin: 5px;
 
 .atomic-fileSystem{
   padding: 35px;
+  padding-bottom: 0;
 }
 
 .atomic-sideContent{
   width: 225px;
 }
+
 
 
 

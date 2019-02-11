@@ -58,7 +58,7 @@
 
 
 
-        <p class="atomic-catDescription"><?= $catDescription ?> </p>
+        <p class="atomic-catDescription"><?= ($catDescription) ?> </p>
 
 
 
@@ -89,4 +89,3 @@
 
 
 
-</body>
