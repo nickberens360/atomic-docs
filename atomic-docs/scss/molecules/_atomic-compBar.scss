@@ -76,13 +76,16 @@
 }
 
 
+$compBarOffset: 300px;
 
 .atomic-compBarLeft{
-  @include col($six);
+  width: calc(100% - #{$compBarOffset});
+  float: left;
 }
 
 .atomic-compBarRight{
-  @include col($six);
+  width: $compBarOffset;
+  float: left;
   .atomic-dashControls{
     float: right;
     i{

@@ -63,7 +63,16 @@
                     </check>
 
                     <repeat group="{{ @cat.components }}" value="{{ @comp }}">
-                        <li data-type="comp" data-slug="{{ @comp->slug }}"><i class="fa fa-file-o"></i> <a href="#">{{ @comp->name }}</a></li>
+                        <check if="{{ @activeCompId == @comp->componentId }}">
+                            <true>
+                                <li class="atomic-active-item" data-type="comp" data-slug="{{ @comp->slug }}"><i class="fa fa-file-o"></i> <a href="{{ @comp->compLink }}">{{ @comp->name }}</a></li>
+                            </true>
+                            <false>
+                                <li data-type="comp" data-slug="{{ @comp->slug }}"><i class="fa fa-file-o"></i> <a href="{{ @comp->compLink }}">{{ @comp->name }}</a></li>
+                            </false>
+                        </check>
+
+
                     </repeat>
 
                 </ul>
