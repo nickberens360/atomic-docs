@@ -59,7 +59,7 @@ class ComponentController extends Controller {
 				$content = ob_get_clean();
 
 				$navItems = new ItemsService();
-				$navItems->prepareItems();
+				$navItems->prepareItems($component->categoryId, true);
 
 				$f3->set('currentSubId', $category->categoryId);
 				$f3->set('currentId', $category->categoryId);
@@ -369,18 +369,14 @@ class ComponentController extends Controller {
 			$markup = $f3->get('POST.atomic-markup-field');
 			$styles = $f3->get('POST.atomic-styles-field');
 			$js = $f3->get('POST.atomic-js-field');
-			$description = $f3->get('POST.atomic-description-field');
-			$bgColor = $f3->get('POST.atomic-bgColor');
-			$name = $f3->get('POST.atomic-component-name');
 			$requestJs = $f3->get('POST.atomic-add-js');
-			$description = htmlspecialchars($description);
+			$description = htmlspecialchars($f3->get('POST.atomic-description-field'));
 
 			$component->description = $description;
-			$component->name = $name;
-			$component->backgroundColor = $bgColor;
+			$component->name = $f3->get('POST.atomic-component-name');
+			$component->backgroundColor = $f3->get('POST.atomic-bgColor');
 			$component->oldSlug = $oldCompName;
-			$compSlug = slugify($name);
-			$component->slug = $compSlug;
+			$component->slug = slugify($f3->get('POST.atomic-component-name'));
 
 			if ($requestJs === 'on') {
 				$component->hasJs = $requestJs;
@@ -397,24 +393,10 @@ class ComponentController extends Controller {
 				$filter = ['categoryId= ?', $category->parentCatId];
 				$categoryParent->load($filter);
 
-				$stylesDir = OptionService::getOption('stylesDir');
-				$stylesExt = OptionService::getOption('stylesExt');
-				$markupDir = OptionService::getOption('markupDir');
-				$markupExt = OptionService::getOption('markupExt');
-
 				$FileService = new FileService();
 
-				$componentPath = getComponentPath($component);
-
-				file_put_contents(
-					FRONT . '/' . $markupDir . '/' . $componentPath . '' . $component->slug . '.' . $markupExt,
-					$markup
-				);
-
-				file_put_contents(
-					FRONT . '/' . $stylesDir . '/' . $componentPath . '_' . $component->slug . '.' . $stylesExt,
-					$styles
-				);
+				FileServiceMarkup::editContent($component, $markup);
+				FileServiceStyle::editContent($component, $styles);
 
 				$FileService->editStyleName($component, $oldCompName);
 				$FileService->editMarkupName($component, $oldCompName);
@@ -426,11 +408,10 @@ class ComponentController extends Controller {
 
 				if ($component->hasJs && !empty($js)) {
 					FileServiceJavascript::editContent($component, $js);
-
-					if ($component->slug !== $component->oldSlug) {
-						FileServiceJavascript::editCommentString($component->oldSlug, $component->slug);
-						FileServiceJavascript::editFile($component, $oldCompName);
-					}
+				}
+				if ($component->slug !== $component->oldSlug) {
+					FileServiceJavascript::editCommentString($component->oldSlug, $component->slug);
+					FileServiceJavascript::editFile($component, $oldCompName);
 				}
 
 				$passThrough['status'] = true;
@@ -441,7 +422,7 @@ class ComponentController extends Controller {
 				$f3->set('comp', $view);
 
 				$navItems = new ItemsService();
-				$navItems->prepareItems();
+				$navItems->prepareItems($component->categoryId, true);
 
 				if (!empty($category->parentCatId)) {
 					$f3->set('currentSubId', $component->categoryId);

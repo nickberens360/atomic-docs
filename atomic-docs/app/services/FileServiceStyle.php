@@ -154,7 +154,7 @@ class FileServiceStyle {
 
 		//Change style comp root import string
 		$fs->stringReplace(
-			FRONT . '/' . $path . '_' . $component->getCategory()->name . '.' . OptionService::getOption('stylesExt'),
+			FRONT . '/' . $path . '_' . $component->getCategory()->slug . '.' . OptionService::getOption('stylesExt'),
 			'@import "_' . $oldName . '";',
 			'@import "_' . $component->slug . '";'
 		);
@@ -165,6 +165,13 @@ class FileServiceStyle {
 		$to = '_' . $component->slug . '.' . OptionService::getOption('stylesExt');
 
 		$fs->stringReplace($fullPath, $from, $to);
+	}
+
+	public static function editContent(ComponentModel $component, $content) {
+		$componentPath = getComponentPath($component);
+
+		$path = FRONT . '/' . OptionService::getOption('stylesDir') . '/' . $componentPath . '_' . $component->slug . '.' . OptionService::getOption('stylesExt');
+		file_put_contents($path, $content);
 	}
 
 }

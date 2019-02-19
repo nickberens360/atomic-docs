@@ -200,16 +200,6 @@ function replace_substr($search, $replace, $str) {
 	return $text;
 }
 
-//$str = 'one/a/i/two/b/ii';
-//$one = replace_substr('one/a', 'one/ab', $str);
-//$two = replace_substr('i/two', 'i/twos', $str);
-//$three = replace_substr('i/', 'ii/', $str);
-//$four = replace_substr($string, $replacement, $str);
-//$five = replace_substr($string, $replacement, $str);
-//
-//d($one, $two, $three, $four, $five);
-//die();
-
 function navWalker($items, $level = 0) {
 	if (empty($items)) {
 		return;

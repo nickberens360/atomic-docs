@@ -39,13 +39,13 @@ class FileServiceMarkup {
 			'<!-- ' . $path . $component->slug . '.' . OptionService::getOption('markupExt') . ' -->'
 		);
 
-//		$fullPath = FRONT . '/' . $path . $component->slug . '.' . OptionService::getOption('markupExt');
-//		$from = $oldName . '.' . OptionService::getOption('markupExt');
-//		$to = $component->slug . '.' . OptionService::getOption('markupExt');
-//
-//		$fs->stringReplace($fullPath, $from, $to);
-//
-//		eval(\Psy\sh());
+		//		$fullPath = FRONT . '/' . $path . $component->slug . '.' . OptionService::getOption('markupExt');
+		//		$from = $oldName . '.' . OptionService::getOption('markupExt');
+		//		$to = $component->slug . '.' . OptionService::getOption('markupExt');
+		//
+		//		$fs->stringReplace($fullPath, $from, $to);
+		//
+		//		eval(\Psy\sh());
 	}
 
 	/**
@@ -61,6 +61,13 @@ class FileServiceMarkup {
 		$path = FRONT . '/' . OptionService::getOption('markupDir') . '/' . $oldParentPath . '*.' . OptionService::getOption('markupExt');
 
 		$fs->globFindReplace($path, $from, $to);
+	}
+
+	public static function editContent(ComponentModel $component, $content) {
+		$componentPath = getComponentPath($component);
+
+		$path = FRONT . '/' . OptionService::getOption('markupDir') . '/' . $componentPath . '' . $component->slug . '.' . OptionService::getOption('markupExt');
+		file_put_contents($path, $content);
 	}
 
 	//	public static function editCategory(CategoryModel $category, $oldName) {
