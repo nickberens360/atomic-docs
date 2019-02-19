@@ -70,6 +70,18 @@ class FileServiceMarkup {
 		file_put_contents($path, $content);
 	}
 
+	public static function deleteFile(ComponentModel $component) {
+		$markupDir = OptionService::getOption('markupDir');
+		$markupExt = OptionService::getOption('markupExt');
+
+		$fs = new FileService();
+		$dirPath = FRONT . '/' . $markupDir . '/' . getComponentPath($component);
+		$path = $dirPath . $component->slug . '.' . $markupExt;
+
+		// delete markup file
+		$fs->deleteFile($path);
+	}
+
 	//	public static function editCategory(CategoryModel $category, $oldName) {
 	//		$FileService = new FileService();
 	//		$itemService = new ItemsService();

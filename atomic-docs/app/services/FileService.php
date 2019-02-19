@@ -21,7 +21,9 @@ class FileService {
 	}
 
 	public function editName($oldPath, $newPath) {
-		rename($oldPath, $newPath);
+		if (file_exists($oldPath) && !file_exists($newPath)) {
+			rename($oldPath, $newPath);
+		}
 	}
 
 	public function stringReplace($path, $oldString, $newString) {
@@ -37,7 +39,9 @@ class FileService {
 	}
 
 	public function deleteFile($path) {
-		unlink($path);
+		if (file_exists($path)) {
+			unlink($path);
+		}
 	}
 
 	public function stringBuilder($type, $dirPath, $file) {

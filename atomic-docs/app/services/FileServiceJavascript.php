@@ -79,4 +79,12 @@ class FileServiceJavascript {
 		file_put_contents($path, $content);
 	}
 
+	public static function deleteFile(ComponentModel $component) {
+		$jsDir = OptionService::getOption('jsDir');
+		$jsExt = OptionService::getOption('jsExt');
+		$path = FRONT . '/' . $jsDir . '/' . $component->slug . '.' . $jsExt;
+		$fs = new FileService();
+		$fs->deleteFile($path);
+	}
+
 }

@@ -406,12 +406,14 @@ class ComponentController extends Controller {
 					$component->hasJs = 1;
 				}
 
-				if ($component->hasJs && !empty($js)) {
-					FileServiceJavascript::editContent($component, $js);
-				}
-				if ($component->slug !== $component->oldSlug) {
-					FileServiceJavascript::editCommentString($component->oldSlug, $component->slug);
-					FileServiceJavascript::editFile($component, $oldCompName);
+				if ($component->hasJs) {
+					if (!empty($js)) {
+						FileServiceJavascript::editContent($component, $js);
+					}
+					if ($component->slug !== $component->oldSlug) {
+						FileServiceJavascript::editCommentString($component->oldSlug, $component->slug);
+						FileServiceJavascript::editFile($component, $oldCompName);
+					}
 				}
 
 				$passThrough['status'] = true;
@@ -569,73 +571,31 @@ class ComponentController extends Controller {
 
 		$component->load(['componentId = :component', ':component' => $params['compId']]);
 
-		$compSlug = $component->slug;
-		$compId = $component->componentId;
-		$hasJs = $component->hasJs;
-
 		$compCatId = $component->categoryId;
 		$category->load(['categoryId = :category', ':category' => $compCatId]);
 
-		$catId = $category->categoryId;
-		$catSlug = $category->slug;
-
-		$catParentId = $category->parentCatId;
-
-		//Get Parent Category Info
-		if (!empty($catParentId)) {
-			$categoryParent = new CategoryModel($this->db);
-			$filter = ['categoryId= ?', $catParentId];
-			$categoryParent->load($filter);
-			$catParentId = $categoryParent->categoryId;
-			$catParentSlug = $categoryParent->slug;
-
-			$dirPath = $catParentSlug . '/' . $catSlug;
-		}
-		else {
-			$dirPath = $catSlug;
-		}
-
-		$stylesDir = OptionService::getOption('stylesDir');
-		$stylesExt = OptionService::getOption('stylesExt');
-		$markupDir = OptionService::getOption('markupDir');
-		$markupExt = OptionService::getOption('markupExt');
-		$jsDir = OptionService::getOption('jsDir');
-		$jsExt = OptionService::getOption('jsExt');
-
-		$FileService = new FileService();
+		FileServiceStyle::deleteFile($component);
 
 		//Delete Component markup file
+		FileServiceMarkup::deleteFile($component);
 
-		$FileService->deleteFile(FRONT . '/' . $markupDir . '/' . $dirPath . '/' . $compSlug . '.' . $markupExt);
-
-		//Delete style import string
-
-		$importString = $FileService->stringBuilder('styleImport', $dirPath, $compSlug);
-
-		$FileService->stringReplace(
-			FRONT . '/' . $stylesDir . '/' . $dirPath . '/_' . $catSlug . '.' . $stylesExt,
-			$importString,
-			''
-		);
-
-		//Delete style file
-		$FileService->deleteFile(FRONT . '/' . $stylesDir . '/' . $dirPath . '/_' . $compSlug . '.' . $stylesExt);
-
-		if (!empty($hasJs)) {
-			$FileService->deleteFile(FRONT . '/' . $jsDir . '/' . $compSlug . '.' . $jsExt);
+		if ($component->hasJs) {
+			FileServiceJavascript::deleteFile($component);
 		}
 
 		if ($category->categoryId !== null) {
 			$passThrough['status'] = true;
 			$passThrough['message'] = 'Yayy!!!';
 
+			$catId = $component->categoryId;
+			$compSlug = $component->slug;
+
 			$component->erase();
 
 			$navItems = new ItemsService();
-			$navItems->prepareItems();
+			$navItems->prepareItems($catId, true);
 
 			$f3->set('currentId', $catId);
-			$f3->set('dirPath', $dirPath);
 
 			ob_start();
 			echo \Template::instance()->render('common/nav.htm');

@@ -174,4 +174,28 @@ class FileServiceStyle {
 		file_put_contents($path, $content);
 	}
 
+	public static function deleteFile(ComponentModel $component) {
+		$stylesDir = OptionService::getOption('stylesDir');
+		$stylesExt = OptionService::getOption('stylesExt');
+
+		$fs = new FileService();
+		//Delete style import string
+		$dirPath = FRONT . '/' . $stylesDir . '/' . getComponentPath($component);
+		$path = $dirPath . '_' . $component->slug . '.' . $stylesExt;
+
+		$category = new CategoryModel();
+		$category->loadById($component->categoryId);
+
+		$importString = '@import "_' . $component->slug . '";';
+		$parentCategory = new CategoryModel();
+		$parentCategory->loadById($category->parentCatId);
+
+		$categoryPath = $dirPath . '_' . $category->slug . '.' . $stylesExt;
+
+		$fs->stringReplace($categoryPath, $importString, '');
+
+		//Delete style file
+		$fs->deleteFile($path);
+	}
+
 }
