@@ -1,59 +1,89 @@
 /* scss/molecules/_atomic-dirBox.scss */
 
-.atomic-nav{
+.atomic-nav {
   list-style: none;
   padding: 0;
-  a{
+
+  a {
     color: $textColor;
     text-decoration: none;
     font-weight: 300;
     font-size: 14px;
   }
-  i{
+
+  i {
     color: $color1;
     font-size: 14px;
   }
-  ul{
+
+  ul {
     list-style: none;
     padding-left: 16px;
     margin-bottom: 0;
     border-left: 1px solid #dedede;
 
   }
-  li{
+
+  > ul {
+    border-left: 0;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  li {
     margin-bottom: 4px;
   }
+
   [data-type="cat"] {
-    >a{
+    > a {
       font-weight: 500;
     }
   }
-  .atomic-active-item{
-    a{
+
+  .atomic-active-item {
+    a {
       color: $color1;
       font-weight: bold;
     }
   }
 }
 
+.atomic-droppable {
+  li {
+    ul {
+      display: none;
+    }
 
-.atomic-sub{
+    &.atomic-active {
+      & > ul {
+        display: block;
+      }
+    }
+  }
+}
+
+.atomic-sub {
   display: none;
+
+  li {
+    white-space: nowrap;
+  }
 }
 
 
-.atomic-active{
-  > .atomic-sub{
+.atomic-active {
+  > .atomic-sub {
     display: block;
   }
-  > .js-atomic-catContent-trigger{
-    &:before{
+
+  > .js-atomic-catContent-trigger {
+    &:before {
       content: "\f07c" !important;
     }
   }
 }
 
-.js-atomic-catContent-trigger{
+.js-atomic-catContent-trigger {
   cursor: pointer;
   position: relative;
 }
@@ -146,57 +176,52 @@ $folderMargin: 5px;
 }*/
 
 
-
-
-
-
-.atomic-fileSystem{
-  padding: 35px;
-  padding-bottom: 0;
+.atomic-fileSystem {
+  padding: 35px 20px;
+  overflow: auto;
 }
 
-.atomic-sideContent{
+.atomic-sideContent {
   width: 225px;
 }
 
 
-
-
-
-
-.atomic-catItem{
+.atomic-catItem {
   font-weight: 300;
   position: relative;
-  a{
+
+  a {
     text-decoration: none;
     color: $textColor;
     display: block;
     padding: 2px 0;
   }
-  .fa{
+
+  .fa {
     color: $color1;
     //margin-right: $folderMargin;
   }
-  .atomic-catItem{
+
+  .atomic-catItem {
     padding-top: 0;
     padding-left: 20px;
   }
 }
 
-.atomic-catItem-active{
-  >.atomic-catContent{
+.atomic-catItem-active {
+  > .atomic-catContent {
     display: block;
   }
-  .js-atomic-catContent-trigger{
-    &:before{
+
+  .js-atomic-catContent-trigger {
+    &:before {
       content: "\f07c" !important;
     }
   }
 }
 
 
-
-.atomic-file{
+.atomic-file {
   font-size: 14px;
 }
 
@@ -209,24 +234,23 @@ $folderMargin: 5px;
 }*/
 
 
-
-.atomic-catContent{
+.atomic-catContent {
   //display: none;
   border-left: 1px solid #dedede;
 }
 
-.atomic-fileDrop{
+.atomic-fileDrop {
   padding-left: 20px;
   padding-bottom: 4px;
 }
 
-.atomic-dirBoxGroup__footer{
+.atomic-dirBoxGroup__footer {
   padding-left: 35px;
 }
 
 
-.atomic-dash-is-active{
-  .atomic-fileSystem{
+.atomic-dash-is-active {
+  .atomic-fileSystem {
     display: none;
   }
 }

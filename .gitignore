@@ -1,6 +1,7 @@
 node_modules/
 .idea/
 
+atomic-docs/tmp/
 scss/*
 components/*
 js/*
