@@ -1,2 +1,0 @@
-/* js/new-component.js */
-

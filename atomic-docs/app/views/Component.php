@@ -1,27 +1,39 @@
 <?php
 
-$stylesDir = OptionService::getOption( 'stylesDir' );
-$stylesExt = OptionService::getOption( 'stylesExt' );
-$markupDir = OptionService::getOption( 'markupDir' );
-
+$stylesDir = OptionService::getOption('stylesDir');
+$stylesExt = OptionService::getOption('stylesExt');
+$markupDir = OptionService::getOption('markupDir');
 
 class Component {
+	/** @var ComponentModel */
 	public $model;
+	/** @var int */
 	public $componentId;
+	/** @var string */
 	public $name;
+	/** @var string */
 	public $slug;
+	/** @var bool */
 	public $hasJs;
+	/** @var string */
 	public $backgroundColor;
+	/** @var string */
 	public $description;
+	/** @var string */
 	public $compFile;
+	/** @var string Slug of the component's category */
 	public $compCat;
 
-	public function __construct( ComponentModel $component ) {
+	public function __construct(ComponentModel $component) {
 		$this->model = $component;
 	}
 
-	public function __get( $key ) {
-		if ( isset( $this->model->{$key} ) ) {
+	/**
+	 * @param $key
+	 * @return mixed
+	 */
+	public function __get($key) {
+		if (isset($this->model->{$key})) {
 			return $this->model->{$key};
 		}
 	}
@@ -38,9 +50,8 @@ class Component {
 		return $this->model->backgroundColor;
 	}
 
-	public function description($decode=true) {
-		if($decode){
-
+	public function description($decode = true) {
+		if ($decode) {
 			return htmlspecialchars_decode($this->model->description);
 		}
 
@@ -60,31 +71,27 @@ class Component {
 	}
 
 	public function compCat() {
-
-		$category = CategoryService::getCategorySlugById( $this->model->categoryId );
+		$category = CategoryService::getCategorySlugById($this->model->categoryId);
 
 		return $category;
-
-
 	}
 
-
 	/**
-	 * @param ComponentModel $comp
+	 * @param Component $comp
 	 * @param string $type What you want to display. markup, styles, js.
 	 *
 	 * @return string
 	 */
-	public function compFile( Component $comp, $type = 'markup' ) {
-		$stylesDir = OptionService::getOption( 'stylesDir' );
-		$stylesExt = OptionService::getOption( 'stylesExt' );
-		$jsDir     = OptionService::getOption( 'jsDir' );
-		$jsExt     = OptionService::getOption( 'jsExt' );
-		$markupExt = OptionService::getOption( 'markupExt' );
-		$markupDir = OptionService::getOption( 'markupDir' );
+	public function compFile(Component $comp, $type = 'markup') {
+		$stylesDir = OptionService::getOption('stylesDir');
+		$stylesExt = OptionService::getOption('stylesExt');
+		$jsDir = OptionService::getOption('jsDir');
+		$jsExt = OptionService::getOption('jsExt');
+		$markupExt = OptionService::getOption('markupExt');
+		$markupDir = OptionService::getOption('markupDir');
 		$underScore = "";
 
-		switch ( $type ) {
+		switch ($type) {
 			case 'styles':
 				$dir = $stylesDir;
 				$ext = $stylesExt;
@@ -101,27 +108,31 @@ class Component {
 
 		$path = FRONT . '/' . $dir;
 
-		$cat = CategoryService::getCategoryById( $comp->categoryId );
+		if ($type !== 'js') {
+			$cat = CategoryService::getCategoryById($comp->categoryId);
 
-		if ( $type != 'js'&&$cat->parentCatId !== null ) {
-			$pc   = CategoryService::getCategoryById( $cat->parentCatId );
-			$path .= '/' . $pc->slug;
+			$itemService = new ItemsService();
+			$items = $itemService->getCategoriesAsItems();
+			$parents = $itemService->findParents(array_reverse($items), $cat->categoryId);
+			$hierarchy = $itemService->buildHierarchy(array_reverse($parents), 0, 0, null, false);
+			$path .= '/' . buildDirPath($hierarchy);
+
+			//		if ($type != 'js' && $cat->parentCatId !== null) {
+			//			$pc = CategoryService::getCategoryById($cat->parentCatId);
+			//			$path .= $pc->slug;
+			//		}
+			//
+			//		if ($type != 'js') {
+			//			$path .= $cat->slug;
+			//		}
+
+			$path .= $underScore . $comp->slug() . '.' . $ext;
 		}
-
-		if ($type != 'js'){
-			$path .= '/' . $cat->slug;
+		else {
+			$path .= '/' . $comp->slug() . '.' . $ext;
 		}
-
-
-
-		$path .= '/' . $underScore.$comp->slug() . '.' . $ext;
-
 
 		return $path;
-
 	}
-
-
-
 
 }

@@ -35,15 +35,12 @@
 
 
 <script>
-
-
     var e = document.getElementById('partial');
     var elementHeight = e.clientHeight;
     parent.postMessage({
         element: 'component-{{@component->slug()}}',
         elementHeight: elementHeight
     })
-
 </script>
 
 <script src="{{@appBase}}/../js/min/site.min.js"></script>

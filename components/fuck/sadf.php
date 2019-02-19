@@ -1,2 +1,0 @@
-<!-- components/fuck/sadf.php -->
-

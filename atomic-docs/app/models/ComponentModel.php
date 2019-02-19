@@ -4,24 +4,41 @@
 
 /**
  * Class ComponentModel
- * @property int $categoryId
- * @property int $name
- * @property int $hasJs
- * @property int $slug
- * @property int $sort
- * @property int $backgroundColor
- * @property int $componentId
- * @property int $fullScreen
+ * @property int componentId
+ * @property string name
+ * @property string description
+ * @property int sort
+ * @property string backgroundColor
+ * @property bool hasJs
+ * @property int categoryId
+ * @property string slug
  */
-class ComponentModel extends DB\SQL\Mapper{
+class ComponentModel extends BaseModel {
+	/** @var CategoryModel */
+	private $category = null;
+	public $oldSlug = null;
 
-	public function __construct(DB\SQL $db) {
-		parent::__construct($db,'component');
+	public function __construct() {
+		$this->_table = 'component';
+		$this->_primaryKey = 'componentId';
+		parent::__construct();
 	}
 
+	static public function deleteComp($key, $val) {
+	}
 
-	static public function deleteComp( $key, $val ) {
+	/**
+	 * @return CategoryModel
+	 */
+	public function getCategory() {
+		if ($this->category === null) {
+			$this->category = new CategoryModel();
+			if ($this->categoryId) {
+				$this->category->loadById($this->categoryId);
+			}
+		}
 
+		return $this->category;
 	}
 
 }

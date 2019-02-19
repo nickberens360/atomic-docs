@@ -1,0 +1,5 @@
+{
+    "require-dev": {
+        "psy/psysh": "^0.9.9"
+    }
+}

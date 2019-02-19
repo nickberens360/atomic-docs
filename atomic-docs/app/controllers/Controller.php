@@ -2,7 +2,6 @@
 
 class Controller {
 
-
 	const
 		FILE_TYPE_JSON = 'json',
 		FILE_TYPE_HTML = 'html';
@@ -17,7 +16,6 @@ class Controller {
 	/** @var string */
 	protected $viewTemplate = 'home/index.php';
 
-
 	protected $f3;
 	protected $db;
 
@@ -29,39 +27,20 @@ class Controller {
 		echo '- After routing';
 	}*/
 
-
 	function __construct() {
-
-		if ( $this->f3 == null ) {
-
-
-			$f3       = Base::instance();
+		if ($this->f3 == null) {
+			$f3 = Base::instance();
 			$this->f3 = $f3;
 
+			$this->db = $f3->get('db');
 
-			$db = new DB\SQL(
-				$f3->get( 'devdb' ), '', '',
-				array( \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION )
-			);
+			$category = new CategoryModel($this->db);
+			$components = new ComponentModel($this->db);
 
-			$this->db = $db;
+			$cat = $category->find(null, ['order' => 'sort']);
+			$comp = $components->find(null, ['order' => 'sort']);
 
-			$f3->set('db', $db);
-
-
-			$category   = new CategoryModel( $this->db );
-			$components = new ComponentModel( $this->db );
-
-
-
-
-
-			$cat  = $category->find( null, [ 'order' => 'sort' ] );
-			$comp = $components->find( null, [ 'order' => 'sort' ] );
-
-
-			$this->f3->set( 'categories', $cat );
-
+			$this->f3->set('categories', $cat);
 
 			//$this->prepareItems();
 
@@ -73,106 +52,55 @@ class Controller {
 			$this->prepareFooter();
 
 
+			$this->f3->set('components', $comp);
 
-
-
-
-
-
-			$this->f3->set( 'db', $db );
-
-			$this->f3->set( 'components', $comp );
-
-			$this->f3->set( 'catComponents', [] );
+			$this->f3->set('catComponents', []);
 
 			//Set Logo
 
-			$logo = $f3->get( 'BASE' ) . '/img/atomic-logo.svg';
+			$logo = $f3->get('BASE') . '/img/atomic-logo.svg';
 
+			$f3->set('logo', $logo);
 
-			$f3->set( 'logo', $logo );
+			$f3->set('header', 'common/header.htm');
 
+			$f3->set('search', 'common/search.htm');
 
-			$f3->set( 'header', 'common/header.htm' );
+			$f3->set('sideBar', 'common/sideBar.htm');
 
+			$f3->set('nav', 'common/nav.htm');
 
-			$f3->set( 'search', 'common/search.htm' );
+			$f3->set('pageBar', 'common/pageBar.htm');
 
-			$f3->set( 'sideBar', 'common/sideBar.htm' );
+			$f3->set('footer', 'common/footer.htm');
 
-			$f3->set( 'nav', 'common/nav.htm' );
+			$f3->set('catLoop', 'component/index.htm');
 
-			$f3->set( 'pageBar', 'common/pageBar.htm' );
+			$f3->set('compView', 'component/view.htm');
 
-			$f3->set( 'footer', 'common/footer.htm' );
-
-			$f3->set( 'catLoop', 'component/index.htm' );
-
-
-			$f3->set( 'compView', 'component/view.htm' );
-
+			$f3->set('appBase', Base::instance()->get('BASE'));
 
 			$f3->set( 'compBar', 'component/comp-bar.htm' );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			$f3->set( 'appBase', Base::instance()->get('BASE') );
-
-
-
-
-
 		}
-
-
 	}
-
 
 	public function prepareHeader() {
-
 		$sidebar = OptionService::getOption('sidebar');
 
-		\Base::instance()->set( 'sideBarOpen', $sidebar );
+		\Base::instance()->set('sideBarOpen', $sidebar);
 	}
-
-
-
 
 	public function prepareFooter() {
-
-
-
 	}
 
-
-
-
-
-
-
-
-
 	public function beforeRoute() {
-		self::$requestedFileType = isset( $this->f3->get( 'PARAMS' )['fileType'] ) ? $this->f3->get( 'PARAMS' )['fileType'] : self::FILE_TYPE_HTML;
+		self::$requestedFileType = isset($this->f3->get('PARAMS')['fileType']) ? $this->f3->get('PARAMS')['fileType'] : self::FILE_TYPE_HTML;
 
-		if ( isset( $_SERVER["HTTP_ACCEPT"] ) && strpos( $_SERVER["HTTP_ACCEPT"], 'json' ) ) {
+		if (isset($_SERVER["HTTP_ACCEPT"]) && strpos($_SERVER["HTTP_ACCEPT"], 'json')) {
 			self::$requestedFileType = self::FILE_TYPE_JSON;
 		}
 	}
-
 
 	/**
 	 * @param             $content string
@@ -182,49 +110,48 @@ class Controller {
 	 *
 	 * @return bool
 	 */
-	protected function renderHTML( $content = null, $view = null, $passThrough = [], $showAlerts = true, $template = false ) {
+	protected function renderHTML($content = null, $view = null, $passThrough = [], $showAlerts = true, $template = false) {
 		// HTML request
 
-		foreach ( $passThrough as $key => $value ) {
+		foreach ($passThrough as $key => $value) {
 			${$key} = $value;
 		}
 
 		// if this view is called via ajax or from within a page - render without wrapper
-		if ( $view === null && $content === null ) {
+		if ($view === null && $content === null) {
 			$view = 'common/error.php';
 		}
-		if ( isAJAXRequest() || self::$pageRendered ) {
-			if ( $view !== null ) {
-				if ( $template ) {
-					return \Template::instance()->render( $view );
+		if (isAJAXRequest() || self::$pageRendered) {
+			if ($view !== null) {
+				if ($template) {
+					return \Template::instance()->render($view);
 				}
 
-				return \View::instance()->render( $view );
-			} else {
-				return ( $content );
+				return \View::instance()->render($view);
 			}
-		} else {
-			if ( $template ) {
-				echo \Template::instance()->render( $view );
-			} else {
-				echo \View::instance()->render( $view );
+			else {
+				return ($content);
 			}
-
+		}
+		else {
+			if ($template) {
+				echo \Template::instance()->render($view);
+			}
+			else {
+				echo \View::instance()->render($view);
+			}
 		}
 
 		return true;
-
 	}
 
-	protected function renderJSON( $passThrough = [], $errorCode = 200 ) {
+	protected function renderJSON($passThrough = [], $errorCode = 200) {
 		// json request
 		$allowResponse = true;
-		if ( $allowResponse ) {
-			send_json( $passThrough, $errorCode );
+		if ($allowResponse) {
+			send_json($passThrough, $errorCode);
 		}
-
 	}
-
 
 	/**
 	 * Render a response as either html or json objects
@@ -235,26 +162,22 @@ class Controller {
 	 *
 	 * @return bool
 	 */
-	protected function render( $view = null, $passThrough = [], $showAlerts = true, $template = false, $errorCode = 200 ) {
-
-
+	protected function render($view = null, $passThrough = [], $showAlerts = true, $template = false, $errorCode = 200) {
 		// do not render view if page has already been redirected;
-		if ( self::$pageRedirected ) {
+		if (self::$pageRedirected) {
 			return false;
-		} elseif ( self::$requestedFileType == self::FILE_TYPE_JSON ) {
-			$json         = $passThrough;
+		}
+		else if (self::$requestedFileType == self::FILE_TYPE_JSON) {
+			$json = $passThrough;
 
-			if(!isset($json['html'])){
-				$json['html'] = ( $view ? $this->renderHTML( null, $view, $passThrough, $showAlerts, $template, $errorCode ) : false );
+			if (!isset($json['html'])) {
+				$json['html'] = ($view ? $this->renderHTML(null, $view, $passThrough, $showAlerts, $template, $errorCode) : false);
 			}
 
-
-
-			$this->renderJSON( $json, $errorCode );
-		} else {
-
-
-			$this->renderHTML( null, $view, $passThrough, $showAlerts, $template, $errorCode );
+			$this->renderJSON($json, $errorCode);
+		}
+		else {
+			$this->renderHTML(null, $view, $passThrough, $showAlerts, $template, $errorCode);
 		}
 
 		return true;
@@ -269,9 +192,8 @@ class Controller {
 	 *
 	 * @return bool
 	 */
-	protected function template( $view = null, $passthrough = [], $showAlerts = true ) {
-		return $this->render( $view, $passthrough, $showAlerts, true );
+	protected function template($view = null, $passthrough = [], $showAlerts = true) {
+		return $this->render($view, $passthrough, $showAlerts, true);
 	}
-
 
 }

@@ -18,7 +18,7 @@
     "gulp-notify": "^3.2.0",
     "gulp-order": "^1.2.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3"
   }

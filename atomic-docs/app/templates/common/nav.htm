@@ -1,93 +1,80 @@
 <div class="atomic-fileSystem">
-
-    <div class="atomic-catItemGroup" data-parent="root">
-
-        <ul class="atomic-nav atomic-dropable" data-cat="root">
-
-            <repeat group="{{ @sideBarCats }}" value="{{ @cat }}">
-
-
-
-
-                <check if="{{ @currentId }} == {{ @cat.category->categoryId }}">
-                    <true>
-                        <li class="atomic-active" data-type="cat" data-slug="{{ @cat.category->slug }}"><i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i>
-                    </true>
-                    <false>
-                        <li data-type="cat" data-slug="{{ @cat.category->slug }}"><i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i>
-                    </false>
-
-                </check>
-
-
-
-
-
-                <a href="{{ @cat.catLink }}">{{ @cat.category->name }}</a>
-                <ul class="atomic-sub atomic-dropable" data-cat="{{ @cat.category->slug }}">
-                    <check if="{{ @cat.subcategories }}">
-                        <repeat group="{{ @cat.subcategories }}" value="{{ @subCat }}">
-
-
-
-
-
-                            <check if="{{ @currentSubId }} == {{ @subCat.category->categoryId }}">
-                                <true>
-                                    <li class="atomic-active" data-type="cat" data-slug="{{ @subCat.category->slug }}"><i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i> <a href="{{ @subCat.childCatLink }}">{{ @subCat.category->name }}</a>
-                                </true>
-                                <false>
-                                    <li data-type="cat" data-slug="{{ @subCat.category->slug }}"><i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i> <a href="{{ @subCat.childCatLink }}">{{ @subCat.category->name }}</a>
-                                </false>
-
-                            </check>
-
-
-
-
-
-
-
-
-
-
-                            <ul class="atomic-sub atomic-dropable" data-cat="{{ @subCat.category->slug }}">
-                                <repeat group="{{ @subCat.components }}" value="{{ @subComp }}">
-                                    <li data-type="comp" data-slug="{{ @subComp->slug }}"><i class="fa fa-file-o"></i> <a href="#">{{ @subComp->name }}</a></li>
-                                </repeat>
-                            </ul>
-
-                            </li>
-
-                        </repeat>
-                    </check>
-
-                    <repeat group="{{ @cat.components }}" value="{{ @comp }}">
-                        <check if="{{ @activeCompId == @comp->componentId }}">
-                            <true>
-                                <li class="atomic-active-item" data-type="comp" data-slug="{{ @comp->slug }}"><i class="fa fa-file-o"></i> <a href="{{ @comp->compLink }}">{{ @comp->name }}</a></li>
-                            </true>
-                            <false>
-                                <li data-type="comp" data-slug="{{ @comp->slug }}"><i class="fa fa-file-o"></i> <a href="{{ @comp->compLink }}">{{ @comp->name }}</a></li>
-                            </false>
-                        </check>
-
-
-                    </repeat>
-
-                </ul>
-
-
-
-                </li>
-
-            </repeat>
-
-        </ul>
-
-
-
-    </div>
-
+	
+	<div class="atomic-catItemGroup" data-parent="root">
+		
+		<ul class="atomic-nav atomic-dropable" data-cat="root">
+			
+			{{ @sideBarCats | navWalker }}
+			<exclude>
+				
+				<repeat group="{{ @sideBarCats }}" value="{{ @cat }}">
+					
+					<check if="{{ @currentId }} == {{ @cat.category->categoryId }}">
+						<true>
+							<li class="atomic-active" data-type="cat" data-slug="{{ @cat.category->slug }}">
+								<i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i>
+						</true>
+						<false>
+							<li data-type="cat" data-slug="{{ @cat.category->slug }}">
+								<i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i>
+						</false>
+					
+					</check>
+					
+					<a href="{{ @cat.catLink }}">{{ @cat.category->name }}</a>
+					<ul class="atomic-sub atomic-dropable" data-cat="{{ @cat.category->slug }}">
+						<check if="{{ @cat.subcategories }}">
+							<repeat group="{{ @cat.subcategories }}" value="{{ @subCat }}">
+								
+								<check if="{{ @currentSubId }} == {{ @subCat.category->categoryId }}">
+									<true>
+										<li class="atomic-active" data-type="cat" data-slug="{{ @subCat.category->slug }}">
+											<i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i>
+											<a href="{{ @subCat.childCatLink }}">{{ @subCat.category->name }}</a>
+									</true>
+									<false>
+										<li data-type="cat" data-slug="{{ @subCat.category->slug }}">
+											<i class="js-atomic-catContent-trigger fa fa-folder" aria-hidden="true"></i>
+											<a href="{{ @subCat.childCatLink }}">{{ @subCat.category->name }}</a>
+									</false>
+								
+								</check>
+								
+								<ul class="atomic-sub atomic-dropable" data-cat="{{ @subCat.category->slug }}">
+									<repeat group="{{ @subCat.components }}" value="{{ @subComp }}">
+										<li data-type="comp" data-slug="{{ @subComp->slug }}">
+											<i class="fa fa-file-o"></i> <a href="#">{{ @subComp->name }}</a></li>
+									</repeat>
+								</ul>
+								
+								</li>
+							
+							</repeat>
+						</check>
+						
+						<repeat group="{{ @cat.components }}" value="{{ @comp }}">
+							<check if="{{ @activeCompId == @comp->componentId }}">
+								<true>
+									<li class="atomic-active-item" data-type="comp" data-slug="{{ @comp->slug }}"><i class="fa fa-file-o"></i> <a href="{{ @comp->compLink }}">{{ @comp->name }}</a></li>
+								</true>
+								<false>
+									<li data-type="comp" data-slug="{{ @comp->slug }}"><i class="fa fa-file-o"></i> <a href="{{ @comp->compLink }}">{{ @comp->name }}</a></li>
+								</false>
+							</check>
+						
+						
+						</repeat>
+					
+					</ul>
+					
+					</li>
+				
+				</repeat>
+			
+			</exclude>
+			
+		</ul>
+	
+	</div>
 
 </div>
