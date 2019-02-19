@@ -198,4 +198,20 @@ class FileServiceStyle {
 		$fs->deleteFile($path);
 	}
 
+	public static function deleteCategory(CategoryModel $category) {
+		$stylesDir = OptionService::getOption('stylesDir');
+		$stylesExt = OptionService::getOption('stylesExt');
+
+		$fs = new FileService();
+		//Delete style import string
+		$dirPath = FRONT . '/' . $stylesDir . '/' . getCategoryPath($category);
+
+		$importString = '@import "' . $category->slug . '/_' . $category->slug . '";';
+		$parentCategory = new CategoryModel();
+		$parentCategory->loadById($category->parentCatId);
+
+		$parentPath = $dirPath . '../_' . $parentCategory->slug . '.' . $stylesExt;
+		$fs->stringReplace($parentPath, $importString, '');
+	}
+
 }

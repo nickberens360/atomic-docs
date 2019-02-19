@@ -21,7 +21,7 @@ class ItemFactory {
 	public static function create($item) {
 		$i = new Item();
 		if ($item instanceof ComponentModel) {
-			$i->id = $item->categoryId;
+			$i->id = $item->componentId;
 			$i->name = $item->name;
 			$i->link = baseAlias('category', ['catId' => $item->categoryId]);
 			$i->slug = $item->slug;

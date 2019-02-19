@@ -27,7 +27,7 @@ const notifySettings = {
 
 //Compile Scss and minify output
 gulp.task('styles', function (done) {
-	gulp.src('scss/main.scss')
+	gulp.src('src/scss/main.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(cleanCSS())
@@ -39,8 +39,8 @@ gulp.task('styles', function (done) {
 
 
 //Concat and minify JS
-gulp.task('scripts', function () {
-	return gulp.src('js/*.js')
+gulp.task('scripts', function (done) {
+	return gulp.src('src/js/*.js')
 		.pipe(babel({
 			presets: ['es2015']
 		}))
@@ -68,8 +68,8 @@ gulp.task('scripts', function () {
 
 //Watch task
 gulp.task('watch', function () {
-	gulp.watch('scss/**/*.scss', gulp.parallel('styles'));
-	gulp.watch('js/*.js', gulp.parallel('scripts'));
+	gulp.watch('src/scss/**/*.scss', gulp.parallel('styles'));
+	gulp.watch('src/js/*.js', gulp.parallel('scripts'));
 });
 
 gulp.task('default', gulp.series('styles', 'scripts', 'watch', function (done) {

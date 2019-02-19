@@ -192,94 +192,57 @@ class CategoryController extends Controller {
 
 		$category = new CategoryModel();
 		$filter = ['categoryId= ?', $params['catId']];
-		$subCatFilter = ['parentCatId= ?', $params['catId']];
-		$subCats = $category->find($subCatFilter);
 		$category->load($filter);
+		$parentCatId = $category->parentCatId;
 
-		$component = new ComponentModel();
-		$compFilter = ['categoryId= ?', $params['catId']];
-		$comps = $component->find($compFilter);
+		if (!$category->dry()) {
+			$is = new ItemsService();
+			$items = $is->getCategoriesAsItems();
+			$hierarchy = $is->buildHierarchy(array_reverse($items), $category->categoryId);
 
-		$subCatIds = [];
-		foreach ($subCats as $sc) {
-		}
+			// removes all the children categories and components of the directory
+			$is->traverseHierarchy($hierarchy, function ($item) {
+				/** @var Item $item */
 
-		$catSlug = $category->slug;
+				// delete all of the components
+				foreach ($item->comps as $c) {
+					/** @var Item $c */
+					$comp = new ComponentModel();
+					$comp->loadById($c->getId());
+					if (!$comp->dry()) {
+						$comp->erase();
+					}
+				}
+				// delete the category
+				$cat = new CategoryModel();
+				$cat->loadById($item->id);
+				$cat->erase();
+			});
 
-		$stylesDir = OptionService::getOption('stylesDir');
-		$stylesExt = OptionService::getOption('stylesExt');
+			$tcc = new ComponentModel();
+			/** @var ComponentModel[] $tcm */
+			$tcm = $tcc->find(['categoryId = ?', $category->categoryId]);
 
-		$fileSystemService = new FileSystemService();
+			// delete the components
+			foreach ($tcm ?: [] as $comp) {
+				if (!$comp->dry()) {
+					$comp->erase();
+				}
+			}
 
-		$fileService = new FileService();
+			FileServiceStyle::deleteCategory($category);
+			FileSystemService::rrmdir(FRONT . '/' . OptionService::getOption('markupDir') . '/' . getCategoryPath($category));
+			FileSystemService::rrmdir(FRONT . '/' . OptionService::getOption('stylesDir') . '/' . getCategoryPath($category));
 
-		//Delete component comps and sub cats
-		$fileSystemService->deleteCat('markup', $catSlug);
+			// delete the category
+			$category->erase();
 
-		//Delete import strings
-		$importString = $fileService->stringBuilder('styleImport', $catSlug, $catSlug);
-
-		$fileService->stringReplace(
-			FRONT . '/' . $stylesDir . '/main.' . $stylesExt,
-			$importString,
-			''
-		);
-
-		//Delete styles comps and sub cats
-		$fileSystemService->deleteCat('styles', $catSlug);
-
-		if ($category->categoryId !== null) {
 			$passThrough['status'] = true;
 			$passThrough['message'] = 'Yayy!!!';
 
-			if (!empty($comps)) {
-				foreach ($comps as $c) {
-					$c->erase();
-				}
-			}
+			$passThrough['redirect'] = baseAlias('category', ['catId' => $parentCatId]);
 
-			if (!empty($subCats)) {
-				foreach ($subCats as $sc) {
-					$sc->erase();
-				}
-			}
-
-			if (!empty($category)) {
-				$category->erase();
-			}
-			/*ob_start();
-			echo \Template::instance()->render( 'component/view.htm' );
-			$content               = ob_get_clean();
-
-			$navItems = new ItemsService();
-			$navItems->prepareItems();
-
-			$f3->set('currentSubId',$compCatID);
-			$f3->set('currentId',$compCatID);
-
-			ob_start();
-			echo \Template::instance()->render( 'common/nav.htm' );
-			$navbar               = ob_get_clean();
-
-			$passThrough['html']   = [
-				[
-					'html'      => $content,
-					'target'    => '.atomic-dash__content',
-					'placement' => 'prepend',
-				],
-				[
-					'html' => $navbar,
-					'target'    => '.atomic-fileSystem',
-					'placement' => 'replace',
-				],
-
-			];
-
-
-			$passThrough['compId']    = $compId;
-			$passThrough['hasJs']     = $hasJs;
-
-			return $this->renderJSON( $passThrough );*/
+			return $this->renderJSON($passThrough);
 		}
 		else {
 			$passThrough['status'] = false;

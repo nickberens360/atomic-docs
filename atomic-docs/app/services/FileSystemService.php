@@ -45,13 +45,13 @@ class FileSystemService {
 		closedir($dir);
 	}
 
-	public function rrmdir($dir) {
+	public static function rrmdir($dir) {
 		if (is_dir($dir)) {
 			$objects = scandir($dir);
 			foreach ($objects as $object) {
 				if ($object != "." && $object != "..") {
 					if (is_dir($dir . "/" . $object)) {
-						$this->rrmdir($dir . "/" . $object);
+						self::rrmdir($dir . "/" . $object);
 					}
 					else {
 						unlink($dir . "/" . $object);
@@ -60,6 +60,23 @@ class FileSystemService {
 			}
 			rmdir($dir);
 		}
+	}
+
+	/**
+	 * Recursively remove a directory and all files
+	 *
+	 * @param $path
+	 */
+	static function removeDirectory($path) {
+		$path = trim($path, '/') . '/*';
+		$files = glob($path);
+		d($path);
+		p($files);
+		foreach ($files as $file) {
+			is_dir($file) ? self::removeDirectory($file) : unlink($file);
+		}
+		rmdir($path);
+		return;
 	}
 
 	public function deleteCat($type, $catSlug) {
