@@ -6,7 +6,7 @@ include("head.php");
 <body class="atoms" xmlns="http://www.w3.org/1999/html">
 
 <div class="pageHeader">
-    <img class="logo" src="http://atomicdocs.io/img/atomic-logo.svg">
+    <img class="logo" src="img/atomic-logo.svg">
 </div>
 <div class="pageContent">
     <ol>

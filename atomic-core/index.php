@@ -93,7 +93,7 @@ $settings = $settings->select(array());
         <div class="atoms-overflow">
 
             <div class="logo">
-                <img src="http://atomicdocs.io/img/atomic-logo.svg">
+                <img src="img/atomic-logo.svg">
             </div>
 
             <div class="atoms-side_hide">

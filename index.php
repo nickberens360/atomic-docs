@@ -50,7 +50,7 @@
 
 <div class="indexBlock">
 
-    <img class="logo" src="http://atomicdocs.io/img/atomic-logo.svg">
+    <img class="logo" src="img/atomic-logo.svg">
 
     <p>By default, Atomic Docs is set up for Sass. If you are using Less or Sass check out this <a href="http://atomicdocs.io/docs/less-stylus">post</a>.</p>
 
@@ -59,7 +59,7 @@
 
     <p>This GIF pretty much explains what to do after that. Otherwise you can checkout
         this <a href="https://www.youtube.com/watch?v=e8LjP6ynryQ" target="_blank">video</a>.</p><br/>
-    <img class="shadow" src="http://atomicdocs.io/img/demo1.gif"/>
+    <img class="shadow" src="img/demo1.gif"/>
 
 </div>
 </body>
